@@ -47,6 +47,7 @@
 \newcommand{\milli}{\mathrm{m}}
 \newcommand{\centi}{\mathrm{c}}
 \usepackage{subfig}
+\usepackage{parskip}
 
 \begin{document}
 
@@ -84,21 +85,21 @@
 ~\vfill
 \thispagestyle{empty}
 
-%\noindent Copyright \copyright\ 2014 Andrea Hidalgo\\ % Copyright notice
+% Copyright \copyright\ 2014 Andrea Hidalgo\\ % Copyright notice
 
-\noindent Recenzenti: {***}\\ % Recenzent
+ Recenzenti: {***}\\ % Recenzent
 
-\noindent Lektor: {***}\\ % Lektor
+ Lektor: {***}\\ % Lektor
 
-\noindent Risbe in diagrami: Andrej Petelin in Mojca Vilfan\\ % Risbe in diagrami
+ Risbe in diagrami: Andrej Petelin in Mojca Vilfan\\ % Risbe in diagrami
 
-\noindent Naslovne fotografije poglavij: Mojca Vilfan\\ % Fotografije
+ Naslovne fotografije poglavij: Mojca Vilfan\\ % Fotografije
 
-\noindent \textit{\textcopyright 
+ \textit{\textcopyright 
 Kopiranje in razmnoževanje besedila ali njegovih delov ter slik je 
 dovoljeno samo z odobritvijo avtorjev knjige.} \\% Printing/edition date
 
-\noindent \textsc{Ljubljana, *** 2016}\\
+ \textsc{Ljubljana, *** 2016}\\
 
 %-------------------------------------------------------------------
 %	TABLE OF CONTENTS
@@ -130,7 +131,7 @@ in svetlobnih virov, uporabe svetlobe v različne namene, širjenja optičnih
 signalov in zaznavanja svetlobe. V zadnjih desetletih je zato fotonika doživela
 izreden razcvet v raziskavah in tehnološki uporabi.\\
 
-\noindent
+
 V pričujoči knjigi bomo obravnavali osnove fotonike. Po kratki ponovitvi
 splošne optike bomo spoznali delovanje laserjev in lastnosti laserske svetlobe, 
 nadaljevali z nelinearnimi optičnimi pojavi in modulacijo svetlobe ter zaključili
@@ -140,7 +141,7 @@ matematičnih prijemov, ga pa priporočamo vsakemu, ki ga področje fotonike zan
 Bralcu v razmislek smo dodali nekaj preprostih nalog, zahtevnejša podpoglavja pa
 so označena z zvezdico. \\
 
-\noindent
+
 Prvotno gradivo za učbenik je nastalo po zapiskih za predavanja pri predmetu 
 Elektrooptika. Gradivo smo dopolnili, posodobili in prilagodili obravnavani snovi
 pri predmetih Fotonika in Fizika laserjev. Za pomoč pri pripravi se najlepše 
@@ -162,7 +163,7 @@ zahvaljujemo prof. dr. Ireni Drevenšek Olenik ***
 % klasično obravnavo svetlobe - valovno enačbo za elektromagnetno polje.
 \vspace{1em}
 
-\noindent Avtorji
+ Avtorji
 
 %-------------------------------------------------------------------------------
 
@@ -207,6 +208,8 @@ zahvaljujemo prof. dr. Ireni Drevenšek Olenik ***
 %-------------------------------------------------------------------------------
 
 \input{Chapter_04_Resonatorji}
+\section{Sklopitev resonatorja z okolico}
+\section{Sklopitev dveh resonatorjev}
 
 %-------------------------------------------------------------------------------
 %	CHAPTER 5
@@ -219,12 +222,32 @@ zahvaljujemo prof. dr. Ireni Drevenšek Olenik ***
 %-------------------------------------------------------------------------------
 
 %\input{Chapter_06_Laser}
+\chapter{Laser}
+\section{Zasedbene enačbe}
+\section{Spektralna širina enega laserskega nihanja}
+\section{Primerjava laserjev in običajnih svetil}
+\section{Mnogofrekvenčni laser}
+\section{Relaksacijske oscilacije}
+\section{Delovanje v sunkih s preklopom dobrote}
+\section{Uklepanje faz}
+\section{Stabilizacija frekvence laserja na nasičeno absorpcijo}
+\section{Absolutna meritev frekvence laserja in definicija metra}
+
 
 %-------------------------------------------------------------------------------
 %	CHAPTER 7
 %-------------------------------------------------------------------------------
 
 %\input{Chapter_07_Primeri}
+\chapter{Primeri laserjev}
+\section{Nd:YAG laser}
+\section{He-Ne laser}
+\section{Argonski ionski laser}
+\section{Laser na ogljikov dioksid}
+\section{Ekscimerski laser}
+\section{Laserji na organska barvila}
+\section{Titan-safirni laser}
+\section{Polvodniški laser}
 
 %-------------------------------------------------------------------------------
 %	CHAPTER 8
@@ -268,7 +291,7 @@ po $\mathbf{E}$
 \label{8.1}
 \end{equation}
 
-\noindent
+
 S $\mathbf{P}_{\mathrm{L}}$ in $\mathbf{P}_{\mathrm{NL}}$ smo označili linearni in nelinearni
 del polarizacije. Nelinearni susceptibilnosti\index{Susceptibilnost!nelinearna} $\chi^{(2)}$ in $\chi^{(3)}$
 sta tenzorja tretjega in četrtega ranga\footnote{Namesto tenzorjev susceptibilnosti $\chi$
@@ -282,9 +305,9 @@ in
 \beq
 \left(\mathbf{P}_{\mathrm{NL,3}}\right)_i= \epsilon_{0}\chi^{(3)}_{ijkl} \,E_j \,E_k\, E_l,
 \eeq
-pri čemer smo seveda upoštevali Einsteinov zapis seštevanja po indeksih.\\
+pri čemer smo seveda upoštevali Einsteinov zapis seštevanja po indeksih. 
 
-\noindent
+
 Podrobneje si oglejmo tenzor susceptibilnosti $\chi^{(2)}$. 
 Ta tenzor je od nič različen le v snoveh, ki nimajo centra inverzije. Značilne 
 vrednosti za snovi, ki jih pogosto uporabimo v nelinearni optiki (npr. kristali 
@@ -300,9 +323,9 @@ Da bo razmerje $P^{\mathrm{NL}}/P^{\mathrm{L}} =10^{-5}$, je potrebna gostota
 svetlobnega toka okoli 1~MW/cm$^{2}$. To za laser ni nič posebnega, z nekoherentnim
 svetilom pa mnogo redov velikosti preveč. Zato je bilo mogoče nelinearne
 optične pojave opazovati šele po iznajdbi laserjev. Potrebno polje
-je tudi primerljivo polju v atomu, kar nas seveda ne preseneča.\\
+je tudi primerljivo polju v atomu, kar nas seveda ne preseneča. 
 
-\noindent
+
 Povejmo še nekaj o komponentah tenzorja $\chi^{(2)}$. 
 Ker lahko v produktu (enačba~\ref{eq:nlin2}) vrstni red $E_j E_k$ zamenjamo, mora biti
 tenzor invarianten na to zamenjavo
@@ -334,13 +357,13 @@ frekvenc (glej sliko~\ref{fig:nl2}).
 \label{fig:nl2}
 \end{figure}
 
-\noindent
+
 Nastanku valov pri podvojeni frekvenci pravimo tudi SHG\index{SHG} ({\it Second harmonic generation}), 
 nastanku valov pri vsoti frekvenc SFG\index{SFG} ({\it Sum frequency generation}), 
 pri razliki frekvenc DFG\index{DFG} ({\it Difference frequency generation}) in pojavu 
-statičnega polja pri $\omega = 0$ optično usmerjanje. \\
+statičnega polja pri $\omega = 0$ optično usmerjanje.  
 
-\noindent
+
 Za opis nelinearnih pojavov drugega reda moramo rešiti valovno enačbo 
 \begin{equation}
 \nabla^{2}\mathbf{E}-\frac{\epsilon}{c^{2}}{\frac{\partial^2\mathbf{E}}{\partial t^2}}=
@@ -354,7 +377,7 @@ Iz Maxwellovih enačb~(\ref{eq:Maxwell1} do \ref{eq:Maxwell4}) izpelji
 nelinearno valovno enačbo (\ref{8.3}).
 \end{definition}
 
-\noindent
+
 Prva poenostavitev, ki jo bomo naredili, je omejitev na vzporedna vpadna žarka,
 ki se širita v smeri osi $z$. Poleg tega se bomo omejili na izračun samo enega
 nastalega valovanja in privzeli, da je neodvisno od drugih nastalih valovanj.
@@ -383,9 +406,9 @@ pri konstantni amplitudi reši linearni del valovne enačbe. Naša naloga
 je ugotoviti, kako se zaradi nelinearnosti spreminjajo amplitude posameznih valovanj.
 Dogovorimo se še, da bomo v tem poglavju z indeksi 1, 2~... ločevali
 valove z različnimi frekvencami in polarizacijami, kartezične komponente
-vektorjev pa bomo označevali z $x$, $y$ in $z$.\\
+vektorjev pa bomo označevali z $x$, $y$ in $z$. 
 
-\noindent
+
 Nastavek za polje, ki bo rešil nelinearno valovno enačbo, je tako
 \beq
 \mathbf{E}(z,t) = \sum_{j=1}^3 \frac{\mathbf{e}_{j}}{2}\left[A_{j}(z)\, 
@@ -461,9 +484,9 @@ pa razlikujemo zaradi možnosti dveh različnih vpadnih polarizacij. Takrat je $
 in dobimo najpreprostejši in tudi najpomembnejši primer podvajanja frekvence\index{Podvajanje frekvenc}. 
 Pogosto ga uporabljamo za pridobivanje laserskih snopov pri krajših valovnih dolžinah, na primer
 pri Nd:YAG laserju\index{Laser!Nd:YAG}, ko infrardeče izhodno valovanje (1064~nm) 
-pretvorimo v vidno svetlobo zelene barve (532~nm).\\
+pretvorimo v vidno svetlobo zelene barve (532~nm). 
 
-\noindent
+
 Zanima nas, kako se spreminja $A_{3}(z) = A_{2\omega}(z)$ pri začetnem pogoju $A_{2\omega}(0)=0$.
 Privzemimo še, da se pretvori le manjši del vpadnega energijskega toka,
 tako da sta $A_{1}=A_{2}=A_0$ približno konstantni. Tedaj lahko
@@ -500,7 +523,7 @@ pri čemer je $x = \Delta k L/2$.}
 \end{figure}
 Zaradi njega je na poti, ki je daljša od $2\pi /\Delta k$, stopnja pretvorbe zelo majhna.
 
-\noindent
+
 Poglejmo primer. Faktor $\Delta k$ je različen od nič zaradi odvisnosti
 lomnih količnikov od frekvence. V KH$_{2}$PO$_{4}$ je 
 redni lomni količnik pri 1000 nm 1,496, pri 500 nm pa 1,514, tako
@@ -526,7 +549,7 @@ podvojeni frekvenci ojača.}
 \end{figure}
 \end{remark}
 
-\noindent
+
 Opazimo, da lahko pri končnih vrednostih $\Delta k$ dolžino kristala $L$ v izrazu~(\ref{8.11})
 pokrajšamo in izkoristek pretvorbe sinusno niha med nič in neko največjo vrednostjo z naraščajočim
 $L$. Povsem drugačno obnašanje pa dobimo, kadar se faze ujemajo in je $\Delta k = 0$. 
@@ -560,9 +583,9 @@ n_1^\omega + n_2^\omega = n_3^{2\omega}.
 Da lahko zadostimo gornjemu pogoju, izkoristimo dvojni lom v anizotropnih kristalih
 (glej poglavje~\ref{chap:anizotropni}), pri čemer se zaradi enostavnosti omejimo le na optično 
 enoosne kristale. Obravnavajmo samo kristale brez absorpcije in z normalno disperzijo, 
-to pomeni, da oba lomna količnika naraščata s frekvenco. \\
+to pomeni, da oba lomna količnika naraščata s frekvenco.  
 
-\noindent
+
 Za razumevanje je najbolj nazoren grafični prikaz (slika~\ref{fig:dk}). 
 Podrobneje poglejmo primer s slike (a). Na njem so narisani lomni količniki za pozitivno
 anizotropni ($n_e>n_o$) enoosni kristal pri enojni in dvojni
@@ -586,7 +609,7 @@ ujemanje faz drugega reda za pozitivno (c) in negativno (d) anizotropno snov.}
 \label{fig:dk}
 \end{figure}
 
-\noindent
+
 Lomni količnik za redni val pri podvojeni frekvenci mora biti enak lomnemu 
 količniku za izredni val pri osnovni frekvenci. Pri tem je lomni količnik
 za izredni val odvisen od kota
@@ -610,7 +633,7 @@ Pokaži, da v primeru negativne anizotropije pogoj za ujemanje faz zapišemo kot
 \label{8.13a}
 \end{definition}
 
-\noindent
+
 S slike~(\ref{fig:dk} c in d) lahko razberemo, da obstoja še primer, pri 
 katerem je izpolnjen pogoj za ujemanje faz. To je primer, pri katerem sta v vpadnem
 valu prisotni obe polarizaciji, redna in izredna, podvojeni val pa
@@ -629,9 +652,9 @@ je kriterij ujemanja faz izpolnjen na stožcu okoli optične osi, pri čemer je 
 z izračunanim kotom $\theta_m$ (enačbi~\ref{8.13} in \ref{8.13a}). 
 Drug kot, ki določa smer širjenja v ravnini, pravokotni na optično os, pa 
 lahko izberemo tako, da izkoristimo največje komponente nelinearne 
-susceptibilnosti.\\
+susceptibilnosti. 
 
-\noindent
+
 Oglejmo si kot primer spet KH$_{2}$PO$_{4}$, ki je negativno anizotropen 
 (slika~\ref{fig:dk}~b). Valovna dolžina osnovnega snopa naj bo 1000~nm. 
 Po podatkih, navedenih zgoraj, dobimo po enačbi~(\ref{8.13a}) za kot ujemanja faz 
@@ -686,9 +709,9 @@ ki sta bili razsežni v prečni smeri. Izračunali smo, da v primeru, ko je $\De
 moč frekvenčno podvojene svetlobe narašča s kvadratom dolžine poti po nelinearnem
 sredstvu. Pretvorba v podvojeno svetlobo je po enačbi~(\ref{8.11}) tem
 učinkovitejša, čim večja je gostota svetlobnega toka pri osnovni frekvenci.
-Zato v praksi vpadno svetlobo vselej fokusiramo. \\
+Zato v praksi vpadno svetlobo vselej fokusiramo.  
 
-\noindent
+
 Poglejmo, kako se enačbe spremenijo, če je vpadni snop pri osnovni 
 frekvenci Gaussove oblike. Rezultat lahko približno ocenimo, če vzamemo, da je
 efektivna dolžina za pretvorbo $L$ kar dolžina grla; za njim se
@@ -717,9 +740,9 @@ ne z njenim kvadratom.\\
 Imejmo 1~cm dolg kristal KH$_{2}$PO$_{4}$. Valovna dolžina vpadne svetlobe 
 naj bo 1,06~$\mu$m, vhodna moč $P_\omega = 10$~kW, efektivna nelinearna susceptibilnost
 $\chi_{ef}=4\cdot10^{-13}~$m/V, $\Delta k=0$ in $n=1,5$. Pokaži, da doseže
-faktor pretvorbe v frekvečno podvojeno svetlobo skoraj $50~\%$!\\
+faktor pretvorbe v frekvečno podvojeno svetlobo skoraj $50~\%$! 
 
-\noindent
+
 Da je dolžina grla $2z_{0}=1$~cm, mora biti polmer
 grla okoli 40~$\mu$m. Gostota svetlobnega toka v kristalu je pri
 tem $2\cdot10^{8}$~W/cm$^{2}$, kar je že blizu praga za poškodbe,
@@ -749,7 +772,7 @@ enačbo~(\ref{8.3}) in zopet ločimo na levi in desni člene z enako frekvenco.
 Zanemarimo tudi druge odvode $\psi$ po $z$. Tako namesto sistema
 enačb~(\ref{eq:nlAz} do \ref{eq:nlA3}) dobimo sklopljen sistem obosnih enačb 
 % \begin{eqnarray}
-% \nabla_{\perp}^{2}\psi_{1}+2ik_{1}\psi_{1}^{\prime}  = & \frac{k_{1}}{2}\kappa\psi_{2}^{\ast}\psi_{3}e^{-i\Delta kz}\nonumber \\
+% \nabla_{\perp}^{2}\psi_{1}+2ik_{1}\psi_{1}^{\prime}  = & \frac{k_{1}}{2}\kappa\psi_{2}^{\ast}\psi_{3}e^{-i\Delta kz}\nonumber  \\
 % \nabla_{\perp}^{2}\psi_{2}+2ik_{2}\psi_{2}^{\prime}  = & \frac{k_{2}}{2}\kappa\psi_{1}^{\ast}\psi_{3}e^{-i\Delta kz}\nonumber \\
 % \nabla_{\perp}^{2}\psi_{3}+2ik_{3}\psi_{3}^{\prime}  = & \frac{k_{3}}{2}\kappa\psi_{1}\psi_{2}e^{i\Delta kz}
 % \end{eqnarray}
