@@ -682,3 +682,132 @@ plast anizotropne snovi tako dobimo dva vzporedna, a razmaknjena žarka z medseb
 pravokotnimi polarizacijami. Enoosne kristale, odrezane pod primernim kotom in prave dolžine,
 zato lahko uporabimo kot polarizacijski delilnik žarkov.
 
+\section{Uklon svetlobe}
+
+
+Problem uklona svetlobe na odprtinah (zaslonkah) se najenostavneje lotimo z uporabo
+skalarnega približka teorije elektromagnetnega polja. Pri tem seveda zanemarimo vpliv 
+polarizacije na uklon svetlobe. Vpliv polarizacije
+postane pomemben zgolj pri zelo majhnih odprtinah, torej kadar je $\lambda\sim a$, kjer je $a$ velikost
+odprtine. Treba pa je poudariti, da je tudi v tem primeru uklonska slika za različne polarizacije podobna, 
+razlikujejo pa se po intenziteti prepuščene svetlobe.
+
+
+\begin{remark}{{\bf Žičnati polarizatorji}}\\ \\
+Primer, kjer skalarni približek ne da pravih rezultatov je uklon na mrežici narejeni 
+iz zelo tankih prevodnik žic s periodo mrežice $d\ll \lambda$. Takšna mrežica 
+deluje kot polarizator za valovanje s polarizacijo pravokotno na žice (TE polarizacija). 
+Elektromagnetni val s TM polarizacijo pri prečkanju inducira tok v žicah, medtem
+ko je za TE polarizacijo inducirani tok bistveno manjši saj je smer toka omejena
+vzdolž žice. Posledično je prepustnost za TE val velika, medtem kose TM val delno
+absorbira in odbije.Takšni polarizatorji se večinoma uporabljajo v mikrovalovni tehniki, 
+vendar se v zadnjih letih z razvojem in izboljšavo litografskih postopkov
+vse pogosteje uporabljajo tudi v bližnjem infrardečem področju svetlobe.
+\end{remark}
+
+
+Pri dimenzijah odprtin $a>\lambda$ lahko uporabimo skalarno teorijo
+\beq
+\nabla^2 U = \frac{1}{c^2}\frac{\partial^2 U}{\partial t^2},
+\label{eq:skalarna-valovna-enačba}
+\eeq
+kjer $U$ predstavlja eno od komponent električne $E$ oziroma magnetne poljske jakosti $H$.
+Časovna odvisnost polja $U$ je harmonična funkcija in je proporcionalna $e^{\pm i \omega t}$ iz
+česar se da (z uporabo Greenovega teorema) izpeljati zvezo med velikostjo polja v točki
+$P$ s poljem na poljubni ploskvi ki obkroža točko $P$. Zvezo opisuje Kirchoffov integral \index{Kirchoffov integral}
+\beq
+U_P = -\frac{1}{4\pi}\int\int\left(U \mathbf{n}\cdot \nabla \frac{e^{ikr}}{r}-\frac{e^{ikr}}{r}\mathbf{n}\cdot \nabla U \right) dS,
+\label{eq:Kirchoffov-integral}
+\eeq
+kjer je $\mathbf{n}$ normala na ploskev po kateri teče integral, $r$ je oddaljenost od točke P
+do ploskeve $dS$. Kirchoffov integral velja splošno za katerokoli harmonično 
+funkcijo $U$, ki reši valovno enačbo (\ref{eq:skalarna-valovna-enačba}) in torej
+ni direktno vezan na problem sipanja, vendar se z uporabo \ref{eq:Kirchoffov-integral} z
+problem sipanja močno poenostavi. Vzemimo opdrtino poljubne oblike v za svetlobo
+neprepustni plošči. Naša naloga je določiti obliko skalarnega polja v točki $P$.
+Kot prvi primer vzemimo točkast izvor v točki $S$, katerega polje zapišemo kot
+\beq
+\label{eq:polje-krogelni-val}
+U = U_0 \frac{e^{ikr'}}{r'},
+\eeq
+kjer je $r'$ razdalja od izvora do točke na zasečitveni ploskvi (glej sliko XX).
+Ploskev integracije zajema odprtino in objema točko $P$ v celoti, pri tem
+pa moramo upoštevati še dva dodatna približka:
+\begin{enumerate}
+\item Valovna funkcija $U$ in njen gradient vplivata zelo malo na integral (njena vrednost je 0), razen v odprtini.
+\item Vrednosti $U$ in njen gradient sta na odprtini podana z poljem, ki ga izseva izvor v točki $S$ in sta torej takšna, kot bi bila, če zaslona ne bi bilo.
+\end{enumerate}
+Zgornja približka sta precej groba, vendar se izkaže, da v splošnem kljub temu
+dobimo dobro ujemanje med eksperimentalno določeno uklonsko sliko, s čimer 
+upravičimo njuno uporabo pri izračunu uklonske slike.
+\index{Fresnel-Kirchhoffov uklon}
+
+\begin{definition}
+\label{naloga-Fresnel-Kirchhoff-uklon}
+Pokaži, da z uporabo Kirchoffovega integrala in predpostavki, da je polje na odprtini
+podano z (\ref{eq:polje-krogelni-val}) ter za razdalje $r$ od odprtine, kjer je $r \gg \lambda$
+dobimo za velikost polja v točki $P$ naslednjo zvezo:
+\beq
+U_P = -\frac{ik U_0 e^{-i\omega t}}{4\pi}\int\int\frac{e^{ik(r+r')}}{rr'}\left[\cos(\mathbf{n},\mathbf{r})-\cos(\mathbf{n},\mathbf{r'})\right] dS,
+\label{eq:Fresnel-Kirchoffov-integral}
+\eeq
+\end{definition}
+
+
+Ta zveza ni nič drugega kot matematična formulacija Huygensovega principa. To najlažje
+vidimo, če postavimo izvor svetlobe v os odprtine in daleč stran od zaslona, tako da
+na zaslon vpada ravni val. Polje v točki $P$  je tako podano z 
+
+\beq
+\label{eq:Fresnelov-uklon}
+U_P =  -\frac{ik}{4\pi} \int \int\frac{U_S e^{ik(r)}}{r}\left[ \cos(\mathbf{n},\mathbf{r})-1\right] dS
+\eeq
+kjer $U_S$ predstavlja kompleksno amplitudo polja v odprtini
+\beq
+U_S = U_0 \frac{e^{ikz}}{z}=E_0 e^{ikz},
+\eeq 
+kjer smo zapisali $r=z$, saj je izvor daleč od odprtine, tako da lahko krogelno valovanje aproksimiramo
+z ravnim valom. Vidimo, da nam val $U_S$ v vsakem od elementov $dS$ odprtine vzbudi krogelno valovanje s
+kompleksno maplitudo
+\beq
+U = U_0 \frac{e^{ikr}}{r} dS,
+\eeq 
+ter da je polje v izbrani točki $P$ vsota prispevkov posameznih krogelnih valovanj
+(Huygensov pricip). \index{Huygensov princip}
+Za razliko od osnovnega Huygensov pricipa, v enačbi \ref{eq:Fresnel-Kirchoffov-integral} 
+nastopa še faktor $\left[\cos(\mathbf{n},\mathbf{r})-1\right]$, ki poskrbi za to
+da je amplituda nazaj sipanega valovanja enaka 0. Faktor $-i$ tudi manjka v osnovnem Huygensovem pricipu,
+pomeni pa, da je uklonjeno valovanje fazno zakasnjeno za $\pi/2$ glede na osnovno
+valovanje $U_S$.
+
+
+Na tem mestu je vredno pogledati še nekoliko poenostavljen primer uklona ravnega vala
+na odprtini v daljnem polju. V literaturi dostikrat zasledimo pojma Fraunhoferjeva uklonska slika
+za daljno polje ter Fresnelova uklonska slika za bližnje polje. Mejo med daljnim in
+bližnjim poljem kvalitativno določa Fresnelovo število
+\beq
+F= \frac{a^2}{L\lambda},
+\eeq 
+kjer je $a$ karakteristična dimenzija odprtine, $L$ oddaljenost od odprtine ter
+$\lambda$ valovna dolžina. V grobem velja, da za oddaljenosti $L$ od odprtine za
+katere velja $F<1$, polje obravnavamo kot daljno polje, medtem ko $F>1$ pove, da 
+moramo uklon obravnavati v polni obliki. Pri izračunu uklona v daljnem polju lahko med drugim
+zanemarimo odvisnost $r$ od oddaljenosti od središča odprtine, tako da v imenovalcu postavimo
+kar $r=z$, česar pa seveda ne smemo narediti v faznem členu, kjer pa  V Fraunhoferjevem približku
+dobimo tako
+
+\beq
+\label{eq:Fraunhoferjev-uklon}
+U_P \propto \int \int U_S e^{-ik/z(x x' +y y' )} dx'dy',
+\eeq
+kar ni nič drugega kot Fouriereva transformacija polja $U_S$.
+
+
+\begin{definition}
+\label{naloga-Fresnel-Kirchhoff-uklon}
+Pokaži, da je v Fraunhoferjevi uklonski sliki, uklon na okrogli odprtini s premerom $a$ podan z
+\beq
+U_P = U_0\frac{J_1(\pi a \rho/ \lambda z)}{\pi a \rho/ \lambda z},
+\eeq
+kjer je $\rho = \sqrt{x^2+y^2}$.
+\end{definition}
