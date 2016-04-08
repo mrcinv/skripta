@@ -302,9 +302,8 @@ kadar pa je krog, govorimo o cirkularno polariziranem valu. Poljubno polarizacij
 lahko vedno zapišemo kot vsoto dveh linearno ali dveh cirkularno polariziranih
 valovanj. 
 
-
 Polarizacijo valovanja lahko zapišemo s kompleksnim \index{Jonesov vektor}Jonesovim 
-vektorjem\footnote{Ameriški fizik Robert Clark Jones, 1916-2004.}
+vektorjem\footnote{Ameriški fizik Robert Clark Jones, 1916--2004.}
 $\mathbf{J}$. Za monokromatski ravni val, ki se širi v smeri $z$, je 
 \beq
 \mathbf{J}=\frac{1}{|E_{0}|}\left[\begin{array}{c}
@@ -317,28 +316,28 @@ da je Jonesov vektor normaliziran in $\mathbf{J}\cdot\mathbf{J}^{*}=1$.
 Ravni val, linearno polariziran v smeri $x$, tako zapišemo kot $\mathbf{J}=\left(1,0\right)$,
 val, ki je linearno polariziran pod kotom $45^{\circ}$ glede na osi
 $x$ in $y$, pa je $\mathbf{J}=\frac{1}{\sqrt{2}}\left(1,1\right)$.
-Desno cirkularno polarizirano valovanje predstavlja vektor $\mathbf{J}=\frac{1}{\sqrt{2}}\left(1,-i\right)$,
-levo cirkularno polarizirano pa $\mathbf{J}=\frac{1}{\sqrt{2}}\left(1,i\right)$.
+Desno cirkularno polarizirano valovanje zapišemo z vektorjem 
+$\mathbf{J}=\frac{1}{\sqrt{2}}\left(1,-i\right)$,
+levo cirkularno polarizirano pa z $\mathbf{J}=\frac{1}{\sqrt{2}}\left(1,i\right)$.
 Desno polariziran val je torej tisti val, pri katerem se električna
 poljska jakost na danem mestu vrti v desno, če gledamo v smeri širjenja
 valovanja. Hkrati pa velja, da električna poljska jakost ob danem
 času vzdolž smeri širjenja valovanja opiše levosučno vijačnico. 
 
-
 Zapis z Jonesovim vektorjem je prikladen, saj omogoča preprost izračun
 prehoda ravnega vala skozi optične elemente, ki spreminjajo polarizacijo,
 a ohranjajo obliko ravnega vala. V splošnem se pri prehodu skozi
-sredstvo spremeni kompleksna amplituda $\mathbf{E}_1 = (E_{1x},E_{1y})$ 
+sredstvo spremeni kompleksna amplituda $\mathbf{E}_1 = (E_{1x}, E_{1y})$
 \begin{align}
 E_{2x} & =T_{11}E_{1x}+T_{12}E_{1y}\\
 E_{2y} & =T_{21}E_{1x}+T_{22}E_{1y},
 \end{align}
-pri čemer so komponente $T_{ij}$ odvisne od lastnosti sredstva. Gornji
-enačbi lahko strnjeno zapišemo v matrični obliki
+pri čemer so komponente $T_{ij}$ odvisne od lastnosti sredstva. Enačbi zapišemo 
+v matrični obliki
 \beq
-\mathbf{J}_{2}=T\cdot\mathbf{J}_{1},
+\mathbf{E}_{2}=T\cdot\mathbf{E}_{1},
 \eeq
-kjer sta $\mathbf{J}_{1}=(E_{1x},E_{1y})$ in $\mathbf{J}_{2}=(E_{2x},E_{2y})$
+kjer sta $\mathbf{E}_{1}$ in $\mathbf{E}_{2}$
 vstopni in izstopni val, $T$ pa je \index{Jonesova matrika}Jonesova
 matrika. Jonesova matrika za prehod skozi linearni polarizator, ki
 polarizira v smeri $x$, je
@@ -348,8 +347,9 @@ T=\left[\begin{array}{cc}
 0 & 0
 \end{array}\right].
 \eeq
-Oglejmo si še dva zanimiva primera optičnih komponent, to sta $\lambda/2$
-in $\lambda/4$ ploščici. Jonesova matrika za $\lambda/2$ ploščico\index{Ploščica $\lambda/2$}
+Oglejmo si še dva zanimiva primera optičnih komponent.
+Jonesova matrika za $\lambda/2$ ploščico\index{Ploščica $\lambda/2$},
+ki spremeni desno cirkularno polariziran val v levo polariziran in obratno,
 je
 \beq
 T=\left[\begin{array}{cc}
@@ -357,9 +357,7 @@ T=\left[\begin{array}{cc}
 0 & -1
 \end{array}\right].
 \eeq
-Kratek račun pokaže, da $\lambda/2$ ploščica spremeni desno cirkularno
-polariziran val v levo polariziran in obratno. Jonesova matrika
-za $\lambda/4$ ploščico\index{Ploščica $\lambda/2$} je 
+Jonesova matrika za $\lambda/4$ ploščico\index{Ploščica $\lambda/4$} pa je 
 \beq
 T=\left[\begin{array}{cc}
 1 & 0\\
@@ -384,33 +382,31 @@ koordinatnem sistemu $T=R(\vartheta) \cdot {T'}\cdot R(\vartheta)^\textrm{T}$,
 kjer je $R(\vartheta)$ rotacijska matrika.
 \end{definition}
 
-
 \section{Lom in odboj EM valovanja}
 
 Na ravni meji med dvema izotropnima dielektrikoma se del svetlobe
 odbije po odbojnem zakonu, del pa lomi po lomnem zakonu\index{Lomni zakon}
-\beq
+\boxeq{eq:lomni_zakon}{
 n_{1}\sin\vartheta_{1}=n_{2}\sin\vartheta_{2}.
-\label{eq:lomni_zakon}
-\eeq
+}
 S kotoma $\vartheta_{1}$in $\vartheta_{2}$ smo označili vpadni in lomni
 kot, $n_{1}$in $n_{2}$ pa sta lomna količnika prve in druge snovi.
 Poglejmo, kaj se pri lomu in odboju zgodi s polarizacijo valovanja.
-Os $x$ vpadnega vala naj bo pravokotna na vpadno ravnino (slika~\ref{fig:Lom}). 
+Os $x$ naj bo pravokotna na vpadno ravnino (slika~\ref{fig:Lom}). 
 Valovanje, polarizirano v tej smeri, je transverzalno električno
-(TE) valovanje. Takrat je električna poljska jakost vzporedna mejni ravnini. 
+(TE) valovanje\index{Polarizacija valovanja!TE}. 
+Takrat je električna poljska jakost vzporedna mejni ravnini. 
 Kadar leži v mejni ravnini jakost magnetnega polja, govorimo o transverzalnem
-magnetnem valovanju (TM).\\
+magnetnem valovanju (TM)\index{Polarizacija valovanja!TM}.\\
 
 \begin{figure}[h]
-\centering
-\includegraphics[width=12truecm]{slike/01_lom.png}
+\centering \def\svgwidth{120truemm} 
+  \input{slike/01_lom.pdf_tex}
 \caption{Lom elektromagnetnega valovanja. Levo: transverzalno električno (TE) valovanje. 
 Desno: transverzalno magnetno (TM) valovanje. Os $x$ je pravokotna na vpadno ravnino 
 in kaže iz lista.}
 \label{fig:Lom}
 \end{figure}
-
 
 Jonesovi matriki za odbojnost $r$ in prepustnost $t$
 na plasti med dvema dielektrikoma zapišemo kot 
