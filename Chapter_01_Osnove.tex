@@ -93,7 +93,7 @@ gostote magnetnega in električnega polja zvezne količine.}
 Večinoma bomo obravnavali elektromagnetna valovanja v izotropnih, 
 homogenih in linearnih snoveh brez zunanjih izvorov in
 nosilcev naboja ($\mathbf{j}_e=0$ in $\rho_{e}=0$). 
-Iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1} -- \ref{eq:Maxwell4}) izpeljemo valovno 
+Iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) izpeljemo valovno 
 enačbo\index{Valovna enačba} za jakost električnega ali magnetnega polja 
 \boxeq{eq:valovna-skalarna}{
 \nabla^{2}\mathbf{E}-\frac{1}{c^{2}}\frac{\partial^{2}\mathbf{E}}{\partial t^{2}} = 0
@@ -147,21 +147,19 @@ v homogeni izotropni snovi tako velja
 \beq
 \nabla\cdot\mathbf{S}=-\frac{\partial w}{\partial t},
 \eeq
-kjer je $w$ \index{Gostota elektromagnetne energije} celotna
+kjer je $w$\index{Gostota elektromagnetne energije} celotna
 gostota energije elektromagnetnega polja. Zapišemo jo kot 
 \boxeq{eq:gostota-energije}{
 w=\frac{1}{2}\epsilon_{0}\epsilon\mathbf{E}^{2}+\frac{1}{2}\mu_{0}\mu\mathbf{H}^{2}.
 }
 
-
 Valovno enačbo in ohranitvene zakone lahko zapišemo tudi za anizotropne,
 nehomogene ali nelinearne snovi. Nekaj teh primerov bomo srečali v nadaljevanju
 in jih bomo obravnavali sproti.
 
-
 \section{Monokromatski elektromagnetni val}
 
-Reševanje valovne enačbe si navadno poenostavimo z uvedbo kompleksnega
+Reševanje valovne enačbe si navadno poenostavimo z vpeljavo kompleksnega
 zapisa jakosti električnega in magnetnega polja. Račun si
 oglejmo na primeru monokromatskega elektromagnetnega vala. Nastavek
 za monokromatski val s krožno frekvenco $\omega$ naj bo\index{Elektromagnetno valovanje}
@@ -170,7 +168,8 @@ za monokromatski val s krožno frekvenco $\omega$ naj bo\index{Elektromagnetno v
 \mathbf{H}(\mathbf{r},t)  =\mathfrak{\Re}(\mathbf{H}(\mathbf{r})e^{-i\omega t}),
 \eeq
 kjer sta $\mathbf E(\mathbf{r})$ in $\mathbf H(\mathbf{r})$ časovno
-neodvisna vektorja jakosti električnega in magnetnega polja s kompleksno
+neodvisna vektorja jakosti električnega\index{Električno polje!jakost} in 
+magnetnega polja\index{Magnetno polje!jakost} s kompleksno
 amplitudo. Podobno lahko vpeljemo tudi kompleksne vektorje $\mathbf{P}$,
 $\mathbf{M}$, $\mathbf{D}$ in $\mathbf{B},$ ki opisujejo realne količine (polarizacijo,
 magnetizacijo, gostoto električnega in gostoto magnetnega polja).
@@ -179,30 +178,28 @@ V nadaljevanju bomo večinoma pisali polja v kompleksni obliki, pri
 je uporaba kompleksnega zapisa zgolj računski pripomoček, na koncu
 je treba rezultate vedno izraziti z realnimi količinami. 
 
-
 Če vstavimo gornji nastavek za monokromatski val v valovno enačbo
-(\ref{eq:valovna-skalarna}), dobimo \index{Helmholtzeva enačba}Helmholtzevi
-enačbi\footnote{Nemški zdravnik in fizik Hermann Ludwig Ferdinand von Helmholtz, 1821-1894.} 
+(enačba~\ref{eq:valovna-skalarna}), dobimo \index{Helmholtzeva enačba}Helmholtzevi
+enačbi\footnote{Nemški zdravnik in fizik Hermann Ludwig Ferdinand von Helmholtz, 1821--1894.} 
 za kompleksna vektorja jakosti električnega in magnetnega polja.
 V homogenem in izotropnem sredstvu ju zapišemo kot
-\begin{eqnarray}
-\nabla^{2}\mathbf{E}(\mathbf{r})+k^{2}\mathbf{E}(\mathbf{r}) & = & 0\label{eq:Helmholtz}\\
-\nabla^{2}\mathbf{H}(\mathbf{r})+k^{2}\mathbf{H}(\mathbf{r}) & = & 0,
-\end{eqnarray}
+\begin{align}
+\nabla^{2}\mathbf{E}(\mathbf{r})+k^{2}\mathbf{E}(\mathbf{r}) &=0\label{eq:Helmholtz}\\
+\nabla^{2}\mathbf{H}(\mathbf{r})+k^{2}\mathbf{H}(\mathbf{r}) &=0,
+\end{align}
 kjer je $k=nk_{0}=n\omega/c_{0}$ velikost valovnega vektorja oziroma
 valovno število. 
 
-
-Vpeljimo lahko še kompleksni Poyntingov vektor 
+Vpeljimo še kompleksni Poyntingov vektor\index{Poyntingov vektor}
 \beq
 \mathbf{S}(\mathbf{r})=\frac{1}{2}\mathbf{E}\times\mathbf{H}^{*}.\label{eq:Poyntingov-vektor-c}
 \eeq
-
 \begin{definition}
 Upoštevajoč izraz za Poyntingov vektor $\mathbf{S}$
-(enačba \ref{eq:Poyntingov-vektor}) pokaži, da lahko povprečje projekcije Poyntingovega vektorja 
-(intenziteto valovanja) $j$ \index{Intenziteta!elektromagnetno valovanje} izrazimo
-s kompleksnim Poyntingovim vektorjem $\mathbf{S}(\mathbf{r})$ (enačba \ref{eq:Poyntingov-vektor-c}):
+(enačba \ref{eq:Poyntingov-vektor}) pokaži, da lahko intenziteto valovanja $j$
+(oziroma povprečje projekcije Poyntingovega vektorja)
+\index{Gostota energijskega toka} izrazimo
+s kompleksnim Poyntingovim vektorjem $\mathbf{S}(\mathbf{r})$:
 \beq
 \label{eq:jReS}
 j=\left\langle \mathbf{\mathbf{S}}\cdot\mathbf{\hat{n}}\right\rangle =
@@ -211,27 +208,25 @@ j=\left\langle \mathbf{\mathbf{S}}\cdot\mathbf{\hat{n}}\right\rangle =
 \eeq
 \end{definition}
 
-
 \section{Ravni val}
 
-Osnovna rešitev valovne enačbe je ravni val\index{ravni val}. Nastavek, ki predstavlja
-ravni val in hkrati reši Helmholtzevo enačbo (\ref{eq:Helmholtz}), je 
+Osnovna rešitev valovne enačbe je ravni val\index{Ravni val}. Nastavek, ki predstavlja
+ravni val in hkrati reši Helmholtzevo enačbo (enačba~\ref{eq:Helmholtz}), je 
 \begin{align}
 \mathbf{E}(\mathbf{r},t) & =\mathbf{E}(\mathbf{r})e^{-i\omega t}=
-\mathbf{E}_{0}e^{i\mathbf{k}\cdot\mathbf{r}-i \omega t}\\
+\mathbf{E}_{0}e^{i\mathbf{k}\cdot\mathbf{r}-i \omega t}\quad \mathrm{in}\\
 \mathbf{H}(\mathbf{r},t) & =\mathbf{H}(\mathbf{r})e^{-i\omega t}=
 \mathbf{H}_{0}e^{i\mathbf{k}\cdot\mathbf{r}-i \omega t},
 \end{align}
-pri čemer sta vektorja $\mathbf{E}_{0}$ ter $\mathbf{H}_{0}$ neodvisna od kraja in časa. 
+pri čemer sta vektorja $\mathbf{E}_{0}$ ter $\mathbf{H}_{0}$ od kraja in časa neodvisna. 
 Velikost valovnega vektorja $\mathbf{k}$ je $k=nk_{0},$ pri
 čemer je $n$ lomni količnik izotropne in homogene snovi. 
 
-
 Vektorja jakosti električnega in magnetnega polja zadostujeta
-Maxwellovim enačbam (\ref{eq:Maxwell1} -- \ref{eq:Maxwell4}), iz česar sledi 
-(glej nalogo \ref{naloga-TEM-ortogonalnost}), da sta polji vedno medsebojno pravokotni, 
-hkrati pa pravokotni na valovni vektor $\mathbf{k}$. Tak val zato imenujemo transverzalni elektromagnetni
-val\index{Elektromagnetno valovanje!transverzalno valovanje (TEM)}. 
+Maxwellovim enačbam (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}), iz česar sledi,
+da sta polji vedno medsebojno pravokotni, 
+hkrati pa pravokotni na valovni vektor $\mathbf{k}$. Elektromagnetno valovanje je torej
+transverzalno valovanje.
 
 \begin{definition}
 \label{naloga-TEM-ortogonalnost}
@@ -239,40 +234,40 @@ Pokaži, da za ravni val vedno velja $\mathbf{D} \perp \mathbf{k}$ in
 $\mathbf{B} \perp \mathbf{k}$. Izpelji še pravokotnost polj in valovnega vektorja
 v izotropni snovi 
 \begin{align}
-\mathbf{k}\times\mathbf{H}_{0} & =-\omega\epsilon\epsilon_{0}\mathbf{E}_{0}\label{eq:TEM-pogoj1}\\
+\mathbf{k}\times\mathbf{H}_{0} & =-\omega\epsilon\epsilon_{0}\mathbf{E}_{0}\label{eq:TEM-pogoj1}\
+\quad \mathrm{in}\\
 \mathbf{k}\times\mathbf{E}_{0} & =\omega\mu\mu_{0}\mathbf{H}_{0}.\label{eq:TEM-pogoj2}
 \end{align}
 \end{definition}
 
-
 Zaradi enolične zveze med električnim in magnetnim poljem zadošča
 za opis ravnega vala le eno polje, navadno se odločimo za električno.
 
-
-
 Energijski tok je pri ravnem valu v izotropni snovi vedno v smeri valovnega vektorja, pravokotno
 na valovne fronte. Iz definicije za gostoto svetlobnega toka (enačbi \ref{eq:jReS} in
-\ref{eq:Poyntingov-vektor-c}) ter Maxwellovih enačb (\ref{eq:Maxwell1} -- \ref{eq:Maxwell4}) 
-sledi\index{Intenziteta!ravni val}
+\ref{eq:Poyntingov-vektor-c}) ter Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
+sledi\index{Gostota energijskega toka}
 \beq
 j=\Re\left(\frac{1}{4}E_{0}H_{0}^{*}+\frac{1}{4}E_{0}^*H_{0}\right)=
-\frac{1}{2}c\epsilon\epsilon_{0}\left|E_{0}\right|^{2}=\frac{1}{2}c_{0}n\epsilon_{0}\left|E_{0}\right|^{2}.
+\frac{1}{2}c\epsilon\epsilon_{0}\left|E_{0}\right|^{2}=\frac{1}{2}c_{0}n\epsilon_{0}
+\left|E_{0}\right|^{2}.
 \eeq
 Gostota svetlobnega toka (intenziteta svetlobe) je torej sorazmerna
-s kvadratom amplitude jakosti električnega polja. Gostoti toka $j=1~\mathrm{kW/m^{2}}$
+s kvadratom amplitude jakosti električnega polja. Poglejmo nekaj primerov.
+Gostoti toka $j=1~\mathrm{kW/m^{2}}$
 (približna gostota svetlobnega toka s Sonca) tako v praznem prostoru ustreza 
 jakost električnega polja $E_{0}=868~\mathrm{V/m}$, gostoti $j=1~\mathrm{W/\mu m^{2}}$ 
 (intenziteta močno fokusiranega laserskega žarka) pa $E_{0}=27~\mathrm{MV/m}$. 
 
-
-Zapišimo še povprečno gostoto energije valovanja. K energiji prispevata
-tako magnetno kot električno polje. Oba prispevka sta enaka, zato velja
+Zapišimo še povprečno gostoto energije valovanja\index{Gostota elektromagnetne energije}. 
+K energiji prispevata tako magnetno kot električno polje. Oba prispevka sta enaka, zato velja
 \beq
 \left\langle w\right\rangle =\frac{1}{4}\epsilon\epsilon_{0}\left|E_{0}\right|^{2}+
 \frac{1}{4}\mu\mu_{0}\left|H_{0}\right|^{2}=\frac{1}{2}\epsilon\epsilon_{0}\left|E_{0}\right|^{2}.
 \eeq
 Povprečna gostota energije $w$, pomnožena s hitrostjo svetlobe v
-snovi, da gostoto energijskega toka $j$ oziroma intenziteto svetlobe
+snovi, da gostoto energijskega toka $j$ oziroma intenziteto 
+svetlobe\index{Gostota energijskega toka}
 \boxeq{eq:jcw}{
 j=cw.
 }
@@ -282,7 +277,6 @@ $S$ in dolžino $c\Delta t$. V volumnu $Sc\Delta t$ je potem shranjene $wSc\Delt
 energije. Energija, ki preteče skozi presek $S$ v času $\Delta t$,
 je ravno $cw$. 
 
-
 Intenziteta ravnega vala je neodvisna od kraja in časa, iz česar sledi,
 da je povsod po prostoru enaka. Če bi hoteli izračunati energijo,
 ki jo nosi ravni val, bi opazili, da je ta energija neskončna. To
@@ -290,23 +284,21 @@ seveda ni mogoče, zato se je vedno treba zavedati, da je ravni val
 le idealiziran, a nazoren in praktičen približek elektromagnetnega
 vala.
 
-
 \section{Polarizacija EM valovanja}
 
 Jakost električnega polja elektromagnetnega valovanja je v izotropnem
 sredstvu pravokotna na smer valovnega vektorja\footnote{V splošnem je
 jakost električnega polja pravokotna na smer Poyntingovega vektorja ($\mathbf{E}\perp\mathbf{S}$) in 
 gostota električnega polja pravokotna na smer valovnega vektorja ($\mathbf{D}\perp\mathbf{k}$). 
-V anizotropnih sredstvih velja namreč $\mathbf k\nparallel\mathbf S$.}. Vektor $\mathbf{E}$
+V anizotropnih sredstvih velja $\mathbf k\nparallel\mathbf S$.}. Vektor $\mathbf{E}$
 torej leži v ravnini, pravokotni na smer valovnega vektorja, njegovo
-smer pa opiše polarizacija. 
-
+smer pa opiše polarizacija\index{Polarizacija valovanja}. 
 
 V splošnem je ravni val eliptično polariziran. Takrat vektor $\mathbf E$
 v ravnini, pravokotni na valovni vektor, oriše elipso. Obe komponenti vektorja 
 $\mathbf{E}(\mathbf{r})$ nihata sinusno z enako frekvenco, lahko pa se razlikujeta
-v amplitudi in fazi. Kadar je elipsa izrojena v daljico, dobimo linearno polarizirano valovanje,
-kadar pa je krog, dobimo cirkularno polariziran val. Poljubno polarizacijo
+v amplitudi in fazi. Kadar je elipsa izrojena v daljico, govorimo o linearno polariziranem valovanju,
+kadar pa je krog, govorimo o cirkularno polariziranem valu. Poljubno polarizacijo
 lahko vedno zapišemo kot vsoto dveh linearno ali dveh cirkularno polariziranih
 valovanj. 
 
