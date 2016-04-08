@@ -408,18 +408,19 @@ in kaže iz lista.}
 \label{fig:Lom}
 \end{figure}
 
-Jonesovi matriki za odbojnost $r$ in prepustnost $t$
+Jonesovi matriki za prepustnost $t$ in odbojnost $r$ 
 na plasti med dvema dielektrikoma zapišemo kot 
 \beq
-r=\left[\begin{array}{cc}
-r_{x} & 0\\
-0 & r_{y}
-\end{array}\right] \qquad \textrm{in} \qquad t=\left[\begin{array}{cc}
+ t=\left[\begin{array}{cc}
 t_{x} & 0\\
 0 & t_{y}
+\end{array}\right]
+ \qquad \textrm{in} \qquad 
+ r=\left[\begin{array}{cc}
+r_{x} & 0\\
+0 & r_{y}
 \end{array}\right].
 \eeq
-
 
 Potem je 
 \begin{align}
@@ -427,9 +428,10 @@ E_{2x} & =t_{x}E_{1x} \qquad \qquad E_{3x} =r_{x}E_{1x}\\
 E_{2y} & =t_{y}E_{1y} \qquad \qquad E_{3y}=r_{y}E_{1y},
 \end{align}
 pri čemer smo z $\mathbf{E}_{2}$ označili prepuščeni val, z $\mathbf{E}_{3}$ pa odbitega.
-Iz robnih pogojev (enačbe \ref{eq:robni-pogoji}-\ref{eq:robni-pogoji4}) izračunamo koeficiente matrik
+Iz robnih pogojev (enačbe \ref{eq:robni-pogoji}--\ref{eq:robni-pogoji4}) 
+izračunamo koeficiente matrik\index{Jonesova matrika}
 $r$ in $t$ s \index{Fresnelove enačbe}Fresnelovimi 
-enačbami\footnote{Francoski fizik Augustin-Jean Fresnel, 1788-1827.}:
+enačbami\footnote{Francoski fizik Augustin-Jean Fresnel, 1788--1827.}:
 \beq
 r_{x}=\frac{n_{1}\cos\vartheta_{1}-n_{2}\cos\vartheta_{2}}{n_{1}\cos\vartheta_{1}+n_{2}\cos\vartheta_{2}},
 \qquad t_{x}=1+r_{x}=\frac{2n_{1}\cos\vartheta_{1}}{n_{1}\cos\vartheta_{1}+n_{2}\cos\vartheta_{2}}
@@ -441,14 +443,12 @@ r_{y}=\frac{n_{2}\cos\vartheta_{1}-n_{1}\cos\vartheta_{2}}{n_{1}\cos\vartheta_{2
 {n_{1}\cos\vartheta_{2}+n_{2}\cos\vartheta_{1}}.
 \eeq
 
-
 V splošnem sta odbojnost $r$ in prepustnost $t$ kompleksni
 količini, saj iz lomnega zakona sledi, da je $\cos\vartheta_{2}=
 \sqrt{1-\left(n_{1}/n_{2}\right)^{2}\sin^{2}\vartheta_{1}}$
 lahko kompleksen. Velikost števila $\left|r\right|$ tako predstavlja
 odbojnost, argument $\arg\{r\}$ pa spremembo faze
 pri odboju.
-
 
 Prepustnost $r$ in odbojnost $t$ povesta, kako se spremeni kompleksna
 amplituda jakosti električnega polja. Razmerje med intenziteto odbite
@@ -468,23 +468,26 @@ snoveh in v različnih smereh. Velja zveza
 \mathcal{T}=\frac{n_{2}\cos\vartheta_{2}}{n_{1}\cos\vartheta_{1}}\left|t\right|^{2}.
 \eeq
 
-\begin{definition}
+Zanimiva je odvisnost odbojnosti od vpadnega kota. Izkaže se, da pri nekem kotu, 
+imenujemo ga \index{Brewsterjev kot}Brewsterjev kot\footnote{Škotski fizik in znanstvenik Sir David Brewster, 1781--1868.}, 
+odbojnost za TM polarizacijo enaka nič in vsa vpadla
+svetloba je prepuščena. Brewsterjeva
+okna (steklene ploščice, postavljene pod Brewsterjevim kotom) uporabljamo
+v resonatorjih laserjev za povečanje izgub TE in zmanjšanje izgub
+TM polariziranega valovanja.
+
+\begin{definition}[Brewsterjev kot]
 Pokaži, da za TM val obstoja vpadni kot
 \beq
 \vartheta_{B}=\arctan\left(\frac{n_2}{n_1}\right),
 \eeq
-pri katerem je odbojnost enaka nič oziroma prepustnost enaka $\mathcal{T}=$1.
-Ta kot imenujemo \index{Brewsterjev kot}Brewsterjev 
-kot. Brewsterjeva
-okna (steklene ploščice, postavljene pod Brewsterjevim kotom) uporabljamo
-v resonatorjih laserjev za povečanje izgub TE in zmanjšanje izgub
-TM polariziranega valovanja.
+pri katerem je odbojnost enaka nič in prepustnost enaka $\mathcal{T}=$1.
 \end{definition}
 
-
-Pri prehodu skozi optične elemente se -
+\begin{remark}
+Pri prehodu skozi optične elemente se --
 razen TM polariziranega valovanja pri Brewsterjevem 
-kotu\footnote{Škotski fizik in znanstvenik Sir David Brewster, 1781-1868.} -- vedno nekaj
+kotu -- vedno nekaj
 svetlobe odbije. Da zmanjšamo te izgube, optične elemente navadno
 prekrijemo z antirefleksno plastjo, to je nanosom ene ali več primerno
 izbranih debelin plasti dielektrikov z ustreznimi lomnimi količniki.
@@ -494,9 +497,9 @@ s koherentnimi izvori s točno določeno valovno dolžino, za zmanjšanje
 izgub, na primer v resonatorju laserja, vedno uporabljamo optične
 elemente (leče, kristale, akusto-optične modulatorje ... ) z ustrezno
 antirefleksno plastjo.
+\end{remark}
 
 \section{Uklon svetlobe}
-
 
 Problem uklona svetlobe na odprtinah (zaslonkah) se najenostavneje lotimo z uporabo
 skalarnega približka teorije elektromagnetnega polja. Pri tem seveda zanemarimo vpliv 
