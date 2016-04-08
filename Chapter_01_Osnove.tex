@@ -1,12 +1,11 @@
-\chapterimage{Slika.jpg} % Chapter heading image
+\chapterimage{slike/Nebo.jpg} % Chapter heading image
 
 \chapter{Elektromagnetno valovanje}
 Za začetek osvežimo osnove teorije elektromagnetnega polja in elektromagnetnega valovanja. 
-Obnovili bomo zapis Maxwellovih enačb, zapisali osnovne pojave valovanja (lom, odboj in uklon),
-ter si ogledali razširjanje svetlobe v anizotropnih snoveh. 
+Obnovili bomo zapis Maxwellovih enačb, opisali osnovne pojave valovanja (lom, odboj in uklon),
+in si ogledali razširjanje svetlobe v anizotropnih snoveh. 
 
 \section{Maxwellove enačbe}
-
 Elektromagnetno polje v praznem prostoru opišemo z dvema vektorskima
 poljema, električnim in magnetnim, ki sta v splošnem funkciji prostora
 in časa. Vsaki točki v prostoru lahko priredimo \index{Električno polje!jakost}jakost
@@ -16,26 +15,26 @@ polja v snovi vpeljemo dva dodatna vektorja polja. To sta \index{Električno pol
 električnega polja $\mathbf{D}(\mathbf{r},t)$ in gostota magnetnega
 polja\index{Magnetno polje!gostota} $\mathbf{B}(\mathbf{r},t)$.
 Vsa ta polja povezujejo \index{Maxwellove enačbe}Maxwellove enačbe\footnote{
-Škotski fizik James Clerk Maxwell, 1831-1879.}
+Škotski fizik James Clerk Maxwell, 1831--1879.}
 \boxeq{eq:Maxwell1}{
 \nabla\times\mathbf{H} & =\frac{\partial\mathbf{D}}{\partial t}+\mathbf{j_e}\\
 \nabla\times\mathbf{E} & =-\frac{\partial\mathbf{B}}{\partial t}\label{eq:Maxwell2}\\
 \nabla\cdot\mathbf{D} & =\mbox{\ensuremath{\rho}}_{e}\label{eq:Maxwell3}\\
 \nabla\cdot\mathbf{B} & =0.\label{eq:Maxwell4}
 }\\
-V zapisu enačb smo upoštevali tudi izvore polj, to je gostoto
+Pri zapisu enačb smo upoštevali tudi izvore polj, to je gostoto
 električnega toka $\mathbf{j}_e(\mathbf{r},t)$ in gostoto naboja $\rho_{e}(\mathbf{r},t)$. 
 
 Poleg Maxwellovih enačb veljata za vektorski polji zvezi
 \begin{align}
-\mathbf{D} & =\epsilon_{0}\mathbf{E}+\mathbf{P}\\
+\mathbf{D} & =\epsilon_{0}\mathbf{E}+\mathbf{P} \quad \mathrm{in}\\
 \mathbf{B} & =\mu_{0}\mathbf{H}+\mu_{0}\mathbf{M},
 \end{align}
 kjer $\mathbf{P}$ označuje \index{Električna polarizacija}električno
 polarizacijo, to je gostoto električnih dipolov, $\mathbf{M}$
 pa \index{Magnetizacija}magnetizacijo, to je gostoto magnetnega momenta.
 Polarizacija in magnetizacija sta odvisni od zunanjih polj $\mathbf{E}$
-ter $\mathbf{H}$. V splošnem sta njuni odvisnosti zelo zapleteni,
+in $\mathbf{H}$. V splošnem sta njuni odvisnosti zelo zapleteni,
 v izotropnih in linearnih snoveh pa se zvezi poenostavita v 
 \beq
 \mathbf{P}=\epsilon_{0}\chi_e\mathbf{E} = \epsilon_{0}(\epsilon-1)\mathbf{E} \qquad \textrm{in} 
@@ -50,7 +49,7 @@ Vpeljali smo \index{Električna susceptibilnost} električno ($\chi_e$) in
 enačbe, lahko zapišemo dve konstitutivni
 relaciji
 \begin{align}
-\mathbf{D} & =\epsilon_{0}\epsilon\mathbf{E}\\
+\mathbf{D} & =\epsilon_{0}\epsilon\mathbf{E}\quad \mathrm{in}\\
 \mathbf{B} & =\mu_{0}\mu\mathbf{H}.
 \end{align}
 V linearnih anizotropnih snoveh moramo namesto skalarnih vrednosti $\varepsilon$
@@ -81,7 +80,7 @@ spremeni za $\pi$.
 
 \begin{figure}[h]
 \centering
-  \def\svgwidth{8truecm} 
+  \def\svgwidth{75truemm} 
   \input{slike/01_robni_pogoji.pdf_tex}
 \caption{Na meji med dvema dielektrikoma brez površinskih tokov
 in nabojev so tangentna
@@ -90,22 +89,20 @@ gostote magnetnega in električnega polja zvezne količine.}
 \label{fig:Robni-pogoji}
 \end{figure}
 
-
 \section{Valovna enačba in Poyntingov vektor}
-
 Večinoma bomo obravnavali elektromagnetna valovanja v izotropnih, 
 homogenih in linearnih snoveh brez zunanjih izvorov in
 nosilcev naboja ($\mathbf{j}_e=0$ in $\rho_{e}=0$). 
-Iz Maxwellovih enačb (\ref{eq:Maxwell1} -- \ref{eq:Maxwell4}) izpeljemo valovno 
-enačbo\index{Valovna enačba},
-ki jo zapišemo za jakost električnega ali magnetnega polja 
+Iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1} -- \ref{eq:Maxwell4}) izpeljemo valovno 
+enačbo\index{Valovna enačba} za jakost električnega ali magnetnega polja 
 \boxeq{eq:valovna-skalarna}{
-\nabla^{2}\mathbf{E}-\frac{1}{c^{2}}\frac{\partial^{2}\mathbf{E}}{\partial t^{2}} & = 0\\
-\nabla^{2}\mathbf{H}-\frac{1}{c^{2}}\frac{\partial^{2}\mathbf{H}}{\partial t^{2}} & = 0.
+\nabla^{2}\mathbf{E}-\frac{1}{c^{2}}\frac{\partial^{2}\mathbf{E}}{\partial t^{2}} = 0
+\quad \mathrm{in} \quad
+\nabla^{2}\mathbf{H}-\frac{1}{c^{2}}\frac{\partial^{2}\mathbf{H}}{\partial t^{2}} = 0.
 }
-Pri tem je hitrost valovanja v snovi enaka 
+Pri tem je hitrost valovanja\index{Hitrost valovanja} v snovi enaka 
 \beq
-c=\frac{1}{\sqrt{\epsilon_{0}\epsilon\mu_{0}\mu}}=\frac{c_{0}}{n}.
+c=\frac{1}{\sqrt{\epsilon\epsilon_{0}\mu\mu_{0}}}=\frac{c_{0}}{n}.
 \eeq
 Magnetne in dielektrične lastnosti snovi smo pospravili
 v lomni količnik\index{Lomni količnik} 
@@ -114,9 +111,8 @@ n=\frac{c_{0}}{c}=\sqrt{\epsilon\mu}.
 \eeq
 Za izotropno in nemagnetno snov ($\mu=1$) je lomni količnik $n=\sqrt{\epsilon}$.
 
-
-Vpeljimo še vektor gostote energijskega toka, to je Poyntingov\footnote{Angleški 
-fizik John Henry Poynting, 1852-1914.} vektor
+Vpeljimo še vektor gostote energijskega toka, to je Poyntingov vektor\footnote{Angleški 
+fizik John Henry Poynting, 1852--1914.} 
 \index{Poyntingov vektor}{$\mathbf{S}$}
 \boxeq{eq:Poyntingov-vektor}{
 \mathbf{S} = \mathbf{E} \times \mathbf{H}.
@@ -125,11 +121,12 @@ Kot vidimo, je smer energijskega toka vedno pravokotna na smeri $\mathbf{E}$
 in $\mathbf{H}$. Gostoto energijskega toka $j$, to je količino
 energije, ki v danem časovnem intervalu preteče skozi dano ploskev
 z normalo $\mathbf{\hat{n}}$, izračunamo kot časovno povprečje projekcije
-Poyntingovega vektorja \index{Intenziteta!elektromagnetno valovanje}
+Poyntingovega vektorja \index{Gostota energijskega toka}
 \beq
 j=\left\langle \mathbf{\mathbf{S}}\cdot\mathbf{\hat{n}}\right\rangle.
 \eeq
-Gostoti energijskega toka pravimo tudi intenziteta. 
+Gostoti energijskega toka, predvsem gostoti svetlobnega toka, pravimo tudi intenziteta.
+
 \begin{definition}[Poyntingov teorem]
 Iz Maxwellovih enačb izpelji kontinuitetno enačbo 
 \beq
@@ -140,7 +137,6 @@ Iz Maxwellovih enačb izpelji kontinuitetno enačbo
 Pomagaj si z zvezo $\nabla\cdot(\mathbf{E}\times\mathbf{H})=(\nabla\times\mathbf{E})\cdot\mathbf{H}-
 (\nabla\times\mathbf{H})\cdot\mathbf{E}$.
 \end{definition}
-
 
 \index{Poyntingov teorem}Opazimo, da predstavlja Poyntingov teorem
 izrek o ohranitvi energije. Prvi in drugi člen na desni strani gornje
@@ -185,7 +181,7 @@ je treba rezultate vedno izraziti z realnimi količinami.
 
 
 Če vstavimo gornji nastavek za monokromatski val v valovno enačbo
-(\ref{eq:valovna-skalarna}), dobimo \index{Helmholtzova enačba}Helmholtzovi
+(\ref{eq:valovna-skalarna}), dobimo \index{Helmholtzeva enačba}Helmholtzevi
 enačbi\footnote{Nemški zdravnik in fizik Hermann Ludwig Ferdinand von Helmholtz, 1821-1894.} 
 za kompleksna vektorja jakosti električnega in magnetnega polja.
 V homogenem in izotropnem sredstvu ju zapišemo kot
@@ -210,7 +206,8 @@ s kompleksnim Poyntingovim vektorjem $\mathbf{S}(\mathbf{r})$ (enačba \ref{eq:P
 \beq
 \label{eq:jReS}
 j=\left\langle \mathbf{\mathbf{S}}\cdot\mathbf{\hat{n}}\right\rangle =
-\frac{1}{4}\left(\mathbf{E}\times\mathbf{H}^{*}+\mathbf{E}^{*}\times\mathbf{H}\right)=\Re(\mathbf{S}(\mathbf{r})).
+\frac{1}{4}\left(\mathbf{E}\times\mathbf{H}^{*}+\mathbf{E}^{*}\times\mathbf{H}\right)=\Re(\mathbf{S}
+(\mathbf{r})).
 \eeq
 \end{definition}
 
@@ -218,7 +215,7 @@ j=\left\langle \mathbf{\mathbf{S}}\cdot\mathbf{\hat{n}}\right\rangle =
 \section{Ravni val}
 
 Osnovna rešitev valovne enačbe je ravni val\index{ravni val}. Nastavek, ki predstavlja
-ravni val in hkrati reši Helmholtzovo enačbo (\ref{eq:Helmholtz}), je 
+ravni val in hkrati reši Helmholtzevo enačbo (\ref{eq:Helmholtz}), je 
 \begin{align}
 \mathbf{E}(\mathbf{r},t) & =\mathbf{E}(\mathbf{r})e^{-i\omega t}=
 \mathbf{E}_{0}e^{i\mathbf{k}\cdot\mathbf{r}-i \omega t}\\
@@ -255,7 +252,8 @@ za opis ravnega vala le eno polje, navadno se odločimo za električno.
 
 Energijski tok je pri ravnem valu v izotropni snovi vedno v smeri valovnega vektorja, pravokotno
 na valovne fronte. Iz definicije za gostoto svetlobnega toka (enačbi \ref{eq:jReS} in
-\ref{eq:Poyntingov-vektor-c}) ter Maxwellovih enačb (\ref{eq:Maxwell1} -- \ref{eq:Maxwell4}) sledi\index{Intenziteta!ravni val}
+\ref{eq:Poyntingov-vektor-c}) ter Maxwellovih enačb (\ref{eq:Maxwell1} -- \ref{eq:Maxwell4}) 
+sledi\index{Intenziteta!ravni val}
 \beq
 j=\Re\left(\frac{1}{4}E_{0}H_{0}^{*}+\frac{1}{4}E_{0}^*H_{0}\right)=
 \frac{1}{2}c\epsilon\epsilon_{0}\left|E_{0}\right|^{2}=\frac{1}{2}c_{0}n\epsilon_{0}\left|E_{0}\right|^{2}.
@@ -506,8 +504,145 @@ Zaradi destruktivne interference se količina odbite svetlobe z izbrano
 valovno dolžino občutno zmanjša. Ker imamo v fiziki laserjev opraviti
 s koherentnimi izvori s točno določeno valovno dolžino, za zmanjšanje
 izgub, na primer v resonatorju laserja, vedno uporabljamo optične
-elemente (leče, kristale, akustooptične modulatorje ... ) z ustrezno
+elemente (leče, kristale, akusto-optične modulatorje ... ) z ustrezno
 antirefleksno plastjo.
+
+\section{Uklon svetlobe}
+
+
+Problem uklona svetlobe na odprtinah (zaslonkah) se najenostavneje lotimo z uporabo
+skalarnega približka teorije elektromagnetnega polja. Pri tem seveda zanemarimo vpliv 
+polarizacije na uklon svetlobe. Vpliv polarizacije
+postane pomemben zgolj pri zelo majhnih odprtinah, torej kadar je $\lambda\sim a$, kjer je $a$ velikost
+odprtine. Treba pa je poudariti, da je tudi v tem primeru uklonska slika za različne polarizacije podobna, 
+razlikujejo pa se po intenziteti prepuščene svetlobe.
+
+
+\begin{remark}{{\bf Žičnati polarizatorji}}\\ \\
+Primer, kjer skalarni približek ne da pravih rezultatov je uklon na mrežici narejeni 
+iz zelo tankih prevodnik žic s periodo mrežice $d\ll \lambda$. Takšna mrežica 
+deluje kot polarizator za valovanje s polarizacijo pravokotno na žice (TE polarizacija). 
+Elektromagnetni val s TM polarizacijo pri prečkanju inducira tok v žicah, medtem
+ko je za TE polarizacijo inducirani tok bistveno manjši saj je smer toka omejena
+vzdolž žice. Posledično je prepustnost za TE val velika, medtem kose TM val delno
+absorbira in odbije.Takšni polarizatorji se večinoma uporabljajo v mikrovalovni tehniki, 
+vendar se v zadnjih letih z razvojem in izboljšavo litografskih postopkov
+vse pogosteje uporabljajo tudi v bližnjem infrardečem področju svetlobe.
+\end{remark}
+
+
+Pri dimenzijah odprtin $a>\lambda$ lahko uporabimo skalarno teorijo
+\beq
+\nabla^2 U = \frac{1}{c^2}\frac{\partial^2 U}{\partial t^2},
+\label{eq:skalarna-valovna-enačba}
+\eeq
+kjer $U$ predstavlja eno od komponent električne $E$ oziroma magnetne poljske jakosti $H$.
+Časovna odvisnost polja $U$ je harmonična funkcija in je proporcionalna $e^{\pm i \omega t}$ iz
+česar se da (z uporabo Greenovega teorema) izpeljati zvezo med velikostjo polja v točki
+$P$ s poljem na poljubni ploskvi ki obkroža točko $P$. Zvezo opisuje Kirchhoffov integral 
+\index{Kirchhoffov integral}
+\beq
+U_P = -\frac{1}{4\pi}\int\int\left(U \mathbf{n}\cdot \nabla \frac{e^{ikr}}{r}-
+\frac{e^{ikr}}{r}\mathbf{n}\cdot \nabla U \right) dS,
+\label{eq:Kirchoffov-integral}
+\eeq
+kjer je $\mathbf{n}$ normala na ploskev po kateri teče integral, $r$ je oddaljenost od točke P
+do ploskve $dS$. Kirchhoffov integral velja splošno za katerokoli harmonično 
+funkcijo $U$, ki reši valovno enačbo (\ref{eq:skalarna-valovna-enačba}) in torej
+ni direktno vezan na problem sipanja, vendar se z uporabo \ref{eq:Kirchoffov-integral} z
+problem sipanja močno poenostavi. Vzemimo odprtino poljubne oblike v za svetlobo
+neprepustni plošči. Naša naloga je določiti obliko skalarnega polja v točki $P$.
+Kot prvi primer vzemimo točkast izvor v točki $S$, katerega polje zapišemo kot
+\beq
+\label{eq:polje-krogelni-val}
+U = U_0 \frac{e^{ikr'}}{r'},
+\eeq
+kjer je $r'$ razdalja od izvora do točke na zasenčitveni ploskvi (glej sliko XX).
+Ploskev integracije zajema odprtino in objema točko $P$ v celoti, pri tem
+pa moramo upoštevati še dva dodatna približka:
+\begin{enumerate}
+\item Valovna funkcija $U$ in njen gradient vplivata zelo malo na integral (njena vrednost je 0), 
+razen v odprtini.
+\item Vrednosti $U$ in njen gradient sta na odprtini podana z poljem, ki ga izseva 
+izvor v točki $S$ in sta torej takšna, kot bi bila, če zaslona ne bi bilo.
+\end{enumerate}
+Zgornja približka sta precej groba, vendar se izkaže, da v splošnem kljub temu
+dobimo dobro ujemanje med eksperimentalno določeno uklonsko sliko, s čimer 
+upravičimo njuno uporabo pri izračunu uklonske slike.
+\index{Fresnel-Kirchhoffov uklon}
+
+\begin{definition}
+\label{naloga-Fresnel-Kirchhoff-uklon}
+Pokaži, da z uporabo Kirchhoffovega integrala in predpostavki, da je polje na odprtini
+podano z (\ref{eq:polje-krogelni-val}) ter za razdalje $r$ od odprtine, kjer je $r \gg \lambda$
+dobimo za velikost polja v točki $P$ naslednjo zvezo:
+\beq
+U_P = -\frac{ik U_0 e^{-i\omega t}}{4\pi}\int\int\frac{e^{ik(r+r')}}{rr'}\left[\cos(\mathbf{n},
+\mathbf{r})-\cos(\mathbf{n},\mathbf{r'})\right] dS,
+\label{eq:Fresnel-Kirchoffov-integral}
+\eeq
+\end{definition}
+
+
+Ta zveza ni nič drugega kot matematična formulacija Huygensovega principa. To najlažje
+vidimo, če postavimo izvor svetlobe v os odprtine in daleč stran od zaslona, tako da
+na zaslon vpada ravni val. Polje v točki $P$  je tako podano z 
+
+\beq
+\label{eq:Fresnelov-uklon}
+U_P =  -\frac{ik}{4\pi} \int \int\frac{U_S e^{ik(r)}}{r}\left[ \cos(\mathbf{n},\mathbf{r})-1\right] dS
+\eeq
+kjer $U_S$ predstavlja kompleksno amplitudo polja v odprtini
+\beq
+U_S = U_0 \frac{e^{ikz}}{z}=E_0 e^{ikz},
+\eeq 
+kjer smo zapisali $r=z$, saj je izvor daleč od odprtine, tako da lahko krogelno valovanje aproksimiramo
+z ravnim valom. Vidimo, da nam val $U_S$ v vsakem od elementov $dS$ odprtine vzbudi krogelno valovanje s
+kompleksno amplitudo
+\beq
+U = U_0 \frac{e^{ikr}}{r} dS,
+\eeq 
+ter da je polje v izbrani točki $P$ vsota prispevkov posameznih krogelnih valovanj
+(Huygensov princip). \index{Huygensov princip}
+Za razliko od osnovnega Huygensov načela, v enačbi \ref{eq:Fresnel-Kirchoffov-integral} 
+nastopa še faktor $\left[\cos(\mathbf{n},\mathbf{r})-1\right]$, ki poskrbi za to
+da je amplituda nazaj sipanega valovanja enaka 0. Faktor $-i$ tudi manjka v osnovnem Huygensovem pricipu,
+pomeni pa, da je uklonjeno valovanje fazno zakasnjeno za $\pi/2$ glede na osnovno
+valovanje $U_S$.
+
+
+Na tem mestu je vredno pogledati še nekoliko poenostavljen primer uklona ravnega vala
+na odprtini v daljnem polju. V literaturi dostikrat zasledimo pojma Fraunhoferjeva uklonska slika
+za daljno polje ter Fresnelova uklonska slika za bližnje polje. Mejo med daljnim in
+bližnjim poljem kvalitativno določa Fresnelovo število
+\beq
+F= \frac{a^2}{L\lambda},
+\eeq 
+kjer je $a$ karakteristična dimenzija odprtine, $L$ oddaljenost od odprtine ter
+$\lambda$ valovna dolžina. V grobem velja, da za oddaljenosti $L$ od odprtine za
+katere velja $F<1$, polje obravnavamo kot daljno polje, medtem ko $F>1$ pove, da 
+moramo uklon obravnavati v polni obliki. Pri izračunu uklona v daljnem polju lahko med drugim
+zanemarimo odvisnost $r$ od oddaljenosti od središča odprtine, tako da v imenovalcu postavimo
+kar $r=z$, česar pa seveda ne smemo narediti v faznem členu, kjer pa  V Fraunhoferjevem približku
+dobimo tako
+
+\beq
+\label{eq:Fraunhoferjev-uklon}
+U_P \propto \int \int U_S e^{-ik/z(x x' +y y' )} dx'dy',
+\eeq
+kar ni nič drugega kot Fouriereva transformacija polja $U_S$.
+
+
+\begin{definition}
+\label{naloga-Fresnel-Kirchhoff-uklon}
+Pokaži, da je v Fraunhoferjevi uklonski sliki, uklon na okrogli odprtini s premerom $a$ podan z
+\beq
+U_P = U_0\frac{J_1(\pi a \rho/ \lambda z)}{\pi a \rho/ \lambda z},
+\eeq
+kjer je $\rho = \sqrt{x^2+y^2}$.
+\end{definition}
+
+
 
 \section{EM valovanje v anizotropnih snoveh}
 
@@ -544,7 +679,8 @@ diagonalen. V takem koordinatnem sistemu velja
 \eeq
 in 
 \beq
-D_{1}=\epsilon_{0}\epsilon_{1}E_{1},\quad D_{2}=\epsilon_{0}\epsilon_{2}E_{2},\quad D_{3}=\epsilon_{0}\epsilon_{3}E_{3}.\label{eq:gostota-elektricnega-polja-lastni}
+D_{1}=\epsilon_{0}\epsilon_{1}E_{1},\quad D_{2}=\epsilon_{0}\epsilon_{2}E_{2},\quad D_{3}=
+\epsilon_{0}\epsilon_{3}E_{3}.\label{eq:gostota-elektricnega-polja-lastni}
 \eeq
 Glavne osi sistema določajo smeri, vzdolž katerih sta jakost
 in gostota električnega polja vzporedni, lastne vrednosti 
@@ -682,132 +818,3 @@ plast anizotropne snovi tako dobimo dva vzporedna, a razmaknjena žarka z medseb
 pravokotnimi polarizacijami. Enoosne kristale, odrezane pod primernim kotom in prave dolžine,
 zato lahko uporabimo kot polarizacijski delilnik žarkov.
 
-\section{Uklon svetlobe}
-
-
-Problem uklona svetlobe na odprtinah (zaslonkah) se najenostavneje lotimo z uporabo
-skalarnega približka teorije elektromagnetnega polja. Pri tem seveda zanemarimo vpliv 
-polarizacije na uklon svetlobe. Vpliv polarizacije
-postane pomemben zgolj pri zelo majhnih odprtinah, torej kadar je $\lambda\sim a$, kjer je $a$ velikost
-odprtine. Treba pa je poudariti, da je tudi v tem primeru uklonska slika za različne polarizacije podobna, 
-razlikujejo pa se po intenziteti prepuščene svetlobe.
-
-
-\begin{remark}{{\bf Žičnati polarizatorji}}\\ \\
-Primer, kjer skalarni približek ne da pravih rezultatov je uklon na mrežici narejeni 
-iz zelo tankih prevodnik žic s periodo mrežice $d\ll \lambda$. Takšna mrežica 
-deluje kot polarizator za valovanje s polarizacijo pravokotno na žice (TE polarizacija). 
-Elektromagnetni val s TM polarizacijo pri prečkanju inducira tok v žicah, medtem
-ko je za TE polarizacijo inducirani tok bistveno manjši saj je smer toka omejena
-vzdolž žice. Posledično je prepustnost za TE val velika, medtem kose TM val delno
-absorbira in odbije.Takšni polarizatorji se večinoma uporabljajo v mikrovalovni tehniki, 
-vendar se v zadnjih letih z razvojem in izboljšavo litografskih postopkov
-vse pogosteje uporabljajo tudi v bližnjem infrardečem področju svetlobe.
-\end{remark}
-
-
-Pri dimenzijah odprtin $a>\lambda$ lahko uporabimo skalarno teorijo
-\beq
-\nabla^2 U = \frac{1}{c^2}\frac{\partial^2 U}{\partial t^2},
-\label{eq:skalarna-valovna-enačba}
-\eeq
-kjer $U$ predstavlja eno od komponent električne $E$ oziroma magnetne poljske jakosti $H$.
-Časovna odvisnost polja $U$ je harmonična funkcija in je proporcionalna $e^{\pm i \omega t}$ iz
-česar se da (z uporabo Greenovega teorema) izpeljati zvezo med velikostjo polja v točki
-$P$ s poljem na poljubni ploskvi ki obkroža točko $P$. Zvezo opisuje Kirchoffov integral \index{Kirchoffov integral}
-\beq
-U_P = -\frac{1}{4\pi}\int\int\left(U \mathbf{n}\cdot \nabla \frac{e^{ikr}}{r}-\frac{e^{ikr}}{r}\mathbf{n}\cdot \nabla U \right) dS,
-\label{eq:Kirchoffov-integral}
-\eeq
-kjer je $\mathbf{n}$ normala na ploskev po kateri teče integral, $r$ je oddaljenost od točke P
-do ploskeve $dS$. Kirchoffov integral velja splošno za katerokoli harmonično 
-funkcijo $U$, ki reši valovno enačbo (\ref{eq:skalarna-valovna-enačba}) in torej
-ni direktno vezan na problem sipanja, vendar se z uporabo \ref{eq:Kirchoffov-integral} z
-problem sipanja močno poenostavi. Vzemimo opdrtino poljubne oblike v za svetlobo
-neprepustni plošči. Naša naloga je določiti obliko skalarnega polja v točki $P$.
-Kot prvi primer vzemimo točkast izvor v točki $S$, katerega polje zapišemo kot
-\beq
-\label{eq:polje-krogelni-val}
-U = U_0 \frac{e^{ikr'}}{r'},
-\eeq
-kjer je $r'$ razdalja od izvora do točke na zasečitveni ploskvi (glej sliko XX).
-Ploskev integracije zajema odprtino in objema točko $P$ v celoti, pri tem
-pa moramo upoštevati še dva dodatna približka:
-\begin{enumerate}
-\item Valovna funkcija $U$ in njen gradient vplivata zelo malo na integral (njena vrednost je 0), razen v odprtini.
-\item Vrednosti $U$ in njen gradient sta na odprtini podana z poljem, ki ga izseva izvor v točki $S$ in sta torej takšna, kot bi bila, če zaslona ne bi bilo.
-\end{enumerate}
-Zgornja približka sta precej groba, vendar se izkaže, da v splošnem kljub temu
-dobimo dobro ujemanje med eksperimentalno določeno uklonsko sliko, s čimer 
-upravičimo njuno uporabo pri izračunu uklonske slike.
-\index{Fresnel-Kirchhoffov uklon}
-
-\begin{definition}
-\label{naloga-Fresnel-Kirchhoff-uklon}
-Pokaži, da z uporabo Kirchoffovega integrala in predpostavki, da je polje na odprtini
-podano z (\ref{eq:polje-krogelni-val}) ter za razdalje $r$ od odprtine, kjer je $r \gg \lambda$
-dobimo za velikost polja v točki $P$ naslednjo zvezo:
-\beq
-U_P = -\frac{ik U_0 e^{-i\omega t}}{4\pi}\int\int\frac{e^{ik(r+r')}}{rr'}\left[\cos(\mathbf{n},\mathbf{r})-\cos(\mathbf{n},\mathbf{r'})\right] dS,
-\label{eq:Fresnel-Kirchoffov-integral}
-\eeq
-\end{definition}
-
-
-Ta zveza ni nič drugega kot matematična formulacija Huygensovega principa. To najlažje
-vidimo, če postavimo izvor svetlobe v os odprtine in daleč stran od zaslona, tako da
-na zaslon vpada ravni val. Polje v točki $P$  je tako podano z 
-
-\beq
-\label{eq:Fresnelov-uklon}
-U_P =  -\frac{ik}{4\pi} \int \int\frac{U_S e^{ik(r)}}{r}\left[ \cos(\mathbf{n},\mathbf{r})-1\right] dS
-\eeq
-kjer $U_S$ predstavlja kompleksno amplitudo polja v odprtini
-\beq
-U_S = U_0 \frac{e^{ikz}}{z}=E_0 e^{ikz},
-\eeq 
-kjer smo zapisali $r=z$, saj je izvor daleč od odprtine, tako da lahko krogelno valovanje aproksimiramo
-z ravnim valom. Vidimo, da nam val $U_S$ v vsakem od elementov $dS$ odprtine vzbudi krogelno valovanje s
-kompleksno maplitudo
-\beq
-U = U_0 \frac{e^{ikr}}{r} dS,
-\eeq 
-ter da je polje v izbrani točki $P$ vsota prispevkov posameznih krogelnih valovanj
-(Huygensov pricip). \index{Huygensov princip}
-Za razliko od osnovnega Huygensov pricipa, v enačbi \ref{eq:Fresnel-Kirchoffov-integral} 
-nastopa še faktor $\left[\cos(\mathbf{n},\mathbf{r})-1\right]$, ki poskrbi za to
-da je amplituda nazaj sipanega valovanja enaka 0. Faktor $-i$ tudi manjka v osnovnem Huygensovem pricipu,
-pomeni pa, da je uklonjeno valovanje fazno zakasnjeno za $\pi/2$ glede na osnovno
-valovanje $U_S$.
-
-
-Na tem mestu je vredno pogledati še nekoliko poenostavljen primer uklona ravnega vala
-na odprtini v daljnem polju. V literaturi dostikrat zasledimo pojma Fraunhoferjeva uklonska slika
-za daljno polje ter Fresnelova uklonska slika za bližnje polje. Mejo med daljnim in
-bližnjim poljem kvalitativno določa Fresnelovo število
-\beq
-F= \frac{a^2}{L\lambda},
-\eeq 
-kjer je $a$ karakteristična dimenzija odprtine, $L$ oddaljenost od odprtine ter
-$\lambda$ valovna dolžina. V grobem velja, da za oddaljenosti $L$ od odprtine za
-katere velja $F<1$, polje obravnavamo kot daljno polje, medtem ko $F>1$ pove, da 
-moramo uklon obravnavati v polni obliki. Pri izračunu uklona v daljnem polju lahko med drugim
-zanemarimo odvisnost $r$ od oddaljenosti od središča odprtine, tako da v imenovalcu postavimo
-kar $r=z$, česar pa seveda ne smemo narediti v faznem členu, kjer pa  V Fraunhoferjevem približku
-dobimo tako
-
-\beq
-\label{eq:Fraunhoferjev-uklon}
-U_P \propto \int \int U_S e^{-ik/z(x x' +y y' )} dx'dy',
-\eeq
-kar ni nič drugega kot Fouriereva transformacija polja $U_S$.
-
-
-\begin{definition}
-\label{naloga-Fresnel-Kirchhoff-uklon}
-Pokaži, da je v Fraunhoferjevi uklonski sliki, uklon na okrogli odprtini s premerom $a$ podan z
-\beq
-U_P = U_0\frac{J_1(\pi a \rho/ \lambda z)}{\pi a \rho/ \lambda z},
-\eeq
-kjer je $\rho = \sqrt{x^2+y^2}$.
-\end{definition}
