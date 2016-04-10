@@ -501,83 +501,90 @@ antirefleksno plastjo.
 
 \section{Uklon svetlobe}
 
-Problem uklona svetlobe na odprtinah (zaslonkah) se najenostavneje lotimo z uporabo
-skalarnega približka teorije elektromagnetnega polja. Pri tem seveda zanemarimo vpliv 
-polarizacije na uklon svetlobe. Vpliv polarizacije
-postane pomemben zgolj pri zelo majhnih odprtinah, torej kadar je $\lambda\sim a$, kjer je $a$ velikost
-odprtine. Treba pa je poudariti, da je tudi v tem primeru uklonska slika za različne polarizacije podobna, 
-razlikujejo pa se po intenziteti prepuščene svetlobe.
-
+Ko svetloba vpade na oviro, za oviro nastane senca. Nastala senca ni ostra, ampak
+ima zaradi uklona zabrisane robove. Obravnave 
+uklona svetlobe na odprtinah (zaslonkah) se najenostavneje lotimo z uporabo
+skalarnega približka teorije elektromagnetnega polja. To pomeni, da vpliv 
+polarizacije zanemarimo. Vpliv polarizacije je pomemben zgolj pri zelo majhnih odprtinah, 
+torej kadar je $\lambda\sim a$, kjer je $a$ velikost
+odprtine. Treba pa je povedati, da so tudi v tem primeru uklonske slike za 
+različne polarizacije podobne, razlikujejo pa se po intenziteti prepuščene svetlobe.
 
 \begin{remark}{{\bf Žičnati polarizatorji}}\\ \\
-Primer, kjer skalarni približek ne da pravih rezultatov je uklon na mrežici narejeni 
+Primer, kjer skalarni približek ne da pravih rezultatov, je uklon na mrežici, narejeni 
 iz zelo tankih prevodnik žic s periodo mrežice $d\ll \lambda$. Takšna mrežica 
-deluje kot polarizator za valovanje s polarizacijo pravokotno na žice (TE polarizacija). 
+deluje kot polarizator za valovanje s polarizacijo, ki je pravokotno na žice (TE polarizacija). 
 Elektromagnetni val s TM polarizacijo pri prečkanju inducira tok v žicah, medtem
-ko je za TE polarizacijo inducirani tok bistveno manjši saj je smer toka omejena
-vzdolž žice. Posledično je prepustnost za TE val velika, medtem kose TM val delno
-absorbira in odbije.Takšni polarizatorji se večinoma uporabljajo v mikrovalovni tehniki, 
+ko je za TE polarizacijo inducirani tok bistveno manjši, saj je smer toka omejena
+vzdolž žice. Posledično je prepustnost za TE val velika, medtem ko se TM val delno
+absorbira in odbije. Takšni polarizatorji se večinoma uporabljajo v mikrovalovni tehniki, 
 vendar se v zadnjih letih z razvojem in izboljšavo litografskih postopkov
 vse pogosteje uporabljajo tudi v bližnjem infrardečem področju svetlobe.
 \end{remark}
 
-
-Pri dimenzijah odprtin $a>\lambda$ lahko uporabimo skalarno teorijo
+Pri dimenzijah odprtin $a>\lambda$ torej lahko uporabimo skalarno teorijo, zato zapišemo
+valovno enačbo (enačba~\ref{eq:valovna-skalarna}) v skalarni obliki
 \beq
-\nabla^2 U = \frac{1}{c^2}\frac{\partial^2 U}{\partial t^2},
+\nabla^2 E - \frac{1}{c^2}\frac{\partial^2 E}{\partial t^2} = 0.
 \label{eq:skalarna-valovna-enačba}
 \eeq
-kjer $U$ predstavlja eno od komponent električne $E$ oziroma magnetne poljske jakosti $H$.
-Časovna odvisnost polja $U$ je harmonična funkcija in je proporcionalna $e^{\pm i \omega t}$ iz
-česar se da (z uporabo Greenovega teorema) izpeljati zvezo med velikostjo polja v točki
-$P$ s poljem na poljubni ploskvi ki obkroža točko $P$. Zvezo opisuje Kirchhoffov integral 
+Zapisana valovna enačba velja za vse komponente električne $E$ in tudi 
+magnetne poljske jakosti $H$. Časovna odvisnost polja $E$ je harmonična funkcija in 
+je sorazmerna z $e^{-i \omega t}$. Z uporabo Greenovega teorema lahko izrazimo
+jakost polja $E_P$ v točki $P$ s poljem na poljubni ploskvi, ki obkroža točko $P$. 
+Zvezo opisuje Kirchhoffov integral\footnote{Nemški fizik Gustav Kirchhoff, 1824--1887.} 
 \index{Kirchhoffov integral}
 \beq
-U_P = -\frac{1}{4\pi}\int\int\left(U \mathbf{n}\cdot \nabla \frac{e^{ikr}}{r}-
-\frac{e^{ikr}}{r}\mathbf{n}\cdot \nabla U \right) dS,
-\label{eq:Kirchoffov-integral}
+E_P = -\frac{1}{4\pi}\int \left(E\,\mathbf{n}\cdot \nabla \frac{e^{ikr}}{r}-
+\frac{e^{ikr}}{r}\mathbf{n}\cdot \nabla E \right) dS,
+\label{eq:Kirchhoffov-integral}
 \eeq
-kjer je $\mathbf{n}$ normala na ploskev po kateri teče integral, $r$ je oddaljenost od točke P
+kjer je $\mathbf{n}$ normala na ploskev, po kateri teče integral, $r$ pa je oddaljenost od točke P
 do ploskve $dS$. Kirchhoffov integral velja splošno za katerokoli harmonično 
-funkcijo $U$, ki reši valovno enačbo (\ref{eq:skalarna-valovna-enačba}) in torej
-ni direktno vezan na problem sipanja, vendar se z uporabo \ref{eq:Kirchoffov-integral} z
-problem sipanja močno poenostavi. Vzemimo odprtino poljubne oblike v za svetlobo
-neprepustni plošči. Naša naloga je določiti obliko skalarnega polja v točki $P$.
-Kot prvi primer vzemimo točkast izvor v točki $S$, katerega polje zapišemo kot
+funkcijo, ki reši valovno enačbo (\ref{eq:skalarna-valovna-enačba}), ne samo $E$ in torej
+ni vezan na obravnavo uklona svetlobe. 
+
+Kot prvi primer vzemimo točkast izvor v točki $S$. Svetloba iz njega vpada na zaslon, 
+v katerem je odprtina poljubne oblike. Izračunajmo skalarno polje v točki $P$ na drugi 
+strani zaslona (slika~\ref{***}). Vpadno svetlobo zapišemo kot
 \beq
 \label{eq:polje-krogelni-val}
-U = U_0 \frac{e^{ikr'}}{r'},
+E = A \frac{e^{ikr'}}{r'},
 \eeq
-kjer je $r'$ razdalja od izvora do točke na zasenčitveni ploskvi (glej sliko XX).
-Ploskev integracije zajema odprtino in objema točko $P$ v celoti, pri tem
-pa moramo upoštevati še dva dodatna približka:
+kjer je $r'$ razdalja od izvora do točke na zaslonu, A pa zaradi ohranitve energije konstanta.
+
+Integracijska ploskev je lahko poljubna sklenjena ploskev, ki objema točko $P$. Izberemo tako, ki
+zajema odprtino na zaslonu, poleg tega pa naredimo še dva približka:\\
 \begin{enumerate}
-\item Valovna funkcija $U$ in njen gradient vplivata zelo malo na integral (njena vrednost je 0), 
-razen v odprtini.
-\item Vrednosti $U$ in njen gradient sta na odprtini podana z poljem, ki ga izseva 
-izvor v točki $S$ in sta torej takšna, kot bi bila, če zaslona ne bi bilo.
+\item Jakost polja $E$ in njen gradient doprineseta k integralu le na odprtini, na preostanku ploskve
+pa sta njuna prispevka zanemarljivo majhna.\\
+\item Vrednost $E$ in njen gradient sta na odprtini takšna, kot da zaslona ne bi bilo.\\
 \end{enumerate}
 Zgornja približka sta precej groba, vendar se izkaže, da v splošnem kljub temu
 dobimo dobro ujemanje med eksperimentalno določeno uklonsko sliko, s čimer 
 upravičimo njuno uporabo pri izračunu uklonske slike.
-\index{Fresnel-Kirchhoffov uklon}
 
-\begin{definition}
-\label{naloga-Fresnel-Kirchhoff-uklon}
-Pokaži, da z uporabo Kirchhoffovega integrala in predpostavki, da je polje na odprtini
-podano z (\ref{eq:polje-krogelni-val}) ter za razdalje $r$ od odprtine, kjer je $r \gg \lambda$
-dobimo za velikost polja v točki $P$ naslednjo zvezo:
+Kirchhoffov integral za primer točkastega izvora svetlobe se potem zapiše kot
 \beq
-U_P = -\frac{ik U_0 e^{-i\omega t}}{4\pi}\int\int\frac{e^{ik(r+r')}}{rr'}\left[\cos(\mathbf{n},
-\mathbf{r})-\cos(\mathbf{n},\mathbf{r'})\right] dS,
+E_P = -\frac{ik A e^{-i\omega t}}{4\pi}\int\frac{e^{ik(r+r')}}{rr'}\left[\cos(\mathbf{n},
+\mathbf{r})-\cos(\mathbf{n},\mathbf{r'})\right] dS.
 \label{eq:Fresnel-Kirchoffov-integral}
 \eeq
+
+\index{Fresnel-Kirchhoffov uklon}
+\begin{definition}
+\label{naloga-Fresnel-Kirchhoff-uklon}
+Uporabi Kirchhoffov integral in pokaži, da je za primer krožnega vpadnega vala
+(enačba~\ref{eq:polje-krogelni-val}) polje v točki $P$, ki je od odprtine oddaljena 
+$r \gg \lambda$, zapišemo z enačbo~(\ref{eq:Fresnel-Kirchoffov-integral}).
 \end{definition}
 
-
-Ta zveza ni nič drugega kot matematična formulacija Huygensovega principa. To najlažje
+Kirchhoffov integral ni nič drugega kot matematična formulacija \index{Huygensovo načelo}Huygensovega 
+načela\footnote{Nizozemski znanstvenik Christiaan Huygens, 1629--1695.}. 
+Spomnimo se, da Huygensovo načelo pravi, da vsako točko valovne fronte lahko obravnavamo 
+kot izvor novega krogelnega vala. To najlažje
 vidimo, če postavimo izvor svetlobe v os odprtine in daleč stran od zaslona, tako da
-na zaslon vpada ravni val. Polje v točki $P$  je tako podano z 
+na zaslon vpada ravni val. Polje v točki $P$ je tako podano z 
 
 \beq
 \label{eq:Fresnelov-uklon}
