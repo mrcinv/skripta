@@ -530,18 +530,18 @@ valovno enačbo (enačba~\ref{eq:valovna-skalarna}) v skalarni obliki
 \eeq
 Zapisana valovna enačba velja za vse komponente električne $E$ in tudi 
 magnetne poljske jakosti $H$. Časovna odvisnost polja $E$ je harmonična funkcija in 
-je sorazmerna z $e^{-i \omega t}$. Z uporabo Greenovega teorema lahko izrazimo
-jakost polja $E_P$ v točki $P$ s poljem na poljubni ploskvi, ki obkroža točko $P$. 
+je sorazmerna z $e^{-i \omega t}$. Z uporabo Greenovega teorema lahko 
+jakost polja $E_P$ v točki $P$ izrazimo s poljem na poljubni ploskvi, ki obkroža točko $P$. 
 Zvezo opisuje Kirchhoffov integral\footnote{Nemški fizik Gustav Kirchhoff, 1824--1887.} 
 \index{Kirchhoffov integral}
 \beq
-E_P = -\frac{1}{4\pi}\int \left(E\,\mathbf{n}\cdot \nabla \frac{e^{ikr}}{r}-
+E_P = -\frac{1}{4\pi}\oint \left(E\,\mathbf{n}\cdot \nabla \frac{e^{ikr}}{r}-
 \frac{e^{ikr}}{r}\mathbf{n}\cdot \nabla E \right) dS,
 \label{eq:Kirchhoffov-integral}
 \eeq
 kjer je $\mathbf{n}$ normala na ploskev, po kateri teče integral, $r$ pa je oddaljenost od točke P
 do ploskve $dS$. Kirchhoffov integral velja splošno za katerokoli harmonično 
-funkcijo, ki reši valovno enačbo (\ref{eq:skalarna-valovna-enačba}), ne samo $E$ in torej
+funkcijo, ki reši valovno enačbo (enačba~\ref{eq:skalarna-valovna-enačba}), ne samo $E$ in torej
 ni vezan na obravnavo uklona svetlobe. 
 
 Kot prvi primer vzemimo točkast izvor v točki $S$. Svetloba iz njega vpada na zaslon, 
@@ -552,6 +552,8 @@ strani zaslona (slika~\ref{***}). Vpadno svetlobo zapišemo kot
 E = A \frac{e^{ikr'}}{r'},
 \eeq
 kjer je $r'$ razdalja od izvora do točke na zaslonu, A pa zaradi ohranitve energije konstanta.
+\vskip6truecm
+
 
 Integracijska ploskev je lahko poljubna sklenjena ploskev, ki objema točko $P$. Izberemo tako, ki
 zajema odprtino na zaslonu, poleg tega pa naredimo še dva približka:\\
@@ -561,7 +563,7 @@ pa sta njuna prispevka zanemarljivo majhna.\\
 \item Vrednost $E$ in njen gradient sta na odprtini takšna, kot da zaslona ne bi bilo.\\
 \end{enumerate}
 Zgornja približka sta precej groba, vendar se izkaže, da v splošnem kljub temu
-dobimo dobro ujemanje med eksperimentalno določeno uklonsko sliko, s čimer 
+dobimo dobro ujemanje z eksperimentalno določeno uklonsko sliko, s čimer 
 upravičimo njuno uporabo pri izračunu uklonske slike.
 
 Kirchhoffov integral za primer točkastega izvora svetlobe se potem zapiše kot
@@ -570,8 +572,8 @@ E_P = -\frac{ik A e^{-i\omega t}}{4\pi}\int\frac{e^{ik(r+r')}}{rr'}\left[\cos(\m
 \mathbf{r})-\cos(\mathbf{n},\mathbf{r'})\right] dS.
 \label{eq:Fresnel-Kirchoffov-integral}
 \eeq
-
-\index{Fresnel-Kirchhoffov uklon}
+V literaturi ga pogosto imenujejo Fresnel-Kirchhoffov uklonski integral\footnote{Francoski fizik
+Augustin-Jean Fresnel, 1788--1827.}\index{Fresnel-Kirchhoffov uklon}.
 \begin{definition}
 \label{naloga-Fresnel-Kirchhoff-uklon}
 Uporabi Kirchhoffov integral in pokaži, da je za primer krožnega vpadnega vala
@@ -579,68 +581,100 @@ Uporabi Kirchhoffov integral in pokaži, da je za primer krožnega vpadnega vala
 $r \gg \lambda$, zapišemo z enačbo~(\ref{eq:Fresnel-Kirchoffov-integral}).
 \end{definition}
 
-Kirchhoffov integral ni nič drugega kot matematična formulacija \index{Huygensovo načelo}Huygensovega 
-načela\footnote{Nizozemski znanstvenik Christiaan Huygens, 1629--1695.}. 
-Spomnimo se, da Huygensovo načelo pravi, da vsako točko valovne fronte lahko obravnavamo 
-kot izvor novega krogelnega vala. To najlažje
-vidimo, če postavimo izvor svetlobe v os odprtine in daleč stran od zaslona, tako da
-na zaslon vpada ravni val. Polje v točki $P$ je tako podano z 
-
+Oglejmo si poseben primer, ko leži točkast izvor svetlobe na osi okrogle odprtine. Razdalja
+$r'$ je potem konstantna in polje v točki $P$ izračunamo kot 
 \beq
 \label{eq:Fresnelov-uklon}
-U_P =  -\frac{ik}{4\pi} \int \int\frac{U_S e^{ik(r)}}{r}\left[ \cos(\mathbf{n},\mathbf{r})-1\right] dS
+E_P =  -\frac{ik}{4\pi} \int E_S\frac{ e^{ikr-i\omega t}}{r}\left[\cos(\mathbf{n},\mathbf{r})+1\right] dS,
 \eeq
-kjer $U_S$ predstavlja kompleksno amplitudo polja v odprtini
+pri čemer $E_S$ predstavlja kompleksno amplitudo vpadnega polja v odprtini
 \beq
-U_S = U_0 \frac{e^{ikz}}{z}=E_0 e^{ikz},
+E_S = A \frac{e^{ikr'}}{r'}.
 \eeq 
-kjer smo zapisali $r=z$, saj je izvor daleč od odprtine, tako da lahko krogelno valovanje aproksimiramo
-z ravnim valom. Vidimo, da nam val $U_S$ v vsakem od elementov $dS$ odprtine vzbudi krogelno valovanje s
+Zgornja oblika Fresnel-Kirchhoffovega integrala ni pravzaprav nič drugega kot 
+matematičen zapis \index{Huygensovo načelo}Huygensovega 
+načela\footnote{Nizozemski znanstvenik Christiaan Huygens, 1629--1695.}. 
+Spomnimo se, da Huygensovo načelo pravi, da lahko vsako točko valovne fronte obravnavamo 
+kot izvor novega krogelnega vala. Točno to je zapisano tudi v gornjem integralu. Vpadni val
+$E_S$ v vsakem od elementov $dS$ odprtine vzbudi krogelno valovanje s
 kompleksno amplitudo
 \beq
-U = U_0 \frac{e^{ikr}}{r} dS,
+E = A_0 \frac{e^{ikr}}{r},
 \eeq 
-ter da je polje v izbrani točki $P$ vsota prispevkov posameznih krogelnih valovanj
-(Huygensov princip). \index{Huygensov princip}
-Za razliko od osnovnega Huygensov načela, v enačbi \ref{eq:Fresnel-Kirchoffov-integral} 
-nastopa še faktor $\left[\cos(\mathbf{n},\mathbf{r})-1\right]$, ki poskrbi za to
-da je amplituda nazaj sipanega valovanja enaka 0. Faktor $-i$ tudi manjka v osnovnem Huygensovem pricipu,
+polje v izbrani točki $P$ pa je vsota prispevkov posameznih krogelnih valovanj.
+
+Za razliko od osnovnega Huygensov načela, v enačbi (\ref{eq:Fresnel-Kirchoffov-integral})
+nastopa še faktor $\left[\cos(\mathbf{n},\mathbf{r})-1\right]$, ki poskrbi, da ni valovanja 
+v smeri nazaj proti izvoru. Tudi faktor $-i$ manjka v osnovnem Huygensovem načelu,
 pomeni pa, da je uklonjeno valovanje fazno zakasnjeno za $\pi/2$ glede na osnovno
-valovanje $U_S$.
+valovanje $E_S$.
 
+Uporabna razširitev Fresnel-Kirchhoffovega uklona je z uporabo prepustnostne funkcije odprtine $T$.
+Z njo v splošnem popišemo amplitudne in fazne spremembe, do katerih lahko pride na raznih 
+odprtinah, lečah, uklonskih mrežicah ... Razširjen uklonski integral zapišemo kot
+\beq
+\label{eq:Fresnelov-uklon2}
+E_P =  -\frac{ik}{4\pi} \int T(r) E_S(r) \frac{ e^{ikr-i\omega t}}{r}
+\left[\cos(\mathbf{n},\mathbf{r})+1\right] dS,
+\eeq
+pri čemer smo upoštevali tudi splošno obliko vpadnega vala $E_S(r)$.
 
-Na tem mestu je vredno pogledati še nekoliko poenostavljen primer uklona ravnega vala
-na odprtini v daljnem polju. V literaturi dostikrat zasledimo pojma Fraunhoferjeva uklonska slika
-za daljno polje ter Fresnelova uklonska slika za bližnje polje. Mejo med daljnim in
-bližnjim poljem kvalitativno določa Fresnelovo število
+\subsection*{Fraunhoferjev in Fresnelov približek}
+Izračun Fresnel-Kirchhoffovega integrala je v splošnem zelo zapleten, zato se 
+pogosto poslužimo dveh približkov: Fraunhoferjevega\footnote{Nemški fizik 
+Joseph von Fraunhofer, 1787--1826.} in Fresnelovega\index{Fresnelov uklon}. 
+Fraunhoferjeva uklonska slika\index{Fraunhoferjev uklon} velja za daljno polje, kadar lahko 
+vpadni in uklonjeni val zapišemo kot ravna valova. Bolj zapleteno Fresnelovo uklonsko sliko pa moramo
+uporabiti, kadar obravnavamo primer bližnjega polja. 
+\begin{figure}[h]
+\centering \def\svgwidth{100truemm} 
+  \input{slike/01_uklonFF.pdf_tex}
+\caption{Različna približka za obravnavo uklona na odprtini. Fraunhoferjev (levo) velja za daljno polje,
+Fresnelov (desno) pa za bližnje.}
+\label{fig:UklonFF}
+\end{figure}
+
+Mejo med daljnim in bližnjim poljem kvalitativno določa Fresnelovo število\index{Fresnelovo število}
 \beq
 F= \frac{a^2}{L\lambda},
 \eeq 
-kjer je $a$ karakteristična dimenzija odprtine, $L$ oddaljenost od odprtine ter
-$\lambda$ valovna dolžina. V grobem velja, da za oddaljenosti $L$ od odprtine za
+kjer je $a$ karakteristična dimenzija odprtine, $L$ tipična oddaljenost od odprtine ter
+$\lambda$ valovna dolžina. V grobem velja, da za oddaljenosti $L$ od odprtine, za
 katere velja $F<1$, polje obravnavamo kot daljno polje, medtem ko $F>1$ pove, da 
-moramo uklon obravnavati v polni obliki. Pri izračunu uklona v daljnem polju lahko med drugim
-zanemarimo odvisnost $r$ od oddaljenosti od središča odprtine, tako da v imenovalcu postavimo
-kar $r=z$, česar pa seveda ne smemo narediti v faznem členu, kjer pa  V Fraunhoferjevem približku
-dobimo tako
+moramo uklon obravnavati v Fresnelovem približki ali celo v polni obliki. 
 
+Zapišimo uklonske integrale za oba približka. Izhajajmo iz Fresnel-Kirchhofovega integrala
+(enačba~\label{eq:Fresnelov-uklon}) in zapišimo razdaljo $r$ s koordinatama na zaslonu $x', y'$ ter
+lego točke $P$ s koordinatami $x,y,z$
 \beq
-\label{eq:Fraunhoferjev-uklon}
-U_P \propto \int \int U_S e^{-ik/z(x x' +y y' )} dx'dy',
+r = \sqrt{(x-x')^2+(y-y')^2 + z^2}.
 \eeq
-kar ni nič drugega kot Fouriereva transformacija polja $U_S$.
+Privzemimo, da je $z$ razmeroma velik v primerjavi s prečnima razlikama in lahko $r$ razvijemo
+\beq
+r \approx z + \frac{(x-x')^2}{2z} +\frac{(y-y')^2}{2z}.
+\eeq
+V Fraunhoferjevem približku zadošča uporaba le linearnih členov v gornjem izrazu in za Fraunhoferjev
+uklonski integral dobimo
+\beq
+\label{eq:FraunhoferApprox}
+E_P =  -\frac{i}{z\lambda} \int \int E_S e^{-ik (xx'+yy')/z} dx' dy',
+\eeq
+kar ni nič drugega kot Fouriereva transformacija polja $E_S$.
 
+V Fresnelovem približku upoštevamo tudi kvadratne člene v razvoju in dobimo
+\beq
+\label{eq:FresnelApprox}
+E_P =  -\frac{i}{z\lambda} \int \int E_S e^{-ik ((x-x')^2+(y-y')^2)/2z} dx' dy'.
+\eeq
 
 \begin{definition}
 \label{naloga-Fresnel-Kirchhoff-uklon}
-Pokaži, da je v Fraunhoferjevi uklonski sliki, uklon na okrogli odprtini s premerom $a$ podan z
+Pokaži, da je v Fraunhoferjevi uklonski sliki uklon na okrogli odprtini s premerom $a$ podan z
 \beq
-U_P = U_0\frac{J_1(\pi a \rho/ \lambda z)}{\pi a \rho/ \lambda z},
+E_P = E_0\frac{J_1(\pi a \rho/ \lambda z)}{\pi a \rho/ \lambda z},
 \eeq
 kjer je $\rho = \sqrt{x^2+y^2}$.
 \end{definition}
-
-
 
 \section{EM valovanje v anizotropnih snoveh}
 
