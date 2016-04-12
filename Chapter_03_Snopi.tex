@@ -1,42 +1,39 @@
-\chapterimage{Mavrica.jpg} % Chapter heading image
+\chapterimage{slike/Laguerre.jpg} % Chapter heading image
 
 \chapter{Koherentni snopi svetlobe}
-
 V tem poglavju bomo zapisali obosni približek valovne enačbe in spoznali 
 njeno osnovno rešitev: Gaussov snop. Obravnavali bomo snope osnovnega in višjega reda ter
 se naučili računati prehode Gaussovih snopov prek optičnih elementov. 
 
 \section{Omejen snop svetlobe}
-
-Pri obravnavi elektromagnetnega valovanja zelo pogosto uporabljamo
+Pri obravnavi elektromagnetnega valovanja pogosto uporabljamo
 približek ravnih valov\index{Ravni val}. Ti so v smeri pravokotno na smer širjenja
 neomejeni in so zato lahko le idealizacija. Čim raven val usmerimo skozi odprtino
-v zaslonu, dobimo omejen snop svetlobe. V snopu svetlobe valovna čela niso
-ravna in meje snopa niso vzporedne, ampak se zaradi uklona širi (slika \ref{fig:Uklon-na-rezi}).
+v zaslonu, dobimo omejen snop svetlobe\index{Omejen snop}. V snopu svetlobe valovna čela niso
+ravna in meje snopa niso vzporedne, ampak se snop zaradi uklona širi (slika \ref{fig:Uklon-na-rezi}).
 \begin{figure}[h]
 \centering
-\includegraphics[width=12truecm]{slike/03_lom_na_rezi.png}
+\def\svgwidth{120truemm} 
+\input{slike/03_uklon_na_rezi.pdf_tex}
 \caption{Omejen snop dobimo ob prehodu ravnega vala skozi končno odprtino.}
 \label{fig:Uklon-na-rezi}
 \end{figure}
 
-
 V veliki oddaljenosti od zaslona lahko za izračun polja uporabimo
-Fraunhoferjevo uklonsko teorijo\index{Fraunhoferjev uklon}. Vendar za oceno kota širjenja
-podrobnega računa niti ne potrebujemo. Velja približno 
+\index{Fraunhoferjev uklon}Fraunhoferjevo uklonsko teorijo (glej poglavje~\ref{FFuklon}). 
+Vendar za oceno kota širjenja podrobnega računa niti ne potrebujemo. Velja približno 
 \begin{equation}
-\vartheta\simeq\frac{\lambda}{a},
+\vartheta\sim\frac{\lambda}{a},
 \label{eq:kot_ocena}
 \end{equation}
 kjer je $a$ polmer odprtine v zaslonu.
 Opis polja v bližini zaslona je zahtevnejši, saj je treba uporabiti 
 Fresnelov približek\index{Fresnelov uklon}. S slike (\ref{fig:Uklon-na-rezi})
-lahko ocenimo, da seže območje bližnjega polja do razdalje 
+ocenimo, da seže območje bližnjega polja do razdalje 
 \begin{equation}
-b\simeq\frac{a}{\theta}=\frac{a^{2}}{\lambda}.
+b\sim\frac{a}{\vartheta}=\frac{a^{2}}{\lambda}.
 \label{eq:z_ocena}
 \end{equation}
-
 
 Včasih taki približni oceni zadoščata. Bolj kvantitativen opis omejenih
 snopov bi lahko dobili s Fraunhoferjevo in Fresnelovo uklonsko teorijo,
@@ -51,12 +48,11 @@ uklonsko sliko v bližnjem polju po Fresnelovi uklonski teoriji.
 \end{definition}
 
 \section{Obosna valovna enačba}
-
 Pričnimo s časovno neodvisno valovno enačbo za monokromatsko valovanje
-s frekvenco $\omega$ (Helmholtzova enačba, \ref{eq:Helmholtz}):
+s frekvenco $\omega$, to je \index{Helmholtzeva enačba}Helmholtzevo enačbo (enačba~\ref{eq:Helmholtz})
 \begin{equation}
 \nabla^{2}E+k^{2}E=0,
-\label{eq:valovna-enacba}
+\label{eq:valovna-enacba-hh}
 \end{equation}
 kjer je $k=n\omega/c_{0}$ valovno število in $n$ lomni količnik
 sredstva, po katerem se valovanje širi. Zaradi enostavnosti obravnavajmo
@@ -69,7 +65,7 @@ E=E_{0}\psi(\mathbf{r},z)e^{ikz},
 kjer je $\mathbf{r}$ krajevni vektor v ravnini $xy$. Glavni del odvisnosti
 od koordinate $z$ smo zapisali v faktorju $e^{ikz}$, tako da lahko
 privzamemo, da se $\psi$ v smeri $z$ le počasi spreminja. Vstavimo
-gornji nastavek v Helmoltzovo enačbo (\ref{eq:valovna-enacba})
+gornji nastavek v Helmholtzevo enačbo (\ref{eq:valovna-enacba-hh})
 in pri tem zanemarimo druge odvode po $z$, saj je zaradi počasnega spreminjanja
 $\partial^{2}\psi/\partial z^{2}$ majhen v primerjavi s $k\partial\psi/\partial z$ in $k^{2}\psi$.
 Zaenkrat obravnavajmo le radialno simetrične rešitve. Dobimo obosno
@@ -81,7 +77,6 @@ Opazimo, da je obosna valovna enačba enaka Schr\"{o}dingerjevi enačbi
 za prost delec v dveh dimenzijah, v kateri ima koordinata $z$ vlogo
 časa. Omejenemu snopu v kvantni mehaniki ustreza lokaliziran delec
 -- valovni paket. Ta se s časom širi, kar v optiki ustreza pojavu uklona.
-
 
 Ena družina rešitev, ki v kvantni mehaniki predstavlja lastne funkcije
 energije in gibalne količine, so ravni valovi\index{Ravni val}
@@ -103,9 +98,8 @@ k_{3}=k-\beta=k-\frac{k_{1}^{2}+k_{2}^{2}}{2k},\label{eq:k3-razvoj}
  pri čemer je $k_{3}$ vzdolžna komponenta valovnega vektorja, $k_{1}$ in
 $k_{2}$ prečni komponenti, $k$ pa valovno število. 
 
-
-Za ravni val, ki je rešitev prvotne točne valovne enačbe \ref{eq:valovna-enacba}
-(in ne obosnega približka), velja 
+Za ravni val, ki je rešitev prvotne točne valovne enačbe (\ref{eq:valovna-enacba-hh})
+in ne samo obosnega približka, velja 
 \begin{equation}
 k_{3}=\sqrt{k^{2}-(k_{1}^{2}+k_{2}^{2})}.\label{eq:k3-tocno}
 \end{equation}
@@ -129,7 +123,6 @@ z njo brez težav pridemo nazaj do Fresnelove uklonske formule.
 \end{remark}
 
 \section{Osnovni Gaussov snop}
-
 Naša naloga je poiskati rešitve obosne enačbe, ki popišejo omejene
 snope. Iz kvantne mehanike vemo, da je najbolj lokaliziran in se najpočasneje
 širi valovni paket Gaussove oblike. Zato poskusimo najti rešitev obosne
@@ -176,12 +169,12 @@ Tako imamo
  \frac{ikr^{2}z}{2(z_{0}^{2}+z^{2})}\right].
  \label{eq:gaussov-snop-vmesni}
 \end{eqnarray}
-Realni del eksponenta opisuje širjenje snopa. Vpeljimo polmer snopa\index{Polmer snopa}
+Realni del eksponenta opisuje širjenje snopa. Vpeljimo polmer snopa\index{Gaussov snop!polmer}
 $w$: 
 \begin{equation}
 w^{2}=\frac{2z_{0}}{k}\left[1+\left(\frac{z}{z_{0}}\right)^{2}\right].
 \end{equation}
-V izhodišču pri $z=0$ je snop najožji in pravimo, da je tam grlo snopa\index{Grlo snopa}. 
+V izhodišču pri $z=0$ je snop najožji in pravimo, da je tam grlo snopa\index{Gaussov snop!grlo}. 
 Vpeljimo še polmer snopa v grlu $w_0$ in zapišimo hiperbolično odvisnost $w$ od $z$:
 \boxeq{eq:w}{
 w^2 = w_{0}^{2}\left[1+\left(\frac{z}{z_{0}}\right)^{2}\right].
@@ -196,6 +189,13 @@ Celotna dolžina grla je $2z_0$, območju grla pa pravimo tudi območje bližnje
 Rayleighovo območje in dolžini $z_0$ \index{Rayleighova dolžina}Rayleighova 
 dolžina\footnote{Angleški fizik in nobelovec John William Strutt, 3. baron Rayleighški, 1842--1919.}.
 
+\begin{figure}[h]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/03_Gauss.pdf_tex}\\
+\caption{Gaussov snop s karakterističnimi parametri}
+\label{fig:Gauss}
+\end{figure}
 
 Iz izraza (\ref{eq:w}) za polmer snopa $w(z)$ razberemo še kot divergence snopa v
 asimptotičnem območju. Najprej izračunajmo le polovični kot širjenja:
@@ -207,14 +207,12 @@ Nato pa zapišimo celotno divergenco snopa\index{Divergenca snopa}
 \theta=2 \frac{w_{0}}{z_{0}}=\frac{2\lambda}{\pi w_{0}}.
 }
 
-
 Dobljena izraza za območje bližnjega polja (enačba~\ref{eq:z0}) in divergenco 
 (enačba~\ref{eq:divergenca-snopa}) sta v skladu z grobimi ocenami, ki smo jih 
 napravili v začetku poglavja (enačbi~\ref{eq:kot_ocena} in \ref{eq:z_ocena}). Faktor 
 $1/\pi$ je značilen za Gaussov snop, ki ima od vseh mogočih oblik 
 najmanjšo divergenco.
 
- 
 Vrnimo se k imaginarnemu delu eksponenta v drugi enačbi~(\ref{eq:gaussov-snop-vmesni}).
 Vpeljimo količino 
 \boxeq{eq:R}{
@@ -228,7 +226,6 @@ $z$:
 \end{equation}
  Upoštevali smo, da je na osi $z=R$.
  
-
 Ostane nam še faktor pred eksponentom v izrazu~(\ref{eq:gaussov-snop-vmesni}). Ta faktor meri
 zmanjševanje amplitude snopa in s tem poskrbi za ohranitev energijskega
 toka ob širjenju žarka, poleg tega pa da še dodatno spremembo faze. Zapišimo ga v obliki
@@ -245,7 +242,6 @@ je posledica povečane fazne hitrosti valovanja,
 kadar je omejeno v prečni smeri. Pojav je najizrazitejši v bližini
 grla snopa. Srečamo ga tudi pri valovanju v valovodih.
 
-
 S tem lahko končno zapišemo izraz za električno poljsko jakost osnovnega Gaussovega snopa\index{Gaussov snop}
 \boxeq{eq:gaussov-snop}{
 E=E_{0}\,\frac{w_{0}}{w(z)}\,e^{ikz-i\omega t}\,e^{-r^{2}/w^{2}(z)}\,e^{ikr^{2}/2R(z)}
@@ -256,12 +252,6 @@ Intenziteta svetlobe je sorazmerna z $E(r,z)E^*(r,z)$ in zanjo velja
 I(r,z)= I_{0}\,\frac{w_0^2}{w(z)^2}\,e^{-2r^{2}/w^{2}(z)}.
 }
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=10truecm]{slike/03_Gauss.png}
-\caption{Gaussov snop s karakterističnimi parametri}
-\label{fig:Gauss}
-\end{figure}
 
 \begin{figure}[h]
 \centering
@@ -281,7 +271,6 @@ Izračunaj še ukrivljenost front v grlu in v veliki oddaljenosti od grla.
 Pokaži, da je znotraj širine snopa $w$ približno $87~\%$ celotnega svetlobnega toka.
 \end{definition}
 
-
 Povejmo še nekaj o parametru $q(z)$, ki smo ga uporabili pri izračunu Gaussovega snopa. Spom\-nimo 
 se, da parameter $q$ narašča linearno z oddaljenostjo od grla:
 \boxeq{eq:q}{
@@ -292,7 +281,6 @@ njegov inverz pa kompleksna ukrivljenost\index{Kompleksna ukrivljenost}:
 \boxeq{eq:q-inv}{
 \frac{1}{q(z)}=\frac{1}{R}+i\frac{2}{kw^{2}}.
 }
-
 
 Primerjajmo še Gaussov snop z drugimi valovanji. Na sliki (\ref{fig:ravni-Gaussov-krogelni-val}) 
 so shematsko prikazane valovne fronte ravnega vala, Gaussovega snopa (\ref{eq:gaussov-snop}) in krogelnega
@@ -434,7 +422,7 @@ medtem ko leva in desna cirkularna polarizacija predstavljata spin fotona.
 
 Poglejmo si še poseben primer omejenega snopa, to je \index{Besselov snop}Besselov
 snop\footnote{Nemški astronom, matematik in fizik Friedrich Wilhelm Bessel,1784--1846.}. 
-Kot nastavek za rešitev valovne enačbe (\ref{eq:valovna-enacba})
+Kot nastavek za rešitev valovne enačbe (\ref{eq:valovna-enacba-hh})
 izberemo
 \begin{equation}
 E=E_{0}\psi(x,y)e^{i\beta z-i\omega t},
