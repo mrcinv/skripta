@@ -540,19 +540,25 @@ E_P = -\frac{1}{4\pi}\oint \left(E\,\mathbf{n}\cdot \nabla \frac{e^{ikr}}{r}-
 \label{eq:Kirchhoffov-integral}
 \eeq
 kjer je $\mathbf{n}$ normala na ploskev, po kateri teče integral, $r$ pa je oddaljenost od točke P
-do ploskve $dS$. Kirchhoffov integral velja splošno za katerokoli harmonično 
+do ploskve $dS$ (slika \ref{fig:UklonFK}). Kirchhoffov integral velja splošno za katerokoli harmonično 
 funkcijo, ki reši valovno enačbo (enačba~\ref{eq:skalarna-valovna-enačba}), ne samo $E$ in torej
 ni vezan na obravnavo uklona svetlobe. 
 
 Kot prvi primer vzemimo točkast izvor v točki $S$. Svetloba iz njega vpada na zaslon, 
 v katerem je odprtina poljubne oblike. Izračunajmo skalarno polje v točki $P$ na drugi 
-strani zaslona (slika~\ref{***}). Vpadno svetlobo zapišemo kot
+strani zaslona. Vpadno svetlobo zapišemo kot
 \beq
 \label{eq:polje-krogelni-val}
 E = A \frac{e^{ikr'}}{r'},
 \eeq
 kjer je $r'$ razdalja od izvora do točke na zaslonu, A pa zaradi ohranitve energije konstanta.
-\vskip6truecm
+
+\begin{figure}[h]
+\centering \def\svgwidth{75truemm} 
+  \input{01_uklonFK.pdf_tex}
+\caption{Integracijska ploskev v Kirchhoffovem integralu zajema odprtino in objema točko $P$.}
+\label{fig:UklonFK}
+\end{figure}
 
 
 Integracijska ploskev je lahko poljubna sklenjena ploskev, ki objema točko $P$. Izberemo tako, ki
@@ -644,9 +650,19 @@ $\lambda$ valovna dolžina. V grobem velja, da za oddaljenosti $L$ od odprtine, 
 katere velja $F<1$, polje obravnavamo kot daljno polje, medtem ko $F>1$ pove, da 
 moramo uklon obravnavati v Fresnelovem približki ali celo v polni obliki. 
 
+
+
 Zapišimo uklonske integrale za oba približka. Izhajajmo iz Fresnel-Kirchhofovega integrala
 (enačba~\label{eq:Fresnelov-uklon}) in zapišimo razdaljo $r$ s koordinatama na zaslonu $x', y'$ ter
-lego točke $P$ s koordinatami $x,y,z$
+lego točke $P$ s koordinatami $x,y,z$ (slika \ref{fig:Uklon-koordinate})
+
+\begin{figure}
+\centering \def\svgwidth{100truemm} 
+  \input{01_uklon_koordinate.pdf_tex}
+\caption{K izračunu Fraunhhoferjeve in Fresnelove uklonske slike}
+\label{fig:Uklon-koordinate}
+\end{figure}
+
 \beq
 r = \sqrt{(x-x')^2+(y-y')^2 + z^2}.
 \eeq
