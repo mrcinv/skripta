@@ -192,7 +192,7 @@ dolžina\footnote{Angleški fizik in nobelovec John William Strutt, 3. baron Ray
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
-\input{slike/03_Gauss.pdf_tex}\\
+\input{slike/03_Gauss.pdf_tex}
 \caption{Gaussov snop s karakterističnimi parametri}
 \label{fig:Gauss}
 \end{figure}
@@ -225,6 +225,12 @@ $z$:
 \frac{1}{R}e^{ikR}=\frac{1}{R}e^{ik\sqrt{z^{2}+r^{2}}}\simeq\frac{1}{R}e^{ik(z+\frac{r^{2}}{2R})}.\label{eq:krogelni-val}
 \end{equation}
  Upoštevali smo, da je na osi $z=R$.
+
+\begin{definition}
+\label{naloga-ukrivljenost-snopa}
+Pokaži, da je največja ukrivljenost valovnih front snopa (najmanjši $R$) ravno pri $z=\pm z_{0}$.
+Izračunaj še ukrivljenost front v grlu in v veliki oddaljenosti od grla.
+\end{definition}
  
 Ostane nam še faktor pred eksponentom v izrazu~(\ref{eq:gaussov-snop-vmesni}). Ta faktor meri
 zmanjševanje amplitude snopa in s tem poskrbi za ohranitev energijskega
@@ -252,19 +258,13 @@ Intenziteta svetlobe je sorazmerna z $E(r,z)E^*(r,z)$ in zanjo velja
 I(r,z)= I_{0}\,\frac{w_0^2}{w(z)^2}\,e^{-2r^{2}/w^{2}(z)}.
 }
 
-
 \begin{figure}[h]
 \centering
-\includegraphics[width=8truecm]{slike/03_Gauss_3D.png}
+\def\svgwidth{110truemm} 
+\input{slike/03_Gauss_3D.pdf_tex}
 \caption{Upodobitev gostota svetlobnega toka v Gaussovem snopu za $z>0$. }
 \label{fig:Gauss_3D}
 \end{figure}
-
-\begin{definition}
-\label{naloga-ukrivljenost-snopa}
-Pokaži, da je največja ukrivljenost valovnih front snopa (najmanjši $R$) ravno pri $z=\pm z_{0}$.
-Izračunaj še ukrivljenost front v grlu in v veliki oddaljenosti od grla.
-\end{definition}
 
 \begin{definition}
 \label{naloga-širina-snopa}
@@ -292,7 +292,8 @@ krogelni val.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=10truecm]{slike/03_fronte.png}
+\def\svgwidth{100truemm} 
+\input{slike/03_fronte.pdf_tex}
 \caption{Ravni val, Gaussov snop ter
 krogelni val. Pri majhnih razdaljah od grla je Gaussov snop podoben
 ravnemu valu, pri velikih razdaljah pa krogelnemu valu. Faza Gaussovega snopa
@@ -326,7 +327,6 @@ in (\ref{eq:q}). Razlika je v fazi, ki je odvisna tudi od $n$ in $m$:
 To hitrejše spreminjanje faze v bližnjem polju snopov višjega reda
 je analogno večji fazni hitrosti valov višjega reda v valovodih.
 
-
 Nekaj višjih redov Hermite-Gaussovih snopov je na sliki (\ref{fig:Gauss-Hermitevi-snopi}),
 kjer rišemo $|\Re\psi_{n,m}(x, y, 0)|$.
 Vidimo, da indeksa $n$ in $m$ predstavljata število vozlov v prečni smeri,
@@ -334,7 +334,8 @@ pri danem $w$ pa polmer snopa narašča z $n$ in $m$.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=12truecm]{slike/03_Hermite_Gauss.png}
+\def\svgwidth{120truemm} 
+\input{slike/03_Hermite_Gauss.pdf_tex}
 \caption{Prečni profil Hermite-Gaussovih snopov za različne vrednosti $(n,m)$.}
 \label{fig:Gauss-Hermitevi-snopi}
 \end{figure}
@@ -348,7 +349,6 @@ Namig: pri zapisu prečne odvisnosti polja upoštevaj le vodilni člen
  in določi, na kateri razdalji od središča snopa ima polje $\psi$
 največjo amplitudo.
 \end{definition}
-
 
 Hermite-Gaussovi snopi (\ref{eq:Gauss-Hermitevi}) tvorijo popoln
 ortogonalen sistem funkcij koordinat $x$ in $y$:
@@ -364,13 +364,11 @@ na odprtini, kjer je očitno smiselno vzeti $w_{0}$ približno enak
 dimenziji odprtine. Dobljeni rezultat je enako natančen kot Fresnelov
 uklonski integral.
 
-
 Pri velikih $z$, kjer velja Fraunhoferjeva uklonska teorija, je
 polje Fouriereva transformacija polja pri $z=0$. Hermite-Gaussovi
 snopi ohranjajo prečno obliko, ki pa se z naraščajočim $z$ širi. 
 Od tod vidimo, da je Fouriereva transformacija Hermite-Gaussove funkcije 
 $H_{n}(x)e^{-x^{2}/2}$ zopet Hermite-Gaussova funkcija.
-
 
 V cilindričnih koordinatah imajo snopi višjega reda obliko Laguerre-Gaussovih 
 snopov\index{Laguerre-Gaussovi snopi}
@@ -385,7 +383,6 @@ kjer je $L_{p}^{l}$ pridruženi Laguerrov polinom in
 \label{eq:etaGL}
 \eeq
 
-
 Podobno kot je v kartezičnem primeru red polinoma določal število prečnih ničel,
 določata $p$ in $l$ v cilindričnem primeru število vozelnih črt, kjer je gostota 
 svetlobnega toka nič. Na sliki~(\ref{fig:Laguerrovi_presek})
@@ -393,11 +390,11 @@ je prikazanih nekaj oblik amplitud $|\Re\psi_{p,l}(r,\phi,0)|$.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=11truecm]{slike/03_Laguerre_Gauss.png}
+\def\svgwidth{120truemm} 
+\input{slike/03_Laguerre_Gauss.pdf_tex}
 \caption{Prečni profil Laguerre-Gaussovih snopov za različne vrednosti $(p,l)$.}
 \label{fig:Laguerrovi_presek}
 \end{figure}
-
 
 Iz laserjev navadno želimo dobiti čim čistejši osnovni snop, vendar
 lahko pogosto opazimo tudi snope višjega reda. Da dobimo le osnovni
@@ -412,7 +409,7 @@ V kvantni mehaniki funkcija $\psi_{p,l}$ predstavlja foton s tirno vrtilno koli�
 medtem ko leva in desna cirkularna polarizacija predstavljata spin fotona. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=10truecm]{slike/03_laguerre_faza.png}
+\includegraphics[width=10truecm]{slike/03_Laguerre_faza.png}
 \caption{Valovna fronta Laguerre-Gaussovega snopa}
 \label{fig:Laguerrova_fronta}
 \end{figure}
@@ -459,7 +456,7 @@ snopov, ki imajo pomembne in uporabne lastnosti.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=6truecm]{slike/03_Bessel_Intensity.png}
+\includegraphics[width=7truecm]{slike/03_Bessel_profil.png}
 \caption{Prečni presek in profil intenziteta Besselovega snopa}
 \label{fig:Besselov_presek}
 \end{figure}
@@ -477,7 +474,8 @@ Profil snopa v senčni strani (daleč stran od objekta) je tako enak profilu
 snopa pred objektom. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=8truecm]{slike/03_Bessel_leca.png}
+\def\svgwidth{100truemm} 
+\input{slike/03_Bessel_nastanek.pdf_tex}
 \caption{Nastanek Besselovega snopa na stožčasti leči.}
 \label{fig:Bessel_leca}
 \end{figure}
@@ -498,7 +496,6 @@ Pri tem velja zveza
 \end{equation}
 Krivinski radij v točki $z$ je pozitiven, če je središče krožnice pri $z^{\prime}\le z$.
 
-
 Kako pa je z Gaussovim snopom? Polmer snopa $w$ se pri prehodu 
 skozi tanko lečo ne spremeni, zato velja po enačbi (\ref{eq:q-inv}) za
 kompleksni krivinski radij tik pred lečo in tik za njo
@@ -510,7 +507,6 @@ Kompleksni krivinski radij $q$ je po enačbi~(\ref{eq:q}) linearna funkcija koor
 To nam skupaj z enačbo~(\ref{eq:preslikava-zveza-leca})
 omogoča račun prehoda snopa skozi poljuben sistem leč brez aberacij.
 Kot primer poglejmo, kako z zbiralno lečo zberemo snop.
-
 
 Vpadni snop naj ima grlo s polmerom $w_{01}$ in parametrom $z_{01}$. Lega grla je 
 v točki, ki je za $x_{1}$ oddaljena od levega gorišča leče (slika
@@ -554,14 +550,14 @@ Tudi povečava polmera grla na desni, podana z enačbo (\ref{eq:preslikava-povec
 je precej drugačna kot v geometrijski optiki.\\
 
 \begin{figure}
-\includegraphics[width=15truecm]{slike/03_Prehod_Gaussovega_snopa.png}
+\def\svgwidth{150truemm} 
+\input{slike/03_preslikava.pdf_tex}
 \caption{Prehod Gaussovega snopa skozi
 tanko lečo. Grlo velikosti $w_{01}$ v oddaljenosti $x_{1}$ od gorišča
 leče se preslika v grlo $w_{02}$ v oddaljenosti $x_{2}$ od gorišča
 leče.}
 \label{fig:Prehod-Gaussovega-snopa}
 \end{figure}
-
 
 Za primer vzemimo snop iz He-Ne laserja (valovna dolžina 632,8~nm), ki ima grlo s 
 polmerom $w_{01}=0,5~\milli\metre$ na izhodnem ogledalu in je $50~\centi\metre$ pred lečo z 
@@ -576,7 +572,6 @@ snop kar raven, dal grlo na desni v gorišču s približno pravim polmerom. Zaka
 valov bolj pravilen rezultat, lahko hitro uvidimo, če pogledamo
 Rayleighovo dolžino snopa: snop vpada na lečo še v območju bližnjega polja ($x_1 + f < z_{01}$), kjer 
 je približno oblike ravnih valov. 
-
 
 Če postavimo grlo snopa v gorišče leče ($x_{1}=0$), je grlo na
 desni strani tudi v gorišču ($x_{2}=0$). Razmerje polmerov grl
@@ -598,7 +593,6 @@ w_{02~\textrm{min}} = \frac{\lambda f}{\pi a} \sim \lambda.
 Dobri mikroskopski in fotografski
 objektivi dosegajo numerično odprtino $f/a\simeq1$ in z njimi je mogoče Gaussov snop
 zbrati v piko velikosti $\sim\lambda$. 
-
 
 Omenili smo, da je treba za dosego majhnega polmera grla za lečo žarek pred lečo čim bolj razširiti.
 Razširitev vpadnega snopa naredimo s teleskopom~(slika~\ref{fig:Prehod-Gaussovega-snopa-teleskop}),
@@ -622,7 +616,6 @@ razdalji $d=f_{1}+f_{2}$. Pokaži, da je povečava takega teleskopa enaka
 \end{equation}
 in je neodvisna od postavitve grla snopa $x_{1}$.
 \end{definition}
-
 
 \section{Matrične (ABCD) preslikave v geometrijski optiki}
 
