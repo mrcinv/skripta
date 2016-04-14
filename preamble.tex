@@ -1,0 +1,107 @@
+
+\usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,a4paper]{geometry} % Page margins
+
+\usepackage{xcolor,lipsum} % Required for specifying colors by name
+\definecolor{ocre}{RGB}{0,56,102} 
+\definecolor{lightgray}{RGB}{229,229,229} 
+% Font Settings
+\usepackage{avant} % Use the Avantgarde font for headings
+%\usepackage{times} % Use the Times font for headings
+\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+
+
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[unicode]{hyperref}
+\usepackage{empheq}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{afterpage}
+\newcommand{\boxeq}[2]{\begin{empheq}[box=\colorbox{ocre!30}]{align}\label{#1}#2\end{empheq}}
+\newcommand*{\xdash}[1][8em]{\rule[0.5ex]{#1}{0.55pt}}
+\usepackage{makeidx}
+\makeindex
+
+% MATHS PACKAGE
+\usepackage{amsmath,tikz}
+\usetikzlibrary{matrix}
+\newcommand*{\horzbar}{\rule[0.05ex]{2.5ex}{0.5pt}}
+\usepackage{calc}
+
+% VERBATIM PACKAGE
+\usepackage{verbatim}
+\usepackage{wrapfig}
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}   
+\renewcommand{\arraystretch}{1.5}
+
+\newcommand{\usk}{\mbox()}
+\newcommand{\micro}{\mu}
+\newcommand{\metre}{\mathrm{m}}
+\newcommand{\kilo}{\mathrm{k}}
+\newcommand{\hertz}{\mathrm{Hz}}
+\newcommand{\milli}{\mathrm{m}}
+\newcommand{\centi}{\mathrm{c}}
+\usepackage{subfig}
+\usepackage{parskip}
+
+
+%Copy-paste iz stare skripte.. 
+
+
+\usepackage[tikz]{bclogo}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{darkblue}{rgb}{0,0,0.5} 
+\usepackage{transparent}
+\usepackage{import}
+
+%\usepackage[thinspace,amssymb]{SIunits}
+
+
+
+
+%\renewcommand{\capfont}{\normalfont\small} 
+
+%\newcommand{\stevedeli}[1]{\phantom{.}{\small\begin{bclogo}[noborder = true,couleur=gray!10,logo=\bclambe]{Ste vedeli?}{#1}\end{bclogo}}\phantom{.}}
+%\newcommand{\zanimivo}[2]{\phantom{.}{\small\begin{bclogo}[noborder = true,couleur=gray!10,logo=\bclampe]{#1}{#2}\end{bclogo}}\phantom{.}}
+%\newcommand{\literatura}[1]{\phantom{.}\begin{bclogo}[couleur=gray!10,arrondi=0.1,logo=\bcbook]{Literatura}{#1}\end{bclogo}\phantom{.}}
+
+%\newcounter{exercise}[chapter]
+%\renewcommand{\theexercise}{\thechapter .\arabic{exercise}}
+
+%\newcommand{\naloga}[2]{\refstepcounter{exercise}
+%\label{#1}
+%\phantom{.}{\small\begin{bclogo}[couleur=blue!30,arrondi=0.1,logo=\bccrayon,ombre=True,couleurOmbre=black!60,barre=snake]{Naloga  \theexercise}{#2}\end{bclogo}}\vspace{1mm}}
+
+
+%\graphicspath{{/Users/andrej/Documents/Fotonika/skripta/slike/}}
+\graphicspath{{./slike/}}
+
+%\usepackage{prettyref}
+%\newrefformat{tab}{Tabela\,\ref{#1}}
+%\newrefformat{fig}{Slika\,\ref{#1}}
+%\newrefformat{eq}{En.\,\textup{\ref{#1}}}
+
+%\usepackage[uline]{hhtensor}
+
+
+%\newcommand{\matT}[1] {\matr{\boldsymbol{#1}}^{T}}
+%\newcommand{\matI}[1] {\matr{\boldsymbol{#1}}^{-1}}
+%\newcommand{\mat}[1] {\matr{\boldsymbol{#1}}}
+%\newcommand{\ve}[1] {\boldsymbol{#1}}
+%\newcommand{\uve}[1] {\widehat{\boldsymbol{#1}}}
+%\newcommand{\dd} {\mathrm{d}}
+%\newcommand{\Tr}{\textrm{Tr}}
+
+%\newcommand{\tagarray}{%
+%\mbox{}\refstepcounter{equation}%
+%$(\theequation)$%
+%}
+
+%\renewcommand\Re{\operatorname{Re}}
+%\renewcommand\Im{\operatorname{Im}}
