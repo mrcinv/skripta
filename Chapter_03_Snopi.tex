@@ -43,7 +43,7 @@ obosne valovne enačbe.
 \begin{definition}
 Pokaži, da je Fraunhoferjeva uklonska slika reže, katere prepustnost se v radialni smeri
 spreminja kot Gaussova funkcija $T(\xi, \eta)=e^{-(\xi^2+\eta^2)/w_0^2}$, podana z Gaussovo funkcijo
-oblike $E(x,y,z) \propto e^{-(x^2+y^2)/w^2(z)}$ in dolo\v ci odvisnost $w(z)$. Izračunaj še 
+oblike $E(x,y,z) \propto e^{-(x^2+y^2)/w^2(z)}$ in določi odvisnost $w(z)$. Izračunaj še 
 uklonsko sliko v bližnjem polju po Fresnelovi uklonski teoriji.
 \end{definition}
 
@@ -65,7 +65,7 @@ E=E_{0}\psi(\mathbf{r},z)e^{ikz},
 kjer je $\mathbf{r}$ krajevni vektor v ravnini $xy$. Glavni del odvisnosti
 od koordinate $z$ smo zapisali v faktorju $e^{ikz}$, tako da lahko
 privzamemo, da se $\psi$ v smeri $z$ le počasi spreminja. Vstavimo
-gornji nastavek v Helmholtzevo enačbo (\ref{eq:valovna-enacba-hh})
+gornji nastavek v Helmholtzevo enačbo (enačba~\ref{eq:valovna-enacba-hh})
 in pri tem zanemarimo druge odvode po $z$, saj je zaradi počasnega spreminjanja
 $\partial^{2}\psi/\partial z^{2}$ majhen v primerjavi s $k\partial\psi/\partial z$ in $k^{2}\psi$.
 Zaenkrat obravnavajmo le radialno simetrične rešitve. Dobimo obosno
@@ -86,7 +86,7 @@ energije in gibalne količine, so ravni valovi\index{Ravni val}
 \end{equation}
 Pri tem $\beta$ ustreza energiji v kvantni mehaniki, $k_{1}$ in
 $k_{2}$ pa komponentama gibalne količine. Da bo gornji nastavek rešitev
-obosne valovne enačbe~(\ref{eq:obosna-valovna-enacba}), mora veljati 
+obosne valovne enačbe~(enačba~\ref{eq:obosna-valovna-enacba}), mora veljati 
 \begin{equation}
 \beta=\frac{k_{1}^{2}+k_{2}^{2}}{2k}.
 \end{equation}
@@ -98,7 +98,7 @@ k_{3}=k-\beta=k-\frac{k_{1}^{2}+k_{2}^{2}}{2k},\label{eq:k3-razvoj}
  pri čemer je $k_{3}$ vzdolžna komponenta valovnega vektorja, $k_{1}$ in
 $k_{2}$ prečni komponenti, $k$ pa valovno število. 
 
-Za ravni val, ki je rešitev prvotne točne valovne enačbe (\ref{eq:valovna-enacba-hh})
+Za ravni val, ki je rešitev prvotne točne valovne enačbe (enačba~\ref{eq:valovna-enacba-hh})
 in ne samo obosnega približka, velja 
 \begin{equation}
 k_{3}=\sqrt{k^{2}-(k_{1}^{2}+k_{2}^{2})}.\label{eq:k3-tocno}
@@ -132,7 +132,8 @@ enačbe (\ref{eq:obosna-valovna-enacba}) v obliki
 \end{equation}
 kjer funkcija $q(z)$ opisuje širjenje snopa v prečni smeri,
 $\phi(z)$ pa opisuje počasno spreminjanje faze snopa vzdolž osi $z$.
-Vstavimo nastavek (enačba~\ref{eq:gaussov-snop-nastavek}) v enačbo~(\ref{eq:obosna-valovna-enacba}).
+Vstavimo nastavek (enačba~\ref{eq:gaussov-snop-nastavek}) v obosno valovno enačbo 
+(enačba~\ref{eq:obosna-valovna-enacba}).
 Zaradi simetričnosti računamo v cilindričnih koordinatah in zapišemo
 \begin{equation}
 \nabla_{\perp}^{2}\psi=\frac{1}{r}\frac{\partial}{\partial r}\, r\,\frac{\partial\psi}{\partial r}=
@@ -142,7 +143,7 @@ Zaradi simetričnosti računamo v cilindričnih koordinatah in zapišemo
 \begin{equation}
 \frac{\partial\psi}{\partial z}=\left(-\frac{ikr^{2}}{2q^2}q(z)^{\prime}-i\phi^{\prime}\right)\psi.
 \end{equation}
-Tako iz obosne enačbe (\ref{eq:obosna-valovna-enacba}) dobimo
+Tako iz obosnega približka (enačba~\ref{eq:obosna-valovna-enacba}) dobimo
 \begin{equation}
 \frac{2ik}{q}-\frac{k^2r^2}{q^2}=ik\left(\frac{ikr^{2}}{q^2}q(z)^{\prime}+2i\phi^{\prime}\right).
 \end{equation}
@@ -197,7 +198,7 @@ dolžina\footnote{Angleški fizik in nobelovec John William Strutt, 3. baron Ray
 \label{fig:Gauss}
 \end{figure}
 
-Iz izraza (\ref{eq:w}) za polmer snopa $w(z)$ razberemo še kot divergence snopa v
+Iz izraza za polmer snopa $w(z)$ (enačba~\ref{eq:w}) razberemo še kot divergence snopa v
 asimptotičnem območju. Najprej izračunajmo le polovični kot širjenja:
 \begin{equation}
 \vartheta=\lim_{z \to \infty} \frac{dw}{dz} = \frac{w_{0}}{z_{0}}=\frac{\lambda}{\pi w_{0}}.\label{eq:divergenca-snopa}
@@ -213,7 +214,7 @@ napravili v začetku poglavja (enačbi~\ref{eq:kot_ocena} in \ref{eq:z_ocena}). 
 $1/\pi$ je značilen za Gaussov snop, ki ima od vseh mogočih oblik 
 najmanjšo divergenco.
 
-Vrnimo se k imaginarnemu delu eksponenta v drugi enačbi~(\ref{eq:gaussov-snop-vmesni}).
+Vrnimo se k imaginarnemu delu eksponenta v enačbi~(\ref{eq:gaussov-snop-vmesni}).
 Vpeljimo količino 
 \boxeq{eq:R}{
 R=z\left[1+\left(\frac{z_{0}}{z}\right)^{2}\right],
@@ -222,7 +223,7 @@ ki meri krivinski radij valovnih front snopa na razdalji $z$. To najlažje
 uvidimo, če krogelni val razvijemo po majhnih odmikih $r$ od osi
 $z$: 
 \begin{equation}
-\frac{1}{R}e^{ikR}=\frac{1}{R}e^{ik\sqrt{z^{2}+r^{2}}}\simeq\frac{1}{R}e^{ik(z+\frac{r^{2}}{2R})}.\label{eq:krogelni-val}
+\frac{1}{R}e^{ikR}=\frac{1}{R}e^{ik\sqrt{z^{2}+r^{2}}}\approx \frac{1}{R}e^{ik(z+\frac{r^{2}}{2R})}.\label{eq:krogelni-val}
 \end{equation}
  Upoštevali smo, da je na osi $z=R$.
 
@@ -248,7 +249,8 @@ je posledica povečane fazne hitrosti valovanja,
 kadar je omejeno v prečni smeri. Pojav je najizrazitejši v bližini
 grla snopa. Srečamo ga tudi pri valovanju v valovodih.
 
-S tem lahko končno zapišemo izraz za električno poljsko jakost osnovnega Gaussovega snopa\index{Gaussov snop}
+S tem lahko končno zapišemo izraz za električno poljsko jakost osnovnega \index{Gaussov snop}Gaussovega 
+snopa\footnote{Nemški matematik Carl Friedrich Gauss, 1777--1855.}
 \boxeq{eq:gaussov-snop}{
 E=E_{0}\,\frac{w_{0}}{w(z)}\,e^{ikz-i\omega t}\,e^{-r^{2}/w^{2}(z)}\,e^{ikr^{2}/2R(z)}
 e^{-i\eta(z)}.
@@ -305,14 +307,14 @@ se razlikuje od faze ravnega in krogelnega vala.}
 
 Osnovna rešitev obosne valovne enačbe je Gaussov snop. Poleg te rešitve pa obstoja še veliko 
 drugih rešitev, ki so tudi omejene v prečni smeri. V kartezičnih koordinatah tako rešijo obosno valovno enačbo
-tudi Hermite-Gaussovi snopi\index{Hermite-Gaussovi snopi}
+tudi \index{Hermite-Gaussovi snopi}Hermite-Gaussovi snopi\footnote{Francoski matematik Charles Hermite, 1822--1901.}
 \begin{equation}
 \psi_{n,m}(x,y)=\frac{w_{0}}{w}H_{n}\left(\frac{\sqrt{2}x}{w}\right)H_{m}\left(\frac{\sqrt{2}y}{w}\right)
 \exp\left[\frac{ik(x^{2}+y^{2})}{2q}-i\eta_{n,m}\right],
 \label{eq:Gauss-Hermitevi}
 \end{equation}
 kjer so $H_{n}$ Hermitovi polinomi stopnje $n$. V to se lahko
-prepričamo, če izraz vstavimo v obosno enačbo (\ref{eq:obosna-valovna-enacba}) in upoštevamo, 
+prepričamo, če izraz vstavimo v obosno valovno enačbo (enačba~\ref{eq:obosna-valovna-enacba}) in upoštevamo, 
 da Hermitovi polinomi zadoščajo enačbi 
 \begin{equation}
 H_{n}^{\prime\prime}-2xH_{n}^{\prime}+2nH_{n}=0.
@@ -350,7 +352,7 @@ Namig: pri zapisu prečne odvisnosti polja upoštevaj le vodilni člen
 največjo amplitudo.
 \end{definition}
 
-Hermite-Gaussovi snopi (\ref{eq:Gauss-Hermitevi}) tvorijo popoln
+Hermite-Gaussovi snopi (enačba~\ref{eq:Gauss-Hermitevi}) tvorijo popoln
 ortogonalen sistem funkcij koordinat $x$ in $y$:
 \begin{equation}
 \int\psi_{n,m}^{*}(x,y)\psi_{n',m'}(x,y)\, dx dy=\pi w_{0}^{2}\; 
@@ -371,7 +373,7 @@ Od tod vidimo, da je Fouriereva transformacija Hermite-Gaussove funkcije
 $H_{n}(x)e^{-x^{2}/2}$ zopet Hermite-Gaussova funkcija.
 
 V cilindričnih koordinatah imajo snopi višjega reda obliko Laguerre-Gaussovih 
-snopov\index{Laguerre-Gaussovi snopi}
+snopov\index{Laguerre-Gaussovi snopi}\footnote{Francoski matematik Edmond Nicolas Laguerre, 1834--1886.}
 \begin{equation}
 \psi_{p,l}(r,\phi,z)=\frac{w_{0}}{w}\left(\frac{\sqrt{2}r}{w}\right)^{|l|}
 L_{p}^{|l|}\left(\frac{2r^{2}}{w^{2}}\right)e^{\pm il\phi}\exp\left[\frac{ikr^{2}}{2q}-i\eta_{p,l}\right],
@@ -418,13 +420,13 @@ medtem ko leva in desna cirkularna polarizacija predstavljata spin fotona.
 \section{Besselov snop}
 
 Poglejmo si še poseben primer omejenega snopa, to je \index{Besselov snop}Besselov
-snop\footnote{Nemški astronom, matematik in fizik Friedrich Wilhelm Bessel,1784--1846.}. 
-Kot nastavek za rešitev valovne enačbe (\ref{eq:valovna-enacba-hh})
+snop\footnote{Nemški astronom, matematik in fizik Friedrich Wilhelm Bessel, 1784--1846.}. 
+Kot nastavek za rešitev valovne enačbe (enačba~\ref{eq:valovna-enacba-hh})
 izberemo
 \begin{equation}
 E=E_{0}\psi(x,y)e^{i\beta z-i\omega t},
 \end{equation}
-kjer mora nastavek $\psi$ zadostovati Helmholtzovi enačbi
+kjer mora nastavek $\psi$ zadostovati Helmholtzevi enačbi
 \begin{equation}
 \nabla_{\perp}^{2}\psi+k_{\perp}^{2}\psi=0,
 \end{equation}
@@ -447,7 +449,7 @@ E(r,\phi,z,t)=A_{0}J_{0}(k_{\perp}r)e^{i\beta z-i \omega t},
 ki ga imenujemo Besselov snop. Valovne fronte takega snopa so ravne 
 in snop nima divergence. Vendar pa Besselov snop ni omejen v pravem smislu. Za 
 velike oddaljenosti od središča snopa $r$ intenzitetni profil namreč pojema kot 
-$I \propto J_{0}^{2}(k_{\perp}r)\approx(2/\pi k_{\perp}r)\cos^{2}(k_{\perp}r-\pi/4)$.
+$I \propto J_{0}^{2}(k_{\perp}r)\sim (2/\pi k_{\perp}r)\cos^{2}(k_{\perp}r-\pi/4)$.
 Energija takega snopa ni omejena znotraj efektivnega radija,
 kot je to pri Gaussovih snopih. Za konstrukcijo Besselovih snopov
 bi (tako kot za konstrukcijo ravnega vala) potrebovali neskončno energije,
@@ -597,7 +599,8 @@ zbrati v piko velikosti $\sim\lambda$.
 Omenili smo, da je treba za dosego majhnega polmera grla za lečo žarek pred lečo čim bolj razširiti.
 Razširitev vpadnega snopa naredimo s teleskopom~(slika~\ref{fig:Prehod-Gaussovega-snopa-teleskop}),
 katerega značilnost je, da je razmik med lečama enak vsoti goriščnih razdalj leč in zato gorišči
-leč sovpadata. Povečava teleskopa je pri taki postavitvi leč enaka razmerju med goriščnima razdaljama (naloga~\ref{teleskop}).
+leč sovpadata. Povečava teleskopa je pri taki postavitvi leč enaka razmerju med goriščnima razdaljama 
+(glej nalogo~\ref{teleskop}).
 
 \begin{figure}[h]
 \def\svgwidth{140truemm} 
@@ -757,7 +760,6 @@ V sistemu z več elementi (slika~\ref{fig:K-matricni-obravnavi}) zapišemo
 produkt matrik za vse elemente, pri čemer ne smemo pozabiti na premike med
 elementi.
 
-
 Poglejmo primer. Žarek naj najprej prepotuje razdaljo $d$, nato pa ga usmerimo
 na tanko lečo z goriščno razdaljo $f$. Matrika za celoten prehod je
 \begin{eqnarray}
@@ -804,7 +806,6 @@ krivinski radij $q$. Ugotovili smo že, da je $q$ linearna funkcija
 premika po $z$ (enačba~\ref{eq:q}). Vemo tudi, kako se $q$ spremeni pri prehodu skozi tanko
 lečo (enačba~\ref{eq:preslikava-zveza-leca}). 
 
-
 Pri premiku iz ravnine $z_1$ v ravnino $z_2$, ki je premaknjena
 za $d$, se $q$ spremeni 
 \begin{equation}
@@ -821,10 +822,9 @@ q_2=\frac{q_1+d}{-\frac{q_1+d}{f}+1}=\frac{q_1+d}{-\frac{q_1}{f}-\frac{d}{f}+1}.
 V vseh treh primerih lahko transformacijo kompleksnega krivinskega radija 
 $q$ zapišemo v obliki ulomljene
 linearne preslikave 
-\begin{equation}
+\boxeq{eq:ulomljena-preslikava}{
 q_2=\frac{Aq_1+B}{Cq_1+D}.
-\label{eq:ulomljena-preslikava}
-\end{equation}
+}
 Koeficiente preslikave razvrstimo v matriko 
 \begin{equation}
 M= \left[\begin{array}{cc}
@@ -836,7 +836,6 @@ C & D
 vidimo, da so povsem enake kot v primeru geometrijske optike. Hitro lahko tudi preverimo, 
 da je matrika za premik in lečo enaka produktu matrike za premik in matrike za lečo
 (enačba~\ref{eq:Mdf}). 
-
 
 Omenimo še eno lastnost ABCD matrik. Kadar po prehodu čez optične elemente preidemo v snov 
 z enakim lomnim količnikom kot je bil na začetku, je determinanta ABCD matrike enaka 1. V nasprotnem

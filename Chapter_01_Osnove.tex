@@ -2,7 +2,7 @@
 
 \chapter{Elektromagnetno valovanje}
 Za začetek osvežimo osnove teorije elektromagnetnega polja in elektromagnetnega valovanja. 
-Obnovili bomo zapis Maxwellovih enačb, opisali osnovne pojave valovanja (lom, odboj in uklon),
+Obnovili bomo zapis Maxwellovih enačb, opisali osnovne pojave valovanja (lom, odboj in uklon)
 in si ogledali razširjanje svetlobe v anizotropnih snoveh. 
 
 \section{Maxwellove enačbe}
@@ -67,7 +67,7 @@ električnega in magnetnega polja (slika \ref{fig:Robni-pogoji})
 D_{1n} &=  D_{2n}\\
 B_{1n} &=  B_{2n}\\
 E_{1t} &=  E_{2t}\label{eq:robni-pogoji4}\\
-H_{1t} &=  H_{2t}.
+H_{1t} &=  H_{2t}\label{eq:robni-pogoji5}.
 }
 Pri tem smo privzeli, da na meji med dielektrikoma ni površinskih
 tokov ali nabojev, sicer bi morali robna pogoja za $D_n$ in $H_t$
@@ -100,7 +100,7 @@ enačbo\index{Valovna enačba} za jakost električnega ali magnetnega polja
 \quad \mathrm{in} \quad
 \nabla^{2}\mathbf{H}-\frac{1}{c^{2}}\frac{\partial^{2}\mathbf{H}}{\partial t^{2}} = 0.
 }
-Pri tem je hitrost valovanja\index{Hitrost valovanja} v snovi enaka 
+Pri tem je hitrost valovanja v snovi enaka 
 \beq
 c=\frac{1}{\sqrt{\epsilon\epsilon_{0}\mu\mu_{0}}}=\frac{c_{0}}{n}.
 \eeq
@@ -125,7 +125,8 @@ Poyntingovega vektorja \index{Gostota energijskega toka}
 \beq
 j=\left\langle \mathbf{\mathbf{S}}\cdot\mathbf{\hat{n}}\right\rangle.
 \eeq
-Gostoti energijskega toka, predvsem gostoti svetlobnega toka, pravimo tudi intenziteta.
+Gostoti energijskega toka, predvsem gostoti svetlobnega toka, pravimo tudi intenziteta
+\index{Intenziteta|see {Gostota energijskega toka}}.
 
 \begin{definition}[Poyntingov teorem]
 Iz Maxwellovih enačb izpelji kontinuitetno enačbo 
@@ -147,7 +148,7 @@ v homogeni izotropni snovi tako velja
 \beq
 \nabla\cdot\mathbf{S}=-\frac{\partial w}{\partial t},
 \eeq
-kjer je $w$\index{Gostota elektromagnetne energije} celotna
+kjer je $w$\index{Gostota energije} celotna
 gostota energije elektromagnetnega polja. Zapišemo jo kot 
 \boxeq{eq:gostota-energije}{
 w=\frac{1}{2}\epsilon_{0}\epsilon\mathbf{E}^{2}+\frac{1}{2}\mu_{0}\mu\mathbf{H}^{2}.
@@ -211,15 +212,18 @@ j=\left\langle \mathbf{\mathbf{S}}\cdot\mathbf{\hat{n}}\right\rangle =
 \section{Ravni val}
 
 Osnovna rešitev valovne enačbe je ravni val\index{Ravni val}. Nastavek, ki predstavlja
-ravni val in hkrati reši Helmholtzevo enačbo (enačba~\ref{eq:Helmholtz}), je 
-\begin{align}
-\mathbf{E}(\mathbf{r},t) & =\mathbf{E}(\mathbf{r})e^{-i\omega t}=
-\mathbf{E}_{0}e^{i\mathbf{k}\cdot\mathbf{r}-i \omega t}\quad \mathrm{in}\\
-\mathbf{H}(\mathbf{r},t) & =\mathbf{H}(\mathbf{r})e^{-i\omega t}=
+ravni val in hkrati reši Helmholtzevo enačbo (enačba~\ref{eq:Helmholtz}), je oblike
+\begin{equation}
+\mathbf{E}(\mathbf{r},t)  =\mathbf{E}(\mathbf{r})e^{-i\omega t}=
+\mathbf{E}_{0}e^{i\mathbf{k}\cdot\mathbf{r}-i \omega t}
+\end{equation}
+in podobno za magnetno polje
+\begin{equation}
+ \mathbf{H}(\mathbf{r},t)  =\mathbf{H}(\mathbf{r})e^{-i\omega t}=
 \mathbf{H}_{0}e^{i\mathbf{k}\cdot\mathbf{r}-i \omega t},
-\end{align}
+\end{equation}
 pri čemer sta vektorja $\mathbf{E}_{0}$ ter $\mathbf{H}_{0}$ od kraja in časa neodvisna. 
-Velikost valovnega vektorja $\mathbf{k}$ je $k=nk_{0},$ pri
+Velikost valovnega vektorja\index{Valovni vektor} $\mathbf{k}$ je $k=nk_{0},$ pri
 čemer je $n$ lomni količnik izotropne in homogene snovi. 
 
 Vektorja jakosti električnega in magnetnega polja zadostujeta
@@ -244,8 +248,8 @@ Zaradi enolične zveze med električnim in magnetnim poljem zadošča
 za opis ravnega vala le eno polje, navadno se odločimo za električno.
 
 Energijski tok je pri ravnem valu v izotropni snovi vedno v smeri valovnega vektorja, pravokotno
-na valovne fronte. Iz definicije za gostoto svetlobnega toka (enačbi \ref{eq:jReS} in
-\ref{eq:Poyntingov-vektor-c}) ter Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
+na valovne fronte. Iz definicije za gostoto svetlobnega toka (enačbi \ref{eq:jReS}) 
+ter Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
 sledi\index{Gostota energijskega toka}
 \beq
 j=\Re\left(\frac{1}{4}E_{0}H_{0}^{*}+\frac{1}{4}E_{0}^*H_{0}\right)=
@@ -259,7 +263,7 @@ Gostoti toka $j=1~\mathrm{kW/m^{2}}$
 jakost električnega polja $E_{0}=868~\mathrm{V/m}$, gostoti $j=1~\mathrm{W/\mu m^{2}}$ 
 (intenziteta močno fokusiranega laserskega žarka) pa $E_{0}=27~\mathrm{MV/m}$. 
 
-Zapišimo še povprečno gostoto energije valovanja\index{Gostota elektromagnetne energije}. 
+Zapišimo še povprečno gostoto energije valovanja\index{Gostota energije}. 
 K energiji prispevata tako magnetno kot električno polje. Oba prispevka sta enaka, zato velja
 \beq
 \left\langle w\right\rangle =\frac{1}{4}\epsilon\epsilon_{0}\left|E_{0}\right|^{2}+
@@ -315,10 +319,10 @@ Dodali smo normalizacijski faktor $|E_{0}|=\sqrt{|E_{x}|^{2}+|E_{y}|^{2}}$,
 da je Jonesov vektor normaliziran in $\mathbf{J}\cdot\mathbf{J}^{*}=1$.
 Ravni val, linearno polariziran v smeri $x$, tako zapišemo kot $\mathbf{J}=\left(1,0\right)$,
 val, ki je linearno polariziran pod kotom $45^{\circ}$ glede na osi
-$x$ in $y$, pa je $\mathbf{J}=\frac{1}{\sqrt{2}}\left(1,1\right)$.
+$x$ in $y$, pa je $\mathbf{J}=\left(1,1\right)/\sqrt{2}$.
 Desno cirkularno polarizirano valovanje zapišemo z vektorjem 
-$\mathbf{J}=\frac{1}{\sqrt{2}}\left(1,-i\right)$,
-levo cirkularno polarizirano pa z $\mathbf{J}=\frac{1}{\sqrt{2}}\left(1,i\right)$.
+$\mathbf{J}=\left(1,-i\right)/\sqrt{2}$,
+levo cirkularno polarizirano pa z $\mathbf{J}=\left(1,i\right)/\sqrt{2}$.
 Desno polariziran val je torej tisti val, pri katerem se električna
 poljska jakost na danem mestu vrti v desno, če gledamo v smeri širjenja
 valovanja. Hkrati pa velja, da električna poljska jakost ob danem
@@ -428,7 +432,7 @@ E_{2x} & =t_{x}E_{1x} \qquad \qquad E_{3x} =r_{x}E_{1x}\\
 E_{2y} & =t_{y}E_{1y} \qquad \qquad E_{3y}=r_{y}E_{1y},
 \end{align}
 pri čemer smo z $\mathbf{E}_{2}$ označili prepuščeni val, z $\mathbf{E}_{3}$ pa odbitega.
-Iz robnih pogojev (enačbe \ref{eq:robni-pogoji}--\ref{eq:robni-pogoji4}) 
+Iz robnih pogojev (enačbe \ref{eq:robni-pogoji}--\ref{eq:robni-pogoji5}) 
 izračunamo koeficiente matrik\index{Jonesova matrika}
 $r$ in $t$ s \index{Fresnelove enačbe}Fresnelovimi 
 enačbami\footnote{Francoski fizik Augustin-Jean Fresnel, 1788--1827.}:
@@ -468,6 +472,18 @@ snoveh in v različnih smereh. Velja zveza
 \mathcal{T}=\frac{n_{2}\cos\vartheta_{2}}{n_{1}\cos\vartheta_{1}}\left|t\right|^{2}.
 \eeq
 
+\begin{figure}[h]
+\centering
+  \def\svgwidth{70truemm} 
+  \input{slike/01_Brewster01.pdf_tex}
+  \def\svgwidth{70truemm} 
+  \input{slike/01_Brewster02.pdf_tex}
+\caption{Odbojnost $r$ za obe vpadni polarizaciji (levo) in razmerje med intenziteto odbite
+in vpadne svetlobe $\mathcal{R}$ (desno) v odvisnosti od vpadnega kota. Pri Brewsterjevem vpadnem 
+kotu je odbojnost enaka nič.}
+\label{fig:Brewster}
+\end{figure}
+
 Zanimiva je odvisnost odbojnosti od vpadnega kota. Izkaže se, da pri nekem kotu, 
 imenujemo ga \index{Brewsterjev kot}Brewsterjev kot\footnote{Škotski fizik in znanstvenik Sir David Brewster, 1781--1868.}, 
 odbojnost za TM polarizacijo enaka nič in vsa vpadla
@@ -483,18 +499,6 @@ Pokaži, da za TM val obstoja vpadni kot
 \eeq
 pri katerem je odbojnost enaka nič in prepustnost enaka $\mathcal{T}=$1.
 \end{definition}
-
-\begin{figure}[h]
-\centering
-  \def\svgwidth{70truemm} 
-  \input{slike/01_Brewster01.pdf_tex}
-  \def\svgwidth{70truemm} 
-  \input{slike/01_Brewster02.pdf_tex}
-\caption{Odbojnost $r$ za obe vpadni polarizaciji (levo) in razmerje med intenziteto odbite
-in vpadne svetlobe $\mathcal{R}$ (desno) v odvisnosti od vpadnega kota. Pri Brewsterjevem vpadnem 
-kotu je odbojnost enaka nič.}
-\label{fig:Brewster}
-\end{figure}
 
 \begin{remark}
 Pri prehodu skozi optične elemente se --
@@ -512,10 +516,10 @@ antirefleksno plastjo.
 \end{remark}
 
 \section{Uklon svetlobe}
-
+\index{Uklon}
 Ko svetloba vpade na oviro, za oviro nastane senca. Nastala senca ni ostra, ampak
 ima zaradi uklona zabrisane robove. Obravnave 
-uklona svetlobe na odprtinah (zaslonkah) se najenostavneje lotimo z uporabo
+uklona svetlobe na odprtinah (zaslonkah) se lotimo z uporabo
 skalarnega približka teorije elektromagnetnega polja. To pomeni, da vpliv 
 polarizacije zanemarimo. Vpliv polarizacije je pomemben zgolj pri zelo majhnih odprtinah, 
 torej kadar je $\lambda\sim a$, kjer je $a$ velikost
@@ -534,8 +538,8 @@ vendar se v zadnjih letih z razvojem in izboljšavo litografskih postopkov
 vse pogosteje uporabljajo tudi v bližnjem infrardečem področju svetlobe.
 \end{remark}
 
-Pri dimenzijah odprtin $a>\lambda$ torej lahko uporabimo skalarno teorijo, zato zapišemo
-valovno enačbo (enačba~\ref{eq:valovna-skalarna}) v skalarni obliki
+Pri velikostih odprtin $a\gg\lambda$ torej uporabimo skalarno valovno enačbo 
+(enačba~\ref{eq:valovna-skalarna})
 \beq
 \nabla^2 E - \frac{1}{c^2}\frac{\partial^2 E}{\partial t^2} = 0.
 \label{eq:skalarna-valovna-enačba}
@@ -543,7 +547,7 @@ valovno enačbo (enačba~\ref{eq:valovna-skalarna}) v skalarni obliki
 Zapisana valovna enačba velja za vse komponente električne $E$ in tudi 
 magnetne poljske jakosti $H$. Časovna odvisnost polja $E$ je harmonična funkcija in 
 je sorazmerna z $e^{-i \omega t}$. Z uporabo Greenovega teorema lahko 
-jakost polja $E_P$ v točki $P$ izrazimo s poljem na poljubni ploskvi, ki obkroža točko $P$. 
+jakost polja $E_P$ v točki $P$ izrazimo s poljem na poljubni ploskvi, ki obkroža točko $P$ (slika \ref{fig:UklonFK}). 
 Zvezo opisuje Kirchhoffov integral\footnote{Nemški fizik Gustav Kirchhoff, 1824--1887.} 
 \index{Kirchhoffov integral}
 \beq
@@ -552,8 +556,8 @@ E_P = -\frac{1}{4\pi}\oint \left(E\,\mathbf{n}\cdot \nabla \frac{e^{ikr}}{r}-
 \label{eq:Kirchhoffov-integral}
 \eeq
 kjer je $\mathbf{n}$ normala na ploskev, po kateri teče integral, $r$ pa je oddaljenost od točke P
-do ploskve $dS$ (slika \ref{fig:UklonFK}). Kirchhoffov integral velja splošno za katerokoli harmonično 
-funkcijo, ki reši valovno enačbo (enačba~\ref{eq:skalarna-valovna-enačba}), ne samo $E$ in torej
+do ploskve $dS$. Kirchhoffov integral velja splošno za katerokoli harmonično 
+funkcijo, ki reši valovno enačbo (enačba~\ref{eq:skalarna-valovna-enačba}), ne samo $E$, in torej
 ni vezan na obravnavo uklona svetlobe. 
 
 Kot prvi primer vzemimo točkast izvor v točki $S$. Svetloba iz njega vpada na zaslon, 
@@ -566,12 +570,11 @@ E = A \frac{e^{ikr'}}{r'},
 kjer je $r'$ razdalja od izvora do točke na zaslonu, A pa zaradi ohranitve energije konstanta.
 
 \begin{figure}[h]
-\centering \def\svgwidth{75truemm} 
+\centering \def\svgwidth{85truemm} 
   \input{slike/01_uklonFK.pdf_tex}
 \caption{Integracijska ploskev v Kirchhoffovem integralu zajema odprtino in objema točko $P$.}
 \label{fig:UklonFK}
 \end{figure}
-
 
 Integracijska ploskev je lahko poljubna sklenjena ploskev, ki objema točko $P$. Izberemo tako, ki
 zajema odprtino na zaslonu, poleg tega pa naredimo še dva približka:\\
@@ -584,19 +587,20 @@ Zgornja približka sta precej groba, vendar se izkaže, da v splošnem kljub tem
 dobimo dobro ujemanje z eksperimentalno določeno uklonsko sliko, s čimer 
 upravičimo njuno uporabo pri izračunu uklonske slike.
 
-Kirchhoffov integral za primer točkastega izvora svetlobe se potem zapiše kot
+Kirchhoffov integral za primer točkastega izvora svetlobe se potem zapiše kot integral, pri čemer
+integriramo po odprtini
 \beq
 E_P = -\frac{ik A e^{-i\omega t}}{4\pi}\int\frac{e^{ik(r+r')}}{rr'}\left[\cos(\mathbf{n},
 \mathbf{r})-\cos(\mathbf{n},\mathbf{r'})\right] dS.
 \label{eq:Fresnel-Kirchoffov-integral}
 \eeq
-V literaturi ga pogosto imenujejo Fresnel-Kirchhoffov uklonski integral\footnote{Francoski fizik
-Augustin-Jean Fresnel, 1788--1827.}\index{Fresnel-Kirchhoffov uklon}.
+V literaturi ga pogosto imenujejo Fresnel-Kirchhoffov uklonski integral\index{Fresnel-Kirchhoffov integral}.
 \begin{definition}
 \label{naloga-Fresnel-Kirchhoff-uklon}
-Uporabi Kirchhoffov integral in pokaži, da je za primer krožnega vpadnega vala
-(enačba~\ref{eq:polje-krogelni-val}) polje v točki $P$, ki je od odprtine oddaljena 
-$r \gg \lambda$, zapišemo z enačbo~(\ref{eq:Fresnel-Kirchoffov-integral}).
+Uporabi Kirchhoffov integral (enačba~\ref{eq:Kirchhoffov-integral}) in pokaži, da za primer krožnega vpadnega vala
+(enačba~\ref{eq:polje-krogelni-val}) polje v točki $P$ zapišemo s Fresnel-Kirchhoffovim integralom 
+(enačba~\ref{eq:Fresnel-Kirchoffov-integral}). Pri tem privzami, da je oddaljenost točke $P$ od odprtine
+$r \gg \lambda$.
 \end{definition}
 
 Oglejmo si poseben primer, ko leži točkast izvor svetlobe na osi okrogle odprtine. Razdalja
@@ -609,6 +613,7 @@ pri čemer $E_S$ predstavlja kompleksno amplitudo vpadnega polja v odprtini
 \beq
 E_S = A \frac{e^{ikr'}}{r'}.
 \eeq 
+
 Zgornja oblika Fresnel-Kirchhoffovega integrala ni pravzaprav nič drugega kot 
 matematičen zapis \index{Huygensovo načelo}Huygensovega 
 načela\footnote{Nizozemski znanstvenik Christiaan Huygens, 1629--1695.}. 
@@ -621,8 +626,9 @@ E = A_0 \frac{e^{ikr}}{r},
 \eeq 
 polje v izbrani točki $P$ pa je vsota prispevkov posameznih krogelnih valovanj.
 
-Za razliko od osnovnega Huygensov načela, v enačbi (\ref{eq:Fresnel-Kirchoffov-integral})
-nastopa še faktor $\left[\cos(\mathbf{n},\mathbf{r})-1\right]$, ki poskrbi, da ni valovanja 
+Za razliko od osnovnega Huygensovega načela, v Fresnel-Kirchhoffovem integralu 
+(enačba~\ref{eq:Fresnel-Kirchoffov-integral})
+nastopa še faktor $\left[\cos(\mathbf{n},\mathbf{r})+1\right]$, ki poskrbi, da ni valovanja 
 v smeri nazaj proti izvoru. Tudi faktor $-i$ manjka v osnovnem Huygensovem načelu,
 pomeni pa, da je uklonjeno valovanje fazno zakasnjeno za $\pi/2$ glede na osnovno
 valovanje $E_S$.
@@ -630,56 +636,57 @@ valovanje $E_S$.
 Uporabna razširitev Fresnel-Kirchhoffovega uklona je z uporabo prepustnostne funkcije odprtine $T$.
 Z njo v splošnem popišemo amplitudne in fazne spremembe, do katerih lahko pride na raznih 
 odprtinah, lečah, uklonskih mrežicah ... Razširjen uklonski integral zapišemo kot
-\beq
-\label{eq:Fresnelov-uklon2}
+\boxeq{eq:Fresnelov-uklon2}{
 E_P =  -\frac{ik}{4\pi} \int T(r) E_S(r) \frac{ e^{ikr-i\omega t}}{r}
 \left[\cos(\mathbf{n},\mathbf{r})+1\right] dS,
-\eeq
+}
 pri čemer smo upoštevali tudi splošno obliko vpadnega vala $E_S(r)$.
 
 \subsection*{Fraunhoferjev in Fresnelov približek}
 \label{FFuklon}
 Izračun Fresnel-Kirchhoffovega integrala je v splošnem zelo zapleten, zato se 
-pogosto poslužimo dveh približkov: Fraunhoferjevega\footnote{Nemški fizik 
+pogosto poslužujemo dveh približkov: Fraunhoferjevega\footnote{Nemški fizik 
 Joseph von Fraunhofer, 1787--1826.} in Fresnelovega\index{Fresnelov uklon}. 
 Fraunhoferjeva uklonska slika\index{Fraunhoferjev uklon} velja za daljno polje, kadar lahko 
 vpadni in uklonjeni val zapišemo kot ravna valova. Bolj zapleteno Fresnelovo uklonsko sliko pa moramo
 uporabiti, kadar obravnavamo primer bližnjega polja. 
 \begin{figure}[h]
-\centering \def\svgwidth{100truemm} 
+\centering \def\svgwidth{90truemm} 
   \input{slike/01_uklonFF.pdf_tex}
-\caption{Različna približka za obravnavo uklona na odprtini. Fraunhoferjev (levo) velja za daljno polje,
-Fresnelov (desno) pa za bližnje.}
+\caption{V Fraunhoferjevem približku valovanji obravnavamo kot ravna valova 
+(levo). Fresnelov približek moramo uporabiti za obravnavno uklona v primeru bližnjega polja (desno).}
 \label{fig:UklonFF}
 \end{figure}
 
 Mejo med daljnim in bližnjim poljem kvalitativno določa Fresnelovo število\index{Fresnelovo število}
 \beq
-F= \frac{a^2}{L\lambda},
+F= \frac{a^2}{L\lambda}.
 \eeq 
-kjer je $a$ karakteristična dimenzija odprtine, $L$ tipična oddaljenost od odprtine ter
-$\lambda$ valovna dolžina. V grobem velja, da za oddaljenosti $L$ od odprtine, za
+Pri tem je $a$ karakteristična dimenzija odprtine, $L$ tipična oddaljenost od odprtine ter
+$\lambda$ valovna dolžina. 
+
+V grobem velja, da za oddaljenosti $L$ od odprtine, za
 katere velja $F<1$, polje obravnavamo kot daljno polje, medtem ko $F>1$ pove, da 
-moramo uklon obravnavati v Fresnelovem približki ali celo v polni obliki. 
+moramo uklon obravnavati v Fresnelovem približku ali celo v polni obliki. 
 
-
-
-Zapišimo uklonske integrale za oba približka. Izhajajmo iz Fresnel-Kirchhofovega integrala
-(enačba~\label{eq:Fresnelov-uklon}) in zapišimo razdaljo $r$ s koordinatama na zaslonu $x', y'$ ter
-lego točke $P$ s koordinatami $x,y,z$ (slika \ref{fig:Uklon-koordinate})
+Zapišimo uklonske integrale za oba približka. Izhajajmo iz Fresnel-Kirchhoffovega integrala
+za točkast izvor
+(enačba~\ref{eq:Fresnel-Kirchoffov-integral}) in zapišimo razdaljo $r$ s koordinatama na zaslonu $x', y'$ ter
+lego točke $P$ s koordinatami $x,y,z$ (slika \ref{fig:Uklon-koordinate}).
 
 \begin{figure}[h]
-\centering \def\svgwidth{100truemm} 
+\centering \def\svgwidth{95truemm} 
   \input{slike/01_uklon_koordinate.pdf_tex}
-\caption{K izračunu Fraunhhoferjevega in Fresnelovega uklona. Zaslon, kjer opazujemo uklonsko sliko
+\caption{K izračunu Fraunhoferjevega in Fresnelovega uklona. Zaslon, kjer opazujemo uklonsko sliko,
 je od odprtine oddaljen za $z$.}
 \label{fig:Uklon-koordinate}
 \end{figure}
 
+Zapišemo
 \beq
-r = \sqrt{(x-x')^2+(y-y')^2 + z^2}.
+r = \sqrt{(x-x')^2+(y-y')^2 + z^2}
 \eeq
-Privzemimo, da je $z$ razmeroma velik v primerjavi s prečnima razlikama in lahko $r$ razvijemo
+in privzamemo,  da je $z$ razmeroma velik v primerjavi s prečnima razlikama. Potem lahko $r$ razvijemo
 \beq
 r \approx z + \frac{(x-x')^2}{2z} +\frac{(y-y')^2}{2z}.
 \eeq
@@ -698,7 +705,7 @@ E_P =  -\frac{i}{z\lambda} \int \int E_S e^{-ik ((x-x')^2+(y-y')^2)/2z} dx' dy'.
 \eeq
 
 \begin{definition}
-\label{naloga-Fresnel-Kirchhoff-uklon}
+\label{naloga-Frauhofer-Kirchhoff-uklon}
 Pokaži, da je v Fraunhoferjevi uklonski sliki uklon na okrogli odprtini s premerom $a$ podan z
 \beq
 E_P = E_0\frac{J_1(\pi a \rho/ \lambda z)}{\pi a \rho/ \lambda z},
@@ -739,16 +746,16 @@ diagonalen. V takem koordinatnem sistemu velja
 \end{array}\right]\mathbf{E}
 \eeq
 in 
-\beq
-D_{1}=\epsilon_{0}\epsilon_{1}E_{1},\quad D_{2}=\epsilon_{0}\epsilon_{2}E_{2},\quad D_{3}=
-\epsilon_{0}\epsilon_{3}E_{3}.\label{eq:gostota-elektricnega-polja-lastni}
-\eeq
+\begin{align}
+D_{1}&=\epsilon_{0}\epsilon_{1}E_{1}\nonumber \\
+D_{2}&=\epsilon_{0}\epsilon_{2}E_{2}\nonumber \\
+D_{3}&=\epsilon_{0}\epsilon_{3}E_{3}.\label{eq:gostota-elektricnega-polja-lastni}
+\end{align}
 Glavne osi sistema določajo smeri, vzdolž katerih sta jakost
 in gostota električnega polja vzporedni, lastne vrednosti 
 pa ustrezajo trem lomnim količnikom\index{Lomni količnik} $\epsilon_{i}=\sqrt{n_{i}}$. Kristale,
-za katere so vse tri vrednosti $n_i$ različne, imenujemo optično dvoosni kristali\index{Dvoosni
-kristali}, medtem ko sta v optično enoosnih\index{Enoosni kristali} 
-kristalih dve lastni vrednosti enaki $n_{1}=n_{2}$. 
+za katere so vse tri vrednosti $n_i$ različne, imenujemo optično dvoosni kristali, 
+medtem ko sta v optično enoosnih kristalih dve lastni vrednosti enaki $n_{1}=n_{2}$. 
 Če so enake vse tri vrednosti, je snov izotropna.
 
 \subsection*{Optična indikatrisa}
@@ -776,7 +783,9 @@ Za poljubno smer širjenja valovanja ter poljubno polarizacijo je račun
 bolj zapleten in je treba lomne količnike še izračunati. Pri tem si pomagamo 
 z grafično upodobitvijo, s tako imenovano 
 \index{Optična indikatrisa}optično indikatriso (elipsoidom lomnega
-količnika). Optična indikatrisa je elipsoid, podan z enačbo
+količnika). 
+
+Optična indikatrisa je elipsoid, podan z enačbo
 \beq
 \frac{x^{2}}{n_{1}^{2}}+\frac{y^{2}}{n_{2}^{2}}+\frac{z^{2}}{n_{3}^{2}}=1.
 \eeq
@@ -797,8 +806,8 @@ Za valovanje, ki se razširja v smeri $z$, sta lomna količnika za obe polarizac
 enaka in os $z$ imenujemo \index{Optična os}optična os. Hitrost valovanja, ki
 se širi vzdolž optične osi, je torej neodvisna od njegove polarizacije.
 Navadno vpeljemo tudi nove oznake: $n_{1}=n_{2}=n_{o}$, ki označuje redni (\textit{ordinary})
-lomni količnik, $n_{3}=n_{e}$ pa izredni (\textit{extraordinary}) lomni količnik. 
-
+lomni količnik\index{Lomni količnik!redni}, $n_{3}=n_{e}$ pa izredni 
+(\textit{extraordinary}) lomni količnik\index{Lomni količnik!izredni}. 
 
 Zaradi simetrije je pri izračunu lomnega količnika pomemben le kot 
 $\vartheta$ med valovnim vektorjem $\mathbf{k}$ in optično osjo $z$. Dvema 
@@ -806,14 +815,13 @@ lastnima polarizacijama pripadata dva različna lomna količnika.
 Za lažjo predstavo oba lomna količnika skiciramo v odvisnosti
 od kota $\vartheta$ (slika~\ref{fig:Elipsa}). Lomni količnik za žarek, ki
 je polariziran pravokotno na vpadno ravnino, je neodvisen od $\vartheta$, zato narišemo krožnico.
-Takemu žarku pravimo \index{Redni žarek}redni žarek. 
+Takemu žarku pravimo redni žarek. 
 Žarek, ki je polariziran v vpadni ravnini, je tako imenovan izredni žarek. Pripadajoč
 lomni količnik je odvisen od kota $\vartheta$ in ga izračunamo iz sledeče enačbe elipse
 s polosema $n_o$ in $n_e$: 
-\beq
+\boxeq{eq:izreden}{
 \frac{1}{n^{2}(\vartheta)}=\frac{\cos^{2}\vartheta}{n_{o}^{2}}+\frac{\sin^{2}\vartheta}{n_{e}^{2}}.
-\label{eq:izreden}
-\eeq
+}
 Opazimo, da se krožnica in elipsa dotikata ravno na osi $z$. Takrat se 
 valovanje širi vzdolž optične osi in lomna količnika sta za obe polarizaciji enaka $n_o$. 
 
@@ -835,7 +843,7 @@ prav tako $\mathbf{k}$ in $\mathbf{S}$. Žarek se širi v smeri valovnega vektor
 valovne fronte pa so pravokotne nanj. To velja tudi za redni žarek v anizotropnih
 snoveh. Izredni žarek pa ima, kot že ime nakazuje, ``izredne'' lastnosti. Vektorja
 $\mathbf{E}$ in $\mathbf{D}$ nista vzporedna, zato tudi valovni vektor $\mathbf{k}$ ni vzporeden
-toku energije oziroma Poyntingovemu vektorju $\mathbf{S}$ (slika \ref{fig:Elipsa}b). 
+toku energije oziroma Poyntingovemu vektorju $\mathbf{S}$ (slika \ref{fig:Elipsa}\,b). 
 Žarek, ki ga vidimo, torej potuje v smeri, ki ni enaka smeri valovnega vektorja. Smer
 Poyntingovega vektorja določimo kot normalo na elipso pri kotu $\vartheta$. 
 
@@ -844,7 +852,7 @@ Ko vpade žarek na anizotropno snov, se lomi. Privzemimo, da je lomni količnik 
 iz katere valovanje prehaja v anizotropen kristal, enak 1. Vemo, da je hitrost valovanja v 
 snovi -- in s tem tudi kot, pod katerim se lomi -- odvisna od polarizacije valovanja. V splošnem
 dobimo dva lomljena žarka z različnima polarizacijama, kar
-da ime pojavu: \index{Dvolomnosti}dvolomnost (slika~\ref{fig:dvolomnost}). 
+da ime pojavu: \index{Dvolomnost}dvolomnost (slika~\ref{fig:dvolomnost}). 
 Da zadostimo ohranitvi faze
 pri prehodu, moramo popraviti tudi \index{Lomni zakon}lomni zakon (enačba \ref{eq:lomni_zakon}).
 
@@ -857,7 +865,7 @@ Za izredni val s TM polarizacijo (električna poljska jakost leži v vpadni ravn
 \beq
 \sin\vartheta_{1}=n(\vartheta_e)\sin\vartheta_{e},
 \eeq
-pri čemer $n(\vartheta_e)$ izračunamo iz enačbe \ref{eq:izreden}.
+pri čemer $n(\vartheta_e)$ izračunamo iz enačbe (\ref{eq:izreden}).
 \begin{figure}
 \centering
 \def\svgwidth{140truemm} 
@@ -870,7 +878,7 @@ so v tem kolinearni, Poyntingovi vektorji pa imajo različne smeri.}
 
 Kadar vpada valovanje pravokotno na izotropno snov, se žarek ne lomi. V 
 dvolomnih snoveh pa lahko tudi pri pravokotnem vpadu pride do razklona žarkov (slika
-\ref{fig:dvolomnost}b). Kadar je optična os nagnjena glede na vpadnico, sta valovna vektorja
+\ref{fig:dvolomnost}\,b). Kadar je optična os nagnjena glede na vpadnico, sta valovna vektorja
 obeh prepuščenih žarkov sicer vzporedna valovnemu vektorju vpadnega žarka ($\mathbf{k}_1 \parallel
 \mathbf{k}_o \parallel \mathbf{k}_e$), razlikujejo pa se smeri Poyntingovih vektorjev
 ($\mathbf{S}_1 \parallel \mathbf{S}_o \nparallel \mathbf{S}_e$). Ob prehodu skozi 

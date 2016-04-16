@@ -354,7 +354,7 @@ obliko spektra. Namig: Uporabi Parsevalov teorem, ki pravi:
 \end{equation}
 kjer je 
 \beq
-F(\omega)=\frac{1}{2\pi} \cdot \int_{-\infty}^{\infty}f(t)e^{-i\omega\tau}\, d\tau
+F(\omega)=\frac{1}{2\pi} \int_{-\infty}^{\infty}f(t)e^{-i\omega\tau}\, d\tau
 \eeq
 Fouriereva transformiranka funkcije $f(t)$.
 \end{definition}
@@ -469,7 +469,7 @@ S slike razberemo, da
 velja za razdaljo med režama $d$, pri kateri interferenčne proge
 izginejo, približno 
 \begin{equation}
-\delta s\approx d\sin\varphi\approx d\frac{R}{z}\sim\lambda\;\Rightarrow\;
+\delta s = d\sin\varphi\approx d\frac{R}{z}\sim\lambda\;\Rightarrow\;
 d_{c}\sim\frac{z\lambda}{R},\label{eq:prost_koh}
 \end{equation}
 kjer $d_{c}$ imenujmo prečno koherenčno razdaljo\index{Koherenčna razdalja}. Pogosto uporabljajo
@@ -516,8 +516,8 @@ Polje v posamezni odprtini je vsota prispevkov iz celega izvora.
 E(P_{j})=-\frac{i}{\lambda}\int E(\xi,\eta)\frac{e^{iks_{j}}}{s_{j}}\, d\xi\, d\eta.
 \end{equation}
 Pri tem je $s_{j}$ razdalja med točko $(\xi,\eta)$ na izvoru in točko
-$P_{j}=(x_{j},y_{j})$ na reži v ravnini A (glej sliko \ref{fig:shema-interferenca}).
-Faktor pred integralom $-i/\lambda$ smo dobili iz uklonske teorije (enačba~\ref{eq:Fresnelov-uklon}).
+$P_{j}(x_{j},y_{j})$ na reži v ravnini A (glej sliko \ref{fig:shema-interferenca}).
+Faktor pred integralom $-i/\lambda$ smo dobili iz uklonske teorije (enačba~\ref{eq:Fresnel-Kirchoffov-integral}).
 Tako je 
 \begin{equation}
 J(P_{1},P_{2})=\frac{1}{\lambda^{2}}\int\int\langle E(\xi,\eta)E^{*}(\xi^{\prime},\eta^{\prime})\rangle\frac{e^{ik(s_{1}-s_{2}^{\prime})}}{s_{1}s_{2}^{\prime}}\, d\xi\, d\eta\, d\xi^{\prime}d\eta^{\prime}.\label{eq:field-correlation}
@@ -605,9 +605,10 @@ J(0,\Delta y)=2\frac{R^{2}I_{0}}{z^{2}}\,\frac{J_{1}(kRd/z)}{kRd/z}\;,
 pade prečna korelacijska funkcija $J$ na nič in interferenčnega vzorca ne vidimo. 
 Za prečno koherenčno razdaljo je zato smiselno vzeti ravno prvo ničlo, to
 je pri
-\boxeq{eq:okroglo_svetilo}{
+\beq
+\label{eq:okroglo_svetilo}
 d_{c} \approx 3,83 \frac{z}{kR} = 0,61 \frac{\lambda z}{R}.
-} 
+\eeq
 
 Doslej smo obravnavali le valovanje v središču interferenčne slike na
 zaslonu $B$, to je pri tako majhnih kotih $\vartheta$, da je zakasnitev
