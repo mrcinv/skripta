@@ -7,10 +7,10 @@ se naučili računati prehode Gaussovih snopov prek optičnih elementov.
 
 \section{Omejen snop svetlobe}
 Pri obravnavi elektromagnetnega valovanja pogosto uporabljamo
-približek ravnih valov\index{Ravni val}. Ti so v smeri pravokotno na smer širjenja
+približek ravnih valov. Ti so v smeri pravokotno na smer širjenja
 neomejeni in so zato lahko le idealizacija. Čim raven val usmerimo skozi odprtino
 v zaslonu, dobimo omejen snop svetlobe\index{Omejen snop}. V snopu svetlobe valovna čela niso
-ravna in meje snopa niso vzporedne, ampak se snop zaradi uklona širi (slika \ref{fig:Uklon-na-rezi}).
+ravna in meje snopa niso vzporedne, ampak se snop zaradi uklona širi\index{Uklon} (slika \ref{fig:Uklon-na-rezi}).
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
@@ -91,7 +91,7 @@ obosne valovne enačbe~(enačba~\ref{eq:obosna-valovna-enacba}), mora veljati
 \beta=\frac{k_{1}^{2}+k_{2}^{2}}{2k}.
 \end{equation}
 Ko vstavimo nastavek za $\psi$ v izraz za celotno polje $E$ 
-(enačba~\ref{eq:ravni-val-nastavek}), dobimo ravni val\index{Ravni val}, za katerega velja 
+(enačba~\ref{eq:ravni-val-nastavek}), dobimo ravni val, za katerega velja 
 \begin{equation}
 k_{3}=k-\beta=k-\frac{k_{1}^{2}+k_{2}^{2}}{2k},\label{eq:k3-razvoj}
 \end{equation}
@@ -203,7 +203,7 @@ asimptotičnem območju. Najprej izračunajmo le polovični kot širjenja:
 \begin{equation}
 \vartheta=\lim_{z \to \infty} \frac{dw}{dz} = \frac{w_{0}}{z_{0}}=\frac{\lambda}{\pi w_{0}}.\label{eq:divergenca-snopa}
 \end{equation}
-Nato pa zapišimo celotno divergenco snopa\index{Divergenca snopa}
+Nato pa zapišimo celotno divergenco snopa\index{Gaussov snop!divergenca}
 \boxeq{eq:divergenca-snopa2}{
 \theta=2 \frac{w_{0}}{z_{0}}=\frac{2\lambda}{\pi w_{0}}.
 }
@@ -219,7 +219,8 @@ Vpeljimo količino
 \boxeq{eq:R}{
 R=z\left[1+\left(\frac{z_{0}}{z}\right)^{2}\right],
 }
-ki meri krivinski radij valovnih front snopa na razdalji $z$. To najlažje
+ki meri krivinski radij valovnih front\index{Gaussov snop!krivinski radij} 
+snopa na razdalji $z$. To najlažje
 uvidimo, če krogelni val razvijemo po majhnih odmikih $r$ od osi
 $z$: 
 \begin{equation}
@@ -264,7 +265,7 @@ I(r,z)= I_{0}\,\frac{w_0^2}{w(z)^2}\,e^{-2r^{2}/w^{2}(z)}.
 \centering
 \def\svgwidth{110truemm} 
 \input{slike/03_Gauss_3D.pdf_tex}
-\caption{Upodobitev gostota svetlobnega toka v Gaussovem snopu za $z>0$. }
+\caption{Upodobitev gostota svetlobnega toka v Gaussovem snopu za $z>0$ }
 \label{fig:Gauss_3D}
 \end{figure}
 
@@ -338,7 +339,7 @@ pri danem $w$ pa polmer snopa narašča z $n$ in $m$.
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/03_Hermite_Gauss.pdf_tex}
-\caption{Prečni profil Hermite-Gaussovih snopov za različne vrednosti $(n,m)$.}
+\caption{Prečni profil Hermite-Gaussovih snopov za različne vrednosti $(n,m)$}
 \label{fig:Gauss-Hermitevi-snopi}
 \end{figure}
 
@@ -394,7 +395,7 @@ je prikazanih nekaj oblik amplitud $|\Re\psi_{p,l}(r,\phi,0)|$.
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/03_Laguerre_Gauss.pdf_tex}
-\caption{Prečni profil Laguerre-Gaussovih snopov za različne vrednosti $(p,l)$.}
+\caption{Prečni profil Laguerre-Gaussovih snopov za različne vrednosti $(p,l)$}
 \label{fig:Laguerrovi_presek}
 \end{figure}
 
@@ -458,7 +459,8 @@ snopov, ki imajo pomembne in uporabne lastnosti.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=7truecm]{slike/03_Bessel_profil.png}
+\def\svgwidth{70truemm} 
+\input{slike/03_Bessel_profil.pdf_tex}
 \caption{Prečni presek in profil intenziteta Besselovega snopa}
 \label{fig:Besselov_presek}
 \end{figure}
@@ -478,7 +480,7 @@ snopa pred objektom.
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/03_Bessel_nastanek.pdf_tex}
-\caption{Nastanek Besselovega snopa na stožčasti leči.}
+\caption{Nastanek Besselovega snopa na stožčasti leči}
 \label{fig:Bessel_leca}
 \end{figure}
 \end{remark}
@@ -632,7 +634,6 @@ ko gre valovna dolžina proti nič. Ukrivljenost valovne fronte je neposredno
 povezana s spreminjanjem naklona žarkov, pri čemer bomo privzeli, da so 
 nakloni žarkov glede na os majhni.
 
-
 Geometrijski žarek v izbrani ravnini $z$ lahko opišemo z dvema parametroma: 
 oddaljenostjo od osi $y$ in naklonom glede na os $\theta$. Ti dve količini 
 sta med seboj neodvisni in ju sestavimo 
@@ -652,7 +653,6 @@ C & D
 \end{array}\right],
 \end{equation}
 zato jih imenujemo tudi ABCD matrike\index{ABCD matrike}. Zapišimo nekaj primerov.
-
 
 Pri premiku za $d$ se spremeni odmik od osi, naklon pa ostane enak:
 \begin{equation}
@@ -736,7 +736,6 @@ M=\left[\begin{array}{cc}
 \end{equation}
 pri čemer je $R>0$ za konkavna zrcala. Matrika za odboj na ravnem zrcalu je identiteta.
 
-
 Matriko sestavljene optične naprave dobimo z množenjem matrik posameznih komponent. 
 Pri tem moramo paziti na vrstni red množenja, saj množenje matrik ni komutativno.
 Matriko preslikave čez dva optična elementa, pri čemer žarek 
@@ -779,7 +778,6 @@ C & D
 \label{eq:Mdf}
 \end{eqnarray}
 
-
 Gornji matrični formalizem je zelo prikladen predvsem za računanje zapletenih
 optičnih sistemov, saj ga je prav lahko izvesti na računalnik. Poleg
 tega bomo spoznali, da je enolično povezan z matričnim formalizmom izračuna
@@ -788,10 +786,11 @@ prenosa rezultatov računov geometrijske optike v optiko
 snopov.
 
 \begin{figure}
-\centering\small\input{slike/k_preslikavam.pdf_tex}
-\centering\small\input{slike/k_matrikam.pdf_tex}
-\caption{
-Preslikave žarkov lahko obravnavamo
+\centering
+\centering
+\def\svgwidth{120truemm}
+\input{slike/03_k_preslikavam.pdf_tex}
+\caption{Preslikave žarkov lahko obravnavamo
 z matrikami. Optični element $M$ preslika žarek $(y_{1},\theta_{1})$
 v $(y_{2},\theta_{2})$. Matriko za prehod poljubnega zaporedja optičnih
  elementov dobimo z množenjem matrik.}
@@ -848,19 +847,19 @@ AD-BC = \frac{n_1}{n_2}.
  \centering
   \begin{tabular}{|c|c|c|} \hline
   Opis prehoda & Skica & Matrika za prehod \\ \hline   
-      Prehod skozi prostor za $d$ & \parbox[c]{6em}{\includegraphics[width=0.8in]{slike/matrika_d.png}} & 
+      Prehod skozi prostor za $d$ & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_d.pdf_tex}} & 
       $\begin{bmatrix} 1 & d\\  0 & 1 \end{bmatrix}$ \\ \hline
 
-      Prehod preko meje dveh snovi & \parbox[c]{6em}{\includegraphics[width=0.8in]{slike/matrika_n.png}} & 
+      Prehod preko meje dveh snovi & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_n.pdf_tex}} & 
       $\begin{bmatrix} 1 & 0\\ 0 & \frac{n_{1}}{n_{2}} \end{bmatrix}$ \\ \hline
       
-      Prehod preko konveksno ukrivljene meje $R>0$ & \parbox[c]{6em}{\includegraphics[width=0.8in]{slike/matrika_nR.png}} & 
+      Prehod preko konveksno ukrivljene meje $R>0$ & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_nR.pdf_tex}} & 
       $\begin{bmatrix} 1 & 0\\ \frac{(n_{1}-n_{2})}{n_{2}R} & \frac{n_{1}}{n_{2}} \end{bmatrix}$ \\ \hline
       
-      Prehod preko konveksne leče $f>0$ & \parbox[c]{6em}{\includegraphics[width=0.8in]{slike/matrika_f.png}} & 
+      Prehod preko konveksne leče $f>0$ & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_f.pdf_tex}} & 
       $\begin{bmatrix} 1 & 0\\ -\frac{1}{f} & 1 \end{bmatrix}$ \\ \hline
       
-      Odboj na konkavnem zrcalu $R>0$ & \parbox[c]{6em}{\includegraphics[width=0.8in]{slike/matrika_R.png}} & 
+      Odboj na konkavnem zrcalu $R>0$ & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_R.pdf_tex}} & 
       $\begin{bmatrix} 1 & 0\\ -\frac{2}{R} & 1 \end{bmatrix}$ \\ \hline    
   \end{tabular}
   \caption{Matrike ABCD za nekaj osnovnih preslikav, ki veljajo tako v 
@@ -872,17 +871,15 @@ AD-BC = \frac{n_1}{n_2}.
 \begin{definition}
 Pokaži, da za naslednje prehode veljajo ustrezne ABCD matrike. \\
 \end{definition}
-\begin{tabular}{|c|c|c|} \hline
-  Opis prehoda & Skica & Matrika za prehod \\ \hline   
-      Prehod skozi prostor in lečo & \parbox[c]{6em}{\includegraphics[width=0.8in]{slike/matrika_df.png}} & 
+\begin{tabular}{|c|c|c|} \hline  
+      Prehod skozi prostor in lečo & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_df.pdf_tex}} & 
       $\begin{bmatrix} 1 & d\\ -\frac{1}{f} & 1-\frac{d}{f} \end{bmatrix}$ \\ \hline
       \parbox[c]{12em}{Prehod preko leče z debelino $d$ 
       in krivinskima radijema $R_1$ in $R_2$}& 
-      \parbox[c]{6em}{\includegraphics[width=0.8in]{slike/matrika_fd.png}} & 
+      \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_fd.pdf_tex}} & 
       $\begin{bmatrix} 1-\frac{d}{nf_{1}} & \frac{d}{n}\\
       -\frac{1}{f_2}- \frac{1}{f_1}-\frac{d}{nf_1f_2}& 1-\frac{d}{nf_{2}} \end{bmatrix}$
       $f_{i}=\frac{R_{i}}{n-1}$\\ \hline
-      Prehod čez zaporedje plasti & \parbox[c]{6em}{\includegraphics[width=0.8in]{slike/matrika_nN.png}} & 
-      $\begin{bmatrix} 1 & \sum_{i=1}^{N}\frac{d_{i}}{n_{i}}\\ 0 & 1 \end{bmatrix}$ \\ \hline
-   
-  \end{tabular}
+      Prehod čez zaporedje plasti & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_nN.pdf_tex}} & 
+      $\begin{bmatrix} 1 & \sum_{i=1}^{N}\frac{d_{i}}{n_{i}}\\ 0 & 1 \end{bmatrix}$ \\ \hline 
+\end{tabular}
