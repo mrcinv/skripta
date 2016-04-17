@@ -256,10 +256,6 @@ snopa\footnote{Nemški matematik Carl Friedrich Gauss, 1777--1855.}
 E=E_{0}\,\frac{w_{0}}{w(z)}\,e^{ikz-i\omega t}\,e^{-r^{2}/w^{2}(z)}\,e^{ikr^{2}/2R(z)}
 e^{-i\eta(z)}.
 }
-Intenziteta svetlobe je sorazmerna z $E(r,z)E^*(r,z)$ in zanjo velja
-\boxeq{eq:gaussov-snop-intenziteta}{
-I(r,z)= I_{0}\,\frac{w_0^2}{w(z)^2}\,e^{-2r^{2}/w^{2}(z)}.
-}
 
 \begin{figure}[h]
 \centering
@@ -268,6 +264,11 @@ I(r,z)= I_{0}\,\frac{w_0^2}{w(z)^2}\,e^{-2r^{2}/w^{2}(z)}.
 \caption{Upodobitev gostota svetlobnega toka v Gaussovem snopu za $z>0$ }
 \label{fig:Gauss_3D}
 \end{figure}
+
+Intenziteta svetlobe je sorazmerna z $E(r,z)E^*(r,z)$ in zanjo velja
+\boxeq{eq:gaussov-snop-intenziteta}{
+I(r,z)= I_{0}\,\frac{w_0^2}{w(z)^2}\,e^{-2r^{2}/w^{2}(z)}.
+}
 
 \begin{definition}
 \label{naloga-širina-snopa}
@@ -337,7 +338,7 @@ pri danem $w$ pa polmer snopa narašča z $n$ in $m$.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{110truemm} 
 \input{slike/03_Hermite_Gauss.pdf_tex}
 \caption{Prečni profil Hermite-Gaussovih snopov za različne vrednosti $(n,m)$}
 \label{fig:Gauss-Hermitevi-snopi}
@@ -393,7 +394,7 @@ je prikazanih nekaj oblik amplitud $|\Re\psi_{p,l}(r,\phi,0)|$.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{110truemm} 
 \input{slike/03_Laguerre_Gauss.pdf_tex}
 \caption{Prečni profil Laguerre-Gaussovih snopov za različne vrednosti $(p,l)$}
 \label{fig:Laguerrovi_presek}
@@ -459,7 +460,7 @@ snopov, ki imajo pomembne in uporabne lastnosti.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{80truemm} 
 \input{slike/03_Bessel_profil.pdf_tex}
 \caption{Prečni presek in profil intenziteta Besselovega snopa}
 \label{fig:Besselov_presek}
@@ -512,10 +513,19 @@ To nam skupaj z enačbo~(\ref{eq:preslikava-zveza-leca})
 omogoča račun prehoda snopa skozi poljuben sistem leč brez aberacij.
 Kot primer poglejmo, kako z zbiralno lečo zberemo snop.
 
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/03_preslikava.pdf_tex}
+\caption{Prehod Gaussovega snopa skozi
+tanko lečo. Grlo velikosti $w_{01}$ v oddaljenosti $x_{1}$ od gorišča
+leče se preslika v grlo $w_{02}$ v oddaljenosti $x_{2}$ od gorišča
+leče.}
+\label{fig:Prehod-Gaussovega-snopa}
+\end{figure}
 Vpadni snop naj ima grlo s polmerom $w_{01}$ in parametrom $z_{01}$. Lega grla je 
 v točki, ki je za $x_{1}$ oddaljena od levega gorišča leče (slika
-\ref{fig:Prehod-Gaussovega-snopa}). Izračunati želimo položaj in
-polmer grla na desni strani leče. Naj bosta 
+\ref{fig:Prehod-Gaussovega-snopa}). Naj bosta 
 \begin{equation}
 q_{1}^{F}=x_{1}-iz_{01}\mbox{\hskip1cm in \hskip1cm}q_{2}^{F}=-x_{2}-iz_{02}
 \end{equation}
@@ -536,12 +546,12 @@ in imaginarni del
 x_{1}x_{2}=f^{2}-z_{01}z_{02} \qquad \mathrm{in} \qquad
 \frac{x_{1}}{z_{01}}=\frac{x_{2}}{z_{02}}.
 \end{equation}
-Od tod sledita enačbi za preslikavo Gaussovega snopa čez lečo z goriščno razdaljo $f$.
-Ena enačba da povečavo:
+Dobimo enačbi za preslikavo Gaussovega snopa čez lečo z goriščno razdaljo $f$.
+Prva da povečavo:
 \boxeq{eq:preslikava-povecava}{
 \frac{w_{02}}{w_{01}}=\sqrt{\frac{x_{2}}{x_{1}}},
 }
-druga pa lego grla na desni strani leče: 
+druga enačba pa lego grla na desni strani leče: 
 \boxeq{eq:preslikava-grlo}{
 x_{2}=\frac{x_{1}f^{2}}{x_{1}^{2}+z_{01}^{2}}.
 }
@@ -552,16 +562,6 @@ grlo na desni strani v gorišču. V praksi dobimo Gaussove snope iz laserjev in 
 velja ne prva ne druga limita, temveč je treba uporabiti izraz (\ref{eq:preslikava-grlo}).
 Tudi povečava polmera grla na desni, podana z enačbo (\ref{eq:preslikava-povecava}),
 je precej drugačna kot v geometrijski optiki.\\
-
-\begin{figure}
-\def\svgwidth{140truemm} 
-\input{slike/03_preslikava.pdf_tex}
-\caption{Prehod Gaussovega snopa skozi
-tanko lečo. Grlo velikosti $w_{01}$ v oddaljenosti $x_{1}$ od gorišča
-leče se preslika v grlo $w_{02}$ v oddaljenosti $x_{2}$ od gorišča
-leče.}
-\label{fig:Prehod-Gaussovega-snopa}
-\end{figure}
 
 Za primer vzemimo snop iz He-Ne laserja (valovna dolžina 632,8~nm), ki ima grlo s 
 polmerom $w_{01}=0,5~\milli\metre$ na izhodnem ogledalu in je $50~\centi\metre$ pred lečo z 
@@ -785,10 +785,10 @@ kompleksne ukrivljenosti Gaussovih snopov, zato da preprosto možnost
 prenosa rezultatov računov geometrijske optike v optiko
 snopov.
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \centering
-\def\svgwidth{120truemm}
+\def\svgwidth{100truemm}
 \input{slike/03_k_preslikavam.pdf_tex}
 \caption{Preslikave žarkov lahko obravnavamo
 z matrikami. Optični element $M$ preslika žarek $(y_{1},\theta_{1})$
