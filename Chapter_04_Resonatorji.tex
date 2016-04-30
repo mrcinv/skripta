@@ -71,7 +71,8 @@ steni. Takemu resonatorju pravimo odprt resonator\index{Resonator!odprt}
 (slika~\ref{fig:Odprt_resonator}).\\
 \begin{figure}[h]
 \centering
-\includegraphics[width=10truecm]{slike/04_Odprt_resonator.png}
+\def\svgwidth{120truemm} 
+\input{slike/04_Odprt_resonator.pdf_tex}
 \caption{Odprt resonator. Levo: lastni nihajni načini takega resonatorja imajo 
 diskretne vrednosti valovnih vektorjev $k_{n}$. Desno: žarki, ki niso pravokotni na ravna zrcala
 resonatorja (Fabry-Perotov interferometer) uidejo iz resonatorja.}
@@ -171,7 +172,8 @@ večja je odbojnostjo zrcal. Ta seveda tudi določa čas dušenja vzbujenega
 lastnega nihanja.\\
 \begin{figure}[h]
 \centering
-\includegraphics[width=9truecm]{slike/04_fabry_perot.png}
+\def\svgwidth{110truemm} 
+\input{slike/04_fabry_perot.pdf_tex}
 \caption{
 Prepustnost Fabry-Perotovega interferometra
 v odvisnosti od valovnega vektorja $k$ za tri različne odbojnosti zrcal
@@ -603,7 +605,8 @@ Do istega rezultata pridemo tudi z razvojem izraza za prepustnost Fabry-Perotove
 interferometra\index{Fabry-Perotov interferometer} (enačba~\ref{eq:Fabry-Perot-prepustnost})
 okoli vrha pri $\omega_{n}$:
 \begin{equation}
-T=\frac{1}{1+\frac{4{\cal R}}{(1-{\cal R})^{2}}\sin^{2}L\frac{c}{(\omega-\omega_{n})}}\approx \frac{1}{1+\left[\frac{2}{(1-{\cal R})}\frac{L}{c}(\omega-\omega_{n})\right]^{2}},
+T=\frac{1}{1+\frac{4{\cal R}}{(1-{\cal R})^{2}}\sin^{2}L\frac{c}{(\omega-\omega_{n})}}\approx 
+\frac{1}{1+\left[\frac{2}{(1-{\cal R})}\frac{L}{c}(\omega-\omega_{n})\right]^{2}},
 \label{3.27}
 \end{equation}
  kjer smo upoštevali še, da je odbojnost blizu ${\cal R} \approx 1$. Dobimo znano Lorentzovo
@@ -746,7 +749,8 @@ obosna valovna enačba enako natančna kot Fresnelova uklonska teorija.
 
 \begin{definition}
 Pokaži, da so funkcije, ki so sorazmerne svoji Fourierevi transformaciji, 
-Hermite-Gaussove funkcije\index{Hermite-Gaussovi snopi} (enačba~\ref{eq:Gauss-Hermitevi}), in izračunaj lastne frekvence stanj višjega reda.
+Hermite-Gaussove funkcije\index{Hermite-Gaussovi snopi} (enačba~\ref{eq:Gauss-Hermitevi}), in 
+izračunaj lastne frekvence stanj višjega reda.
 \end{definition}
 
 \section{*Sklopitev resonatorja z okolico}
@@ -875,7 +879,8 @@ stacionarnem stanju vpadna moč enaka odbiti
 Uporabimo še izraz za stacionarno vrednost $a$  (enačba~\ref{3.38}) in dobimo
 enakost 
 \begin{equation}
-r^{2}+\frac{2(\tau_{e}\kappa^{2}+r\kappa\sqrt{2\tau_{e}})}{1+\tau_{e}^{2}(\omega_{n}-\omega)^{2}}=1.\label{3.43}
+r^{2}+\frac{2(\tau_{e}\kappa^{2}+r\kappa\sqrt{2\tau_{e}})}{1+\tau_{e}^{2}(\omega_{n}-\omega)^{2}}=1.
+\label{3.43}
 \end{equation}
  Veljati mora pri vsaki frekvenci, to je pri vsaki vrednosti imenovalca
 ulomka. Zato mora biti $r^{2}=1$ in $\tau_{e}\kappa=-r\sqrt{2\tau_{e}}$.
@@ -890,7 +895,8 @@ s_{-}=-s_{+}+\sqrt{\frac{2}{\tau_{e}}}a\;\;.\label{3.45}
 
 Z upoštevanjem notranjih izgub amplituda nihanja uboga enačbo 
 \begin{equation}
-\dot{a}=-i\omega_{n}a-(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e}})a+\sqrt{\frac{2}{\tau_{e}}}s_{+}\;\;.\label{3.46}
+\dot{a}=-i\omega_{n}a-(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e}})a+\sqrt{\frac{2}{\tau_{e}}}s_{+}\;\;.
+\label{3.46}
 \end{equation}
  Enačbi (\ref{3.45}) in (\ref{3.46}) sta osnovna izraza za sklaplanje
 resonatorjev z enim vhodom. Za primer uporabe izračunajmo odbojnost
@@ -898,11 +904,13 @@ resonatorja $s_{-}/s_{+}$ kot funkcijo frekvence vpadnega vala. V
 enačbo~(\ref{3.45}) postavimo izraz za stacionarno vrednost amplitude
 nihanja 
 \begin{equation}
-a=\frac{\sqrt{\frac{2}{\tau_{e}}}s_{+}}{i(\omega_{n}-\omega)+(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e}})}\label{3.47}
+a=\frac{\sqrt{\frac{2}{\tau_{e}}}s_{+}}{i(\omega_{n}-\omega)+(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e}})}
+\label{3.47}
 \end{equation}
  pa imamo 
 \begin{equation}
-\frac{s_{-}}{s_{+}}=\frac{\frac{1}{\tau_{0}}-\frac{1}{\tau_{e}}-i(\omega_{n}-\omega)}{\frac{1}{\tau_{0}}+\frac{1}{\tau_{e}}+i(\omega_{n}-\omega)}\;\;.\label{3.48}
+\frac{s_{-}}{s_{+}}=\frac{\frac{1}{\tau_{0}}-\frac{1}{\tau_{e}}-i(\omega_{n}-\omega)}{\frac{1}{\tau_{0}}
++\frac{1}{\tau_{e}}+i(\omega_{n}-\omega)}\;\;.\label{3.48}
 \end{equation}
  Daleč od resonance je odbojnost -1. V resonanci, $\omega_{n}=\omega$,
 odboja ni, kadar je $\tau_{e}=\tau_{0}$. Takarat je moč, ki gre iz
@@ -914,7 +922,8 @@ ali koaksialnega kabla enaka impedanci valovoda oziroma kabla.
 Če sta obe zrcali resonatorja delno prepustni, kot na primer pri običajnem
 Fabri-Perotovem interferometru, bo enačba za amplitudo nihanja 
 \begin{equation}
-\dot{a}=-i\omega_{n}a-(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e1}}+\frac{1}{\tau_{e2}})+\kappa_{1}s_{+1}+\kappa_{2}s_{+2}\;\;.\label{3.49}
+\dot{a}=-i\omega_{n}a-(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e1}}+\frac{1}{\tau_{e2}})+\kappa_{1}s_{+1}+
+\kappa_{2}s_{+2}\;\;.\label{3.49}
 \end{equation}
  $s_{+1}$ in $s_{+2}$ sta valovanji, ki vpadata z ene in druge strani.
 Izgube zaradi končne prepustnosti so še vedno 
@@ -929,7 +938,8 @@ vpadno valovanje nič, dobimo
  Prepustnost resonatorja, to je razmerje med močjo vpadnega valovanja
 z ene strani in izhodnega z druge, bo 
 \begin{equation}
-T=\frac{|s_{-2}|^{2}}{|s_{+1}|^{2}}=\frac{2}{\tau_{e2}}\frac{|a|^{2}}{|s_{+1}|^{2}}=\frac{4\tau^{2}/\tau_{e1}\tau_{e2}}{1+\tau^{2}(\omega_{n}-\omega)^{2}}\;\;,\label{3.52}
+T=\frac{|s_{-2}|^{2}}{|s_{+1}|^{2}}=\frac{2}{\tau_{e2}}\frac{|a|^{2}}{|s_{+1}|^{2}}=\frac{4\tau^{2}/
+\tau_{e1}\tau_{e2}}{1+\tau^{2}(\omega_{n}-\omega)^{2}}\;\;,\label{3.52}
 \end{equation}
  kjer je $1/\tau=1/\tau_{0}+1/\tau_{e1}+1/\tau_{e2}$. Če ni notranjih
 izgub, je prepustnost v resonanci 
@@ -989,8 +999,10 @@ Zaradi ohranitve energije sklopitvena koeficienta $\kappa_{12}$ in
 $\kappa_{21}$ nista neodvisna. Vsota energij obeh resonatorjev mora
 biti konstantna, zato 
 \begin{eqnarray}
-\frac{d}{dt}(|a_{1}|^{2}+|a_{2}|^{2}) & = & a_{1}\dot{a}_{1}^{*}+a_{1}^{*}\dot{a}_{1}+a_{2}\dot{a}_{2}^{*}+a_{2}^{*}\dot{a}_{2}\nonumber \\
- & = & a_{1}^{*}\kappa_{12}a_{2}+a_{1}\kappa_{12}^{*}a_{2}^{*}+a_{2}^{*}\kappa_{21}a_{1}+a_{2}\kappa_{21}^{*}a_{1}^{*}\nonumber \\
+\frac{d}{dt}(|a_{1}|^{2}+|a_{2}|^{2}) & = & a_{1}\dot{a}_{1}^{*}+a_{1}^{*}\dot{a}_{1}+
+a_{2}\dot{a}_{2}^{*}+a_{2}^{*}\dot{a}_{2}\nonumber \\
+ & = & a_{1}^{*}\kappa_{12}a_{2}+a_{1}\kappa_{12}^{*}a_{2}^{*}+a_{2}^{*}\kappa_{21}a_{1}+
+ a_{2}\kappa_{21}^{*}a_{1}^{*}\nonumber \\
  & = & 0\;\;.
 \end{eqnarray}
  Od tu vidimo, da mora biti 
