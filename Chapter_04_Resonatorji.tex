@@ -375,10 +375,7 @@ kriterija za stabilnost. Takrat si pomagamo z matrikami ABCD\index{ABCD matrike}
 
 Izhajamo iz zahteve, da se v stabilnem resonatorju snop po enem celotnem obhodu
 preslika sam vase. Gaussov snop na neki točki v resonatorju 
-zapišemo s kompleksno ukrivljenostjo (enačba~\ref{eq:q-inv})
-\beq
-\frac{1}{q}= \frac{1}{R(z)}+i\frac{2}{kw(z)^{2}}.
-\eeq
+zapišemo s kompleksno ukrivljenostjo (enačba~\ref{eq:q-inv}).
 V najpreprostejšem primeru resonatorja snop prepotuje dano razdaljo, se odbije od zrcala, prepotuje
 resonator v nasprotni smeri, se odbije od drugega zrcala in se vrne v začetno lego. V bolj 
 zapletenih primerih dodamo še prehode skozi druge optične elemente. Matriko 
@@ -431,18 +428,17 @@ $2\pi$. Fazo za osnovni snop zapišemo po enačbi~(\ref{eq:gaussov-snop})\index{
 kz+\frac{kr^{2}}{2R} -\eta(z) = kz-\arctan \left(\frac{z}{z_{0}}\right),
 \label{eq:fazag}
 \end{equation}
-pri čemer smo upoštevali, da gledamo valovanje na osi, pri $r=0$. 
-Razlika faze pri obhodu je 
+pri čemer  gledamo valovanje na osi, pri $r=0$. 
+Razlika faze pri enem preletu je 
 \begin{equation}
-\frac{\omega_{n}}{c}2L-\left[\arctan \left(\frac{z_{2}}{z_{0}}\right)+\arctan \left(\frac{-z_{2}}{z_{0}}\right)+
-\arctan\left(\frac{z_{1}}{z_{0}}\right) + \arctan\left(\frac{-z_{1}}{z_{0}}\right)\right]=n2\pi
+\frac{\omega_{n}}{c}L-\left[\arctan \left(\frac{z_{2}}{z_{0}}\right)-
+\arctan\left(\frac{z_{1}}{z_{0}}\right)\right]=n\pi
 \label{eq:fazan}
 \end{equation}
 Pri tem smo zanemarili, da lahko pride do dodatne majhne spremembe
 faze pri odboju na zrcalu. Ta za delček valovne dolžine
 spremeni efektivno dolžino resonatorja, ki je niti ne poznamo
-tako natančno. Kadar imamo opravka le z osnovnim
-snopom, nam podobno ni treba upoštevati člena
+tako natančno. Iz istega razloga za osnovni snop ni treba upoštevati člena
 v oglatem oklepaju enačbe~(\ref{eq:fazan}). Tako dobimo znano enačbo za resonančne frekvence 
 \begin{equation}
 \omega_{n}=\frac{n\pi c}{L}.
@@ -458,15 +454,22 @@ Za snope višjega reda, ki imajo vozle v prečni smeri, je fazni premik
 odvisen tudi od števila vozlov. Tako je na primer v cilindričnih koordinatah
 (enačba~\ref{eq:etaGL})
 \begin{equation}
-\eta_{p,l}(z)=(2p+l+1)\arctan\left(\frac{z}{z_{0}}\right)
+\eta_{p,l}(z)=(2p+l+1)\arctan\left(\frac{z}{z_{0}}\right).
 \end{equation}
-in resonančni pogoj zapišemo kot
+Resonančni pogoj zapišemo kot
 \begin{equation}
 \frac{\omega_{n,p,l}}{c}L-(2p+l+1)\left[\arctan\left(\frac{z_{2}}{z_{0}}\right)-
 \arctan\left(\frac{z_{1}}{z_{0}}\right)\right]=n\pi.
 \end{equation}
-Resonančne frekvence so torej odvisne tudi od števila prečnih vozlov,
+Resonančne frekvence so torej odvisne tudi od števila prečnih vozlov (slika~\ref{fig:crte}),
 kar je dodaten razlog, da v laserjih vzbujamo le osnovno lastno nihanje.
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/04_crte.pdf_tex}
+\caption{Resonančne frekvence za skoraj planparalelni ($R\gg L$) resonator.}
+\label{fig:crte}
+\end{figure}
 
 Zanimiv in praktično pomemben je primer konfokalnega resonatorja\index{Resonator!konfokalni},
 pri katerem je $z_{0}=L/2$ in $\arctan(L/2z_{0})= \arctan(1)=\pi/4$. Resonančne frekvence
@@ -486,22 +489,21 @@ vase.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{60truemm} 
 \input{slike/04_Konfokalni.pdf_tex}
 \caption{V konfokalnem resonatorju se žarek šele po dveh preletih
 vrne sam vase.}
 \label{fig:Konfokalni_zarek}
 \end{figure}
 
-V primeru skoraj planparalelnega\index{Resonator!planparalelni} 
-resonatorja je $z_{0}\gg L$ in lahko
-$\arctan(L/2z_{0})$ razvijemo, upoštevamo enačbo~(\ref{eq:zosim}) in dobimo
+Pri skoraj planparalelnem\index{Resonator!planparalelni} 
+resonatorju je $z_{0}\gg L$, $\arctan(L/2z_{0})$ lahko razvijemo, upoštevamo enačbo~(\ref{eq:zosim}) in dobimo
 \beq
 \omega_{n,p,l}=\frac{\pi c}{L}\left[n+(2p+l+1)\frac{1}{\pi}\sqrt{\frac{2L}{R}}\right].
 \eeq
 Ker je $L$ majhen v primerjavi z $R$, so resonance snopov nizkega prečnega reda 
 zelo blizu resonancam osnovnih snopov, niso pa čisto enake. Poglejmo primer. Vzemimo 
-simetrični resonator z dolžino $L=1$~m, krivinskim radijem zrcal $R=50$~m, 
+simetrični resonator z dolžino $L=1$~m in krivinskim radijem zrcal $R=50$~m, 
 valovna dolžina pa naj bo $\lambda= 500$~nm. Z uporabo enačbe~(\ref{eq:zosim})
 hitro lahko izračunamo $z_0 = 4,97$~m. Ker je pogoj $z_0\gg L$ izpolnjen, lahko uporabimo
 gornji približek. Razlika med frekvencama za dva zaporedna osnovna snopa 
@@ -512,19 +514,10 @@ medtem ko je razlika med frekvencama dveh prečnih snopov
 \beq
 \Delta \omega_{n,p,l} = \frac{c}{L}\sqrt{\frac{2L}{R}}  = 60~\mathrm{MHz}.
 \eeq
-Skica spektra lastnih frekvenc je na sliki~(\ref{fig:crte}).
-
-\begin{figure}[h]
-\centering
-\def\svgwidth{100truemm} 
-\input{slike/04_crte.pdf_tex}
-\caption{Resonančne frekvence za skoraj planparalelni ($R\gg L$) resonator.}
-\label{fig:crte}
-\end{figure}
 
 \section{Izgube v resonatorjih}
 Energija lastnega nihanja odprtega resonatorja ni konstantna, ampak se počasi
-zmanjšuje zaradi več vzrokov:\\
+zmanjšuje iz več vzrokov:
 \begin{enumerate}
 \item Odbojnost ogledal ni enaka 1. Tudi če bi znali narediti popolno odbojna zrcala, 
 tak resonator ne bi bil uporaben, saj nihanja ne bi mogli sklopiti z zunanjim poljem. Če 
@@ -544,16 +537,21 @@ zato ima tak resonator tudi najmanjše uklonske izgube (glej nalogo~\ref{naloga:
 
 Vse izgube lahko popišemo z razpadnim časom za energijo nihanja 
 \begin{equation}
-\frac{dW}{dt}=-\frac{2}{\tau}W \quad \textrm{in} \quad W = W_0 e^{\frac{-2t}{\tau}},
+\frac{dW}{dt}=-\frac{2}{\tau}W,
 \label{eq:dW}
 \end{equation}
+in 
+\begin{equation}
+W = W_0 e^{\frac{-2t}{\tau}},
+\label{eq:dW1}
+\end{equation}
 pri čemer $\tau$ imenujemo življenjski ali razpadni čas nihanj\index{Življenjski čas nihanj}.
-Izguba energije na en obhod resonatorja\index{Izgube v resonatorju} je
+Izguba energije na celoten obhod resonatorja\index{Izgube v resonatorju} je
 \begin{equation}
 -dW = (1-{\cal R}_{1})W+(1-{\cal R}_{2})W +\Lambda_{0} W = \Lambda W.
 \label{eq:Lambda}
 \end{equation}
-S ${\cal R}_{1,2}$ smo označili odbojnosti zrcal, od katerih je navadno ena
+Z ${\cal R}_{1}$ in ${\cal R}_{2}$ smo označili odbojnosti zrcal, od katerih je navadno ena
 kolikor mogoče blizu 1. Parameter $\Lambda_{0}$ popiše absorpcijo in
 sipanje znotraj resonatorja ter morebitne uklonske izgube. Tipične vrednosti 
 zanj so do nekaj stotink. Celotne izgube popišemo s parametrom $\Lambda$. 
@@ -568,29 +566,34 @@ od koder sledi
 \frac{1}{\tau}=\frac{\Lambda c}{4L}=\frac{1}{\tau_{0}}+\frac{c}{4L}[(1-{\cal R}_{1})+(1-{\cal R}_{2})],
 \label{taulambda}
 \eeq
-kjer smo s $\tau_{0}=\Lambda_{0}\frac{c}{4L}$ označili razpadni
-čas zaradi notranjih izgub. Notranje izgube so navadno zelo majhne, odbojnost enega zrcala
-pa je približno enaka 1, tako da dobimo za življenjski čas nihanj 
+kjer smo s 
+\beq
+\tau_{0}=\frac{4L}{\Lambda_0 c}
+\eeq
+označili razpadni čas zaradi notranjih izgub. 
+
+Notranje izgube so navadno zelo majhne, odbojnost enega zrcala
+pa je približno enaka 1, tako da dobimo za življenjski čas nihanj približno
 \boxeq{eq:taucca}{
 \frac{1}{\tau}=\frac{c}{4L} (1-{\cal R}).
 }
 
 Zaradi dušenja se energija lastnih nihanj eksponentno zmanjšuje, prav tako tudi
 amplituda jakosti električnega polja. Amplituda pojema z dvakrat daljšim 
-karakterističnim časom, ki je enak kar $\tau$. Spekter eksponentno pojemajoče funkcije izračunamo
-(glej nalogo~\ref{naloga-spekter}) in dobimo Lorentzovo krivuljo s širino črte, ki ustreza ravno
+karakterističnim časom, ki je enak kar $\tau$. Spekter eksponentno pojemajoče funkcije lahko izračunamo
+(glej nalogo~\ref{naloga-spekter}) in dobimo Lorentzovo krivuljo\index{Lorenzov spekter} s širino črte, ki ustreza ravno
 \begin{equation}
 \Delta\omega_{1/2}=\frac{1}{\tau}.
 \label{3.26}
 \end{equation}
 Lastne frekvence torej niso neskončno ozke, ampak imajo končno širino $2/\tau$.
 Poglejmo primer. Naj bodo notranje izgube na en obhod $\Lambda_0=0,01$,
-eno zrcalo naj bo idealno, drugo naj ima ${\cal R}=0,93$. Dolžina
+eno zrcalo naj bo idealno, drugo naj ima odbojnost ${\cal R}=0,93$. Dolžina
 resonatorja naj bo $L=0,5$~m, valovna dolžina pa $500$~nm. Tedaj
 je $1/\tau=12\cdot10^{6}$~s$^{-1}$. Zanimivo je pogledati razmerje med 
 razmikom med zaporednima resonančnima frekvencama $\Delta \omega$ 
 (enačba~\ref{eq:delta-omega-resonator}) in širino resonance $2/\tau$. 
-Dobimo $\Delta\omega\tau/2 \approx 80$.\\
+Dobimo $\Delta\omega\tau/2 \approx 80$.
 
 \begin{remark}
 Namesto razpadnega časa $\tau$ se pogosto za opis izgub uporablja
@@ -632,21 +635,21 @@ od koder hitro razberemo
 \label{Resonator_uklon}
 
 V nestabilnih resonatorjih stacionarna rešitev v obliki stoječega
-Gaussovega snopa ne obstoja. Poiskati rešitev za električno polje je
-zato v takih resonatorjih precej zahtevno. 
+Gaussovega snopa ne obstoja. Zato je v takih resonatorjih poiskati 
+rešitev za električno polje precej zahtevno. 
 Ker pa je problem soroden uklonu, ga lahko obravnavamo s pomočjo 
 uklonske teorije\index{Uklon}.
 
-Naj bo električno polje v točki $P_{1}$ prvega zrcala $E_{1}(P_{1})$.
-Polje na drugem zrcalu lahko zapišemo s pomočjo Kirchhoffovega uklonskega
+Naj bo električno polje v točki $P_{1}$ prvega zrcala $E_{1}$.
+Polje na drugem zrcalu v točki $P_2$ lahko zapišemo s pomočjo Kirchhoffovega uklonskega
 integrala\index{Kirchhoffov integral} (enačba~\ref{eq:Fresnelov-uklon})
 \begin{eqnarray}
-E_{2}(P_{2}) & = & -\frac{i}{2\lambda}\int_{1}E_{1}(P_{1})\frac{e^{ikr}(1+\cos\vartheta)}{r}\, dS_{1} \\
+E_{2} & = & -\frac{i}{2\lambda}\int_{1}E_{1}(P_{1})\frac{e^{ikr}(1+\cos\vartheta)}{r}\, dS_{1} \\
  & = & \int_{1}E_{1}(P_{1})K(P_{1},P_{2})dS_{1},
 \label{eq:resuklon}
 \end{eqnarray}
 kjer je $r$ razdalja med točkama $P_{1}$ in $P_{2}$, $\vartheta$
-je kot med zveznico in normalo na zrcala, druge faktorje pa smo pospravili v faktor
+je kot med zveznico in normalo na zrcali, druge faktorje pa smo pospravili v faktor
 \beq
 K(P_{1},P_{2}) = -\frac{i}{2\lambda}\frac{e^{ikr}(1+\cos\vartheta)}{r},
 \label{jedro}
@@ -655,14 +658,14 @@ ki predstavlja jedro integralske enačbe. Polje na prvem zrcalu mora
 biti na enak način povezano s poljem na drugem. Če naj zapisano polje predstavlja lastno nihanje
 resonatorja, mora biti po dveh odbojih sorazmerno začetnemu polju:
 \begin{equation}
-E_{1}(P)=-\gamma\int_{1}\int_{2}E_{1}(P_{1})K(P_{1},P_{2})K(P_{2},P_1)\, dS_{1}\, dS_{2}.
+E_{1}(P)=\gamma\int_{1}\int_{2}E_{1}(P_{1})K(P_{1},P_{2})K(P_{2},P_1)\, dS_{1}\, dS_{2}.
 \label{3.71}
 \end{equation}
 Enačba~(\ref{3.71}) je homogena integralska enačba, katere lastne
 rešitve so iskana lastna nihanja elektromagnetnega polja v resonatorju.
 Kompleksne lastne vrednosti $\gamma$ določajo frekvenco in dušenje
-nihanj. V splošnem rešitev ni mogoče poiskati analitično in se je
-treba zateči k približnim numeričnim metodam. Najenostavnejša je iterativna
+nihanj. V splošnem rešitev ni mogoče poiskati analitično in treba je uporabiti 
+numerične metode. Najenostavnejša je iterativna
 metoda, pri kateri začnemo z nekim začetnim poljem in ponavljamo integracijo
 v enačbi~(\ref{3.71}), dokler se polje ne spreminja več.
 
@@ -672,16 +675,14 @@ Ker je resonator simetričen, se polje na obeh zrcalih lahko razlikuje kvečjemu
 za predznak.
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{90truemm} 
 \input{slike/04_Uklon.pdf_tex}
 \caption{Koordinatna sistema na zrcalih resonatorja}
 \label{fig:uklon_res_shema}
 \end{figure}
-
 Vpeljimo kartezične koordinate na obeh zrcalih, kot kaže slika~(\ref{fig:uklon_res_shema}).
 Pričakujemo, da bo prečna razsežnost lastnega stanja majhna v primerjavi
-z dolžino resonatorja, zato lahko $r$ razvijemo do drugega reda v
-prečnih koordinatah
+z dolžino resonatorja, zato lahko $r$ razvijemo 
 \begin{equation}
 r\approx L-\frac{xx^{\prime}+yy^{\prime}}{L}.
 \label{3.72}
@@ -701,21 +702,20 @@ E(x',y')=\pm\frac{ie^{ikL}}{\lambda L}\int E(x,y)\exp
 Integracija poteka po celem zrcalu. Jedro integrala je produkt dveh
 faktorjev, ki vsebujeta vsak le $x'$ ali $y'$ koordinati. Zato poiščimo
 rešitev enačbe~(\ref{3.73}) v obliki produkta 
-\begin{equation}
+$
 E(x',y')=E_{0}f(x')g(y').
-\label{3.74}
-\end{equation}
-S tem nastavkom morata biti funkciji $f(x')$ in $g(y')$ rešitve enačbe
+$
+S tem nastavkom morata biti funkciji $f(x')$ in $g(y')$ rešitvi enačbe
 \begin{equation}
 \alpha f(x')=\int f(x)\exp\left[\frac{-ikxx^{\prime}}{L}\right]\, dx,
 \label{3.75}
 \end{equation}
 kjer je $\alpha$ še neznana konstanta. Meje integrala so od enega do 
-drugega roba zrcala. Če je dovolj veliko,
+drugega roba zrcala. Če je zrcalo dovolj veliko,
 pričakujemo, da je polje na robu dovolj majhno, da lahko meje vzamemo
 kar od $-\infty$ do $\infty$. Vpeljimo še brezdimenzijski koordinati
 \begin{equation}
-X'=x'\sqrt{k/L} \quad \mathrm{in} \quad Y'=y'\sqrt{k/L}.
+X'=x'\sqrt{k/L} \quad \mathrm{in} \quad Y'=y'\sqrt{k/L}
 \label{3.76}
 \end{equation}
 in dobimo
@@ -730,7 +730,7 @@ funkcija s to lastnostjo je Gaussova funkcija
 f(X)=\exp[-\frac{1}{2}X^{2}].
 \label{3.78}
 \end{equation}
-Polje na zrcalu ima tako po pričakovanju obliko Gaussovega snopa:
+Polje na zrcalu ima tako po pričakovanju obliko Gaussovega snopa
 \begin{equation}
 E(x,y)=E_{0}\exp\left[-\frac{k(x^{2}+y^{2})}{2L}\right].
 \label{3.79}
@@ -746,8 +746,8 @@ $E_{2}=\pm E_{1}$. Dobimo
 i\alpha^{2}\frac{e^{ikL}}{\lambda L}=ie^{ikL}=\pm1.
 \label{3.80}
 \end{equation}
-Sledi že od prej poznani resonančni pogoj za
-frekvenco lastnega stanja~(enačba~\ref{eq:omega_konf}):
+Dobimo resonančni pogoj za
+frekvenco lastnega stanja, ki ga že poznamo~(enačba~\ref{eq:omega_konf})
 \begin{equation}
 \omega_{n}=ck_{n}=\frac{c}{L}(2n+1)\frac{\pi}{2}.
 \label{3.81}
@@ -769,7 +769,7 @@ izdelavi laserjev, ampak lahko služijo tudi kot frekvenčni in
 prostorski filtri za svetlobno valovanje. Povezavo med lastnimi nihanji
 resonatorja in prepustnostjo ter odbojnostjo za valovanje, ki na resonator
 vpada, bomo poiskali s formalizmom sklapljanja valovanj\index{Sklopitev valovanj}, 
-ki je neke vrste perturbacijska analiza in je pogosto zelo uporaben.\\
+ki je neke vrste perturbacijska analiza in je pogosto zelo uporaben.
 
 Začnimo z resonatorjem z idealno odbojnimi stenami brez notranjih izgub. Stoječe
 lastno valovanje v resonatorju zapišemo kot produkt krajevnega in časovnega
@@ -798,7 +798,7 @@ preprosta diferencialna enačba
 \dot{a}=-i\omega_{n}a.
 \label{3.34}
 \end{equation}
-Funkcija $a$ ima preprosto odvisnost od časa $e^{-i\omega_{n}t}$. \\
+Funkcija $a$ ima preprosto odvisnost od časa $e^{-i\omega_{n}t}$. 
 
 Zapišimo elektromagnetno energijo v resonatorju. Električni
 del energije polja, ki je ravno polovica celotne energije, zapišemo kot
@@ -818,7 +818,7 @@ tudi komponenta amplitude s pozitivno frekvenco. Prednost spremenljivke
 $a$ je v enostavnejših enačbah, ki so le prvega reda. Spremenljivka $a$ in 
 konjugirana spremenljivka $a^{*}$ sta tudi klasična oblika kreacijskih
 in anihilacijskih operatorjev v kvantno-mehanskem opisu harmonskega
-oscilatorja.\\
+oscilatorja.
 
 Do zdaj smo obravnavali resonator brez izgub. Poglejmo si še primer z izgubami. 
 Celotne izgube resonatorja lahko opišemo z dodatnim členom v enačbi~(\ref{3.34})
