@@ -785,7 +785,7 @@ nihajni enačbi drugega reda
 \frac{\partial^2 f}{\partial t^2}+\omega_{n}^{2}f= \ddot{f} + \omega_{n}^{2}f=0.
 \label{3.32}
 \end{equation}
-Vpeljemo lahko novo kompleksno spremenljivko $a$, ki je kombinacija funkcije $f$ in njenega
+Vpeljemo novo kompleksno spremenljivko $a$, ki je kombinacija funkcije $f$ in njenega
 časovnega odvoda
 \begin{equation}
 a=\sqrt{\frac{\epsilon_{0}}{2}}(f+\frac{i}{\omega_{n}}\dot{f}).
@@ -804,21 +804,20 @@ Zapišimo elektromagnetno energijo v resonatorju. Električni
 del energije polja, ki je ravno polovica celotne energije, zapišemo kot
 \beq
 W_e = \frac{1}{2}\varepsilon_0 \int E^2 dV = \frac{1}{2}\epsilon_{0}f^{2}
-\int g^{2}dV = \frac{1}{4} (a+a^{*})^2=\frac{1}{2}|a|^{2},
+\int g^{2}dV = \frac{1}{4} (a+a^{*})^2.
 \eeq
-\textcolor{red}{tako da je celotna energija lastnega nihanja resonatorja 
-\begin{equation}
-W=|a|^{2}.
-\label{3.35}
-\end{equation}}
+V spremenljivki $a$ in konjugirani spremenljivki $a^{*}$ lahko prepoznamo 
+klasično obliko kreacijskih in anihilacijskih operatorjev v kvantno-mehanskem 
+opisu harmonskega oscilatorja. 
 
-Časovna odvisnost električnega polja $f(t)$ vsebuje člena z $e^{-i\omega_{n}t}$
-in $e^{i\omega_{n}t}$, $a(t)$ pa ima le prvi člen. Zato ji včasih pravimo
-tudi komponenta amplitude s pozitivno frekvenco. Prednost spremenljivke
-$a$ je v enostavnejših enačbah, ki so le prvega reda. Spremenljivka $a$ in 
-konjugirana spremenljivka $a^{*}$ sta tudi klasična oblika kreacijskih
-in anihilacijskih operatorjev v kvantno-mehanskem opisu harmonskega
-oscilatorja.
+Celotna energija lastnega nihanja resonatorja je po analogiji enaka
+\begin{equation}
+W=|a|^2.
+\label{3.35}
+\end{equation}
+Vpeljana nova spremenljivka $a(t)$ je sorazmerna z $e^{-i\omega_{n}t}$, 
+zato ji pravimo tudi komponenta amplitude s pozitivno frekvenco. 
+Prednost spremenljivke $a$ je v preprostejših enačbah, ki so le prvega reda. 
 
 Do zdaj smo obravnavali resonator brez izgub. Poglejmo si še primer z izgubami. 
 Celotne izgube resonatorja lahko opišemo z dodatnim členom v enačbi~(\ref{3.34})
@@ -834,45 +833,45 @@ je točen le, kadar ni izgub. Izgube sklopijo enačbi za $a$ in $a^{\ast}$,
 vendar smo v našem približku to sklopitev zanemarili.
 
 Naj bo odbojnost enega zrcala resonatorja nekoliko manjša od 1. Izgube v resonatorju 
-se zato povečajo za (enačba~\ref{eq:taucca}) $1/\tau_{e}=c/(4L)(1-{\cal R})$. Druga posledica
+se zato povečajo za (enačba~\ref{eq:taucca}) $1/\tau=c/(4L)(1-{\cal R})$. Druga posledica
 zrcala z zmanjšano odbojnostjo pa je sklopitev resonatorja z okolico. To pomeni, 
 da valovanje izhaja iz resonatorja, po drugi strani pa to pomeni tudi, da je 
-lastno nihanje mogoče vzbujati z valovanjem, ki vpada na resonator.
+lastno nihanje mogoče vzbujati z valovanjem, ki na resonator vpada.
 
 Naj $s_{+}$ opiše snop valovanja, ki vpada na resonator. Amplituda $s_{+}$
 naj bo izbrana tako, da je $|s_{+}|^{2}$ enako moči vpadnega valovanja. Zaenkrat
-tudi izpustimo notranje izgube resonatorja $1/\tau_{0}$. Potem lahko
+tudi zanemarimo notranje izgube resonatorja. Potem lahko
 zapišemo 
 \begin{equation}
-\dot{a}=-i\omega_{n}a-\frac{1}{\tau_{e}}a+\kappa s_{+},
+\dot{a}=-i\omega_{n}a-\frac{1}{\tau}a+\kappa s_{+},
 \label{3.37}
 \end{equation}
 kjer je $\kappa$ sklopitveni koeficient med vpadnim valovanjem in
 amplitudo lastnega nihanja. Koeficient $\kappa$ je določen
-s prepustnostjo zrcala, ki pa je vsebovana tudi v $1/\tau_{e}$. Koeficient
-$\kappa$ torej ni neodvisen in poiščimo zvezo med $\kappa$ in $1/\tau_{e}$.
+s prepustnostjo zrcala, ki pa je vsebovana tudi v $1/\tau$. Koeficient
+$\kappa$ torej ni neodvisen in poiščimo zvezo med $\kappa$ in $1/\tau$.
 
 Naj ima vpadno valovanje frekvenco $\omega$. \textcolor{red}{Tedaj lahko iz enačbe~(\ref{3.37}) 
 izračunamo amplitudo nihanja v stacionarnem stanju
 \begin{equation}
-a=\frac{\kappa s_{+}}{i(\omega_{n}-\omega)+1/\tau_{e}}.
+a=\frac{\kappa s_{+}}{i(\omega_{n}-\omega)+1/\tau}.
 \label{3.38}
 \end{equation}
  }
 Označimo zdaj del valovanja, ki se odbije ali izhaja od resonatorja, s $s_{-}$.
 Če vpadnega vala ni, pojema energija nihanja zaradi odtekanja v $s_{-}$.
-\textcolor{red}{Ohranitev energije da 
+Ohranitev energije da 
 \begin{equation}
--\frac{dW}{dt}=-\frac{d}{dt}|a|^{2}=\frac{2}{\tau_{e}}|a|^{2}=|s_{-}|^{2}
+-\frac{dW}{dt}=-\frac{d}{dt}|a|^{2}=\frac{2}{\tau}|a|^{2}=|s_{-}|^{2}
 \label{3.39}
 \end{equation}
 ali 
 \begin{equation}
-s_{-}=\sqrt{\frac{2}{\tau_{e}}}a,
+s_{-}=\sqrt{\frac{2}{\tau}}a,
 \label{3.40}
 \end{equation}
 kjer smo fazo $s_{-}$ priredili z izbiro referenčne ravnine, v kateri
-opazujemo $s_{-}$.}
+opazujemo $s_{-}$.
 
 Ob prisotnosti vpadnega vala $s_{+}$ lahko odbiti val zapišemo kot
 vsoto direktnega odboja vpadnega vala $s_{+}$ in prispevka iz resonatorja
