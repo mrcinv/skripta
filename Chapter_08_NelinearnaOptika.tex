@@ -3,8 +3,8 @@
 \chapter{Nelinearna optika}
 
 Pri obravnavi svetlobnega valovanja v snovi smo doslej vedno privzeli linearno 
-zvezo med polarizacijo in jakostjo električnega polja (enačba~\ref{eq:PM}). To 
-je seveda le približek, ki je dovolj dober le pri razmeroma majhnih jakostih
+zvezo med polarizacijo in jakostjo električnega polja. To 
+je seveda približek, ki je dovolj dober le pri razmeroma majhnih jakostih
 polja. Kadar doseže jakost polja velike vrednosti -- in v laserskih snopih
 jih nedvomno lahko doseže -- je treba upoštevati tudi višje člene v razvoju. Takrat
 govorimo o nelinearni optiki\index{Nelinearna optika}. V tem poglavju bomo spoznali, 
@@ -13,7 +13,7 @@ optično usmerjanje, samozbiranje laserkega snopa in fazno konjugacijo.
 
 \section{Nelinarna susceptibilnost}
 V linearnem približku odziva snovi velja, da je polarizacija snovi $\mathbf{P}$ linearna 
-funkcija električne poljske jakosti svetlobe $\mathbf{E}$. Takrat zapišemo
+funkcija električne poljske jakosti svetlobe $\mathbf{E}$. Takrat zapišemo (enačba~\ref{eq:PM})
 \beq
 \mathbf{P} = \mathbf{D} - \varepsilon_0 \mathbf{E} = 
 \varepsilon_0 \underline{\epsilon} \cdot\mathbf{E} - \varepsilon_0 \mathbf{E} = 
@@ -38,7 +38,6 @@ po $\mathbf{E}$
 \label{8.1}
 \end{equation}
 
-
 S $\mathbf{P}_{\mathrm{L}}$ in $\mathbf{P}_{\mathrm{NL}}$ smo označili linearni in nelinearni
 del polarizacije. Nelinearni susceptibilnosti\index{Susceptibilnost!nelinearna} $\chi^{(2)}$ in $\chi^{(3)}$
 sta tenzorja tretjega in četrtega ranga\footnote{Namesto tenzorjev susceptibilnosti $\chi$
@@ -52,26 +51,27 @@ in
 \beq
 \left(\mathbf{P}_{\mathrm{NL,3}}\right)_i= \epsilon_{0}\chi^{(3)}_{ijkl} \,E_j \,E_k\, E_l,
 \eeq
-pri čemer smo seveda upoštevali Einsteinov zapis seštevanja po indeksih. 
-
+pri čemer smo seveda uporabili Einsteinov zapis seštevanja po indeksih. 
 
 Podrobneje si oglejmo tenzor susceptibilnosti $\chi^{(2)}$. 
 Ta tenzor je od nič različen le v snoveh, ki nimajo centra inverzije. Značilne 
 vrednosti za snovi, ki jih pogosto uporabimo v nelinearni optiki (npr. kristali 
-KDP, BBO in LiNbO$_3$)\footnote{KH$_2$PO$_4$ -- kalijev dihidrogenfosfat; $\beta$-BaB$_2$O$_4$ --
-beta barijev borat; LiNbO$_3$ -- litijev niobat} so okoli $\chi^{(2)} 
+KDP, BBO in LiNbO$_3$\footnote{KH$_2$PO$_4$ -- kalijev dihidrogenfosfat; $\beta$-BaB$_2$O$_4$ --
+beta barijev borat; LiNbO$_3$ -- litijev niobat}) so okoli $\chi^{(2)} 
 \sim 10^{-12}~\textrm{m/V} = 1$~pm/V.
-Poglejmo, pri kolikšnem polju je nelinearni del polarizacije opazen
-\begin{equation}
-\frac{P^{\mathrm{NL}}}{P^{\mathrm{L}}}=\frac{\epsilon_{0} \chi^{(2)} E^2}{\epsilon_{0}\chi_{ij} E} \sim 10^{-12}\frac{\mbox{m}}{\mbox{V}}\, E\;.
-\label{8.2}
-\end{equation}
-Da bo razmerje $P^{\mathrm{NL}}/P^{\mathrm{L}} =10^{-5}$, je potrebna gostota 
-svetlobnega toka okoli 1~MW/cm$^{2}$. To za laser ni nič posebnega, z nekoherentnim
-svetilom pa mnogo redov velikosti preveč. Zato je bilo mogoče nelinearne
-optične pojave opazovati šele po iznajdbi laserjev. Potrebno polje
-je tudi primerljivo polju v atomu, kar nas seveda ne preseneča. 
 
+\begin{definition}
+ Pokaži, da so električne poljske jakosti, pri katerih dosežemo znaten nelinearen 
+ prispevek k polarizaciji 
+ $$
+ \frac{P_{NL}}{P_L} \sim 10^{-5}$$ 
+ okoli 1~MW/cm$^2$. 
+Take vrednosti so z navadnim nekoherentnim svetilom 
+povsem nedosegljive, za laser pa niso take vrednosti nič posebnega.
+Zato je bilo mogoče nelinearne
+optične pojave opazovati šele po iznajdbi laserjev. Potrebno polje
+je tudi primerljivo polju v atomu, kar nas seveda ne preseneča.
+\end{definition}
 
 Povejmo še nekaj o komponentah tenzorja $\chi^{(2)}$. 
 Ker lahko v produktu (enačba~\ref{eq:nlin2}) vrstni red $E_j E_k$ zamenjamo, mora biti
@@ -80,16 +80,32 @@ tenzor invarianten na to zamenjavo
 \chi_{ijk} = \chi_{ikj}.
 \eeq
 Posledično vpeljemo poenostavljen zapis, pri katerem prvi indeks prepišemo $(x = 1, y = 2, z = 3)$,
-zadnja dva indeksa zapišemo kot enega. Dogovorjene oznake so $xx = 1, yy = 2, zz = 3, yz = 4, 
+zadnja dva indeksa pa zapišemo kot enega. Dogovorjene oznake so $xx = 1, yy = 2, zz = 3, yz = 4, 
 xz = 5, xy = 6$. Tako na primer komponento $\chi_{xxz}$ zapišemo kot $\chi_{15}$. Namesto
 splošnega tenzorja tretjega ranga smo torej uvedli matriko velikosti $3\times6$. 
-Vendar koeficienti matrike niso poljubni. Kadar v snovi ni absorpcije, velja Kleinmanova 
-zveza\index{Kleinmanova zveza}, zaradi katere je 
+Vendar koeficienti matrike niso poljubni. Kadar v snovi ni absorpcije, velja tudi 
+\index{Kleinmanova zveza} Kleinmanova zveza\footnote{D. A. Kleinman, Phys. Rev. 126, 1977 (1962).}, 
+zaradi katere je 
 \beq
 \chi_{ijk} = \chi_{ikj} = \chi_{kij} = \chi_{kji} = \chi_{jik} = \chi_{jki}.
 \eeq
 Dodatno se matrika poenostavi zaradi simetrijskih lastnosti kristala in navadno je 
 le nekaj komponent matrike različnih od nič. 
+
+Poglejmo primer. Vzemimo barijev titanat (BaTiO$_3$) s točkovno grupo 4mm. To pomeni, da
+ima 4-števno os simetrije in dve zrcalni ravnini, od katerih ena preslika $x \to -x$ ali $y \to -y$, 
+druga pa $x\to y$ in $y\to x$. Od nič različni elementi susceptibilnosti so tako samo:
+\beq
+\chi_{xxz} = \chi_{xzx} =   \chi_{yyz} = \chi_{yzy}  ; \quad  \chi_{zzz}; \quad \chi_{zxx} = \chi_{zyy}.   
+\eeq
+Z upoštevanjem Kleinmanove zveze se število različnih členov še zmanjša in ostaneta le dva dva
+\beq
+\chi_{xxz} = \chi_{xzx} = \chi_{yyz} = \chi_{yzy} =\chi_{zxx} = \chi_{zyy} \quad \mathrm{in} \quad \chi_{zzz}.   
+\eeq
+
+
+
+
 
 \section{Nelinearni optični pojavi drugega reda}
 
