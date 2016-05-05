@@ -40,9 +40,7 @@ po $\mathbf{E}$
 
 S $\mathbf{P}_{\mathrm{L}}$ in $\mathbf{P}_{\mathrm{NL}}$ smo označili linearni in nelinearni
 del polarizacije. Nelinearni susceptibilnosti\index{Susceptibilnost!nelinearna} $\chi^{(2)}$ in $\chi^{(3)}$
-sta tenzorja tretjega in četrtega ranga\footnote{Namesto tenzorjev susceptibilnosti $\chi$
-pogosto uporabimo zapis v obliki $d=\epsilon_{0}\chi^{(2)}$ in $f=
-\epsilon_{0}\chi^{(3)}$.}. Za bolj nazorno predstavo izpišimo nelinearna dela še po komponentah
+sta tenzorja tretjega in četrtega ranga. Za bolj nazorno predstavo izpišimo nelinearna dela še po komponentah
 \beq
 \left(\mathbf{P}_{\mathrm{NL,2}}\right)_i= \epsilon_{0}\chi^{(2)}_{ijk} \,E_j \,E_k
 \label{eq:nlin2}
@@ -66,8 +64,8 @@ beta barijev borat; LiNbO$_3$ -- litijev niobat}) so okoli $\chi^{(2)}
  $$
  \frac{P_{NL}}{P_L} \sim 10^{-5}$$ 
  okoli 1~MW/cm$^2$. 
-Take vrednosti so z navadnim nekoherentnim svetilom 
-povsem nedosegljive, za laser pa niso take vrednosti nič posebnega.
+Take vrednosti so z navadnim svetilom 
+povsem nedosegljive, za laser pa niso nič posebnega.
 Zato je bilo mogoče nelinearne
 optične pojave opazovati šele po iznajdbi laserjev. Potrebno polje
 je tudi primerljivo polju v atomu, kar nas seveda ne preseneča.
@@ -81,16 +79,46 @@ tenzor invarianten na to zamenjavo
 \eeq
 Posledično vpeljemo poenostavljen zapis, pri katerem prvi indeks prepišemo $(x = 1, y = 2, z = 3)$,
 zadnja dva indeksa pa zapišemo kot enega. Dogovorjene oznake so $xx = 1, yy = 2, zz = 3, yz = 4, 
-xz = 5, xy = 6$. Tako na primer komponento $\chi_{xxz}$ zapišemo kot $\chi_{15}$. Namesto
+xz = 5, xy = 6$. Tako na primer $\chi_{xxz}$ zapišemo kot $\chi_{15}$. Namesto
 splošnega tenzorja tretjega ranga smo torej uvedli matriko velikosti $3\times6$. 
-Vendar koeficienti matrike niso poljubni. Kadar v snovi ni absorpcije, velja tudi 
-\index{Kleinmanova zveza} Kleinmanova zveza\footnote{D. A. Kleinman, Phys. Rev. 126, 1977 (1962).}, 
-zaradi katere je 
+Vendar koeficienti matrike niso poljubni. Zaradi simetrijskih lastnosti kristala se matrika
+poenostavi in navadno je le nekaj komponent različnih od nič. 
+Kadar je v snovi absorpcija pri vseh treh frekvencah dovolj majhna, lahko matriko poenostavimo
+z dodatnim približkom, tako imenovano  
+\index{Kleinmanova domneva} Kleinmanovo domnevo\footnote{D. A. Kleinman, Phys. Rev. 126, 1977 (1962).}.
+Ta pravi, da je 
 \beq
 \chi_{ijk} = \chi_{ikj} = \chi_{kij} = \chi_{kji} = \chi_{jik} = \chi_{jki}.
 \eeq
-Dodatno se matrika poenostavi zaradi simetrijskih lastnosti kristala in navadno je 
-le nekaj komponent matrike različnih od nič. 
+
+\begin{table}[h]
+ \centering
+\begin{tabular}{|c|c|c|c|} \hline  
+      Kristal & Grupa & Neničelne komponente tenzorja $\chi$ & Vrednosti ($10^{-12}$~m/V)\\ \hline
+      BaTiO$_3$ & 4mm & $\chi_{xxz} = \chi_{yyz} = \chi_{xzx} = \chi_{yzy} = \chi_{15} = \chi_{24}$  &
+	    $\chi_{15} = 42,6$ \\
+	      & & $\chi_{zxx} = \chi_{zyy} = \chi_{31} = \chi_{32}$ &  $\chi_{31} = 45,2$ \\
+	      & & $\chi_{zzz} = \chi_{33}$ & $\chi_{33} = 16,0$ \\ \hline
+      KDP & $\overline{4}$2m & $\chi_{xyz} = \chi_{yxz} = \chi_{xzy} = \chi_{yzx} = \chi_{14} = \chi_{25}$  &
+	    $\chi_{14} = 0,88$ \\
+	    & & $\chi_{zxy} = \chi_{zyx} = \chi_{36}$ &  $\chi_{36} =1,12$ \\ \hline
+      Telur & 32 & $\chi_{xxx} = -\chi_{xyy} = -\chi_{yyx} = -\chi_{yxy} =$  & \\
+      & &  = $\chi_{11} = -\chi_{12}=-\chi_{26}$  &
+	    $\chi_{11} = 1300$ \\
+	    & & $\chi_{xyz} = \chi_{xzy} = -\chi_{yxz}= - \chi_{yzx}= \chi_{14} = -\chi_{25}$ &  $\chi_{14} \approx 0$ 
+	    \\ \hline
+      LiNbO$_3$ & 3m & $\chi_{xxz} = \chi_{yyz} = \chi_{xzx} = \chi_{yzy} = \chi_{15} = \chi_{24}$  &
+	    $\chi_{15} \approx \chi_{31}$ \\
+	     & & $\chi_{zxx} = \chi_{zyy} = \chi_{31} = \chi_{32}$ &  $\chi_{31} = -11,9$ \\
+	      & & $\chi_{zzz} = \chi_{33}$ & $\chi_{33} = 68,8$ \\
+	    & &  $-\chi_{xxy} = - \chi_{xyx} = \chi_{yyy} = -\chi_{yxx}  = $ & \\
+	    & & $=-\chi_{16} = \chi_{22}$ = $-\chi_{21}$  &
+	    $\chi_{22}  = 5,52$ \\
+\hline 
+\end{tabular}
+  \caption{Koeficienti nelinearne susceptibilnosti za nekaj izbranih snovi}
+\label{table:chi}
+\end{table}
 
 Poglejmo primer. Vzemimo barijev titanat (BaTiO$_3$) s točkovno grupo 4mm. To pomeni, da
 ima 4-števno os simetrije in dve zrcalni ravnini, od katerih ena preslika $x \to -x$ ali $y \to -y$, 
@@ -98,14 +126,13 @@ druga pa $x\to y$ in $y\to x$. Od nič različni elementi susceptibilnosti so ta
 \beq
 \chi_{xxz} = \chi_{xzx} =   \chi_{yyz} = \chi_{yzy}  ; \quad  \chi_{zzz}; \quad \chi_{zxx} = \chi_{zyy}.   
 \eeq
-Z upoštevanjem Kleinmanove zveze se število različnih členov še zmanjša in ostaneta le dva dva
+Z upoštevanjem Kleinmanove domneve se število različnih členov še zmanjša in ostaneta le dva
 \beq
 \chi_{xxz} = \chi_{xzx} = \chi_{yyz} = \chi_{yzy} =\chi_{zxx} = \chi_{zyy} \quad \mathrm{in} \quad \chi_{zzz}.   
 \eeq
-
-
-
-
+V tabeli~(\ref{table:chi})\footnote{Izmerjene vrednosti, ki jih najdemo v literaturi, 
+se med seboj pogosto znatno razlikujejo.} so navedene izmerjene vrednosti in vidimo, da Kleinmanova
+domneva ni povsem točna, ampak zgolj dober približek. 
 
 \section{Nelinearni optični pojavi drugega reda}
 
@@ -120,12 +147,10 @@ frekvenc (glej sliko~\ref{fig:nl2}).
 \label{fig:nl2}
 \end{figure}
 
-
 Nastanku valov pri podvojeni frekvenci pravimo tudi SHG\index{SHG} ({\it Second harmonic generation}), 
 nastanku valov pri vsoti frekvenc SFG\index{SFG} ({\it Sum frequency generation}), 
 pri razliki frekvenc DFG\index{DFG} ({\it Difference frequency generation}) in pojavu 
 statičnega polja pri $\omega = 0$ optično usmerjanje.  
-
 
 Za opis nelinearnih pojavov drugega reda moramo rešiti valovno enačbo 
 \begin{equation}
