@@ -23,24 +23,21 @@ funkcija električne poljske jakosti svetlobe $\mathbf{E}$. Takrat zapišemo (en
 \beq
 \chi^{(1)} = \underline{\epsilon} - 1,
 \eeq
-lahko odziv snovi zapišemo strnjeno kot
+lahko linearni odziv snovi zapišemo strnjeno kot
 \beq
-\mathbf{P} =  \varepsilon_0 \chi^{(1)} \cdot \mathbf{E}.
+\mathbf{P}_{\mathrm{L}} =  \varepsilon_0 \chi^{(1)} \cdot \mathbf{E}.
 \eeq
 Ta približek je dober za majhne jakosti električnega polja. Pri večjih poljih
 postanejo pomembni tudi členi višjega reda v razvoju polarizacije
 po $\mathbf{E}$
-\begin{equation}
-\mathbf{P}=\mathbf{P}_{\mathrm{L}}+\mathbf{P}_{\mathrm{NL}}=
+\boxeq{8.1}{
+\mathbf{P}=\mathbf{P}_{\mathrm{L}}+ \mathbf{P}_{\mathrm{NL}}=
 \epsilon_{0} \chi^{(1)}\cdot \mathbf{E}+
 \epsilon_{0}\chi^{(2)}:\mathbf{E}\, \mathbf{E}+
 \epsilon_{0}\chi^{(3)}\vdots \mathbin \mathbf{E}\mathbin \mathbf{E}\mathbin\mathbf{E} + \dots
-\label{8.1}
-\end{equation}
-
-S $\mathbf{P}_{\mathrm{L}}$ in $\mathbf{P}_{\mathrm{NL}}$ smo označili linearni in nelinearni
-del polarizacije. Nelinearni susceptibilnosti\index{Susceptibilnost!nelinearna} $\chi^{(2)}$ in $\chi^{(3)}$
-sta tenzorja tretjega in četrtega ranga. Za bolj nazorno predstavo izpišimo nelinearna dela še po komponentah
+}
+Vpeljali smo nelinearni susceptibilnosti\index{Susceptibilnost!nelinearna} 
+$\chi^{(2)}$ in $\chi^{(3)}$, ki sta tenzorja tretjega in četrtega ranga. Za bolj nazorno predstavo izpišimo nelinearna dela še po komponentah
 \beq
 \left(\mathbf{P}_{\mathrm{NL,2}}\right)_i= \epsilon_{0}\chi^{(2)}_{ijk} \,E_j \,E_k
 \label{eq:nlin2}
@@ -59,11 +56,11 @@ beta barijev borat; LiNbO$_3$ -- litijev niobat}) so okoli $\chi^{(2)}
 \sim 10^{-12}~\textrm{m/V} = 1$~pm/V.
 
 \begin{definition}
- Pokaži, da so električne poljske jakosti, pri katerih dosežemo znaten nelinearen 
- prispevek k polarizaciji 
+Pokaži, da so električne poljske jakosti, pri katerih dosežemo znaten nelinearen 
+prispevek k polarizaciji 
  $$
- \frac{P_{NL}}{P_L} \sim 10^{-5}$$ 
- okoli 1~MW/cm$^2$. 
+ \frac{P_{NL}}{P_L} \sim 10^{-6}$$ 
+okoli 1~MW/cm$^2$. 
 Take vrednosti so z navadnim svetilom 
 povsem nedosegljive, za laser pa niso nič posebnega.
 Zato je bilo mogoče nelinearne
@@ -142,16 +139,29 @@ $\omega_{1}$ in $\omega_{2}$. Zaradi nelinearne sklopitve nastajajo v snovi nova
 valovanja z različnimi kombinacijami frekvenc (glej sliko~\ref{fig:nl2}).
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/08_nl2.pdf_tex}
 \caption{Shematski prikaz nastanka valovanj pri nelinearnih optičnih pojavih drugega reda}
 \label{fig:nl2}
 \end{figure}
 
-Nastanku valov pri podvojeni frekvenci pravimo tudi SHG\index{SHG} ({\it Second harmonic generation}), 
-nastanku valov pri vsoti frekvenc SFG\index{SFG} ({\it Sum frequency generation}), 
-pri razliki frekvenc DFG\index{DFG} ({\it Difference frequency generation}) in pojavu 
-statičnega polja pri $\omega = 0$ optično usmerjanje.  
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/08_nl2_spekter.pdf_tex}
+\caption{Shematski prikaz spektra izhodne svetlobe}
+\label{fig:nl2}
+\end{figure}
+
+Nastanku valov pri podvojeni frekvenci pravimo tudi 
+SHG\index{SHG|see {Optično podvajanje frekvenc}} ({\it Second harmonic 
+generation})\index{Optično podvajanje frekvenc}, 
+nastanku valov pri vsoti frekvenc SFG\index{SFG|see {Generacija vsote frekvenc}}
+({\it Sum frequency generation})\index{Generacija vsote frekvenc}, 
+pri razliki frekvenc DFG\index{DFG|see {Generacija razlike frekvenc}} 
+({\it Difference frequency generation})\index{Generacija razlike frekvenc} in pojavu 
+statičnega polja pri $\omega = 0$ optično usmerjanje\index{Optično usmerjanje}
+({\it Optical rectification}).  
 
 Za opis nelinearnih pojavov drugega reda moramo rešiti valovno enačbo 
 \begin{equation}
@@ -163,7 +173,11 @@ Pri tem je $\mathbf{P}_{\textrm{NL}}=\epsilon_{0}\chi^{(2)}:\mathbf{E}\, \mathbf
 Te enačbe v splošnem ne znamo rešiti in se moramo zateči k približkom.
 \begin{definition}
 Iz Maxwellovih enačb~(\ref{eq:Maxwell1} do \ref{eq:Maxwell4}) izpelji 
-nelinearno valovno enačbo (\ref{8.3}).
+nelinearno valovno enačbo (\ref{8.3}). Pri tem si pomagaj z identiteto
+$$
+\nabla \times (\nabla \times \mathbf{A}) = \nabla (\nabla \cdot \mathbf{A}) 
+- \nabla^2 \mathbf{A}.
+$$
 \end{definition}
 
 Prva poenostavitev, ki jo bomo naredili, je omejitev na vzporedna vpadna žarka,
@@ -213,7 +227,7 @@ da se $A_{j}(z)$ le počasi spreminja s krajem in smo zato njen
 drugi odvod zanemarili.
 Izračunamo še drugi odvod po času 
 \begin{equation}
-\frac{\partial^2\mathbf{E}}{\partial t^2}=-\sum_{j=1}^3 \frac{\mathbf{e}_{j}}{2}
+\frac{\partial^2\mathbf{E}}{\partial t^2}=\sum_{j=1}^3 \frac{\mathbf{e}_{j}}{2}
 \left(-\omega_j^2\right) \left[A_{j}(z)\, e^{i(k_{j}z-\omega_{j}t)}+\mbox{ k. k.}\right].
 \label{8.5a}
 \end{equation}
@@ -224,9 +238,9 @@ $\omega_{3}$. Drugi odvod nelinearnega dela polarizacije po času je tako
 \frac{\partial^2\mathbf{P}_\mathrm{NL}}{\partial t^2}&=&\varepsilon_0 \frac{\partial^2}
 {\partial t^2}\sum_{j'=1}^3 \sum_{j''=1}^3 
  \left( \frac{1}{4} \chi:\mathbf{e}_{j'}\,\mathbf{e}_{j''}\right) 
- A_{j'}(z)\,A_{j''}(z) e^{i(k_{j'}+k_{j''})z-i(\omega_{j'}+\omega_{j''}t)}+ \nonumber\\
+ A_{j'}(z)\,A_{j''}(z) e^{i(k_{j'}+k_{j''})z-i(\omega_{j'}+\omega_{j''})t}+ \nonumber\\
 &+& \left( \frac{1}{4} \chi:\mathbf{e}_{j'}\,\mathbf{e}_{j''}\right)
-A_{j'}(z)\,A_{j''}^*(z) e^{i(k_{j'}-k_{j''})z-i(\omega_{j'}-\omega_{j''}t)}+ \mathrm{k. k.}
+A_{j'}(z)\,A_{j''}^*(z) e^{i(k_{j'}-k_{j''})z-i(\omega_{j'}-\omega_{j''})t}+ \mathrm{k. k.}
 \label{8.5b}
 \end{eqnarray}
 Če želimo, da je valovna enačba~(\ref{8.3}) izpolnjena ob vsakem času $t$, se morajo
@@ -237,7 +251,7 @@ ik_{3}\mathbf{e}_{3}\frac{dA_{3}}{dz}e^{ik_{3}z}=-\frac{\mu_{0}
 \varepsilon_0 \omega_{3}^{2}}{4}\chi:\mathbf{e}_{1}\mathbf{e}_{2}A_{1}\,A_{2}e^{i(k_{1}+k_{2})z}.
 \label{8.7}
 \eeq
-Množimo še obe strani skalarno z $\mathbf{e}_{1}$, upoštevajmo zvezo med $k_{3}$ in $\omega_{3}$ in 
+Množimo še obe strani skalarno z $\mathbf{e}_{3}$, upoštevajmo zvezo med $k_{3}$ in $\omega_{3}$ in 
 ravnajmo podobno še za druga dva valova. Tako dobimo sistem sklopljenih
 enačb za amplitude valovanj v optično nelinearnem sredstvu
 \boxeq{eq:nlAz}{
@@ -268,7 +282,7 @@ ustreza enačbam~(\ref{eq:nlAz}-\ref{eq:nlA3}).
 Obravnavajmo optično nelinearno sredstvo, na katerega vpadata valovanji $E_1$ in $E_2$.
 Naj bosta frekvenci vpadnih valovanj enaki $\omega_{1}=\omega_{2}=\omega$, valovanji
 pa razlikujemo zaradi možnosti dveh različnih vpadnih polarizacij. Takrat je $\omega_{3}=2\omega$
-in dobimo najpreprostejši in tudi najpomembnejši primer podvajanja frekvence\index{Podvajanje frekvenc}. 
+in dobimo najpreprostejši in tudi najpomembnejši primer podvajanja frekvence\index{Optično podvajanje frekvenc}. 
 Pogosto ga uporabljamo za pridobivanje laserskih snopov pri krajših valovnih dolžinah, na primer
 pri Nd:YAG laserju\index{Laser!Nd:YAG}, ko infrardeče izhodno valovanje (1064~nm) 
 pretvorimo v vidno svetlobo zelene barve (532~nm). 
@@ -431,7 +445,7 @@ Ujemanje faz je zato manj občutljivo na majhna odstopanja v kotu ali na tempera
 spremembe lomnih količnikov. Račun kota $\theta_m$ za ta primer je
 bolj zahteven, saj je treba rešiti enačbo četrte stopnje.\\
 
-\subsection*{Efektivna susceptibilnosti}
+\subsection*{Efektivna susceptibilnost}
 Na moč podvojenega snopa poleg faznega faktorja vpliva tudi velikost koeficientov
 tenzorja nelinearne susceptibilnosti. V optično enoosnem kristalu
 je kriterij ujemanja faz izpolnjen na stožcu okoli optične osi, pri čemer je stožec določen 
@@ -534,8 +548,8 @@ grla okoli 40~$\mu$m. Gostota svetlobnega toka v kristalu je pri
 tem $2\cdot10^{8}$~W/cm$^{2}$, kar je že blizu praga za poškodbe,
 predvsem na vstopni ali izstopni površini. Zato je pri podvajanju frekvenc
 zelo pomembna odpornost nelinearnega kristala proti poškodbam
-zaradi velike gostote svetlobnega toka. To in možnost ujemanja faz je pogosto
-odločilno, koliko je dani material zares uporaben. 
+zaradi velike gostote svetlobnega toka. To in možnost ujemanja faz sta pogosto
+odločilna kriterija pri izbiri snovi za frekvenčno podvajanje. 
 \end{definition}
 
 \section{{*}Račun podvajanja Gaussovih snopov}
@@ -551,82 +565,96 @@ E_{i}=\frac{1}{2}\sqrt{\frac{\omega_{i}}{n_{i}}}\psi_{i}(r,z)
 e^{i(k_{i}z-\omega_{i}t)}+\mbox{ k. k.},
 \label{8.18}
 \end{equation}
-kjer se amplituda $\psi_{i}$ spreminja počasi v smeri osi $z$,
+kjer se amplituda $\psi_{i}$ počasi spreminja v smeri osi $z$,
 odvisna pa je od prečne koordinate $r$. Dodatni faktor $\sqrt{\omega_{i}/n_{i}}$
-smo uvedli zgolj zaradi lepšega zapisa enačb. Vstavimo nastavek~(\ref{8.18}) v valovno
-enačbo~(\ref{8.3}) in zopet ločimo na levi in desni člene z enako frekvenco.
+smo uvedli zgolj zaradi lepšega kasnejšega zapisa enačb. Vstavimo nastavek~(\ref{8.18}) v valovno
+enačbo~(\ref{8.3}) in ločimo na levi in desni člene z enako frekvenco.
 Zanemarimo tudi druge odvode $\psi$ po $z$. Tako namesto sistema
 enačb~(\ref{eq:nlAz} do \ref{eq:nlA3}) dobimo sklopljen sistem obosnih enačb 
-% \begin{eqnarray}
-% \nabla_{\perp}^{2}\psi_{1}+2ik_{1}\psi_{1}^{\prime}  = & \frac{k_{1}}{2}\kappa\psi_{2}^{\ast}\psi_{3}e^{-i\Delta kz}\nonumber  \\
-% \nabla_{\perp}^{2}\psi_{2}+2ik_{2}\psi_{2}^{\prime}  = & \frac{k_{2}}{2}\kappa\psi_{1}^{\ast}\psi_{3}e^{-i\Delta kz}\nonumber \\
-% \nabla_{\perp}^{2}\psi_{3}+2ik_{3}\psi_{3}^{\prime}  = & \frac{k_{3}}{2}\kappa\psi_{1}\psi_{2}e^{i\Delta kz}
-% \end{eqnarray}
-s pripadajočim sistemom konjugiranih enačb. Tu je 
+\begin{eqnarray}
+\nabla_{\perp}^{2}\psi_{1}+2ik_{1}\psi_{1}^{\prime} & = & 
+\frac{k_{1}}{2}\kappa\psi_{2}^{\ast}\psi_{3}e^{-i\Delta kz}\\
+\nabla_{\perp}^{2}\psi_{2}+2ik_{2}\psi_{2}^{\prime} & = & 
+\frac{k_{2}}{2}\kappa\psi_{1}^{\ast}\psi_{3}e^{-i\Delta kz}\\
+\nabla_{\perp}^{2}\psi_{3}+2ik_{3}\psi_{3}^{\prime} & =
+& \frac{k_{3}}{2}\kappa\psi_{1}\psi_{2}e^{i\Delta kz}
+\label{SHGGauss_3}
+\end{eqnarray}
+s pripadajočim sistemom konjugiranih enačb. Pri tem je 
 \begin{equation}
 \kappa=d\sqrt{\frac{\mu_{0}}{\epsilon_{0}}\frac{\omega_{1}\omega_{2}\omega_{3}}{n_{1}n_{2}n_{3}}}.
 \label{8.20}
 \end{equation}
 S črtico smo označili odvajanje po $z$. Gornji sistem enačb je očitno
-posplošitev sistema~(\ref{8.8}) za primer, ko je valovanje odvisno
+posplošitev sistema enačb~(\ref{eq:nlAz} do \ref{eq:nlA3}) za primer, ko je valovanje odvisno
 tudi od prečne koordinate. Reševanje tega nelinearnega sistema parcialnih
-diferencialnih enačb je seveda v splošnem še precej bolj zabeljeno.
+diferencialnih enačb je seveda v splošnem zelo zapleteno.
 
-Poglejmo le najenostavnejši primer podvojevanja, $\omega_{3}=2\omega_{1}=2\omega$.
-Privzemimo, da sta oba vpadna snopa enaka in osnovne Gaussove oblike,
-$\psi_{1}=\psi_{2}$, da imamo poplno ujemanje faz, $\Delta k=0$,
+Poglejmo le najenostavnejši primer frekvenčnega podvojevanja, ko je 
+$\omega_{3}=2\omega_{1}=2\omega$.
+Vpadna snopa naj bosta enaka in Gaussove oblike~(enačba~\ref{eq:gaussov-snop}), 
+njuna amplituda pa naj bo enaka $A_1$
+\begin{equation}
+\psi_{1} = \psi_2 = A_{1}\frac{1}{1+iz/z_1}
+\exp\left(-\frac{r^{2}}{w_1^{2}(z)}+\frac{ik_1r^{2}}{2R_1(z)}\right).
+\label{8.21}
+\end{equation}
+Privzemimo še, da je izpolnjen pogoj za ujemanje faz, $\Delta k=0$,
 in da je $\psi_{3}$ dovolj majhen, da nam zmanjševanja $\psi_{1}$
-ni treba upoštevati. Vpadni snop lahko tako zapišemo 
+ni treba upoštevati. Tudi za podvojeni snop privzemimo Gaussovo 
+obliko, njegova amplituda pa naj le počasi narašča
 \begin{equation}
-\psi_{1}=A_{1}\frac{1}{1+iz/z_{1}}\exp[-\frac{r^{2}}{w_{1}^{2}(z)}-\frac{ik_{1}r^{2}}{2R_{1}(z)}]\label{8.21}
+\psi_{3}=A_{3}(z)\psi_{3H}(z,r)=A_{3}(z)\frac{1}{1+iz/z_{3}}
+\exp\left(-\frac{r^{2}}{w_{3}^{2}(z)}+\frac{ik_{3}r^{2}}{2R_{3}(z)}\right),
+\label{8.22}
 \end{equation}
- kjer za polmer snopa in krivinski radij veljajo zveze iz drugega
-poglavja: $w_{1}^{2}=w_{10}^{2}(1+z^{2}/z_{1}^{2})$ in $R_{1}=z(1+z_{1}^{2}/z^{2})$.
-Upoštevali smo tudi, da je spreminjanje amplitude in dodatno fazo
-po en. 2.23 zapisati v kompleksni obliki $1/(1+iz/z_{1})$. Spomnimo
-se še, da velja $z_{1}=\pi w_{10}^{2}/\lambda=k_{1}w_{10}^{2}/2$.
-Za podvojeni snop tudi privzemimo Gaussovo obliko s počasi naraščajočo
-amplitudo: 
+pri čemer $\psi_{3H}$ reši homogeno obosno valovno enačbo. Ko izraza za $\psi_{1}$
+in $\psi_{3}$ vstavimo v tretjo enačbo sistema sklopljenih enačb (\ref{SHGGauss_3}),
+ostane na levi le člen oblike $2ik_{3}A_{3}^{\prime}(z)\psi_{3H}$. Tako dobimo pogoj
 \begin{equation}
-\psi_{3}=A_{3}(z)\psi_{3H}(z,r)=A_{3}(z)\frac{1}{1+iz/z_{3}}\exp[-\frac{r^{2}}{w_{3}^{2}(z)}-\frac{ik_{3}r^{2}}{2R_{1}(z)}]\label{8.22}
+A_{3}^{\prime}(z)\frac{1}{1+iz/z3}\exp\left(-\frac{r^{2}}{w_{3}^{2}(z)}+\frac{ik_{3}r^{2}}
+{2R_{3}(z)}\right)=
+-\frac{i\kappa}{4}A_{1}^{2}\frac{1}{(1+iz/z_{1})^{2}}\exp\left(-\frac{2r^{2}}
+{w_{1}^{2}(z)}+\frac{ik_{1}r^{2}}{R_{1}(z)}\right).
+\label{8.23}
 \end{equation}
- $\psi_{3H}$ reši homogeno obosno valovno enačbo. Ko izraza za $\psi_{1}$
-in $\psi_{3}$ postavimo v tretjo enačbo sistema \ref{8.19}, zato
-na levi ostane le $2ik_{3}A_{3}^{\prime}(z)\psi_{3H}$. Tako dobimo
-\begin{equation}
-A_{3}^{\prime}(z)\frac{1}{1+iz/z3}\exp[-\frac{r^{2}}{w_{3}^{2}(z)}-\frac{ik_{3}r^{2}}{2R_{3}(z)}]=-\frac{i\kappa}{4}A_{1}^{2}\frac{1}{(1+iz/z_{1})^{2}}\exp[-\frac{2r^{2}}{w_{1}^{2}(z)}-\frac{ik_{1}r^{2}}{R_{1}(z)}]\;.\label{8.23}
-\end{equation}
- Vzemimo, da je $w_{30}^{2}=w_{10}^{2}/2$. Tedaj je $z_{3}=k_{3}w_{30}^{2}/2=(2k_{1})(w_{10}^{2}/2)/2=z_{1}$
+Vzemimo, da je $w_{30}^{2}=w_{10}^{2}/2$. Tedaj je 
+\beq
+z_{3}=\frac{k_{3}w_{30}^{2}}{2}=\frac{2k_{1}}{w_{10}^{2}/4}=z_{1}
+\eeq
 in je tudi $w_{3}^{2}(z)=w_{1}^{2}(z)/2$. Poleg tega je $R_{3}(z)=R_{1}(z)$
 in lahko ne obeh straneh pokrajšamo eksponentna faktorja. Ostane 
 \begin{equation}
-A_{3}^{\prime}(z)=-\frac{i\kappa}{4}A_{1}^{2}\frac{1}{1+iz/z1}\;.\label{8.24}
+A_{3}^{\prime}(z)=-\frac{i\kappa}{4}A_{1}^{2}\frac{1}{1+iz/z_1}.
+\label{8.24}
 \end{equation}
- Gornjo enčbo seveda brez težav integriramo. Naj bo grlo vpadnega
-snopa ravno na sredini nelinearnega sredstva, tako da teče integracija
-od $-L/2$ do $L/2$: 
+Gornjo enačbo seveda brez težav integriramo. Naj bo grlo vpadnega
+snopa ravno na sredini nelinearnega sredstva, tako da integriramo
+od $-L/2$ do $L/2$
 \begin{eqnarray}
-A_{3}(L) & = & -\frac{i\kappa}{4}A_{1}^{2}\int_{-L/2}^{L/2}\frac{dz}{1+iz/z1}\nonumber \\
+A_{3}(L) & = & -\frac{i\kappa}{4}A_{1}^{2}\int_{-L/2}^{L/2}\frac{dz}{1+iz/z_1}\nonumber \\
  & = & -\frac{i\kappa}{4}A_{1}^{2}z_{1}\ln\frac{1+i\frac{L}{z_{1}}}{1-i\frac{L}{2z_{1}}}\nonumber \\
  & = & \frac{\kappa}{2}A_{1}^{2}z_{1}\arctan\frac{L}{2z_{1}}\;.
 \end{eqnarray}
- Moč Gaussovega snopa je 
+ Moč Gaussovega snopa je {\color{red}{PREVERI }}
 \begin{equation}
-P_{i}=\frac{\pi}{2}w_{i0}^{2}c\epsilon_{0}E_{i0}^{2}/=\frac{\pi}{2}\left(\frac{\epsilon_{0}}{\mu_{0}}\right)^{1/2}\frac{\omega_{i}}{n}A_{i}^{2}w_{i0}^{2}\label{8.26}
+P_{i}=\frac{\pi}{2}w_{i0}^{2}c\epsilon_{0}E_{i0}^{2}=\frac{\pi}{2}\left(\frac{\epsilon_{0}}{\mu_{0}}\right)^{1/2}\frac{\omega_{i}}{n}A_{i}^{2}w_{i0}^{2},
+\label{8.26}
 \end{equation}
- tako da je izkoristek pri podvojevanju Gaussovega snopa 
+tako da je izkoristek pri frekvenčnem podvajanju Gaussovega snopa 
 \begin{equation}
-\frac{P_{2\omega}}{P_{\omega}}=\frac{1}{4\pi c}\left(\frac{\epsilon_{0}}{\mu_{0}}\right)^{3/2}\frac{\omega^{3}}{n^{2}}d^{2}P_{\omega}\left(\frac{2z_{1}}{L}\arctan^{2}\frac{L}{2z_{1}}\right)L\;.\label{8.27}
+\frac{P_{2\omega}}{P_{\omega}}=\frac{1}{4\pi c}\left(\frac{\epsilon_{0}}{\mu_{0}}\right)^{3/2}\frac{\omega^{3}}{n^{2}}d^{2}P_{\omega}\left(\frac{2z_{1}}{L}\arctan^{2}\frac{L}{2z_{1}}\right)L.
+\label{8.27}
 \end{equation}
- Funkcija $(\arctan^{2}x)/x$ ima maksimalno vrednost 0.64 pri $x=1.39$.
-Pri dani dložini nelinearnega sredstva $L$ dobimo torej največji
-izkoristek, kadar je $z_{1}=0.35L$, kar je malo manj kot smo dobili
+Funkcija $(\arctan^{2}x)/x$ zavzame največjo vrednost pri 0,64 pri $x=1,39$.
+Pri dani dolžini nelinearnega sredstva $L$ dobimo torej največji
+izkoristek, kadar je $z_{1}=0,35L$, kar je malo manj kot smo dobili
 s preprosto oceno $2z_{1}=L$. Tedaj je 
 \begin{equation}
-\frac{P_{2\omega}}{P_{\omega}}=\frac{1.28}{4\pi c}\left(\frac{\epsilon_{0}}{\mu_{0}}\right)^{3/2}\frac{\omega^{3}}{n^{2}}d^{2}P_{\omega}L\;,\label{8.28}
+\frac{P_{2\omega}}{P_{\omega}}=\frac{1,28}{4\pi c}\left(\frac{\epsilon_{0}}{\mu_{0}}\right)^{3/2}\frac{\omega^{3}}{n^{2}}d^{2}P_{\omega}L,
+\label{8.28}
 \end{equation}
- torej približno 30 \% več, kot smo dobili s preprosto oceno \ref{8.17}.
-
+ torej približno 30 \% več, kot smo dobili s preprosto oceno (enačba~\ref{8.17}).
 
 \section{Parametrično ojačevanje}
 

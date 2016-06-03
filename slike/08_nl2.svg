@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="1609.9414"
+   height="647.46045"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="08_nl2.svg"
+   sodipodi:docname="08_nl2.pdf"
    inkscape:export-filename="/home/mojca/Delo/FotonikaSkripta/MojcaNova/slike/08_nl2.png"
    inkscape:export-xdpi="599"
    inkscape:export-ydpi="599">
@@ -23,15 +23,16 @@
     <marker
        inkscape:stockid="Arrow2Mend"
        orient="auto"
-       refY="0.0"
-       refX="0.0"
+       refY="0"
+       refX="0"
        id="Arrow2Mend"
-       style="overflow:visible;">
+       style="overflow:visible">
       <path
          id="path3999"
-         style="fill-rule:evenodd;stroke-width:0.62500000;stroke-linejoin:round;"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         transform="scale(0.6) rotate(180) translate(0,0)" />
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)"
+         inkscape:connector-curvature="0" />
     </marker>
     <inkscape:path-effect
        effect="spiro"
@@ -53,8 +54,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.51402141"
-     inkscape:cx="406.11359"
-     inkscape:cy="407.58392"
+     inkscape:cx="595.91677"
+     inkscape:cy="136.2552"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -62,7 +63,11 @@
      inkscape:window-height="915"
      inkscape:window-x="568"
      inkscape:window-y="85"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -71,14 +76,15 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(189.80318,-133.57296)">
     <path
        style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="M 342.73503,351.64208 7.5660483,496.70733 232.68413,552.48506 547.21856,404.09874 z"
@@ -94,7 +100,7 @@
        y="661.64355"
        transform="matrix(-0.90466238,0.42612906,0,1,0,0)" />
     <rect
-       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:2.02910278000000011;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:2.0291028;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3099"
        width="232.21793"
        height="180.20842"
@@ -112,7 +118,7 @@
          inkscape:connector-curvature="0" />
       <path
          d="m 560.37745,613.09229 34.79457,-2.99829 -24.56303,24.82558 c 1.72108,-8.66596 -2.4386,-17.46886 -10.23154,-21.82729 z"
-         style="fill:#ff6600;fill-rule:evenodd;stroke-width:0.62500000000000000;stroke-linejoin:round"
+         style="fill:#ff6600;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
          id="path4418"
          inkscape:connector-curvature="0" />
     </g>
@@ -127,7 +133,7 @@
          inkscape:connector-curvature="0" />
       <path
          d="m 560.37745,613.09229 34.79457,-2.99829 -24.56303,24.82558 c 1.72108,-8.66596 -2.4386,-17.46886 -10.23154,-21.82729 z"
-         style="fill:#aa0000;fill-rule:evenodd;stroke-width:0.62500000000000000;stroke-linejoin:round"
+         style="fill:#aa0000;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
          id="path4418-8"
          inkscape:connector-curvature="0" />
     </g>
@@ -142,9 +148,9 @@
          sodipodi:role="line"
          id="tspan4446"
          x="-170.10887"
-         y="661.3761">ω<tspan
+         y="661.3761">$\omega_1$<tspan
    style="font-size:37.89488983px;baseline-shift:sub"
-   id="tspan4448">1</tspan></tspan></text>
+   id="tspan4448" /></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:58.29900742px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L"
@@ -158,11 +164,9 @@
          sodipodi:role="line"
          id="tspan4446-8"
          x="-74.009438"
-         y="746.18207">ω<tspan
+         y="746.18207">$\omega_2 &lt; \omega_1$<tspan
    style="font-size:37.89488983px;baseline-shift:sub"
-   id="tspan4474">2 </tspan>&lt; ω<tspan
-   style="font-size:37.89488983px;baseline-shift:sub"
-   id="tspan4500">1</tspan></tspan></text>
+   id="tspan4500" /></tspan></text>
     <g
        id="g4412-4"
        style="fill:#ff6600"
@@ -174,7 +178,7 @@
          inkscape:connector-curvature="0" />
       <path
          d="m 560.37745,613.09229 34.79457,-2.99829 -24.56303,24.82558 c 1.72108,-8.66596 -2.4386,-17.46886 -10.23154,-21.82729 z"
-         style="fill:#ff6600;fill-rule:evenodd;stroke-width:0.62500000000000000;stroke-linejoin:round"
+         style="fill:#ff6600;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
          id="path4418-0"
          inkscape:connector-curvature="0" />
     </g>
@@ -189,7 +193,7 @@
          inkscape:connector-curvature="0" />
       <path
          d="m 560.37745,613.09229 34.79457,-2.99829 -24.56303,24.82558 c 1.72108,-8.66596 -2.4386,-17.46886 -10.23154,-21.82729 z"
-         style="fill:#aa0000;fill-rule:evenodd;stroke-width:0.62500000000000000;stroke-linejoin:round"
+         style="fill:#aa0000;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
          id="path4418-8-1"
          inkscape:connector-curvature="0" />
     </g>
@@ -204,7 +208,7 @@
          inkscape:connector-curvature="0" />
       <path
          d="m 560.37745,613.09229 34.79457,-2.99829 -24.56303,24.82558 c 1.72108,-8.66596 -2.4386,-17.46886 -10.23154,-21.82729 z"
-         style="fill:#2c2ca0;fill-rule:evenodd;stroke-width:0.62500000000000000;stroke-linejoin:round"
+         style="fill:#2c2ca0;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
          id="path4418-8-1-6"
          inkscape:connector-curvature="0" />
     </g>
@@ -219,7 +223,7 @@
          inkscape:connector-curvature="0" />
       <path
          d="m 560.37745,613.09229 34.79457,-2.99829 -24.56303,24.82558 c 1.72108,-8.66596 -2.4386,-17.46886 -10.23154,-21.82729 z"
-         style="fill:#550000;fill-rule:evenodd;stroke-width:0.62500000000000000;stroke-linejoin:round"
+         style="fill:#550000;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
          id="path4418-8-1-6-7"
          inkscape:connector-curvature="0" />
     </g>
@@ -234,7 +238,7 @@
          inkscape:connector-curvature="0" />
       <path
          d="m 560.37745,613.09229 34.79457,-2.99829 -24.56303,24.82558 c 1.72108,-8.66596 -2.4386,-17.46886 -10.23154,-21.82729 z"
-         style="fill:#0055d4;fill-rule:evenodd;stroke-width:0.62500000000000000;stroke-linejoin:round"
+         style="fill:#0055d4;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
          id="path4418-8-1-6-1"
          inkscape:connector-curvature="0" />
     </g>
@@ -249,7 +253,7 @@
          inkscape:connector-curvature="0" />
       <path
          d="m 560.37745,613.09229 34.79457,-2.99829 -24.56303,24.82558 c 1.72108,-8.66596 -2.4386,-17.46886 -10.23154,-21.82729 z"
-         style="fill:#4400aa;fill-rule:evenodd;stroke-width:0.62500000000000000;stroke-linejoin:round"
+         style="fill:#4400aa;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
          id="path4418-8-1-6-1-4"
          inkscape:connector-curvature="0" />
     </g>
@@ -264,7 +268,7 @@
          inkscape:connector-curvature="0" />
       <path
          d="m 560.37745,613.09229 34.79457,-2.99829 -24.56303,24.82558 c 1.72108,-8.66596 -2.4386,-17.46886 -10.23154,-21.82729 z"
-         style="fill:#000000;fill-rule:evenodd;stroke-width:0.62500000000000000;stroke-linejoin:round"
+         style="fill:#000000;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
          id="path4418-8-1-6-1-0"
          inkscape:connector-curvature="0" />
     </g>
@@ -279,9 +283,9 @@
          sodipodi:role="line"
          id="tspan4446-2"
          x="668.97766"
-         y="172.16957">ω<tspan
+         y="172.16957">$\omega_1$<tspan
    style="font-size:37.89488983px;baseline-shift:sub"
-   id="tspan4448-5">1</tspan></tspan></text>
+   id="tspan4448-5" /></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:58.29900742px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L"
@@ -295,9 +299,9 @@
          sodipodi:role="line"
          id="tspan4446-8-6"
          x="742.09552"
-         y="200.06401">ω<tspan
+         y="200.06401">$\omega_2$<tspan
    style="font-size:37.89488983px;baseline-shift:sub"
-   id="tspan4474-1">2</tspan></tspan></text>
+   id="tspan4474-1" /></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:58.29900742px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L"
@@ -311,11 +315,7 @@
          sodipodi:role="line"
          id="tspan4446-8-6-5"
          x="822.23993"
-         y="217.28864">ω<tspan
-   style="font-size:65.00091553%;baseline-shift:sub"
-   id="tspan4754">1</tspan> + ω<tspan
-   style="font-size:37.89488983px;baseline-shift:sub"
-   id="tspan4474-1-0">2 </tspan></tspan></text>
+         y="217.28864">$\omega_1 + \omega_2$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:58.29900742px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L"
@@ -329,11 +329,7 @@
          sodipodi:role="line"
          id="tspan4446-8-6-5-0"
          x="897.60083"
-         y="266.19772">ω<tspan
-   style="font-size:37.89488983px;baseline-shift:sub"
-   id="tspan4754-7">1</tspan> - ω<tspan
-   style="font-size:37.89488983px;baseline-shift:sub"
-   id="tspan4474-1-0-7">2 </tspan></tspan></text>
+         y="266.19772">$\omega_1 - \omega_2$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:58.29900742px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L"
@@ -346,10 +342,10 @@
          id="tspan4446-2-4"
          x="900.72827"
          y="325.97229"><tspan
-   style="font-size:48px"
-   id="tspan4857">2</tspan>ω<tspan
-   style="font-size:37.89488983px;baseline-shift:sub"
-   id="tspan4448-5-6">1</tspan></tspan></text>
+           style="font-size:48px"
+           id="tspan4857">$2\omega_1$</tspan><tspan
+           style="font-size:37.89488983px;baseline-shift:sub"
+           id="tspan4448-5-6" /></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:58.29900742px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L"
@@ -362,10 +358,8 @@
          id="tspan4446-2-4-6"
          x="900.97565"
          y="379.80087"><tspan
-   style="font-size:48px"
-   id="tspan4859">2</tspan>ω<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan4831">2</tspan></tspan></text>
+           style="font-size:48px"
+           id="tspan4859">$2\omega_2$</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:58.29900742px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L"
@@ -378,6 +372,6 @@
          id="tspan4446-2-4-2"
          x="900.93842"
          y="442.85159"
-         style="font-size:48px">0</tspan></text>
+         style="font-size:48px">$0$</tspan></text>
   </g>
 </svg>
