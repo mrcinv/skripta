@@ -170,7 +170,7 @@ Za opis nelinearnih pojavov drugega reda moramo rešiti valovno enačbo
 \label{8.3}
 \end{equation}
 Pri tem je $\mathbf{P}_{\textrm{NL}}=\epsilon_{0}\chi^{(2)}:\mathbf{E}\, \mathbf{E}$.
-Te enačbe v splošnem ne znamo rešiti in se moramo zateči k približkom.
+
 \begin{definition}
 Iz Maxwellovih enačb~(\ref{eq:Maxwell1} do \ref{eq:Maxwell4}) izpelji 
 nelinearno valovno enačbo (\ref{8.3}). Pri tem si pomagaj z identiteto
@@ -180,6 +180,7 @@ $$
 $$
 \end{definition}
 
+Nehomogene valovne enačbe v splošnem ne znamo rešiti in se moramo zateči k približkom.
 Prva poenostavitev, ki jo bomo naredili, je omejitev na vzporedna vpadna žarka,
 ki se širita v smeri osi $z$. Poleg tega se bomo omejili na izračun samo enega
 nastalega valovanja in privzeli, da je neodvisno od drugih nastalih valovanj.
@@ -267,9 +268,8 @@ Z $\Delta k$ smo označili razliko valovnih vektorjev
 \Delta k = k_{3}-k_{1}-k_{2}.
 \eeq
 Čeprav je $\omega_{3}-\omega_{2}-\omega_{1}=0$, je $\Delta k$ navadno različen od nič zaradi 
-frekvenčne disperzije lomnega količnika, to je, ker so dielektrične konstante $\epsilon_{i}$
-za valovanja z različnimi frekvencami različne. Videli bomo, da je to za vrsto nelinearnih optičnih pojavov
-bistveno. Dobljeni sistem sklopljenih diferencialnih enačb opisuje več pojavov, 
+frekvenčne disperzije lomnega količnika. Videli bomo, da je to ključnega pomena 
+za vrsto nelinearnih optičnih pojavov. Dobljeni sistem sklopljenih diferencialnih enačb opisuje več pojavov, 
 odvisno od začetnih pogojev in relativnih intenzitet valovanj. Mi si bomo ogledali le nekaj
 najpomembnejših primerov.
 \begin{definition}
@@ -282,14 +282,15 @@ ustreza enačbam~(\ref{eq:nlAz}-\ref{eq:nlA3}).
 Obravnavajmo optično nelinearno sredstvo, na katerega vpadata valovanji $E_1$ in $E_2$.
 Naj bosta frekvenci vpadnih valovanj enaki $\omega_{1}=\omega_{2}=\omega$, valovanji
 pa razlikujemo zaradi možnosti dveh različnih vpadnih polarizacij. Takrat je $\omega_{3}=2\omega$
-in dobimo najpreprostejši in tudi najpomembnejši primer podvajanja frekvence\index{Optično podvajanje frekvenc}. 
+in dobimo najpreprostejši in tudi najpomembnejši optični nelinearni pojav - podvajanje 
+frekvence\index{Optično podvajanje frekvenc}. 
 Pogosto ga uporabljamo za pridobivanje laserskih snopov pri krajših valovnih dolžinah, na primer
 pri Nd:YAG laserju\index{Laser!Nd:YAG}, ko infrardeče izhodno valovanje (1064~nm) 
 pretvorimo v vidno svetlobo zelene barve (532~nm). 
 
-Zanima nas, kako se spreminja $A_{3}(z) = A_{2\omega}(z)$ pri začetnem pogoju $A_{2\omega}(0)=0$.
+Zanima nas, kako se $A_{3}(z) = A_{2\omega}(z)$ spreminja pri začetnem pogoju $A_{2\omega}(0)=0$.
 Privzemimo še, da se pretvori le manjši del vpadnega energijskega toka,
-tako da sta $A_{1}=A_{2}=A_0$ približno konstantni. Tedaj lahko
+tako da sta amplitudi $A_{1}=A_{2}=A_0$ približno konstantni. Tedaj lahko
 enačbo za $A_{3}(z)$ (enačba~\ref{eq:nlAz}) brez težav integriramo do dolžine kristala $L$ in dobimo
 \begin{equation}
 A_{2\omega}(L)=\frac{i\omega}{2}\frac{\chi_{ef} A_0^2}{c_0 n_{2\omega}}
@@ -305,8 +306,8 @@ frekvenci
 \left(\frac{\sin\left(\frac{\Delta k L}{2}\right)}{\frac{\Delta kL}{2}}\right)^2.
 \label{8.10}
 \end{equation}
-Razmerje med energijskim tokom pri podovojeni in osnovni frekvenci,
-to je, izkoristek pretvorbe, je tako
+Razmerje med energijskim tokom pri podovojeni in osnovni frekvenci oziroma
+izkoristek pretvorbe je tako
 \boxeq{8.11}{
 \frac{P_{2\omega}}{P_{\omega}}=
 \frac{\omega^2 \chi_{ef}^2}{2 S n_{2\omega} n_\omega^2c_0^3\varepsilon_0} P_\omega^2 L^2
@@ -317,20 +318,19 @@ faktor $\sin^{2}(\Delta kL/2)/(\Delta kL/2)^{2}$ (slika~\ref{fig:shg2}).
 \begin{figure}[h]
 \centering
 \includegraphics[width=8truecm]{slike/08_shg2.png}
-\caption{Izkoristek pretvorbe v frekvenčno podvojeno valovanje je sorazmeren s funkcijo $\sin(x)/x$,
+\caption{Izkoristek pretvorbe v frekvenčno podvojeno valovanje je sorazmeren s funkcijo $(\sin(x)/x)^2$,
 pri čemer je $x = \Delta k L/2$.}
 \label{fig:shg2}
 \end{figure}
-Zaradi njega je na poti, ki je daljša od $2\pi /\Delta k$, stopnja pretvorbe zelo majhna.
-
+Zaradi njega je na poti, ki je daljša od $\pi /\Delta k$, stopnja pretvorbe zelo majhna.
 
 Poglejmo primer. Faktor $\Delta k$ je različen od nič zaradi odvisnosti
 lomnih količnikov od frekvence. V KH$_{2}$PO$_{4}$ je 
-redni lomni količnik pri 1000 nm 1,496, pri 500 nm pa 1,514, tako
-da je $L_{c}=2\pi /\Delta k$ le okoli 60 valovnih dolžin. Na večjih dolžinah
-postane stopnja pretvorbe zanemarljivo majhna.\\
+redni lomni količnik pri 1000 nm 1,496, pri 500 nm pa 1,514. Vrednost, pri kateri
+pade intenziteta frekvečno podvojenega valovanja na nič
+$L_{c}=\pi /\Delta k$ je tako le okoli 30 mikrometrov. Na večjih dolžinah
+postane stopnja pretvorbe zanemarljivo majhna.
 
-\begin{remark}
 Odvisnosti stopnje pretvorbe od razlike valovnih vektorjev pri osnovni
 in podvojeni frekvenci je lahko razumeti s pomočjo slike~(\ref{fig:shg1}). Opazujmo
 prispevka k frekvenčno podvojenem valu, ki nastaneta eden na začetku kristala
@@ -347,25 +347,26 @@ v različnih delih nelinearnega sredstva. Desno: V primeru, da se faze ujemajo, 
 podvojeni frekvenci ojača.}
 \label{fig:shg1}
 \end{figure}
-\end{remark}
-
 
 Opazimo, da lahko pri končnih vrednostih $\Delta k$ dolžino kristala $L$ v izrazu~(\ref{8.11})
 pokrajšamo in izkoristek pretvorbe sinusno niha med nič in neko največjo vrednostjo z naraščajočim
-$L$. Povsem drugačno obnašanje pa dobimo, kadar se faze ujemajo in je $\Delta k = 0$. 
-Takrat je vrednost faktorja $\sin^{2}(\Delta kL/2)/(\Delta kL/2)^{2}$ največja in izkoristek 
+$L$. Temu pojavu pravimo Makerjeve oscilacije 
+
+Povsem drugačno obnašanje pa dobimo, kadar se faze ujemajo in je $\Delta k = 0$. 
+Takrat je vrednost faktorja $\sin(\Delta kL/2)/(\Delta kL/2)$ največja in izkoristek 
 pretvorbe narašča sorazmerno s kvadratom dolžine. Za uporabno pretvorbo v frekvenčno 
 podvojeno valovanje je torej treba doseči fazno ujemanje valovnih vektorjev pri 
 osnovni in podvojeni frekvenci. 
 \begin{definition}
 Pokazali smo, da intenziteta frekvenčno podvojenega valovanja narašča sorazmerno s
-kvadratom debeline kristala. Vendar velja ta odvisnost le, če je intenziteta valovanja
-pri podvojeni frekvenci bistveno manjša od intenzitete vpadnega valovanja, oziroma $A_3 \ll A_1, A_2$.
-Pokaži, da sicer narašča kot
+kvadratom debeline kristala. Takšna odvisnost velja le, če je intenziteta valovanja
+pri podvojeni frekvenci bistveno manjša od intenzitete vpadnega valovanja, 
+oziroma $A_3 \ll A_1, A_2$. Pokaži, da v nasprotnem primeru amplituda frekvenčno
+podvojenega valovanja $A_3$ narašča kot
 \beq
-A_3 \propto \tanh (\kappa z)
+A_3 \propto \tanh (\kappa z),
 \eeq
-in določi koeficient $\kappa$. 
+pri čemer je koeficient $\kappa = ***$. 
 \end{definition}
 
 
