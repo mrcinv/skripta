@@ -554,6 +554,7 @@ gostota toka zmanjšuje, s tem pa tudi pretvorba v podvojeni snop.
 Dolžina grla je 
 \beq
 L=2z_{0}=\frac{2n \pi w_{0}^{2}}{\lambda} = \frac{n w_0^2 \omega}{c_0}.
+\label{SHGG}
 \eeq
 Tako je presek vpadnega snopa
 \beq
@@ -593,14 +594,14 @@ $\omega_{1}$ in $\omega_{2}$ in nastajajoč snop pri frekvenci
 $\omega_{3}=\omega_{1}+\omega_{2}$.
 Podobno kot prej naj ima vsako od polj obliko 
 \beq
-\mathbf{E}_{i}  = \frac{\mathbf{e}_{i}}{2}\left[A_{i}(r,z)\, 
-e^{i(k_{i}z-\omega_{i}t)}+A_{i}^{*}(r,z)\, e^{-i(k_{i}z-\omega_{i}t)}\right],
+\mathbf{E}_{i}  = \frac{\mathbf{e}_{i}}{2}\left[\tilde{A}_{i}(r,z)\, 
+e^{i(k_{i}z-\omega_{i}t)}+\tilde{A}_{i}^{*}(r,z)\, e^{-i(k_{i}z-\omega_{i}t)}\right],
 \eeq
 pri čemer je $A(r,z)$ zdaj funkcija tako vzdolžne kot tudi prečne koordinate. Privzeli
 bomo, da se vzdolž $z$ le počasi spreminja.
 Zaradi poenostavljenega zapisa vpeljimo novo spremenljivko 
 \beq
-\psi_i = \sqrt{\frac{n_i}{\omega_i}}A_i.
+\psi_i = \sqrt{\frac{n_i}{\omega_i}}\tilde{A}_i.
 \eeq
 Tako dobimo nastavek za električno poljsko jakost
 \begin{equation}
@@ -613,9 +614,9 @@ enačbo~(\ref{8.3}) in ločimo na levi in desni člene z enako frekvenco.
 Zaradi počasnega spreminjanja vzdolž smeri $z$ lahko zanemarimo tudi druge odvode 
 $\psi$ po $z$. Tako dobimo sklopljen sistem obosnih enačb 
 \begin{eqnarray}
-\nabla_{\perp}^{2}\psi_{1}+2ik_{1}\psi_{1}^{\prime} & = & 
+\nabla_{\perp}^{2}\psi_{1}+2ik_{1}\psi_{1}^{\prime} & = & -
 \frac{k_{1}}{2}\kappa\psi_{2}^{\ast}\psi_{3}e^{-i\Delta kz}\\
-\nabla_{\perp}^{2}\psi_{2}+2ik_{2}\psi_{2}^{\prime} & = & 
+\nabla_{\perp}^{2}\psi_{2}+2ik_{2}\psi_{2}^{\prime} & = & -
 \frac{k_{2}}{2}\kappa\psi_{1}^{\ast}\psi_{3}e^{-i\Delta kz}\\
 \nabla_{\perp}^{2}\psi_{3}+2ik_{3}\psi_{3}^{\prime} & =
 & - \frac{k_{3}}{2}\kappa\psi_{1}\psi_{2}e^{i\Delta kz}
@@ -643,66 +644,77 @@ njuna amplituda pa naj bo enaka $A_1$
 Privzemimo še, da je izpolnjen pogoj za ujemanje faz, $\Delta k=0$,
 in da je $\psi_{3}$ dovolj majhen, da nam zmanjševanja $\psi_{1}$
 ni treba upoštevati. Tudi za podvojeni snop privzemimo Gaussovo 
-obliko, njegova amplituda pa naj le počasi narašča
+obliko, njegova amplituda $A_3$ pa naj le počasi narašča
 \begin{equation}
 \psi_{3}=A_{3}(z)\psi_{3H}(z,r)=A_{3}(z)\frac{1}{1+iz/z_{3}}
 \exp\left(-\frac{r^{2}}{w_{3}^{2}(z)}+\frac{ik_{3}r^{2}}{2R_{3}(z)}\right),
 \label{8.22}
 \end{equation}
-pri čemer $\psi_{3H}$ reši homogeno obosno valovno enačbo. Ko izraza za $\psi_{1}$
+pri čemer $\psi_{3H}$ reši homogeno obosno valovno 
+enačbo~(\ref{eq:obosna-valovna-enacba}). Ko izraza za $\psi_{1}$
 in $\psi_{3}$ vstavimo v tretjo enačbo sistema sklopljenih enačb (\ref{SHGGauss_3}),
 ostane na levi le člen oblike $2ik_{3}A_{3}^{\prime}(z)\psi_{3H}$. Tako dobimo pogoj
 \begin{equation}
-A_{3}^{\prime}(z)\frac{1}{1+iz/z3}\exp\left(-\frac{r^{2}}{w_{3}^{2}(z)}+\frac{ik_{3}r^{2}}
+A_{3}^{\prime}(z)\frac{1}{1+iz/z_3}\exp\left(-\frac{r^{2}}{w_{3}^{2}(z)}+\frac{ik_{3}r^{2}}
 {2R_{3}(z)}\right)=
--\frac{i\kappa}{4}A_{1}^{2}\frac{1}{(1+iz/z_{1})^{2}}\exp\left(-\frac{2r^{2}}
+\frac{i\kappa}{4}A_{1}^{2}\frac{1}{(1+iz/z_{1})^{2}}\exp\left(-\frac{2r^{2}}
 {w_{1}^{2}(z)}+\frac{ik_{1}r^{2}}{R_{1}(z)}\right).
 \label{8.23}
 \end{equation}
-Vzemimo, da je $w_{30}^{2}=w_{10}^{2}/2$. Tedaj je 
+Poiščimo rešitev te enačbe v obliki, za katero velja $w_{30}^{2}=w_{10}^{2}/2$. Tedaj je 
 \beq
-z_{3}=\frac{k_{3}w_{30}^{2}}{2}=\frac{2k_{1}}{w_{10}^{2}/4}=z_{1}
+z_{3}=\frac{k_{3}w_{30}^{2}}{2}=\frac{2k_{1}w_{10}^{2}}{4}=z_{1}
 \eeq
 in je tudi $w_{3}^{2}(z)=w_{1}^{2}(z)/2$. Poleg tega je $R_{3}(z)=R_{1}(z)$
-in lahko ne obeh straneh pokrajšamo eksponentna faktorja. Ostane 
+in lahko na obeh straneh pokrajšamo eksponentna faktorja. Ostane 
 \begin{equation}
-A_{3}^{\prime}(z)=-\frac{i\kappa}{4}A_{1}^{2}\frac{1}{1+iz/z_1}.
+A_{3}^{\prime}(z)=\frac{i\kappa}{4}A_{1}^{2}\frac{1}{1+iz/z_1}.
 \label{8.24}
 \end{equation}
 Gornjo enačbo seveda brez težav integriramo. Naj bo grlo vpadnega
 snopa ravno na sredini nelinearnega sredstva, tako da integriramo
 od $-L/2$ do $L/2$
 \begin{eqnarray}
-A_{3}(L) & = & -\frac{i\kappa}{4}A_{1}^{2}\int_{-L/2}^{L/2}\frac{dz}{1+iz/z_1}\nonumber \\
- & = & -\frac{i\kappa}{4}A_{1}^{2}z_{1}\ln\frac{1+i\frac{L}{z_{1}}}{1-i\frac{L}{2z_{1}}}\nonumber \\
+A_{3}(L) & = & \frac{i\kappa}{4}A_{1}^{2}\int_{-L/2}^{L/2}\frac{dz}{1+iz/z_1} = \nonumber \\
+ & = & \frac{\kappa}{4}A_{1}^{2}z_{1}\ln\frac{1+i\frac{L}{2z_{1}}}{1-i\frac{L}{2z_{1}}}= \nonumber \\
  & = & \frac{\kappa}{2}A_{1}^{2}z_{1}\arctan\frac{L}{2z_{1}}\;.
 \end{eqnarray}
- Moč Gaussovega snopa je {\color{red}{PREVERI }}
+Moč Gaussovega snopa je
 \begin{equation}
-P_{i}=\frac{\pi}{2}w_{i0}^{2}c\epsilon_{0}E_{i0}^{2}=\frac{\pi}{2}\left(\frac{\epsilon_{0}}{\mu_{0}}\right)^{1/2}\frac{\omega_{i}}{n}A_{i}^{2}w_{i0}^{2},
+P_{i}=\pi w_{i0}^{2} \frac{1}{2}c_0 n_i \epsilon_{0}E_{i0}^{2}=
+\frac{\pi}{2}w_{i0}^{2}\varepsilon_0 c_0 \omega_{i} A_{i}^{2},
 \label{8.26}
 \end{equation}
 tako da je izkoristek pri frekvenčnem podvajanju Gaussovega snopa 
 \begin{equation}
-\frac{P_{2\omega}}{P_{\omega}}=\frac{1}{4\pi c}\left(\frac{\epsilon_{0}}{\mu_{0}}\right)^{3/2}\frac{\omega^{3}}{n^{2}}d^{2}P_{\omega}\left(\frac{2z_{1}}{L}\arctan^{2}\frac{L}{2z_{1}}\right)L.
+\frac{P_{2\omega}}{P_{\omega}}=\frac{A_3^2}{A_1^2} = 
+\frac{\chi_{ef}^2 \omega^3 P_\omega z_1}{2 \pi c_0^4 \varepsilon_0 n_1 n_3} 
+\arctan^2 \left( \frac{L}{2z_1}\right)
+= \frac{\chi_{ef}^2 \omega^3 P_\omega}{2 \pi c_0^4 \varepsilon_0 n_1 n_3} \frac{L}{2}
+\arctan^2 \left( \frac{L}{2z_1}\right) \frac{1}{L/2z_1}.
 \label{8.27}
 \end{equation}
-Funkcija $(\arctan^{2}x)/x$ zavzame največjo vrednost pri 0,64 pri $x=1,39$.
+Funkcija $(\arctan^{2}x)/x$ zavzame največjo vrednost pri 0,64 pri $x =L/2z_1=1,39$.
 Pri dani dolžini nelinearnega sredstva $L$ dobimo torej največji
-izkoristek, kadar je $z_{1}=0,35L$, kar je malo manj kot smo dobili
-s preprosto oceno $2z_{1}=L$. Tedaj je 
+izkoristek, kadar je $z_{1}=0,36\,L$, kar je malo manj kot smo dobili
+s preprosto oceno $2z_{1}=L$ (enačba~\ref{SHGG}). Največji izkoristek
+frekvenčnega podvojevanja Gaussovih snopov je tako
 \begin{equation}
-\frac{P_{2\omega}}{P_{\omega}}=\frac{1,28}{4\pi c}\left(\frac{\epsilon_{0}}{\mu_{0}}\right)^{3/2}\frac{\omega^{3}}{n^{2}}d^{2}P_{\omega}L,
+\frac{P_{2\omega}}{P_{\omega}}
+= 0,32 \frac{\chi_{ef}^2 \omega^3 }{2 \pi c_0^4 \varepsilon_0 n_1 n_3} P_\omega L.
 \label{8.28}
 \end{equation}
- torej približno 30 \% več, kot smo dobili s preprosto oceno (enačba~\ref{8.17}).
+To je malo manj od preproste ocene, ki smo jo naredili v prejšnjem razdelku (enačba~\ref{8.17}),
+v obeh primerih pa izkoristek narašča linearno z dolžino kristala.
 
 \section{Optično parametrično ojačevanje}
 \index{Optično parametrično ojačevanje}
 \index{Parametrično ojačevanje | see {Optično parametrično ojačevanje}}
 
-Nelinearno mešanje treh valov, ki ga opisujejo enačbe \ref{8.8},
-lahko izkoristimo tudi za ojačevanje optičnih signalov. Imejmo vhodni
+Oglejmo si še en zelo uporaben primer mešanja treh valov, 
+ki ga opisujejo enačbe (\ref{eq:nlAz}) do (\ref{eq:nlA3}). Gre za
+optično parametrično ojačevanje, pri katerem nelinearne optične pojave
+izkoristimo za ojačevanje optičnih signalov. Imejmo vhodni
 signal pri frekvenci $\omega_{1}$ skupaj z močnim črpalnim valom
 pri frekvenci $\omega_{3}>\omega_{1}$. Zaradi nelinearnosti se ojačuje
 val pri $\omega_{1}$, obenem pa nastaja dodaten val pri razliki frekvenc
