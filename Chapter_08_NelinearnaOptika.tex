@@ -490,7 +490,7 @@ moč frekvenčno podvojenega valovanja največja.
 \begin{figure}[h]
 \centering
 \def\svgwidth{70truemm} 
-%\input{slike/08_chi.pdf_tex}
+\input{slike/08_chi.pdf_tex}
 \caption{K izračunu efektivne susceptibilnosti. Rdeč vektror označuje
 polarizacijo vhodnega vala, moder pa polarizacijo frekvenčno podvojenega vala.}
 \label{fig:chi}
@@ -733,12 +733,12 @@ uporabna za ojačevanje signalov v infrardečem območju.
 \label{fig:opa2}
 \end{figure}
 
-Izhajajmo iz splošnih enačb za nelinearne optične pojave drugega reda (enačbe~\ref{nlAz} do
-\ref{nlA3}). 
+Izhajajmo iz splošnih enačb za nelinearne optične pojave drugega reda (enačbe~\ref{eq:nlAz} do
+\ref{eq:nlA3}). 
 \begin{eqnarray}
-\frac{dA_{3}}{dz} &=& \frac{i\omega_{3}\chi_{ef3}}{4c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
-\frac{dA_{2}}{dz} &=&\frac{i\omega_{2}\chi_{ef2}}{4c_0 n_2} A_{1}^*\, A_{3}\, e^{i\Delta kz}\\
-\frac{dA_{1}}{dz} &=&\frac{i\omega_{1}\chi_{ef1}}{4c_0 n_1} A_{2}^*\, A_{3}\, e^{i\Delta kz}.
+\frac{dA_{3}}{dz} &=& \frac{i\omega_{3}\chi_{ef}}{4c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
+\frac{dA_{2}}{dz} &=&\frac{i\omega_{2}\chi_{ef}}{4c_0 n_2} A_{1}^*\, A_{3}\, e^{i\Delta kz}\\
+\frac{dA_{1}}{dz} &=&\frac{i\omega_{1}\chi_{ef}}{4c_0 n_1} A_{2}^*\, A_{3}\, e^{i\Delta kz}.
 \label{eq:opaA}
 \end{eqnarray}
 Privzemimo, da je črpalni val vselej dosti močnejši od ostalih dveh,
@@ -747,54 +747,67 @@ Poskrbimo še, da je izpolnjen pogoj za ujemanje faz, $\Delta k=0$,
 začetna pogoja pa zapišemo kot $A_{1}(z=0)=A_{10}$ in $A_{2}(z=0)=0$. Ko vse to upoštevamo,
 dobimo dve sklopljeni enačbi
 \begin{eqnarray}
-\frac{dA_{1}}{dz} &=& \frac{i\omega_{1}\chi_{ef}}{4c_0 n_1} A_{2}^*\, A_{30} \qquad \mathrm{in}\\
-\frac{dA_{2}^*}{dz} &=& -\frac{i\omega_{2}\chi_{ef}}{4c_0 n_2} A_{1}\, A_{30}^*.\\
+\frac{dA_{1}}{dz} &=& \frac{i\omega_{1}\chi_{ef}}{4c_0 n_1} A_{2}^*\, A_{30}\label{eq:opaA1} \qquad \mathrm{in} \\
+\frac{dA_{2}^*}{dz} &=& -\frac{i\omega_{2}\chi_{ef}}{4c_0 n_2} A_{1}\, A_{30}^*.
 \label{eq:opaA2}
 \end{eqnarray}
 Enačbi lahko rešimo, tako da prvo odvajamo po $z$ in vanjo vstavimo drugo enačbo.
 Dobimo
 \beq
-\frac{\partial^2 A_1}{\partial z^2} = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
+\frac{d^2 A_1}{d z^2} = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
 {16 c_0^2 n_1 n_2} A_1 = \kappa^2 A_1
 \eeq
 in podobno za $A_2$
 \beq
-\frac{\partial^2 A_2}{\partial z^2} = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
+\frac{dl^2 A_2}{d z^2} = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
 {16 c_0^2 n_1 n_2} A_2 = \kappa^2 A_2.
 \eeq
 Ob upoštevanju začetnih pogojev dobimo
 \boxeq{eq:opa}{
 A_1 = A_{10} \cosh (\kappa z) \\
-A_2 = A_{20} \sinh (\kappa z),
+A_2 = A_{20} \sinh (\kappa z)\label{eq:opan},
 }
 pri čemer je
 \beq
 \kappa^2 = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
-{16 c_0^2 n_1 n_2}
-\eeq
-in
-\beq
-A_{20} = i \frac{\omega_2 n_1}{\omega_1 n_2}.
+{16 c_0^2 n_1 n_2} \quad \mathrm{in} \quad
+A_{20} = i \sqrt{\frac{\omega_2 n_1}{\omega_1 n_2}} A_{10}.
+\label{opakapa}
 \eeq
 V začetku torej oba vala naraščata približno eksponentno na račun črpalnega
 vala. Ko postane njuna intenziteta znatna in se začne $A_3$ zmanjševati, je treba to seveda
 tudi upoštevati pri izračunu. 
 
+\begin{definition}
+Pokaži, da sta izraza za amplitudi polji $A_1$ in $A_2$ (enačbi~\ref{eq:opa} in~\ref{eq:opan})
+rešitvi sklopljenih enačb~(\ref{eq:opaA1}) in (\ref{eq:opaA2}) ob vrednosti
+parametrov $A_{20}$ in $\kappa$, kot sta zapisana v enačbah~(\ref{opakapa}).
+\end{definition}
+
 Privzeli smo, da je $\Delta k=k_{3}-k_{1}-k_{2}=0$. Ta pogoj lahko
-izpolnimo na enak način kot pri podvajanju frekvence, to je tako,
-da v dvolomnem kristalu izberemo ustrezno smer glede na optično os
-in ustrezne polarizacije, tako da velja $\omega_{3}n_{3}=\omega_{1}n_{1}+\omega_{2}n_{2}$,
-kjer so $n_{i}$ lomni količniki za odgovarjajoče valove pri izbranih
-polarizacijah. Lahko na primer vzamemo izredno polarizacijo za črpalni
+izpolnimo na enak način kot pri podvajanju frekvence: v dvolomnem kristalu 
+izberemo ustrezno smer glede na optično os in ustrezne polarizacije, 
+tako da velja $\omega_{3}n_{3}=\omega_{1}n_{1}+\omega_{2}n_{2}$.
+
+Lahko na primer vzamemo izredno polarizacijo za črpalni
 val in redni polarizaciji za oba ojačevana valova, podobno kot pri
 podvajanju frekvence. Tedaj mora veljati 
 \begin{equation}
-n_{i}^{\omega_{3}}=\left[\left(\frac{cos\vartheta_{m}}{n_{r}^{\omega_{3}}}\right)^{2}
-+\left(\frac{sin\vartheta_{m}}{n_{i0}^{\omega_{3}}}\right)^{2}\right]^{-1/2}=
-\frac{\omega_{1}}{\omega_{3}}n_{r}^{\omega_{1}}+\frac{\omega_{2}}{\omega_{3}}n_{r}^{\omega_{2}}\;.\label{8.34}
+\left[\left(\frac{\cos\vartheta_{m}}{n_{o}^{\omega_{3}}}\right)^{2}
++\left(\frac{\sin\vartheta_{m}}{n_{e}^{\omega_{3}}}\right)^{2}\right]^{-1/2}=
+\frac{\omega_{1}}{\omega_{3}}n_{o}^{\omega_{1}}+\frac{\omega_{2}}{\omega_{3}}n_{o}^{\omega_{2}}.
+\label{8.34}
 \end{equation}
- Možne so seveda tudi drugačne izbire polarizacij (Naloga). (Naloga:
-Obravnavaj parametrično ojačevanja, kadar je$\Delta k\neq0$.)
+
+\begin{definition}
+Obravnavali smo optično parametrično ojačevanje, ko je bil izpolnjen kriterij za ujemanje faz. 
+Pokaži, v primeru neujemanja faz $\Delta k \neq 0$ amplituda ojačevanega
+žarka narašča kot 
+\beq
+A_1 = A_{10} \left( \cosh(\kappa z) - \frac{i \Delta k}{2 \kappa} \sinh (\kappa z) \right) e^{\frac{i \Delta k}{2}}
+\frac{P_{1}}{P_{10}} = \cosh^2 \left(1 +***    \right).
+\eeq
+\end{definition}
 
 \textit{Primer:} Naj bo nelinearno sredstvo LiNbO$_{3}$, v katerem
 je $d=5\cdot10^{-23}$~As/V in $n=2,2$. Vzemimo $\nu_{1}\simeq\nu_{2}=3\cdot10^{14}$~Hz
