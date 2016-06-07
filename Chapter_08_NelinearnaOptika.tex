@@ -198,7 +198,7 @@ e^{i(k_{2}z-\omega_{2}t)}+A_{2}^{*}(z)\, e^{-i(k_{2}z-\omega_{2}t)}\right]\nonum
 \mathbf{E}_{3} & = & \frac{\mathbf{e}_{3}}{2}\left[A_{3}(z)\, 
 e^{i(k_{3}z-\omega_{3}t)}+A_{3}^{*}(z)\, e^{-i(k_{3}z-\omega_{3}t)}\right].
 \end{eqnarray}
-Polja smo zapisali v realni obliki, to je s konjugirano-kompleksnimi
+Polja smo zapisali v realni obliki, to je s kompleksno konjugiranimi
 deli, saj valovna enačba (\ref{8.3}) ni linearna. Upoštevali smo tudi,
 da so zaradi nelinearne polarizacije amplitude funkcije kraja, za
 katere pa lahko privzamemo, da se le počasi spreminjajo. Njihova kompleksna vrednost
@@ -224,7 +224,7 @@ Izračunajmo najprej
 \frac{dA_{j}(z)}{dz}\right]\, e^{i(k_{j}z-\omega_{j}t)}+\mbox{ k. k.}
 \label{8.5}
 \end{equation}
-S k. k. smo označili konjugirano kompleksni del. Upoštevali smo,
+S k. k. smo označili kompleksno konjugirani del. Upoštevali smo,
 da se $A_{j}(z)$ le počasi spreminja s krajem in smo zato njen
 drugi odvod zanemarili.
 Izračunamo še drugi odvod po času 
@@ -257,11 +257,11 @@ Množimo še obe strani skalarno z $\mathbf{e}_{3}$, upoštevajmo zvezo med $k_{
 ravnajmo podobno še za druga dva valova. Tako dobimo sistem sklopljenih
 enačb za amplitude valovanj v optično nelinearnem sredstvu
 \boxeq{eq:nlAz}{
-\frac{dA_{3}}{dz} &= \frac{i\omega_{3}\chi_{ef3}}{4c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
-\frac{dA_{2}}{dz} &= \frac{i\omega_{2}\chi_{ef2}}{4c_0 n_2} A_{1}^*\, A_{3}\, e^{i\Delta kz}\\
-\frac{dA_{1}}{dz} &= \frac{i\omega_{1}\chi_{ef1}}{4c_0 n_1} A_{2}^*\, A_{3}\, e^{i\Delta kz}\label{eq:nlA3}.
+\frac{dA_{3}}{dz} &= \frac{i\omega_{3}\chi_{ef}}{4c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
+\frac{dA_{2}}{dz} &= \frac{i\omega_{2}\chi_{ef}}{4c_0 n_2} A_{1}^*\, A_{3}\, e^{i\Delta kz}\\
+\frac{dA_{1}}{dz} &= \frac{i\omega_{1}\chi_{ef}}{4c_0 n_1} A_{2}^*\, A_{3}\, e^{i\Delta kz}\label{eq:nlA3}.
 }
-Pri tem je $\chi_{ef3}=\mathbf{e}_{3}\cdot\chi:\,\mathbf{e}_{1}\,\mathbf{e}_{2}$ in ostali podobno.
+Pri tem je $\chi_{ef}=\mathbf{e}_{3}\cdot\chi:\,\mathbf{e}_{1}\,\mathbf{e}_{2}$.
 Ker ni nujno, da so polarizacijski vektorji vzporedni s koordinatnimi osmi, tudi $\chi_{ef}$ 
 niso čiste kartezične komponente tenzorja nelinearne susceptibilnosti. 
 Z $\Delta k$ smo označili razliko valovnih vektorjev
@@ -490,7 +490,7 @@ moč frekvenčno podvojenega valovanja največja.
 \begin{figure}[h]
 \centering
 \def\svgwidth{70truemm} 
-\input{slike/08_chi.pdf_tex}
+%\input{slike/08_chi.pdf_tex}
 \caption{K izračunu efektivne susceptibilnosti. Rdeč vektror označuje
 polarizacijo vhodnega vala, moder pa polarizacijo frekvenčno podvojenega vala.}
 \label{fig:chi}
@@ -715,43 +715,70 @@ Oglejmo si še en zelo uporaben primer mešanja treh valov,
 ki ga opisujejo enačbe (\ref{eq:nlAz}) do (\ref{eq:nlA3}). Gre za
 optično parametrično ojačevanje, pri katerem nelinearne optične pojave
 izkoristimo za ojačevanje optičnih signalov. Imejmo vhodni
-signal pri frekvenci $\omega_{1}$ skupaj z močnim črpalnim valom
-pri frekvenci $\omega_{3}>\omega_{1}$. Zaradi nelinearnosti se ojačuje
-val pri $\omega_{1}$, obenem pa nastaja dodaten val pri razliki frekvenc
-$\omega_{2}=\omega_{3}-\omega_{1}$. Temu procesu pravimo parametrično
-ojačevanje. Podoben princip se uporablja tudi v mikrovalovni tehniki,
-od koder je tudi ime.
+signal pri frekvenci $\omega_{1}$, ki ga želimo ojačati, in močen črpalni val
+pri frekvenci $\omega_{3}>\omega_{1}$. Zaradi nelinearnosti v snovi se 
+val pri $\omega_{1}$ ojačuje, val pri $\omega_{3}$ zmanjšuje, hkrati pa zaradi
+ohranitve energije nastaja dodaten val pri razliki frekvenc
+$\omega_{2}=\omega_{3}-\omega_{1}$. Proces parametričnega ojačevanja 
+si torej lahko predstavljamo kot pretvorbo enega fotona pri frekvenci 
+$\omega_{3}$ v dva fotona pri $\omega_{1}$ in $\omega_{2}$.
+Iz tega sledi, da lahko ojačujemo samo valovanja, ki imajo nižjo 
+frekvenco od črpalnega vala in so zato najbolj
+uporabna za ojačevanje signalov v infrardečem območju. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/08_opa.pdf_tex}
+\caption{Shematski prikaz nastanka valovanj pri optičnem parametričnem ojačevanju}
+\label{fig:opa2}
+\end{figure}
 
-Prepišimo najprej enčbe \ref{8.8} v nekoliko prikladnejšo obliko,
-kot smo napravili že pri vpeljavi sistema \ref{8.17}. Naj bo 
-\begin{equation}
-A_{i}(z)=\sqrt{\frac{n_{i}}{\omega_{i}}}E_{i}(z)\hskip0.5cm\mbox{in}
-\hskip0.5cm\kappa=d\sqrt{\frac{\mu_{0}}{\epsilon_{0}}}\;.\label{8.30}
-\end{equation}
- S tem dobijo enačbe \ref{8.8} obliko 
+Izhajajmo iz splošnih enačb za nelinearne optične pojave drugega reda (enačbe~\ref{nlAz} do
+\ref{nlA3}). 
 \begin{eqnarray}
-\frac{dA_{1}}{dz} & = & \frac{i\kappa}{2}A_{2}^{\ast}A_{3}e^{i\Delta kz}\nonumber \\
-\frac{dA_{2}^{\ast}}{dz} & = & \frac{-i\kappa}{2}A_{3}^{\ast}A_{1}e^{-i\Delta kz}\nonumber \\
-\frac{dA_{3}}{dz} & = & \frac{i\kappa}{2}A_{1}A_{2}e^{-i\Delta kz}
+\frac{dA_{3}}{dz} &=& \frac{i\omega_{3}\chi_{ef3}}{4c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
+\frac{dA_{2}}{dz} &=&\frac{i\omega_{2}\chi_{ef2}}{4c_0 n_2} A_{1}^*\, A_{3}\, e^{i\Delta kz}\\
+\frac{dA_{1}}{dz} &=&\frac{i\omega_{1}\chi_{ef1}}{4c_0 n_1} A_{2}^*\, A_{3}\, e^{i\Delta kz}.
+\label{eq:opaA}
 \end{eqnarray}
- Privzemimo, da je črpalni val vselej dosti močnejši od ostalih dveh,
-$A_{3}>>A_{1}$, $A_{2}$ in da smo poskrbeli za ujemanje faz, $\Delta k=0$.
-$A_{3}$ je tako približno konstanta. Označimo še $g=\kappa/2A_{3}$,
-pa imamo 
+Privzemimo, da je črpalni val vselej dosti močnejši od ostalih dveh,
+$A_{3}\gg A_{1}$, $A_{2}$ in približno konstanten $A_3 = A_{30}$.
+Poskrbimo še, da je izpolnjen pogoj za ujemanje faz, $\Delta k=0$, 
+začetna pogoja pa zapišemo kot $A_{1}(z=0)=A_{10}$ in $A_{2}(z=0)=0$. Ko vse to upoštevamo,
+dobimo dve sklopljeni enačbi
 \begin{eqnarray}
-\frac{dA_{1}}{dz} & = & igA_{2}^{\ast}\nonumber \\
-\frac{dA_{2}^{\ast}}{dz} & = & igA_{1}
+\frac{dA_{1}}{dz} &=& \frac{i\omega_{1}\chi_{ef}}{4c_0 n_1} A_{2}^*\, A_{30} \qquad \mathrm{in}\\
+\frac{dA_{2}^*}{dz} &=& -\frac{i\omega_{2}\chi_{ef}}{4c_0 n_2} A_{1}\, A_{30}^*.\\
+\label{eq:opaA2}
 \end{eqnarray}
- Z začetnima pogojema $A_{1}(0)=A_{10}$ in $A_{2}(0)=0$ dobimo iz
-\ref{8.32} rešitev 
-\begin{eqnarray}
-A_{1}(z) & = & A_{10}chgz\nonumber \\
-A_{2}(z) & = & iA_{10}shgz
-\end{eqnarray}
- Pri $z>1/g$ oba vala rasteta približno eksponentno na račun črpalnega
-vala. Proces parametričnega ojačevanja si lahko predstavljamo kot
-pretvorbo enega fotona pri frekvenci $\omega_{3}$ v fotona pri $\omega_{1}$
-in $\omega_{2}$.
+Enačbi lahko rešimo, tako da prvo odvajamo po $z$ in vanjo vstavimo drugo enačbo.
+Dobimo
+\beq
+\frac{\partial^2 A_1}{\partial z^2} = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
+{16 c_0^2 n_1 n_2} A_1 = \kappa^2 A_1
+\eeq
+in podobno za $A_2$
+\beq
+\frac{\partial^2 A_2}{\partial z^2} = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
+{16 c_0^2 n_1 n_2} A_2 = \kappa^2 A_2.
+\eeq
+Ob upoštevanju začetnih pogojev dobimo
+\boxeq{eq:opa}{
+A_1 = A_{10} \cosh (\kappa z) \\
+A_2 = A_{20} \sinh (\kappa z),
+}
+pri čemer je
+\beq
+\kappa^2 = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
+{16 c_0^2 n_1 n_2}
+\eeq
+in
+\beq
+A_{20} = i \frac{\omega_2 n_1}{\omega_1 n_2}.
+\eeq
+V začetku torej oba vala naraščata približno eksponentno na račun črpalnega
+vala. Ko postane njuna intenziteta znatna in se začne $A_3$ zmanjševati, je treba to seveda
+tudi upoštevati pri izračunu. 
 
 Privzeli smo, da je $\Delta k=k_{3}-k_{1}-k_{2}=0$. Ta pogoj lahko
 izpolnimo na enak način kot pri podvajanju frekvence, to je tako,
@@ -815,7 +842,7 @@ le komponento
 \begin{equation}
 P_{1}^{NL}=\epsilon_{0}\chi_{1111}^{(3)}E^{3}\label{8.70}
 \end{equation}
- Polje spet zapišimo kot vsoto dveh konjugirano-kompleksnih členov:
+ Polje spet zapišimo kot vsoto dveh kompleksno konjugiranih členov:
 \begin{equation}
 E=\frac{1}{2}(E_{1}e^{i(kz-\omega t)}+E_{1}^{*}e^{-i(kz-\omega t)})\label{8.71}
 \end{equation}
@@ -1138,7 +1165,7 @@ E_{3}=\mathrm{Re}\left[\psi\left(r\right)\, e^{i\left(kz-\omega t\right)}\right]
 E_{4}=\mathrm{Re}\left[\psi^{*}\left(r\right)\, e^{i\left(-kz-\omega t\right)}\right]\label{8.98}
 \end{equation}
  Zaradi nasprotnega predznaka $k$ potuje v obratni smeri od signalnega
-vala; poleg tega je še amplituda konjugirano kompleksna. To seveda
+vala; poleg tega je še amplituda kompleksno konjugirana. To seveda
 ne pliva na obliko valovnih front, te so popolnoma enake kot pri signalnem
 valu. Zaradi lastnosti, da lahko novi val iz signalnega dobimo tako,
 da krajevni del kompleksno konjugiramo, nastalemu valu pravimo fazno
@@ -1154,13 +1181,13 @@ in dobimo enake gladke valoven ploskeve Gaussovega snopa, kot smo
 jih imeli na začetku. To lastnost popravljanja valovne fronte je mogoče
 koristni uporabiti, na primer namesto enega zrcala v laserskem resonatorju.
 
-Poglejmo podrobneje, kako v nelinearnem sredstvu nastane fazano konjugiran
+Poglejmo podrobneje, kako v nelinearnem sredstvu nastane fazno konjugiran
 val. Kot kaže slika \ref{sl8.31}, je celotno polje v nelienarnem
 kristalu vsota štirih valov, dveh črpalnih, signalnega in odbitega:
 \begin{equation}
 E=\frac{1}{2}E_{1}e^{i{\bf k}_{1}\cdot{\bf r}}+\frac{1}{2}E_{2}e^{-i{\bf k}_{1}\cdot{\bf r}}+\frac{1}{2}E_{3}\left(z\right)e^{ikz}+\frac{1}{2}E_{4}\left(z\right)e^{-ikz}+{\rm k.k.}\label{8.99}
 \end{equation}
- S k.k. smo spet označili konjugirano kompleksne člene. Ker so vsa
+ S k.k. smo spet označili kompleksno konjugirane člene. Ker so vsa
 polje pri isti frekvenci, nam časovenga faktorja ni treba pisati.
 Zaradi enostavnosti zapisa nelinearne polarizacije vzemimo, da so
 vse polarizacije enake. Privzeli smo še, da sta črpalna vala $E_{1}$
