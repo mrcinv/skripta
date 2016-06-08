@@ -352,11 +352,22 @@ pri podvojeni frekvenci bistveno manjša od intenzitete vpadnega valovanja,
 oziroma $A_3 \ll A_1, A_2$. Pokaži, da v nasprotnem primeru intenziteta frekvenčno
 podvojenega valovanja $j_{2\omega}(L)$ narašča kot
 \beq
-j_{2\omega} (L) = j_0 \tanh^2 \left(\chi_{ef}\omega \sqrt{\frac{j_0}{2 n_3 n_1^2 c_0^3 \varepsilon_0}} L\right),
+j_{2\omega} (L) = j_0 \tanh^2 \left(\chi_{ef}\omega \sqrt{\frac{j_0}
+{2 n_3 n_1^2 c_0^3 \varepsilon_0}} L\right),
 \eeq
 pri čemer je $j_0$ vpadna intenziteta valovanja pri osnovni frekvenci. Namig: upoštevaj
-ohranitev energije. 
+ohranitev energije.
 \end{definition}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8truecm]{slike/08_shg_depletion.png}
+\caption{Izkoristek pretvorbe v frekvenčno podvojeno valovanje. Če privzamemo, da se
+intenziteta osnovnega žarka ne zmanjšuje, dobimo parabolično odvisnost (rdeča krivulja), ki 
+je dober približek le za majhne intenzitete. Bolj natančen izračun pokaže, da je izkoristek 
+pretvorbe sorazmeren s $\tanh^2(\kappa L)$. Izračun je bil narejen za $\kappa = 0,35$~/cm.}
+\label{fig:shg2dep}
+\end{figure}
 
 Povsem drugačno obnašanje dobimo v primeru, kadar pogoj ujemanja faz ni izpolnjen in 
  $\Delta k \neq 0$. Takrat dolžino kristala $L$ v izrazu~(\ref{8.11})
@@ -722,9 +733,8 @@ ohranitve energije nastaja dodaten val pri razliki frekvenc
 $\omega_{2}=\omega_{3}-\omega_{1}$. Proces parametričnega ojačevanja 
 si torej lahko predstavljamo kot pretvorbo enega fotona pri frekvenci 
 $\omega_{3}$ v dva fotona pri $\omega_{1}$ in $\omega_{2}$.
-Iz tega sledi, da lahko ojačujemo samo valovanja, ki imajo nižjo 
-frekvenco od črpalnega vala in so zato najbolj
-uporabna za ojačevanje signalov v infrardečem območju. 
+Parametrično ojačevanje pogosto uporabljamo za ojačevanje šibkih signalov 
+v infrardečem območju.
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
@@ -759,15 +769,15 @@ Dobimo
 \eeq
 in podobno za $A_2$
 \beq
-\frac{dl^2 A_2}{d z^2} = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
+\frac{d^2 A_2}{d z^2} = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
 {16 c_0^2 n_1 n_2} A_2 = \kappa^2 A_2.
 \eeq
 Ob upoštevanju začetnih pogojev dobimo
 \boxeq{eq:opa}{
-A_1 = A_{10} \cosh (\kappa z) \\
-A_2 = A_{20} \sinh (\kappa z)\label{eq:opan},
+A_1 = A_{10} \cosh (\kappa L) \\
+A_2 = A_{20} \sinh (\kappa L)\label{eq:opan},
 }
-pri čemer je
+pri čemer je $L$ dolžina nelinearnega sredstva, 
 \beq
 \kappa^2 = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
 {16 c_0^2 n_1 n_2} \quad \mathrm{in} \quad
@@ -784,8 +794,18 @@ rešitvi sklopljenih enačb~(\ref{eq:opaA1}) in (\ref{eq:opaA2}) ob vrednosti
 parametrov $A_{20}$ in $\kappa$, kot sta zapisana v enačbah~(\ref{opakapa}).
 \end{definition}
 
-Privzeli smo, da je $\Delta k=k_{3}-k_{1}-k_{2}=0$. Ta pogoj lahko
-izpolnimo na enak način kot pri podvajanju frekvence: v dvolomnem kristalu 
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/08_opagraf.pdf_tex}
+\caption{Normirani intenziteti ojačanega žarka in dodatnega žarka, ki nastane zaradi ohranitve
+energije. Naraščajoči funkciji sta seveda samo približek, ki velja, dokler je ojačanje majhno. Izračun
+je narejen za $\kappa = 0,35$~/cm.}
+\label{fig:opagraf}
+\end{figure}
+
+Do zdaj smo vedno privzeli, da je izpolnjen pogoj ujemanja faz in $\Delta k=k_{3}-k_{1}-k_{2}=0$. 
+Ta pogoj lahko izpolnimo na enak način kot pri podvajanju frekvence: v dvolomnem kristalu 
 izberemo ustrezno smer glede na optično os in ustrezne polarizacije, 
 tako da velja $\omega_{3}n_{3}=\omega_{1}n_{1}+\omega_{2}n_{2}$.
 
@@ -801,24 +821,39 @@ podvajanju frekvence. Tedaj mora veljati
 
 \begin{definition}
 Obravnavali smo optično parametrično ojačevanje, ko je bil izpolnjen kriterij za ujemanje faz. 
-Pokaži, v primeru neujemanja faz $\Delta k \neq 0$ amplituda ojačevanega
-žarka narašča kot 
+Pokaži, v primeru neujemanja faz $\Delta k \neq 0$ amplitudi ojačevanega in dodatnega 
+žarka naraščata kot 
 \beq
-A_1 = A_{10} \left( \cosh(\kappa z) - \frac{i \Delta k}{2 \kappa} \sinh (\kappa z) \right) e^{\frac{i \Delta k}{2}}
-\frac{P_{1}}{P_{10}} = \cosh^2 \left(1 +***    \right).
+A_1 = A_{10} \left( \cosh(\kappa z) - \frac{i \Delta kz}{2 \kappa} \sinh (\kappa z) 
+\right) e^{\frac{i \Delta kz}{2}}\\
+A_2 = A_{20} \sinh(\kappa z) e^{\frac{i \Delta k}{2}},
 \eeq
+pri čemer sta
+\beq
+\kappa^2 = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
+{16 c_0^2 n_1 n_2} - \frac{\Delta k^2}{4} \quad \mathrm{in} \quad
+A_{20} = i \sqrt{\frac{\omega_2 n_1}{\omega_1 n_2}} \sqrt{1 + \frac{\Delta k^2}{4 \kappa^2}}
+~A_{10}.
+\eeq
+Hitro uvidimo, da so gornje enačbe v limitnem primeru $\Delta k = 0$ enake prej zapisanim
+enačbam~(\ref{eq:opa}, \ref{eq:opan} in \ref{opakapa}).
 \end{definition}
 
-\textit{Primer:} Naj bo nelinearno sredstvo LiNbO$_{3}$, v katerem
-je $d=5\cdot10^{-23}$~As/V in $n=2,2$. Vzemimo $\nu_{1}\simeq\nu_{2}=3\cdot10^{14}$~Hz
-($\lambda_{1}=1\,\mu$m) in gostoto moči črpalnega vala 5~MW/cm$^{2}$.
-Tedaj dobimo $g=0,67$~cm$^{-1}$.
+Za konec še ocenimo koeficient ojačanja v nelinearnem kristalu LiNbO$_{3}$, v katerem želimo
+ojačati svetlobo z valovno dolžino $\lambda = 1~\mu$m. Črpajmo z laserjem z valovno dolžino 
+okoli 500~nm in gostoto svetlobnega toka 5~MW/cm$^{2}$. Lomni količnik snovi je približno 
+$n = 2,2$, $\chi_{eff} = 5$~pm/V. Vstavimo podatke v enačbo~(\ref{opakapa}) in dobimo vrednost
+$\kappa \sim 0,15$/cm. Faktor ojačanja vpadne intenzitete svetlobe v 1~cm dolgem kristalu je 
+tako približno $2~\%$. 
 
-Gornji primer kaže, da ojačenje ni prav veliko, kljub dokaj močnemu
-črpalnemu valu. Zato je parametrično ojačevanje zanimivo predvsem
-znotraj optičnih resonatorjev, s čemer dobimo neke vrste laser - \textit{parametrični
-oscilator}.
+\subsection*{Optični parametrični oscilator}
+Gornji izračun kaže, da optično parametrično ojačevanje pri prehodu skozi kristal ni prav veliko, 
+kljub dokaj močnemu črpalnemu valu. Zato je smiselno, da svetloba večkrat preide skozi ojačevalno 
+sredstvo. To naredimo tako, da optično ojačevalno sredstvo zapremo v optični resonator
+in signal se ob vsakem obhodu ojača. Dobimo t. i. optični parametrični oscilator. 
 
+
+\section{Optično usmerjanje in teraherčno valovanje}
 
 \section{Nelinearni pojavi 3. reda}
 
