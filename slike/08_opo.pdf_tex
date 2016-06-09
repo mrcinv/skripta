@@ -1,0 +1,63 @@
+%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file '08_opo.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1305.10908203bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.27149839)%
+    \put(0,0){\includegraphics[width=\unitlength]{08_opo.pdf}}%
+    \put(0.03589573,0.16248529){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1$}}}%
+    \put(0.03613517,0.11114695){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_2$}}}%
+    \put(-0.0015278,0.22535578){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_3$}}}%
+    \put(0.07000909,0.05399088){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R(\omega_1, \omega_2) = 1$
+}}}%
+    \put(0.46803752,0.05409567){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R(\omega_1, \omega_2) = \lesssim 1$
+}}}%
+    \put(0.06785635,0.00946833){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R(\omega_3) = 0$}}}%
+    \put(0.46480927,0.00968711){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R(\omega_3) = 0$}}}%
+  \end{picture}%
+\endgroup%
