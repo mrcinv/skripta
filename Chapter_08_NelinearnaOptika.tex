@@ -898,12 +898,37 @@ Ko smo na začetku poglavja obravnavali nelinearne optične pojave drugega reda,
 različne frekvence, pri katerih dobimo izhodni signal (slika~\ref{fig:nl2}). Opazimo, 
 da dobimo tudi valovanje pri frekvenci nič, to je statično električno polje. Iz analogije
 z elektronskimi vezji, kjer izmenično napetost z usmernikom spremenimo v enosmerno napetost, 
-pravimo pojavi optično usmerjanje, saj iz svetlobnega valovanja dobimo statično polje.
+imenujemo pojav optično usmerjanje, saj iz svetlobnega valovanja dobimo statično polje.
 Sunek svetlobe z vršno močjo sunka svetlobe nekaj MW tako lahko povzroči 
 nekaj sto $\mu$V napetosti v smeri prečno na svetlobo. 
 
-Precej zanimivejše pojave dobimo, če na nelinearen kristal posvetimo z ultrakratkimi sunki svetlobe,
-tipično krajšimi od ps. 
+Precej zanimivejše pojave dobimo, če na nelinearen kristal posvetimo z ultrakratkimi 
+sunki svetlobe, tipično okoli ps ali krajšimi. Spomnimo se, da je povsem monokromatsko valovanje
+lahko samo tako, ki ima neskončnen koherenčni čas in je časovno neomejeno (\ref{eq:spektralna-sirina-zveza}). 
+Če je valovanje časovno omejeno, je njegov spekter končno širok, pri čemer imajo krajši 
+sunki svetlobe širši spekter valovanja. Ko z ultrakratkim sunkom osvetlimo optično 
+nelinearen kristal, v kristal vstopajo vse frekvence z danega intervala $\omega \pm \Delta \omega$.
+Optično usmerjanje ni več popolno, saj se frekvence ne odštejejo povsem, ampak dobimo 
+valovanje pri frekvencah, ki so podobne širini spektra. Ocenimo jih. 
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/08_THz.pdf_tex}
+\caption{Shematski prikaz nastanka teraherčnega valovanja v optično nelinearnem sredstvu}
+\label{fig:THz}
+\end{figure}
+
+S sunkom, ki je dolg 1~ps, dobimo
+\beq
+\Delta \omega = \frac{1}{\tau} = \frac{1}{10^{-12}~\mathrm{Hz}} = 1~\mathrm{THz}.
+\eeq
+Valovanje, ki nastane pri takem kvazi optičnem usmerjanju, ima torej frekvence v teraherčnem
+področju. Dobili smo torej izvor teraherčnega valovanja.
+
+Teraherčno valovanje je elektromagnetno valovanje s frekvencami v območju od 0,3 do 3~THz oziroma
+z valovnimi dolžinami med 0,1 in 1~mm. Uporablja se za neinvazivno slikanje in preiskave tkiv in materialov.
+
 
 
 \section{Nelinearni pojavi 3. reda}
