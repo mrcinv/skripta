@@ -842,7 +842,7 @@ enačbam~(\ref{eq:opa}, \ref{eq:opan} in \ref{opakapa}).
 Za konec še ocenimo koeficient ojačanja v nelinearnem kristalu LiNbO$_{3}$, v katerem želimo
 ojačati svetlobo z valovno dolžino $\lambda = 1~\mu$m. Črpajmo z laserjem z valovno dolžino 
 okoli 500~nm in gostoto svetlobnega toka 5~MW/cm$^{2}$. Lomni količnik snovi je približno 
-$n = 2,2$, $\chi_{eff} = 5$~pm/V. Vstavimo podatke v enačbo~(\ref{opakapa}) in dobimo vrednost
+$n = 2,2$, $\chi_{ef} = 5$~pm/V. Vstavimo podatke v enačbo~(\ref{opakapa}) in dobimo vrednost
 $\kappa \sim 0,15$/cm. Faktor ojačanja vpadne intenzitete svetlobe v 1~cm dolgem kristalu je 
 tako približno $2~\%$. 
 
@@ -860,15 +860,51 @@ zapremo med resonatorja, da se signalni žarek ($\omega_1$) ob vsakem preletu oj
 \label{fig:opo}
 \end{figure}
 V optičnemu resonatorju je odbojnost zrcal za črpalni žarek ($\omega_3$) zelo majhna, 
-odbojnosti za ojačani in nastali žarek pa sta blizu ena. Kadar 
-je intenziteta črpalnega vala pri $\omega_3$ dovolj velika, da so izgube v resonatorju na obhod
-manjše od parametričnega ojačevanja, dobimo lasersko nihanje pri frekvencah $\omega_1$ in $\omega_2$. 
-Frekvencni $\omega_1$ in $\omega_2$ sta določeni s pogojem za ohranitev energije in pogojem
-za ujemanje faz $ k_3 - k_1 - k_2 = 0$, poleg tega pa morata sovpadati z dvema možnima lastnima
-frekvencama resonatorja. 
+odbojnost za ojačani žarek pa je navadno blizu ena. Kadar 
+je intenziteta črpalnega vala pri $\omega_3$ dovolj velika, da je parametrično
+ojačevanje na obhod večje od izgub v resonatorju, dobimo lasersko nihanje. Valovanje, 
+ki se v parametričnem resonatorju ojačuje, nastane spontano, prav tako dodatno valovanje, ki 
+zagotavlja ohranitev energije. Njuni frekvenci sta 
+dodatno določeni s pogojem za ujemanje faz $ k_3 - k_1 - k_2 = 0$, 
+hkrati pa mora ojačevano nihanje sovpadati z lastnim nihanjem resonatorja. 
+S sukanjem ojačevalnega kristala lahko na ta način spreminjamo
+ojačano frekvenco in dobimo nastavljiv izvor svetlobe, navadno infrardeče. 
 
+Izračunajmo prag za delovanje simetričnega optičnega parametričnega oscilatorja. Signal z močjo 
+$P_0$ se ob prehodu skozi ojačevalno sredstvo ojača (enačba~\ref{eq:opa}) in dobimo
+\beq
+P_1 = P_0 \cosh^2 (\kappa L),
+\eeq
+hkrati pa se zaradi delno prepustnih zrcal z odbojnostjo $R$ intenziteta žarka zmanjšuje. 
+Pri tem ne pozabimo, da je pogoj ujemanja faz izpolnjen le v eni smeri in se svetloba
+ojačuje le enkrat na celoten obhod. Ob preletu v drugo smer je $\Delta k \neq 0$ in žarek se ne ojačuje.
+Prag delovanja bo določen s pogojem, da je ojačanje ravno enako izgubam in dobimo pogoj
+\beq
+P_2 = R^2 P_1 = R^2 P_0 \cosh^2 (\kappa L) = P_0
+\eeq
+oziroma
+\beq
+R^2 \cosh^2 (\kappa L) =1.
+\eeq
+Iz gornjega pogoja določimo parameter $\kappa$, po enačbi~(\ref{opakapa}) pa mejno 
+amplitudo in intenziteto črpalnega žarka.
+
+Nadaljujmo še prejšnji primer ojačanja svetlobe v 1~cm dolgem kristalu LiNbO$_{3}$.
+Če je odbojnost zrcal $R=0,9$ in prečni presek žarka $10~\mu$m$^2$, dobimo za moč 
+praga $P_{\omega_3} = 5$~W.
 
 \section{Optično usmerjanje in teraherčno valovanje}
+Ko smo na začetku poglavja obravnavali nelinearne optične pojave drugega reda, smo zapisali
+različne frekvence, pri katerih dobimo izhodni signal (slika~\ref{fig:nl2}). Opazimo, 
+da dobimo tudi valovanje pri frekvenci nič, to je statično električno polje. Iz analogije
+z elektronskimi vezji, kjer izmenično napetost z usmernikom spremenimo v enosmerno napetost, 
+pravimo pojavi optično usmerjanje, saj iz svetlobnega valovanja dobimo statično polje.
+Sunek svetlobe z vršno močjo sunka svetlobe nekaj MW tako lahko povzroči 
+nekaj sto $\mu$V napetosti v smeri prečno na svetlobo. 
+
+Precej zanimivejše pojave dobimo, če na nelinearen kristal posvetimo z ultrakratkimi sunki svetlobe,
+tipično krajšimi od ps. 
+
 
 \section{Nelinearni pojavi 3. reda}
 
