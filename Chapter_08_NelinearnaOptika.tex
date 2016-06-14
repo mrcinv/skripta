@@ -887,9 +887,8 @@ oziroma
 R^2 \cosh^2 (\kappa L) =1.
 \eeq
 Iz gornjega pogoja določimo parameter $\kappa$, po enačbi~(\ref{opakapa}) pa mejno 
-amplitudo in intenziteto črpalnega žarka.
-
-Nadaljujmo še prejšnji primer ojačanja svetlobe v 1~cm dolgem kristalu LiNbO$_{3}$.
+amplitudo in intenziteto črpalnega žarka. Nadaljujmo še prejšnji primer ojačanja 
+svetlobe v 1~cm dolgem kristalu LiNbO$_{3}$.
 Če je odbojnost zrcal $R=0,9$ in prečni presek žarka $10~\mu$m$^2$, dobimo za moč 
 praga $P_{\omega_3} = 5$~W.
 
@@ -907,7 +906,7 @@ nastavljiva frekvenca delovanja v zelo širokem frekvenčnem območju.
 \end{remark}
 
 \section{Optično usmerjanje in teraherčno valovanje}
-Ko smo na začetku poglavja obravnavali nelinearne optične pojave drugega reda, smo zapisali
+Ko smo na obravnavali nelinearne optične pojave drugega reda, smo zapisali
 različne frekvence, pri katerih dobimo izhodni signal (slika~\ref{fig:nl2s}). Opazimo, 
 da dobimo tudi valovanje pri frekvenci nič, to je statično električno polje. Iz analogije
 z elektronskimi vezji, kjer izmenično napetost z usmernikom spremenimo v enosmerno napetost, 
@@ -969,7 +968,9 @@ oziroma izpisano po koordinatah
 \left(\mathbf{P}_{\mathrm{NL,3}}\right)_i= \epsilon_{0}\chi^{(3)}_{ijkl} \,E_j \,E_k\, E_l.
 \eeq
 Pri tem je $\chi^{(3)}$ tenzor četrtega ranga, tipična velikost pa je okoli 
-$10^{-24}$~m$^2$/V$^2$. 
+$10^{-22}$~m$^2$/V$^2$. V splošnem ima 81 različnih neodvisnih komponent, katerih
+število se lahko zelo zmanjša zaradi simetrije snovi. V izotropni snovi je tako 
+21 neničelnih elementov, od katerih so le trije neodvisni. 
 
 Če vsebuje vpadno polje le eno frekvenco, zaradi nelinearnosti tretjega
 reda dobimo polarizacijo pri 3$\omega$ in $\omega$. Pri dveh vpadnih
@@ -994,37 +995,62 @@ valovni vektorji, je seveda tudi pri izbiri geometrije in polarizacij
 za ujemanje faz precej več možnosti.
 
 Vrnimo se k najenostavnejšemu primeru, ko ima vpadno valovanje le eno 
-frekvenco. Takrat dobimo tudi valovanje 
+frekvenco. Takrat dobimo valovanje pri potrojeni frekvenci, pa tudi
+pri frekvenci, ki je enaka vpadni. Pojavi se torej polarizacija pri 
+vpadni frekvenci, ki spremeni obnašanje osnovnega žarka. Ti pojavi, ki 
+jih poimenujemo s predpono {\it samo}, kot na primer samozbiranje, so
+značilni za nelinearne pojave tretjega reda. 
 
-Ena bistvenih razlik od nelinearnih pojavov drugega reda je, da 
-je v nelinearni polarizaciji tretjega reda tudi komponenta pri vpadni frekvenci.
+\subsection{Optični Kerrov pojav}
+Naj valovanje vpada na nelinearno snov, katere $\chi^{(2)} = 0$.
+Polarizacija je potem enaka vsoti linearnega in nelinearnega dela (enačba~\ref{8.1})
+\beq
+\mathbf{P}=
+\epsilon_{0} \chi^{(1)}\cdot \mathbf{E}+
+\epsilon_{0}\chi^{(3)}\vdots \mathbin \mathbf{E}\mathbin \mathbf{E}\mathbin\mathbf{E}.
+\eeq
+Ker obravnavamo nelinearne pojave, moramo tudi v tem primeru zapisati realna
+električna polja. To naredimo z vsoto dveh kompleksno konjugiranih členov
+\begin{equation}
+\mathbf{E}=\frac{\mathbf{e}}{2}(Ae^{i(kz-\omega t)}+A^{*}e^{-i(kz-\omega t)}).
+\label{8.71}
+\end{equation}
+Zanimajo nas samo členi v polarizaciji, ki nihajo s frekvenco $\omega$. Te dobimo tako, da
+v izrazu za $\mathbf{E}\mathbin \mathbf{E}\mathbin\mathbf{E}$ 
+vzamemo dvakrat nekonjugirani del, enkrat pa konjugiranega. To lahko naredimo na tri
+možne načine in dobimo tri enake člene. Sledi
+\beq
+\mathbf{P}_{\mathrm{NL,3}} = 3 \frac{1}{4} A A^* \left( 
+\varepsilon_0 \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin \mathbf{e} \right) \mathbf{E}.
+\eeq
+Celotna polarizacija je
+\beq
+\mathbf{P}=
+\epsilon_{0} \chi^{(1)}\cdot \mathbf{E}+\frac{3}{4} A A^* \left( 
+\varepsilon_0 \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin \mathbf{e} \right) \mathbf{E}.
+\eeq
+Z upoštevanjem zveze med amplitudo polja in povprečno gostoto energijskega toka (enačba~\ref{eq:j})
+dobimo
+\beq
+\mathbf{P}=
+\epsilon_{0} \left( \chi^{(1)}\cdot +\frac{3}{4} \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin 
+\mathbf{e} \frac{2 \langle j \rangle}{\varepsilon_0 n_\omega c_0}\right) \mathbf{E}.
+\eeq
+Faktor v oklepaju ni nič drugega kot efektivna susceptibilnost, ki je neposredno povezana
+z lomnim količnikom snovi $\chi_{ef} = \varepsilon -1 =n^2 -1$. Gornja enačba torej opisuje pojav, 
+pri katerem vpadna svetloba vpliva na lomni količnik snovi. Ker gre za podoben učinek kot pri
+Kerrovem pojavu, 
+pri katerem se lomni količnik spremeni pod vplivom zunanjega električnega polja, 
+imenujemo opisan pojav optični Kerrov pojav\footnote{Škotski fizik John Kerr, 1824\textendash1907.}. 
 
-Nelinearne pojave pri
-eni sami frekvenci v\textquotedbl{}asih imenujejo tudi degenerirano
-mešanje štirih valov. Najpreprostejši tak učinek je odvisnost lomnega
-količnika od intenzitete vpadne svetlobe.
+Poglejmo pojav na primeru izotropne snovi, na snov pa naj vpada valovanje, ki je polarizirano
+v smeri $x$. Nelinearna polarizacija ima tako le komponento 
+\beq
+P_{x,\mathrm{NL}}=
+\epsilon_{0} \left(\chi_{11}}\cdot +\frac{3}{4} \chi_{1111}\frac{2 \langle j \rangle}
+{\varepsilon_0 n_\omega c_0}\right)E = \varepsilon_0 \chi_{ef}E = \varepsilon (\varepsilon-1) E.
+\eeq
 
-Vzemimo v smeri osi $x$ polarizirano valovanje, ki vpada na nelinearno,
-zaradi enostavnosti izotropno snov. Nelinearna polarizacija ima tudi
-le komponento 
-\begin{equation}
-P_{1}^{NL}=\epsilon_{0}\chi_{1111}^{(3)}E^{3}\label{8.70}
-\end{equation}
- Polje spet zapišimo kot vsoto dveh kompleksno konjugiranih členov:
-\begin{equation}
-E=\frac{1}{2}(E_{1}e^{i(kz-\omega t)}+E_{1}^{*}e^{-i(kz-\omega t)})\label{8.71}
-\end{equation}
- Del polarizacije pri $\omega$ dobimo tako, da v izrazu za $E^{3}$
-vzamemo dvakrat nekonjugirani del, enkrat pa konjugiranega. Taki členi
-so trije. Tako imamo 
-\begin{equation}
-P_{1}^{\omega}=\frac{3}{8}\epsilon_{0}\chi_{1111}^{\left(3\right)}|E_{1}|^{2}E_{1}\label{8.72}
-\end{equation}
- Ta del polarizacije lahko prištejemo k linearnemu delu in s tem dobimo
-lomni količnik, ki je odvisen od intenzitete: 
-\begin{equation}
-\epsilon_{0}(\epsilon-1)E_{1}+\frac{3}{8}\epsilon_{0}\chi_{1111}^{\left(3\right)}|E_{1}|^{2}=\epsilon_{0}[n(I)^{2}-1]E_{1}\label{8.73}
-\end{equation}
  Lomni količnik zapišimo v obliki 
 \begin{eqnarray}
 n(I) & = & n_{0}+n_{2}|E_{1}|^{2}\text{, }\\
