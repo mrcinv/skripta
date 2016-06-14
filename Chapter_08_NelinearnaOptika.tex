@@ -906,7 +906,6 @@ na kristal istočasno kot ojačevan žarek. Velika prednost oscilatorjev pa je z
 nastavljiva frekvenca delovanja v zelo širokem frekvenčnem območju.  
 \end{remark}
 
-
 \section{Optično usmerjanje in teraherčno valovanje}
 Ko smo na začetku poglavja obravnavali nelinearne optične pojave drugega reda, smo zapisali
 različne frekvence, pri katerih dobimo izhodni signal (slika~\ref{fig:nl2s}). Opazimo, 
@@ -954,31 +953,53 @@ elektromagnetno valovanje s frekvencami v območju od 0,3 do 3~THz oziroma z val
 med 0,1 in 1~mm, se uporablja za neinvazivno slikanje in preiskave tkiv in materialov. Kristali, ki 
 se najpogosteje uporabljajo za nastanek teraherčnega valovanja, so ZnTe, GaP, GaSe in GaAs.
 
-\section{Nelinearni pojavi 3. reda}
+\section{Nelinearni pojavi tretjega reda}
 
 Doslej smo obravnavali najnižji red nelinearnosti, katerega glavni
 učinek je mešanje treh frekvenc, na primer podvajanje frekvence ali
 parametrično ojačevanje. Ti pojavi so možni le v kristalih brez centra
 inverzije. Naslednji člen razvoja nelinearne polarizacije po električnem
-polju obstaja v vsaki snovi. V njem nastopa polje v tretji potenci.
+polju obstaja v vsaki snovi. V njem nastopa polje v tretji potenci
+\beq
+\mathbf{P}_{\mathrm{NL,3}}= \epsilon_{0}\chi^{(3)}\vdots \mathbin 
+\mathbf{E}\mathbin \mathbf{E}\mathbin\mathbf{E}
+\eeq
+oziroma izpisano po koordinatah
+\beq
+\left(\mathbf{P}_{\mathrm{NL,3}}\right)_i= \epsilon_{0}\chi^{(3)}_{ijkl} \,E_j \,E_k\, E_l.
+\eeq
+Pri tem je $\chi^{(3)}$ tenzor četrtega ranga, tipična velikost pa je okoli 
+$10^{-24}$~m$^2$/V$^2$. 
+
 Če vsebuje vpadno polje le eno frekvenco, zaradi nelinearnosti tretjega
 reda dobimo polarizacijo pri 3$\omega$ in $\omega$. Pri dveh vpadnih
 frekvencah $\omega_{1}$ in $\omega_{2}$ so možne kombinacije $2\omega_{1}\pm\omega_{2}$
 in $\omega_{1}\pm2\omega_{2}$, pri treh vpadnih frekvencah pa vse
-možne vsote in razlike frekvenc. Možnosti je torej precej več kot
-pri nelinearnosti drugega reda. Obravnava nastajanja valovanja pri
+možne vsote in razlike frekvenc, to so $\omega_1$, $\omega_2$, $\omega_3$, 
+$3\omega_1$, $3 \omega_2$, $3\omega_3$, 
+$\omega_1 + \omega_2 + \omega_3$, $\omega_1 + \omega_2 - \omega_3$, 
+$\omega_1 - \omega_2 + \omega_3$, $- \omega_1 + \omega_2 + \omega_3$, 
+$2 \omega_1\pm\omega_2$, $2 \omega_1\pm\omega_3$, $2 \omega_2\pm\omega_1$,
+$2 \omega_2\pm\omega_3$, $2 \omega_3\pm\omega_1$, $2 \omega_3\pm\omega_2$.
+Možnosti je torej precej več kot pri nelinearnosti drugega reda in računi zapletenejši.
+
+Obravnava nastajanja valovanja pri
 kombinaciji frekvenc je povsem analogna podvajanju frekvence in parametričnemu
-ojačevanju. V enačbah za nastajanje novega valovanja ali ojačevanje
+ojačevanju. V enačbah za nastanek novega valovanja ali ojačevanje
 katerega od vpadnih snopov spet nastopi fazni faktor, ki vsebuje razliko
 vseh valovnih vektorjev $\Delta{\bf k}$. Da bo nastajanje novega
 valovanja znatno, mora biti $\Delta kL\simeq0$, spet mora biti torej
-izpolnjen pogoj ujemanja faz. Ker sedaj nastopajo v splošnem štirje
+izpolnjen pogoj ujemanja faz. Ker v tem primeru nastopajo v splošnem štirje
 valovni vektorji, je seveda tudi pri izbiri geometrije in polarizacij
 za ujemanje faz precej več možnosti.
 
-Če vsebuje vapdno valovanje le eno frekvenco, je v nelinearni polarizaciji
-tudi komponenta pri tej frekvenci, kar je ena od bistvenih razlik
-med nelinearnostjo drugega in tretjega reda. Nelinearne pojave pri
+Vrnimo se k najenostavnejšemu primeru, ko ima vpadno valovanje le eno 
+frekvenco. Takrat dobimo tudi valovanje 
+
+Ena bistvenih razlik od nelinearnih pojavov drugega reda je, da 
+je v nelinearni polarizaciji tretjega reda tudi komponenta pri vpadni frekvenci.
+
+Nelinearne pojave pri
 eni sami frekvenci v\textquotedbl{}asih imenujejo tudi degenerirano
 mešanje štirih valov. Najpreprostejši tak učinek je odvisnost lomnega
 količnika od intenzitete vpadne svetlobe.
