@@ -12,6 +12,7 @@ kakšne zanimive pojave povzroči nelinearni del polarizacije, med drugim podvaj
 optično usmerjanje, samozbiranje laserkega snopa in fazno konjugacijo. 
 
 \section{Nelinarna susceptibilnost}
+
 V linearnem približku odziva snovi velja, da je polarizacija snovi $\mathbf{P}$ linearna 
 funkcija električne poljske jakosti svetlobe $\mathbf{E}$. Takrat zapišemo (enačba~\ref{eq:PM})
 \beq
@@ -280,6 +281,7 @@ ustreza enačbam~(\ref{eq:nlAz}-\ref{eq:nlA3}).
 \end{definition}
 
 \section{Optično podvajanje frekvenc}
+
 Obravnavajmo optično nelinearno sredstvo, na katerega vpadata valovanji $E_1$ in $E_2$.
 Naj bosta frekvenci vpadnih valovanj enaki $\omega_{1}=\omega_{2}=\omega$, valovanji
 pa razlikujemo zaradi možnosti dveh različnih vpadnih polarizacij. Takrat je $\omega_{3}=2\omega$
@@ -906,6 +908,7 @@ nastavljiva frekvenca delovanja v zelo širokem frekvenčnem območju.
 \end{remark}
 
 \section{Optično usmerjanje in teraherčno valovanje}
+
 Ko smo na obravnavali nelinearne optične pojave drugega reda, smo zapisali
 različne frekvence, pri katerih dobimo izhodni signal (slika~\ref{fig:nl2s}). Opazimo, 
 da dobimo tudi valovanje pri frekvenci nič, to je statično električno polje. Iz analogije
@@ -998,12 +1001,14 @@ Vrnimo se k najenostavnejšemu primeru, ko ima vpadno valovanje le eno
 frekvenco. Takrat dobimo valovanje pri potrojeni frekvenci, pa tudi
 pri frekvenci, ki je enaka vpadni. Pojavi se torej polarizacija pri 
 vpadni frekvenci, ki spremeni obnašanje osnovnega žarka. Ti pojavi, ki 
-jih poimenujemo s predpono {\it samo}, kot na primer samozbiranje, so
+jih poimenujemo s predpono {\it samo-}, kot na primer samozbiranje, so
 značilni za nelinearne pojave tretjega reda. 
 
-\subsection{Optični Kerrov pojav}
+\section{Optični Kerrov pojav}
+
 Naj valovanje vpada na nelinearno snov, katere $\chi^{(2)} = 0$.
-Polarizacija je potem enaka vsoti linearnega in nelinearnega dela (enačba~\ref{8.1})
+Polarizacija je potem enaka vsoti linearnega in nelinearnega dela tretjega reda 
+(enačba~\ref{8.1})
 \beq
 \mathbf{P}=
 \epsilon_{0} \chi^{(1)}\cdot \mathbf{E}+
@@ -1015,98 +1020,132 @@ električna polja. To naredimo z vsoto dveh kompleksno konjugiranih členov
 \mathbf{E}=\frac{\mathbf{e}}{2}(Ae^{i(kz-\omega t)}+A^{*}e^{-i(kz-\omega t)}).
 \label{8.71}
 \end{equation}
-Zanimajo nas samo členi v polarizaciji, ki nihajo s frekvenco $\omega$. Te dobimo tako, da
-v izrazu za $\mathbf{E}\mathbin \mathbf{E}\mathbin\mathbf{E}$ 
+Podobno zapišemo tudi za polarizacijo, pri čemer nas bodo zanimali samo členi,
+ki nihajo s frekvenco $\omega$
+\begin{equation}
+\mathbf{P}=\frac{1}{2}(\mathbf{P_\omega}e^{i(kz-\omega t)}+\mathbf{P_\omega}^{*}e^{-i(kz-\omega t)}).
+\label{8.71a}
+\end{equation}
+Te dobimo tako, da
+v izrazu $\mathbf{E}\mathbin \mathbf{E}\mathbin\mathbf{E}$ 
 vzamemo dvakrat nekonjugirani del, enkrat pa konjugiranega. To lahko naredimo na tri
 možne načine in dobimo tri enake člene. Sledi
 \beq
-\mathbf{P}_{\mathrm{NL,3}} = 3 \frac{1}{4} A A^* \left( 
-\varepsilon_0 \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin \mathbf{e} \right) \mathbf{E}.
+\frac{1}{2}\mathbf{P}_{\omega,\mathrm{NL}} = 3 \frac{1}{8} A A^* \left( 
+\varepsilon_0 \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin \mathbf{e} \right) \mathbf{A}.
 \eeq
 Celotna polarizacija je
 \beq
 \mathbf{P}=
-\epsilon_{0} \chi^{(1)}\cdot \mathbf{E}+\frac{3}{4} A A^* \left( 
+\epsilon_{0} \chi^{(1)}\cdot \mathbf{E}+\frac{3}{4} |A|^2 \left( 
 \varepsilon_0 \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin \mathbf{e} \right) \mathbf{E}.
 \eeq
 Z upoštevanjem zveze med amplitudo polja in povprečno gostoto energijskega toka (enačba~\ref{eq:j})
 dobimo
 \beq
 \mathbf{P}=
-\epsilon_{0} \left( \chi^{(1)}\cdot +\frac{3}{4} \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin 
-\mathbf{e} \frac{2 \langle j \rangle}{\varepsilon_0 n_\omega c_0}\right) \mathbf{E}.
+\epsilon_{0} \left( \chi^{(1)} +\frac{3}{4} \frac{2 \langle j \rangle}
+{\varepsilon_0 \tilde{n} c_0} \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin 
+\mathbf{e} \right) \mathbf{E}.
 \eeq
+Z $\tilde{n}$ smo označili lomni količnik pri frekvenci $\omega$. 
 Faktor v oklepaju ni nič drugega kot efektivna susceptibilnost, ki je neposredno povezana
 z lomnim količnikom snovi $\chi_{ef} = \varepsilon -1 =n^2 -1$. Gornja enačba torej opisuje pojav, 
-pri katerem vpadna svetloba vpliva na lomni količnik snovi. Ker gre za podoben učinek kot pri
+pri katerem vpadna svetloba vpliva na lomni količnik snovi. Gre za podoben učinek kot pri
 Kerrovem pojavu, 
 pri katerem se lomni količnik spremeni pod vplivom zunanjega električnega polja, 
-imenujemo opisan pojav optični Kerrov pojav\footnote{Škotski fizik John Kerr, 1824\textendash1907.}. 
+zato imenujemo opisan pojav optični Kerrov pojav\footnote{Škotski fizik John Kerr, 1824\textendash1907.}. 
 
-Poglejmo pojav na primeru izotropne snovi, na snov pa naj vpada valovanje, ki je polarizirano
-v smeri $x$. Nelinearna polarizacija ima tako le komponento 
+Poglejmo pojav podrobneje na primeru izotropne snovi. Na snov pa naj vpada valovanje, ki je polarizirano
+v smeri $x$, tako da ima nelinearna polarizacija le komponento 
 \beq
-P_{x,\mathrm{NL}}=
-\epsilon_{0} \left(\chi_{11}}\cdot +\frac{3}{4} \chi_{1111}\frac{2 \langle j \rangle}
-{\varepsilon_0 n_\omega c_0}\right)E = \varepsilon_0 \chi_{ef}E = \varepsilon (\varepsilon-1) E.
+P_{\mathrm{NL},x}=
+\epsilon_{0} \left(\chi_{11} +\frac{3}{4} \chi_{1111}\frac{2 \langle j \rangle}
+{\varepsilon_0 \tilde{n} c_0}\right)E = \varepsilon_0 \chi_{ef}E = \varepsilon_0 (n^2-1) E.
 \eeq
+Ko izrazimo lomni količnik, dobimo
+\beq
+n \approx \tilde{n} + \frac{3 \chi_{1111}}{4 \varepsilon_0 c_0 \tilde{n}^2 j} j.
+\eeq
+Če vpeljemo nelinearni lomni količnik
+\boxeq{eq:n2}{
+n_2 = \frac{3 \chi_{1111}}{4 \varepsilon_0 c_0 \tilde{n}^2}
+}
+zapišemo efektivni lomni količnik v snovi kot
+\boxeq{eq:nnl}{
+n= \tilde{n} + n_2 j.}
+Efektivni lomni količnik snovi je torej odvisen od intenzitete svetlobe, ki vpada nanjo. 
+Tipične vrednosti nelinearnega lomnega količnika za vidno svetlobo so $10^{-20}$~m$^2$/W.
+V močno nelinearnem sredstvu CS$_2$ je $n_2 = 2 \cdot 10^{-18}$~m$^2$/W, v nekaterih 
+drugih snoveh (npr. polprevodnikih) je lahko vrednost $n_2$ večja še za več 
+velikostnih redov, $n_2$ pa je lahko tudi negativen. 
 
- Lomni količnik zapišimo v obliki 
-\begin{eqnarray}
-n(I) & = & n_{0}+n_{2}|E_{1}|^{2}\text{, }\\
-n_{2} & = & \frac{3}{8}\chi_{1111}^{\left(3\right)}\text{ .}\label{8.74}
-\end{eqnarray}
- Pojavu, pri katerem je sprememba lomnega količnika sorazmerna s kvadratom
-električnega polja, smo imenovali Kerrov pojav. Ker je sedaj spremembo
-povzroča kar optično polje samo, govorimo tudi o optičnem Kerrovem
-pojavu. Zanimivi posledici sta samozbiranje svetlobnega snopa in širjenje
-solitonov po optičnih vlaknih, kar si bomo pogledali v naslednjih
+Zanimivi posledici lomnega količnika, odvisnega od intenzitete svetlobe, 
+sta samozbiranje svetlobnega snopa in širjenje solitonov po vodnikih, 
+kar si bomo pogledali v naslednjih
 razdelkih.
 
-Tudi splošni primer degeneriranega štirivalovnega mešanja je pomemben,
-kjer se valovanja razlikujejo po smereh valovnih vektorjev. Vodi do
-pojava \textit{fazne konjugacije. }Pri njem dobimo valovanje z enako
-valovno fronto kot eno od vpadnih valovanj, ki pa se širi v nasprotni
-smeri od prvotnega valovanja. Fazna konjugacija ima nekaj zanimivih
-uporab in jo bomo obravnavali v zadnjem razdelku poglavja.
-
+\begin{remark}
+Ničesar nismo povedali o ujemanju faz, ki je sicer nujno potrebno za učinkovite nelinearne 
+optične pojave. V tem primeru vpada na snov en sam laserki žarek in pogoj ujemanja faz
+je vedno avtomatično izpoljnjen. 
+\end{remark}
 
 \section{Samozbiranje}
 
-Poglejmo si najprej pojav \textit{samozbiranja }ali\textit{\ }samofokusacije
-(anlgeško self focusing). Osnovni Gaussov snop naj vpada na sredstvo,
-v katerem je lomni količnik odvisen od intenzitete po enačbi \ref{8.74}.
-Optična Kerrova konstanta $n_{2\text{ }}$je običajno pozitivna. Tedaj
-je lomni količnik v sredini snopa večji od nemotenega količnika na
-robu. V osi snopa se optična pod podaljša in valovna fronta začne
-v osi zaostajati glede na rob snopa. Če je zaostajanje dovolj veliko,
+Poglejmo si najprej pojav samozbiranja svetlobe. Osnovni Gaussov snop 
+(enačba~\ref{eq:gaussov-snop}) naj vpada na sredstvo,
+v katerem je lomni količnik odvisen od intenzitete po enačbi~(\ref{eq:nnl}).
+Vzemimo, da je $n_{2}>0$, tako da je lomni količnik v sredini snopa večji 
+od nemotenega količnika na robu. V osi snopa se optična pot zato podaljša in valovna fronta začne
+v osi zaostajati glede na fronte na rob snopa. Če je zaostajanje dovolj veliko,
 lahko krivinski radij valovne fronte postane negativen in snop se
-ne širi, temveč oži (Slika\ref{sl8.10}). Samozbiranje je pri dovolj
-veliki moči snopa tolikšno, da pride do katastrofične zožitve snopa
+ne širi, temveč oži (slika~\ref{fig:sf1}). Temu pojavu pravimo 
+samozbiranje. Samozbiranje je pri dovolj
+veliki moči snopa lahko tako veliko, da pride do katastrofične zožitve snopa
 in s tem do tolikšnega povečanja gostote svetlobnega toka, da nastanejo
 poškodbe v snovi.
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/08_sf1.pdf_tex}
+\caption{v Gaussovem snopu je intenziteta valovanja odvisna od prečne lege, zato
+ je tudi lomni količnik nelinearnega sredstva odvisen od nje. To vodi do 
+ samozbiranja svetlobe.}
+\label{fig:sf1}
+\end{figure}
 
-Zaradi običajnega uklona se snop širi, pojav samozbiranja pa ima nasprotni
-učinek. Zato je pri primerni moči snopa možno, da se oba pojava po
-velikosti izenačita in snop ima v snovi konstanten polmer, valovne
+\begin{definition}
+Gaussov snop svetlobe z močjo $P$ in polmerom $w$ naj pravokotno vpada na ploščico
+kristala debeline $d$. Pokaži, da je ploščica deluje na snop kot leča z goriščno razdaljo 
+\beq
+f = \frac{\pi w^4}{8 n_2 d P},
+\eeq
+pri čemer je $n_2$ nelinearni lomni količnik.
+\end{definition}
+
+Zaradi uklona se Gaussov snop navadno širi, pojav samozbiranja pa ima nasprotni
+učinek. Zato je pri določeni moči snopa možno, da se oba pojava po
+velikosti ravno izenačita in snop ima v snovi konstanten polmer, valovne
 fronte pa so ravne. Snop samemu sebi ustvarja valovni vodnik, kjer
-je v sredi lomni količnik večji kot na robu. Ocenimo, kolišna mora
-biti moč v stacionarnem stanju.
+je v sredi lomni količnik večji kot na robu, in dobimo t. i. prostorski soliton.
 
+Ocenimo, pri kateri vstopni moči svetlobe se pojavijo prostorski solitoni. 
 Vzemimo, da je na izbranem mestu valovna fronta ravna. Lahko si mislimo,
 da je tam grlo Gaussovega snopa. Brez samozbiranja bi bil na razdalji
-dolžine grla $z_{0}$ po izrazih iz drugega poglavja krivinski radij
-valovne fronte 
+dolžine grla $z_{0}$ krivinski radij valovne fronte (enačba~\ref{eq:R})
 \begin{equation}
-R(z_{0})=z_{0}[1+\left(\frac{z_{0}}{z_{0}}\right)^{2}]=2z_{0}\label{8.75}
+R(z_{0})=z_{0}\left( 1+\left(\frac{z_{0}}{z_{0}}\right)^{2}\right)=2z_{0}.
+\label{8.75}
 \end{equation}
- V bližini osi lahko Gaussovo funkcijo, ki opisuje prečno odvisnost
+V bližini osi lahko Gaussovo funkcijo, ki opisuje prečno odvisnost
 amplitude poja v snopu, razvijemo po prečni koordinati $r$ do drugega
-reda; po enačbi \ref{8.74} je odvisnost lomnega količnika približno
+reda. Po enačbi~(\ref{eq:nnl}) je odvisnost lomnega količnika približno
 \begin{equation}
-n(r)=n_{0}+E_{0}^{2}(1-2\frac{r^{2}}{w_{0}^{2}})n_{2}\text{ .}\label{8.76}
+n(r)=\tilde{n}+n_2 j_0 e^{-2r^2/R^2} = \tilde{n}+n_2 j_0 \left(1 - 2\frac{r^2}{R^2}\right).
+\label{8.76}
 \end{equation}
- Razlika med lomnim količniko na osi in pri $w_{0}$ od osi je $\Delta n=2E_{0}^{2}n_{2}$.
+Razlika med lomnim količnikom na osi in pri $w_{0}$ od osi je $\Delta n=2j_{0} n_{2}$.
 Zaradi tega je razlika optičnih poti za žarek na osi in za $w_{0}$
 od osi $\Delta nz_{0}$. Valovna fronta bi se ukrivila na krivinski
 radij $-R$. Iz preproste geometrije velja zveza 
@@ -1135,7 +1174,7 @@ po gornji formuli za kritično moč vrednost
 P_{s}=10^{4}\text{W.}
 \]
 
-
+\section{*Prostorski solitoni}
 Za podrobnejši račun moramo zapisati valovno enačbo v obosnem približku.
 Začnimo spet s krajevnim delom valovne enačbe za monokromatsko valovanje
 v skalarnem približku 
