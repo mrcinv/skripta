@@ -1124,13 +1124,33 @@ f = \frac{\pi w^4}{8 n_2 d P},
 pri čemer je $n_2$ nelinearni lomni količnik.
 \end{definition}
 
+\begin{remark}
+Eksperimentalna metoda, s katero merimo nelinearni lomni količnik, je tako imenovana
+metoda vzdolžnega premika ({\it Z-scan}). Optično nelinearno sredstvo $n_2>0$ postavimo v zožan laserski
+snop. Zaradi samofokusacije deluje vzorec kot leča, njena goriščna razdalja
+pa je odvisna od intenzitete laserja in od nelinearnega lomnega količnika. Ko vzorec 
+vzdolžno premikamo, je za lege vzorca desno od prvotnega gorišča ($z>0$), se skupna goriščna
+razdalja podaljša, snop je bolj zbran in signal na detektorju ($D$) naraste. Za lege vzorca levo
+od prvotnega gorišča ($z<0$) je ravno obratno in signal na detektorju se zmanjša. Za negativne 
+nelinearne lomne količnike je odziv ravno nasprotnega predznaka. Z zaslonko ($Z$) smo omejili 
+velikost vpadnega snopa in tako določili nelinearni lomni količnik. Če zaslonko odstanimo in merimo 
+celotno vpadno intenziteto od lege vzorca, lahko določimo tudi nelinearni absorpcijski koeficient. 
+\begin{figure}[h!]
+\raggedleft 
+\def\svgwidth{130truemm} 
+\input{slike/08_zscan.pdf_tex}
+\caption{Shema metode vzdolžnega premika}
+\label{fig:zscan}
+\end{figure}
+\end{remark}
+
 Zaradi uklona se Gaussov snop navadno širi, pojav samozbiranja pa ima nasprotni
 učinek. Zato je pri določeni moči snopa možno, da se oba pojava po
 velikosti ravno izenačita in snop ima v snovi konstanten polmer, valovne
 fronte pa so ravne. Snop samemu sebi ustvarja valovni vodnik, kjer
-je v sredi lomni količnik večji kot na robu, in dobimo t. i. prostorski soliton.
+je v sredi lomni količnik večji kot na robu, in dobimo t. i. krajevni soliton.
 
-Ocenimo, pri kateri vstopni moči svetlobe se pojavijo prostorski solitoni. 
+Ocenimo, pri kateri vstopni moči svetlobe se pojavijo krajevni solitoni. 
 Vzemimo, da je na izbranem mestu valovna fronta ravna. Lahko si mislimo,
 da je tam grlo Gaussovega snopa. Brez samozbiranja bi bil na razdalji
 dolžine grla $z_{0}$ krivinski radij valovne fronte (enačba~\ref{eq:R})
@@ -1142,46 +1162,50 @@ V bližini osi lahko Gaussovo funkcijo, ki opisuje prečno odvisnost
 amplitude poja v snopu, razvijemo po prečni koordinati $r$ do drugega
 reda. Po enačbi~(\ref{eq:nnl}) je odvisnost lomnega količnika približno
 \begin{equation}
-n(r)=\tilde{n}+n_2 j_0 e^{-2r^2/R^2} = \tilde{n}+n_2 j_0 \left(1 - 2\frac{r^2}{R^2}\right).
+n(r)=\tilde{n}+n_2 j_0 e^{-2r^2/w_0^2} = \tilde{n}+n_2 j_0 \left(1 - 2\frac{r^2}{w_0^2}\right).
 \label{8.76}
 \end{equation}
-Razlika med lomnim količnikom na osi in pri $w_{0}$ od osi je $\Delta n=2j_{0} n_{2}$.
+Razlika med lomnim količnikom na osi in pri $w_{0}$ od osi je $\Delta n= 2j_{0} n_{2}$.
 Zaradi tega je razlika optičnih poti za žarek na osi in za $w_{0}$
-od osi $\Delta nz_{0}$. Valovna fronta bi se ukrivila na krivinski
-radij $-R$. Iz preproste geometrije velja zveza 
+od osi $\Delta nz_{0} = 2 n_2 j_0 z_0$. Valovna fronta bi se na razdalji $z_0$ torej
+ukrivila na nek krivinski radij $-R$. Iz preproste geometrije velja zveza 
 \begin{equation}
-\Delta nz_{0}=R-R\sqrt{1-\frac{w_{0}^{2}}{R^{2}}}\simeq\frac{1}{2}\frac{w_{0}^{2}}{R}\label{8.77}
+\Delta nz_{0}=R-R\sqrt{1-\frac{w_{0}^{2}}{R^{2}}}\approx \frac{w_{0}^{2}}{2R}
+\label{8.77}
 \end{equation}
- Da bo valovna fronta ostala ravna, morata biti krivinska radija v
-enačbah \ref{8.75} in \ref{8.77} enaka; od tu sledi 
+Da valovna fronta ostale ravna, morata biti krivinska radija v
+enačbah (\ref{8.75}) in (\ref{8.77}) enaka. Od tu sledi 
 \begin{equation}
-\Delta n=\frac{w_{0}^{2}}{4z_{0}^{2}}\label{8.78}
+\Delta n=\frac{w_{0}^{2}}{4z_{0}^{2}}.
+\label{8.78}
 \end{equation}
- Amplitudo polja v osi izrazimo z mo\textquotedbl{}jo: $E_{0}^{2}=2P/(\pi\epsilon_{0}cw_{0}^{2})$,
-pa dobimo za moč snopa s stacionarnim polmerom 
+Moč snopa s stacionarnim polmerom je potem 
 \begin{equation}
-P_{s}=\pi\epsilon_{0}c\frac{w_{0}^{4}}{2n_{2}z_{0}^{2}}=\frac{\epsilon_{0}c\lambda^{2}}{4n_{2}}\label{8.79}
+P_{s}= \frac{1}{2}\pi w_0^2 j_0 = 
+
+\pi\epsilon_{0}c\frac{w_{0}^{4}}{2n_{2}z_{0}^{2}}=\frac{\epsilon_{0}c\lambda^{2}}{4n_{2}}
+\label{8.79}
 \end{equation}
- Zanimivo je, da kritična moč ni odvisna od začetnega polmera snopa.
+Zanimivo je, da kritična moč ni odvisna od začetnega polmera snopa.
 Pri manjši moči se snop širi, čeprav nekoliko počasneje kot v sredstvu
 s konstantnim lomnim količnikom, če pa je moč znatno večja, lahko
 pride do katastrofičnega samozbiranja in porušitve snovi.
 
-\textit{Primer. }V CS$_{2}$, ki je tekočina z razmeroma velikim optičnim
+V CS$_{2}$, ki je tekočina z razmeroma velikim optičnim
 Kerrovim pojavom, je $n_{2}=10^{-20}$~(m/V)$^{2}$. Tedaj dobimo
 po gornji formuli za kritično moč vrednost 
 \[
 P_{s}=10^{4}\text{W.}
 \]
 
-\section{*Prostorski solitoni}
-Za podrobnejši račun moramo zapisati valovno enačbo v obosnem približku.
-Začnimo spet s krajevnim delom valovne enačbe za monokromatsko valovanje
-v skalarnem približku 
+\section{*Krajevni solitoni}
+Za podrobnejšo obravnavo krajevnih solitonov moramo rešiti valovno 
+enačbo v obosnem približku. Začnimo spet s krajevnim delom valovne 
+enačbe za monokromatsko valovanje v skalarnem približku 
 \begin{equation}
 \nabla^{2}E+n^{2}\frac{\omega^{2}}{c^{2}}E=0\label{8.80}
 \end{equation}
- Kot v drugem poglavju zapišimi polje v obliki počasi spreminjajoče
+ Kot v drugem poglavju zapišimo polje v obliki počasi spreminjajoče
 se amplitude in faznega faktorja: 
 \begin{equation}
 E=\psi(r,z)e^{ik_{0}z}\label{8.81}
