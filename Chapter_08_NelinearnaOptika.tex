@@ -1181,138 +1181,172 @@ enačbah (\ref{8.75}) in (\ref{8.77}) enaka. Od tu sledi
 \end{equation}
 Moč snopa s stacionarnim polmerom je potem 
 \begin{equation}
-P_{s}= \frac{1}{2}\pi w_0^2 j_0 = 
-
-\pi\epsilon_{0}c\frac{w_{0}^{4}}{2n_{2}z_{0}^{2}}=\frac{\epsilon_{0}c\lambda^{2}}{4n_{2}}
+P_{s}= \frac{1}{2}\pi w_0^2 \,j_0 = \frac{1}{2}\pi w_0^2 \, \frac{\Delta n}{2 n_2} = 
+\frac{1}{2}\pi w_0^2 \,\frac{w_{0}^{2}}{4z_{0}^{2}}\,\frac{1}{2 n_2} = \frac{\lambda^2}{16 \pi n_2},
 \label{8.79}
 \end{equation}
-Zanimivo je, da kritična moč ni odvisna od začetnega polmera snopa.
-Pri manjši moči se snop širi, čeprav nekoliko počasneje kot v sredstvu
-s konstantnim lomnim količnikom, če pa je moč znatno večja, lahko
+pri čemer smo upoštevali zvezo med $z_0$ in $w_0$ (enačba~\ref{eq:z0}).
+Zanimivo je, da kritična moč za pojav solitonov ni odvisna od začetnega polmera snopa.
+Pri moči, ki je manjša od kritične, se vpadli Gaussov snop širi, 
+čeprav nekoliko počasneje kot v sredstvu s konstantnim lomnim količnikom, 
+če pa je moč znatno večja od kritične moči, pa lahko
 pride do katastrofičnega samozbiranja in porušitve snovi.
 
-V CS$_{2}$, ki je tekočina z razmeroma velikim optičnim
-Kerrovim pojavom, je $n_{2}=10^{-20}$~(m/V)$^{2}$. Tedaj dobimo
-po gornji formuli za kritično moč vrednost 
-\[
-P_{s}=10^{4}\text{W.}
-\]
+Poglejmo še primer. V CS$_{2}$, ki je tekočina z razmeroma velikim optičnim
+Kerrovim pojavom, je $n_{2}=2 \cdot 10^{-18}$~m$^{2}$/W. Tedaj dobimo
+po gornji formuli za kritično moč pri valovni dolžini 1~$\mu$m vrednost 
+\beq
+P_{s}=\frac{\lambda^2}{16 \pi n_2} = 10^{4}~\mathrm{W}.
+\eeq
 
 \section{*Krajevni solitoni}
 Za podrobnejšo obravnavo krajevnih solitonov moramo rešiti valovno 
-enačbo v obosnem približku. Začnimo spet s krajevnim delom valovne 
-enačbe za monokromatsko valovanje v skalarnem približku 
+enačbo v obosnem približku. Začnimo s krajevnim delom valovne 
+enačbe za monokromatsko valovanje v skalarnem približku (enačba~\ref{eq:Helmholtz})
 \begin{equation}
-\nabla^{2}E+n^{2}\frac{\omega^{2}}{c^{2}}E=0\label{8.80}
+\nabla^{2}E+n^{2}\frac{\omega^{2}}{c_0^{2}}E=0
+\label{8.80}
 \end{equation}
- Kot v drugem poglavju zapišimo polje v obliki počasi spreminjajoče
-se amplitude in faznega faktorja: 
+Polje zapišimo v obliki počasi spreminjajoče se amplitude in faznega faktorja, podobno kot 
+smo to naredili pri izpeljavi Gaussovega snopa (enačba~\ref{eq:ravni-val-nastavek})
 \begin{equation}
-E=\psi(r,z)e^{ik_{0}z}\label{8.81}
+E=\psi(\mathrm{r},z)e^{ik_{0}z}
+\label{8.81}
 \end{equation}
- kjer je $k_{0}=n_{0}\omega/c$ valovno število brez nelinearnosti.
-$\psi(r,z)$ se v smeri osi $z$ le počasi spreminja, zato drugi odvod
+ kjer je $k_{0}=\tilde{n}\omega/c_0$ valovno število brez upoštevanja nelinearnosti.
+Funkcija $\psi(\mathbf{r},z)$ naj se v smeri osi $z$ le počasi spreminja, zato drugi odvod
 po $z$ zanemarimo in dobimo 
 \begin{equation}
-\nabla_{\bot}^{2}\psi+\frac{\omega^{2}}{c^{2}}(n^{2}-n_{0}^{2})\psi+2ik_{0}\frac{\partial\psi}{\partial z}=0\label{8.82}
+\nabla_{\bot}^{2}\psi+\frac{\omega^{2}}{c_0^{2}}(n^{2}-\tilde{n}^{2})\psi+2ik_{0}
+\frac{\partial\psi}{\partial z}=0.
+\label{8.82}
 \end{equation}
- Upoštevajmo odvisnost lomnega količnika od intenzitete, pri čemer
-zanemarimo člen z $n_{2}^{2}$, ker je gotovo majhen: 
+Upoštevajmo odvisnost lomnega količnika od intenzitete, pri čemer
+zanemarimo člen z $n_{2}^{2}$, ker je gotovo majhen, in dobimo
 \begin{equation}
-\nabla_{\bot}^{2}\psi+2k_{0}^{2}\frac{n_{2}}{n_{0}}|\psi|^{2}\psi+2ik_{0}\frac{\partial\psi}{\partial z}=0\label{8.83}
+\nabla_{\bot}^{2}\psi+2k_{0}^{2}\frac{n_{2}}{\tilde{n}}j\psi+2ik_{0}\frac{\partial\psi}{\partial z}=0.
+\label{8.83}
 \end{equation}
- Preden se lotimo reševanja gornje enačbe, jo še nekoliko polepšajmo.
-Vpeljimo 
+Izrazimo še gostoto svetlobnega toka z amplitudo električne poljske jakosti in dobimo
+\beq
+\nabla_{\bot}^{2}\psi+
+k_{0}^{2} n_2 \varepsilon_0 c_0 |\psi|^2 \psi+
+2ik_{0}\frac{\partial\psi}{\partial z}=0.
+\label{8.83a}
+\eeq
+Preden se lotimo reševanja gornje enačbe, vpeljimo še
 \begin{equation}
-\kappa=2k_{0}^{2}\frac{n_{2}}{n_{0}}
+\kappa=k_{0}^{2} n_2 \varepsilon_0 c_0
 \end{equation}
  in novo spremenljivko vzdolž osi $z$
 \begin{equation}
-\zeta=\frac{z}{2k_{0}}
+\zeta=\frac{z}{2k_{0}}.
 \end{equation}
- S tem preide enačba \ref{8.83} v standardno oblikonelinearne Schrodingerjeve
-enačbe 
+ S tem preide enačba (\ref{8.83a}) v standardno obliko nelinearne Schr\"odingerjeve
+enačbe, le da namesto odvoda po času tukaj nastopa odvod po koordinati $\zeta$. Dobimo
 \begin{equation}
-i\frac{\partial\psi}{\partial\zeta}+\nabla_{\bot}^{2}\psi+\kappa\left|\psi\right|^{2}\psi=0\text{ .}\label{8.84}
+i\frac{\partial\psi}{\partial\zeta}+\nabla_{\bot}^{2}\psi+\kappa\left|\psi\right|^{2}\psi=0.
+\label{8.84}
 \end{equation}
-
-
-V treh dimenzijah je reševanje enačbe \ref{8.84} težavno in analitične
+V treh dimenzijah je reševanje enačbe (\ref{8.84}) težavno in analitične
 rešitve niso znane. V dveh dimenzijah pa stacionarno rešitev znamo
-poiskati. Ker nam bo koristila tudi nekoliko kasneje pri računu širjenja
-solitonov po optičnih vlaknih, si jo je vredno ogledati.
-
-Stacionarni rešitvi se vzdolž $\zeta$ lahko spreminja le faza, zato
+poiskati. Stacionarni rešitvi se vzdolž $\zeta$ lahko spreminja le faza, zato
 rešitev iščimo v obliki 
 \begin{equation}
-\psi=e^{i\eta^{2}\zeta}\, u(x)\label{8.87}
+\psi=e^{i\eta^{2}\zeta}\, u(x),
+\label{8.87}
 \end{equation}
- kjer je $\eta$ poljubna konstanta, katere pomen bomo videli kasneje.
-Iz enačbe \ref{8.84} sledi za funkcijo $u(x)$, ki naj bo realna,
+ kjer je $\eta$ poljubna konstanta, katere pomen bomo videli v nadaljevanju, 
+ funkcija $u(x)$ pa naj bo realna. 
+Uporabimo nastavek v enačbi (\ref{8.84}) in dobimo
 \begin{equation}
-\frac{d^{2}u}{dx^{2}}=\frac{1}{2}\eta^{2}u-\kappa u^{3}
+\frac{d^{2}u}{dx^{2}}=\eta^{2}u-\kappa u^{3}.
 \end{equation}
  Z množenjem obeh strani z $u^{\prime}$ lahko enačbo enkrat integriramo
 \begin{equation}
-\left(\frac{du}{dx}\right)^{2}+C=\eta^{2}u^{2}-\frac{1}{2}\kappa u^{4}
+\left(\frac{du}{dx}\right)^{2}=\eta^{2}u^{2}-\frac{1}{2}\kappa u^{4},
 \end{equation}
- Naj bo integracijska konstanta $C$ kar 0. Ločimo spremenljvki in
-dobimo 
+pri čemer smo integracijsko konstanto postavili na 0.
+Ločimo spremenljvki in dobimo 
 \begin{equation}
-\int_{1}^{u}\frac{du}{u\sqrt{\eta^{2}-\frac{1}{2}\kappa u^{2}}}=x-x_{0}\label{8.85}
+\int_{\eta\sqrt{2/\kappa}}^{u}\frac{du}{u\sqrt{\eta^{2}-\frac{1}{2}\kappa u^{2}}}=x-x_{0},
+\label{8.85}
 \end{equation}
- kjer smo novo integracijsko konstanto zapisali tako, da je pri $x=x_{0}$
-vrednost $u=1$. Integral brez tezžav izračunamo: 
+pri čemer smo uvedli novo integracijsko konstanto $x_{0}$ in integracijsko mejo postavili 
+tako, da so vrednosti pod korenom pozitivne.
+Integral brez težav izračunamo
 \begin{equation}
-\ln\left(\sqrt{\frac{\kappa}{2}}\frac{u}{\eta+\sqrt{\eta^{2}-\kappa u^{2}/2}}\right)=x-x_{0}
+\frac{1}{\eta}\ln\left(\sqrt{\frac{\kappa}{2}}\frac{u}{\eta+
+\sqrt{\eta^{2}-\kappa u^{2}/2}}\right)=x-x_{0}
 \end{equation}
- Izarazimo iskano funkcijo: 
+in izrazimo iskano funkcijo $u(x)$
 \begin{equation}
-u=\sqrt{\frac{\kappa}{2}}\eta\frac{2}{e^{\eta(x-x_{0})}+e^{-\eta(x-x_{0})}}=\sqrt{\frac{\kappa}{2}\,}\eta\,\frac{1}{\text{ch}\eta(x-x_{0})}\label{8.86}
+u=\sqrt{\frac{2}{\kappa}}\frac{2 \eta }{e^{\eta(x-x_{0})}+e^{-\eta(x-x_{0})}}=
+\sqrt{\frac{2}{\kappa}}\frac{\eta}{\cosh\eta(x-x_{0})}.
+\label{8.86}
 \end{equation}
- tako da je po enačbi \ref{8.87} 
+Po enačbi (\ref{8.87}) je rešitev
 \begin{equation}
-\psi(x,z)=\sqrt{\frac{\kappa}{2}}\,\eta\,\frac{e^{i\eta^{2}\zeta}}{\text{ch}\eta(x-x_{0})}\label{8.88}
+\psi(x,z)=\sqrt{\frac{2}{\kappa}}\,\eta\,\frac{e^{i\eta^{2}\zeta}}{\cosh\eta(x-x_{0})}.
+\label{8.88}
 \end{equation}
- Vidimo, da predstavlja $1/\eta$ mero za polmer snopa, $x_{0}$ pa
-je le prečni premik snopa, ki ga lahko brey škode postavimo 0. Tako
+Vidimo, da predstavlja $1/\eta$ mero za polmer snopa, $x_{0}$ pa
+je le njegov prečni premik, ki ga lahko brez škode postavimo na $x_0=0$. Tako
 je polje stacionarnega snopa 
 \begin{equation}
-E_{s}(x,z)=\sqrt{\frac{\kappa}{2}\,}\frac{\eta}{\text{ch}\eta(x-x_{0})}\,\exp[ik_{0}z(1+\frac{\eta^{2}}{2k_{0}^{2}})]\label{8.89}
+E_{s}(x,z)=\sqrt{\frac{2}{\kappa}}\,\frac{\eta}{\cosh(\eta x)}\,\exp\left(ik_{0}z\left(1+
+\frac{\eta^{2}}{2k_{0}^{2}}\right)\right)
+\label{8.89}
 \end{equation}
- Od parametra $\eta$ je torej odvisna tudi konstanta širjenja in
-s tem fazna hitrost. Ta je tem manjša, čim manjši je polmer snopa:
+in profil intenzitete svetlobe
 \begin{equation}
-v_{f}=\frac{c}{n_{0}(1+\frac{\eta^{2}}{2k_{0}^{2}})}
+j_{s}(x,z)=\frac{2}{\kappa}\,\frac{\eta^2}{\cosh^2(\eta x)} = j_0 \frac{1}{\cosh^2(\eta x)}.
+\label{8.89a}
 \end{equation}
-
-
-Moč dvodimenzionalnega snopa \ref{8.89} je sorazmerna z integralom
-kvadrata polja po $x.$ Integriramo brez težav in dobimo 
+\begin{figure}[h]
+\centering
+\includegraphics[width=8truecm]{slike/08_soliton.png}
+\caption{Prečni profil krajevnega solitona v 2D. Vzdolž koordinate  se profil ohranja. }
+\label{fig:soliton}
+\end{figure}
+Če se vrnemo k izrazu za električno poljsko jakost (enačba~\ref{8.89}), vidimo, da
+je od parametra $\eta$ odvisna tudi konstanta širjenja in s tem fazna hitrost
 \begin{equation}
-\int|E_{s}|^{2}dx=\frac{2}{\kappa}\,\eta^{2}\int_{-\infty}^{\infty}\frac{dx}{\text{ch}^{2}\eta x}=\frac{4\eta}{\kappa}
+v_{f}=\frac{\omega}{k} = \frac{c}{\tilde{n}\left(1+\frac{\eta^{2}}{2k_{0}^{2}}\right)}.
 \end{equation}
- Moč stacionarnega snopa v dveh dimenzijah je je obratno sorazmerna
-s širino snopa $1/\eta$. Zato obstoja pri poljubni moči stacionarna
-širina. To je bistvena razlika med dvo- in tridimenzionalnim primerom,
-kjer se snop z nadkritično močjo krči v singularnost.
+Fazna hitrost omejenih snopov je torej vedno manjša od fazne hitrosti ravnih valov. 
+Bolj ko je snop omejen, manjša je fazna hitrost, za velike polmere snopa pa doseže 
+limitno vrednost $c_0/\tilde{n}$.
 
+Moč dvodimenzionalnega snopa (enačba~\ref{8.89a}) je sorazmerna z integralom
+gostote svetlobnega toka po $x$. Integriramo in dobimo 
+\begin{equation}
+\int j_sdx =\frac{2}{\kappa}\,\eta^{2}\int_{-\infty}^{\infty}\frac{dx}
+{\cosh^{2}\eta x}=\frac{4\eta}{\kappa}.
+\end{equation}
+Moč stacionarnega snopa~\textendash~solitona~\textendash~v dveh dimenzijah je 
+torej obratno sorazmerna s širino snopa $1/\eta$. Zato tudi pri poljubno veliki moči 
+obstaja stacionarna širina. To je bistvena razlika med obravnavanim dvo- in 
+tridimenzionalnim primerom, kjer se snop z nadkritično močjo skrči v singularnost.
 
 \section{Optični solitoni}
-
-V prejšnjem razdelkusmo ugotovili, da pojav samozbiranja svetlobnega
+V prejšnjem razdelku smo ugotovili, da pojav samozbiranja svetlobnega
 snopa lahko ravno kompenzira širjenje zaradi uklona, tako da ima pri
-ustrezni moči snop povsod konstnatno širino in obliko. Povsem analogen
-pojav imamo tudi v časovni domeni. Sunek svetlob, ki se širi po snovi
-s frekvenčno siperzijo lomnega količnika, se podaljšuje, kot smo ugotovili
-v poglavju o optičnih vlaknih. Ob primernih pogojih lahko odvisnost
-lomnega količnika od intenzitete ravno kompenzira disperzijo in sunek
-ohranja obliko. Sunkom svetlobe, ki potujejo po sredstvu brez spremembe
-oblike, pravimo tudi \textit{optični solitoni}. Posebej so pomembni
-v optičnih vlaknih, kjer je disperzija izrazita in bi se je radi za
-učinkovit prenos informacije čim bolj iznebili.
+ustrezni moči snop povsod konstnatno širino in obliko. Takim snopom 
+smo rekli krajevni solitoni. Povsem podoben pojav imamo tudi v časovni 
+domeni, kjer dobimo časovne ali optične solitone. 
 
-Poijav optičnih solitonov ni težko razložiti. V vrhu svetlobenga sunka
+Sunek svetlobe naj se širi po valovnem vodniku. Ker je lomni količnik
+odvisen od frekvence, se sunek svetlobe podaljšuje. Več o tem bomo spoznali pri 
+obravnavi disperzije v optičnih vlaknih (poglavje~\ref{chap:Disperzija}). 
+Ob primernih pogojih lahko odvisnost lomnega količnika od intenzitete 
+ravno kompenzira odvisnost lomnega količnika od valovne dolžine in sunek
+ohranja obliko. Sunkom svetlobe, ki potujejo po sredstvu brez spremembe
+oblike, pravimo optični solitoni. Posebej so pomembni v optičnih vlaknih, 
+kjer je disperzija izrazita in želimo njen vpliv zaradi učinkovitosti prenosa
+informacije čim bolj zmanjšati. 
+
+Pojava optičnih solitonov ni težko razložiti. V vrhu svetlobenga sunka
 je pri $n_{2}>0$ lomni količnik največji, zato je na dani geometrijski
 razdalji optična faza $k_{0}nz$ največja. Ker faza vzdolž sunka ni
 več povsod enaka, se od začetka do konca sunka spreminja tudi frekvenca,
@@ -1321,6 +1355,8 @@ pa višja. Če je disperzija lomnega količnika taka, da grupna hitrost
 narašča s frekvenco, bo zadnji del sunka dohiteval sprednjega. Ta
 učinek nelinearnosti lahko ravno kompenzira širjenje sunka zaradi
 disperzije.
+
+
 
 Računsko obravnavajmo primer širjenja solitona po enorodnem optičnem
 vlaknu. Spomnimo se (en. \ref{?.??}), da se zaradi spremembme lomnega
