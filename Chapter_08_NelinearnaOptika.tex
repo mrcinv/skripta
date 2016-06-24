@@ -47,6 +47,7 @@ Za bolj nazorno predstavo izpišimo nelinearna dela še po komponentah
 in 
 \beq
 \left(\mathbf{P}_{\mathrm{NL,3}}\right)_i= \epsilon_{0}\chi^{(3)}_{ijkl} \,E_j \,E_k\, E_l,
+\label{eq:nlin3}
 \eeq
 pri čemer smo seveda uporabili Einsteinov zapis seštevanja po indeksih. 
 
@@ -1199,7 +1200,8 @@ po gornji formuli za kritično moč pri valovni dolžini 1~$\mu$m vrednost
 P_{s}=\frac{\lambda^2}{16 \pi n_2} = 10^{4}~\mathrm{W}.
 \eeq
 
-\section{*Krajevni solitoni}
+\section{*Izpeljava krajevnih solitonov}
+\label{chap:ks}
 Za podrobnejšo obravnavo krajevnih solitonov moramo rešiti valovno 
 enačbo v obosnem približku. Začnimo s krajevnim delom valovne 
 enačbe za monokromatsko valovanje v skalarnem približku (enačba~\ref{eq:Helmholtz})
@@ -1346,30 +1348,73 @@ oblike, pravimo optični solitoni. Posebej so pomembni v optičnih vlaknih,
 kjer je disperzija izrazita in želimo njen vpliv zaradi učinkovitosti prenosa
 informacije čim bolj zmanjšati. 
 
-Pojava optičnih solitonov ni težko razložiti. V vrhu svetlobenga sunka
-je pri $n_{2}>0$ lomni količnik največji, zato je na dani geometrijski
-razdalji optična faza $k_{0}nz$ največja. Ker faza vzdolž sunka ni
-več povsod enaka, se od začetka do konca sunka spreminja tudi frekvenca,
-ki je odvod faze, in sicer je v sprednejm delu sunka nižja , v zadnjem
-pa višja. Če je disperzija lomnega količnika taka, da grupna hitrost
-narašča s frekvenco, bo zadnji del sunka dohiteval sprednjega. Ta
-učinek nelinearnosti lahko ravno kompenzira širjenje sunka zaradi
-disperzije.
+Pojava optičnih solitonov ni težko razložiti. Naj na optično nelinearno sredstvo
+vpade sunek svetlobe, ki je Gaussove oblike
+\beq
+j(t) = j_0 e^{-t^2/\tau^2}.
+\label{08_pulz}
+\eeq
+Faza takega sunka je 
+\beq
+\phi (t) = k_o n z - \omega_0 t = k_0 (\tilde{n} + n_2 j)z - \omega_0 t = 
+\phi_0 + k_0 n_2 z j - \omega_0 t,
+\eeq
+frekvenca pa 
+\beq
+\omega = -\frac{d\phi}{dt} = \omega_0 - k_0 n_2 z \frac{dj}{dt}.
+\eeq
+Če vstavimo časovno obliko sunka svetlobe (enačba~\ref{08_pulz}), dobimo
+\beq
+\omega = \omega_0 + \frac{2k_0 n_2 z}{\tau^2} \, t \, e^{-t^2/\tau^2}.
+\eeq
+Začetnemu delu sunka (pri $t<0$) se torej frekvenca pomanjša, zadnjemu delu sunka
+(pri $t>0$) pa se mu poveča (slika~\ref{fig:optsoliton}). 
+Ta pojav imenujemo čričkanje sunkov ({\it chirping}), 
+po podobnosti z oglašanjem čričkov.
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/08_OpticniSoliton.pdf_tex}
+\caption{Zaradi nelinearnega lomnega količnika pride do frekvenčnega premika v sunku svetlobe.}
+\label{fig:optsoliton}
+\end{figure}
+Pri prehodu optičnega sunka z osnovno frekvenco $\omega_0$ se različnim delom sunka
+frekvenca različno spremeni (slika~\ref{fig:chirp}a). 
+Po drugi strani pa v snoveh poznamo barvno disperzijo, 
+kar pomeni, da veljajo za valovanja z različnimi frekvencami različni lomni količniki.
+Navadno je disperzija za vidno svetlobo taka, da je lomni količnik
+za večjo valovno dolžino manjši, zato svetloba z večjo valovno dolžino 
+potuje hitreje. Če pa je v snovi za dane valovne dolžine anomalna difuzija in tako
+\beq
+\frac{dn}{d\lambda} > 0,
+\eeq
+pa svetloba z večjo valovno dolžino potuje hitreje od tiste z nižjo valovno dolžino.
+Povedano drugače: svetloba s nižjo frekvenco potuje hitreje in svetloba z višjo frekvenco
+zaostaja (slika~\ref{fig:chirp}b). Zadji del sunka, ki ima nižjo frekvenco, bo torej 
+dohiteval sprednji del, ki se zaradi nižje frekvence premika počasneje. Tako
+učinek disperzije ravno izniči učinek nelinearnosti in signal ohranja obliko. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/08_Chirp.pdf_tex}
+\caption{Čričkanje sunkov svetlobe zaradi nelinearnega pojava. Z ustrezno disperzijo lahko
+čričkanje izničimo in dobimo sunek svetlobe, ki oblike ne spreminja~\textendash~soliton.}
+\label{fig:chirp}
+\end{figure}
 
-
-
-Računsko obravnavajmo primer širjenja solitona po enorodnem optičnem
-vlaknu. Spomnimo se (en. \ref{?.??}), da se zaradi spremembme lomnega
-količnika vlakna spremeni valovno število 
+\section{*Izpeljava optičnih solitonov}
+Za matematični opis optičnih solitonov izhajamo iz valovne enačbe, pri čemer je 
+$P_{\textrm{NL}$ nelinearna polarizacija tretjega reda (enačba~\ref{eq:nlin3}). 
+Zapišemo enačbo v skalarni obliki
 \begin{equation}
-\delta\beta=\frac{\omega^{2}}{c^{2}\beta}\,\frac{\int n\,\delta n\,|u|^{2}dS}{\int|u|^{2}dS}\label{8.90}
+\nabla^{2}E-\frac{1}{c_0^{2}}{\frac{\partial^2 E}{\partial t^2}}=
+\mu_{0}{\frac{\partial^2(P_{\textrm{L}}+P_{\textrm{NL}})}{\partial t^2}}.
 \end{equation}
- kjer $u(r)$ opisuje prečno obliko valovanja v vlaknu. Valovno število
-je v vlaknu funkcija frekvence. Kot v razdelku ???? ga razvijmo okoli
-centralne frekvence in dodajmo še prispevek \ref{8.90}: 
-\begin{equation}
-\beta\left(\omega\right)=\beta\left(\omega_{0}\right)+\frac{d\beta}{d\omega}\,(\omega-\omega_{0})+\frac{1}{2}\frac{d^{2}\beta}{d\omega^{2}}(\omega-\omega_{0})^{2}+\frac{\omega^{2}}{c^{2}\beta}\,\frac{\int n\,\delta n\,|u|^{2}dS}{\int|u|^{2}dS}\label{8.91}
-\end{equation}
+
+
+
+
+
  Svetlobni sunek, ki se širi po vlaknu, zapišimo, kot smo že vajeni,
 v obliki počasi spreminjajoče se amplitudne funkcije in faznega faktorja
 pri nosilni frekvenci: 
