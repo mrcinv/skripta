@@ -52,7 +52,7 @@ in
 \left(\mathbf{P}_{\mathrm{NL,3}}\right)_i= \epsilon_{0}\chi^{(3)}_{ijkl} \,E_j \,E_k\, E_l,
 \label{eq:nlin3}
 \eeq
-pri čemer smo seveda uporabili Einsteinov zapis seštevanja po indeksih. Značilne vrednosti
+pri čemer smo uporabili Einsteinov zapis seštevanja po indeksih. Značilne vrednosti
 susceptibilnosti v trdnih snoveh so $\chi^{(1)} \sim 1$, 
 $\chi^{(2)} \sim 10^{-12}~\textrm{m/V}$ 
 in $\chi^{(3)} \sim 10^{-22}$~m$^2$/V$^2$. Obravnavali bomo samo snovi, v katerih
@@ -146,19 +146,18 @@ izhodne svetlobe}
 \label{fig:nl2}
 \end{figure}
 
-Nastanku valov pri podvojeni frekvenci pravimo tudi
+Nastanku valovanja pri podvojeni frekvenci pravimo tudi
 SHG\index{SHG|see {Optično podvajanje frekvenc}} ({\it Second harmonic 
 generation})\index{Optično podvajanje frekvenc}, 
-nastanku valov pri vsoti frekvenc SFG\index{SFG|see {Generacija vsote frekvenc}}
+nastanku valovanja pri vsoti frekvenc SFG\index{SFG|see {Generacija vsote frekvenc}}
 ({\it Sum frequency generation})\index{Generacija vsote frekvenc}, 
-nastanku valov pri razliki frekvenc DFG\index{DFG|see {Generacija razlike frekvenc}} 
+nastanku valovanja pri razliki frekvenc DFG\index{DFG|see {Generacija razlike frekvenc}} 
 ({\it Difference frequency generation})\index{Generacija razlike frekvenc} in pojavu 
 statičnega polja pri $\omega = 0$ optično usmerjanje\index{Optično usmerjanje}
 ({\it Optical rectification}). Oglejmo si nekaj teh pojavov podrobneje. 
 
-Za opis nelinearnih pojavov v snovi navadna valovna enačba ne zadošča več. Zaradi močnih
-električnih polj pride do premika elektronov ...
-Nelinearne pojave v snovi opišemo z nelinearno valovno enačbo\index{Valovna enačba}
+Pri močnih vpadnih valovanjih navadna valovna enačba ne zadošča. Pride do pojava
+nelinearne polarizacije in valovanje opišemo z nelinearno valovno enačbo\index{Valovna enačba}
 \boxeq{8.3}{
 \nabla^{2}\mathbf{E}-\frac{\epsilon}{c_0^{2}}{\frac{\partial^2\mathbf{E}}{\partial t^2}}=
 \mu_{0}{\frac{\partial^2\mathbf{P}_{\textrm{NL}}}{\partial t^2}}.
@@ -166,7 +165,8 @@ Nelinearne pojave v snovi opišemo z nelinearno valovno enačbo\index{Valovna en
 
 \begin{definition}
 Iz Maxwellovih enačb~(\ref{eq:Maxwell1} do \ref{eq:Maxwell4}) izpelji 
-nelinearno valovno enačbo (\ref{8.3}). Pri tem si pomagaj z identiteto
+nelinearno valovno enačbo (\ref{8.3}), pri čemer upoštevaj enačbo (\ref{8.1}). 
+Pri tem si pomagaj z identiteto
 $$
 \nabla \times (\nabla \times \mathbf{A}) = \nabla (\nabla \cdot \mathbf{A}) 
 - \nabla^2 \mathbf{A}.
@@ -177,10 +177,10 @@ Nehomogene valovne enačbe v splošnem ne znamo rešiti in se moramo zateči k p
 Prva poenostavitev, ki jo bomo naredili, je omejitev na vzporedna vpadna žarka,
 ki se širita v smeri osi $z$. Poleg tega se bomo omejili na izračun samo enega
 nastalega valovanja in privzeli, da je neodvisno od drugih nastalih valovanj.
-Ta omejitev ni huda. Dokler sta namreč amplitudi valov pri vsoti in razliki
+Ta omejitev ni huda. Dokler sta namreč amplitudi valovanj pri vsoti in razliki
 frekvenc majhni, ju lahko obravnavamo vsako posebej. Ni sicer nujno,
 da sta obe nastali amplitudi vedno majhni, vendar je lahko, kot bomo videli kasneje, 
-le en val naenkrat primerljiv z vpadnim. 
+le eno valovanje naenkrat po jakosti primerljivo z vpadnim. 
 
 V snovi so tako prisotna tri valovanja:
 dve vpadni in tretje, novo nastalo
@@ -197,13 +197,13 @@ deli, saj valovna enačba (\ref{8.3}) ni linearna. Upoštevali smo tudi,
 da so zaradi nelinearne polarizacije amplitude funkcije kraja, za
 katere pa lahko privzamemo, da se le počasi spreminjajo. Njihova kompleksna vrednost
 dopušča pojav dodatnega faznega zamika. Za valovna
-števila naj seveda velja $k_{i}^{2}=\epsilon_{i}\omega^{2}/c^{2}$,
+števila velja $k_{i}^{2}=\epsilon_{i}\omega_i^{2}/c_0^{2}$,
 pri čemer je $\epsilon_{i}$ dielektrična konstanta pri frekvenci
-$\omega_{i}$ in polarizaciji $\mathbf{e}_{i}$. S tem vsak od treh valov
+$\omega_{i}$ in polarizaciji $\mathbf{e}_{i}$. S tem vsako od treh valovanj
 pri konstantni amplitudi reši linearni del valovne enačbe. Naša naloga
 je ugotoviti, kako se zaradi nelinearnosti spreminjajo amplitude posameznih valovanj.
 Dogovorimo se še, da bomo v tem poglavju z indeksi 1, 2~... ločevali
-valove z različnimi frekvencami in polarizacijami, kartezične komponente
+valovanja z različnimi frekvencami in polarizacijami, kartezične komponente
 vektorjev pa bomo označevali z $x$, $y$ in $z$. 
 
 Nastavek za polje, ki bo rešil nelinearno valovno enačbo, je tako
@@ -219,7 +219,7 @@ Izračunajmo najprej
 \label{8.5}
 \end{equation}
 S k. k. smo označili kompleksno konjugirani del. Upoštevali smo,
-da se $A_{j}(z)$ le počasi spreminja s krajem in smo zato njen
+da se amplituda $A_{j}(z)$ le počasi spreminja s krajem in smo zato njen
 drugi odvod zanemarili.
 Izračunamo še drugi odvod po času 
 \begin{equation}
@@ -248,7 +248,7 @@ ik_{3}\mathbf{e}_{3}\frac{dA_{3}}{dz}e^{ik_{3}z}=-\frac{\mu_{0}
 \label{8.7}
 \eeq
 Množimo še obe strani skalarno z $\mathbf{e}_{3}$, upoštevajmo zvezo med $k_{3}$ in $\omega_{3}$ in 
-ravnajmo podobno še za druga dva valova. Tako dobimo sistem sklopljenih
+ravnajmo podobno še za drugi dve valovanji. Tako dobimo sistem sklopljenih
 enačb za amplitude valovanj v optično nelinearnem sredstvu
 \boxeq{eq:nlAz}{
 \frac{dA_{3}}{dz} &= \frac{i\omega_{3}\chi_{ef}}{4c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
@@ -419,8 +419,8 @@ pri vpadni frekvenci, modra pa pri podvojeni. Ekscentričnost elipse za
 izredni lomni količnik in frekvenčna disperzija sta zaradi večje nazornosti močno 
 pretirani. Opazimo, da je pri nekem kotu $\vartheta$ med smerjo širjenja svetlobe in optično 
 osjo redni lomni količnik pri dvojni frekvenci enak izrednemu količniku pri osnovni
-frekvenci. Če torej izberemo izredno polarizacijo vpadnega vala (tako, ki leži
-v ravnini optične osi in smeri širjenja), bo za podvojeni val z redno
+frekvenci. Če torej izberemo izredno polarizacijo vpadnega valovanja (tako, ki leži
+v ravnini optične osi in smeri širjenja), bo za podvojeno valovanje z redno
 polarizacijo (to je pravokotno na optično os) pri kotu
 $\vartheta_m$ izpolnjen pogoj ujemanja faz~(enačba~\ref{eq:dk0}). Zapišimo to še z enačbo.
 
@@ -435,9 +435,9 @@ ujemanje faz drugega reda za pozitivno (c) in negativno (d) anizotropno snov.}
 \label{fig:dk}
 \end{figure}
 
-Lomni količnik za redni val pri podvojeni frekvenci mora biti enak lomnemu 
-količniku za izredni val pri osnovni frekvenci. Pri tem je lomni količnik
-za izredni val odvisen od kota
+Lomni količnik za redno valovanje pri podvojeni frekvenci mora biti enak lomnemu 
+količniku za izredno valovanje pri osnovni frekvenci. Pri tem je lomni količnik
+za izredno valovanje odvisen od kota
 \begin{equation}
 \frac{1}{(n_o^{2\omega})^2} = \frac{1}{(n^{\omega}(\vartheta))^2}=
 \frac{\cos^{2}\vartheta}{(n_{o}^{\omega})^2}+\frac{\sin^{2}\vartheta}{(n_{e}^{\omega})^2}.
@@ -460,7 +460,7 @@ Pokaži, da v primeru negativne anizotropije pogoj za ujemanje faz zapišemo kot
 
 S slike~(\ref{fig:dk} c in d) lahko razberemo, da obstoja še en primer, pri 
 katerem je izpolnjen pogoj za ujemanje faz. To je primer, pri katerem sta v vpadnem
-valu prisotni obe polarizaciji, redna in izredna, podvojeni val pa
+valovanju prisotni obe polarizaciji, redna in izredna, podvojeno valovanje pa
 je spet redni. Tedaj mora biti za ujemanje faz redni lomni količnik
 pri dvojni frekvenci enak povprečju rednega in izrednega lomnega količnika
 pri osnovni frekvenci. Za praktično uporabo je ta izbira, kadar obstoja,
@@ -489,7 +489,7 @@ $\vartheta_m = 41,25^\circ$. Nelinearna susceptibilnost ima v tetragonalni
 simetriji $\bar{4}2m$ od nič različne komponente $\chi_\textrm{xyz}$, 
 $\chi_\textrm{zxy}$ in $\chi_\textrm{yzx}$ (glej tabelo~\ref{table:chi}). 
 Zaradi poenostavitve privzamemo, da so njihove vrednosti enake. 
-Smer širjenja osnovnega in podvojenega vala naj bo (slika \ref{fig:chi})
+Smer širjenja osnovnega in podvojenega valovanja naj bo (slika \ref{fig:chi})
 \begin{equation}
 \mathbf{s}=(\cos\varphi\sin\vartheta_m,\sin\varphi\sin\vartheta_m,\cos\vartheta_m),
 \label{8.14}
@@ -502,7 +502,7 @@ moč frekvenčno podvojenega valovanja največja.
 \def\svgwidth{70truemm} 
 \input{slike/08_chi.pdf_tex}
 \caption{K izračunu efektivne susceptibilnosti. Rdeč vektor označuje
-polarizacijo vhodnega vala, moder pa polarizacijo frekvenčno podvojenega vala.}
+polarizacijo vhodnega valovanja, moder pa polarizacijo frekvenčno podvojenega valovanja.}
 \label{fig:chi}
 \end{figure}
 Iz pogoja za ujemanje faz vidimo, da mora biti vpadna svetloba redno polarizirana, 
@@ -722,14 +722,14 @@ v obeh primerih pa izkoristek narašča linearno z dolžino kristala.
 \index{Optično parametrično ojačevanje}
 \index{Parametrično ojačevanje|see{Optično parametrično ojačevanje}}
 
-Oglejmo si še en zelo uporaben primer mešanja treh valov, 
+Oglejmo si še en zelo uporaben primer mešanja treh valovanj, 
 ki ga opisujejo enačbe (\ref{eq:nlAz}) do (\ref{eq:nlA3}). Gre za
 optično parametrično ojačevanje, pri katerem nelinearne optične pojave
 izkoristimo za ojačevanje optičnih signalov. Imejmo vhodni
-signal pri frekvenci $\omega_{1}$, ki ga želimo ojačati, in močen črpalni val
+signal pri frekvenci $\omega_{1}$, ki ga želimo ojačati, in močno črpalno valovanje
 pri frekvenci $\omega_{3}>\omega_{1}$. Zaradi nelinearnosti v snovi se 
-val pri $\omega_{1}$ ojačuje, val pri $\omega_{3}$ zmanjšuje, hkrati pa zaradi
-ohranitve energije nastaja dodaten val pri razliki frekvenc
+valovanje pri $\omega_{1}$ ojačuje, valovanje pri $\omega_{3}$ zmanjšuje, hkrati pa zaradi
+ohranitve energije nastaja dodatno valovanje pri razliki frekvenc
 $\omega_{2}=\omega_{3}-\omega_{1}$. Proces parametričnega ojačevanja 
 si torej lahko predstavljamo kot pretvorbo enega fotona pri frekvenci 
 $\omega_{3}$ v dva fotona pri $\omega_{1}$ in $\omega_{2}$.
@@ -751,7 +751,7 @@ Izhajajmo iz splošnih enačb za nelinearne optične pojave drugega reda (enačb
 \frac{dA_{1}}{dz} &=&\frac{i\omega_{1}\chi_{ef}}{4c_0 n_1} A_{2}^*\, A_{3}\, e^{i\Delta kz}.
 \label{eq:opaA}
 \end{eqnarray}
-Privzemimo, da je črpalni val vselej dosti močnejši od ostalih dveh,
+Privzemimo, da je črpalno valovanje vselej dosti močnejši od ostalih dveh,
 $A_{3}\gg A_{1}$, $A_{2}$ in približno konstanten $A_3 = A_{30}$.
 Poskrbimo še, da je izpolnjen pogoj za ujemanje faz, $\Delta k=0$, 
 začetna pogoja pa zapišemo kot $A_{1}(z=0)=A_{10}$ in $A_{2}(z=0)=0$. Ko vse to upoštevamo,
@@ -784,8 +784,8 @@ pri čemer je $L$ dolžina nelinearnega sredstva,
 A_{20} = i \sqrt{\frac{\omega_2 n_1}{\omega_1 n_2}} A_{10}.
 \label{opakapa}
 \eeq
-V začetku torej oba vala naraščata približno eksponentno na račun črpalnega
-vala. Ko postane njuna intenziteta znatna in se začne $A_3$ zmanjševati, je treba to seveda
+V začetku torej intenziteti obeh valovanj naraščata približno eksponentno na račun črpalnega
+valovanja. Ko postane njuna intenziteta znatna in se začne $A_3$ zmanjševati, je treba to seveda
 tudi upoštevati pri izračunu. 
 
 \begin{definition}
@@ -810,8 +810,8 @@ Ta pogoj lahko izpolnimo na enak način kot pri podvajanju frekvence: v dvolomne
 izberemo ustrezno smer glede na optično os in ustrezne polarizacije, 
 tako da velja $\omega_{3}n_{3}=\omega_{1}n_{1}+\omega_{2}n_{2}$.
 
-Lahko na primer vzamemo izredno polarizacijo za črpalni
-val in redni polarizaciji za oba ojačevana valova, podobno kot pri
+Lahko na primer vzamemo izredno polarizacijo za črpalno valovanje
+in redni polarizaciji za obe ojačevani valovanji, podobno kot pri
 podvajanju frekvence. Tedaj mora veljati 
 \begin{equation}
 \left[\left(\frac{\cos\vartheta_{m}}{n_{o}^{\omega_{3}}}\right)^{2}
@@ -851,7 +851,7 @@ tako približno $2~\%$.
 \subsection*{Optični parametrični oscilator}
 \index{Optični parametrični oscilator}
 Gornji izračun kaže, da optično parametrično ojačevanje pri prehodu skozi kristal ni prav veliko, 
-kljub dokaj močnemu črpalnemu valu. Zato je smiselno, da svetloba skozi ojačevalno 
+kljub dokaj močnemu črpalnemu valovanju. Zato je smiselno, da svetloba skozi ojačevalno 
 sredstvo preide večkrat. To naredimo tako, da optično ojačevalno sredstvo zapremo v optični 
 resonator\index{Resonator!parametrični oscilator}
 in signal se ob vsakem obhodu ojača. Dobimo t. i. optični parametrični oscilator. 
@@ -865,7 +865,7 @@ zapremo med resonatorja, da se signalni žarek ($\omega_1$) ob vsakem preletu oj
 \end{figure}
 V optičnemu resonatorju je odbojnost zrcal za črpalni žarek ($\omega_3$) zelo majhna, 
 odbojnost za ojačani žarek pa je navadno blizu ena. Kadar 
-je intenziteta črpalnega vala pri $\omega_3$ dovolj velika, da je parametrično
+je intenziteta črpalnega valovanja pri $\omega_3$ dovolj velika, da je parametrično
 ojačevanje na obhod večje od izgub v resonatorju, dobimo lasersko nihanje. Valovanje, 
 ki se v parametričnem resonatorju ojačuje, nastane spontano, prav tako dodatno valovanje, ki 
 zagotavlja ohranitev energije. Njuni frekvenci sta 
@@ -1487,7 +1487,7 @@ pojav, pri katerem dobimo iz danega novo valovanje, ki ima enake valovne
 fronte in potuje v nasprotni smeri od prvotnega valovanja; novo valovanje
 je tako, kot bi začetnemu obrnili predznak časa. Pojav je v ozki zvezi
 s holografijo, kjer najprej zapišemo predmetni snop, ki ga kasneje
-reproduciramo, pri fazni konugaciji pa zapis začetnega vala in njegova
+reproduciramo, pri fazni konugaciji pa zapis začetnega valovanja in njegova
 reprodukcija potekata sočasno.
 
 Napravimo poskus, ki ga kaže slika \ref{sl8.31}. Na nelinearen kristal
@@ -1519,7 +1519,7 @@ E_{4}=\mathrm{Re}\left[\psi^{*}\left(r\right)\, e^{i\left(-kz-\omega t\right)}\r
 vala; poleg tega je še amplituda kompleksno konjugirana. To seveda
 ne vpliva na obliko valovnih front, te so popolnoma enake kot pri signalnem
 valu. Zaradi lastnosti, da lahko novi val iz signalnega dobimo tako,
-da krajevni del kompleksno konjugiramo, nastalemu valu pravimo fazno
+da krajevni del kompleksno konjugiramo, nastalemu valovanju pravimo fazno
 konjugiran val.
 
 Uporabna posledica fazne konjugacije je prikazana na sliki \ref{sl8.32}.
