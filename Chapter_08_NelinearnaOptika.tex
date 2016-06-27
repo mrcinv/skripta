@@ -139,17 +139,11 @@ $\omega_{1}$ in $\omega_{2}$. Zaradi nelinearne sklopitve nastajajo v snovi nova
 valovanja z različnimi kombinacijami frekvenc (glej sliko~\ref{fig:nl2}).
 \begin{figure}[h]
 \centering
-\def\svgwidth{130truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/08_nl3.pdf_tex}
-\caption{Shematski prikaz nastanka valovanj pri nelinearnih optičnih pojavih drugega reda}
+\caption{Shematski prikaz nastanka valovanj pri nelinearnih optičnih pojavih drugega reda in spekter
+izhodne svetlobe}
 \label{fig:nl2}
-\end{figure}
-\begin{figure}[h]
-\centering
-\def\svgwidth{85truemm} 
-\input{slike/08_nl2_spekter.pdf_tex}
-\caption{Shematski prikaz spektra izhodne svetlobe}
-\label{fig:nl2s}
 \end{figure}
 
 Nastanku valov pri podvojeni frekvenci pravimo tudi
@@ -161,6 +155,15 @@ nastanku valov pri razliki frekvenc DFG\index{DFG|see {Generacija razlike frekve
 ({\it Difference frequency generation})\index{Generacija razlike frekvenc} in pojavu 
 statičnega polja pri $\omega = 0$ optično usmerjanje\index{Optično usmerjanje}
 ({\it Optical rectification}). Oglejmo si nekaj teh pojavov podrobneje. 
+
+Za opis nelinearnih pojavov v snovi navadna valovna enačba ne zadošča več. Zaradi močnih
+električnih polj pride do premika elektronov ...
+Nelinearne pojave v snovi opišemo z nelinearno valovno enačbo\index{Valovna enačba}
+\boxeq{8.3}{
+\nabla^{2}\mathbf{E}-\frac{\epsilon}{c_0^{2}}{\frac{\partial^2\mathbf{E}}{\partial t^2}}=
+\mu_{0}{\frac{\partial^2\mathbf{P}_{\textrm{NL}}}{\partial t^2}}.
+}
+
 \begin{definition}
 Iz Maxwellovih enačb~(\ref{eq:Maxwell1} do \ref{eq:Maxwell4}) izpelji 
 nelinearno valovno enačbo (\ref{8.3}). Pri tem si pomagaj z identiteto
@@ -168,13 +171,7 @@ $$
 \nabla \times (\nabla \times \mathbf{A}) = \nabla (\nabla \cdot \mathbf{A}) 
 - \nabla^2 \mathbf{A}.
 $$
-\end{definition}
-
-Nelinearne pojave v snovi opišemo z nelinearno valovno enačbo\index{Valovna enačba}
-\boxeq{8.3}{
-\nabla^{2}\mathbf{E}-\frac{\epsilon}{c_0^{2}}{\frac{\partial^2\mathbf{E}}{\partial t^2}}=
-\mu_{0}{\frac{\partial^2\mathbf{P}_{\textrm{NL}}}{\partial t^2}}.
-}
+\end{definition} 
 
 Nehomogene valovne enačbe v splošnem ne znamo rešiti in se moramo zateči k približkom.
 Prva poenostavitev, ki jo bomo naredili, je omejitev na vzporedna vpadna žarka,
