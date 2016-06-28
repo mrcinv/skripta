@@ -72,6 +72,7 @@ Ker lahko v produktu (enačba~\ref{eq:nlin2}) vrstni red $E_j E_k$ zamenjamo, mo
 tenzor invarianten na to zamenjavo
 \beq
 \chi_{ijk} = \chi_{ikj}.
+\label{eq:chijk}
 \eeq
 Vpeljemo poenostavljen zapis, pri katerem prvi indeks prepišemo $(x = 1, y = 2, z = 3)$,
 zadnja dva indeksa pa združimo. Dogovorjene oznake so $xx = 1, yy = 2, zz = 3, yz = zy =4, 
@@ -165,7 +166,7 @@ nelinearne polarizacije in valovanje opišemo z nelinearno valovno enačbo\index
 
 \begin{definition}
 Iz Maxwellovih enačb~(\ref{eq:Maxwell1} do \ref{eq:Maxwell4}) izpelji 
-nelinearno valovno enačbo (\ref{8.3}), pri čemer upoštevaj enačbo (\ref{8.1}). 
+nelinearno valovno enačbo (\ref{8.3}), pri čemer upoštevaj zvezo (\ref{8.1}). 
 Pri tem si pomagaj z identiteto
 $$
 \nabla \times (\nabla \times \mathbf{A}) = \nabla (\nabla \cdot \mathbf{A}) 
@@ -194,15 +195,17 @@ e^{i(k_{3}z-\omega_{3}t)}+A_{3}^{*}(z)\, e^{-i(k_{3}z-\omega_{3}t)}\right].
 \end{eqnarray}
 Polja smo zapisali v realni obliki, to je s kompleksno konjugiranimi
 deli, saj valovna enačba (\ref{8.3}) ni linearna. Upoštevali smo tudi,
-da so zaradi nelinearne polarizacije amplitude funkcije kraja, za
+da so zaradi nelinearnih pojavov amplitude funkcije kraja, za
 katere pa lahko privzamemo, da se le počasi spreminjajo. Njihova kompleksna vrednost
 dopušča pojav dodatnega faznega zamika. Za valovna
 števila velja $k_{i}^{2}=\epsilon_{i}\omega_i^{2}/c_0^{2}$,
 pri čemer je $\epsilon_{i}$ dielektrična konstanta pri frekvenci
 $\omega_{i}$ in polarizaciji $\mathbf{e}_{i}$. S tem vsako od treh valovanj
-pri konstantni amplitudi reši linearni del valovne enačbe. Naša naloga
+pri konstantni amplitudi reši linearni del valovne enačbe. 
+
+Naša naloga
 je ugotoviti, kako se zaradi nelinearnosti spreminjajo amplitude posameznih valovanj.
-Dogovorimo se še, da bomo v tem poglavju z indeksi 1, 2~... ločevali
+Dogovorimo se še, da bomo v računu z indeksi 1, 2~... ločevali
 valovanja z različnimi frekvencami in polarizacijami, kartezične komponente
 vektorjev pa bomo označevali z $x$, $y$ in $z$. 
 
@@ -229,35 +232,42 @@ Izračunamo še drugi odvod po času
 \end{equation}
 Nelinearna polarizacija vsebuje produkte polj, ki nihajo z vsemi možnimi
 vsotami in razlikami parov frekvenc $\omega_{1}$, $\omega_{2}$ in
-$\omega_{3}$. Drugi odvod nelinearnega dela polarizacije po času je tako
+$\omega_{3}$
+\beq
+\mathbf{P}_{\mathrm{NL}}= \epsilon_{0}\chi^{(2)}:\mathbf{E}\, \mathbf{E}.
+\eeq
+Drugi odvod nelinearnega dela polarizacije po času je tako
 \begin{eqnarray}
 \frac{\partial^2\mathbf{P}_\mathrm{NL}}{\partial t^2}&=&\varepsilon_0 \frac{\partial^2}
 {\partial t^2}\sum_{j'=1}^3 \sum_{j''=1}^3 
- \left( \frac{1}{4} \chi:\mathbf{e}_{j'}\,\mathbf{e}_{j''}\right) 
+ \left( \frac{1}{4} \chi^{(2)}:\mathbf{e}_{j'}\,\mathbf{e}_{j''}\right) 
  A_{j'}(z)\,A_{j''}(z) e^{i(k_{j'}+k_{j''})z-i(\omega_{j'}+\omega_{j''})t}+ \nonumber\\
-&+& \left( \frac{1}{4} \chi:\mathbf{e}_{j'}\,\mathbf{e}_{j''}\right)
+&+& \left( \frac{1}{4} \chi^{(2)}:\mathbf{e}_{j'}\,\mathbf{e}_{j''}\right)
 A_{j'}(z)\,A_{j''}^*(z) e^{i(k_{j'}-k_{j''})z-i(\omega_{j'}-\omega_{j''})t}+ \mathrm{k. k.}
 \label{8.5b}
 \end{eqnarray}
 Če želimo, da je valovna enačba~(\ref{8.3}) izpolnjena ob vsakem času $t$, se morajo
 ujemati izrazi pri istih časovnih odvisnostih, to je pri istih frekvencah. Izberimo
-najprej člene pri $\omega_j = \omega_3$, $j'=1, j''=2$ in $\omega_3 = \omega_1 + \omega_2$. Dobimo
+najprej člene pri $\omega_j = \omega_3$ in $\omega_3 = \omega_1 + \omega_2$. Dobimo
 \beq
 ik_{3}\mathbf{e}_{3}\frac{dA_{3}}{dz}e^{ik_{3}z}=-\frac{\mu_{0} 
-\varepsilon_0 \omega_{3}^{2}}{4}\chi:\mathbf{e}_{1}\mathbf{e}_{2}A_{1}\,A_{2}e^{i(k_{1}+k_{2})z}.
+\varepsilon_0 \omega_{3}^{2}}{4}\left(\chi:\mathbf{e}_{1}\mathbf{e}_{2}A_{1}\,A_{2}e^{i(k_{1}+k_{2})z}
++ \chi:\mathbf{e}_{2}\mathbf{e}_{1}A_{2}\,A_{1}e^{i(k_{1}+k_{2})z}\right).
 \label{8.7}
 \eeq
-Množimo še obe strani skalarno z $\mathbf{e}_{3}$, upoštevajmo zvezo med $k_{3}$ in $\omega_{3}$ in 
+Množimo še obe strani skalarno z $\mathbf{e}_{3}$, upoštevajmo zvezo med $k_{3}$ in $\omega_{3}$, 
+simetrijsko lastnost tenzorja $\chi$ (enačba~\ref{eq:chijk}) in 
 ravnajmo podobno še za drugi dve valovanji. Tako dobimo sistem sklopljenih
 enačb za amplitude valovanj v optično nelinearnem sredstvu
 \boxeq{eq:nlAz}{
-\frac{dA_{3}}{dz} &= \frac{i\omega_{3}\chi_{ef}}{4c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
-\frac{dA_{2}}{dz} &= \frac{i\omega_{2}\chi_{ef}}{4c_0 n_2} A_{1}^*\, A_{3}\, e^{i\Delta kz}\\
-\frac{dA_{1}}{dz} &= \frac{i\omega_{1}\chi_{ef}}{4c_0 n_1} A_{2}^*\, A_{3}\, e^{i\Delta kz}\label{eq:nlA3}.
+\frac{dA_{3}}{dz} &= \frac{i\omega_{3}\chi_{ef}}{2c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
+\frac{dA_{2}}{dz} &= \frac{i\omega_{2}\chi_{ef}}{2c_0 n_2} A_{1}^*\, A_{3}\, e^{i\Delta kz}\\
+\frac{dA_{1}}{dz} &= \frac{i\omega_{1}\chi_{ef}}{2c_0 n_1} A_{2}^*\, A_{3}\, e^{i\Delta kz}\label{eq:nlA3}.
 }
 Pri tem je $\chi_{ef}=\mathbf{e}_{3}\cdot\chi:\,\mathbf{e}_{1}\,\mathbf{e}_{2}$.
 Ker ni nujno, da so polarizacijski vektorji vzporedni s koordinatnimi osmi, tudi $\chi_{ef}$ 
 niso čiste kartezične komponente tenzorja nelinearne susceptibilnosti. 
+
 Z $\Delta k$ smo označili razliko valovnih vektorjev
 \beq
 \Delta k = k_{3}-k_{1}-k_{2}.
@@ -277,19 +287,20 @@ ustreza enačbam~(\ref{eq:nlAz}-\ref{eq:nlA3}).
 
 Obravnavajmo optično nelinearno sredstvo, na katerega vpadata valovanji $E_1$ in $E_2$.
 Naj bosta frekvenci vpadnih valovanj enaki $\omega_{1}=\omega_{2}=\omega$, valovanji
-pa razlikujemo zaradi možnosti dveh različnih vpadnih polarizacij. Takrat je $\omega_{3}=2\omega$
+pa razlikujemo zaradi možnosti dveh različnih polarizacij. Takrat je $\omega_{3}=2\omega$
 in dobimo najpreprostejši in tudi najpomembnejši optični nelinearni pojav~\textendash~podvajanje 
 frekvence\index{Optično podvajanje frekvenc}. 
 Pogosto ga uporabljamo za pridobivanje laserskih snopov pri krajših valovnih dolžinah, na primer
 pri Nd:YAG laserju\index{Laser!Nd:YAG}, ko infrardeče izhodno valovanje (1064~nm) 
 pretvorimo v vidno svetlobo zelene barve (532~nm). 
 
-Zanima nas, kako se $A_{3}(z) = A_{2\omega}(z)$ spreminja pri začetnem pogoju $A_{2\omega}(0)=0$.
+Zanima nas, kako se $A_{3}(z) = A_{2\omega}(z)$ spreminja vzdolž nelinearnega kristala
+pri začetnem pogoju $A_{2\omega}(0)=0$.
 Privzemimo še, da se pretvori le manjši del vpadnega energijskega toka,
 tako da sta amplitudi $A_{1}=A_{2}=A_0$ približno konstantni. Tedaj lahko
 enačbo za $A_{3}(z)$ (enačba~\ref{eq:nlAz}) brez težav integriramo do dolžine kristala $L$ in dobimo
 \begin{equation}
-A_{2\omega}(L)=\frac{i\omega}{2}\frac{\chi_{ef} A_0^2}{c_0 n_{2\omega}}
+A_{2\omega}(L)=\frac{i\omega \chi_{ef} A_0^2}{c_0 n_{2\omega}}
 \,e^{-i\Delta kL/2}\, \frac{\sin\left(\frac{\Delta k L}{2}\right)}{\frac{\Delta kL}{2}}L,
 \label{8.9}
 \end{equation}
@@ -297,8 +308,8 @@ kjer smo z $n_{2\omega}$ označili lomni količnik pri dvojni frekvenci.
 Iz tega izraza dobimo izhodno gostoto svetlobnega toka pri dvojni
 frekvenci 
 \begin{equation}
-\langle j_{2\omega}(L) \rangle=\frac{1}{2}\epsilon_{0}\epsilon_{2\omega}c_0|A_3|^2 = 
-\frac{\omega^2 \chi_{ef}^2}{2 n_{2\omega} n_\omega^2c_0^3\varepsilon_0}\langle j_\omega\rangle^2 L^2
+j_{2\omega}(L) =\frac{1}{2}\epsilon_{0}\epsilon_{2\omega}c_0|A_3|^2 = 
+\frac{\omega^2 \chi_{ef}^2}{2 n_{2\omega} n_\omega^2c_0^3\varepsilon_0} j_\omega^2 L^2
 \left(\frac{\sin\left(\frac{\Delta k L}{2}\right)}{\frac{\Delta kL}{2}}\right)^2.
 \label{8.10}
 \end{equation}
