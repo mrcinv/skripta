@@ -205,10 +205,6 @@ pri konstantni amplitudi reši linearni del valovne enačbe.
 
 Naša naloga
 je ugotoviti, kako se zaradi nelinearnosti spreminjajo amplitude posameznih valovanj.
-Dogovorimo se še, da bomo v računu z indeksi 1, 2~... ločevali
-valovanja z različnimi frekvencami in polarizacijami, kartezične komponente
-vektorjev pa bomo označevali z $x$, $y$ in $z$. 
-
 Nastavek za polje, ki bo rešil nelinearno valovno enačbo, je tako
 \beq
 \mathbf{E}(z,t) = \sum_{j=1}^3 \frac{\mathbf{e}_{j}}{2}\left[A_{j}(z)\, 
@@ -233,26 +229,20 @@ Izračunamo še drugi odvod po času
 Nelinearna polarizacija vsebuje produkte polj, ki nihajo z vsemi možnimi
 vsotami in razlikami parov frekvenc $\omega_{1}$, $\omega_{2}$ in
 $\omega_{3}$
-\beq
-\mathbf{P}_{\mathrm{NL}}= \epsilon_{0}\chi^{(2)}:\mathbf{E}\, \mathbf{E}.
-\eeq
-Drugi odvod nelinearnega dela polarizacije po času je tako
-\begin{eqnarray}
-\frac{\partial^2\mathbf{P}_\mathrm{NL}}{\partial t^2}&=&\varepsilon_0 \frac{\partial^2}
-{\partial t^2}\sum_{j'=1}^3 \sum_{j''=1}^3 
+\begin{multline}
+\mathbf{P}_{\mathrm{NL}}= \epsilon_{0}\chi^{(2)}:\mathbf{E}\, \mathbf{E} = \varepsilon_0 \sum_{j'=1}^3 \sum_{j''=1}^3 
  \left( \frac{1}{4} \chi^{(2)}:\mathbf{e}_{j'}\,\mathbf{e}_{j''}\right) 
- A_{j'}(z)\,A_{j''}(z) e^{i(k_{j'}+k_{j''})z-i(\omega_{j'}+\omega_{j''})t}+ \nonumber\\
-&+& \left( \frac{1}{4} \chi^{(2)}:\mathbf{e}_{j'}\,\mathbf{e}_{j''}\right)
-A_{j'}(z)\,A_{j''}^*(z) e^{i(k_{j'}-k_{j''})z-i(\omega_{j'}-\omega_{j''})t}+ \mathrm{k. k.}
+ A_{j'}(z)\,A_{j''}(z) e^{i(k_{j'}+k_{j''})z-i(\omega_{j'}+\omega_{j''})t}+  \\
+\left( \frac{1}{4} \chi^{(2)}:\mathbf{e}_{j'}\,\mathbf{e}_{j''}\right)
+A_{j'}(z)\,A_{j''}^*(z) e^{i(k_{j'}-k_{j''})z-i(\omega_{j'}-\omega_{j''})t}+ \mathrm{k. k.},
 \label{8.5b}
-\end{eqnarray}
+\end{multline}
 Če želimo, da je valovna enačba~(\ref{8.3}) izpolnjena ob vsakem času $t$, se morajo
 ujemati izrazi pri istih časovnih odvisnostih, to je pri istih frekvencah. Izberimo
 najprej člene pri $\omega_j = \omega_3$ in $\omega_3 = \omega_1 + \omega_2$. Dobimo
 \beq
 ik_{3}\mathbf{e}_{3}\frac{dA_{3}}{dz}e^{ik_{3}z}=-\frac{\mu_{0} 
-\varepsilon_0 \omega_{3}^{2}}{4}\left(\chi:\mathbf{e}_{1}\mathbf{e}_{2}A_{1}\,A_{2}e^{i(k_{1}+k_{2})z}
-+ \chi:\mathbf{e}_{2}\mathbf{e}_{1}A_{2}\,A_{1}e^{i(k_{1}+k_{2})z}\right).
+\varepsilon_0 \omega_{3}^{2}}{4}\chi:\mathbf{e}_{1}\mathbf{e}_{2}\,A_{1}\,A_{2}e^{i(k_{1}+k_{2})z}.
 \label{8.7}
 \eeq
 Množimo še obe strani skalarno z $\mathbf{e}_{3}$, upoštevajmo zvezo med $k_{3}$ in $\omega_{3}$, 
@@ -260,11 +250,15 @@ simetrijsko lastnost tenzorja $\chi$ (enačba~\ref{eq:chijk}) in
 ravnajmo podobno še za drugi dve valovanji. Tako dobimo sistem sklopljenih
 enačb za amplitude valovanj v optično nelinearnem sredstvu
 \boxeq{eq:nlAz}{
-\frac{dA_{3}}{dz} &= \frac{i\omega_{3}\chi_{ef}}{2c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
-\frac{dA_{2}}{dz} &= \frac{i\omega_{2}\chi_{ef}}{2c_0 n_2} A_{1}^*\, A_{3}\, e^{i\Delta kz}\\
-\frac{dA_{1}}{dz} &= \frac{i\omega_{1}\chi_{ef}}{2c_0 n_1} A_{2}^*\, A_{3}\, e^{i\Delta kz}\label{eq:nlA3}.
+\frac{dA_{3}}{dz} &= \frac{i\omega_{3}\chi_{ef}}{4c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
+\frac{dA_{2}}{dz} &= \frac{i\omega_{2}\chi_{ef}}{4c_0 n_2} A_{1}^*\, A_{3}\, e^{i\Delta kz}\\
+\frac{dA_{1}}{dz} &= \frac{i\omega_{1}\chi_{ef}}{4c_0 n_1} A_{2}^*\, A_{3}\, e^{i\Delta kz}\label{eq:nlA3}.
 }
-Pri tem je $\chi_{ef}=\mathbf{e}_{3}\cdot\chi:\,\mathbf{e}_{1}\,\mathbf{e}_{2}$.
+Pri tem je 
+\beq
+\chi_{ef}=\mathbf{e}_{3}\cdot\chi:\,\mathbf{e}_{1}\,\mathbf{e}_{2} = 
+\sum_{ijk} \chi_{ijk} e_{3i} e_{1j} e_{2k}.
+\eeq
 Ker ni nujno, da so polarizacijski vektorji vzporedni s koordinatnimi osmi, tudi $\chi_{ef}$ 
 niso čiste kartezične komponente tenzorja nelinearne susceptibilnosti. 
 
@@ -300,7 +294,7 @@ Privzemimo še, da se pretvori le manjši del vpadnega energijskega toka,
 tako da sta amplitudi $A_{1}=A_{2}=A_0$ približno konstantni. Tedaj lahko
 enačbo za $A_{3}(z)$ (enačba~\ref{eq:nlAz}) brez težav integriramo do dolžine kristala $L$ in dobimo
 \begin{equation}
-A_{2\omega}(L)=\frac{i\omega \chi_{ef} A_0^2}{c_0 n_{2\omega}}
+A_{2\omega}(L)=\frac{i\omega \chi_{ef} A_0^2}{2c_0 n_{2\omega}}
 \,e^{-i\Delta kL/2}\, \frac{\sin\left(\frac{\Delta k L}{2}\right)}{\frac{\Delta kL}{2}}L,
 \label{8.9}
 \end{equation}
@@ -308,21 +302,24 @@ kjer smo z $n_{2\omega}$ označili lomni količnik pri dvojni frekvenci.
 Iz tega izraza dobimo izhodno gostoto svetlobnega toka pri dvojni
 frekvenci 
 \begin{equation}
-j_{2\omega}(L) =\frac{1}{2}\epsilon_{0}\epsilon_{2\omega}c_0|A_3|^2 = 
+j_{2\omega}(L) =\frac{1}{2}\epsilon_{0}n_{2\omega}c_0|A_3|^2 = 
 \frac{\omega^2 \chi_{ef}^2}{2 n_{2\omega} n_\omega^2c_0^3\varepsilon_0} j_\omega^2 L^2
 \left(\frac{\sin\left(\frac{\Delta k L}{2}\right)}{\frac{\Delta kL}{2}}\right)^2.
 \label{8.10}
 \end{equation}
 Gostota energijskega toka frekvenčno podvojene svetlobe torej narašča s kvadratom
 intenzitete vpadne svetlobe. Razmerje med energijskim tokom pri podvojeni in osnovni frekvenci oziroma
-izkoristek pretvorbe je potem
+izkoristek pretvorbe je
 \boxeq{8.11}{
 \frac{P_{2\omega}}{P_{\omega}}=
 \frac{\omega^2 \chi_{ef}^2}{2 S n_{2\omega} n_\omega^2c_0^3\varepsilon_0} P_\omega L^2
 \left(\frac{\sin\left(\frac{\Delta k L}{2}\right)}{\frac{\Delta kL}{2}}\right)^2,
 }
-pri čemer je $S$ presek snopa. V izrazih (\ref{8.10}) in (\ref{8.11}) nastopa 
+pri čemer je $S$ presek snopa. 
+
+V izrazih (\ref{8.10}) in (\ref{8.11}) nastopa 
 faktor $\sin^{2}(\Delta kL/2)/(\Delta kL/2)^{2}$ (slika~\ref{fig:shg2}). 
+Zaradi njega je na poti, ki je daljša od $\pi /\Delta k$, stopnja pretvorbe zelo majhna.
 \begin{figure}[h]
 \centering
 \includegraphics[width=8truecm]{slike/08_shg2.png}
@@ -330,7 +327,6 @@ faktor $\sin^{2}(\Delta kL/2)/(\Delta kL/2)^{2}$ (slika~\ref{fig:shg2}).
 pri čemer je $x = \Delta k L/2$.}
 \label{fig:shg2}
 \end{figure}
-Zaradi njega je na poti, ki je daljša od $\pi /\Delta k$, stopnja pretvorbe zelo majhna.
 
 Poglejmo primer. Faktor $\Delta k$ je različen od nič zaradi odvisnosti
 lomnih količnikov od frekvence. V KH$_{2}$PO$_{4}$\index{KDP} je 
@@ -353,8 +349,8 @@ pri osnovni in podvojeni frekvenci. Kako to naredimo,
 bomo spoznali v prihodnjem razdelku.
 
 \begin{definition}
-Pokazali smo, da intenziteta frekvenčno podvojenega valovanja narašča sorazmerno s
-kvadratom debeline kristala. Takšna odvisnost velja le, če je intenziteta valovanja
+Vemo, da intenziteta frekvenčno podvojenega valovanja narašča sorazmerno s
+kvadratom dolžine kristala. Takšna odvisnost velja le, če je intenziteta valovanja
 pri podvojeni frekvenci bistveno manjša od intenzitete vpadnega valovanja, 
 oziroma $A_3 \ll A_1, A_2$. Pokaži, da v nasprotnem primeru intenziteta frekvenčno
 podvojenega valovanja $j_{2\omega}(L)$ narašča kot
@@ -362,8 +358,8 @@ podvojenega valovanja $j_{2\omega}(L)$ narašča kot
 j_{2\omega} (L) = j_0 \tanh^2 \left(\chi_{ef}\omega \sqrt{\frac{j_0}
 {2 n_3 n_1^2 c_0^3 \varepsilon_0}} L\right),
 \eeq
-pri čemer je $j_0$ vpadna intenziteta valovanja pri osnovni frekvenci. Namig: upoštevaj
-ohranitev energije.
+pri čemer je $j_0$ vpadna intenziteta valovanja pri osnovni frekvenci. Namig: upoštevaj, 
+da se celotna energija ohranja.
 \end{definition}
 
 \begin{figure}[h]
@@ -372,7 +368,7 @@ ohranitev energije.
 \caption{Izkoristek pretvorbe v frekvenčno podvojeno valovanje. Če privzamemo, da se
 intenziteta osnovnega žarka ne zmanjšuje, dobimo parabolično odvisnost (rdeča krivulja), ki 
 je dober približek le za majhne intenzitete. Bolj natančen izračun pokaže, da je izkoristek 
-pretvorbe sorazmeren s $\tanh^2(\kappa L)$. Izračun je bil narejen za $\kappa = 0,35$~/cm.}
+pretvorbe sorazmeren s $\tanh^2(\kappa L)$.}
 \label{fig:shg2dep}
 \end{figure}
 
@@ -409,12 +405,12 @@ uporabljamo za določanje nelinearne susceptibilnost kristalov.\index{Makerjeve 
 Poglejmo, kako lahko dosežemo ujemanje faz, ki je nujno za učinkovito optično
 podvajanje frekvenc. Spomnimo se, da je pogoj za ujemanje faz 
 \beq
-\Delta k = k_3 - k_1 -k-2 = k_3^{2\omega} - k_1^{\omega} -k_2^\omega = 
-\frac{2\omega}{c} n_3 - \frac{\omega}{c} n_1- \frac{\omega}{c} n_2 =0.
+\Delta k = k_3 - k_1 -k_2 = k_3^{2\omega} - k_1^{\omega} -k_2^\omega = 
+\frac{2\omega}{c_0} n_3 - \frac{\omega}{c_0} n_1- \frac{\omega}{c_0} n_2 =0.
 \eeq
 Iz tega sledi pogoj za ujemanje faz
 \boxeq{eq:dk0}{
-n_1^\omega + n_2^\omega = n_3^{2\omega}.
+n_1^\omega + n_2^\omega = 2n_3^{2\omega}.
 }
 Da lahko zadostimo gornjemu pogoju, izkoristimo dvojni lom\index{Dvolomnost} v anizotropnih kristalih
 (glej poglavje~\ref{chap:anizotropni}), pri čemer se zaradi enostavnosti omejimo le na optično 
@@ -428,8 +424,8 @@ anizotropni ($n_e>n_o$) enoosni kristal pri enojni in dvojni
 frekvenci v odvisnosti od kota glede na optično os. Rdeča barva nakazuje lomne količnike
 pri vpadni frekvenci, modra pa pri podvojeni. Ekscentričnost elipse za 
 izredni lomni količnik in frekvenčna disperzija sta zaradi večje nazornosti močno 
-pretirani. Opazimo, da je pri nekem kotu $\vartheta$ med smerjo širjenja svetlobe in optično 
-osjo redni lomni količnik pri dvojni frekvenci enak izrednemu količniku pri osnovni
+pretirani. Opazimo, da je pri nekem kotu $\vartheta$ med smerjo širjenja svetlobe $\mathbf{k}$
+in optično osjo $z$ redni lomni količnik pri dvojni frekvenci enak izrednemu količniku pri osnovni
 frekvenci. Če torej izberemo izredno polarizacijo vpadnega valovanja (tako, ki leži
 v ravnini optične osi in smeri širjenja), bo za podvojeno valovanje z redno
 polarizacijo (to je pravokotno na optično os) pri kotu
@@ -446,8 +442,8 @@ ujemanje faz drugega reda za pozitivno (c) in negativno (d) anizotropno snov.}
 \label{fig:dk}
 \end{figure}
 
-Lomni količnik za redno valovanje pri podvojeni frekvenci mora biti enak lomnemu 
-količniku za izredno valovanje pri osnovni frekvenci. Pri tem je lomni količnik
+Lomni količnik za redno polarizirano valovanje pri podvojeni frekvenci mora biti enak lomnemu 
+količniku za izredno polarizirano valovanje pri osnovni frekvenci. Pri tem je lomni količnik
 za izredno valovanje odvisen od kota
 \begin{equation}
 \frac{1}{(n_o^{2\omega})^2} = \frac{1}{(n^{\omega}(\vartheta))^2}=
@@ -470,9 +466,9 @@ Pokaži, da v primeru negativne anizotropije pogoj za ujemanje faz zapišemo kot
 \end{definition}
 
 S slike~(\ref{fig:dk} c in d) lahko razberemo, da obstoja še en primer, pri 
-katerem je izpolnjen pogoj za ujemanje faz. To je primer, pri katerem sta v vpadnem
+katerem je izpolnjen pogoj za ujemanje faz. Poglejmo primer (c), pri katerem sta v vpadnem
 valovanju prisotni obe polarizaciji, redna in izredna, podvojeno valovanje pa
-je spet redni. Tedaj mora biti za ujemanje faz redni lomni količnik
+je redno polarizirano. Tedaj mora biti za ujemanje faz redni lomni količnik
 pri dvojni frekvenci enak povprečju rednega in izrednega lomnega količnika
 pri osnovni frekvenci. Za praktično uporabo je ta izbira, kadar obstoja,
 celo ugodnejša, ker je pri njej kot ujemanja faz bliže $\pi/2$. 
