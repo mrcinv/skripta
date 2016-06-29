@@ -198,56 +198,57 @@ deli, saj valovna enačba (\ref{8.3}) ni linearna. Upoštevali smo tudi,
 da so zaradi nelinearnih pojavov amplitude funkcije kraja, za
 katere pa lahko privzamemo, da se le počasi spreminjajo. Njihova kompleksna vrednost
 dopušča pojav dodatnega faznega zamika. Za valovna
-števila velja $k_{i}^{2}=\epsilon_{i}\omega_i^{2}/c_0^{2}$,
-pri čemer je $\epsilon_{i}$ dielektrična konstanta pri frekvenci
-$\omega_{i}$ in polarizaciji $\mathbf{e}_{i}$. S tem vsako od treh valovanj
+števila velja $k_{n}^{2}=\epsilon_{n}\omega_n^{2}/c_0^{2}$,
+pri čemer je $\epsilon_{n}$ dielektrična konstanta pri frekvenci
+$\omega_{n}$ in polarizaciji $\mathbf{e}_{n}$, indeks $n = 1...3$ pa označuje
+valovanje. S tem vsako od treh valovanj
 pri konstantni amplitudi reši linearni del valovne enačbe. 
 
 Naša naloga
 je ugotoviti, kako se zaradi nelinearnosti spreminjajo amplitude posameznih valovanj.
 Nastavek za polje, ki bo rešil nelinearno valovno enačbo, je tako
 \beq
-\mathbf{E}(z,t) = \sum_{j=1}^3 \frac{\mathbf{e}_{j}}{2}\left[A_{j}(z)\, 
-e^{i(k_{j}z-\omega_{j}t)}+A_{j}^{*}(z)\, e^{-i(k_{j}z-\omega_{j}t)}\right].
+\mathbf{E}(z,t) = \sum_{n=1}^3 \frac{\mathbf{e}_{n}}{2}\left[A_{n}(z)\, 
+e^{i(k_{n}z-\omega_{n}t)}+A_{n}^{*}(z)\, e^{-i(k_{n}z-\omega_{n}t)}\right].
 \label{eq:nlnastavek}
 \eeq
 Izračunajmo najprej 
 \begin{equation}
-\nabla^{2}\mathbf{E}=-\sum_{j=1}^3 \frac{\mathbf{e}_{j}}{2}\left[k_{j}^{2}A_{j}(z)-2ik_{j}
-\frac{dA_{j}(z)}{dz}\right]\, e^{i(k_{j}z-\omega_{j}t)}+\mbox{ k. k.}
+\nabla^{2}\mathbf{E}=-\sum_{n=1}^3 \frac{\mathbf{e}_{n}}{2}\left[k_{n}^{2}A_{n}(z)-2ik_{n}
+\frac{dA_{n}(z)}{dz}\right]\, e^{i(k_{n}z-\omega_{n}t)}+\mbox{ k. k.}
 \label{8.5}
 \end{equation}
 S k. k. smo označili kompleksno konjugirani del. Upoštevali smo,
-da se amplituda $A_{j}(z)$ le počasi spreminja s krajem in smo zato njen
+da se amplituda $A_{n}(z)$ le počasi spreminja s krajem in smo zato njen
 drugi odvod zanemarili.
 Izračunamo še drugi odvod po času 
 \begin{equation}
-\frac{\partial^2\mathbf{E}}{\partial t^2}=\sum_{j=1}^3 \frac{\mathbf{e}_{j}}{2}
-\left(-\omega_j^2\right) \left[A_{j}(z)\, e^{i(k_{j}z-\omega_{j}t)}+\mbox{ k. k.}\right].
+\frac{\partial^2\mathbf{E}}{\partial t^2}=\sum_{n=1}^3 \frac{\mathbf{e}_{n}}{2}
+\left(-\omega_n^2\right) \left[A_{n}(z)\, e^{i(k_{n}z-\omega_{n}t)}+\mbox{ k. k.}\right].
 \label{8.5a}
 \end{equation}
 Nelinearna polarizacija vsebuje produkte polj, ki nihajo z vsemi možnimi
 vsotami in razlikami parov frekvenc $\omega_{1}$, $\omega_{2}$ in
 $\omega_{3}$
 \begin{multline}
-\mathbf{P}_{\mathrm{NL}}= \epsilon_{0}\chi^{(2)}:\mathbf{E}\, \mathbf{E} = \varepsilon_0 \sum_{j'=1}^3 \sum_{j''=1}^3 
- \left( \frac{1}{4} \chi^{(2)}:\mathbf{e}_{j'}\,\mathbf{e}_{j''}\right) 
- A_{j'}(z)\,A_{j''}(z) e^{i(k_{j'}+k_{j''})z-i(\omega_{j'}+\omega_{j''})t}+  \\
-\left( \frac{1}{4} \chi^{(2)}:\mathbf{e}_{j'}\,\mathbf{e}_{j''}\right)
-A_{j'}(z)\,A_{j''}^*(z) e^{i(k_{j'}-k_{j''})z-i(\omega_{j'}-\omega_{j''})t}+ \mathrm{k. k.},
+\mathbf{P}_{\mathrm{NL}}= \epsilon_{0}\chi^{(2)}:\mathbf{E}\, \mathbf{E} =
+\varepsilon_0 \sum_{n=1}^3 \sum_{m=1}^3 
+ \left( \frac{1}{4} \chi^{(2)}:\mathbf{e}_{n}\,\mathbf{e}_{m}\right) 
+ A_{n}(z)\,A_{m}(z) e^{i(k_{n}+k_{m})z-i(\omega_{n}+\omega_{m})t}+  \\
+\left( \frac{1}{4} \chi^{(2)}:\mathbf{e}_{n}\,\mathbf{e}_{m}\right)
+A_{n}(z)\,A_{m}^*(z) e^{i(k_{n}-k_{m})z-i(\omega_{n}-\omega_{m})t}+ \mathrm{k. k.}
 \label{8.5b}
 \end{multline}
 Če želimo, da je valovna enačba~(\ref{8.3}) izpolnjena ob vsakem času $t$, se morajo
 ujemati izrazi pri istih časovnih odvisnostih, to je pri istih frekvencah. Izberimo
-najprej člene pri $\omega_j = \omega_3$ in $\omega_3 = \omega_1 + \omega_2$. Dobimo
+najprej člene pri $\omega_n = \omega_3$ in $\omega_3 = \omega_1 + \omega_2$. Dobimo
 \beq
 ik_{3}\mathbf{e}_{3}\frac{dA_{3}}{dz}e^{ik_{3}z}=-\frac{\mu_{0} 
 \varepsilon_0 \omega_{3}^{2}}{4}\chi:\mathbf{e}_{1}\mathbf{e}_{2}\,A_{1}\,A_{2}e^{i(k_{1}+k_{2})z}.
 \label{8.7}
 \eeq
-Množimo še obe strani skalarno z $\mathbf{e}_{3}$, upoštevajmo zvezo med $k_{3}$ in $\omega_{3}$, 
-simetrijsko lastnost tenzorja $\chi$ (enačba~\ref{eq:chijk}) in 
-ravnajmo podobno še za drugi dve valovanji. Tako dobimo sistem sklopljenih
+Množimo še obe strani skalarno z $\mathbf{e}_{3}$, upoštevajmo zvezo med $k_{3}$ in $\omega_{3}$
+in ravnajmo podobno še za drugi dve valovanji. Tako dobimo sistem sklopljenih
 enačb za amplitude valovanj v optično nelinearnem sredstvu
 \boxeq{eq:nlAz}{
 \frac{dA_{3}}{dz} &= \frac{i\omega_{3}\chi_{ef}}{4c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
@@ -258,6 +259,7 @@ Pri tem je
 \beq
 \chi_{ef}=\mathbf{e}_{3}\cdot\chi:\,\mathbf{e}_{1}\,\mathbf{e}_{2} = 
 \sum_{ijk} \chi_{ijk} e_{3i} e_{1j} e_{2k}.
+\label{eq:chicomp}
 \eeq
 Ker ni nujno, da so polarizacijski vektorji vzporedni s koordinatnimi osmi, tudi $\chi_{ef}$ 
 niso čiste kartezične komponente tenzorja nelinearne susceptibilnosti. 
@@ -308,22 +310,33 @@ j_{2\omega}(L) =\frac{1}{2}\epsilon_{0}n_{2\omega}c_0|A_3|^2 =
 \label{8.10}
 \end{equation}
 Gostota energijskega toka frekvenčno podvojene svetlobe torej narašča s kvadratom
-intenzitete vpadne svetlobe. Razmerje med energijskim tokom pri podvojeni in osnovni frekvenci oziroma
-izkoristek pretvorbe je
+intenzitete vpadne svetlobe. Naj bo $S$ presek snopa. Potem je razmerje med 
+energijskim tokom pri podvojeni in osnovni frekvenci oziroma izkoristek pretvorbe
 \boxeq{8.11}{
 \frac{P_{2\omega}}{P_{\omega}}=
 \frac{\omega^2 \chi_{ef}^2}{2 S n_{2\omega} n_\omega^2c_0^3\varepsilon_0} P_\omega L^2
-\left(\frac{\sin\left(\frac{\Delta k L}{2}\right)}{\frac{\Delta kL}{2}}\right)^2,
+\left(\frac{\sin\left(\frac{\Delta k L}{2}\right)}{\frac{\Delta kL}{2}}\right)^2.
 }
-pri čemer je $S$ presek snopa. 
+
+\begin{remark}
+Pri izpeljavi frekvenčnega podvajanja iz enačb za nelinearne pojave drugega
+reda (enačbe~\ref{eq:nlAz}-\ref{eq:nlA3}) moramo biti pazljivi. 
+Mi smo uporabili splošne enačbe in tako privzeli, da je 
+vpadno valovanje sestavljeno iz dveh ločenih valovanj s frekvencama $\omega$
+z intenzitetama $j_\omega$. Lahko pa frekvenčno podvajanje obravnavamo
+kot en vpadni val s frekvenco $\omega$ in intenziteto $2j_\omega$, 
+ki nelinearno interagira sam s sabo. V tem primeru je zapis enačb za predfaktor
+drugačen, končen rezultat pa seveda enak. 
+\end{remark}
 
 V izrazih (\ref{8.10}) in (\ref{8.11}) nastopa 
 faktor $\sin^{2}(\Delta kL/2)/(\Delta kL/2)^{2}$ (slika~\ref{fig:shg2}). 
 Zaradi njega je na poti, ki je daljša od $\pi /\Delta k$, stopnja pretvorbe zelo majhna.
 \begin{figure}[h]
 \centering
-\includegraphics[width=8truecm]{slike/08_shg2.png}
-\caption{Izkoristek pretvorbe v frekvenčno podvojeno valovanje je sorazmeren s funkcijo $(\sin(x)/x)^2$,
+\includegraphics[width=7truecm]{slike/08_shg2.png}
+\caption{Izkoristek pretvorbe v frekvenčno podvojeno valovanje je 
+sorazmeren s funkcijo $(\sin(x)/x)^2$,
 pri čemer je $x = \Delta k L/2$.}
 \label{fig:shg2}
 \end{figure}
@@ -372,7 +385,7 @@ pretvorbe sorazmeren s $\tanh^2(\kappa L)$.}
 \label{fig:shg2dep}
 \end{figure}
 
-Povsem drugačno obnašanje dobimo v primeru, kadar pogoj ujemanja faz ni izpolnjen in 
+Poglejmo še, kaj se zgodi, kadar pogoj ujemanja faz ni izpolnjen in 
  $\Delta k \neq 0$. Takrat dolžino kristala $L$ v izrazu~(\ref{8.11})
 pokrajšamo in izkoristek pretvorbe z naraščajočim
 $L$ sinusno niha med nič in neko največjo vrednostjo. Tak pojav lahko opazimo, če
@@ -450,12 +463,13 @@ za izredno valovanje odvisen od kota
 \frac{\cos^{2}\vartheta}{(n_{o}^{\omega})^2}+\frac{\sin^{2}\vartheta}{(n_{e}^{\omega})^2}.
 \label{8.12}
 \end{equation}
-Tako dobimo 
+Tako dobimo izraz
 \begin{equation}
 \cos^{2}\vartheta_m=\frac{(n_o^{2\omega})^{-2}-(n_{e}^{\omega})^{-2}}
-{(n_{o}^{\omega})^{-2}-(n_{e}^{\omega})^{-2}}.
+{(n_{o}^{\omega})^{-2}-(n_{e}^{\omega})^{-2}},
 \label{8.13}
 \end{equation}
+iz katerega lahko izračunamo kot $\vartheta_m$, pri katerem pride do ujemanja faz.
 \begin{definition}
 Pokaži, da v primeru negativne anizotropije pogoj za ujemanje faz zapišemo kot
 \beq
@@ -478,7 +492,7 @@ bolj zahteven, saj je treba rešiti enačbo četrte stopnje.
 
 \subsection*{Efektivna susceptibilnost}
 \index{Susceptibilnost!nelinearna, efektivna}
-Na moč podvojenega snopa poleg faznega faktorja vpliva tudi efektivna 
+Na izhodno moč frekvenčno podvojenega snopa poleg faznega faktorja bistveno vpliva tudi efektivna 
 susceptibilnost $\chi_{ef}$, ki jo moramo izračunati za vsak primer posebej. 
 V optično enoosnem kristalu
 je kriterij ujemanja faz izpolnjen na stožcu okoli optične osi, pri čemer je stožec določen 
@@ -493,20 +507,24 @@ $n_e^{\omega} = 1,4603$, $n_o^{2\omega} = 1,5129$ in $n_e^{2\omega} = 1,4709$
 (slika~\ref{fig:dk}\,b). Valovna dolžina osnovnega snopa naj bo 1064~nm. 
 Po podatkih, navedenih zgoraj, dobimo po enačbi~(\ref{8.13a}) za kot ujemanja faz 
 $\vartheta_m = 41,25^\circ$. Nelinearna susceptibilnost ima v tetragonalni
-simetriji $\bar{4}2m$ od nič različne komponente $\chi_\textrm{xyz}$, 
-$\chi_\textrm{zxy}$ in $\chi_\textrm{yzx}$ (glej tabelo~\ref{table:chi}). 
+simetriji $\bar{4}2m$ od nič različne komponente $\chi_\textrm{xyz}$, $\chi_\textrm{xzy}$
+$\chi_\textrm{zxy}$, $\chi_\textrm{zyx}$, $\chi_\textrm{yzx}$ in $\chi_\textrm{yxz}$
+(glej tabelo~\ref{table:chi}). 
 Zaradi poenostavitve privzamemo, da so njihove vrednosti enake. 
-Smer širjenja osnovnega in podvojenega valovanja naj bo (slika \ref{fig:chi})
+
+Naj se osnovno in frekvenčno podvojeno valovanje širita 
+v smeri $\mathbf{s}$. Pri zapisu vektorja si pomagamo 
+s sliko (\ref{fig:chi})
 \begin{equation}
 \mathbf{s}=(\cos\varphi\sin\vartheta_m,\sin\varphi\sin\vartheta_m,\cos\vartheta_m),
 \label{8.14}
 \end{equation}
 kjer je $\varphi$ kot med osjo $x$ in projekcijo $\mathbf{s}$ na ravnino
-$xy$, ki ga je treba še določiti. Poiščemo vrednost kota $\varphi$, pri katerem je 
+$xy$. Naša naloga je poiskati vrednost kota $\varphi$, pri kateri je 
 moč frekvenčno podvojenega valovanja največja.
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{60truemm} 
 \input{slike/08_chi.pdf_tex}
 \caption{K izračunu efektivne susceptibilnosti. Rdeč vektor označuje
 polarizacijo vhodnega valovanja, moder pa polarizacijo frekvenčno podvojenega valovanja.}
@@ -516,17 +534,19 @@ Iz pogoja za ujemanje faz vidimo, da mora biti vpadna svetloba redno polariziran
 izhodna frekvenčno podvojena pa izredno polarizirana. Redna polarizacija je pravokotna na 
 os $z$ (optično os) in hkrati pravokotna na smer vektorja $\mathbf{s}$. Zapišemo jo kot
 \begin{equation}
-\mathbf{e}_o=(\sin\varphi,-\cos\varphi,0),
+\mathbf{e}_o=(\sin\varphi,-\cos\varphi,0).
 \label{8.15}
 \end{equation}
-izredno polarizacijo pa kot
+Izredna polarizacija leži v ravnini, ki jo tvori vektor $\mathbf{s}$ z osjo $z$,
+hkrati pa je pravokotna na vektor $\mathbf{s}$, 
+tako da jo zapišemo kot 
 \begin{equation}
 \mathbf{e}_e=(-\cos \varphi \cos \vartheta_m,-\sin \varphi \cos \vartheta_m ,\sin \vartheta_m).
 \label{8.15a}
 \end{equation}
-Spomnimo se, da efektivno susceptibilnost izračunamo kot
+Spomnimo se, da efektivno susceptibilnost izračunamo kot (enačba~\ref{eq:chicomp})
 \beq
-\chi_{ef} = \sum_{ijk} \chi_{ijk} e_{ei} e_{oj} e_{ok}.
+\chi_{ef} = \sum_{ijk} \chi_{ijk} e_{3i} e_{1j} e_{2k} = \sum_{ijk} \chi_{ijk} e_{ei} e_{oj} e_{ok}.
 \eeq
 Krajši račun pokaže, da je zaradi oblike tenzorja nelinearne susceptibilnosti v izbranem 
 primeru od nič različna le $z$ komponenta nelinearne polarizacije. Dobimo
@@ -539,7 +559,7 @@ P_{\textrm{z}}^{2\omega}=- 2\varepsilon_0\, \chi_{\textrm{zxy}}E_{0}^2\cos\varph
 \sin\vartheta_m = - \varepsilon_0\, \chi_{\textrm{zxy}}E_{0}^2\sin(2\varphi) \sin\vartheta_m.
 \label{8.151}
 \end{equation}
-Nelinearna polarizacija je v tem primeru največja, kadar je $\varphi=\pi/4$.
+Nelinearna polarizacija je največja, kadar je $\varphi=\pi/4$.
 Največji efektivni koeficient $\chi_{ef}$, ki nastopa v izrazih za amplitudo in 
 moč podvojene svetlobe (enačbi~\ref{8.10} in \ref{8.11}), je torej v izbranem primeru 
 \begin{equation}
@@ -563,13 +583,14 @@ ujemanja faz ($\Delta k=0$)
 moč frekvenčno podvojene svetlobe narašča s kvadratom dolžine poti po nelinearnem
 sredstvu. Pretvorba v frekvenčno podvojeno svetlobo je po enačbi~(\ref{8.11}) tem
 učinkovitejša, čim večja je gostota svetlobnega toka pri osnovni frekvenci.
-Zato v praksi vpadno svetlobo vselej fokusiramo.  
+Zato v praksi vpadno svetlobo vselej fokusiramo in tako povečamo gostoto toka.  
 
 Poglejmo, kako se enačbe spremenijo, če je vpadni snop pri osnovni 
 frekvenci Gaussove oblike\index{Gaussov snop!frekvenčno podvajanje}. 
 Rezultat lahko ocenimo, če vzamemo, da je
-efektivna dolžina za pretvorbo $L$ kar dolžina grla; za njim se
-gostota toka zmanjšuje, s tem pa tudi pretvorba v podvojeni snop.
+efektivna dolžina za pretvorbo $L$ kar dolžina grla; izven grla je 
+gostota toka znatno manjša kot v grlu, s tem pa tudi izkoristek pretvorbe v 
+frekvenčno podvojeni snop.
 Dolžina grla je 
 \beq
 L=2z_{0}=\frac{2n \pi w_{0}^{2}}{\lambda} = \frac{n w_0^2 \omega}{c_0}.
@@ -579,7 +600,9 @@ Tako je presek vpadnega snopa
 \beq
 S=\pi w_{0}^{2} = \frac{\pi c_0 L}{n \omega.}
 \eeq
-Daljše ko je grlo, večji je presek snopa in zato manjša intenziteta svetlobe. 
+Daljše ko je grlo in večja dolžina $L$, na kateri pride do frekvenčnega podvajanja, 
+večji je tudi presek snopa $S$ in zato manjša intenziteta svetlobe, kar zmanjša
+učinek pretvorbe v frekvenčno podvojeno valovanje.
 Vstavimo $S$ v enačbo~(\ref{8.11}), upoštevamo ujemanje faz in dobimo 
 \boxeq{8.17}{
 \frac{P_{2\omega}}{P_{\omega}}=
@@ -607,15 +630,15 @@ faz sta poglavitna kriterija pri izbiri snovi za frekvenčno podvajanje.
 \index{Gaussov snop!frekvenčno podvajanje}
 V prejšnjem razdelku smo na hitro grobo ocenili vpliv oblike Gaussovih snopov
 na frekvenčno podvajanje. Naredimo zdaj še natančnejši izračun. Vrnimo se k valovni
-enačbi~(\ref{8.3}) in spet imejmo vpadna snopa pri frekvencah
-$\omega_{1}$ in $\omega_{2}$ in nastajajoč snop pri frekvenci
+enačbi~(\ref{8.3}), vpadna snopa naj bosta pri frekvencah
+$\omega_{1}$ in $\omega_{2}$, nastajajoč snop pa pri frekvenci
 $\omega_{3}=\omega_{1}+\omega_{2}$.
 Podobno kot prej naj ima vsako od polj obliko 
 \beq
 \mathbf{E}_{i}  = \frac{\mathbf{e}_{i}}{2}\left[\tilde{A}_{i}(r,z)\, 
 e^{i(k_{i}z-\omega_{i}t)}+\tilde{A}_{i}^{*}(r,z)\, e^{-i(k_{i}z-\omega_{i}t)}\right],
 \eeq
-pri čemer je $A(r,z)$ zdaj funkcija tako vzdolžne kot tudi prečne koordinate. Privzeli
+pri čemer je $\tilde{A}(r,z)$ zdaj funkcija tako vzdolžne kot tudi prečne koordinate. Privzeli
 bomo, da se vzdolž $z$ le počasi spreminja.
 Zaradi poenostavljenega zapisa vpeljimo novo spremenljivko 
 \beq
@@ -648,9 +671,9 @@ s pripadajočim sistemom konjugiranih enačb. Pri tem je
 S črtico smo označili odvajanje po $z$. Gornji sistem enačb je očitno
 posplošitev sistema enačb~(\ref{eq:nlAz} do \ref{eq:nlA3}) za primer, ko je valovanje odvisno
 tudi od prečne koordinate. Reševanje tega nelinearnega sistema parcialnih
-diferencialnih enačb je seveda v splošnem zelo zapleteno.
+diferencialnih enačb je v splošnem zelo zapleteno.
 
-Poglejmo le najenostavnejši primer frekvenčnega podvajanje, ko je 
+Poglejmo le najenostavnejši primer frekvenčnega podvajanja, ko je 
 $\omega_{3}=2\omega_{1}=2\omega$.
 Vpadna snopa naj bosta enaka in Gaussove oblike~(enačba~\ref{eq:gaussov-snop}), 
 njuna amplituda pa naj bo enaka $A_1$
@@ -662,7 +685,7 @@ njuna amplituda pa naj bo enaka $A_1$
 Privzemimo še, da je izpolnjen pogoj za ujemanje faz\index{Ujemanje faz}, $\Delta k=0$,
 in da je $\psi_{3}$ dovolj majhen, da nam zmanjševanja $\psi_{1}$
 ni treba upoštevati. Tudi za podvojeni snop privzemimo Gaussovo 
-obliko, njegova amplituda $A_3$ pa naj le počasi narašča
+obliko, njegova amplituda $A_3$ pa naj le počasi narašča. Zapišemo ga kot
 \begin{equation}
 \psi_{3}=A_{3}(z)\psi_{3H}(z,r)=A_{3}(z)\frac{1}{1+iz/z_{3}}
 \exp\left(-\frac{r^{2}}{w_{3}^{2}(z)}+\frac{ik_{3}r^{2}}{2R_{3}(z)}\right),
@@ -712,10 +735,10 @@ tako da je izkoristek pri frekvenčnem podvajanju Gaussovega snopa
 \arctan^2 \left( \frac{L}{2z_1}\right) \frac{1}{L/2z_1}.
 \label{8.27}
 \end{equation}
-Funkcija $(\arctan^{2}x)/x$ zavzame največjo vrednost pri 0,64 pri $x =L/2z_1=1,39$.
+Funkcija $(\arctan^{2}x)/x$ zavzame največjo vrednost 0,64 pri $x =L/2z_1=1,39$.
 Pri dani dolžini nelinearnega sredstva $L$ dobimo torej največji
-izkoristek, kadar je $z_{1}=0,36\,L$, kar je malo manj kot smo dobili
-s preprosto oceno $2z_{1}=L$ (enačba~\ref{SHGG}). Največji izkoristek
+izkoristek, kadar je $z_{1}=0,36\,L$, kar je malo manj kot pri
+preprosti oceni $z_{1}=0,5\,L$ (enačba~\ref{SHGG}). Največji izkoristek
 frekvenčnega podvajanja Gaussovih snopov je tako
 \begin{equation}
 \frac{P_{2\omega}}{P_{\omega}}
