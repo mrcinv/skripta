@@ -321,11 +321,11 @@ energijskim tokom pri podvojeni in osnovni frekvenci oziroma izkoristek pretvorb
 \begin{remark}
 Pri izpeljavi frekvenčnega podvajanja iz enačb za nelinearne pojave drugega
 reda (enačbe~\ref{eq:nlAz}-\ref{eq:nlA3}) moramo biti pazljivi. 
-Mi smo uporabili splošne enačbe in tako privzeli, da je 
-vpadno valovanje sestavljeno iz dveh ločenih valovanj s frekvencama $\omega$
-z intenzitetama $j_\omega$. Lahko pa frekvenčno podvajanje obravnavamo
-kot en vpadni val s frekvenco $\omega$ in intenziteto $2j_\omega$, 
-ki nelinearno interagira sam s sabo. V tem primeru je zapis enačb za predfaktor
+Tukaj smo uporabili splošne enačbe in tako privzeli, da je 
+vpadno valovanje sestavljeno iz dveh ločenih valovanj s frekvenco $\omega$
+z intenziteto $j_\omega$. Lahko pa frekvenčno podvajanje obravnavamo
+z enim vpadnim valovanjem s frekvenco $\omega$ in intenziteto $2j_\omega$, 
+ki nelinearno interagira samo s sabo. Takrat je zapis enačb za predfaktor
 drugačen, končen rezultat pa seveda enak. 
 \end{remark}
 
@@ -362,6 +362,7 @@ pri osnovni in podvojeni frekvenci. Kako to naredimo,
 bomo spoznali v prihodnjem razdelku.
 
 \begin{definition}
+\label{deplet}
 Vemo, da intenziteta frekvenčno podvojenega valovanja narašča sorazmerno s
 kvadratom dolžine kristala. Takšna odvisnost velja le, če je intenziteta valovanja
 pri podvojeni frekvenci bistveno manjša od intenzitete vpadnega valovanja, 
@@ -482,8 +483,10 @@ Pokaži, da v primeru negativne anizotropije pogoj za ujemanje faz zapišemo kot
 S slike~(\ref{fig:dk} c in d) lahko razberemo, da obstoja še en primer, pri 
 katerem je izpolnjen pogoj za ujemanje faz. Poglejmo primer (c), pri katerem sta v vpadnem
 valovanju prisotni obe polarizaciji, redna in izredna, podvojeno valovanje pa
-je redno polarizirano. Tedaj mora biti za ujemanje faz redni lomni količnik
-pri dvojni frekvenci enak povprečju rednega in izrednega lomnega količnika
+je redno polarizirano. Tedaj mora biti za ujemanje faz vsota rednega in izrednega
+lomnega količnika pri osnovni frekvenci enaka dvakratniku rednega lomnega 
+količnika pri dvojni frekvenci. Povedano drugače: lomni količnik pri dvojni
+frekvenci mora biti enak povprečju rednega in izrednega lomnega količnika
 pri osnovni frekvenci. Za praktično uporabo je ta izbira, kadar obstoja,
 celo ugodnejša, ker je pri njej kot ujemanja faz bliže $\pi/2$. 
 Ujemanje faz je zato manj občutljivo na majhna odstopanja v kotu ali na temperaturne
@@ -524,7 +527,7 @@ $xy$. Naša naloga je poiskati vrednost kota $\varphi$, pri kateri je
 moč frekvenčno podvojenega valovanja največja.
 \begin{figure}[h]
 \centering
-\def\svgwidth{60truemm} 
+\def\svgwidth{70truemm} 
 \input{slike/08_chi.pdf_tex}
 \caption{K izračunu efektivne susceptibilnosti. Rdeč vektor označuje
 polarizacijo vhodnega valovanja, moder pa polarizacijo frekvenčno podvojenega valovanja.}
@@ -554,11 +557,12 @@ primeru od nič različna le $z$ komponenta nelinearne polarizacije. Dobimo
 \chi_{ef} = \chi_{\textrm{zxy}} e_{ez} e_{ox} e_{oy} + \chi_{\textrm{zyx}} e_{ez} e_{oy} e_{ox}
 \eeq
 in
-\begin{equation}
-P_{\textrm{z}}^{2\omega}=- 2\varepsilon_0\, \chi_{\textrm{zxy}}E_{0}^2\cos\varphi\sin\varphi
-\sin\vartheta_m = - \varepsilon_0\, \chi_{\textrm{zxy}}E_{0}^2\sin(2\varphi) \sin\vartheta_m.
+\begin{eqnarray}
+P_{\textrm{z}}^{2\omega}&=&- 2\varepsilon_0\, \chi_{\textrm{zxy}}E_{0}^2\cos\varphi\sin\varphi
+\sin\vartheta_m \nonumber \\
+&=& - \varepsilon_0\, \chi_{\textrm{zxy}}E_{0}^2\sin(2\varphi) \sin\vartheta_m.
 \label{8.151}
-\end{equation}
+\end{eqnarray}
 Nelinearna polarizacija je največja, kadar je $\varphi=\pi/4$.
 Največji efektivni koeficient $\chi_{ef}$, ki nastopa v izrazih za amplitudo in 
 moč podvojene svetlobe (enačbi~\ref{8.10} in \ref{8.11}), je torej v izbranem primeru 
@@ -716,8 +720,8 @@ Gornjo enačbo seveda brez težav integriramo. Naj bo grlo vpadnega
 snopa ravno na sredini nelinearnega sredstva, tako da integriramo
 od $-L/2$ do $L/2$
 \begin{eqnarray}
-A_{3}(L) & = & \frac{i\kappa}{4}A_{1}^{2}\int_{-L/2}^{L/2}\frac{dz}{1+iz/z_1} = \nonumber \\
- & = & \frac{\kappa}{4}A_{1}^{2}z_{1}\ln\frac{1+i\frac{L}{2z_{1}}}{1-i\frac{L}{2z_{1}}}= \nonumber \\
+A_{3}(L) & = & \frac{i\kappa}{4}A_{1}^{2}\int_{-L/2}^{L/2}\frac{dz}{1+iz/z_1} 
+  = \frac{\kappa}{4}A_{1}^{2}z_{1}\ln\frac{1+i\frac{L}{2z_{1}}}{1-i\frac{L}{2z_{1}}}= \nonumber \\
  & = & \frac{\kappa}{2}A_{1}^{2}z_{1}\arctan\frac{L}{2z_{1}}\;.
 \end{eqnarray}
 Moč Gaussovega snopa je
@@ -758,7 +762,8 @@ optično parametrično ojačevanje, pri katerem nelinearne optične pojave
 izkoristimo za ojačevanje optičnih signalov. Imejmo vhodni
 signal pri frekvenci $\omega_{1}$, ki ga želimo ojačati, in močno črpalno valovanje
 pri frekvenci $\omega_{3}>\omega_{1}$. Zaradi nelinearnosti v snovi se 
-valovanje pri $\omega_{1}$ ojačuje, valovanje pri $\omega_{3}$ zmanjšuje, hkrati pa zaradi
+intenziteta valovanja pri $\omega_{1}$ povečuje, 
+intenziteta valovanja pri $\omega_{3}$ zmanjšuje, hkrati pa zaradi
 ohranitve energije nastaja dodatno valovanje pri razliki frekvenc
 $\omega_{2}=\omega_{3}-\omega_{1}$. Proces parametričnega ojačevanja 
 si torej lahko predstavljamo kot pretvorbo enega fotona pri frekvenci 
@@ -773,7 +778,7 @@ v infrardečem območju.
 \label{fig:opa2}
 \end{figure}
 
-Izhajajmo iz splošnih enačb za nelinearne optične pojave drugega reda (enačbe~\ref{eq:nlAz} do
+Izhajamo iz splošnih enačb za nelinearne optične pojave drugega reda (enačbe~\ref{eq:nlAz} do
 \ref{eq:nlA3}). 
 \begin{eqnarray}
 \frac{dA_{3}}{dz} &=& \frac{i\omega_{3}\chi_{ef}}{4c_0 n_3} A_{1}\, A_{2}\, e^{-i\Delta kz}\\
@@ -781,13 +786,14 @@ Izhajajmo iz splošnih enačb za nelinearne optične pojave drugega reda (enačb
 \frac{dA_{1}}{dz} &=&\frac{i\omega_{1}\chi_{ef}}{4c_0 n_1} A_{2}^*\, A_{3}\, e^{i\Delta kz}.
 \label{eq:opaA}
 \end{eqnarray}
-Privzemimo, da je črpalno valovanje vselej dosti močnejši od ostalih dveh,
-$A_{3}\gg A_{1}$, $A_{2}$ in približno konstanten $A_3 = A_{30}$.
+Privzemimo, da je črpalno valovanje vselej dosti močnejše od drugih dveh
+($A_{3}\gg A_{1}$, $A_{2}$) in njegova jakost približno konstantna $A_3 = A_{30}$.
 Poskrbimo še, da je izpolnjen pogoj za ujemanje faz, $\Delta k=0$, 
 začetna pogoja pa zapišemo kot $A_{1}(z=0)=A_{10}$ in $A_{2}(z=0)=0$. Ko vse to upoštevamo,
 dobimo dve sklopljeni enačbi
 \begin{eqnarray}
-\frac{dA_{1}}{dz} &=& \frac{i\omega_{1}\chi_{ef}}{4c_0 n_1} A_{2}^*\, A_{30}\label{eq:opaA1} \qquad \mathrm{in} \\
+\frac{dA_{1}}{dz} &=& \frac{i\omega_{1}\chi_{ef}}{4c_0 n_1} A_{2}^*\, A_{30}\label{eq:opaA1} 
+\qquad \mathrm{in} \\
 \frac{dA_{2}^*}{dz} &=& -\frac{i\omega_{2}\chi_{ef}}{4c_0 n_2} A_{1}\, A_{30}^*.
 \label{eq:opaA2}
 \end{eqnarray}
@@ -802,37 +808,36 @@ in podobno za $A_2$
 \frac{d^2 A_2}{d z^2} = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
 {16 c_0^2 n_1 n_2} A_2 = \kappa^2 A_2.
 \eeq
-Ob upoštevanju začetnih pogojev dobimo
+Ob upoštevanju začetnih pogojev dobimo rešitev za naraščanje amplitude signalnega žarka
+z začetno amplitudo $A_{10}$
 \boxeq{eq:opa}{
-A_1 = A_{10} \cosh (\kappa L) \\
-A_2 = A_{20} \sinh (\kappa L)\label{eq:opan},
+A_1 = A_{10} \cosh (\kappa L).
 }
-pri čemer je $L$ dolžina nelinearnega sredstva, 
+Hkrati z njim narašča tudi amplituda dodatnega nedejavnega ({\it idle}) žarka, ki nastane
+med procesom ojačanja
+\boxeq{eq:opan}{
+A_2 = A_{20} \sinh (\kappa L).
+}
+V gornjih enačbah je $L$ dolžina nelinearnega sredstva, 
 \beq
 \kappa^2 = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
-{16 c_0^2 n_1 n_2} \quad \mathrm{in} \quad
-A_{20} = i \sqrt{\frac{\omega_2 n_1}{\omega_1 n_2}} A_{10}.
+{16 c_0^2 n_1 n_2} 
 \label{opakapa}
 \eeq
-V začetku torej intenziteti obeh valovanj naraščata približno eksponentno na račun črpalnega
+in
+\beq
+A_{20} = i \sqrt{\frac{\omega_2 n_1}{\omega_1 n_2}} A_{10}.
+\label{opakapaA}
+\eeq
+Na začetku intenziteti obeh valovanj naraščata približno eksponentno na račun črpalnega
 valovanja. Ko postane njuna intenziteta znatna in se začne $A_3$ zmanjševati, je treba to seveda
-tudi upoštevati pri izračunu. 
+tudi upoštevati pri izračunu. V tem primeru je treba rešiti bolj zahteven sistem treh 
+sklopljenih enačb, podobno~\textendash~a še bolj zapleteno~\textendash~kot v nalogi~(\ref{deplet}).
 
 \begin{definition}
 Pokaži, da sta izraza za amplitudi polji $A_1$ in $A_2$ (enačbi~\ref{eq:opa} in~\ref{eq:opan})
-rešitvi sklopljenih enačb~(\ref{eq:opaA1}) in (\ref{eq:opaA2}) ob vrednosti
-parametrov $A_{20}$ in $\kappa$, kot sta zapisana v enačbah~(\ref{opakapa}).
+rešitvi sklopljenih enačb~(\ref{eq:opaA1}) in (\ref{eq:opaA2}) ob parametrih $A_{20}$ in $\kappa$, kot sta zapisana v enačbah~(\ref{opakapa}) in (\ref{opakapaA}).
 \end{definition}
-
-\begin{figure}[h]
-\centering
-\def\svgwidth{80truemm} 
-\input{slike/08_opagraf.pdf_tex}
-\caption{Normirani intenziteti ojačanega žarka in dodatnega žarka, ki nastane zaradi ohranitve
-energije. Naraščajoči funkciji sta seveda samo približek, ki velja, dokler je ojačanje majhno. Izračun
-je narejen za $\kappa = 0,35$~/cm.}
-\label{fig:opagraf}
-\end{figure}
 
 Do zdaj smo vedno privzeli, da je izpolnjen pogoj ujemanja faz \index{Ujemanje faz}
 in $\Delta k=k_{3}-k_{1}-k_{2}=0$. 
@@ -842,13 +847,23 @@ tako da velja $\omega_{3}n_{3}=\omega_{1}n_{1}+\omega_{2}n_{2}$.
 
 Lahko na primer vzamemo izredno polarizacijo za črpalno valovanje
 in redni polarizaciji za obe ojačevani valovanji, podobno kot pri
-podvajanju frekvence. Tedaj mora veljati 
+podvajanju frekvence. Tedaj mora biti izpolnjen naslednji pogoj 
 \begin{equation}
 \left[\left(\frac{\cos\vartheta_{m}}{n_{o}^{\omega_{3}}}\right)^{2}
 +\left(\frac{\sin\vartheta_{m}}{n_{e}^{\omega_{3}}}\right)^{2}\right]^{-1/2}=
 \frac{\omega_{1}}{\omega_{3}}n_{o}^{\omega_{1}}+\frac{\omega_{2}}{\omega_{3}}n_{o}^{\omega_{2}}.
 \label{8.34}
 \end{equation}
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/08_opagraf.pdf_tex}
+\caption{Normirani intenziteti ojačanega žarka in dodatnega žarka, ki nastane zaradi ohranitve
+energije. Naraščajoči funkciji sta seveda samo približek, ki velja, dokler je ojačanje majhno in 
+se intenziteta črpalnega žarka ne zmanjšuje znantno.}
+\label{fig:opagraf}
+\end{figure}
 
 \begin{definition}
 Obravnavali smo optično parametrično ojačevanje, ko je bil izpolnjen kriterij za ujemanje faz. 
@@ -866,25 +881,26 @@ pri čemer sta
 A_{20} = i \sqrt{\frac{\omega_2 n_1}{\omega_1 n_2}} \sqrt{1 + \frac{\Delta k^2}{4 \kappa^2}}
 ~A_{10}.
 \eeq
-Hitro uvidimo, da so gornje enačbe v limitnem primeru $\Delta k = 0$ enake prej zapisanim
+Hitro uvidimo, da so gornje enačbe v limitnem primeru $\Delta k = 0$ enake 
 enačbam~(\ref{eq:opa}, \ref{eq:opan} in \ref{opakapa}).
 \end{definition}
 
-Za konec še ocenimo koeficient ojačanja v nelinearnem kristalu LiNbO$_{3}$\index{LiNbO$_3$}
-, v katerem želimo
+Za konec ocenimo koeficient ojačanja v nelinearnem kristalu 
+LiNbO$_{3}$\index{LiNbO$_3$}, v katerem želimo
 ojačati svetlobo z valovno dolžino $\lambda = 1~\mu$m. Črpajmo z laserjem z valovno dolžino 
-okoli 500~nm in gostoto svetlobnega toka 5~MW/cm$^{2}$. Lomni količnik snovi je približno 
+okoli 500~nm in gostoto svetlobnega toka 5~MW/cm$^{2}$. Lomni količnik snovi je 
 $n = 2,2$, $\chi_{ef} = 5$~pm/V. Vstavimo podatke v enačbo~(\ref{opakapa}) in dobimo vrednost
 $\kappa \sim 0,15$/cm. Faktor ojačanja vpadne intenzitete svetlobe v 1~cm dolgem kristalu je 
-tako približno $2~\%$. 
+tako le približno $2~\%$. 
 
-\subsection*{Optični parametrični oscilator}
+\subsection*{Optični parametrični oscilator (OPO)}
 \index{Optični parametrični oscilator}
-Gornji izračun kaže, da optično parametrično ojačevanje pri prehodu skozi kristal ni prav veliko, 
-kljub dokaj močnemu črpalnemu valovanju. Zato je smiselno, da svetloba skozi ojačevalno 
-sredstvo preide večkrat. To naredimo tako, da optično ojačevalno sredstvo zapremo v optični 
+Gornji izračun kaže, da optično parametrično ojačevanje pri prehodu skozi kristal ni prav veliko
+kljub dokaj močnemu črpalnemu žarku. Zato je smiselno, da svetloba skozi ojačevalno 
+sredstvo preide večkrat in se postopoma ojačuje. To naredimo tako, 
+da optično ojačevalno sredstvo zapremo v optični 
 resonator\index{Resonator!parametrični oscilator}
-in signal se ob vsakem obhodu ojača. Dobimo t. i. optični parametrični oscilator. 
+in signal se ob vsakem obhodu ojača. Dobimo t.\,i.\,optični parametrični oscilator. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
@@ -893,26 +909,26 @@ in signal se ob vsakem obhodu ojača. Dobimo t. i. optični parametrični oscila
 zapremo med resonatorja, da se signalni žarek ($\omega_1$) ob vsakem preletu ojači.}
 \label{fig:opo}
 \end{figure}
+
 V optičnemu resonatorju je odbojnost zrcal za črpalni žarek ($\omega_3$) zelo majhna, 
-odbojnost za ojačani žarek pa je navadno blizu ena. Kadar 
-je intenziteta črpalnega valovanja pri $\omega_3$ dovolj velika, da je parametrično
-ojačevanje na obhod večje od izgub v resonatorju, dobimo lasersko nihanje. Valovanje, 
-ki se v parametričnem resonatorju ojačuje, nastane spontano, prav tako dodatno valovanje, ki 
-zagotavlja ohranitev energije. Njuni frekvenci sta 
-dodatno določeni s pogojem za ujemanje faz $ k_3 - k_1 - k_2 = 0$, 
+odbojnost za ojačani žarek pa blizu ena. Valovanje pri $\omega_1$,
+ki se v parametričnem oscilatorju ojačuje, nastane spontano, prav tako valovanje pri 
+$\omega_2 = \omega_3 -\omega_1$. Njuni frekvenci sta dodatno določeni s pogojem za 
+ujemanje faz $ k_3 - k_1 - k_2 = 0$, 
 hkrati pa mora ojačevano nihanje sovpadati z lastnim nihanjem resonatorja. 
 S sukanjem ojačevalnega kristala lahko na ta način spreminjamo
 ojačano frekvenco in dobimo nastavljiv izvor svetlobe, navadno infrardeče. 
 
-Izračunajmo prag za delovanje simetričnega optičnega parametričnega oscilatorja. Signal z močjo 
+Za delovanje oscilatorja biti jakost črpalnega žarka tako velika, da je parametrično 
+ojačevanje na obhod večje od izgub. Izračunajmo za primer prag simetričnega oscilatorja. Signal z močjo 
 $P_0$ se ob prehodu skozi ojačevalno sredstvo ojača (enačba~\ref{eq:opa}) in dobimo
 \beq
 P_1 = P_0 \cosh^2 (\kappa L),
 \eeq
 hkrati pa se zaradi delno prepustnih zrcal z odbojnostjo $R$ intenziteta žarka zmanjšuje. 
 Pri tem ne pozabimo, da je pogoj ujemanja faz izpolnjen le v eni smeri in se svetloba
-ojačuje le enkrat na celoten obhod. Ob preletu v drugo smer je $\Delta k \neq 0$ in žarek se ne ojačuje.
-Prag delovanja bo določen s pogojem, da je ojačanje ravno enako izgubam in dobimo pogoj
+ojačuje le enkrat na celoten obhod. Ob preletu v drugo smer je namreč $\Delta k \neq 0$ in žarek se ne ojačuje.
+Moč žarka po obhodu $P_2$ je enaka začetni moči $P_0$, saj je pri pragu ojačanje ravno enako izgubam 
 \beq
 P_2 = R^2 P_1 = R^2 P_0 \cosh^2 (\kappa L) = P_0
 \eeq
@@ -928,27 +944,27 @@ praga $P_{\omega_3} = 5$~W.
 
 \begin{remark}
 Optični parametrični oscilator torej oddaja svetlobo, podobno kot laser. Tudi sicer
-sta si do neke mere podobna: oba sistema imata nek močen črpalni mehanizem, oba sistema
-sta sestavljena iz resonatorja, v katerem se žarek velikokrat odbije in ojača, in oba
-oddajata svetlobo pri točno določeni valovni dolžini. Vendar
+sta si do neke mere podobna: oba sistema potrebujeta močen črpalni mehanizem, oba sistema
+sta sestavljena iz resonatorja, v katerem se žarek velikokrat odbije in postopoma ojača,
+in oba oddajata koherentno svetlobo pri točno določeni valovni dolžini. Vendar
 je med parametričnim oscilatorjem in laserjem velika razlika. Pri laserju pride do
 ojačanja svetlobe zaradi obrnjene zasedenosti stanj, pri oscilatorju pa 
 zaradi nelinearnega optičnega pojava. Ker pri oscilatorju energija ni shranjena v
 snovi, ampak se ojača sproti, je zelo pomembno, da sunek črpalnega laserja vpade
-na kristal istočasno kot ojačevan žarek. Velika prednost oscilatorjev pa je zvezno 
-nastavljiva frekvenca delovanja v zelo širokem frekvenčnem območju.  
+na kristal istočasno kot ojačevan žarek. Velika prednost oscilatorjev pred laserji 
+je zvezno nastavljiva frekvenca delovanja v zelo širokem frekvenčnem območju.  
 \end{remark}
 
 \section{Optično usmerjanje in teraherčno valovanje}
 \index{Optično usmerjanje}
 \index{Teraherčno valovanje}
-Ko smo na obravnavali nelinearne optične pojave drugega reda, smo zapisali
-različne frekvence, pri katerih dobimo izhodni signal (slika~\ref{fig:nl2s}). Opazimo, 
-da dobimo tudi valovanje pri frekvenci nič, to je statično električno polje. Iz analogije
+Ko smo obravnavali nelinearne optične pojave drugega reda, smo zapisali
+različne frekvence, ki so vsebovane v izhodnem signalu (slika~\ref{fig:nl2}). Eno izmed
+izhodnih valovanj ima tudi frekvenco enako nič, kar pomeni, da je to statično električno polje. Iz analogije
 z elektronskimi vezji, kjer izmenično napetost z usmernikom spremenimo v enosmerno napetost, 
-imenujemo pojav optično usmerjanje, saj iz svetlobnega valovanja dobimo statično polje.
-Sunek svetlobe z vršno močjo sunka svetlobe nekaj MW tako lahko povzroči 
-nekaj deset mV napetosti v smeri prečno na svetlobo. 
+pojav imenujemo optično usmerjanje, saj iz svetlobnega valovanja dobimo statično polje. Tako statično 
+polje navadno ni veliko, saj sunek svetlobe z vršno močjo nekaj MW tipično povzroči 
+nekaj deset mV napetosti v smeri prečno na smer potovanja svetlobe. 
 
 \begin{definition}
 Pokaži, da je napetost, ki se pojavi pri optičnem usmerjanju, približno enaka
@@ -960,7 +976,7 @@ Namig: nelinearen kristal obravnavaj kot ploščati kondenzator. Oceni še napet
 $\chi = 3$~pV/m, $P_0 = 1$~MW, $n = 2,2$ in $a = 5$~mm. 
 \end{definition}
 
-Precej zanimivejše pojave dobimo, če na nelinearen kristal posvetimo z ultrakratkimi 
+Precej bolj uporaben pojav dobimo, če na nelinearen kristal posvetimo z ultrakratkimi 
 sunki svetlobe, tipično okoli ps ali krajšimi. Spomnimo se, da je povsem monokromatsko valovanje
 lahko samo tako, ki ima neskončnen koherenčni čas in je časovno neomejeno 
 (\ref{eq:spektralna-sirina-zveza}). 
@@ -968,7 +984,7 @@ lahko samo tako, ki ima neskončnen koherenčni čas in je časovno neomejeno
 sunki svetlobe širši spekter valovanja. Ko z ultrakratkim sunkom osvetlimo optično 
 nelinearen kristal, v kristal vstopajo vse frekvence z danega intervala $\omega \pm \Delta \omega$.
 Optično usmerjanje ni več popolno, saj se frekvence ne odštejejo povsem, ampak dobimo 
-valovanje pri frekvencah, ki so podobne širini spektra. Ocenimo jih. 
+namesto statičnega polja valovanje pri frekvencah, ki so podobne širini spektra. Ocenimo jih. 
 
 \begin{figure}[h]
 \centering
