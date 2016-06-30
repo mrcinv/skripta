@@ -1082,12 +1082,14 @@ možne načine in dobimo tri enake člene. Sledi
 \beq
 \frac{1}{2}\mathbf{P}_{\omega,\mathrm{NL}} = 3 \frac{1}{8} A A^* \left( 
 \varepsilon_0 \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin \mathbf{e} \right) \mathbf{A}.
+\label{pomega}
 \eeq
 Celotna polarizacija je
 \beq
 \mathbf{P}=
 \epsilon_{0} \chi^{(1)}\cdot \mathbf{E}+\frac{3}{4} |A|^2 \left( 
 \varepsilon_0 \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin \mathbf{e} \right) \mathbf{E}.
+\label{eq:ptnl}
 \eeq
 Z upoštevanjem zveze med amplitudo polja in povprečno gostoto energijskega toka (enačba~\ref{eq:j})
 dobimo
@@ -1387,6 +1389,7 @@ gostote svetlobnega toka po $x$. Integriramo in dobimo
 \begin{equation}
 \int j_sdx =\frac{2}{\kappa}\,\eta^{2}\int_{-\infty}^{\infty}\frac{dx}
 {\cosh^{2}\eta x}=\frac{4\eta}{\kappa}.
+\label{eq:solj}
 \end{equation}
 Moč stacionarnega snopa~\textendash~solitona~\textendash~v dveh dimenzijah je 
 torej obratno sorazmerna s širino snopa $1/\eta$. Zato tudi pri poljubno veliki moči 
@@ -1457,7 +1460,7 @@ dohiteval sprednji del, ki se zaradi nižje frekvence premika počasneje. Tako
 učinek disperzije ravno izniči učinek nelinearnosti in signal ohranja obliko. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/08_Chirp.pdf_tex}
 \caption{Čričkanje sunkov svetlobe zaradi nelinearnega pojava. Z ustrezno disperzijo lahko
 čričkanje izničimo in dobimo sunek svetlobe, ki oblike ne spreminja~\textendash~soliton.}
@@ -1465,66 +1468,113 @@ učinek disperzije ravno izniči učinek nelinearnosti in signal ohranja obliko.
 \end{figure}
 
 \section{*Izpeljava optičnih solitonov}
-Za matematični opis optičnih solitonov izhajamo iz valovne enačbe, pri čemer je 
-$P_\textrm{NL}$ nelinearna polarizacija tretjega reda (enačba~\ref{eq:nlin3}). 
-Zapišemo enačbo v skalarni obliki
+Za matematični opis optičnih solitonov izhajamo iz valovne enačbe (enačba~\ref{8.3}), ki
+jo zapišemo v skalarni obliki
 \begin{equation}
-\nabla^{2}E-\frac{1}{c_0^{2}}{\frac{\partial^2 E}{\partial t^2}}=
-\mu_{0}{\frac{\partial^2(P_{\textrm{L}}+P_{\textrm{NL}})}{\partial t^2}}.
+\nabla^{2}E-\frac{n^2}{c_0^{2}}{\frac{\partial^2 E}{\partial t^2}}=
+\mu_{0}{\frac{\partial^2P_{\textrm{NL}}}{\partial t^2}},
 \end{equation}
+pri čemer je 
+$P_\textrm{NL}$ nelinearna polarizacija tretjega reda (enačba~\ref{eq:nlin3}).
+Namesto v časovni domeni je enačbo prikladnejše reševati v frekvenčni domeni, zato
+namesto $E$ in $P_{\mathrm{NL}}$ vpeljemo Fourierevi transformiranki $\tilde{E}$ in $\tilde{P}$ in dobimo
+\begin{equation}
+\nabla^{2}\tilde{E}+\frac{n^2}{c_0^{2}}\omega^2 \tilde{E}=
+- \mu_{0}\omega^2 \tilde{P}.
+\end{equation}
+Gornjo enačbo rešujemo z nastavkoma
+\beq
+\tilde{E} = \tilde{A} (z,\omega - \omega_0) e^{ik_0z}\quad \textrm{in} \quad 
+\tilde{P} = \tilde{B} (z,\omega - \omega_0) e^{ik_0z},
+\eeq
+pri čemer je $\omega_0$ osrednja frekvenca svetlobnega sunka in $k_0 = \omega_0 n/c_0$. Vpeljemo še
+$\Omega =\omega - \omega_0$ in dobimo 
+\beq
+\left(\frac{\partial^2}{\partial z^2}+k^2\right)\tilde{A}(z,\Omega) e^{ik_0z} =
+- \mu_{0}\omega^2 \tilde{B} (z,\Omega) e^{ik_0z}.
+\eeq
+Da lahko rešimo to enačbo, naredimo nekaj približkov. Ker je $\omega \approx \omega_0$, na desni strani
+enačbe nadomestimo frekvenco z osrednjo frekvenco. Poleg tega upoštevamo, da se amplituda 
+glede na valovno dolžino le počasi spreminja, zato drugi odvod zanemarimo in dobimo
+\beq
+2 i k_0 \frac{\partial \tilde{A}}{\partial z} + (k^2-k_0^2) \tilde{A} = - \mu_{0}\omega_0^2 \tilde{B}.
+\eeq
+Če je disperzija šibka, lahko zapišemo $k^2 - k_0^2$ kot razliko kvadratov, $k(\omega_0 + \Omega)$ pa 
+razvijemo v Taylorjevo vrsto okoli osrednje frekvence $\omega_0$ do tretjega člena. Dobimo
+\beq
+k^2 - k_0^2 \approx 2k_0 (k-k_0) \approx 2k_0 (k'\Omega + \frac{1}{2}k''\Omega^2),
+\eeq
+pri čemer $'$ označuje odvod po frekvenci, in prepišemo enačbo v 
+\beq
+2 i k_0 \frac{\partial \tilde{A}}{\partial z} + 2k_0(k'\Omega + \frac{1}{2}k''\Omega^2) \tilde{A} 
+= - \mu_{0}\omega_0^2 \tilde{B}.
+\eeq
+Vrnimo se v časovno domeno, tako da naredimo inverzno Fourierevo transformacijo. Naj bo 
+$A(z,t)$ kompleksna amplituda električne poljske jakosti in inverzna transformiranka 
+funkcije $\tilde{A}(z,\Omega)$, $B(z,t)$ pa amplituda polarizacije in inverzna transformiranka 
+funkcije $\tilde{B}(z,\Omega)$.
+Sledi
+\begin{equation}
+i (\frac{\partial}{\partial z}+\frac{1}{v_{g}}\frac{\partial}{\partial t})A-
+\frac{1}{2}\frac{d^{2}k}{d\omega^{2}}\,\frac{\partial^{2}A}{\partial t^{2}}=
+-\frac{\mu_0\omega_0^2}{2 k_0}B,
+\label{8.93}
+\end{equation}
+pri čemer smo z $v_g = d\omega/dk = 1/k'$ označili grupno hitrost.
+Vpeljimo novo spremenljivko 
+\begin{equation}
+\tau=t-\frac{z}{v_{g}},
+\end{equation}
+s katero opišemo obliko sunka $A_S(z,\tau)$, kot ga vidi opazovalec, ki se giblje
+z grupno hitrostjo skupaj s sunkom. Uporabimo pravilo verižnega odvajanja 
+\beq
+\frac{\partial A}{\partial z} = \frac{\partial A_S}{\partial z} + \frac{\partial A_S}{\partial \tau}
+\frac{\partial \tau}{\partial z}
+= \frac{\partial A_S}{\partial z} -\frac{1}{v_g} \frac{\partial A_S}{\partial \tau}
+\eeq
+in 
+\beq
+\frac{\partial A}{\partial t} = \frac{\partial A_S}{\partial z}\frac{\partial z}{\partial \tau}+
+\frac{\partial A_S}{\partial \tau}\frac{\partial \tau}{\partial t} 
+= \frac{\partial A_S}{\partial \tau} \qquad \textrm{in} \qquad 
+\frac{\partial^2 A}{\partial t^2} = \frac{\partial^2 A_S}{\partial\tau^2}.
+\eeq
+Vstavimo še amplitudo nelinearne polarizacije (enačba~\ref{eq:ptnl})
+\beq
+B = \frac{3}{4}\varepsilon_0\chi |A|^2 A.
+\eeq
+in enačba~(\ref{8.93}) dobi obliko 
+\begin{equation}
+i\,\frac{\partial A_S}{\partial z}-\frac{1}{2}\frac{d^{2}k}{d\omega^{2}}\,\frac{\partial^{2}A_S}{\partial\tau^{2}}+\kappa\left|A_S\right|^{2}A_S=0,
+\label{8.95}
+\end{equation}
+pri čemer je 
+\beq
+\kappa = \frac{3\omega_0\chi}{8c_0 \tilde{n}}.
+\eeq
+Gornja enačba ni nič drugega kot nelinearna Schr\"odingerjeva enačba, ki smo jo 
+zapisali že pri izpeljavi krajevnih solitonov~(\ref{8.84}). Enačbi se razlikujeta v tem, da
+ima vlogo prečne koorindate $x$ tukaj čas $\tau$ in rešitve nimajo več konstantnega premera,
+ampak imajo konstantno dolžino sunka. Stacionarne reštive pa dobimo le v primeru, kadar je  $d^{2}k/d\omega^{2}<0$ oziroma kadar ima drugi odvod nasprotni predznak od nelinearnega lomnega količnika. 
+Kot pri krajevnih solitonih vpeljemo parameter $\eta$, ki je sorazmeren 
+z energijo solitona (enačba~\ref{eq:solj}) in dobimo 
+\beq
+A_S\left(z,\tau\right)=\sqrt{\frac{2}{\kappa}}\eta\frac{e^{i\eta^{2}z}}{{\cosh}\left(\eta \tau 
+\sqrt{2\left|\frac{d^{2}\beta}{d\omega^{2}}\right|^{-1}}\right)}\,
+\eeq
+\begin{equation}
+A\left(z,t\right)=\sqrt{\frac{2}{\kappa}}\eta\frac{e^{i\eta^{2}z}}{{\cosh}\left(\eta (t-\frac{z}{v_g}) 
+\sqrt{2\left|\frac{d^{2}\beta}{d\omega^{2}}\right|^{-1}}\right)}.
+\label{8.96}
+\end{equation}
+Zapisana je oblika solitona, ki potuje z grupno hitrostjo in pri tem ohranja obliko. Zaradi tega
+so solitoni izredno zanimivi za prenos velike gostote informacij na velike razdalje, saj se izognemo
+omejitvam zaradi disperzije. 
 
-
- Svetlobni sunek, ki se širi po vlaknu, zapišimo, kot smo že vajeni,
-v obliki počasi spreminjajoče se amplitudne funkcije in faznega faktorja
-pri nosilni frekvenci: 
-\begin{equation}
-E\left(r,z,t\right)=A\left(z,t\right)\, u\left(r\right)\,\exp i\left[\beta\left(\omega_{0}\right)z-\omega_{0}t\right]\label{8.92}
-\end{equation}
- V razdelku ???? smo s pomočjo razvoja \ref{8.91} in Fouriereve transformacije
-izpeljali diferencialno enačbo ??? za $A\left(z,t\right)$. Na isti
-način moramo sedaj le dodati člen $\delta\beta$ iz en. \ref{8.90}:
-\begin{equation}
-(\frac{\partial}{\partial z}+\frac{1}{v_{g}}\frac{\partial}{\partial t})A=-\frac{i}{2}\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A}{\partial t^{2}}+i\kappa|A|^{2}A\label{8.93}
-\end{equation}
- kjer je 
-\begin{equation}
-\kappa=\frac{\omega^{2}}{c^{2}\beta}\,\frac{\int n_{0}\, n_{2}\,|u|^{4}dS}{\int|u|^{2}dS}\label{8.94}
-\end{equation}
-
-
-Vpeljimo novo neodvisno spremenljivko 
-\begin{equation}
-\tau=t-\frac{z}{v_{g}}
-\end{equation}
- s katero opišemo obliko sunka, kot ga vidi opazovalec, ki se giblje
-z grupno hitrostjo skupaj s sunkom. Enačba \ref{8.93} dobi s tem
-obliko 
-\begin{equation}
-i\,\frac{\partial A}{\partial z}-\frac{1}{2}\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A}{\partial\tau^{2}}+\kappa\left|A\right|^{2}A=0\label{8.95}
-\end{equation}
- Ta enačba ima kot pri obravnavi samozbiranja svetlobnega snopa v
-prejšnjem razdelku obliko nelinearne Schrodingerjeve enačbe \ref{8.84},
-v kateri ima sedaj $\tau$ isto vlogo kot prej prečna koordinata $x$.
-Rešitev s stacionarno dolžino sunka, ki ustreza rešitvi s konstantnim
-premerom snopa v primeru samozbiranja, tako dobimo, kadar je $d^{2}\beta/d\omega^{2}<0$.
-To pomeni, da grupna hitrost narašča s frekvenco, kar je v skladu
-z razmislekom na začetku tega razdelka. Optični soliton v vlaknu ima
-torej obliko 
-\[
-A\left(z,\tau\right)=\sqrt{\frac{2}{\kappa}}\frac{\eta}{{\rm ch}\left[\sqrt{2\left|\frac{d^{2}\beta}{d\omega^{2}}\right|^{-1}}\eta\tau\right]}\,\exp\left(i\eta^{2}z\right)
-\]
- 
-\begin{equation}
-A\left(z,t\right)=\sqrt{\frac{2}{\kappa}}\frac{\eta}{{\rm ch}\left[\sqrt{2\left|\frac{d^{2}\beta}{d\omega^{2}}\right|^{-1}}\frac{\eta}{v_{g}}\left(v_{g}t-z\right)\right]}\,\exp\left(i\eta^{2}z\right)\label{8.96}
-\end{equation}
- Parameter $\eta$ je sorazmeren z energijo solitona. Ta potuje z
-grupno hitrostjo in pri tem ohranja obliko. Analiza majhnih odmikov
-od dobljene rešitve pokaže, da je soliton tudi stabilen ( Naloga).
-Zaradi tega se zdi, da bilo solitone mogoče izrabiti v optičnih komunikacijskih
-sistemih, kjer je potrebna velika gostota prenosa informacije na velike
-razdalje. S tem bi se izognili težavam, ki jih pri linearnem prenosu
-povzroča disperzija.
-
+Ena izmed snovi, ki izpoljnjuje pogoj, da je $k''$ nasprotnega predznaka kot $n_2$, so kvarčna 
+optična vlakna. Pri valovnih dolžinah vidne svetlobe to sicer ne velja, velja pa za $\lambda > 1,3~\mu$m.
+Pogoj je torej izpolnjen pri valovnih dolžinah okoli 1,5~$\mu$m, ki se navadno uporabljajo 
+pri prenosu signalov po optičnih vlaknih in signal lahko potuje brez podaljševanja. 
 
 \section{Optična fazna konjugacija}
 
