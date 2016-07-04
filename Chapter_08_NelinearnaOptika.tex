@@ -1014,6 +1014,7 @@ polju obstaja v vsaki snovi. V njem nastopa polje v tretji potenci
 \beq
 \mathbf{P}_{\mathrm{NL,3}}= \epsilon_{0}\chi^{(3)}\vdots \mathbin 
 \mathbf{E}\mathbin \mathbf{E}\mathbin\mathbf{E}
+\label{eq:nl3P}
 \eeq
 oziroma izpisano po koordinatah
 \beq
@@ -1571,137 +1572,202 @@ Zapisana je oblika solitona, ki potuje z grupno hitrostjo in pri tem ohranja obl
 so solitoni izredno zanimivi za prenos velike gostote informacij na velike razdalje, saj se izognemo
 omejitvam zaradi disperzije. 
 
+\begin{remark}
 Ena izmed snovi, ki izpoljnjuje pogoj, da je $k''$ nasprotnega predznaka kot $n_2$, so kvarčna 
 optična vlakna. Pri valovnih dolžinah vidne svetlobe to sicer ne velja, velja pa za $\lambda > 1,3~\mu$m.
 Pogoj je torej izpolnjen pri valovnih dolžinah okoli 1,5~$\mu$m, ki se navadno uporabljajo 
 pri prenosu signalov po optičnih vlaknih in signal lahko potuje brez podaljševanja. 
+\end{remark}
 
 \section{Optična fazna konjugacija}
+Optična fazna konjugacija je zanimiv in danes tudi praktično pomemben
+pojav, pri katerem dobimo iz danega valovanja novo valovanje, ki ima enake valovne
+fronte, vendar potuje v nasprotni smeri od prvotnega valovanja. Novo valovanje je torej tako,
+kot bi začetnemu valovanju obrnili preznak časa in ga ''zavrteli nazaj''. 
 
-\textit{Fazna konjugacija} je zanimiv in danes tudi praktično pomemben
-pojav, pri katerem dobimo iz danega novo valovanje, ki ima enake valovne
-fronte in potuje v nasprotni smeri od prvotnega valovanja; novo valovanje
-je tako, kot bi začetnemu obrnili predznak časa. Pojav je v ozki zvezi
-s holografijo, kjer najprej zapišemo predmetni snop, ki ga kasneje
-reproduciramo, pri fazni konugaciji pa zapis začetnega valovanja in njegova
-reprodukcija potekata sočasno.
-
-Napravimo poskus, ki ga kaže slika \ref{sl8.31}. Na nelinearen kristal
-naj v nasprotnih smereh vpadata dva močna ravna črpalna vala z valovnima
-vektorjema ${\bf k}_{1}$ in $-{\bf k}_{1}$. Poleg tega naj vpada
-še tretji, signalni snop, ki ni nujno raven val. Signalni val interferira
-s prvim črpalnim valom in s tem zaradi nelinearnosti tretjega reda
-povzroči modulacijo lomnega količnika, ki je skoraj periodična, če
-je signalni val blizu ravnega vala. Na tej periodični modulaciji se
-drugi črpalni val uklanja, pri čemer je uklonjeni val enake oblike
-kot signalni, le potuje v nasprotni smeri, ker ima drugi črpalni val
-nasprotno smer od prvega. Črpalna vala sta seveda enakovredna in ni
-mogoče ločiti, s katerim je signalni val interferiral in kateri se
+Vzemimo optično nelinearno snov, na katero posvetimo z dvema močnima ravnima
+snopoma v nasprotnih smereh. To sta črpalna snopa in njuna valovna vektorja 
+naj bosta ${\bf k}_{1}$ in ${\bf k}_2 = -{\bf k}_{1}$. Poleg njiju naj na snov vpada
+še tretji, signalni snop, ki ni nujno raven val (slika~\ref{08_OPC1}). 
+Signalni snop interferira s prvim črpalnim valom in s tem zaradi nelinearnosti 
+tretjega reda povzroči modulacijo lomnega količnika, ki je skoraj periodična, če
+je signalni val podoben ravnemu valu. Na tej periodični modulaciji se
+drugo črpalno valovanje uklanja, pri čemer je uklonjeno valovanje enake oblike
+kot signalno, le potuje v nasprotni smeri, ker ima drugo črpalno valovanje
+nasprotno smer od prvega. Črpalni valovanji sta seveda enakovredni in ni
+mogoče ločiti, s katerim je signalno valovanje interferiralo in katero se
 uklanja.
+\begin{figure}[h]
+\centering
+\def\svgwidth{60truemm} 
+\input{slike/08_opc1.pdf_tex}
+\caption{Optična fazna konjugacija. Dva močna črpalna žarka (modra) vpadata 
+na optično nelinearno snov v nasprotnih smereh, vpadni signal (rdeč) pa se odbije v 
+smer, iz katere vpada.}
+\label{08_OPC1}
+\end{figure}
+\begin{remark}Pozoren bralec je ugotovil, da je optična fazna konjugacija zelo 
+podobna holografiji, le da pri holografiji najprej zapišemo predmetni snop, 
+ki ga kasneje reproduciramo, pri fazni konjugaciji pa zapis začetnega valovanja in 
+njegova reprodukcija potekata sočasno. 
+\end{remark}
 
-Pozoren bralec je ugotovil, da je gornja razlaga podobna razlagi holografije,
-le da sta tam postopka zapisa interference predmetnega vala z referenčnim
-in reprodukcije ločena.
-
-Signalni val lahko zapišemo v obliki 
+Naj se signalno valovanje razširja v smeri $z$. Potem ga zapišemo kot  
 \begin{equation}
-E_{3}=\mathrm{Re}\left[\psi\left(r\right)\, e^{i\left(kz-\omega t\right)}\right]\label{8.97}
+E_{3}=\mathrm{Re}\left(A_3\left(z\right)\, e^{i\left(kz-\omega t\right)}\right).
+\label{8.97}
 \end{equation}
- Videli bomo, da je novonastali val 
+V nadaljevanju bomo pokazali, da je novonastalo valovanje sorazmerno
 \begin{equation}
-E_{4}=\mathrm{Re}\left[\psi^{*}\left(r\right)\, e^{i\left(-kz-\omega t\right)}\right]\label{8.98}
+E_{4} \propto \mathrm{Re}\left(A_3^{*}\left(z\right)\, e^{i\left(-kz-\omega t\right)}\right).
+\label{8.98}
 \end{equation}
- Zaradi nasprotnega predznaka $k$ potuje v obratni smeri od signalnega
-vala; poleg tega je še amplituda kompleksno konjugirana. To seveda
-ne vpliva na obliko valovnih front, te so popolnoma enake kot pri signalnem
-valu. Zaradi lastnosti, da lahko novi val iz signalnega dobimo tako,
+Zaradi nasprotnega predznaka $k$ potuje nastalo valovanje v obratni smeri od signalnega
+valovanja. Poleg tega je kompleksno konjugirana tudi njegova amplituda. To seveda
+ne vpliva na obliko valovnih front, saj so te popolnoma enake kot pri signalnem
+valovanju. Zaradi lastnosti, da lahko novo valovanje iz signalnega dobimo tako,
 da krajevni del kompleksno konjugiramo, nastalemu valovanju pravimo fazno
-konjugiran val.
+konjugiran valovanje.
 
-Uporabna posledica fazne konjugacije je prikazana na sliki \ref{sl8.32}.
-Naj na neko nepravilno sredstvo z leve vpada Gaussov snop. Po prehodu
-skozi sredstvo valovne fronte niso več gladke. Ta popačen snop v faznem
-konjugatorju generira fazno konjugiran snop, ki potuje proti levi
-in ima enako nepravilne valoven fronte kot vpadni val. Po prehodu
-skozi nepravilno sredstvo se neravnosti valovne fronte kompenzirajo
-in dobimo enake gladke valoven ploskve Gaussovega snopa, kot smo
-jih imeli na začetku. To lastnost popravljanja valovne fronte je mogoče
+Uporabna posledica fazne konjugacije je prikazana na sliki~(\ref{08_OPC2}).
+Najpreprostejši primer je vpad ravnega vala, ki se ne odbije po lomnem zakonu (slika levo),
+ampak se odbije v smer, iz katere je vpadel na snov (desno). Drugi primer je krogelni vala
+ali v približku tudi Gaussov snop. Ko vpade na navadno zrcalo (levo), se njegova divergenca
+ohranja in se žarek še naprej razširja. Na fazno konjugiranem zrcalu se kroglast val spet
+zbere v izvoru (desno). Tretji primer naj bo poljubno sredstvo, ki valovanju doda naključno
+fazo, zato po prehodu valovne fronte niso več gladke. Ta popačen snop v faznem
+konjugatorju generira fazno konjugiran snop, ki potuje v nasprotni smeri
+in ima enako nepravilne valovne fronte kot vpadni val. Po prehodu
+skozi nepravilno sredstvo se neravnosti valovne fronte izničijo
+in dobimo enake gladke valovne fronte ravnega vala, kot smo jih imeli na začetku. 
+To lastnost popravljanja valovne fronte je mogoče 
 koristni uporabiti, na primer namesto enega zrcala v laserskem resonatorju.
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/08_opc2.pdf_tex}
+\caption{Primerjava odbojev na navadnem zrcalu (levo) in faznem konjugatorju (desno): odboj ravnega
+vala (a), odboj krogelnega valovanja (b) in odboj popačenega vala (c).}
+\label{08_OPC2}
+\end{figure}
 
+\section{*Izpeljava optične fazne konjugacije}
 Poglejmo podrobneje, kako v nelinearnem sredstvu nastane fazno konjugiran
-val. Kot kaže slika \ref{sl8.31}, je celotno polje v nelinearnem
-kristalu vsota štirih valov, dveh črpalnih, signalnega in odbitega:
+val. Kot kaže slika~(\ref{08_OPC1}), je celotno polje v nelinearnem
+sredstvu vsota štirih valovanj, dveh črpalnih, signalnega in odbitega
 \begin{equation}
-E=\frac{1}{2}E_{1}e^{i{\bf k}_{1}\cdot{\bf r}}+\frac{1}{2}E_{2}e^{-i{\bf k}_{1}\cdot{\bf r}}+\frac{1}{2}E_{3}\left(z\right)e^{ikz}+\frac{1}{2}E_{4}\left(z\right)e^{-ikz}+{\rm k.k.}\label{8.99}
+E=\frac{1}{2}A_{1}e^{i{\bf k}_{1}\cdot{\bf r}-i\omega t}+\frac{1}{2}A_{2}e^{-i{\bf k}_{1}\cdot{\bf r}-
+i\omega t}+\frac{1}{2}A_{3}\left(z\right)e^{ikz-i\omega t}+\frac{1}{2}A_{4}
+\left(z\right)e^{-ikz-i\omega t}+{\rm k.k.}
+\label{8.99}
 \end{equation}
- S k.k. smo spet označili kompleksno konjugirane člene. Ker so vsa
-polje pri isti frekvenci, nam časovnega faktorja ni treba pisati.
-Zaradi enostavnosti zapisa nelinearne polarizacije vzemimo, da so
-vse polarizacije enake. Privzeli smo še, da sta črpalna vala $E_{1}$
+S k.k. smo spet označili kompleksno konjugirane člene.  Vsa valovanja naj imajo
+enako frekvenco, zaradi enostavnosti še privzemimo, da so enake tudi vse polarizacije.
+Račun poenostavimo še z privzetkom, da sta črpalna vala $E_{1}$
 in $E_{2}$ dosti močnejša od $E_{3}$ in $E_{4}$, tako da sta njuni
 amplitudi konstantni, $E_{3}\left(z\right)$ in $E_{4}\left(z\right)$
 pa se le počasi spreminjata.
 
-Postavimo $E$ v časovno neodvisno valovno enačbo z nelinearno polarizacijo:
+Vstavimo $E$ v valovno enačbo z nelinearno polarizacijo (enačba~\ref{8.3}), pri čemer
+smo časovni odvod že izvrednotili
 \begin{equation}
-\nabla^{2}E+\epsilon\frac{\omega^{2}}{c^{2}}\, E=-\mu_{0}\omega^{2}P^{NL}\label{8.100}
+\nabla^{2}E+\epsilon\frac{\omega^{2}}{c_0^{2}}\, 
+E=\mu_{0}\frac{\partial^2 P_{\mathrm{NL}}}{\partial t^2}.
+\label{8.100}
 \end{equation}
- Pri tem je $\epsilon\,\omega^{2}/c^{2}=k^{2}$. Ker obravnavamo le
-polje pri osnovni frekvenci, nastopajo v nelinearni polarizaciji le
-členi s to frekvenco. Vsebujejo še vedno različne kombinacije valovnih
-vektorjev. K enačbi za $E_{4}$ prispevajo le tisti s krajevnim faznim
-faktorjem $\exp(-ikz)$, to je 
-\begin{equation}
-P_{4}^{NL}=\epsilon_{0}\chi^{\left(3\right)}[E_{1}E_{2}E_{3}^{*}+(\left|E_{1}\right|^{2}+\left|E_{2}\right|^{2})E_{4}]\label{8.101}
-\end{equation}
- Tu je $\chi^{\left(3\right)}$ efektivna nelinearna susceptibilnost
-za izbrano polarizacijo vseh polj. Zanemarili smo člene, kjer $E_{3}$
-in $E_{4}$ nastopata v višjih potencah, ker so majhni v primeri z
-zapisanimi. Z upoštevanjem, da se $E\left(z\right)$ le počasi spreminja,
-dobimo enako kot pri mešanju treh frekvenc 
-\begin{equation}
-\frac{dE_{4}}{dz}=i\frac{\omega}{nc}\,\chi^{\left(3\right)}\left[E_{1}E_{2}E_{3}^{*}+(\left|E_{1}\right|^{2}+\left|E_{2}\right|^{2})E_{4}\right]\label{8.102}
-\end{equation}
- Drugi člen na desni že poznamo; opisuje odvisnost lomnega količnika
-od intenzitete črpalnih valov, torej optični Kerrov pojav. Vpeljimo
-nove amplitude 
-\begin{equation}
-A_{k}=E_{k\,}\exp\left[-i\frac{\omega}{nc}\left(\left|E_{1}\right|^{2}+\left|E_{2}\right|^{2}\right)z\right]\label{8.103}
-\end{equation}
- ki se od prvotnih razlikujejo le po faznem faktorju. S tem se enačba
-\ref{8.102} poenostavi: 
-\begin{equation}
-\frac{dA_{4}}{dz}=i\frac{\omega}{nc}\,\chi^{\left(3\right)}A_{1}A_{2}A_{3}^{*}\label{8.104}
-\end{equation}
- Podobno dobimo 
-\begin{equation}
-\frac{dA_{3}^{*}}{dz}=i\frac{\omega}{nc}\,\chi^{\left(3\right)}A_{1}^{*}A_{2}^{*}A_{4}\label{8.105}
-\end{equation}
- Z vpeljavo sklopitvene konstante 
-\begin{equation}
-\kappa=\frac{\omega}{nc}\,\chi^{\left(3\right)}\label{8.106}
-\end{equation}
- se enačbi poenostavita: 
-\[
-\frac{dA_{4}}{dz}=i\kappa^{*}A_{3}^{*}
-\]
- 
-\begin{equation}
-\frac{dA_{3}^{*}}{dz}=i\kappa A_{4}\label{8.107}
-\end{equation}
-
-
-Bralcu priporočam, da si še enkrat ogleda korake, s katerimi smo zelo
-težaven problem nelinearne valovne enačbe poenostavili na linearen
-sistem dveh preprostih sklopljenih enačb za amplitudi signalnega in
-odbitega vala.
-
-Splošni rešitvi sistema \ref{8.107} sta 
+Pri tem je $\epsilon\,\omega^{2}/c_0^{2}=k^{2}$, $P_{\textrm{NL}}$ pa je po enačbi~(\ref{eq:nl3P})
+enak $P_\mathrm{NL}= \epsilon_{0}\chi^{(3)}E^3$, pri čemer je $\chi^{(3)} = \chi$
+efektivna nelinearna susceptibilnost
+za izbrano polarizacijo vseh polj. Ker je $E$ zapisan kot vsota osmih različnih členov
+(enačba~\ref{8.99}), vsebuje produkt $E^3$ kar 512 členov. Vendar se njihovo število znatno zmanjša, 
+če upoštevamo le tiste z enako časovno odvisnostjo in zato z enako frekvenco.
+Poleg tega nas ne zanimajo različne kombinacije valovnih vektorjev, ampak k enačbi za $E_{3}$ 
+prispevajo le tisti členi s krajevnim faznim faktorjem $\exp(ikz)$, 
+k enačbi za $E_4$ pa tisti z $\exp(-ikz)$. Dobimo
 \begin{eqnarray}
-A_{4}\left(z\right) & = & C_{1}\cos\left|\kappa\right|z+C_{2}\sin\left|\kappa\right|z\label{8.108}\\
-A_{3}^{*}\left(z\right) & = & -i\frac{\left|\kappa\right|}{\kappa^{*}}\left(-C_{1}\sin\left|\kappa\right|z+C_{2}\cos\left|\kappa\right|z\right)\nonumber 
+P_{\mathrm{NL}\,3,4} &=& \frac{1}{8}\varepsilon_0\chi 
+\left(6 A_1 A_2 A_4^*+ 6A_1 A_1^*A_3 + 6A_2A_2^*A_3 + 3 A_3A_3^*A_3 + 6 A_4 A_4^* A_3^*\right)
+e^{i k z - i\omega t} \nonumber\\
+&+& 
+\left(6 A_1 A_2 A_3^*+6 A_1 A_1^*A_4 + 6A_2A_2^*A_4 + 6 A_3A_3^*A_4 + 3 A_4 A_4 A_4^*\right)
+e^{-i k z - i\omega t}.
 \end{eqnarray}
- Potrebujemo še robne pogoje za obe valovanji. Z leve, pri $z=0$,
+Če zanemarimo še člene, v katerih nastopata $A_3$ in $A_4$ v višjih potencah, dobimo
+\begin{eqnarray}
+P_{\mathrm{NL}\,3,4} &=& \frac{3}{4}\varepsilon_0\chi 
+\left( A_1 A_2 A_4^*+ |A_1|^2 A_3 + |A_2|^2 A_3 \right)
+e^{i k z - i\omega t} \nonumber\\
+&+& 
+\left( A_1 A_2 A_3^*+|A_1|^2 A_4 + |A_2|^2A_4 \right)
+e^{-i k z - i\omega t}.
+\end{eqnarray}
+Vstavimo gornji izraz v valovno enačbo~(enačba~\ref{8.100}) in upoštevamo, 
+da se $A_i(z)$ le počasi 
+spreminja (kar pomeni, da zanemarimo drugi odvod po $z$). Dobimo enačbi 
+\beq
+i k \frac{dA_3}{dz} = - \frac{3}{4} \mu_0\varepsilon_0 \chi \omega^2 
+\left( A_1 A_2 A_4^*+ (|A_1|^2 + |A_2|^2) A_3 \right)
+\label{eq:opc1}
+\eeq
+in 
+\beq
+-i k \frac{dA_4}{dz} = - \frac{3}{4} \mu_0\varepsilon_0 \chi \omega^2 
+\left( A_1 A_2 A_3^*+ (|A_1|^2 + |A_2|^2) A_4 \right).
+\label{eq:opc2}
+\eeq
+Drugi člen na desni že poznamo: opisuje odvisnost lomnega količnika
+od intenzitete črpalnih valov, torej optični Kerrov pojav, in le dodaten prispevek
+k fazi. Vpeljimo novi amplitudi, ki se od prejšnih razlikujeta zgolj v faznem faktorju.
+\beq
+\tilde{A}_3 = A_3 \exp\left(-i\frac{ 3 \chi \omega}{4 c_0 n}z\right)
+\eeq
+in 
+\beq
+\tilde{A}_4 = A_4 \exp\left(i\frac{ 3 \chi \omega}{4 c_0 n}z\right).
+\eeq
+Ko novi amplitudi vstavimo v diferencialni enačbi~(\ref{eq:opc1} in 
+\ref{eq:opc2}), se Kerrov prispevek k fazi ravno odšteje
+in dobimo 
+\begin{equation}
+\frac{d\tilde{A}_{3}}{dz}=i\frac{ 3 \chi \omega}{4 c_0 n}\,
+A_{1}A_{2}\tilde{A}_{4}^{*}
+\label{8.104}
+\end{equation}
+in 
+\begin{equation}
+\frac{d\tilde{A}_{4}^{*}}{dz}=i\frac{ 3 \chi \omega}{4 c_0 n}\,
+A_{1}^{*}A_{2}^{*}A_{3}.
+\label{8.105}
+\end{equation}
+Z vpeljavo sklopitvene konstante 
+\begin{equation}
+\kappa=\frac{ 3 \chi \omega}{4 c_0 n}A_1 A_2
+\label{8.106}
+\end{equation}
+se enačbi poenostavita v
+\beq
+\frac{d\tilde{A}_{3}}{dz}=i\kappa \tilde{A}_{4}^{*} \qquad
+\textrm{in} \qquad \frac{d\tilde{A}_{4}^{*}}{dz}=i\kappa^* \tilde{A}_{3}.
+\label{8.107a}
+\eeq 
+oziroma
+\begin{equation}
+\frac{d\tilde{A}^*_{3}}{dz}=-i\kappa^* \tilde{A}_{4} \qquad
+\textrm{in} \qquad \frac{d\tilde{A}_{4}}{dz}=-i\kappa \tilde{A}_{3}^*.
+\label{8.107}
+\end{equation}
+Tako smo zelo težaven problem nelinearne valovne enačbe poenostavili na linearen
+sistem dveh preprostih sklopljenih enačb za amplitudi signalnega in
+odbitega vala. Splošni rešitvi sistema enačb~(\ref{8.107}) 
+sta 
+\begin{eqnarray}
+\tilde{A}_3^* \left(z\right) & = & C_{1}\cos\left|\kappa\right|z+
+C_{2}\sin\left|\kappa\right|z
+\label{8.108}\\
+\tilde{A}_{4}\left(z\right) & = & -i\frac{\left|\kappa\right|}{\kappa^{*}}
+\left(-C_{1}\sin\left|\kappa\right|z+C_{2}\cos\left|\kappa\right|z\right)\nonumber 
+\end{eqnarray}
+Potrebujemo še robne pogoje za obe valovanji. Z leve, pri $z=0$,
 poznamo $A_{3}^{*}\left(0\right)$, pri $z=L$ pa ne more biti odbitega
 vala:$A_{4}\left(L\right)=0$. S tem lahko določimo konstanti $C_{1}$
 in $C_{2}$: 
@@ -1711,7 +1777,8 @@ A_{3}^{*}\left(z\right) & = & \frac{\cos\left|\kappa\right|\left(z-L\right)}{\co
 \end{eqnarray}
  Amplituda odbitega vala pri $z=0$ je 
 \begin{equation}
-A_{4}\left(0\right)=i\frac{\kappa^{*}}{\left|\kappa\right|}\tan\left|\kappa\right|L\; A_{3}^{*}\left(0\right)\label{8.110}
+A_{4}\left(0\right)=i\frac{\kappa^{*}}{\left|\kappa\right|}\tan\left|\kappa\right|L\; A_{3}^{*}\left(0\right)
+\label{8.110}
 \end{equation}
  Odbiti val je sorazmeren s kompleksno konjugirano amplitudo vpadnega
 vala in ima natanko nasproten valovni vektor, zato tudi ime fazno
@@ -1727,11 +1794,11 @@ z nasprotnim valovnim vektorjem in dajo skupaj valovno fronto enake
 oblike kot pri signalnem valu, le giblje se v nasprotni smeri, kot
 smo opisali že na začetku razdelka.
 
+remark astronomija, davis, 550.
+
+
 V NOVO POGLAVJE
 Poseben primer nelinearne susceptibilnosti $d_{ijk}$ smo pravzaprav
 že srečali pri elektrooptičnem pojavu: elektrooptični tenzor $r_{ijk}$
 opisuje isto lastnost snovi, le da smo tam zahtevali, da je eno polje
-skoraj statično. Za $d_{ijk}$ velja, kot za vsak tenzor tretjega
-ranga, da je lahko od nič različen le v snoveh brez centra inverzije.
-V centrosimetričnih snoveh je prvi od nič različni nelinearni člen
-tretjega reda.
+skoraj statično. 
