@@ -1716,14 +1716,14 @@ in
 \label{eq:opc2}
 \eeq
 Drugi člen na desni že poznamo: opisuje odvisnost lomnega količnika
-od intenzitete črpalnih valov, torej optični Kerrov pojav, in le dodaten prispevek
+od intenzitete črpalnih valov, torej optični Kerrov pojav, in je zato le dodaten prispevek
 k fazi. Vpeljimo novi amplitudi, ki se od prejšnih razlikujeta zgolj v faznem faktorju.
 \beq
-\tilde{A}_3 = A_3 \exp\left(-i\frac{ 3 \chi \omega}{4 c_0 n}z\right)
+\tilde{A}_3 = A_3 \exp\left(-i\frac{ 3 \chi \omega}{4 c_0 n}(|A_1|^2 + |A_2|^2) z\right)
 \eeq
 in 
 \beq
-\tilde{A}_4 = A_4 \exp\left(i\frac{ 3 \chi \omega}{4 c_0 n}z\right).
+\tilde{A}_4 = A_4 \exp\left(i\frac{ 3 \chi \omega}{4 c_0 n}(|A_1|^2 + |A_2|^2)z\right).
 \eeq
 Ko novi amplitudi vstavimo v diferencialni enačbi~(\ref{eq:opc1} in 
 \ref{eq:opc2}), se Kerrov prispevek k fazi ravno odšteje
@@ -1735,8 +1735,8 @@ A_{1}A_{2}\tilde{A}_{4}^{*}
 \end{equation}
 in 
 \begin{equation}
-\frac{d\tilde{A}_{4}^{*}}{dz}=i\frac{ 3 \chi \omega}{4 c_0 n}\,
-A_{1}^{*}A_{2}^{*}A_{3}.
+\frac{d\tilde{A}_{4}}{dz}=-i\frac{ 3 \chi \omega}{4 c_0 n}\,
+A_{1}A_{2}\tilde{A}_{3}^*.
 \label{8.105}
 \end{equation}
 Z vpeljavo sklopitvene konstante 
@@ -1747,58 +1747,93 @@ Z vpeljavo sklopitvene konstante
 se enačbi poenostavita v
 \beq
 \frac{d\tilde{A}_{3}}{dz}=i\kappa \tilde{A}_{4}^{*} \qquad
-\textrm{in} \qquad \frac{d\tilde{A}_{4}^{*}}{dz}=i\kappa^* \tilde{A}_{3}.
+\textrm{oziroma} \qquad \frac{d\tilde{A}^*_{3}}{dz}=-i\kappa^* \tilde{A}_{4} 
 \label{8.107a}
 \eeq 
-oziroma
+in
 \begin{equation}
-\frac{d\tilde{A}^*_{3}}{dz}=-i\kappa^* \tilde{A}_{4} \qquad
-\textrm{in} \qquad \frac{d\tilde{A}_{4}}{dz}=-i\kappa \tilde{A}_{3}^*.
+\frac{d\tilde{A}_{4}}{dz}=-i\kappa \tilde{A}_{3}^*.
 \label{8.107}
 \end{equation}
-Tako smo zelo težaven problem nelinearne valovne enačbe poenostavili na linearen
+Tako smo zelo težaven problem nelinearne valovne enačbe prevedli na linearen
 sistem dveh preprostih sklopljenih enačb za amplitudi signalnega in
-odbitega vala. Splošni rešitvi sistema enačb~(\ref{8.107}) 
+odbitega vala. Splošni rešitvi sistema enačb~(\ref{8.107a} in \ref{8.107}) 
 sta 
 \begin{eqnarray}
-\tilde{A}_3^* \left(z\right) & = & C_{1}\cos\left|\kappa\right|z+
-C_{2}\sin\left|\kappa\right|z
+\tilde{A}_3^* \left(z\right) & = & C_{1}\cos(\left|\kappa\right|z)+
+C_{2}\sin(\left|\kappa\right|z)
 \label{8.108}\\
-\tilde{A}_{4}\left(z\right) & = & -i\frac{\left|\kappa\right|}{\kappa^{*}}
-\left(-C_{1}\sin\left|\kappa\right|z+C_{2}\cos\left|\kappa\right|z\right)\nonumber 
+\tilde{A}_4 \left(z\right) & = & D_{1}\cos(\left|\kappa\right|z)+
+D_{2}\sin(\left|\kappa\right|z).
+\label{8.108a}
 \end{eqnarray}
+Z upoštevanjem zveze, ki izhaja neposredno iz diferencialne enačbe 
+(enačba~\ref{8.107a}), dobimo
+\beq
+C_1 = \frac{i \kappa^*}{|\kappa|}D_2 \qquad
+\textrm{in} \qquad 
+C_2 = -\frac{i \kappa^*}{|\kappa|}D_1. 
+\eeq
 Potrebujemo še robne pogoje za obe valovanji. Z leve, pri $z=0$,
-poznamo $A_{3}^{*}\left(0\right)$, pri $z=L$ pa ne more biti odbitega
-vala:$A_{4}\left(L\right)=0$. S tem lahko določimo konstanti $C_{1}$
-in $C_{2}$: 
+poznamo $\tilde{A}_{3}^{*}\left(0\right)$, pri $z=L$ pa ne more biti odbitega
+vala in je zato $\tilde{A}_{4}\left(L\right)=0$. S tem lahko določimo konstanti $D_{1}$
+in $D_{2}$
+\beq
+D_2 = -\frac{i|\kappa|}{\kappa^*} \tilde{A}_3^*(0) \qquad
+\textrm{in} \qquad 
+D_1 = -D_2 \tan(|\kappa|L). 
+\eeq
+Gornje enačbe združimo in lahko zapišemo amplitudo vpadnega in odbitega vala
 \begin{eqnarray}
-A_{4}\left(z\right) & = & i\frac{\kappa^{*}}{\left|\kappa\right|}\frac{\sin\left|\kappa\right|\left(L-z\right)}{\cos\left|\kappa\right|L}A_{3}^{*}\left(0\right)\label{8.109}\\
-A_{3}^{*}\left(z\right) & = & \frac{\cos\left|\kappa\right|\left(z-L\right)}{\cos\left|\kappa\right|L}A_{3}^{*}\left(0\right)\nonumber 
+\tilde{A}_{3}\left(z\right) & = & \tilde{A}_3(0)
+\frac{\cos\left(|\kappa|(L-z)\right)}{\cos\left(|\kappa|L\right)}\\
+\tilde{A}_{4}\left(z\right) & = & \tilde{A}_3^*(0)\frac{i \kappa}{|\kappa|}
+\frac{\sin\left(|\kappa|(L-z)\right)}{\cos\left(|\kappa|L\right)}
+\label{8.109}
+\nonumber 
 \end{eqnarray}
- Amplituda odbitega vala pri $z=0$ je 
+Izračunajmo še amplitudi odbitega in prepuščenega vala. Amplituda odbitega vala 
+pri $z=0$ je 
 \begin{equation}
-A_{4}\left(0\right)=i\frac{\kappa^{*}}{\left|\kappa\right|}\tan\left|\kappa\right|L\; A_{3}^{*}\left(0\right)
+\tilde{A}_{4}(0)  =  \tilde{A}_3^*(0)\frac{i \kappa}{|\kappa|}
+\tan \left(|\kappa|L\right),
 \label{8.110}
 \end{equation}
- Odbiti val je sorazmeren s kompleksno konjugirano amplitudo vpadnega
-vala in ima natanko nasproten valovni vektor, zato tudi ime fazno
-konjugiran val. Ker je lahko $\tan\left|\kappa\right|L>1$, je možno
-tudi ojačenje odbitega vala, ki gre seveda na račun moči črpalnih
-valov.
+amplituda prepuščenega pri $z = L$ pa
+\begin{equation}
+\tilde{A}_{3}(L)  =  \frac{\tilde{A}_3^*(0)}{
+\cos \left(|\kappa|L\right)}.
+\label{8.110a}
+\end{equation}
+Oglejmo si gornja rezultata podrobneje. Vidimo, da je odbiti val sorazmeren 
+kompleksno konjugirani amplitudi vpadnega vala, kar smo omenili že v prejšnjem
+razdelku. Poleg konjugirane amplitude ima tudi natanko nasproten valovni vektor, 
+zato tudi ime fazno konjugiran val. Zanimiva je tudi njegova velikost. Ker 
+je lahko $\tan\left(|\kappa|L\right)>1$, je odbit val lahko močnejši od vpadnega.
+To ojačanje odbitega vala gre seveda na račun moči črpalnih
+valov. V našem računu bi lahko amplituda odbite svetlobe narasla proti neskočnosti, 
+vendar ne smemo pozabiti, ta zapisane enačbe takrat niso več veljavne, ker smo privzeli, 
+da sta signalni in odbiti žarek precej šibkejša od črpalnih.
 
-Doslej smo predpostavili, da je signalni val raven. Če je njegova
+Poglejmo še prepuščeni žarek. Ker je $\cos(x)\leq1$, je amplituda prepuščenega
+žarka vedno večja od amplitude vpadnega. To pomeni, da smo na račun črpalnih žarkov
+dobili prepustnost, ki je vedno večja od $100~\%$, in odbojnost, ki je lahko 
+večja od $100~\%$.
+
+Doslej smo predpostavili, da je vpadni signal ravni val. Če je njegova
 amplituda odvisna še od prečne koordinate, ga lahko razvijemo po ravnih
-valovih in velja za vsako komponento posebej en. \ref{8.110}. Odbite
-komponente so sorazmerne s konjugiranimi komponentami signalnega vala
+valovih in zgoraj izpeljana enačba~(\ref{8.110}) velja za vsako komponento posebej. 
+Odbite komponente so sorazmerne s konjugiranimi komponentami signalnega valovanja
 z nasprotnim valovnim vektorjem in dajo skupaj valovno fronto enake
-oblike kot pri signalnem valu, le giblje se v nasprotni smeri, kot
+oblike kot pri signalnem valovanju, le giblje se v nasprotni smeri, kot
 smo opisali že na začetku razdelka.
 
-remark astronomija, davis, 550.
-
-
-V NOVO POGLAVJE
-Poseben primer nelinearne susceptibilnosti $d_{ijk}$ smo pravzaprav
-že srečali pri elektrooptičnem pojavu: elektrooptični tenzor $r_{ijk}$
-opisuje isto lastnost snovi, le da smo tam zahtevali, da je eno polje
-skoraj statično. 
+\begin{remark}
+Omenili smo že, da se fazno konjugirana zrcala lahko uporabljajo v laserjih, da
+izničimo popačenje Gaussovega snopa. Drug primer uporabe je pri optični astronomiji
+ali optičnih komunikacijah skozi atmosfero. Naključne spremembe gostote v atmosferi
+signalu dodajo naključni fazni premik, ki signal popači. Če se signal odbije od zrcala nazaj
+proti izvoru, bo torej dvakratno popačen. Če pa se odbije od fazno konjugiranega zrcala, 
+se bo vpliv nehomogenosti atmosfere ravno izničil in na prenos signala ne bo vplival, poleg
+tega pa bo šibek signal še dodatno ojačan. 
+\end{remark}
