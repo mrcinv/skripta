@@ -3,117 +3,161 @@
 \chapter{Modulacija svetlobe}
 
 V optičnih napravah pogosto želimo spreminjati lastnosti svetlobnega
-valovanja. Nekaj takih primerov smo že srečali pri obravnavi laserja,
-kjer smo za preklop kvalitete laserja potrebovali element, ki mu je
-moč hitro spreminjati prepustnost. Pri optičnem prenašanju in obdelavi
-informacij je možnost modulacije amplitude, frekvence ali faze svetlobnega
-vala z električnim signalom osnova skoraj vsake naprave.
+valovanja. En tak primer smo že spoznali pri obravnavi laserja,
+ko smo za preklop kvalitete potrebovali element, ki hitro spreminja prepustnost. 
+Še bolj pomembna je modulacija valovanja pri optičnem prenosu informacij.
 
-Optični modulatorji izkoriščajo nekaj pojavov, od katerih sta najpomembnejša
-elektrooptični in elstooptični pojav. Pri prvem dosežemo spremembo
-lomnega količnika snovi z električnim poljem, pri drugem pa z deformacijo,
-ki jo navadno dobimo v zvočnem valu, zato takim modulatorjem pravimo
-akustooptični. Poseben zelo pomemben primer elektrooptičnih modulatorjev
+Svetlobno valovanje lahko moduliramo na več načinov. Z ustreznim moduliranjem
+lomnega količnika lahko valovanju spreminjamo amplitudo in frekvenco ali fazo. 
+Optični modulatorji za delovanje izkoriščajo različne pojave, najpomembnejša 
+sta elektro-optični in elasto-optični pojav. Pri prvem 
+dosežemo spremembo lomnega količnika snovi z električnim poljem, pri drugem pa z 
+deformacijo, ki jo navadno dobimo v zvočnem valu, zato takim modulatorjem pravimo
+akusto-optični. Poseben zelo pomemben primer elektro-optičnih modulatorjev
 predstavljajo naprave na osnovi tekočih kristalov.
 
+\section{Elektro-optični pojav}
+Če na snov priključimo električno polje (napetost), se njen dielektrični tenzor lahko spremeni.
+Omejimo se na statično zunanje polje oziroma na polje, katerega frekvenca 
+je bistveno manjša od optične frekvence. Omejitev na nizko frekvenco je potrebna zato, 
+da optično polje še lahko obravnavamo linearno. Kako je v nasprotnem primeru, ko je frekvenca
+polja primerljiva z optično frekvenco, smo na široko obravnavali v prejšnjem poglavju o
+nelinearni optiki (poglavje~\ref{chap:NLO}).
 
-
-
-
-V NOVO POGLAVJE
-Poseben primer nelinearne susceptibilnosti $d_{ijk}$ smo pravzaprav
-že srečali pri elektrooptičnem pojavu: elektrooptični tenzor $r_{ijk}$
-opisuje isto lastnost snovi, le da smo tam zahtevali, da je eno polje
-skoraj statično. 
-
-
-\section{Elektrooptični pojav}
-
-V zunanjem električnem polju, katerega frekvenca naj bo majhna v primeri
-z optično frekvenco, se optični dielektrični tenzor lahko spremeni.
-Omejitev na nizko frekvenco je potrebna zato, da optično polje še
-vedno lahko obravnavamo linearno. Kako je, kadar to omejitev opustimo,
-si bomo ogledali v prihodnjem poglavju o nelinearni optiki, kamor
-pravzaprav formalno sodi tudi elektrooptični pojav.
-
-Iz zgodovinskih razlogov zapišimo raje spremembo dielektričnemu inverznega
-tenzorja $b=\epsilon^{-1}$. Spremembo komponente $b_{ij}$ lahko
-zapišemo kot potenčno vrsto zunanjega polja: 
+Iz zgodovinskih razlogov namesto spremembe dielektričnega tenzora pišemo 
+spremembo dielektričnega inverznega tenzorja 
+\beq
+\underline{b}=\underline{\epsilon}^{-1}.
+\eeq
+Ker so spremembe razmeroma majhne, lahko spremembo komponente $b_{ij}$ zapišemo 
+kot potenčno vrsto zunanjega polja $E$
 \begin{equation}
-\delta b_{ij}=r_{ijk}E_{k}+q_{ijkl}E_{k}E_{l}\;.\label{7.1}
+\delta b_{ij}=r_{ijk}E_{k}+q_{ijkl}E_{k}E_{l}.
+\label{7.1}
 \end{equation}
- Prvi člen, linearen z ozirom na zunanje polje, opisuje linearni elektrooptični
-pojav. Tenzor tretjega ranga $r_{ijk}$, ki lastnost snovi, imenujemo
-kar elektrooptični tenzor ali tudi Pockelsov tenzor. Kvadratnemu elektrooptičnemu
-pojavu pravimo Kerrov pojav. Za uporabo trdnih kristalov je pomemben
-predvsem linearni člen, zato se v nadaljevanju za Kerrov pojav ne
-bomo zanimali.
+Prvi člen, linearen z ozirom na zunanje polje, opisuje linearni elektro-optični
+ali Pockelsov pojav\footnote{Nemški fizik Friedrich Carl Alwin Pockels, 1865--1913.}. 
+Tenzor tretjega ranga $r_{ijk}$, ki lastnost snovi, imenujemo tako elektro-optični tenzor 
+ali tudi Pockelsov tenzor. Kvadratnemu elektro-optičnemu pojavu pravimo Kerrov 
+pojav\footnote{Škotski fizik John Kerr, 1824--1907}. Pockelsov tenzor je 
+različen od nič v snoveh brez centra inverzije, Kerrov pa je šibkejši, a v vseh snoveh
+različen od nič. Značilne vrednosti Pockelsovega
+tenzorja so okoli $r \sim 10^{-12} - 10^{-10}$~m/V, Kerrovega pa 
+$q \sim 10^{-24}$~m$^2$/V$^2$.
 
-Preden si nekoliko pobliže ogledamo Pockelsov tenzor, zapišimo še,
+Za uporabo trdnih kristalov je pomemben
+predvsem linearni člen, zato se bomo osredotočili le na prvi člen in zapisali
+\boxeq{eq:Kerr}{
+\delta b_{ij}=r_{ijk}E_{k}. 
+}
+
+Preden si pobliže ogledamo Pockelsov tenzor, zapišimo še,
 kako se z $\delta b_{ij}$ izrazijo spremembe komponent dielektričnega
-tenzorja. Vzemimo tak koordinatni sistem, da bo nemoten dieletkrični
-tenzor v njem diagonalen. Ker so spremembe majhne, velja 
+tenzorja. Vzemimo koordinatni sistem, v katerem je nemoten dielektrični
+tenzor $\underline{\tilde{\varepsilon}}$ diagonalen. Ker so spremembe majhne, velja 
 \begin{equation}
-(b+\delta b)^{-1}=[b(1+b^{-1}\delta b)]^{-1}=(1+b^{-1})^{-1}b^{-1}\simeq b^{-1}-b^{-1}\delta b\, b^{-1}\;,\label{7.2}
+\underline{\varepsilon} = \underline{\tilde{\varepsilon}} + \delta \underline{\varepsilon}=
+(\underline{b}+\delta \underline{b})^{-1}=\left(\underline{b}(1+\underline{b}^{-1}
+\delta \underline{b})\right)^{-1}=(1+\underline{b}^{-1}\delta \underline{b})^{-1}\underline{b}^{-1}
+\approx \underline{b}^{-1}-\underline{b}^{-1}\delta \underline{b}\, \underline{b}^{-1}.
+\label{7.2}
 \end{equation}
- torej 
+Sprememba dielektričnega tenzorja je tako
+\beq
+ \delta \underline{\varepsilon}= -\underline{b}^{-1}\delta \underline{b}\, \underline{b}^{-1}
+ = -\underline{\tilde{\varepsilon}}\, \delta \underline{b}\, \underline{\tilde{\varepsilon}}
+\eeq
+oziroma
 \begin{equation}
-\delta\epsilon_{ij}=-\epsilon_{ik}\delta b_{kl}\epsilon_{lj}=\epsilon_{ii}\epsilon_{jj}\delta b_{ij}\;.\label{7.3}
+\delta\epsilon_{ij}=-\tilde{\epsilon}_{ik}\delta b_{kl}\tilde{\epsilon}_{lj}
+=\tilde{\epsilon}_{ii}\tilde{\epsilon}_{jj}\delta b_{ij}.
+\label{7.3}
 \end{equation}
- Seveda je povsem vseeno, kako definiramo elektrooptični pojav, preko
-$b$ ali $\epsilon$. Običajna definicija Pockelsovega tenzorja ima
-za posledico, da v izrazih, kjer nastopa sprememba dielektričnega
-tenzorja, nstopajo še nemotene vrednosti $\epsilon$ ali lomnih količnikov.
+V zadnjem zapisu smo upoštevali, da je nemoten dielektrični tenzor diagonalen.
 
-Simetrija pomembno vpliva na obliko tenzorjev, ki popisujejo lastnosti
-snovi. Pockelsov tenzor je tretjega ranga, zato je lahko različen
-od nič le v takih kristalih, katerih simetrijska grupa ne vsebuje
-inverzije. Pri inverziji namreč električno polje spremeni predznak.
-Komponente simetričnega tenzorja drugega ranga se obnašajo kot produkti
-koordinat, $b_{12}$ se transformira na primer enako kot $xy$, zato
-je $b_{ij}$ na inverzijo neobčutljiv. Pockelsov tenzor $r_{ijk}$
-je lastnost snovi, zato se v primeru, da je inverzija simetrijski
-element kristala, ne sme spremeniti. Od tod sledi, da mora biti $r_{ijk}$
-identično enak nič. Kvadratni Kerrov pojav pa je dovoljen v vseh snoveh.
+\subsection*{Pockelsov tenzor}
+Simetrija pomembno vpliva na obliko tenzorjev, ki opisujejo lastnosti
+snovi. Pockelsov tenzor $r$ je tenzor tretjega ranga, zato je lahko različen
+od nič le v kristalih brez centra inverzije. Pri inverziji namreč električno 
+polje spremeni predznak, odziv pa bi moral biti na inverzijo neobčutljiv. 
 
 Simetrija tudi v primeru, ko nimamo centra inverzije, navadno močno
 zmanjša število neodvisnih komponent $r_{ijk}$. Pockelsov tenzor
-je po definiciji simetričen v prvih dveh indeksih, zato ima v najmanj
-simetričnem primeru triklinskega kristala 18 neodvisnih komponent,
-v kristalih z višjo simetrijo pa manj. Za primer poglejmo, kako štirištevna
-simetrijska os zmnanjša število komponent.
+je po definiciji simetričen v prvih dveh indeksih
+\beq
+r_{ijk} = r_{jik},
+\eeq
+zato ima v najmanj simetričnem primeru triklinskega kristala 18 neodvisnih komponent,
+v kristalih z višjo simetrijo pa še manj. 
 
-Naj bo simetrijska os v smeri $z$. Električno polje naj bo najprej
-paralelno osi. Rotacija za $\pi/2$ je simetrijska operacija in prevede
-os $x$ v $y$, zato $r_{113}=r_{223}$. Poglejmo zvezo 
+Za primer poglejmo, kako štirištevna simetrijska os zmanjša število komponent. 
+Naj bo simetrijska os v smeri $z$, električno polje pa vzporedno z njo.
+Rotacija za $\pi/2$ okoli osi $z$ je simetrijska operacija in prevede
+os $x$ v $y$, zato mora biti $r_{113}=r_{223}$. Poglejmo še zvezo 
 \begin{equation}
-\delta b_{12}=r_{123}E_{3}\;.\label{7.4}
+\delta b_{12}=r_{123}E_{3}.
+\label{7.4}
 \end{equation}
- Pri rotaciji za $\pi/4$ gre $x$ v $y$, $y$ pa v $-y$, zato gre
+Pri rotaciji za $\pi/2$ gre $x$ v $y$, $y$ pa v $-x$, zato gre
 $\delta b_{12}$ v $-\delta b_{12}$ in dobimo 
 \begin{equation}
--\delta b_{12}=r_{123}E_{3}\;.\label{7.5}
+-\delta b_{12}=r_{123}E_{3}.
+\label{7.5}
 \end{equation}
- Zvezi \ref{7.4} in\ref{7.5} lahko veljata le, če je $r_{123}=0$.
+Enačbi~(\ref{7.4}) in~(\ref{7.5}) sta lahko hkrati izpolnjeni, le če je $r_{123}=0$.
 Rotacija za $\pi$ prevede zvezo $\delta b_{13}=r_{133}E_{3}$ v $-\delta b_{13}=r_{133}E_{3}$,
-zato je tudi $r_{133}=0$ in z ozirom na enakovrednost $x$ in $y$
-$r_{233}=0$.
+zato je tudi $r_{133}=0$ in z enakim razmislekom tudi $r_{233}=0$.
 
-Naj bo sedaj polje v smeri osi $x$. Pri rotaciji za $\pi$ gre $E_{1}$
-v $-E_{1}$, $\delta b_{11}$ se ne spremeni in je $r_{111}E_{1}=-r_{111}E_{1}$,
-torej $r_{111}=0$. Rotacija za $\pi/2$ zvezo $\delta b_{23}=r_{231}E_{1}$
-prevede v $-\delta b_{13}=r_{231}E_{2}$. Po definiciji pa je $\delta b_{13}=r_{132}E_{2}$,
-zato velja $r_{231}=-r_{132}$.
+Obrnimo zdaj polje v smer osi $x$. Pri rotaciji za $\pi$ gre $E_{1}$
+v $-E_{1}$, $\delta b_{11}$ pa se ne spremeni. Od tod sledi $r_{111}E_{1}=-r_{111}E_{1}$ in 
+posledično $r_{111}=0$. Rotacija za $\pi/2$ zvezo $\delta b_{23}=r_{231}E_{1}$
+prevede v $-\delta b_{13}=r_{231}E_{2}$. Po definiciji pa velja $\delta b_{13}=r_{132}E_{2}$,
+od koder sledi $r_{231}=-r_{132}$.
 
 Podobno ravnamo še s preostalimi komponentami in tako ugotovimo, da
-imamo v tetragonalni grupi, ki vsebuje le štirištevno os, štiri neodvisne
-komponente elektrooptičnega tenzorja: $r_{113}=r_{223}$, $r_{333}$,
+imamo v tetragonalni grupi, ki vsebuje le štirištevno simetrijsko os, štiri neodvisne
+komponente elektro-optičnega tenzorja: $r_{113}=r_{223}$, $r_{333}$,
 $r_{231}=-r_{132}$ in $r_{131}=r_{232}$, vse ostale komponente pa
-so nič. Oblika različnih tenzorjev pri različnih kristalnih simetrijah
-je dana na primer v \ref{nye} ali \ref{Rusi???}.
+so enake nič. Nekaj primerov Pockelsovih tenzorjev pri različnih kristalnih simetrijah
+je podanih v tabeli~(\ref{table:Pockels}).
 
-V literaturi pogosto uporabljajo skrajšan zapis za elektrooptični
-tenzor. Prva dva indeksa, v katerih je $r_{ijk}$ simetričen, združijo
+\begin{table}[h!]
+ \centering
+\begin{tabular}{|c|c|c|c|} \hline  
+      Kristal & Grupa & Neničelne komponente tenzorja $\chi$ & Vrednosti ($10^{-12}$~m/V)\\ \hline
+      BaTiO\index{BaTiO$_3$}$_3$ & 4mm & $\chi_{xxz} = \chi_{yyz} = \chi_{xzx} = \chi_{yzy} = 
+      \chi_{15} = \chi_{24}$  &
+	    $\chi_{15} = 42,6$ \\
+	      & & $\chi_{zxx} = \chi_{zyy} = \chi_{31} = \chi_{32}$ &  $\chi_{31} = 45,2$ \\
+	      & & $\chi_{zzz} = \chi_{33}$ & $\chi_{33} = 16,0$ \\ \hline
+      KDP\index{KDP} & 
+      $\overline{4}$2m & $\chi_{xyz} = \chi_{yxz} = \chi_{xzy} = \chi_{yzx} = \chi_{14} = \chi_{25}$  &
+	    $\chi_{14} = 0,88$ \\
+	    & & $\chi_{zxy} = \chi_{zyx} = \chi_{36}$ &  $\chi_{36} =1,12$ \\ \hline
+      Telur\index{Telur} & 32 & $\chi_{xxx} = -\chi_{xyy} = -\chi_{yyx} = -\chi_{yxy} =$  & \\
+      & &  = $\chi_{11} = -\chi_{12}=-\chi_{26}$  &
+	    $\chi_{11} = 1300$ \\
+	    & & $\chi_{xyz} = \chi_{xzy} = -\chi_{yxz}= - \chi_{yzx}= \chi_{14} = 
+	    -\chi_{25}$ &  $\chi_{14} \approx 0$ 
+	    \\ \hline
+      LiNbO$_3$\index{LiNbO$_3$} & 3m & $\chi_{xxz} = \chi_{yyz} = \chi_{xzx} = \chi_{yzy} = \chi_{15} = \chi_{24}$  &
+	    $\chi_{15} \approx \chi_{31}$ \\
+	     & & $\chi_{zxx} = \chi_{zyy} = \chi_{31} = \chi_{32}$ &  $\chi_{31} = -11,9$ \\
+	      & & $\chi_{zzz} = \chi_{33}$ & $\chi_{33} = 68,8$ \\
+	    & &  $-\chi_{xxy} = - \chi_{xyx} = \chi_{yyy} = -\chi_{yxx}  = $ & \\
+	    & & $=-\chi_{16} = \chi_{22}$ = $-\chi_{21}$  &
+	    $\chi_{22}  = 5,52$ \\
+\hline 
+\end{tabular}
+  \caption{Koeficienti Pockelsovega tenzorja za nekaj izbranih snovi}
+\label{table:Pockels}
+\end{table}
+
+
+
+Podobno kot smo to naredili pri nelinearni susceptibilnosti (poglavje~\ref{Chap:Chi}), 
+tudi elektro-optični tenzor pogosto zapišemo le z dvema komponentama. 
+Prva dva indeksa, v katerih je $r_{ijk}$ simetričen, združijo
 v enega z vrednostmi od 1 do 6 po dogovoru $xx=1$, $yy=2$, $zz=3$,
 $yz=4$, $zx=5$ in $xy=6$. Tako postane $r_{ijk}$ matrika velikosti
 $6\times3$, simetrični tenzor drugega ranga $b_{ij}$ pa šetkomponenten
@@ -122,9 +166,18 @@ posebej še pri transformacijah koordinat, zato je računati bolje v
 normalnem tenzorskem zapisu.
 
 
+
+
+
+V NOVO POGLAVJE
+Poseben primer nelinearne susceptibilnosti $d_{ijk}$ smo pravzaprav
+že srečali pri elektro-optičnem pojavu: elektro-optični tenzor $r_{ijk}$
+opisuje isto lastnost snovi, le da smo tam zahtevali, da je eno polje
+skoraj statično. 
+
 \section{Amplitudna modulacija}
 
-Poglejmo sedaj, kako lahko elektrooptični pojav izkoristimo za modulacijo
+Poglejmo sedaj, kako lahko elektro-optični pojav izkoristimo za modulacijo
 amplitude svetlobnega snopa. Osnovna zamisel je, da z električnim
 poljem tako spremenimo dvolomnost primerno izbranega in odrezanega
 kristala, da se spremeni polarizacija vpadnega vala, zaradi česar
@@ -148,9 +201,9 @@ To ni najbolj ugodno. Bolje je izbrati polje v smeri (1,1,1):
 so tedaj enake kot v trigonalnem kristalu, to je kristal postane enoosen
 z optično osjo vzdolž $\vec{E}$. Dielektrični tenzor dobi obliko
 \begin{equation}
-\underline{\epsilon}=\left[\begin{matrix}\epsilon\end{matrix}\right]\;,\hskip0.8cm\delta\epsilon=\frac{E_{0}}{\sqrt{3}}\epsilon^{2}r\;.\label{7.8}
+\underline{\epsilon}=\left[\begin{matrix}\epsilon\end{matrix}\right]\;,
+\hskip0.8cm\delta\epsilon=\frac{E_{0}}{\sqrt{3}}\epsilon^{2}r\;.\label{7.8}
 \end{equation}
-
 
 Da bomo znali izračunati, kako se po takem kristalu širi vpadni svetlobni
 snop, moramo gornji dielektrični tenzor diagonalizirati. V našem primeru
@@ -186,7 +239,6 @@ je
 \begin{equation}
 n_{i}=n_{0}-\frac{n_{0}^{3}rE_{0}}{\sqrt{3}}\;.\label{7.14}
 \end{equation}
-
 
 Odrežimo iz obravnavanega kristala kvader z robovi vzdolž osi $x^{\prime}$,
 $y^{\prime}$ in $z^{\prime}$. Postavimo ga med prekrižan polarizator
@@ -269,7 +321,6 @@ napetost na drugem kosu mora imeti nasprotni predznak. Tedaj se fazna
 razlika med obema polarizacijama zaradi naravne dvolomnosti odšteje,
 zaradi modulacijske napetosti pa sešteje.
 
-
 \section{Fazna in frekvenčna modulacija}
 
 Amplitudno modulacijo svetlobe smo dobili tako, da smo z zunanjim
@@ -284,9 +335,9 @@ ki smo ga obravnavali v prejšnjem razdelku, je to izredno valovanje,
 polarizirano v smeri modulacijskega polja. Dodatna faza na izhodni
 strani kristala je 
 \begin{equation}
-\phi=k_{0}L(n_{i}-n_{0})=\frac{\omega n_{0}^{3}rLU}{\sqrt{3}cd}\;.\label{7.20}
+\phi=k_{0}L(n_{i}-n_{0})=\frac{\omega n_{0}^{3}rLU}{\sqrt{3}cd}.
+\label{7.20}
 \end{equation}
-
 
 Če je sprememba faze linearna funkcija časa, to je, če jo lahko zapišemo
 v obliki $\phi=\omega_{1}t+\phi_{0}$, predstavlja koeficient $\omega_{1}$
@@ -322,7 +373,6 @@ od osnovne frekvence $\omega$ za modulacijsko frekvenco. Njihova
 velikost je podana s kvadratom Besselovih funkcij parametra $\delta$.
 Če je ta majhen, se lahko zadovoljimo le s prvim členom.
 
-
 \section{Modulacija pri visokih frekvencah}
 
 Pogosto je pomembna hitrost elektrooptične modulacije. Zato polejmo,
@@ -341,7 +391,7 @@ spremembo tenzorja $b_{ij}$ lahko zapišemo
 \end{eqnarray}
  Tu je $S_{lm}=\pi_{lmk}E_{k}$ piezoelektrično povzročena deformacija.
 Pri nizkih frekvencah sta oba prispevka primerljivo velika in je efektivni
-elektrooptični tenzor $r_{ijk}=r_{ijk}^{\ast}+p_{ijlm}\pi_{lmk}$.
+elektro-optični tenzor $r_{ijk}=r_{ijk}^{\ast}+p_{ijlm}\pi_{lmk}$.
 Pri dovolj velikih frekvencah deformacija kristala ne more več slediti
 modulacijski napetosti in ostane le direktni prispevek $r_{ijk}^{\ast}$.
 To se zgodi nad akustičnimi resonancami kristala. Pri akustičnih resonancah,
@@ -352,7 +402,7 @@ Pogoj za akustično resonanco je, da je dimenzija kristala mnogokratnik
 polovice valovne dolžine akustičnega vala v kristalu. Uporabne dimenzije
 kristalov so reda velikosti centimeter, hitrost zvočnih valov je okoli
 5000~m/s, tako da dobimo resonance v področju od nekaj sto kHz do
-nekaj deset MHz. Mogoče jih je tudi izkoristiti za povečanje elektrooptičnega
+nekaj deset MHz. Mogoče jih je tudi izkoristiti za povečanje elektro-optičnega
 efekta pri izbrani frekvenci.
 
 Pri visokih frekvencah postane pomembna tudi električna vezava modulatorja.
@@ -383,11 +433,10 @@ modulatorja in širine modulacijskega pasu. Pri širini modulacijskega
 pasu 1~MHz in preseku kristala 1~cm$^{2}$ je potrebna moč nekaj
 deset W, kar je za visokonapetosten in hiter izvor že znatna moč.
 
-
 \section{Elastooptični pojav}
 
 Dielektrične lastnosti in lomni količnik so odvisne tudi od deformacije
-snovi. Podobno kot pri elektrooptičnem pojavu lahko spremembo obratnega
+snovi. Podobno kot pri elektro-optičnem pojavu lahko spremembo obratnega
 dielektričnega tenzorja zapišemo 
 \begin{equation}
 \delta b_{ij}=p_{ijkl}S_{kl}\;.\label{7.27}
@@ -403,7 +452,7 @@ zaradi spremembe gostote snovi. Je simetričen v prvem in drugem paru
 indeksov, tako da ima v najbolj splošnem primeru 36 neodvisnih komponent.
 Simetrija danega kristala seveda to število zmanjša.
 
-Podobno kot pri elektrooptičnem pojavu lahko iz \ref{7.27} izrazimo
+Podobno kot pri elektro-optičnem pojavu lahko iz \ref{7.27} izrazimo
 spremembo dielektričnega tenzorja 
 \begin{equation}
 \delta\epsilon_{ij}=-\epsilon_{ii}\epsilon_{jj}p_{ijkl}S_{kl}\;,\label{7.29}
@@ -463,7 +512,8 @@ se spremeni tudi frekvenca sipanega vala zaradi Dopplerjevega premika
 pri odboju zvočnem valu, ki potuje s hitrostjo $v_{z}$. Upoštevati
 moramo le projekcijo na smer vapdne in odbite svetlobe, zato je 
 \begin{equation}
-\frac{\Delta\omega}{\omega}=\pm\frac{2v_{z}\sin\theta_{B}/2}{c}=\pm\frac{2\Omega\Lambda\sin\theta_{B}/2}{c}=\pm\frac{\Omega}{\omega};.\label{7.32}
+\frac{\Delta\omega}{\omega}=\pm\frac{2v_{z}\sin\theta_{B}/2}{c}=
+\pm\frac{2\Omega\Lambda\sin\theta_{B}/2}{c}=\pm\frac{\Omega}{\omega};.\label{7.32}
 \end{equation}
  Upoštevali smo, da velja Braggov pogoj \ref{7.31}. Sprememba frekvence
 sipane svetlobe je kar enaka frekvenci zvočnega vala. To sledi tudi
@@ -550,7 +600,8 @@ smo indekse tenzorjev.
 
 Valovna enačba ima obliko 
 \begin{equation}
-\nabla^{2}E=\frac{\epsilon^{\prime}}{c^{2}}{\frac{\partial E^{2}}{\partial t^{2}}}+\mu_{0}{\frac{\partial P_{1}^{2}}{\partial t^{2}}}\;.\label{7.33}
+\nabla^{2}E=\frac{\epsilon^{\prime}}{c^{2}}{\frac{\partial E^{2}}
+{\partial t^{2}}}+\mu_{0}{\frac{\partial P_{1}^{2}}{\partial t^{2}}}\;.\label{7.33}
 \end{equation}
  Na levi strani smo zanemarili, da $\nabla\cdot\vec{E}\ne0$, če je
 $\epsilon$ funkcija kraja. Da s tem nismo zagrešili znantne napake,
@@ -581,7 +632,8 @@ in zahtevajmo, da je vsak člen vsote po $n$ posebej enak nič. Tako
 dobimo 
 \begin{eqnarray}
 -[k_{3}^{2}+(k_{1}+nq)^{2}]A_{n}+2ik_{3}A_{n}^{\prime}=\nonumber \\
-\quad=-\frac{\epsilon^{\prime}}{c^{2}}(\omega+n\Omega)^{2}[A_{n}-\frac{\epsilon_{1}}{2i\epsilon^{\prime}}(A_{n-1}-A_{n+1}) & \;.
+\quad=-\frac{\epsilon^{\prime}}{c^{2}}(\omega+n\Omega)^{2}[A_{n}-
+\frac{\epsilon_{1}}{2i\epsilon^{\prime}}(A_{n-1}-A_{n+1}) & \;.
 \end{eqnarray}
  Upoštevamo, da je $k_{1}^{2}+k_{3}^{2}=\epsilon^{\prime}(\omega/c)^{2}=k^{2}$
 in $\Omega=v_{z}q$. Ker je $v_{z}<<c$, zanemarimo člene reda $v_{z}/c$,
@@ -610,7 +662,8 @@ A_{n}^{\prime}+i\beta_{n}A_{n}=\xi A_{n}\;,\label{7.40}
 \end{equation}
  ki jih lahko zapored integriramo: 
 \begin{equation}
-A_{n}(z)=\xi e^{-i\beta_{n}z}\int_{0}^{z}A_{n-1}(z^{\prime})e^{i\beta_{n}z^{\prime}}dz^{\prime}\;.\label{7.41}
+A_{n}(z)=\xi e^{-i\beta_{n}z}\int_{0}^{z}A_{n-1}(z^{\prime})
+e^{i\beta_{n}z^{\prime}}dz^{\prime}\;.\label{7.41}
 \end{equation}
  Podobne izraze dobimo za negativne $n$, to je za uklonjene valove,
 ki se jim frekvenca pri sipanju zmanjša.
@@ -654,7 +707,8 @@ le oscilira okoli majhne vrednosti, kar opisuje faktor $\sin(\xi L/2)$.
 
 Delež moči uklonjenga vala je 
 \begin{equation}
-\frac{I_{1}}{I_{0}}=\left|\frac{A_{1}}{A_{0}}\right|^{2}=(\xi L)^{2}\left(\frac{\sin\beta_{1}L/2}{\beta_{1}L/2}\right)^{2}\;.\label{7.45}
+\frac{I_{1}}{I_{0}}=\left|\frac{A_{1}}{A_{0}}\right|^{2}=(\xi L)^{2}
+\left(\frac{\sin\beta_{1}L/2}{\beta_{1}L/2}\right)^{2}\;.\label{7.45}
 \end{equation}
  Kadar je Braggov pogoj izpolnjen, je $I_{0}/I_{1}=(\xi L)^{2}$,
 kar lahko velja le, dokler je $\xi L<<1$. Da se izognem tej omejitvi,
@@ -697,11 +751,10 @@ j_{z}=\frac{1}{2}CS_{0}^{2}v_{z}\;,\label{7.49}
 \begin{equation}
 S_{0}=\sqrt{\frac{2j_{z}}{\rho v_{z}^{3}}}\;.\label{7.50}
 \end{equation}
- Merilo uporabnosti neke snovi za akustooptični modulator je 
+ Merilo uporabnosti neke snovi za akusto-optični modulator je 
 \begin{equation}
 M=\frac{n_{0}^{6}p^{2}}{\rho v_{z}^{3}}\;.\label{7.51}
 \end{equation}
-
 
 Poglejmo primer. V kremenu $\rho=2,2\cdot10^{3}$ kg/m$^{3}$, $v_{z}=6000$~m/s,
 $n_{0}=1,46$ in $p=0,2$, tako da je $M=8\cdot10^{-16}$~W/m$^{2}$.
@@ -743,7 +796,6 @@ tedaj rekurzijsko zvezo za Besselove funkcije
 J$_{0}$, prvič je to pri $2\xi L=2.4$, se vsa energija ukloni iz
 vpadnega snopa, vendar gre v tem primeru, ko Braggov pogoj ni izpolnjen,
 v mnogo uklonjenih snopov.
-
 
 \section{Modulacija s tekočimi kristali}
 
@@ -817,7 +869,7 @@ Struktura tekočekristalnega vzorca je tako odvisna od orientacijske
 elastičnosti, od robnih pogojev, ki jih določimo z obdelavo mejne
 površine, in od zunanjega električnega ali magnetnega polja.
 
-Preprost elektrooptični modulator ali kazalnik na osnovi nematskih
+Preprost elektro-optični modulator ali kazalnik na osnovi nematskih
 tekočih kristalov lahko dobimo takole. Vzemimo vzorec tekočega kristala
 med dvema stekloma, na katerih sta prozorni elektrodi. Ureditev tekočega
 kristala naj bo vzporedna s površino stekel. Tudi optična os ima isto
@@ -857,7 +909,7 @@ delovanje kazalnika ni dosti odvisno niti od debeline plasti niti
 od valovne dolžine. Kadar želimo, da kazalnik deluje v odbiti svetlobi,
 damo za zadnji analizator še odbojno površino.
 
-Pri kristalnem elektrooptičnem modulatorju smo lahko dobili tudi vmesne
+Pri kristalnem elektro-optičnem modulatorju smo lahko dobili tudi vmesne
 prepustnosti, medtem ko s tekočimi kristali na opisan način lahko
 dobimo le zaprto in odprto stanje, vmesna stanja pa je zelo težko
 kontrolirati.
