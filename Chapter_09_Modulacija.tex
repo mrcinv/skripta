@@ -8,13 +8,22 @@ ko smo za preklop kvalitete potrebovali element, ki hitro spreminja prepustnost.
 Še bolj pomembna je modulacija valovanja pri optičnem prenosu informacij.
 
 Svetlobno valovanje lahko moduliramo na več načinov. Z ustreznim moduliranjem
-lomnega količnika lahko valovanju spreminjamo amplitudo in frekvenco ali fazo. 
-Optični modulatorji za delovanje izkoriščajo različne pojave, najpomembnejša 
-sta elektro-optični in elasto-optični pojav. Pri prvem 
+lomnega količnika lahko valovanju spreminjamo amplitudo ali frekvenco oziroma fazo. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/09_AMFM.pdf_tex}
+\caption{Amplitudno moduliran signal (levo) in fazno oziroma frekvenčno moduliran signal (desno)
+}
+\label{fig:amfm}
+\end{figure}
+
+Optični modulatorji za delovanje izkoriščajo različne pojave. V tem poglavju bomo spoznali dva
+najpomembnejša, to sta elektro-optični in elasto-optični pojav. Pri prvem 
 dosežemo spremembo lomnega količnika snovi z električnim poljem, pri drugem pa z 
-deformacijo, ki jo navadno dobimo v zvočnem valu, zato takim modulatorjem pravimo
-akusto-optični. Poseben zelo pomemben primer elektro-optičnih modulatorjev
-predstavljajo naprave na osnovi tekočih kristalov.
+deformacijo, ki jo navadno dobimo v zvočnem valu, zato takim modulatorjem pravimo tudi
+akusto-optični. Na koncu bomo spoznali poseben zelo pomemben primer elektro-optičnih modulatorjev
+na osnovi tekočih kristalov.
 
 \section{Elektro-optični pojav}
 Če na snov priključimo električno polje (napetost), se njen dielektrični tenzor lahko spremeni.
@@ -93,91 +102,76 @@ v kristalih z višjo simetrijo pa še manj.
 Za primer poglejmo, kako štirištevna simetrijska os zmanjša število komponent. 
 Naj bo simetrijska os v smeri $z$, električno polje pa vzporedno z njo.
 Rotacija za $\pi/2$ okoli osi $z$ je simetrijska operacija in prevede
-os $x$ v $y$, zato mora biti $r_{113}=r_{223}$. Poglejmo še zvezo 
+os $x$ v $y$, zato mora biti $r_{xxz}=r_{yyz}$. Poglejmo še zvezo 
 \begin{equation}
-\delta b_{12}=r_{123}E_{3}.
+\delta b_{xy}=r_{xyz}E_{z}.
 \label{7.4}
 \end{equation}
 Pri rotaciji za $\pi/2$ gre $x$ v $y$, $y$ pa v $-x$, zato gre
-$\delta b_{12}$ v $-\delta b_{12}$ in dobimo 
+$\delta b_{xy}$ v $-\delta b_{yx}$ in dobimo 
 \begin{equation}
--\delta b_{12}=r_{123}E_{3}.
+-\delta b_{xy}=r_{xyz}E_{z}.
 \label{7.5}
 \end{equation}
-Enačbi~(\ref{7.4}) in~(\ref{7.5}) sta lahko hkrati izpolnjeni, le če je $r_{123}=0$.
-Rotacija za $\pi$ prevede zvezo $\delta b_{13}=r_{133}E_{3}$ v $-\delta b_{13}=r_{133}E_{3}$,
-zato je tudi $r_{133}=0$ in z enakim razmislekom tudi $r_{233}=0$.
+Enačbi~(\ref{7.4}) in~(\ref{7.5}) sta lahko hkrati izpolnjeni, le če je $r_{xyz}=0$.
+Rotacija za $\pi$ prevede zvezo $\delta b_{xz}=r_{xzz}E_{z}$ v $-\delta b_{xz}=r_{xzz}E_{z}$,
+zato je tudi $r_{xzz}=0$ in z enakim razmislekom tudi $r_{yzz}=0$.
 
-Obrnimo zdaj polje v smer osi $x$. Pri rotaciji za $\pi$ gre $E_{1}$
-v $-E_{1}$, $\delta b_{11}$ pa se ne spremeni. Od tod sledi $r_{111}E_{1}=-r_{111}E_{1}$ in 
-posledično $r_{111}=0$. Rotacija za $\pi/2$ zvezo $\delta b_{23}=r_{231}E_{1}$
-prevede v $-\delta b_{13}=r_{231}E_{2}$. Po definiciji pa velja $\delta b_{13}=r_{132}E_{2}$,
-od koder sledi $r_{231}=-r_{132}$.
+Obrnimo zdaj polje v smer osi $x$. Pri rotaciji za $\pi$ gre $E_{x}$
+v $-E_{x}$, $\delta b_{xx}$ pa se ne spremeni. Od tod sledi $r_{xxx}E_{x}=-r_{xxx}E_{x}$ in 
+posledično $r_{xxx}=0$. Rotacija za $\pi/2$ zvezo $\delta b_{yz}=r_{yzx}E_{x}$
+prevede v $-\delta b_{xz}=r_{yzx}E_{y}$. Po definiciji pa velja $\delta b_{xz}=r_{xzy}E_{y}$,
+od koder sledi $r_{yzx}=-r_{xzy}$.
 
 Podobno ravnamo še s preostalimi komponentami in tako ugotovimo, da
 imamo v tetragonalni grupi, ki vsebuje le štirištevno simetrijsko os, štiri neodvisne
-komponente elektro-optičnega tenzorja: $r_{113}=r_{223}$, $r_{333}$,
-$r_{231}=-r_{132}$ in $r_{131}=r_{232}$, vse ostale komponente pa
+komponente elektro-optičnega tenzorja: $r_{xxz}=r_{yyz}$, $r_{zzz}$,
+$r_{yzx}=-r_{xzy}$ in $r_{xzx}=r_{yzy}$, vse ostale komponente pa
 so enake nič. Nekaj primerov Pockelsovih tenzorjev pri različnih kristalnih simetrijah
 je podanih v tabeli~(\ref{table:Pockels}).
 
 \begin{table}[h!]
  \centering
 \begin{tabular}{|c|c|c|c|} \hline  
-      Kristal & Grupa & Neničelne komponente tenzorja $\chi$ & Vrednosti ($10^{-12}$~m/V)\\ \hline
-      BaTiO\index{BaTiO$_3$}$_3$ & 4mm & $\chi_{xxz} = \chi_{yyz} = \chi_{xzx} = \chi_{yzy} = 
-      \chi_{15} = \chi_{24}$  &
-	    $\chi_{15} = 42,6$ \\
-	      & & $\chi_{zxx} = \chi_{zyy} = \chi_{31} = \chi_{32}$ &  $\chi_{31} = 45,2$ \\
-	      & & $\chi_{zzz} = \chi_{33}$ & $\chi_{33} = 16,0$ \\ \hline
+      Kristal & Grupa & Neničelne komponente tenzorja $r$ & Vrednost ($10^{-12}$~m/V)\\ \hline
+      BaTiO$_3$\index{BaTiO$_3$} & 4mm & $r_{xzx} = r_{yzy} = r_{zxx} = r_{zyy} = 
+      r_{51} = r_{42}$  &
+	    (pri 1,55~$\mu$m) $r_{51} = 800$ \\
+	      & & $r_{zzx} = r_{zzy} = r_{31} = r_{32}$ &  $r_{31} = 8$ \\
+	      & & $r_{zzz} = r_{33}$ & $r_{33} = 28$ \\ \hline
       KDP\index{KDP} & 
-      $\overline{4}$2m & $\chi_{xyz} = \chi_{yxz} = \chi_{xzy} = \chi_{yzx} = \chi_{14} = \chi_{25}$  &
-	    $\chi_{14} = 0,88$ \\
-	    & & $\chi_{zxy} = \chi_{zyx} = \chi_{36}$ &  $\chi_{36} =1,12$ \\ \hline
-      Telur\index{Telur} & 32 & $\chi_{xxx} = -\chi_{xyy} = -\chi_{yyx} = -\chi_{yxy} =$  & \\
-      & &  = $\chi_{11} = -\chi_{12}=-\chi_{26}$  &
-	    $\chi_{11} = 1300$ \\
-	    & & $\chi_{xyz} = \chi_{xzy} = -\chi_{yxz}= - \chi_{yzx}= \chi_{14} = 
-	    -\chi_{25}$ &  $\chi_{14} \approx 0$ 
+      $\overline{4}$2m & $r_{yzx} = r_{zyx} = r_{xzy} = r_{zxy} = r_{41} = r_{52}$  &
+	    $r_{41} = 8,77$ \\
+	    & & $r_{xyz} = r_{yxz} = r_{63}$ &  $r_{63} = 10,3$ \\ \hline
+      GaAs\index{GaAs}\index{ZnTe} &  $\overline{4}$3m&
+	  $r_{yzx} = r_{zyx} = r_{xzy} = r_{zxy} = r_{xyz} = r_{yxz}$  & (pri 10,6~$\mu$m) $r_{41} = 1,5$ \\
+	ZnTe  & &   $= r_{41} = r_{52}=r_{63}$  &(pri 3,4~$\mu$m) $r_{41} = 4,2$ 
 	    \\ \hline
-      LiNbO$_3$\index{LiNbO$_3$} & 3m & $\chi_{xxz} = \chi_{yyz} = \chi_{xzx} = \chi_{yzy} = \chi_{15} = \chi_{24}$  &
-	    $\chi_{15} \approx \chi_{31}$ \\
-	     & & $\chi_{zxx} = \chi_{zyy} = \chi_{31} = \chi_{32}$ &  $\chi_{31} = -11,9$ \\
-	      & & $\chi_{zzz} = \chi_{33}$ & $\chi_{33} = 68,8$ \\
-	    & &  $-\chi_{xxy} = - \chi_{xyx} = \chi_{yyy} = -\chi_{yxx}  = $ & \\
-	    & & $=-\chi_{16} = \chi_{22}$ = $-\chi_{21}$  &
-	    $\chi_{22}  = 5,52$ \\
+      LiNbO$_3$\index{LiNbO$_3$} & 3m & $r_{xzx} = r_{zxx} = r_{yzy} = r_{zyy} = r_{51} = r_{42}$  &
+	    $r_{51} = 32,6$ \\
+	     & & $r_{xxz} = r_{yyz} = r_{13} = r_{23}$ &  $r_{13} = 9,6$ \\
+	      & & $r_{zzz} = r_{33}$ & $r_{33} = 30,9$ \\
+	    & &  $r_{yyy} = - r_{xxy} = -r_{xyx} = -r_{yxx}  = $ & \\
+	    & &  $=r_{22} =  -r_{12} =-r_{61} $  &
+	    $r_{22}  = 6,8$ \\
 \hline 
 \end{tabular}
-  \caption{Koeficienti Pockelsovega tenzorja za nekaj izbranih snovi}
+  \caption{Koeficienti Pockelsovega tenzorja za nekaj izbranih snovi. Če ni navedeno drugače, veljajo
+  vrednosti pri valovni dolžini okoli 600~nm.}
 \label{table:Pockels}
 \end{table}
 
-
-
 Podobno kot smo to naredili pri nelinearni susceptibilnosti (poglavje~\ref{Chap:Chi}), 
 tudi elektro-optični tenzor pogosto zapišemo le z dvema komponentama. 
-Prva dva indeksa, v katerih je $r_{ijk}$ simetričen, združijo
+Prva dva indeksa, v katerih je $r_{ijk}$ simetričen, združimo
 v enega z vrednostmi od 1 do 6 po dogovoru $xx=1$, $yy=2$, $zz=3$,
 $yz=4$, $zx=5$ in $xy=6$. Tako postane $r_{ijk}$ matrika velikosti
 $6\times3$, simetrični tenzor drugega ranga $b_{ij}$ pa šetkomponenten
-vektor. Tak zapis je prikladen, se pa v račune hitro prikradejo napake,
-posebej še pri transformacijah koordinat, zato je računati bolje v
-normalnem tenzorskem zapisu.
-
-
-
-
-
-V NOVO POGLAVJE
-Poseben primer nelinearne susceptibilnosti $d_{ijk}$ smo pravzaprav
-že srečali pri elektro-optičnem pojavu: elektro-optični tenzor $r_{ijk}$
-opisuje isto lastnost snovi, le da smo tam zahtevali, da je eno polje
-skoraj statično. 
+vektor.
 
 \section{Amplitudna modulacija}
 
-Poglejmo sedaj, kako lahko elektro-optični pojav izkoristimo za modulacijo
+Poglejmo, kako lahko elektro-optični pojav izkoristimo za modulacijo
 amplitude svetlobnega snopa. Osnovna zamisel je, da z električnim
 poljem tako spremenimo dvolomnost primerno izbranega in odrezanega
 kristala, da se spremeni polarizacija vpadnega vala, zaradi česar
