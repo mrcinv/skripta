@@ -296,7 +296,8 @@ Zanima nas, kako se $A_{3}(z) = A_{2\omega}(z)$ spreminja vzdolž nelinearnega k
 pri začetnem pogoju $A_{2\omega}(0)=0$.
 Privzemimo še, da se pretvori le manjši del vpadnega energijskega toka,
 tako da sta amplitudi $A_{1}=A_{2}=A_0$ približno konstantni. Tedaj lahko
-enačbo za $A_{3}(z)$ (enačba~\ref{eq:nlAz}) brez težav integriramo do dolžine kristala $L$ in dobimo
+enačbo za $A_{3}(z)$ (enačba~\ref{eq:nlAz}) brez težav integriramo do dolžine kristala $L$ in 
+zapišemo
 \begin{equation}
 A_{2\omega}(L)=\frac{i\omega \chi_{ef} A_0^2}{2c_0 n_{2\omega}}
 \,e^{-i\Delta kL/2}\, \frac{\sin\left(\frac{\Delta k L}{2}\right)}{\frac{\Delta kL}{2}}L,
@@ -482,14 +483,14 @@ Pokaži, da v primeru negativne anizotropije pogoj za ujemanje faz zapišemo kot
 \eeq
 \end{definition}
 
-S slike~(\ref{fig:dk} c in d) lahko razberemo, da obstoja še en primer, pri 
+S slike~(\ref{fig:dk} c in d) lahko razberemo, da obstaja še en primer, pri 
 katerem je izpolnjen pogoj za ujemanje faz. Poglejmo primer (c), pri katerem sta v vpadnem
 valovanju prisotni obe polarizaciji, redna in izredna, podvojeno valovanje pa
 je redno polarizirano. Tedaj mora biti za ujemanje faz vsota rednega in izrednega
 lomnega količnika pri osnovni frekvenci enaka dvakratniku rednega lomnega 
 količnika pri dvojni frekvenci. Povedano drugače: lomni količnik pri dvojni
 frekvenci mora biti enak povprečju rednega in izrednega lomnega količnika
-pri osnovni frekvenci. Za praktično uporabo je ta izbira, kadar obstoja,
+pri osnovni frekvenci. Za praktično uporabo je ta izbira, kadar obstaja,
 celo ugodnejša, ker je pri njej kot ujemanja faz bliže $\pi/2$. 
 Ujemanje faz je zato manj občutljivo na majhna odstopanja v kotu ali na temperaturne
 spremembe lomnih količnikov. Račun kota $\vartheta_m$ za ta primer je
@@ -510,7 +511,7 @@ Oglejmo si kot primer spet KH$_{2}$PO$_{4}$\index{KDP}, ki je negativno anizotro
 z vrednostmi $n_o^{\omega} = 1,4942$, 
 $n_e^{\omega} = 1,4603$, $n_o^{2\omega} = 1,5129$ in $n_e^{2\omega} = 1,4709$
 (slika~\ref{fig:dk}\,b). Valovna dolžina osnovnega snopa naj bo 1064~nm. 
-Po podatkih, navedenih zgoraj, dobimo po enačbi~(\ref{8.13a}) za kot ujemanja faz 
+Po podatkih, navedenih zgoraj, izračunamo po enačbi~(\ref{8.13a}) za kot ujemanja faz 
 $\vartheta_m = 41,25^\circ$. Nelinearna susceptibilnost ima v tetragonalni
 simetriji $\bar{4}2m$ od nič različne komponente $\chi_\textrm{xyz}$, $\chi_\textrm{xzy}$
 $\chi_\textrm{zxy}$, $\chi_\textrm{zyx}$, $\chi_\textrm{yzx}$ in $\chi_\textrm{yxz}$
@@ -554,7 +555,7 @@ Spomnimo se, da efektivno susceptibilnost izračunamo kot (enačba~\ref{eq:chico
 \chi_{ef} = \sum_{ijk} \chi_{ijk} e_{3i} e_{1j} e_{2k} = \sum_{ijk} \chi_{ijk} e_{ei} e_{oj} e_{ok}.
 \eeq
 Krajši račun pokaže, da je zaradi oblike tenzorja nelinearne susceptibilnosti v izbranem 
-primeru od nič različna le $z$ komponenta nelinearne polarizacije. Dobimo
+primeru od nič različna le $z$ komponenta nelinearne polarizacije. Zapišemo
 \beq
 \chi_{ef} = \chi_{\textrm{zxy}} e_{ez} e_{ox} e_{oy} + \chi_{\textrm{zyx}} e_{ez} e_{oy} e_{ox}
 \eeq
@@ -650,7 +651,7 @@ Zaradi poenostavljenega zapisa vpeljimo novo spremenljivko
 \beq
 \psi_i = \sqrt{\frac{n_i}{\omega_i}}\tilde{A}_i.
 \eeq
-Tako dobimo nastavek za električno poljsko jakost
+Tako je nastavek za električno poljsko jakost
 \begin{equation}
 \mathbf{E}_{i}=\frac{\mathbf{e}_{i}}{2}\sqrt{\frac{\omega_{i}}{n_{i}}}\psi_{i}(r,z)
 e^{i(k_{i}z-\omega_{i}t)}+\mbox{ k. k.}
@@ -659,7 +660,7 @@ e^{i(k_{i}z-\omega_{i}t)}+\mbox{ k. k.}
 Vstavimo nastavek~(\ref{8.18}) v valovno
 enačbo~(\ref{8.3}) in ločimo na levi in desni člene z enako frekvenco.
 Zaradi počasnega spreminjanja vzdolž smeri $z$ lahko zanemarimo tudi druge odvode 
-$\psi$ po $z$. Tako dobimo sklopljen sistem obosnih enačb 
+$\psi$ po $z$. Od tod sledi sklopljen sistem obosnih enačb 
 \begin{eqnarray}
 \nabla_{\perp}^{2}\psi_{1}+2ik_{1}\psi_{1}^{\prime} & = & -
 \frac{k_{1}}{2}\kappa\psi_{2}^{\ast}\psi_{3}e^{-i\Delta kz}\\
@@ -800,7 +801,7 @@ dobimo dve sklopljeni enačbi
 \label{eq:opaA2}
 \end{eqnarray}
 Enačbi lahko rešimo, tako da prvo odvajamo po $z$ in vanjo vstavimo drugo enačbo.
-Dobimo
+Sledi
 \beq
 \frac{d^2 A_1}{d z^2} = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
 {16 c_0^2 n_1 n_2} A_1 = \kappa^2 A_1
@@ -810,7 +811,7 @@ in podobno za $A_2$
 \frac{d^2 A_2}{d z^2} = \frac{\omega_1 \omega_2 \chi_{ef}^2|A_{30}|^2}
 {16 c_0^2 n_1 n_2} A_2 = \kappa^2 A_2.
 \eeq
-Ob upoštevanju začetnih pogojev dobimo rešitev za naraščanje amplitude signalnega žarka
+Ob upoštevanju začetnih pogojev izračunamo rešitev za naraščanje amplitude signalnega žarka
 z začetno amplitudo $A_{10}$
 \boxeq{eq:opa}{
 A_1 = A_{10} \cosh (\kappa L).
@@ -902,7 +903,7 @@ kljub dokaj močnemu črpalnemu žarku. Zato je smiselno, da svetloba skozi oja�
 sredstvo preide večkrat in se postopoma ojačuje. To naredimo tako, 
 da optično ojačevalno sredstvo zapremo v optični 
 resonator\index{Resonator!parametrični oscilator}
-in signal se ob vsakem obhodu ojača. Dobimo t.\,i.\,optični parametrični oscilator. 
+in signal se ob vsakem obhodu ojača. Sestavili smo t.\,i.\,optični parametrični oscilator. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
@@ -919,11 +920,11 @@ $\omega_2 = \omega_3 -\omega_1$. Njuni frekvenci sta dodatno določeni s pogojem
 ujemanje faz $ k_3 - k_1 - k_2 = 0$, 
 hkrati pa mora ojačevano nihanje sovpadati z lastnim nihanjem resonatorja. 
 S sukanjem ojačevalnega kristala lahko na ta način spreminjamo
-ojačano frekvenco in dobimo nastavljiv izvor svetlobe, navadno infrardeče. 
+ojačano frekvenco in naredili smo nastavljiv izvor svetlobe, navadno infrardeče. 
 
 Za delovanje oscilatorja biti jakost črpalnega žarka tako velika, da je parametrično 
 ojačevanje na obhod večje od izgub. Izračunajmo za primer prag simetričnega oscilatorja. Signal z močjo 
-$P_0$ se ob prehodu skozi ojačevalno sredstvo ojača (enačba~\ref{eq:opa}) in dobimo
+$P_0$ se ob prehodu skozi ojačevalno sredstvo ojača (enačba~\ref{eq:opa})
 \beq
 P_1 = P_0 \cosh^2 (\kappa L),
 \eeq
@@ -1096,7 +1097,7 @@ Celotna polarizacija je
 \label{eq:ptnl}
 \eeq
 Z upoštevanjem zveze med amplitudo polja in povprečno gostoto energijskega toka (enačba~\ref{eq:j})
-dobimo
+zapišemo
 \beq
 \mathbf{P}=
 \epsilon_{0} \left( \chi^{(1)} +\frac{3}{4} \frac{2  j }
@@ -1330,7 +1331,7 @@ Preden se lotimo reševanja gornje enačbe, vpeljimo še
 \zeta=\frac{z}{2k_{0}}.
 \end{equation}
  S tem preide enačba (\ref{8.83a}) v standardno obliko nelinearne Schr\"odingerjeve
-enačbe, le da namesto odvoda po času tukaj nastopa odvod po koordinati $\zeta$. Dobimo
+enačbe, le da namesto odvoda po času tukaj nastopa odvod po koordinati $\zeta$. Sledi
 \index{Nelinearna Schr\"odingerjeva enačba}
 \boxeq{8.84}{
 i\frac{\partial\psi}{\partial\zeta}+\nabla_{\bot}^{2}\psi+\kappa\left|\psi\right|^{2}\psi=0.
@@ -1353,7 +1354,7 @@ Uporabimo gornji nastavek v enačbi (\ref{8.84}) in dobimo
 \begin{equation}
 \left(\frac{du}{dx}\right)^{2}=\eta^{2}u^{2}-\frac{1}{2}\kappa u^{4}.
 \end{equation}
-Ločimo spremenljivki in dobimo 
+Ločimo spremenljivki in zapišemo 
 \begin{equation}
 \int_{\eta\sqrt{2/\kappa}}^{u}\frac{du}{\sqrt{\eta^{2}u^2-\frac{1}{2}\kappa u^{4}}}=x-x_{0},
 \label{8.85}
@@ -1407,7 +1408,7 @@ Bolj ko je snop omejen, manjša je fazna hitrost, za velike polmere snopa pa dos
 limitno vrednost $c_0/\tilde{n}$.
 
 Moč dvodimenzionalnega snopa je enaka integralu
-gostote svetlobnega toka (enačba~\ref{8.89a}) po $x$. Integriramo in dobimo 
+gostote svetlobnega toka (enačba~\ref{8.89a}) po $x$. Integriramo in zapišemo 
 \begin{equation}
 P_S = \int j_s dx \propto \int |E_S|^2 dx  = 
 \frac{2}{\kappa}\,\eta^{2}\int_{-\infty}^{\infty}\frac{dx}
@@ -1517,7 +1518,7 @@ Gornjo enačbo rešujemo z nastavkoma
 \tilde{P} = \tilde{B} (z,\omega - \omega_0) e^{ik_0z},
 \eeq
 pri čemer je $\omega_0$ osrednja frekvenca svetlobnega sunka in $k_0 = \omega_0 n/c_0$. Vpeljemo še
-$\Omega =\omega - \omega_0$ in dobimo 
+$\Omega =\omega - \omega_0$
 \beq
 \left(\frac{\partial^2}{\partial z^2}+k^2\right)\tilde{A}(z,\Omega) e^{ik_0z} =
 - \mu_{0}\omega^2 \tilde{B} (z,\Omega) e^{ik_0z}.
@@ -1587,8 +1588,8 @@ sorazmeren nelinearnemu lomnemu količniku $n_2$
 enačba\index{Nelinearna Schr\"odingerjeva enačba}, ki smo jo 
 zapisali že pri izpeljavi krajevnih solitonov~(enačba~\ref{8.84}). Enačbi se razlikujeta v tem, da
 ima vlogo prečne koordinate $x$ tukaj čas $\tau$ in rešitve nimajo več konstantnega premera,
-ampak imajo konstantno dolžino sunka. Stacionarne rešitve obstojajo le v primeru, kadar je  $d^{2}k/d\omega^{2}<0$ oziroma kadar ima drugi odvod nasprotni predznak od nelinearnega lomnega količnika $n_2$. Kot pri krajevnih solitonih tudi tukaj vpeljemo parameter $\eta$, ki je sorazmeren 
-z energijo solitona (enačba~\ref{eq:solj}) in dobimo 
+ampak imajo konstantno dolžino sunka. Stacionarne rešitve obstajajo le v primeru, kadar je  $d^{2}k/d\omega^{2}<0$ oziroma kadar ima drugi odvod nasprotni predznak od nelinearnega lomnega količnika $n_2$. Kot pri krajevnih solitonih tudi tukaj vpeljemo parameter $\eta$, ki je sorazmeren 
+z energijo solitona (enačba~\ref{eq:solj}). Sledi 
 \beq
 A_S\left(z,\tau\right)=\sqrt{\frac{2}{\kappa}}\eta\frac{e^{i\eta^{2}z}}{{\cosh}\left(\eta \tau 
 \sqrt{2\left|\frac{d^{2}\beta}{d\omega^{2}}\right|^{-1}}\right)}\,
@@ -1762,7 +1763,7 @@ in
 \eeq
 Ko novi amplitudi vstavimo v diferencialni enačbi~(enačbi~\ref{eq:opc1} in 
 \ref{eq:opc2}), se Kerrov prispevek k fazi ravno odšteje
-in dobimo 
+in 
 \begin{equation}
 \frac{d\tilde{A}_{3}}{dz}=i\frac{ 3 \chi \omega}{4 c_0 n}\,
 A_{1}A_{2}\tilde{A}_{4}^{*}
@@ -1803,7 +1804,7 @@ D_{2}\sin(\left|\kappa\right|z).
 \label{8.108a}
 \end{eqnarray}
 Z upoštevanjem zveze, ki izhaja neposredno iz diferencialne enačbe 
-(enačba~\ref{8.107a}), dobimo
+(enačba~\ref{8.107a}), zapišemo
 \beq
 C_1 = \frac{i \kappa^*}{|\kappa|}D_2 \qquad
 \textrm{in} \qquad 

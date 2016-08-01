@@ -9,13 +9,13 @@ se naučili računati prehode Gaussovih snopov prek optičnih elementov.
 Pri obravnavi elektromagnetnega valovanja pogosto uporabljamo
 približek ravnih valov. Ti so v smeri pravokotno na smer širjenja
 neomejeni in so zato lahko le idealizacija. Čim raven val usmerimo skozi odprtino
-v zaslonu, dobimo omejen snop svetlobe\index{Omejen snop}. V snopu svetlobe valovna čela niso
+v zaslonu, nastane omejen snop svetlobe\index{Omejen snop}. V snopu svetlobe valovna čela niso
 ravna in meje snopa niso vzporedne, ampak se snop zaradi uklona širi\index{Uklon} (slika \ref{fig:Uklon-na-rezi}).
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/03_uklon_na_rezi.pdf_tex}
-\caption{Omejen snop dobimo ob prehodu ravnega vala skozi končno odprtino.}
+\caption{Omejen snop nastane ob prehodu ravnega vala skozi končno odprtino.}
 \label{fig:Uklon-na-rezi}
 \end{figure}
 
@@ -162,7 +162,7 @@ Integriramo še enačbo za fazo
 \begin{equation}
 \phi=\int_{0}^{z}\,-\frac{i dz}{z-iz_{0}}=-i\ln(1+i\frac{z}{z_{0}}).
 \end{equation}
-Tako imamo 
+Sledi
 \begin{eqnarray}
 \psi & = & \exp\left[i\frac{kr^{2}}{2(z-iz_0)}\right]\,\exp\left[-\ln(1+i\frac{z}{z_{0}})\right]=
 \nonumber \\
@@ -307,7 +307,7 @@ se razlikuje od faze ravnega in krogelnega vala.}
 
 \section{Snopi višjega reda}
 
-Osnovna rešitev obosne valovne enačbe je Gaussov snop. Poleg te rešitve pa obstoja še veliko 
+Osnovna rešitev obosne valovne enačbe je Gaussov snop. Poleg te rešitve pa obstaja še veliko 
 drugih rešitev, ki so tudi omejene v prečni smeri. V kartezičnih koordinatah tako rešijo obosno valovno enačbo
 tudi \index{Hermite-Gaussovi snopi}Hermite-Gaussovi snopi\footnote{Francoski matematik Charles Hermite, 1822--1901.}
 \begin{equation}
@@ -557,7 +557,7 @@ x_{2}=\frac{x_{1}f^{2}}{x_{1}^{2}+z_{01}^{2}}.
 }
 Gornja enačba se ujema z izrazom za preslikavo točke v geometrijski
 optiki le, kadar je $z_{01}\ll x_{1}$. Kadar je $z_{01}\gg f$, je
-val na leči pri vsakem $x_{1}$ skoraj raven in $x_2 \to 0$, kar pomeni, da dobimo 
+val na leči pri vsakem $x_{1}$ skoraj raven in $x_2 \to 0$, kar pomeni, da leži
 grlo na desni strani v gorišču. V praksi dobimo Gaussove snope iz laserjev in pogosto ne
 velja ne prva ne druga limita, temveč je treba uporabiti izraz (\ref{eq:preslikava-grlo}).
 Tudi povečava polmera grla na desni, podana z enačbo (\ref{eq:preslikava-povecava}),
@@ -567,7 +567,7 @@ Za primer vzemimo snop iz He-Ne laserja (valovna dolžina 632,8~nm), ki ima grlo
 polmerom $w_{01}=0,5~\milli\metre$ na izhodnem ogledalu in je $50~\centi\metre$ pred lečo z 
 goriščno razdaljo $f=25~\centi\metre$.
 Tedaj je $z_{01}=124~\centi\metre$. Po enačbi (\ref{eq:preslikava-grlo})
-dobimo grlo za lečo v oddaljenosti $1~\centi\metre$ od gorišča in 26~cm za lečo, 
+leži grlo za lečo v oddaljenosti $1~\centi\metre$ od gorišča in 26~cm za lečo, 
 po enačbi (\ref{eq:preslikava-povecava})
 pa izračunamo polmer $w_{02}=100~\micro\metre$. Enačbe geometrijske optike bi
 dale popolnoma napačen položaj grla $50~\centi\metre$ za lečo, polmer grla pa 
@@ -614,7 +614,7 @@ skozi sistem dveh leč z goriščnima razdaljama $f_{1}$ in $f_{2}$}
 
 \begin{definition}
 \label{teleskop}
-Imamo dve leči z goriščnima razdaljama $f_{1}$ in $f_{2}$, ki sta na medsebojni
+Dve leči z goriščnima razdaljama $f_{1}$ in $f_{2}$ naj bosta na medsebojni
 razdalji $d=f_{1}+f_{2}$. Pokaži, da je povečava takega teleskopa enaka  
 \begin{equation}
 \frac{w_{02}}{w_{01}}=\frac{f_{2}}{f_{1}},
@@ -627,7 +627,7 @@ in je neodvisna od postavitve grla snopa $x_{1}$.
 
 Preden se lotimo splošnejšega zapisa preslikav Gaussovega snopa, se spomnimo, kako
 se lotimo preslikav v geometrijski optiki. 
-Sliko dobimo kot presečišče geometrijskih žarkov,
+Slika nastane kot presečišče geometrijskih žarkov,
 ki izhajajo iz točke predmeta pred optičnim sistemom. Geometrijski
 žarek je pravokoten na valovne ploskve, pri čemer moramo vzeti še limito,
 ko gre valovna dolžina proti nič. Ukrivljenost valovne fronte je neposredno
