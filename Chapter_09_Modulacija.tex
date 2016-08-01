@@ -56,7 +56,7 @@ $q \sim 10^{-24}$~m$^2$/V$^2$.
 
 Za uporabo trdnih kristalov je pomemben
 predvsem linearni člen, zato se bomo osredotočili le na prvi člen in zapisali
-\boxeq{eq:Kerr}{
+\boxeq{eq:Pockels}{
 \delta b_{ij}=r_{ijk}E_{k}. 
 }
 
@@ -79,7 +79,7 @@ Sprememba dielektričnega tenzorja je tako
 oziroma
 \begin{equation}
 \delta\epsilon_{ij}=-\tilde{\epsilon}_{ik}\delta b_{kl}\tilde{\epsilon}_{lj}
-=\tilde{\epsilon}_{ii}\tilde{\epsilon}_{jj}\delta b_{ij}.
+=-\tilde{\epsilon}_{ii}\tilde{\epsilon}_{jj}\delta b_{ij}.
 \label{7.3}
 \end{equation}
 V zadnjem zapisu smo upoštevali, da je nemoten dielektrični tenzor diagonalen.
@@ -142,7 +142,7 @@ je podanih v tabeli~(\ref{table:Pockels}).
       KDP\index{KDP} & 
       $\overline{4}$2m & $r_{yzx} = r_{zyx} = r_{xzy} = r_{zxy} = r_{41} = r_{52}$  &
 	    $r_{41} = 8,77$ \\
-	    & & $r_{xyz} = r_{yxz} = r_{63}$ &  $r_{63} = 10,3$ \\ \hline
+	    & & $r_{xyz} = r_{yxz} = r_{63}$ &  $r_{63} = -10,3$ \\ \hline
       GaAs\index{GaAs}\index{ZnTe} &  $\overline{4}$3m&
 	  $r_{yzx} = r_{zyx} = r_{xzy} = r_{zxy} = r_{xyz} = r_{yxz}$  & (pri 10,6~$\mu$m) $r_{41} = 1,5$ \\
 	ZnTe  & &   $= r_{41} = r_{52}=r_{63}$  &(pri 3,4~$\mu$m) $r_{41} = 4,2$ 
@@ -169,82 +169,168 @@ $yz=4$, $zx=5$ in $xy=6$. Tako postane $r_{ijk}$ matrika velikosti
 $6\times3$, simetrični tenzor drugega ranga $b_{ij}$ pa šetkomponenten
 vektor.
 
-\section{Amplitudna modulacija}
+\section{Longitudinalna modulacija}
+Poglejmo na primeru, kako električno polje spremeni lastnosti elektro-optičnega kristala
+in kako vpliva na svetlobo, ki potuje skozi tak kristal. V praksi se navadno uporabljajo 
+kristali, ki so dvolomni že brez zunanjega polja. 
+Kot primer vzemimo kristal KH$_{2}$PO$_{4}$ (KDP), ki ima tetragonalno 
+simetrijo ($\bar{4}2m$). Kot razberemo iz tabele~(\ref{table:Pockels}) ima 
+elektro-optični tenzor dve nedodvisni komponenti: $r_{41} = r_{52}=10,3 \times 10^{-11}$~m/V
+in $r_{63}=8,77 \times 10^{-12}$~m/V.
 
-Poglejmo, kako lahko elektro-optični pojav izkoristimo za modulacijo
-amplitude svetlobnega snopa. Osnovna zamisel je, da z električnim
-poljem tako spremenimo dvolomnost primerno izbranega in odrezanega
-kristala, da se spremeni polarizacija vpadnega vala, zaradi česar
-se spremeni tudi svetlobna moč, ki jo prepusti analizator za kristalom.
-Poglejmo si to kar na primerih.
+Kristal naj bo odrezan po kristalografskih oseh, svetloba naj skozi kristal potuje 
+v smeri optične osi, to je smeri $z$, v isti smeri pa na kristal priključimo
+polje $E_z$ (t.i. longitudinalna modulacija). 
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/09_AMshema.pdf_tex}
+\caption{Shema longitudinalne modulacije signala. Ker je polje priključeno v smeri
+potovanja svetlobe, morata biti elektrodi transparentni.}
+\label{fig:amshema}
+\end{figure}
+Inverzni tenzor dielektričnosti brez priključenega polja zapišemo kot
+\beq
+\underline{\tilde{b}} = 
+\left[\begin{array}{ccc}
+1/n_o^2 & 0& 0\\
+0 & 1/n_o^2& 0\\
+0 & 0&  1/n_e^2
+\end{array}\right],
+\label{7.8}
+\eeq
+pri čemer sta $n_o$ in $n_e$ redni in izredni lomni količnik. Ko priključimo 
+polje, se tenzor dielektričnosti spremeni zaradi Pockelsovega pojava. Sprememba
+inverznega tenzorja dielektričnosti je po enačbi~(\ref{eq:Pockels})
+\begin{align}
+\delta b_{xx} & =r_{xxz}E_z = 0\\
+\delta b_{xy} & = \delta b_{yx} = r_{xyz}E_z = r_{63}E_z\\
+\delta b_{xz} & = \delta b_{zx} =r_{xzz}E_z = 0\\
+\delta b_{yy} & =r_{yyz}E_z = 0\\
+\delta b_{yz} & = \delta b_{zy} =r_{yzz}E_z = 0\\
+\delta b_{zz} & =r_{zzz}E_z = 0.
+\end{align}
+Vidimo, da je večina členov enaka nič, se pa zaradi električnega polja v smeri $z$ pojavi 
+izvendiagonalna komponenta dielektričnega tenzorja 
+\beq
+\underline{b} = 
+\left[\begin{array}{ccc}
+1/n_o^2 & 0& 0\\
+0 & 1/n_o^2 & 0\\
+0 & 0& 1/n_e^2
+\end{array}\right] + \left[\begin{array}{ccc}
+ 0& r_{63}E_z& 0\\
+r_{63}E_z & 0 & 0\\
+0 & 0&  0
+\end{array}\right] = \left[\begin{array}{ccc}
+1/n_o^2 & r_{63}E_z& 0\\
+r_{63}E_z& 1/n_o^2 & 0\\
+0 & 0&  \frac{1}{n_e^2}
+\end{array}\right].
+\label{7.8a}
+\eeq
+Če želimo izračunati, kako se po takem kristalu širi vpadni svetlobni
+snop, moramo gornji dielektrični tenzor diagonalizirati. Lastne vrednosti novega tenzorja
+in pripadajoče nove lastne osi so
+\begin{align}
+\lambda_1 &= \frac{1}{n_o^2}+ r_{63}E_z \quad \mathrm{in} \quad \mathbf{e}_1' = \frac{1}{\sqrt{2}}(1,1,0)\\
+\lambda_2 &= \frac{1}{n_o^2}- r_{63}E_z \quad \mathrm{in} \quad \mathbf{e}_2' = \frac{1}{\sqrt{2}}(-1,1,0)\\
+\lambda_3 &= \frac{1}{n_e^2} \quad \mathrm{in} \quad \mathbf{e}_3' = (0,0,1).
+\end{align}
+Vidimo, da so nove lastne osi zasukane za kot $45~^\circ$ glede na prvotne osi sistema.
+V novem koordinatnem sistemu je inverzni dielektrični tenzor diagonalen in enak
+\beq
+\underline{b} = 
+\left[\begin{array}{ccc}
+1/n_o^2 + r_{63}E_z& 0& 0\\
+0 & 1/n_o^2 - r_{63}E_z& 0\\
+0 & 0& 1/n_e^2
+\end{array}\right].
+\eeq
+\begin{figure}[h]
+\centering
+\def\svgwidth{60truemm} 
+\input{slike/09_AMindikatrisa.pdf_tex}
+\caption{Optično enoosni kristal postane pod napetostjo dvoosen. Indikatrisa, ki je pravokotno
+na optično os brez polja krožnica, se pod vplivom napetosti spremeni v elipso. }
+\label{fig:amn}
+\end{figure}
+Spomnimo se, da svetloba potuje skozi kristal vzdolž osi $z$. Brez zunanjega električnega
+polja je kristal enoosen z optično osjo v smeri $z$. Lomni količnik je torej neodvisen od
+polarizacije vpadnega valovanja in je enak $n_o$. Ko priključimo polje, postane kristal
+optično dvoosen, saj so vse tri lastne vrednosti tenzorja dielektričnosti različne. Za žarek, 
+ki potuje vzdolž osi $z$, torej obstajata dve lastni smeri $x'$ in $y'$ z ustreznima
+novima lastnima količnikoma, ki ju izrazimo kot
+\beq
+\frac{1}{n_x'^2} = \frac{1}{n_o^2}+ r_{63}E_z \quad \mathrm{in} \quad 
+\frac{1}{n_y'^2} = \frac{1}{n_o^2}- r_{63}E_z. 
+\eeq
+Za vse druge smeri polarizacije vhodne svetlobe, dobimo po preletu kristala eliptično polariziran žarek.
 
-Vzemimo kristal s kubično simetrijo $\overline{4}3m$, na primer ZnTe.
-Elektrooptični tenzor ima le eno neodvisno komponento 
-\begin{equation}
-r_{123}=r_{231}=r_{312}=r\;.\label{7.6}
-\end{equation}
- Dieletktrični tenzor brez polja je seveda izotropen, dvolomnosti
-ni. Električno polje vzdolž ene od osi, na primer $z$, povzroči spremembo
-$\delta\epsilon_{12}=-\epsilon^{2}rE_{3}$, zaradi česar postane kristal
-dvoosen z optičnima osema v ravnini $xy$, torej pravokotno na $\vec{E}$.
-To ni najbolj ugodno. Bolje je izbrati polje v smeri (1,1,1): 
-\begin{equation}
-\vec{E}=\frac{E_{0}}{\sqrt{3}}(1,1,1)\;,\label{7.7}
-\end{equation}
- to je vzdolž trištevne osi, ki ostane tudi pod poljem. Optične lastnosti
-so tedaj enake kot v trigonalnem kristalu, to je kristal postane enoosen
-z optično osjo vzdolž $\vec{E}$. Dielektrični tenzor dobi obliko
-\begin{equation}
-\underline{\epsilon}=\left[\begin{matrix}\epsilon\end{matrix}\right]\;,
-\hskip0.8cm\delta\epsilon=\frac{E_{0}}{\sqrt{3}}\epsilon^{2}r\;.\label{7.8}
-\end{equation}
+Za vsa eksperimentalno dosegljiva polja velja, da je $rE\ll1/n^2$, 
+zato lahko gornja izraza razvijemo za majhne popravke. Dobimo
+\beq
+n_x' = \sqrt{\frac{n_o^2}{1+ n_o^2 r_{63}E_z}} \approx n_o \sqrt{1- n_o^2 r_{63}E_z}
+\eeq
+in 
+\boxeq{EOnx}{
+n_x'\approx n_o - \frac{1}{2}n_o^3 r_{63}E_z.
+}
+Podobno izpeljemo še za drugo lastno vrednost
+\boxeq{EOny}{
+n_y'\approx n_o + \frac{1}{2}n_o^3 r_{63}E_z.
+}
+Različni lastni polarizaciji potujeta vzdolž osi $z$ z različnima hitrostima. 
+Med njima zato pride do fazne razlike, ki je enaka
+\beq
+\Delta \phi = k_0 n_y' L - k_0 n_x' L = \frac{\omega}{c_0}L 
+n_o^3 r_{63}E_z.
+\eeq
+Kristal torej doda vpadnemu valovanju dodatni fazni zamik, ki je odvisen od električne poljske
+jakosti $E_z$. Vpeljemo še karakteristično napetost $U_\pi$, pri kateri je dodatna 
+fazna razlika enaka $\pi$ in kristal deluje kot ploščica $\lambda/2$
+\beq
+U_\pi = \frac{\pi c_o}{\omega n_o^3 r_{63}} = \frac{\lambda}{2 n_o^3 r_{63}}.
+\eeq
+Za kristal KDP je $\pi$-vrednost napetosti pri valovni dolžini $633$~nm enaka $8970$~V. 
+Izračunana napetost je precej velika. Velike delovne napetosti
+so značilne za kristalne elektro-optične modulatorje in so njihova
+glavna pomanjkljivost. 
 
-Da bomo znali izračunati, kako se po takem kristalu širi vpadni svetlobni
-snop, moramo gornji dielektrični tenzor diagonalizirati. V našem primeru
-je to preprosto, saj smo že ugotovili, da predstavlja enoosno sredstvo
-z optično osjo vzdolž $\vec{E}$. Uvedimo torej nove koordinate z
-osjo $z^{\prime}$ vzporedno z $\vec{E}$: 
-\begin{equation}
-z^{\prime}=\frac{1}{\sqrt{3}}(x+y+z)\;.\label{7.9}
-\end{equation}
- V ravnini, pravokotni na $z^{\prime}$ so vse smeri enakovredne,
-zato je vseeno, kako izberemo novi osi $x^{\prime}$ in $y^{\prime}$,
-le pravokotni morata biti na $z^{\prime}$ in med seboj. Vzemimo 
-\begin{eqnarray}
-x^{\prime} & = & \frac{1}{\sqrt{2}}(y-z)\nonumber \\
-y^{\prime} & = & \frac{1}{\sqrt{6}}(-2x+y+z)\;.
-\end{eqnarray}
- Matrika prehoda iz starega v novi sistem je torej 
-\begin{equation}
-R=\left[\begin{matrix}0\end{matrix}\right]\label{7.11}
-\end{equation}
- in dielektrični tenzor v novem sistemu 
-\begin{equation}
-\underline{\epsilon^{\prime}}=R\,\underline{\epsilon}\, R^{-1}=\left[\begin{matrix}\epsilon+\delta\epsilon\end{matrix}\right]\;.\label{7.12}
-\end{equation}
- Iz oblike $\epsilon^{\prime}$ razberemo, da je redni lomni količnik,
-to je količnik za svetlobo, ki je polarizirana pravokotno na $z^{\prime}$,
-\begin{equation}
-n_{r}=\sqrt{\epsilon+\delta\epsilon}\simeq n_{0}(1+\frac{\delta\epsilon}{2\epsilon})=n_{0}+\frac{n_{0}^{3}rE_{0}}{2\sqrt{3}}\;,\label{7.13}
-\end{equation}
- kjer je $n_{0}=\sqrt{\epsilon}$ nemoteni lomni količnik. Izredni
-lomni količnik, za katerega je polarizacija vzporedna z osjo $z^{\prime}$,
-je 
-\begin{equation}
-n_{i}=n_{0}-\frac{n_{0}^{3}rE_{0}}{\sqrt{3}}\;.\label{7.14}
-\end{equation}
+\section{Transverzalna modulacija}
+Iz praktičnih razlogov je navadno preprosteje uporabili transverzalno modulacijo.
+Tudi to postavitev obravnavajmo na primeru, za zgled vzemimo kristal LiNbO$_3$.
 
-Odrežimo iz obravnavanega kristala kvader z robovi vzdolž osi $x^{\prime}$,
-$y^{\prime}$ in $z^{\prime}$. Postavimo ga med prekrižan polarizator
-in analizator tako, da se svetloba širi vzdolž osi $x^{\prime}$,
-kot kaže slika \ref{s7.1}. Polarizator naj tvori z osjo $z^{\prime}$
-kot $45^{o}$. Svetlobni val, ki vpada na kristal, moramo razdeliti
-na redni in izredni del. Po prehodu skozi kristal nastane med njima
-fazna razlika 
-\begin{equation}
-\phi=k_{0}L(n_{i}-n_{r})=\frac{\sqrt{3}\pi n_{0}^{3}rLU}{\lambda d}\;,\label{7.15}
-\end{equation}
- kjer je $U$ napetost na kristalu.
+
+Poglejmo na primeru, kako električno polje spremeni lastnosti elektro-optičnega kristala
+in kako vpliva na svetlobo, ki potuje skozi tak kristal. V praksi se navadno uporabljajo 
+kristali, ki so dvolomni že brez zunanjega polja. 
+Zato kot primer vzemimo kristal KH$_{2}$PO$_{4}$ (KDP), ki ima tetragonalno 
+simetrijo ($\bar{4}2m$). Kot razberemo iz tabele~(\ref{table:Pockels}) ima 
+elektro-optični tenzor dve nedodvisni komponenti: $r_{41} = r_{52}=10,3 \times 10^{-11}$~m/V
+in $r_{63}=8,77 \times 10^{-12}$~m/V.
+
+
+
+
+ 
+ Ker je kristal že sam po sebi dvolomen, povzroči zunanje
+polje le majhno dodatno fazno razliko. Dolžina kristala mora biti
+taka, da velja $k_{0}L(n_{r}-n_{i})=2N\pi$, če naj bo modulator brez
+zunanjega polja zaprt. Pri tem nastopi težava. Pogoj je lahko zaradi
+temperaturnega raztezanja in odvisnosti lomnih količnikov od temperature
+izpolnjen le pri eni temperaturi, poleg tega bi bil tak modulator
+tudi zelo občutljiv na to, da se svetloba širi natanko v smeri $y^{\prime}$.
+Zato dvolomnost nemotenega kristala kompenziramo tako, da vzamemo
+dva enako dolga kristala in ju postavimo zapored tako, da sta optični
+osi med seboj pravokotni, kot kaže slika \ref{s7.3}. Modulacijska
+napetost na drugem kosu mora imeti nasprotni predznak. Tedaj se fazna
+razlika med obema polarizacijama zaradi naravne dvolomnosti odšteje,
+zaradi modulacijske napetosti pa sešteje.
+
+
+
+
 
 Polarizator na izhodni strani prepusti le projekcijo obeh lastnih
 polarizacij: 
@@ -259,17 +345,8 @@ j_{izh}=\frac{1}{4}j_{vh}|1-e^{i\phi}|^{2}=\frac{1}{2}j_{vh}(1-\cos\phi)\;.\labe
  Ko je napetost na kristalu nič, je $\phi=0$ in je tudi $j_{izh}=)$,
 kot pričakujemo, saj sta analizator in polarizator prekrižana, kristal
 pa je brez polja optično izotropen. Prepustnost je največja, ko
-je $\phi=\pi$. V ZnTe je $r_{123}=4\cdot10^{-12}$~m/V in $n=3$.
-Naj bo kristal dolg 1~cm. Potrebno elekrično polje, da bo $\phi=\pi$,
-z drugimi besedami, da bo kristal deloval kot ploščica $\lambda/2$,
-je pri valovni dol\textquotedbl{}ini 600~nm 
-\begin{equation}
-E_{\lambda/2}=\frac{U_{\lambda/2}}{d}=\frac{\lambda}{\sqrt{3}n^{3}rL}=3,2\cdot10^{5}\mbox{ V/m}\;.\label{7.18}
-\end{equation}
- Napetost, da popolnoma odpremo modulator, je torej precej velika,
-pri debelini kistala 1~cm je potrebnih 3000~V. Velike delovne napetosti
-so značilne za kristalne elektrooptične modulatorje in so njihova
-glavna slaba stran.
+je $\phi=\pi$.
+
 
 Včasih želimo, da je zveza med modulacijsko napetostjo in izhodno
 gostoto toka linearna. Za to mora modulator delovati v okolici $\phi=\pi/2$.
@@ -277,43 +354,16 @@ Namesto visoke stalne napetosti lahko uporabimo med polarizatorjem
 in kristalom še ploščico $\lambda/4$, ki nam da zahtevani stalni
 fazni premik med rednim in izrednim valom.
 
-V praksi se pogosto uporabljajo kristali, ki imajo simetrijo nižjo
-od kubične in so dvolomni že brez zunanjega polja. Zato si kot primer
-poglejmo še modulator s kristalom kalijevega dihidrogen fosfata (KH$_{2}$PO$_{4}$).
-Je tetragonalne simetrije $\bar{4}2m$ in ima dve neodvisni komponenti
-Pockelsovega tenzorja: $r_{123}=10^{-11}$~m/V in $r_{231}=r_{132}=8\dot{1}0^{-12}$~m/V.
-V uporabi sta dve geometriji, pri eni je optična os, to je štirištevna
-os kristala, vzporedna s smerjo svetlobnega vala in je tudi zunanje
-modulacijsko polje v isti smeri, kar je manj ugodno, pri drugi pa
-sta optična os in zunanje polje pravokotna na smer širjenja svetlobe,
-kot kaže slika \ref{s7.2}. Električno polje v smeri $z$ povzroči,
-da se pojavi izvendiagonalna komponenta dielektričnega tenzorja $\delta\epsilon_{12}=\epsilon_{1}^{2}r_{123}E$
-in lastni vrednosti dielektričnega tenzorja v ravnini $xy$ nista
-več enaki. Ena lastna vrednost postane $\epsilon_{1}+\delta\epsilon$
-z lastno smerjo $x^{\prime}$ 45$^{o}$ glede na kristalno os $x$,
-druga pa $\epsilon_{1}-\delta\epsilon$ z lastno smerjo $y^{\prime}$
--45$^{o}$ na os $x$. Kristal odrežemo tako, da se svetloba širi
-vzdolž osi $y^{\prime}$. Tedaj se zaradi zunanjega polja lomni količnik
-za svetlobo, polarizirano v smeri $x^{\prime}$ spremeni za $n_{r}^{3}r_{123}E/2$
-in je fazna razlika med obema lastnima polarizacijama (smeri $x^{\prime}$
-in $z$) po prehodu skozi kristal 
-\begin{equation}
-\phi=k_{0}L\left[(n_{r}-n_{i})+\frac{n_{r}^{3}}{2}r_{123}E\right]\;,\label{7.19}
-\end{equation}
- kjer sta $n_{r}$ in $n_{i}$ redni in izredni lomni količnik nemotenega
-kristala. Ker je kristal že sam po sebi dvolomen, povzroči zunanje
-polje le majhno dodatno fazno razliko. Dolžina kristala mora biti
-taka, da velja $k_{0}L(n_{r}-n_{i})=2N\pi$, če naj bo modulator brez
-zunanjega polja zaprt. Pri tem nastopi težava. Pogoj je lahko zaradi
-temperaturnega raztezanja in odvisnosti lomnih količnikov od temperature
-izpolnjen le pri eni temperaturi, poleg tega bi bil tak modulator
-tudi zelo občutljiv na to, da se svetloba širi natanko v smeri $y^{\prime}$.
-Zato dvolomnost nemotenega kristala kompenziramo tako, da vzamemo
-dva enako dolga kristala in ju postavimo zapored tako, da sta optični
-osi med seboj pravokotni, kot kaže slika \ref{s7.3}. Modulacijska
-napetost na drugem kosu mora imeti nasprotni predznak. Tedaj se fazna
-razlika med obema polarizacijama zaradi naravne dvolomnosti odšteje,
-zaradi modulacijske napetosti pa sešteje.
+
+\section{Amplitudna modulacija}
+Poglejmo, kako lahko elektro-optični pojav izkoristimo za modulacijo
+amplitude svetlobnega snopa. Osnovna zamisel je, da z električnim
+poljem tako spremenimo dvolomnost primerno izbranega in odrezanega
+kristala, da se spremeni polarizacija vpadnega vala, zaradi česar
+se spremeni tudi svetlobna moč, ki jo prepusti analizator za kristalom.
+Poglejmo si to kar na primeru.
+
+
 
 \section{Fazna in frekvenčna modulacija}
 
@@ -372,7 +422,7 @@ velikost je podana s kvadratom Besselovih funkcij parametra $\delta$.
 Pogosto je pomembna hitrost elektrooptične modulacije. Zato polejmo,
 kaj se zgodi pri visokih modulacijskih frekvencah.
 
-Elektrooptični pojav pri nizkih frekvencah ima dva prispevka: direktnega,
+Elektro-optični pojav pri nizkih frekvencah ima dva prispevka: direktnega,
 kjer zunanje polje vpliva neposredno na elektronsko polarizabilnost,
 in posrednega preko piezoelektričnega pojava. Snovi, ki nimajo centra
 inverzije, so tudi piezoelektrične in se v zunanjem električnem polju
@@ -597,7 +647,7 @@ Valovna enačba ima obliko
 \nabla^{2}E=\frac{\epsilon^{\prime}}{c^{2}}{\frac{\partial E^{2}}
 {\partial t^{2}}}+\mu_{0}{\frac{\partial P_{1}^{2}}{\partial t^{2}}}\;.\label{7.33}
 \end{equation}
- Na levi strani smo zanemarili, da $\nabla\cdot\vec{E}\ne0$, če je
+ Na levi strani smo zanemarili, da $\nabla\cdot\mathbf{E}\ne0$, če je
 $\epsilon$ funkcija kraja. Da s tem nismo zagrešili znantne napake,
 naj bralec ugotovi sam (Naloga). $P_{1}=\epsilon_{0}\epsilon_{1}\sin(qx-\Omega t)E$
 predstavlja dodatno polarizacijo snovi, ki nastane zaradi zvočnega
@@ -836,7 +886,7 @@ eno v za smer vzporedno z $\vec{n}$, drugo za pravokotno. Zato je
 elektrostatična energija odvisna od kota med zunanjim poljem $vec{E}$
 in $\vec{n}$. Od kota odvisni del energije lahko zapišemo v obliki
 \begin{equation}
-w_{a}=-\frac{1}{2}\epsilon_{0}\epsilon_{a}(\vec{E}\cdot\vec{n})^{2}\;,\label{7.56}
+w_{a}=-\frac{1}{2}\epsilon_{0}\epsilon_{a}(\mathbf{E}\cdot\vec{n})^{2}\;,\label{7.56}
 \end{equation}
  kjer je $\epsilon_{a}=\epsilon_{\parallel}-\epsilon_{\perp}$ anizotropni
 del dielektrične konstante. Če je $\epsilon_{a}>0$, se molekule skušajo
@@ -936,7 +986,7 @@ tenzorja v $xy$ ravnini. Njegova oblika je
 \end{equation}
  Valovna enačba za valovanje s frekvenco $\omega$ je 
 \begin{equation}
-\frac{d^{2}\vec{E}}{dz^{2}}=-\frac{\omega^{2}}{c^{2}}\boldsymbol{\epsilon}(z)\vec{E}\label{7.61}
+\frac{d^{2}\mathbf{E}}{dz^{2}}=-\frac{\omega^{2}}{c^{2}}\boldsymbol{\epsilon}(z)\mathbf{E}\label{7.61}
 \end{equation}
  ali v komponentah 
 \begin{eqnarray}
@@ -1044,22 +1094,22 @@ upogib, tretji pa zasuk (slika \ref{s7.20})
 V zunanjem električnem polju se energija spremeni. Običajno je neodvisna
 električna količina električna poljska jakost, ker je polje posledica
 predpisanih napetosti na fiksnih elektrodah. Ustrezni člen v termodinamičnem
-potencialu je tedaj $-\vec{D}\cdot\vec{E}/2$. $\vec{E}$ razstavimo
+potencialu je tedaj $-\vec{D}\cdot\mathbf{E}/2$. $\mathbf{E}$ razstavimo
 na komponento, paraleleno in pravokotno z $\vec{n}$. Dielektrični
 tenzor ima v smeri $\vec{n}$ vrednost $\epsilon_{\parallel}$, v
 pravokotni smeri pa $\epsilon_{\perp}$. Tako je 
 \begin{eqnarray}
-\vec{D} & = & \epsilon_{0}\underline{\epsilon}\vec{E}=\epsilon_{0}\epsilon_{\parallel}(\vec{n}\cdot\vec{E})\vec{n}+\epsilon_{0}\epsilon_{\perp}[\vec{E}-(\vec{n}\cdot\vec{E})\vec{n}]\nonumber \\
- & = & \epsilon_{0}\epsilon_{a}(\vec{n}\cdot\vec{E})\vec{n}-\epsilon_{0}\epsilon_{\perp}\vec{E}\;,
+\vec{D} & = & \epsilon_{0}\underline{\epsilon}\mathbf{E}=\epsilon_{0}\epsilon_{\parallel}(\vec{n}\cdot\mathbf{E})\vec{n}+\epsilon_{0}\epsilon_{\perp}[\mathbf{E}-(\vec{n}\cdot\mathbf{E})\vec{n}]\nonumber \\
+ & = & \epsilon_{0}\epsilon_{a}(\vec{n}\cdot\mathbf{E})\vec{n}-\epsilon_{0}\epsilon_{\perp}\mathbf{E}\;,
 \end{eqnarray}
  kjer je $\epsilon_{a}=\epsilon_{\parallel}-\epsilon_{\perp}$. Drugi
 člen je neodvisen od $\vec{n}$, zato ga lahko izpustimo. Prosta energija
 nematičnega tekočega kristala v električnem polju je tako 
 \begin{equation}
-F=F_{0}+F_{e}-\frac{1}{2}(\vec{n}\cdot\vec{E})^{2}\;.\label{7.72}
+F=F_{0}+F_{e}-\frac{1}{2}(\vec{n}\cdot\mathbf{E})^{2}\;.\label{7.72}
 \end{equation}
  $F_{0}$ predstavlja del proste energije, ki je neodvisen od $\vec{n}$
-in $\vec{E}$. V ravnovesju je prosta energija najmanjša. Kadar je
+in $\mathbf{E}$. V ravnovesju je prosta energija najmanjša. Kadar je
 $\epsilon_{a}>0$, se zato skuša $\vec{n}$ postaviti vzporedno s
 poljem. Da lahko z minimizacijo $F$ izrazimo $\vec{n}(\vec{r})$, moramo
 poznati še robne pogoje.

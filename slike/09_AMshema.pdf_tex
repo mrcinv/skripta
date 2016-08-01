@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{1287.953125bp}%
+    \setlength{\unitlength}{853.34453125bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,16 +48,11 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.40216398)%
+  \begin{picture}(1,0.52493108)%
     \put(0,0){\includegraphics[width=\unitlength]{09_AMshema.pdf}}%
-    \put(0.01522842,0.06233788){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1$}}}%
-    \put(0.07322745,0.00812451){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_2 < \omega_1$}}}%
-    \put(0.52164348,0.37506983){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1$}}}%
-    \put(0.5657724,0.35723793){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_2$}}}%
-    \put(0.61414206,0.34622685){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1 + \omega_2$}}}%
-    \put(0.65962473,0.31496105){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1 - \omega_2$}}}%
-    \put(0.66151224,0.27674934){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$2\omega_1$}}}%
-    \put(0.66166154,0.24233869){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$2\omega_2$}}}%
-    \put(0.66163907,0.20203265){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
+    \put(0.33542989,0.4266656){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$U$}}}%
+    \put(0.43460954,0.11606787){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z$}}}%
+    \put(0.4210376,0.16685683){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$y$}}}%
+    \put(0.34107975,0.10753332){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
   \end{picture}%
 \endgroup%
