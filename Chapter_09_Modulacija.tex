@@ -186,7 +186,8 @@ polje $E_z$ (t.i. longitudinalna modulacija).
 \def\svgwidth{80truemm} 
 \input{slike/09_AMshema.pdf_tex}
 \caption{Shema longitudinalne modulacije signala. Ker je polje priključeno v smeri
-potovanja svetlobe, morata biti elektrodi transparentni.}
+potovanja svetlobe, morata biti elektrodi transparentni. Zakaj uporabimo polarizator in analizator
+bo znano kasneje.}
 \label{fig:amshema}
 \end{figure}
 Inverzni tenzor dielektričnosti brez priključenega polja zapišemo kot
@@ -299,34 +300,91 @@ glavna pomanjkljivost.
 
 \section{Transverzalna modulacija}
 Iz praktičnih razlogov je navadno preprosteje uporabili transverzalno modulacijo.
-Tudi to postavitev obravnavajmo na primeru, za zgled vzemimo kristal LiNbO$_3$.
+Tudi to postavitev obravnavajmo na primeru. Za zgled vzemimo kristal LiNbO$_3$, ki 
+ima trigonalno simetrijo ($3m$) in po tabeli~(\ref{table:Pockels}) štiri 
+neodvisne komponente: $r_{51}=r_{42}, r_{13}=r_{23}, r_{33}$ in $r_{22}=-r{12}=-r_{61}$.
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/09_TMshema.pdf_tex}
+\caption{Shema transverzalne modulacije signala.}
+\label{fig:tmshema}
+\end{figure}
 
+Naj se svetloba širi vzdolž osi $z$, ki je hkrati tudi optična os, 
+električno polje pa priključimo v smeri $y$ (slika~\ref{fig:tmshema}). 
+Krajši račun pokaže, da je inverzni dielektrični tenzor pod vplivom polja enak
+\beq
+\underline{b} = 
+ \left[\begin{array}{ccc}
+1/n_o^2  -r_{22}E_y& 0& 0\\
+0& 1/n_o^2+r_{22}E_y& r_{51}E_y\\
+0 & r_{51}E_y&  1/n_e^2
+\end{array}\right].
+\label{7.8b}
+\eeq
+Tudi v tem primeru tenzor diagonaliziramo in poiščemo nove lastne vrednosti.
+Ob privzetku, da je sprememba zaradi električnega polja majhna ($rE\ll1$),
+so nove lastne vrednosti enake (glej nalogo~\ref{})
+\begin{align}
+\lambda_1 &\approx \frac{1}{n_o^2}-r_{22}E_y \\
+\lambda_2 &\approx \frac{1}{n_o^2}+ r_{22}E_y \\
+\lambda_3 &\approx \frac{1}{n_e^2},
+\end{align}
+kar ustreza lomnim količnikom 
+\begin{align}
+n_x' &\approx n_o(1+\frac{1}{2}n_o^2r_{22}E_y)\\
+n_y' &\approx n_o(1-\frac{1}{2}n_o^2r_{22}E_y)\\
+n_z' &\approx n_e.
+\end{align}
+Kako pa je z novimi lastnimi osmi? Hitro ugotovimo, da se tudi pri 
+priključenem polju os $x$ ohranja. Pojavi se torej zasuk okoli osi $x$,
+ki ga označimo s kotom $\vartheta$. Krajši račun pokaže, da je za vse smiselne
+vrednosti električne poljske jakosti ta kot zelo majhen ($\vartheta~\sim~1$~mrad),
+tako da lahko v približku rečemo, da se lastne osi ohranjajo. 
 
-Poglejmo na primeru, kako električno polje spremeni lastnosti elektro-optičnega kristala
-in kako vpliva na svetlobo, ki potuje skozi tak kristal. V praksi se navadno uporabljajo 
-kristali, ki so dvolomni že brez zunanjega polja. 
-Zato kot primer vzemimo kristal KH$_{2}$PO$_{4}$ (KDP), ki ima tetragonalno 
-simetrijo ($\bar{4}2m$). Kot razberemo iz tabele~(\ref{table:Pockels}) ima 
-elektro-optični tenzor dve nedodvisni komponenti: $r_{41} = r_{52}=10,3 \times 10^{-11}$~m/V
-in $r_{63}=8,77 \times 10^{-12}$~m/V.
+Če potuje svetloba vzdolž osi $z$, sta torej lomna količnika za 
+polarizaciji v smeri $x$ in $y$ enaka $n_x'$ in $n_y'$, fazna razlika med 
+polarizacijama pa je 
+\beq
+\Delta \phi = k_0 n_y' L - k_0 n_x' L = \frac{\omega}{c_0}L 
+n_o^3 r_{22}E_y.
+\eeq
+Karakteristična $\pi$-napetost je tako
+\beq
+U_\pi = \frac{\lambda d}{2 Ln_o^3 r_{22}},
+\eeq
+pri čemer je $L$ dolžina kristala v $z$ smeri, $d$ pa širina v prečni smeri, v
+katerih priključimo napetost. Za izbran kristal ($d=5$~mm, $L=1$~cm) je $\pi$-vrednost 
+napetosti pri valovni dolžini $633$~nm enaka $1950$~V. 
 
-
-
-
- 
- Ker je kristal že sam po sebi dvolomen, povzroči zunanje
-polje le majhno dodatno fazno razliko. Dolžina kristala mora biti
-taka, da velja $k_{0}L(n_{r}-n_{i})=2N\pi$, če naj bo modulator brez
-zunanjega polja zaprt. Pri tem nastopi težava. Pogoj je lahko zaradi
-temperaturnega raztezanja in odvisnosti lomnih količnikov od temperature
-izpolnjen le pri eni temperaturi, poleg tega bi bil tak modulator
-tudi zelo občutljiv na to, da se svetloba širi natanko v smeri $y^{\prime}$.
-Zato dvolomnost nemotenega kristala kompenziramo tako, da vzamemo
+\begin{remark}
+Še ena možna postavitev transverzalne modelacije je taka, pri kateri se 
+žarek širi vzdolž osi $y$, električno polje pa priključimo vzdolž optične osi $z$.
+V tem primeru se lastne osi ohranijo in kristal ostane optično enoosen. Vendar 
+pa ima tudi ta rešitev določene slabosti. Ker je kristal že sam po sebi dvolomen, 
+povzroči zunanje polje le majhno dodatno fazno razliko. Najbolje je, da je dolžina 
+kristala taka, da velja $k_{0}L(n_{o}-n_{e})=2N\pi$. Pri tem pa nastopi težava. 
+Pogoj je lahko zaradi temperaturnega raztezanja in odvisnosti lomnih količnikov od temperature
+izpolnjen le pri eni temperaturi, poleg tega se mora svetloba širiti natančno v smeri $y$.
+Zato dvolomnost nemotenega kristala navadno kompenziramo tako, da vzamemo
 dva enako dolga kristala in ju postavimo zapored tako, da sta optični
-osi med seboj pravokotni, kot kaže slika \ref{s7.3}. Modulacijska
-napetost na drugem kosu mora imeti nasprotni predznak. Tedaj se fazna
-razlika med obema polarizacijama zaradi naravne dvolomnosti odšteje,
-zaradi modulacijske napetosti pa sešteje.
+osi med seboj pravokotni, modulacijska napetost na drugem kristalu pa mora 
+imeti nasprotni predznak. Tedaj se fazna razlika med obema polarizacijama zaradi 
+naravne dvolomnosti odšteje, zaradi modulacijske napetosti pa sešteje.
+\end{remark}
+
+
+\section{Amplitudna modulacija}
+Poglejmo, kako lahko opisani elektro-optični pojav izkoristimo za modulacijo
+amplitude svetlobnega snopa. Vemo, da lahko v kristalu pride do
+faznega zamika med polarizacijama, ki je sorazmeren napetosti.
+Če tak kristal postavimo analizator, je prepuščena moč 
+Osnovna zamisel je, da z električnim
+poljem tako spremenimo dvolomnost primerno izbranega in odrezanega
+kristala, da se spremeni polarizacija vpadnega vala, zaradi česar
+se spremeni tudi svetlobna moč, ki jo prepusti analizator za kristalom.
+
 
 
 
@@ -354,14 +412,6 @@ Namesto visoke stalne napetosti lahko uporabimo med polarizatorjem
 in kristalom še ploščico $\lambda/4$, ki nam da zahtevani stalni
 fazni premik med rednim in izrednim valom.
 
-
-\section{Amplitudna modulacija}
-Poglejmo, kako lahko elektro-optični pojav izkoristimo za modulacijo
-amplitude svetlobnega snopa. Osnovna zamisel je, da z električnim
-poljem tako spremenimo dvolomnost primerno izbranega in odrezanega
-kristala, da se spremeni polarizacija vpadnega vala, zaradi česar
-se spremeni tudi svetlobna moč, ki jo prepusti analizator za kristalom.
-Poglejmo si to kar na primeru.
 
 
 
