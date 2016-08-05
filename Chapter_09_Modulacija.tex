@@ -443,7 +443,7 @@ Včasih pa želimo modulirati fazo vpadne svetlobe. To naredimo tako,
 da odstranimo izhodni polarizator, vhodno polarizacija pa izberemo tako, da je vzporedna 
 eni od novih lastnih osi kristala. 
 
-Če se vrnemo k primeru longitudinalnega modulatorja (slika~\ref{amshema}), 
+Če se vrnemo k primeru longitudinalnega modulatorja (slika~\ref{fig:amshema}), 
 ki je za fazni modulator brez analizatorja, izberemo polarizacijo 
 vpadnega valovanja v smeri nove lastne osi $x'$. Faznemu zamiku po preletu skozi
 kristal dodajmo še časovni faktor
@@ -489,87 +489,110 @@ Faza izhodnega valovanja bo tedaj
 \phi = \frac{\omega_0}{c_0}L n_o - \frac{\omega_0 n_o^3 r_{63}}{2c_0} U_0\sin(\omega_{m}t)
 - \omega_0 t.
 \eeq
-
-
-
-Z uporabo
-identitet 
-\begin{eqnarray}
-\cos(\delta\sin x) & = & \mbox{J}_{0}(\delta)+2\mbox{J}_{2}(\delta)\cos2x+\ldots\nonumber \\
-\sin(\delta\sin x) & = & 2\mbox{J}_{1}(\delta)\sin x+2\mbox{J}_{3}\sin3x+\ldots
-\end{eqnarray}
- je izhodno polje mogoče zapisati v obliki 
-\begin{eqnarray}
-E_{izh} & = & E_{vh}[\mbox{J}_{0}(\delta)\cos\omega t\pm\mbox{J}_{1}(\delta)\cos(\omega\pm\omega_{m})t+\nonumber \\
- &  & +\mbox{J}_{2}(\delta)\cos(\omega\pm2\omega_{m})t\pm\ldots]
-\end{eqnarray}
- Periodična fazna modulacija torej da v spektru stranske pasove, odmaknjene
-od osnovne frekvence $\omega$ za modulacijsko frekvenco. Njihova
+Konstantni člen lahko izpustimo in zapišemo polje  
+\beq
+E = E_0 \cos\left( \omega_0 t + \frac{\omega_0 n_o^3 r_{63}}{2c_0} U_0\sin(\omega_{m}t)\right)
+= E_0 \cos\left( \omega_0 t + \delta \sin(\omega_{m}t)\right),
+\eeq
+pri čemer je
+\beq
+\delta = \frac{\omega_0 n_o^3 r_{63}}{2c_0} U_0.
+\eeq
+Z uporabo Jacobi-Angerjevih identitet 
+\begin{align}
+\cos\left(\delta\sin x\right)  &=J_0(\delta)+2J_2(\delta)\cos2x+
+2J_4(\delta)\cos4x \ldots\nonumber \\
+\sin\left(\delta\sin x\right) &=2J_1(\delta)\sin x+2J_3\sin3x+
+2J_5\sin5x+\ldots
+\end{align}
+je izhodno polje mogoče zapisati v obliki 
+\begin{equation}
+HELP!
+% \begin{split}
+% E = E_{0}\left[ J_0(\delta)\cos(\omega_0 t)+ J_1(\delta) \cos(\omega_0+\omega_m )t-
+% J_1 (\delta) \cos(\omega_0 -\omega_m)t + \\ J_2(\delta)\cos(\omega +2\omega_m)t + 
+% J_2(\delta)\cos(\omega -2\omega_m)t+ \\
+% J_3(\delta)\cos(\omega +3\omega_m)t - J_3(\delta)\cos(\omega -3\omega_m)t+
+% \right]
+% \end{split}
+\end{equation}
+Periodična fazna modulacija torej da v spektru stranske pasove, odmaknjene
+od osnovne frekvence $\omega_0$ za modulacijsko frekvenco. Njihova
 velikost je podana s kvadratom Besselovih funkcij parametra $\delta$.
 Če je ta majhen, se lahko zadovoljimo le s prvim členom.
+\begin{definition}
+Izpelji E. 
+\end{definition}
 
-\section{*Modulacija pri visokih frekvencah}
+\begin{remark}
+Uporaba elektro-optičnega pojava: za modulacijo svetlobe, DC do $10^{10}$~Hz, uklanjanje žarkov
+Q-switching, shutters... Deflektor iz dveh prizm, z smer kontra obrnjena, žarek se odklanja
+sorazmerno z napetostjo. machzender deflektor, Davis, 494 in 495.
+\end{remark}
 
-Pogosto je pomembna hitrost elektrooptične modulacije. Zato polejmo,
-kaj se zgodi pri visokih modulacijskih frekvencah.
 
-Elektro-optični pojav pri nizkih frekvencah ima dva prispevka: direktnega,
-kjer zunanje polje vpliva neposredno na elektronsko polarizabilnost,
-in posrednega preko piezoelektričnega pojava. Snovi, ki nimajo centra
-inverzije, so tudi piezoelektrične in se v zunanjem električnem polju
-deformirajo. Deformacija pa povzroči spremembo lomnega količnika,
-o čemer bomo podrobneje govorili v enem od naslednjih oddelkov. Celotno
-spremembo tenzorja $b_{ij}$ lahko zapišemo 
-\begin{eqnarray}
-\delta b_{ij} & = & r_{ijk}^{\ast}E_{k}+p_{ijlm}S_{lm}\nonumber \\
- & = & r_{ijk}^{\ast}E_{k}+p_{ijlm}\pi_{lmk}E_{k}
-\end{eqnarray}
- Tu je $S_{lm}=\pi_{lmk}E_{k}$ piezoelektrično povzročena deformacija.
-Pri nizkih frekvencah sta oba prispevka primerljivo velika in je efektivni
-elektro-optični tenzor $r_{ijk}=r_{ijk}^{\ast}+p_{ijlm}\pi_{lmk}$.
-Pri dovolj velikih frekvencah deformacija kristala ne more več slediti
-modulacijski napetosti in ostane le direktni prispevek $r_{ijk}^{\ast}$.
-To se zgodi nad akustičnimi resonancami kristala. Pri akustičnih resonancah,
-to je, kadar modulacija v kristalu vzbudi stoječe zvočno valovanje,
-pa se piezoelektrični prispevek resonančno poveča.
+% \section{*Modulacija pri visokih frekvencah}
+% Do zdaj smo obravnavali elektro-optično modulacijo pri statičnih poljih ali 
+% poljih, ki so se le počasi spreminjali s časom. Poglejmo še,
+% kaj se zgodi pri visokih modulacijskih frekvencah.
+% 
+% Elektro-optični pojav pri nizkih frekvencah ima dva prispevka: direktnega,
+% kjer zunanje polje vpliva neposredno na elektronsko polarizabilnost,
+% in posrednega preko piezoelektričnega pojava. Snovi, ki nimajo centra
+% inverzije, so tudi piezoelektrične in se v zunanjem električnem polju
+% deformirajo. Deformacija pa povzroči spremembo lomnega količnika,
+% o čemer bomo podrobneje govorili v enem od naslednjih oddelkov. Celotno
+% spremembo tenzorja $b_{ij}$ lahko zapišemo 
+% \begin{eqnarray}
+% \delta b_{ij} & = & r_{ijk}^{\ast}E_{k}+p_{ijlm}S_{lm}\nonumber \\
+%  & = & r_{ijk}^{\ast}E_{k}+p_{ijlm}\pi_{lmk}E_{k}
+% \end{eqnarray}
+%  Tu je $S_{lm}=\pi_{lmk}E_{k}$ piezoelektrično povzročena deformacija.
+% Pri nizkih frekvencah sta oba prispevka primerljivo velika in je efektivni
+% elektro-optični tenzor $r_{ijk}=r_{ijk}^{\ast}+p_{ijlm}\pi_{lmk}$.
+% Pri dovolj velikih frekvencah deformacija kristala ne more več slediti
+% modulacijski napetosti in ostane le direktni prispevek $r_{ijk}^{\ast}$.
+% To se zgodi nad akustičnimi resonancami kristala. Pri akustičnih resonancah,
+% to je, kadar modulacija v kristalu vzbudi stoječe zvočno valovanje,
+% pa se piezoelektrični prispevek resonančno poveča.
+% 
+% Pogoj za akustično resonanco je, da je dimenzija kristala mnogokratnik
+% polovice valovne dolžine akustičnega vala v kristalu. Uporabne dimenzije
+% kristalov so reda velikosti centimeter, hitrost zvočnih valov je okoli
+% 5000~m/s, tako da so resonance v področju od nekaj sto kHz do
+% nekaj deset MHz. Mogoče jih je tudi izkoristiti za povečanje elektro-optičnega
+% efekta pri izbrani frekvenci.
+% 
+% Pri visokih frekvencah postane pomembna tudi električna vezava modulatorja.
+% Kristal predstavlja neko kapacitivno breme. Njegova impedanca pada
+% z rastočo frekvenco, zato je vedno večji del padca napetosti na notranjem
+% uporu izvora napetosti. Pomagamo si lahko tako, da vzporedno s kristalom
+% vežemo še tuljavo, tako da je resonančna frekvenca $1/(L_{t}C)$ nastalega
+% nihajnega kroga enaka željeni modulacijski frekvenci $\omega_{m}$.
+% Tedaj je večina padca napetosti na kristalu in tuljavi. Da resonanca
+% ni preostra in da je na voljo dovolj širok pas modulacijskih frekvenc,
+% vežemo vzporedno s kristalom še upor z upornostjo $R$. Širina modulacijskega
+% pasu je 
+% \begin{equation}
+% \Delta\omega_{m}=\frac{1}{RC}\;.\label{7.24}
+% \end{equation}
+%  Na uporu se troši moč 
+% \begin{equation}
+% P=\frac{1}{2}\frac{U^{2}}{R}=\frac{1}{2}U^{2}C\Delta\omega_{m}=
+% \frac{\epsilon\epsilon_{0}La}{2d}U^{2}C\Delta\omega_{m}\;,\label{7.25}
+% \end{equation}
+%  kjer je $a$ velikost kristala v prečni smeri. Naj bo $U$ ravno
+% napetost, ki da fazno razliko $\pi$. Potem sledi z uporabo enačbe
+% \ref{7.18} 
+% \begin{equation}
+% P=\frac{A}{L}\,\frac{\epsilon\epsilon_{0}\Delta\omega_{m}\lambda^{2}}{3n_{0}^{6}r^{2}}\;,\label{7.26}
+% \end{equation}
+%  kjer je $A$ prečni presek kristala. Potrebna moč je odvisna od lastnosti
+% modulatorja in širine modulacijskega pasu. Pri širini modulacijskega
+% pasu 1~MHz in preseku kristala 1~cm$^{2}$ je potrebna moč nekaj
+% deset W, kar je za visokonapetosten in hiter izvor že znatna moč.
 
-Pogoj za akustično resonanco je, da je dimenzija kristala mnogokratnik
-polovice valovne dolžine akustičnega vala v kristalu. Uporabne dimenzije
-kristalov so reda velikosti centimeter, hitrost zvočnih valov je okoli
-5000~m/s, tako da so resonance v področju od nekaj sto kHz do
-nekaj deset MHz. Mogoče jih je tudi izkoristiti za povečanje elektro-optičnega
-efekta pri izbrani frekvenci.
-
-Pri visokih frekvencah postane pomembna tudi električna vezava modulatorja.
-Kristal predstavlja neko kapacitivno breme. Njegova impedanca pada
-z rastočo frekvenco, zato je vedno večji del padca napetosti na notranjem
-uporu izvora napetosti. Pomagamo si lahko tako, da vzporedno s kristalom
-vežemo še tuljavo, tako da je resonančna frekvenca $1/(L_{t}C)$ nastalega
-nihajnega kroga enaka željeni modulacijski frekvenci $\omega_{m}$.
-Tedaj je večina padca napetosti na kristalu in tuljavi. Da resonanca
-ni preostra in da je na voljo dovolj širok pas modulacijskih frekvenc,
-vežemo vzporedno s kristalom še upor z upornostjo $R$. Širina modulacijskega
-pasu je 
-\begin{equation}
-\Delta\omega_{m}=\frac{1}{RC}\;.\label{7.24}
-\end{equation}
- Na uporu se troši moč 
-\begin{equation}
-P=\frac{1}{2}\frac{U^{2}}{R}=\frac{1}{2}U^{2}C\Delta\omega_{m}=
-\frac{\epsilon\epsilon_{0}La}{2d}U^{2}C\Delta\omega_{m}\;,\label{7.25}
-\end{equation}
- kjer je $a$ velikost kristala v prečni smeri. Naj bo $U$ ravno
-napetost, ki da fazno razliko $\pi$. Potem sledi z uporabo enačbe
-\ref{7.18} 
-\begin{equation}
-P=\frac{A}{L}\,\frac{\epsilon\epsilon_{0}\Delta\omega_{m}\lambda^{2}}{3n_{0}^{6}r^{2}}\;,\label{7.26}
-\end{equation}
- kjer je $A$ prečni presek kristala. Potrebna moč je odvisna od lastnosti
-modulatorja in širine modulacijskega pasu. Pri širini modulacijskega
-pasu 1~MHz in preseku kristala 1~cm$^{2}$ je potrebna moč nekaj
-deset W, kar je za visokonapetosten in hiter izvor že znatna moč.
-
-\section{Elastooptični pojav}
+\section{Elasto-optični pojav}
 
 Dielektrične lastnosti in lomni količnik so odvisne tudi od deformacije
 snovi. Podobno kot pri elektro-optičnem pojavu lahko spremembo obratnega
