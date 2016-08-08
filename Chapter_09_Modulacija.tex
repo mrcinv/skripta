@@ -530,7 +530,6 @@ Q-switching, shutters... Deflektor iz dveh prizm, z smer kontra obrnjena, žarek
 sorazmerno z napetostjo. machzender deflektor, Davis, 494 in 495.
 \end{remark}
 
-
 % \section{*Modulacija pri visokih frekvencah}
 % Do zdaj smo obravnavali elektro-optično modulacijo pri statičnih poljih ali 
 % poljih, ki so se le počasi spreminjali s časom. Poglejmo še,
@@ -593,45 +592,101 @@ sorazmerno z napetostjo. machzender deflektor, Davis, 494 in 495.
 % deset W, kar je za visokonapetosten in hiter izvor že znatna moč.
 
 \section{Elasto-optični pojav}
-
-Dielektrične lastnosti in lomni količnik so odvisne tudi od deformacije
-snovi. Podobno kot pri elektro-optičnem pojavu lahko spremembo obratnega
-dielektričnega tenzorja zapišemo 
+Elasto-optični pojav je pojav, pri katerem dielektrične lastnosti snovi in njen lomni količnik
+spremenimo z mehansko deformacijo. Podobno kot pri elektro-optičnem pojavu lahko 
+spremembo inverznega dielektričnega tenzorja zapišemo 
 \begin{equation}
-\delta b_{ij}=p_{ijkl}S_{kl}\;.\label{7.27}
+\underline{b} = \underline{\tilde{b}}+ \Delta\underline{b},
 \end{equation}
- $S_{kl}$ je tenzor defomacije snovi: 
+pri čemer je $\Delta\underline{b}$ sprememba zaradi deformacije snovi. Zapišemo jo kot
 \begin{equation}
-S_{kl}=\frac{1}{2}\left({\frac{\partial u_{k}}{\partial x_{l}}}+{\frac{\partial u_{l}}{\partial x_{k}}}\right)\;,\label{7.28}
+ \Delta b_{ij}=p_{ijkl}S_{kl}.
+\label{7.27}
 \end{equation}
- $p_{ijkl}$ pa \textit{elastooptični tenzor}. Ta je različen od nič
-v vsaki snovi, ker povezuje dva simetrična tenzorja drugega ranga.
-Popisuje tudi spremembo dielektrične konstante in lomnega količnika
-zaradi spremembe gostote snovi. Je simetričen v prvem in drugem paru
-indeksov, tako da ima v najbolj splošnem primeru 36 neodvisnih komponent.
-Simetrija danega kristala seveda to število zmanjša.
+Sorazmerna je s tenzorjem defomacije snovi oziroma 
+Greenovim tenzorjem~\footnote{Angleški matematični fizik George Green, 1793--1841.} v
+linearnem približku
+\begin{equation}
+S_{kl}=\frac{1}{2}\left({\frac{\partial u_{k}}{\partial x_{l}}}+{\frac{\partial u_{l}}{\partial x_{k}}}\right),
+\label{7.28}
+\end{equation}
+pri čemer je $\mathbf{u}$ vektor deformacije. Vpeljali smo še sorazmernostni faktor
+$p_{ijkl}$, ki ga imenujemo \textit{elasto-optični tenzor} in popisuje tudi spremembo 
+dielektrične konstante in lomnega količnika zaradi spremembe gostote snovi. 
+Tenzor $p$ je različen od nič v vsaki snovi, ker povezuje dva simetrična tenzorja 
+drugega ranga. Posledično je simetričen v prvem in drugem paru indeksov
+\beq
+p_{ijkl} = p_{jikl} = p_{ijlk} =p_{jilk}.
+\eeq
+V najbolj splošnem primeru ima tako 36 neodvisnih komponent, simetrija dane
+snovi pa to število še zmanjša. Če vpeljemo skrajšan zapis indeksov ($xx = 1,
+yy=2, zz = 3, yz = 4, zx = 5, xy = 6$), zapišemo tenzor izotropne snovi kot
+\beq
+\underline{p}_{\textrm{izo}} = 
+\left[\begin{array}{cccccc}
+p_{11} & p_{12}& p_{12}&0&0&0\\
+p_{12} & p_{11}& p_{12}&0&0&0\\
+p_{12} & p_{12}& p_{11}&0&0&0\\
+0 & 0& 0&p_{44}&0&0\\
+0 & 0& 0&0&p_{44}&0\\
+0 & 0& 0&0&0&p_{44}
+\end{array}\right],
+\label{tenzorp}
+\eeq
+pri čemer je $p_{44}= \frac{1}{2}(p_{11}-p_{12})$. Koeficienti tenzorja so 
+brezdimenzijski, njihova tipična vrednost pa je $p\sim0,1$.
+\begin{definition}
+Yariv 442, izračunaj lastne osi in lastne lomne količnike če longitudinalen zvok v smeri z.
+\end{definition}
 
-Podobno kot pri elektro-optičnem pojavu lahko iz \ref{7.27} izrazimo
+Podobno kot pri elektro-optičnem pojavu lahko iz enačbe~(\ref{7.27}) izrazimo
 spremembo dielektričnega tenzorja 
 \begin{equation}
-\delta\epsilon_{ij}=-\epsilon_{ii}\epsilon_{jj}p_{ijkl}S_{kl}\;,\label{7.29}
+\delta\epsilon_{ij}=-\tilde{\epsilon}_{ii}\tilde{\epsilon}_{jj}p_{ijkl}S_{kl},\label{7.29}
 \end{equation}
- kjer smo že predpostavili, da je nemoteni $\epsilon$ diagonalen.
+kjer smo že predpostavili, da je nemoteni $\epsilon$ diagonalen. Pogosto namesto zapletenih
+računov s tenzorji uporabimo kar približek z efektivnim koeficientom elasto-optičnega pojava. 
+Efektivni koeficient za vodo je tako $p = 0,31$.
 
 Dvojni lom, ki se pojavi v deformirani snovi, izkoriščamo za študij
 mehanskih napetosti v modelih, ki so izdelani iz prozorne plastične
 snovi. Nas bo v nadaljevanju zanimal uklon svetlobe na periodični
-modulaciji lomnega količnika, ki nastane zaradi zvočnih valov v snovi.
-
+modulaciji lomnega količnika, ki nastane zaradi zvočnih valov v snovi. Takemu pojavu
+pravimo tudi akusto-optični pojav.
 
 \section{Braggov uklon na zvočnih valovih}
 
-V plasti prozorne snovi vzbudimo stoječe zvočno valovanje. V zgoščini
-je lomni količnik nekoliko večji, zato je optična pot na takem mestu
-skozi plast daljša. Ravno svetlobno valovanje, ki pada na plast, po
-izstopu iz plasti ne bo imelo več povsod enake faze, valovno čelo
-bo periodično modulirano s periodo valovne dolžine zvoka. V veliki
-oddaljenosti od plasti bomo poleg osnovnega snopa dobili še uklonjene
+Vzbudimo v plasti prozorne snovi stoječe zvočno valovanje z valovno dolžino $\Lambda$.
+To naredimo tako, da na eno stran snovi priključimo piezoelektrik, 
+ki se pod izmenično napetostjo periodično krči in razteza s frekvenco $\Omega$, 
+na drugo stran pa akustični reflektor.
+Zaradi stoječega valovanja se v snovi periodično spreminja gostota in z njo lomni količnik
+\beq
+n = n_0 + \Delta n \sin \left(\frac{2\pi}{\Lambda} z- \Omega t\right).
+\eeq
+V zgoščini je lomni količnik nekoliko večji kot v razredčini, zato je optična pot na takem mestu
+skozi plast daljša. Ravno svetlobno valovanje, ki vpada na plast, po
+izstopu nima povsod enake faze, valovno čelo pa je periodično modulirano s periodo 
+valovne dolžine stoječega valovanja - zvoka. Zvočno valovanje v snovi torej deluje kot 
+optična fazna mrežica. Tipična frekvenca, s katero vzbujamo elastično
+deformacijo, je okoli $\Omega=50$~MHz, ustrezna valovna dolžina pa okoli $100~\mu$m. 
+SLIKA
+
+Oglejmo si dva limitna primera. V prvem primeru je debelina snovi $d$, v kateri vzbujamo
+zvočno valovanje, tanka v primerjavi z valovno dolžino $\Lambda$. Takrat modular deluje 
+kot tanka uklonska mrežica in pojavi se veliko uklonskih vrhov.
+SLIKA
+
+
+
+
+
+
+
+
+
+
+V veliki oddaljenosti od plasti bomo poleg osnovnega snopa dobili še uklonjene
 snopa v smereh, za katere velja 
 \begin{equation}
 \Lambda\sin\theta=\pm2N\pi\;,\label{7.29}
