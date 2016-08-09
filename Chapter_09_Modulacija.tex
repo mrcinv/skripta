@@ -654,44 +654,80 @@ snovi. Nas bo v nadaljevanju zanimal uklon svetlobe na periodični
 modulaciji lomnega količnika, ki nastane zaradi zvočnih valov v snovi. Takemu pojavu
 pravimo tudi akusto-optični pojav.
 
-\section{Braggov uklon na zvočnih valovih}
+\section{Uklon svetlobe na zvočnih valovih}
 
-Vzbudimo v plasti prozorne snovi stoječe zvočno valovanje z valovno dolžino $\Lambda$.
+Vzbudimo v plasti prozorne snovi zvočno valovanje z valovno dolžino $\Lambda$.
 To naredimo tako, da na eno stran snovi priključimo piezoelektrik, 
 ki se pod izmenično napetostjo periodično krči in razteza s frekvenco $\Omega$, 
-na drugo stran pa akustični reflektor.
-Zaradi stoječega valovanja se v snovi periodično spreminja gostota in z njo lomni količnik
+na drugo stran pa akustični reflektor. Na ta način lahko v snovi vzbudimo tudi stoječe
+valovanje. Zaradi zvočnega valovanja se v snovi periodično spreminja gostota in 
+z njo lomni količnik
 \beq
 n = n_0 + \Delta n \sin \left(\frac{2\pi}{\Lambda} z- \Omega t\right).
 \eeq
 V zgoščini je lomni količnik nekoliko večji kot v razredčini, zato je optična pot na takem mestu
 skozi plast daljša. Ravno svetlobno valovanje, ki vpada na plast, po
 izstopu nima povsod enake faze, valovno čelo pa je periodično modulirano s periodo 
-valovne dolžine stoječega valovanja - zvoka. Zvočno valovanje v snovi torej deluje kot 
+valovne dolžine zvočnega valovanja. Zvočno valovanje v snovi torej deluje kot 
 optična fazna mrežica. Tipična frekvenca, s katero vzbujamo elastično
-deformacijo, je okoli $\Omega=50$~MHz, ustrezna valovna dolžina pa okoli $100~\mu$m. 
-SLIKA
+deformacijo, je okoli $\Omega=50$~MHz, ustrezna valovna dolžina pa okoli $\Lambda = 100~\mu$m. 
+Frekvence, ki so v uporabi, pa navadno sežejo od nekaj MHz prek 10 GHz. Vsa ta valovanja bomo 
+imenovali zvočno valovanje. 
+
+\begin{remark}
+Velika prednost dobljene uklonske mrežice je njena dinamičnost. To pomeni, da jo lahko 
+s spreminjanjem zvočnega vala zelo hitro spreminjamo in s tem spreminjamo smer uklonskega žarka.
+S kombinacijo dveh med seboj pravokotnih akusto-optičnih modulatorjev lahko žarek zelo hitro
+premikamo po ravnini. Akusto-optični modulatorji so zato nepogrešljivi pri hitrem in 
+natančnem usmerjanju laserskega žarka, na primer v optičnih pincetah, optičnih čitalcih ali 
+optičnih litografskih zapisovalnikih.
+\end{remark}
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/09_AOshema.pdf_tex}
+\caption{Vpadna svetloba se na stoječem zvočnem valovanju v snovi uklanja.}
+\label{fig:ao}
+\end{figure}
 
 Oglejmo si dva limitna primera. V prvem primeru je debelina snovi $d$, v kateri vzbujamo
-zvočno valovanje, tanka v primerjavi z valovno dolžino $\Lambda$. Takrat modular deluje 
-kot tanka uklonska mrežica in pojavi se veliko uklonskih vrhov.
-SLIKA
+zvočno valovanje, primerljiva z valovno dolžino $\Lambda$. Takrat modulator deluje 
+kot tanka uklonska mrežica in pojavi se veliko 
+uklonskih vrhov. Kote, pod katerimi se pojavijo ojačitve, izračunamo po preprosti enačbi
+\beq
+\Lambda (\sin \vartheta - \sin \beta ) = N \lambda,
+\eeq
+pri čemer je $\lambda$ valovna dolžina svetlobe v snovi, $N$ pa celo število. Takemu pojavu 
+pravimo Raman-Nathov uklon\footnote{Indijski fizik in nobelovec Sir Chandrasekhara 
+Venkata Raman, 1888--1970, 
+in indijski fizik N. S. Nagendra Nath.}. Opazimo ga pri razmeroma nizkih zvočnih frekvencah 
+(pod $\Omega\sim10$~MHz) in majhnih debelinah (pod $d\sim 1$~cm) pri poljubnem vpadnem 
+kotu $\vartheta$.
+\begin{figure}[h]
+\centering
+\def\svgwidth{50truemm} 
+\input{slike/09_AO_1.pdf_tex}\qquad
+\def\svgwidth{65truemm} 
+\input{slike/09_AO_2.pdf_tex}
+\caption{Ob vpadu na tanek modulator se pojavi veliko uklonskih vrhov, na debelem modulatorju
+pa zgolj en uklonjen vrh, pa še ta le ob izpolnjenem Braggovem pogoju. }
+\label{fig:ao}
+\end{figure}
 
-
-
-
-
-
-
-
-
-
-V veliki oddaljenosti od plasti bomo poleg osnovnega snopa dobili še uklonjene
-snopa v smereh, za katere velja 
+V nasprotnem primeru deluje modulator kot debela uklonska mrežica. 
+Takrat se pojavi zgolj en uklonjen žarek, vendar le ob izpolnjenem Braggovem 
+pogoju\footnote{Angleška znanstvenika in nobelova nagrajenca Sir William Henry Bragg, 1862--1942,
+in Sir William Lawrence Bragg, 1890--1971.}
 \begin{equation}
-\Lambda\sin\theta=\pm2N\pi\;,\label{7.29}
+2 \Lambda\sin\theta=\pm N\lambda.
+\label{7.29}
 \end{equation}
- kjer smo z $\Lambda$ označili valovno dolžino zvoka v snovi. Zgoščine
+V tem primeru je izhodni kot enak vpadnemu kotu $\theta$. Celoten kot, za katerega se ukloni
+žarek, pa je enak $\theta = 2 \vartheta$.
+
+
+Zgoščine
 in razredčine izginejo vsake pol zvočne periode, zato je tudi intenziteta
 uklonjenih snopov modulirana z dvojno frekvenco zvoka.
 
