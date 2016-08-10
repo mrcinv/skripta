@@ -692,7 +692,7 @@ optičnih litografskih zapisovalnikih.
 \end{figure}
 
 Oglejmo si dva limitna primera. V prvem primeru je debelina snovi $d$, v kateri vzbujamo
-zvočno valovanje, primerljiva z valovno dolžino $\Lambda$. Takrat modulator deluje 
+zvočno valovanje, zelo majhna. Takrat modulator deluje 
 kot tanka uklonska mrežica in pojavi se veliko 
 uklonskih vrhov. Kote, pod katerimi se pojavijo ojačitve, izračunamo po preprosti enačbi
 \beq
@@ -715,25 +715,21 @@ pa zgolj en uklonjen vrh, pa še ta le ob izpolnjenem Braggovem pogoju. }
 \label{fig:ao}
 \end{figure}
 
-V nasprotnem primeru deluje modulator kot debela uklonska mrežica. 
-Takrat se pojavi zgolj en uklonjen žarek, vendar le ob izpolnjenem Braggovem 
-pogoju\footnote{Angleška znanstvenika in nobelova nagrajenca Sir William Henry Bragg, 1862--1942,
+V nasprotnem limitnem primeru se svetloba uklanja na ravnih zvočnih valovih in modulator deluje 
+kot debela uklonska mrežica. V splošnem je delež uklonjene svetlobe na taki mrežici neuporabno majhen. 
+Znaten postane le tedaj, kadar je za enega od uklonjenih valov izpolnjen Braggov
+pogoj\footnote{Angleška znanstvenika in nobelova nagrajenca Sir William Henry Bragg, 1862--1942,
 in Sir William Lawrence Bragg, 1890--1971.}
 \begin{equation}
 2 \Lambda\sin\theta=\pm N\lambda.
 \label{7.29}
 \end{equation}
-V tem primeru je izhodni kot enak vpadnemu kotu $\theta$. Celoten kot, za katerega se ukloni
-žarek, pa je enak $\theta = 2 \vartheta$.
+Pri Braggovem pogoju je izhodni kot enak vpadnemu kotu $\theta$. Celoten kot, 
+za katerega se ukloni žarek, pa je enak $\theta = 2 \vartheta$.
 
 
-Zgoščine
-in razredčine izginejo vsake pol zvočne periode, zato je tudi intenziteta
-uklonjenih snopov modulirana z dvojno frekvenco zvoka.
 
-V splošnem je delež uklonjene svetlobe neuporabno majhen. Znaten postane
-le tedaj, kadar je za enega od uklonjenih valov izpolnjen Braggov
-pogoj, to je, kadar velja 
+to je, kadar velja 
 \begin{equation}
 \vec{k}_{0}\pm\vec{q}=\vec{k}_{1}\;,\label{7.30}
 \end{equation}
@@ -755,6 +751,41 @@ zvočnem valu se Braggovo sipana svetloba zrcalno odbije. Razmere so
 povsem analogne Braggovemu sipanju rentgenske svetlobe na kristalnih
 ravninah. Kadar je izpolnjen Braggov pogoj, je mogoče doseči, da se
 vsa vapdna svetloba siplje, kot bomo pokazali nekoliko kasneje.
+
+
+
+
+
+
+
+\begin{remark}
+ Poskusimo še bolj natančno oceniti, kdaj je v veljavi Raman-Nathov in kdaj Braggov režim. 
+Izhajajmo iz pogoja, da je razširitev žarka na debelini prehoda skozi zvočno valovanje dovolj
+ majhna, da se snop ne širi iz območja zgoščine v območje razredčine, da se torej ne razširi za 
+ več kot za $\Lambda/2$. Tako zapišemo
+ divergenco kot
+ \beq
+ \delta\vartheta \sim \frac{\lambda}{w_0} \sim \frac{2\lambda}{\Lambda},
+ \eeq
+ ki ne sme presegati razširitve
+ \beq
+ \delta \vartheta \sim \frac{\Lambda}{2d}.
+ \eeq
+Sledi kriterij za debelino $d$, pri kateri preidemo iz enega v drug režim
+\beq
+d \sim \frac{\Lambda^2}{4 \lambda}.
+\eeq
+Če tako svetloba z $\lambda = 1~\mu$m vpade na kristal, v katerem je vzbujeno zvočno
+valovanje z valovno dolžino $\Lambda = 0,2$~mm in frekvenco $\Omega = 150$~MHz, je mejna 
+debelina $d \sim 1$~cm.
+\end{remark}
+
+
+Zgoščine
+in razredčine izginejo vsake pol zvočne periode, zato je tudi intenziteta
+uklonjenih snopov modulirana z dvojno frekvenco zvoka.
+
+
 
 Če je zvočni val potujoč, kar smo v gornjem razmišljanju že privzeli
 s tem, ko smo mu pripisali natanko določen valovni vektor $\vec{q}$,
