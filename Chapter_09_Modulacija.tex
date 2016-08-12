@@ -714,7 +714,7 @@ pogoj\footnote{Angleška znanstvenika in nobelova nagrajenca Sir William Henry B
 in Sir William Lawrence Bragg, 1890--1971.}
 \begin{equation}
 2 \Lambda\sin\theta=\pm N\lambda.
-\label{7.29}
+\label{7.29a}
 \end{equation}
 
 Poglejmo natančneje, kako pridemo do gornjega pogoja. Zapišimo pogoj
@@ -768,7 +768,7 @@ moramo le projekcijo na smer vpadne in odbite svetlobe, zato je
 \pm\frac{2\Omega\Lambda\sin\vartheta}{2 \pi c}=\pm\frac{\Omega}{\omega},
 \label{7.32}
 \end{equation}
-pri čemer smo uporabili Braggov pogoj (enačba~\ref{7.29}). Sprememba frekvence
+pri čemer smo uporabili Braggov pogoj (enačba~\ref{7.29a}). Sprememba frekvence
 sipane svetlobe je torej kar enaka frekvenci zvočnega vala. To sledi tudi
 iz zahteve, da se mora pri sipanju na zvočnem valu ohraniti energija
 vpadnega fotona in kvanta zvočnega valovanja - fonona,
@@ -835,39 +835,40 @@ in se moramo zateči k približkom. Poslužili se bomo metode sklopljenih valov.
 
 Naj vzporeden snop zvočnega valovanja s širino $d$ in valovnim vektorjem $vec{q}$ potuje v smeri $x$.
 Nanj pod kotom $\vartheta$ glede na os $z$ vpada ravno svetlobno valovanje z valovnim vektorjem 
-$\mathbf{k}=(k_{1},0,k_{3})= k(\sin\vartheta,0,\cos\vartheta)$.
+$\mathbf{k}=(k_{x},0,k_{z})= k(\sin\vartheta,0,\cos\vartheta)$.
 Vse valovanje, vpadno na levi od zvočnega snopa in izhodno na njegovi desni,
 obravnavajmo znotraj snovi, da nam ni treba upoštevati še loma, ki
 le zaplete izraze. 
 
 Privzemimo, da se v snovi zaradi zvočnih valov spremeni le velikost
-dielektrične konstante, ki jo lahko zapišemo v obliki 
+dielektrične konstante. Ob upoštevanju zveze med spremembo dielektričnosti in deformacijo
+v zvočnem valu~(enačba~\ref{7.29}) lahko spremembo dielektričnosti
+zapišemo kot  
 \begin{equation}
-\epsilon=\tilde{\epsilon}+\Delta\epsilon\sin(qx-\Omega t),
+\epsilon=\tilde{\epsilon}+\Delta\epsilon = 
+\tilde{\varepsilon} -\tilde{\epsilon}^{2}pS_{0}\sin(qx-\Omega t).
 \label{7.33}
 \end{equation}
-kjer je sprememba $\Delta\epsilon$ povezana z amplitudo deformacije
-$S_{0}$ v zvočnem valu~(enačba~\ref{7.29})
-\beq 
-\Delta\epsilon=-\tilde{\epsilon}^{2}pS_{0}.
-\eeq Izpustili smo indekse tenzorjev.
-
-Zapišimo zdaj valovno enačbo 
+Zaradi spremembe dielektričnosti pride do pojava
+dodatne polarizacije $\Delta P$
+\beq
+\Delta P = \varepsilon_0 \Delta \varepsilon E = - \varepsilon_0 \tilde{\varepsilon}^2 p S_0 \sin(qx-\Omega t)E,
+\eeq
+ki nastane zaradi zvočnega vala. Upoštevati jo moramo pri zapisu valovne enačbe, 
+podobno kot smo to naredili pri nelinearni optiki (enačba~\ref{8.3})
 \begin{equation}
-\nabla^{2}E=\frac{\epsilon^{\prime}}{c^{2}}{\frac{\partial E^{2}}
-{\partial t^{2}}}+\mu_{0}{\frac{\partial P_{1}^{2}}{\partial t^{2}}}\;.\label{7.33}
+\nabla^{2}E-\frac{\tilde{\epsilon}}{c^{2}}{\frac{\partial E^{2}}
+{\partial t^{2}}}=\mu_{0}{\frac{\partial \Delta P^{2}}{\partial t^{2}}},
+\label{7.33}
 \end{equation}
- Na levi strani smo zanemarili, da $\nabla\cdot\mathbf{E}\ne0$, če je
-$\epsilon$ funkcija kraja. Da s tem nismo zagrešili znantne napake,
-naj bralec ugotovi sam (Naloga). $P_{1}=\epsilon_{0}\epsilon_{1}\sin(qx-\Omega t)E$
-predstavlja dodatno polarizacijo snovi, ki nastane zaradi zvočnega
-vala.
+pri čemer smo z $\nabla\cdot\mathbf{E}\approx 0$ zanemarili, da je
+$\epsilon$ funkcija kraja. 
 
-Enačbo \ref{7.33} brez $P_{1}$ rešijo ravni valovi. Učinek člena
-s $P_{1}$ je, da ravnemu valu z valovnim vektorjem $\mathbf{k}$ in
-frekvenco $\omega$ primeša val z valovnim vektorjem $\mathbf{k}\pm\mathbf{q}$
-in frekvenco $\omega\pm\Omega$. Zato iščimo rešitve v obliki vsote
-ravnih valov, torej Fourierove vrste 
+Enačbo~(\ref{7.33}) brez dodane polarizacije $\Delta P$ rešijo ravni valovi 
+z valovnim vektorjem $\mathbf{k}$ in frekvenco $\omega$. Tej rešitvi se 
+primešajo valovi z valovnim vektorjem $\mathbf{k}\pm\mathbf{q}$
+in frekvenco $\omega\pm\Omega$. Zato iščemo rešitve v obliki vsote
+ravnih valov, torej Fourierove vrste
 \begin{equation}
 E=\sum_{n}A_{n}(z)e^{in(qx-\Omega t)}e^{i(k_{1}x+k_{3}z-\omega t)}\;.\label{7.34}
 \end{equation}
