@@ -827,7 +827,7 @@ Akusto-optični modulatorji so nepogrešljivi pri hitrem in
 natančnem usmerjanju laserskega žarka, na primer v optičnih pincetah, optičnih čitalcih ali 
 optičnih litografskih zapisovalnikih.
 
-\section{*Izpeljava akusto-optičnega pojava}
+\section{Račun akusto-optičnega pojava}
 
 Izračunajmo še delež uklonjene svetlobe. Za to moramo rešiti 
 valovno enačbo v nehomogenem sredstvu, kar je dokaj težaven problem
@@ -858,280 +858,290 @@ ki nastane zaradi zvočnega vala. Upoštevati jo moramo pri zapisu valovne enač
 podobno kot smo to naredili pri nelinearni optiki (enačba~\ref{8.3})
 \begin{equation}
 \nabla^{2}E-\frac{\tilde{\epsilon}}{c^{2}}{\frac{\partial E^{2}}
-{\partial t^{2}}}=\mu_{0}{\frac{\partial \Delta P^{2}}{\partial t^{2}}},
+{\partial t^{2}}}=\mu_{0}{\frac{\partial^2 \Delta P}{\partial t^{2}}},
 \label{7.33}
 \end{equation}
-pri čemer smo z $\nabla\cdot\mathbf{E}\approx 0$ zanemarili, da je
+pri čemer smo privzeli, da je $\nabla\cdot\mathbf{E}\approx 0$, čeprav je
 $\epsilon$ funkcija kraja. 
 
 Enačbo~(\ref{7.33}) brez dodane polarizacije $\Delta P$ rešijo ravni valovi 
 z valovnim vektorjem $\mathbf{k}$ in frekvenco $\omega$. Tej rešitvi se 
-primešajo valovi z valovnim vektorjem $\mathbf{k}\pm\mathbf{q}$
-in frekvenco $\omega\pm\Omega$. Zato iščemo rešitve v obliki vsote
+primešajo valovi z valovnim vektorjem $\mathbf{k}\pm n\mathbf{q}$
+in frekvenco $\omega\pm n\Omega$. Zato iščemo rešitve v obliki vsote
 ravnih valov, torej Fourierove vrste
 \begin{equation}
-E=\sum_{n}A_{n}(z)e^{in(qx-\Omega t)}e^{i(k_{1}x+k_{3}z-\omega t)}\;.\label{7.34}
+E=\sum_{n}A_{n}(z)e^{in(qx-\Omega t)}e^{i(k_{x}x+k_{z}z-\omega t)}.
+\label{7.34}
 \end{equation}
- Zaradi sklopitve preko $P_{1}$ moramo dovoliti, da so amplitude
-$A_{n}$ funkcije $z$. Če je $\epsilon_{1}$ dovolj majhen, se $A_{n}(z)$
+Zaradi sklopitve preko $\Delta P$ moramo dovoliti, da so amplitude
+$A_{n}$ funkcije $z$. Če je $\Delta\epsilon$ dovolj majhen, se $A_{n}(z)$
 le počasi spreminjajo.
 
 Izračunajmo 
 \begin{equation}
-\nabla^{2}E=\sum_{n}\left\{ -[k_{3}^{2}+(k_{1}+nq)^{2}]A_{n}+2ik_{3}A_{n}^{\prime}\right\} \, e^{i[(k_{1}+nq)x+k_{3}z-(\omega+n\Omega)t]}\;.\label{7.35}
+\nabla^{2}E=\sum_{n}\left( -[k_{z}^{2}+(k_{x}+nq)^{2}]A_{n}(z)+2ik_{z}A_{n}'(z)\right) \, e^{i[(k_x+nq)x+k_{z}z-(\omega+n\Omega)t]}.
+\label{7.35}
 \end{equation}
- Člen z $A_{n}^{\prime\prime}$ lahko izpustimo, če je le $k_{3}A_{n}^{\prime}>>A_{n}^{\prime\prime}$,
-to je, če se $A_{n}$ spreminjajo počasi v primerjavi z exp$(ik_{3}z)$.
-Vstavimo izraza \ref{7.34} in \ref{7.35} v valovno enačbo \ref{7.33}
-in zahtevajmo, da je vsak člen vsote po $n$ posebej enak nič. Tako
-dobimo 
+Člen z $A_{n}''$ lahko izpustimo, če je le $k_{z}A_{n}'\gg A_{n}''$ oziroma 
+kadar se $A_{n}$ spreminjajo počasi v primerjavi z exp$(ik_{z}z)$. Drugi odvod 
+polarizacije po času da
+\beq
+\frac{\partial^2 \Delta P}{\partial t^2} =-\frac{\varepsilon_0 \tilde{\varepsilon}^2pS_0}{2i}\sum_{n}\left(
+-[n\Omega+\omega+\Omega]^2e^{i(qx-\Omega t)} + [n\Omega+\omega-\Omega]^2e^{i(-qx+\Omega t)} \right) \, 
+A_n(z) e^{i[(k_x+nq)x+k_{z}z-(\omega+n\Omega)t]}.
+\label{7.35a}
+\eeq
+Vstavimo izraze (\ref{7.34}), (\ref{7.35}) in (\ref{7.35a}) v valovno enačbo (\ref{7.33})
+in izenačimo člene, ki nihajo z isto časovno in prostorsko frekvenco, na primer
+z $k_z z+(k_x+mq)x-(\omega+m\Omega)t$. Tako dobimo pogoj
 \begin{eqnarray}
--[k_{3}^{2}+(k_{1}+nq)^{2}]A_{n}+2ik_{3}A_{n}^{\prime}=\nonumber \\
-\quad=-\frac{\epsilon^{\prime}}{c^{2}}(\omega+n\Omega)^{2}[A_{n}-
-\frac{\epsilon_{1}}{2i\epsilon^{\prime}}(A_{n-1}-A_{n+1}) & \;.
+-[k_{z}^{2}+(k_{x}+mq)^{2}]A_{m}+2ik_{z}A_{m}' + \frac{\tilde{\varepsilon}}{c^2}(m\Omega+\omega)^2A_m
+=\frac{\mu_0\varepsilon_0\tilde{\varepsilon}^2pS_0}{2i}(\omega+m\Omega)^{2}(A_{m-1}-A_{m+1}).
 \end{eqnarray}
- Upoštevamo, da je $k_{1}^{2}+k_{3}^{2}=\epsilon^{\prime}(\omega/c)^{2}=k^{2}$
-in $\Omega=v_{z}q$. Ker je $v_{z}<<c$, zanemarimo člene reda $v_{z}/c$,
-in dobimo 
+Upoštevamo, da je 
+\beq 
+k_{x}^{2}+k_{z}^{2}=\frac{\tilde{\epsilon}\omega^2}{c^{2}}=k^{2}
+\eeq
+in naredimo približek $(\omega +m\Omega)^2 \approx \omega^2$.
+Sledi
 \begin{equation}
-A_{n}^{\prime}+i\beta_{n}A_{n}+\xi(A_{n+1}-A_{n-1})=0\;,\label{7.37}
+A_{m}'+i\beta_{m}A_{m}+\xi(A_{m+1}-A_{m-1})=0,
+\label{7.37}
 \end{equation}
- kjer je 
+kjer sta
 \begin{equation}
-\beta_{n}=\frac{nq}{k_{3}}(k_{1}+nq)\label{7.38}
+\beta_{m}=\frac{mq}{k_{z}}(k_{x}+\frac{1}{2}mq)
+\label{7.38}
 \end{equation}
  in 
 \begin{equation}
-\xi=\frac{\epsilon_{1}}{4\epsilon^{\prime}}\,\frac{k^{2}}{k_{3}}\;.\label{7.39}
+\xi=-\frac{\tilde{\epsilon} pS_0k^2}{4k_z}.
+\label{7.39}
 \end{equation}
- Reševanje sistema \ref{7.37} je težavno. Rešitve poiščimo le v treh
+ Reševanje sistema enačb~(\ref{7.37}) je težavno. Rešitve poiščimo le v treh
 pomembnih limitnih primerih. Naj bo amplituda vala, ki vpada z leve,
 $A_{0}(0)=A_{0}$, ostale $A_{n}(0)$ pa nič.
 
-Najprej privzemimo, da je $L\xi<<1$, da je torej $\epsilon_{1}$
-majhen in debelina zvočnega snopa ne prevelika. Tedaj je pri vseh
-$z$ in za pozitivne $n$ $A_{n+1}<<A_{n}$ in lahko člen $A_{n+1}$
-v enačbi \ref{7.37} ispustimo. S tem zapišemo preprost sistem enačb
+Najprej privzemimo, da je $L\xi \ll 1$, da je torej velikost $\Delta \epsilon$
+majhna in debelina zvočnega snopa ne prevelika. Tedaj je pri vseh
+$z$ in za pozitivne $m$ $A_{m+1}\ll A_{m}$ in lahko člen $A_{m+1}$
+v enačbi~(\ref{7.37}) izpustimo. S tem zapišemo preprost sistem enačb
 \begin{equation}
-A_{n}^{\prime}+i\beta_{n}A_{n}=\xi A_{n}\;,\label{7.40}
+A_{m}'+i\beta_{m}A_{m}=\xi A_{m-1},
+\label{7.40}
 \end{equation}
  ki jih lahko zapored integriramo: 
 \begin{equation}
-A_{n}(z)=\xi e^{-i\beta_{n}z}\int_{0}^{z}A_{n-1}(z^{\prime})
-e^{i\beta_{n}z^{\prime}}dz^{\prime}\;.\label{7.41}
+A_{m}(z)=\xi e^{-i\beta_{m}z}\int_{0}^{z}A_{m-1}(z')
+e^{i\beta_{m}z'}dz'.
+\label{7.41}
 \end{equation}
- Podobne izraze izpeljemo za negativne $n$, to je za uklonjene valove,
+ Podobne izraze izpeljemo za negativne $m$, to je za uklonjene valove,
 ki se jim frekvenca pri sipanju zmanjša.
 
 Poglejmo posebej prvi uklonjeni val z amplitudo $A_{1}$. Po predpostavki,
-da je $A_{\pm1}<<A_{0}$, se le malo energije uklanja iz osnovnega
-vala in je $A_{0}(z)$ skoraj konstanta. Potem lahko integral v \ref{7.41}
-izračunamo: 
+da je $A_{\pm1}\ll A_{0}$, se le malo energije uklanja iz osnovnega
+vala in je $A_{0}(z)$ skoraj konstanta. Potem lahko integral v enačbi~(\ref{7.41})
+izračunamo
 \begin{equation}
-A_{1}(L)=A_{0}\xi L\,\frac{\sin\beta_{1}L/2}{\beta_{1}L/2}\, e^{-i\beta_{1}L/2}\;.\label{7.41}
+A_{1}(L)=A_{0}\xi L\,\frac{\sin\beta_{1}L/2}{\beta_{1}L/2}\, e^{-i\beta_{1}L/2}\;.
+\label{7.41a}
 \end{equation}
- $A_{1}(L)$ ima vrh pri $\beta_{1}=0$, to je pri 
+Funkcija $A_{1}(L)$ ima vrh pri $\beta_{1}=0$, to je pri 
 \begin{equation}
-\frac{q}{\cos\phi}(k\sin\phi+\frac{q}{2})=0\label{7.42}
+\beta_1 = k_x+ \frac{q}{2} = k \sin\vartheta + \frac{q}{2} = 0
+\label{7.42}
 \end{equation}
- ali 
+ali 
 \begin{equation}
-2k\sin\phi=-q\;.\label{7.43}
+2\Lambda\sin\vartheta=-\lambda.
+\label{7.43}
 \end{equation}
- Prečna komponenta valovnega vektorja sipanega vala je tedaj 
-\begin{equation}
-k_{1}+q=k\sin\phi-2k\sin\phi=-k\sin\phi\;.\label{7.44}
-\end{equation}
- Smer sipanega vala je torej pod kotom $-\phi$ glede na os $z$,
-simetrično z vpadnim valom. Če še označimo $\theta=2\phi$, vidimo,
-da predstavlja $\beta_{1}=0$ ravno pogoj za Braggovo sipanje vpadnega
+Vdimo, da predstavlja $\beta_{1}=0$ ravno pogoj za Braggovo sipanje vpadnega
 vala.
 
 Razmere pri Braggovem sipanju je vredno pogledati še nekoliko podrobneje.
-Ker je hitrost zvoka mnogo manjša od hitrosti svetlobe, je $\Omega/c<<q$
-in sta velikosti vpadnega in sipanega valovnega vektorja enaki. Komponenti
-$x$ se razlikujeta za $q$. Kadar je Braggov pogoj izpolnjen, velja
-tudi da je sipani valovni vektor $\mathbf{k}_{s}=\mathbf{k}+\mathbf{q}$, kot
-je razvidno iz slike \ref{s7.9} ali kot se lahko prepričamo s kratkim
-računom. Braggov pogoj je torej enakovreden zahtevi, da se morajo
-pri sipanju ohraniti valovni vektorji. V kvantni mehaniki je $\hbar\mathbf{k}$
-gibalna količina fotona, $\hbar\mathbf{q}$ pa gibalna količina kvanta
-zvočnega valovanja fonona. Braggov pogoj je torej primer ohranitve
-gibalne količine. Če se ta ne ohranja, je sipanje neučinkovito in
-le oscilira okoli majhne vrednosti, kar opisuje faktor $\sin(\xi L/2)$.
+Ker je hitrost zvoka mnogo manjša od hitrosti svetlobe, je $\Omega/c\ll q$
+in sta velikosti vpadnega in sipanega valovnega vektorja praktično enaki. 
+Komponenti $x$ se razlikujeta za $q$. Kadar je Braggov pogoj izpolnjen, velja
+tudi, da je sipani valovni vektor $\mathbf{k}_{s}=\mathbf{k}+\mathbf{q}$.
+Braggov pogoj je torej primer ohranitve gibalne količine. Če se ta ne ohranja, 
+je sipanje neučinkovito in le oscilira okoli majhne vrednosti, kar opisuje 
+faktor $\sin(\beta L/2)/(\beta L/2)$.
 
 Delež moči uklonjenga vala je 
 \begin{equation}
 \frac{I_{1}}{I_{0}}=\left|\frac{A_{1}}{A_{0}}\right|^{2}=(\xi L)^{2}
 \left(\frac{\sin\beta_{1}L/2}{\beta_{1}L/2}\right)^{2}\;.\label{7.45}
 \end{equation}
- Kadar je Braggov pogoj izpolnjen, je $I_{0}/I_{1}=(\xi L)^{2}$,
-kar lahko velja le, dokler je $\xi L<<1$. Da se izognem tej omejitvi,
-moramo upoštevati tudi zmanjšanje moči vpadnega snopa.
+Če je Braggov pogoj izpolnjen, je $I_{0}/I_{1}=(\xi L)^{2}$,
+kar lahko velja le, dokler je $\xi L\ll1$. Kadar intenziteta uklonjenega žarka
+tako naraste, da ta pogoj ni več izpolnjen, je treba v računu upoštevati tudi 
+zmanjšanje moči vpadnega snopa.
 
 Braggov pogoj je hkrati lahko izpolnjen le za en uklonjen val, na
-primer $n=1$. Zato so tedaj vse ostale amplitude $A_{n}$, $n\ne0,1$
+primer $m=1$. Zato so tedaj vse ostale amplitude $A_{m}$, $m\ne0,1$
 majhne in ne vplivajo na $A_{1}$. To nam omogoča drug približek,
-ki je za uporabo zelo pomemben. Opustimo omejitev $L\xi<<1$, vendar
+ki je za uporabo zelo pomemben. Opustimo omejitev $L\xi\ll 1$, vendar
 zahtevajmo, da sta le $A_{0}$ in $A_{1}$ različni od nič. Sedaj
-$A_{0}(z)$ ne smemo več obravnavati kot konstante. Iz sistema \ref{7.37}
-sledi 
+$A_{0}(z)$ ne smemo več obravnavati kot konstante. Iz sistema enačb~(\ref{7.37})
+sledi, pri čemer upoštevamo izpolnjen Braggov pogoj (enačba~\ref{7.42}).
 \begin{eqnarray}
-A_{0}^{\prime}+\xi A_{1} & = & 0\nonumber \\
-A_{1}^{\prime}-\xi A_{0} & = & 0\;.
+A_{0}'+\xi A_{1} & = & 0\nonumber \\
+A_{1}'-\xi A_{0} & = & 0.
 \end{eqnarray}
- Začetni pogoji so $A_{0}(0)=A_{0}$ in $A_{1}(0)=0$. Rešitev enačb
-\ref{7.46} je 
+Ob začetnih pogojih $A_{0}(0)=A_{0}$ in $A_{1}(0)=0$ je rešitev enačb~(\ref{7.46}) 
 \begin{eqnarray}
 A_{0}(L) & = & A_{0}\cos\xi L\nonumber \\
 A_{1}(L) & = & A_{0}\sin\xi L\;.
 \end{eqnarray}
- Če je izpolnjen Braggov pogoj, se moč vpadnega vala na razdalji $\pi\xi/2$
+Če je izpolnjen Braggov pogoj, se moč vpadnega vala na razdalji $\pi/(2\xi)$
 skoraj vsa pretoči v uklonjeni snop, nato pa zopet nazaj (slika \ref{s7.10}).
-Za čim bolj učinkovito delovanje akustooptičnega modulatorja seveda
+Za čim bolj učinkovito delovanje akusto-optičnega modulatorja seveda
 želimo doseči ravno take pogoje.
 
-Razmerje med močjo uklonjenega in vpadnega snopa je 
+Razmerje med močjo uklonjenega in vpadnega snopa je tako
 \begin{equation}
-\frac{I_{1}}{I_{0}}=\sin^{2}\left(\frac{\pi n_{0}^{3}pS_{0}L}{2\lambda\cos\phi}\right)\;.\label{7.48}
+\frac{I_{1}}{I_{0}}=\sin^{2}\left(\frac{\pi n_{0}^{3}pS_{0}L}{2\lambda\cos\phi}\right).
+\label{7.48}
 \end{equation}
- kjer smo upoštevali, da je $\xi=\pi\epsilon_{1}/(2n_{0}\lambda\cos\phi)$
-in $\epsilon_{1}=n_{0}^{4}pS_{0}$, kjer je $S_{0}$ amplituda deformacije
-v zvočnem valu. Izrazimo jo lahko z gostoto moči zvočnega vala 
+Amplitudo deformacije v zvočnem valu $S_0$ izrazimo še z gostoto moči zvočnega vala 
 \begin{equation}
-j_{z}=\frac{1}{2}CS_{0}^{2}v_{z}\;,\label{7.49}
+j_{z}=\frac{1}{2}CS_{0}^{2}v_{z},
+\label{7.49}
 \end{equation}
- kjer je $C$ elastična konstanta snovi. Iz $v_{z}^{2}=C/\rho$ izrazimo
-še $C$, s čemer dobimo 
+kjer je $C$ elastična konstanta snovi, $v_z$ pa hitrost zvoka v snovi. 
+Iz zveze $v_{z}^{2}=C/\rho$ izrazimo $C$ z gostoto, s čemer dobimo 
 \begin{equation}
 S_{0}=\sqrt{\frac{2j_{z}}{\rho v_{z}^{3}}}\;.\label{7.50}
 \end{equation}
- Merilo uporabnosti neke snovi za akusto-optični modulator je 
+Praktično je vpeljati merilo uporabnosti neke snovi za akusto-optični modulator. To je koeficient 
 \begin{equation}
-M=\frac{n_{0}^{6}p^{2}}{\rho v_{z}^{3}}\;.\label{7.51}
+M=\frac{n_{0}^{6}p^{2}}{\rho v_{z}^{3}}.
+\label{7.51}
 \end{equation}
 
-Poglejmo primer. V kremenu $\rho=2,2\cdot10^{3}$ kg/m$^{3}$, $v_{z}=6000$~m/s,
-$n_{0}=1,46$ in $p=0,2$, tako da je $M=8\cdot10^{-16}$~W/m$^{2}$.
-Pri gostoti zvočnega toka 10~W/cm$^{2}$ in valovni dolžini 633~nm
-je za popolen prenos močiv uklonjeni snop $L=3$~cm. Gornja gostota
-zvočnega toka je kar velika in je ni prav lahko doseči, zato so običajni
-uklonski izkoristki nekaj manjši od 1.
+Poglejmo primer. V kremenu z gostoto $\rho=2,2\cdot10^{3}$ kg/m$^{3}$ je hitrost zvoka $v_{z}=6000$~m/s,
+$n_{0}=1,46$ in $p=0,2$. To da $M=8\cdot10^{-16}$~W/m$^{2}$.
+Pri gostoti zvočnega toka 10~W/cm$^{2}$ in valovni dolžini svetlobe 633~nm
+pride do popolnega prenosa moči v uklonjeni snop pri debelini $L=3$~cm. Gornja gostota
+zvočnega toka je kar velika in je ni prav lahko doseči, zato so 
+uklonski izkoristki navadno nekaj manjši od 1.
 
-Kot odklona uklonjenega vala $2\phi$ je 
+Izračunajmo še kot odklona uklonjenega vala $\theta = 2 \vartheta$  
 \begin{equation}
-2\phi=\frac{q}{k}=\frac{\lambda}{n_{0}\Lambda}=1,7\cdot10^{-3}\;.\label{7.52}
+\theta \approx \frac{q}{k}=\frac{\lambda}{n_{0}\Lambda}=1,7\cdot10^{-3}
+.\label{7.52}
 \end{equation}
- Kot je torej precej majhen.
+Uklonski kot je torej precej majhen.
 
+\begin{remark}
 Opisani račun izkoristka uklona na zvočnih valovih je uporaben tudi
 pri računu izkoristka holograma. V primeru faznega holograma je račun
 čisto enak in nam kaže tudi razliko med tankim in debelim hologramom,
 kako pa je z izkoristkom amplitudnega holograma, kjer je modulirana
-absorpcija v snovi, lahko bralec izračuna sam (Naloga).
+absorpcija v snovi, lahko bralec izračuna sam.
+\end{remark}
 
-Enačbe \ref{7.37} je enostavno rešiti še v {it Raman- Nathovem približku},
-ki sicer ni posebno pomemben za uporabo, je pa zanimiv. Vpeljimo novo
-neodvisno spremenljivko $\zeta=2\xi z$. Zveza \ref{7.37} preide
-v 
+Vrnimo se k sistemu enačb~(\ref{7.37}), ki smo jo zaenkrat rešili za primer Braggovega odboja
+oziroma v njegovi bližini. Enačbe je preprosto rešiti še v enem primeru, v tako imenovanem
+Raman- Nathovem približku. Vpeljimo novo neodvisno spremenljivko $\zeta=2\xi z$. Zveza~(\ref{7.37})
+preide v 
 \begin{equation}
-2\frac{dA_{n}(\zeta)}{d\zeta}+A_{n+1}(\zeta)-A_{n-1}(\zeta)=\frac{\beta_{n}}{\xi}A_{n}\;.\label{7.53}
+2\frac{dA_{m}(\zeta)}{d\zeta}+A_{m+1}(\zeta)-A_{m-1}(\zeta)=\frac{\beta_{m}}{i\xi}A_{m}.
+\label{7.53}
 \end{equation}
  Člen na desni lahko izpustimo, če je 
 \begin{equation}
-\frac{\beta_{n}}{\xi}=\frac{4nq}{k}\frac{\epsilon^{\prime}}{\epsilon_{1}}(\sin\phi-\frac{nq}{2k})<<1\;,\label{7.54}
+\frac{\beta_{m}}{\xi}=\left| \frac{4mq}{\tilde{\varepsilon}pS_0k}(\sin\vartheta+\frac{mq}{2k})\right| 
+\ll 1,
+\label{7.54}
 \end{equation}
- to je, če je pri danem $\epsilon_{1}$ valovna dolžina zvoka dovolj
-velika v primeri z valovno dolžino svetlobe. Iz \ref{7.53} sledi
-tedaj rekurzijska zveza za Besselove funkcije 
+oziroma če je valovna dolžina zvoka dovolj velika v primerjavi z valovno dolžino svetlobe. 
+V enačbi~(\ref{7.53}) prepoznamo rekurzijsko zvezo za Besselove funkcije 
 \begin{equation}
-2\mbox{J}_{n}^{\prime}+\mbox{J}_{n+1}-\mbox{J}_{n-1}=0\label{7.55}
+2J_{n}'+J_{n+1}-J_{n-1}=0
+\label{7.55}
 \end{equation}
- in je $A_{n}(z)=A_{0}\mbox{J}_{n}(2\xi z)$. Kadar je $2\xi L$ ničla
-J$_{0}$, prvič je to pri $2\xi L=2.4$, se vsa energija ukloni iz
-vpadnega snopa, vendar gre v tem primeru, ko Braggov pogoj ni izpolnjen,
-v mnogo uklonjenih snopov.
+z rešitvijo $A_{m}(z)=A_{0}J_{m}(2\xi z)$. Kadar je $2\xi L$ ničla funkcije
+J$_{0}$, prvič je to pri $2\xi L\approx 2.4$, se vsa energija ukloni iz
+vpadnega snopa, vendar se v tem primeru, ko Braggov pogoj ni izpolnjen,
+razporedi v mnogo uklonjenih snopov.
 
 \section{Modulacija s tekočimi kristali}
 
-Tekoči kristali so anizotropne kapljevine in so vmesna faza med običajnimi
-izotropnimi kapljevinami in kristali. Stopnja njihove urejenosti je
-lahko različna. Tekoče kristale tvorijo podolgovate ali ploščate molekule,
-vendar so za sedaj praktično pomembne le faze, ki jih tvorijo podolgovate
-organske molekule. Tudi med njimi so bili do nedavnega v uporabi le
-optične naprave z nematskimi tekočimi kristali, zato se zanimajmo
-le zanje. Običajno jih tvorijo molekule z relativno togim jedrom iz
+Za konec opišimo še modulacijo svetlobe s tekočimi kristali. 
+Tekoči kristali so anizotropne kapljevine in so vmesna faza med navadnimi
+izotropnimi kapljevinami in kristali. Tekoče kristale tvorijo podolgovate ali 
+ploščate molekule, ki imajo različne stopnje urejenosti. Omejimo se najosnovnejši
+primer, to je podolgovate organske molekule v nematski fazi tekočega kristala. 
+Navadno so to molekule z relativno togim jedrom iz
 dveh ali treh benzenovih obročev, ki imajo na koncih krajše ali daljše
-alifatske verige (slika \ref{s7.11}). Težišča molekul so v nematski
-fazi neurejena, enako kot v navadni tekočini, osi molekul pa so v
-povprečju urejene v določeno smer. Smer povprečne urejenosti opišemo
-z enotnim vektorjem $\mathbf{n}$, ki mu rečemo {it direktor}. Smeri
-$\mathbf{n}$ in $-\mathbf{n}$ sta enakovredni, z drugimi besedami, molekule
+alifatske verige (slika~\ref{s7.11}). V nematski fazi so težišča molekul neurejena, 
+enako kot v navadni tekočini, osi molekul pa so v povprečju urejene v določeno smer. 
+Smer povprečne urejenosti opišemo z enotnim vektorjem $\mathbf{n}$, ki mu rečemo direktor. 
+Smeri $\mathbf{n}$ in $-\mathbf{n}$ sta enakovredni, saj molekule
 z enako verjetnostjo kažejo v smeri $+\mathbf{n}$ kot v $-\mathbf{n}$.
 Stopnja urejenosti v mikroskopski sliki ni prav velika, povprečen
 odklon molekul od $\mathbf{n}$ je nekaj deset stopinj.
 
-Nematski tekoči kristal se obnaša kot enoosen dvolomni kristal z optično
-osjo vzporedno z $\mathbf{n}$. Ker je optična polarizabilnost benzenovih
-obročev vzdolž osi molekul precej večja od prečne, je razlika med
-rednim in izrednim lomnim količnikom razmeroma velika, navadno med
+Ker so molekule v povprečju urejene, se nematski tekoči kristal obnaša kot enoosen 
+dvolomni kristal, njegova optična os pa je vzporedna z $\mathbf{n}$. 
+Ker je optična polarizabilnost benzenovih obročev vzdolž osi molekul precej večja kot
+v prečni smeri, je razlika med rednim in izrednim lomnim količnikom razmeroma velika, navadno med
 0,1 in 0,2.
 
-V makroskopskem vzorcu nematskega tekočega kristala se smer $\mathbf{n}$
-po vzorcu neurejeno spreminja, če posebej ne poskrbimo, da ima povsod
-isto smer. Energija takega deformiranega stanja je nekoliko večja
-od energije homogenega stanja, zaradi česar na delček tekočega kristala
-okolica deluje z navorom, ki deluje v smeri zmanjševanja nehonogenosti
-$\mathbf{n}$. Temu pojavu, zna\textquotedbl{}ilnemu za tekoče kristale,
-pravimo orientacijska elastičnost. Nekoliko podrobneje je opisan v
-Dodatku na koncu poglavja. Vendar so ti elastični navori prešibki,
-da bi uredili razsežne vzorce. Urejene vzorce, kakršne potrebujemo
-za uporabo v optičnih elementih, lahko pripravimo s pomočjo zunanjega
-polja ali pa v dovolj tankih plasteh, kjer mejne površine ustrezno
-pripravimo.
+V makroskopskem vzorcu nematskega tekočega kristala se v splošnem smer
+direktorja $\mathbf{n}$ po vzorcu neurejeno spreminja. Energija takega deformiranega 
+stanja je nekoliko večja od energije homogenega urejenega stanja,
+zato na delček tekočega kristala okolica deluje z navorom v smeri zmanjševanja 
+nehonogenosti $\mathbf{n}$. Temu pojavu, značilnemu za tekoče kristale,
+pravimo orientacijska elastičnost. Ti ti elastični navori so prešibki,
+da bi uredili razsežne neurejene vzorce. Urejene vzorce, kakršne potrebujemo
+v optičnih elementih, pripravimo v zunanjem polju ali pa dovolj tanke, da mejne 
+površine vsilijo ureditev v celem vzorcu. Poglejmo, kako.
 
-Zunanje električno ali magnetno polje na tekoče kristale tudi deluje
-z navorom. Električna in magnetna susceptibilnost nematskega tekočega
+Na ureditev molekul tekočega kristala vpliva zunanje električno ali magnetno polje.
+Električna in magnetna susceptibilnost nematskega tekočega
 kristala nista skalarja, temveč imata dve različni lastni vrednosti,
-eno v za smer vzporedno z $\mathbf{n}$, drugo za pravokotno. Zato je
+eno v za smer vzporedno z $\mathbf{n}$, drugo za pravokotno nanj. Zato je
 elektrostatična energija odvisna od kota med zunanjim poljem $vec{E}$
-in $\mathbf{n}$. Od kota odvisni del energije lahko zapišemo v obliki
+in $\mathbf{n}$. Kotno odvisni del energije lahko zapišemo v obliki
 \begin{equation}
-w_{a}=-\frac{1}{2}\epsilon_{0}\epsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2}\;,\label{7.56}
+w_{a}=-\frac{1}{2}\epsilon_{0}\epsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2},
+\label{7.56}
 \end{equation}
- kjer je $\epsilon_{a}=\epsilon_{\parallel}-\epsilon_{\perp}$ anizotropni
+kjer je $\epsilon_{a}=\epsilon_{\parallel}-\epsilon_{\perp}$ anizotropni
 del dielektrične konstante. Če je $\epsilon_{a}>0$, se molekule skušajo
-postaviti v smer polja, če je $\epsilon_{a}<0$, pa pravokotno na
-polje.
+zasukati v smer polja, če je $\epsilon_{a}<0$, pa pravokotno nanj.
 
 Urejen vzorec je mogoče narediti tudi v tankih plasteh. Če površino,
 ki je v stiku s tekočim kristalom, prevlečemo z primerno pastjo, se
 molekule tekočega kristala tik ob povšini na določen način uredijo.
 Tanka plast najlona, ki jo podrgnemo v željeni smeri, povzroči, da
-je $\mathbf{n}$ ob površini paralelen s površino v smeri drgnenja. Drgnenje
+je $\mathbf{n}$ ob površini vzporeden s površino v smeri drgnenja. Drgnenje
 deloma uredi verige najlona, zato se tudi molekule tekočega kristala
 raje uredijo v isti smeri. Da je $\mathbf{n}$ pravokoten na površino,
-dosežemo na primer s tanko plastjo lecitina. Ta ima polarno glavo,
-ki se adsorbira na stekleno površino, in alifatsko verigo, ki stoji
-približno pravokotno na površino. Zato se tudi alifatski repi molekul
-tekočega kristala uredijo enako. V obeh primerih, paralelni ali pravokotni
+dosežemo na primer s tanko plastjo lecitina ali surfaktanta silana. 
+Ta imata polarno glavo, ki se adsorbira na stekleno površino, in alifatsko verigo, 
+ki stoji približno pravokotno na površino. Zato se tudi alifatski repi molekul
+tekočega kristala uredijo enako. V obeh primerih, vzporedni ali pravokotni
 orientaciji ob steni, se urejenost zaradi orientacijske elastičnosti
 ohranja tudi stran od stene, tako da lahko brez težav naredimo urejene
 vzorce debeline do kakih 200~$\mu$m. Pri večjih debelinah so elastični
-navori prešibki in ostanejo v vzorcu defekti.
+navori prešibki in v vzorcu nastanejo defekti.
 
 Struktura tekočekristalnega vzorca je tako odvisna od orientacijske
 elastičnosti, od robnih pogojev, ki jih določimo z obdelavo mejne
 površine, in od zunanjega električnega ali magnetnega polja.
 
 Preprost elektro-optični modulator ali kazalnik na osnovi nematskih
-tekočih kristalov lahko naredimo takole. Vzemimo vzorec tekočega kristala
+tekočih kristalov naredimo takole. Vzemimo vzorec tekočega kristala
 med dvema stekloma, na katerih sta prozorni elektrodi. Ureditev tekočega
 kristala naj bo vzporedna s površino stekel. Tudi optična os ima isto
 smer. Dovolj velika napetost zasuče $\mathbf{n}$ in s tem optično os
-pravokotno na stene, razen tik ob površini. Pri debelini 10~$\mu$m
-je potrebna napetost nekaj voltov. Nekaj več o tem preklopu najde
-bralec v Dodatku na koncu poglavja.
+pravokotno na stene, razen tik ob površini. Pri debelini okoli 10~$\mu$m
+je potrebna napetost nekaj voltov.
 
 Naj debelina $h$ obravnavane plasti za izbrano valovno dolžino svetlobe
 ustreza pogoju 
