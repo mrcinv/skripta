@@ -1,6 +1,6 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file '03_Gauss_1.pdf' (pdf, eps, ps)
+%% Accompanies image file '03_Gauss.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{581.30154347bp}%
+    \setlength{\unitlength}{581.3015625bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,14 +48,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.4134808)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{03_Gauss.pdf}}%
-    \put(0.89141413,0.14406096){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z$}}}%
-    \put(0.45442911,0.33638963){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$r$}}}%
+  \begin{picture}(1,0.41348079)%
+    \put(0,0){\includegraphics[width=\unitlength]{03_Gauss.pdf}}%
+    \put(0.89141413,0.14406095){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z$}}}%
+    \put(0.45442911,0.33638962){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$r$}}}%
     \put(0.43866102,0.20320209){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$w_0$}}}%
     \put(0.8333299,0.38826019){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$w(z)$}}}%
-    \put(0.49335035,0.2784466){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z_0$}}}%
-    \put(0.73222025,0.20603383){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R(z)$}}}%
+    \put(0.49335035,0.27844659){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z_0$}}}%
+    \put(0.73222025,0.20603382){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R(z)$}}}%
     \put(0.87743108,0.27627907){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta$}}}%
   \end{picture}%
 \endgroup%
