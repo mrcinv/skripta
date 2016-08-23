@@ -3,9 +3,9 @@
 \chapter{Modulacija svetlobe}
 
 V optičnih napravah pogosto želimo spreminjati lastnosti svetlobnega
-valovanja. En tak primer smo že spoznali pri obravnavi laserja,
-ko smo za preklop kakovosti potrebovali element, ki hitro spreminja svojo prepustnost. 
-Še bolj pomembna je modulacija valovanja pri optičnem prenosu informacij.
+valovanja. Tak primer smo že spoznali pri obravnavi laserja, kjer za 
+preklop dobrote potrebujemo element, ki hitro spreminja prepustnost. 
+Še pomembnejša je modulacija valovanja pri optičnem prenosu informacij.
 
 Svetlobno valovanje lahko moduliramo na več načinov. Z ustreznim moduliranjem
 lomnega količnika lahko valovanju spreminjamo amplitudo\index{Modulacija!amplitudna} 
@@ -27,44 +27,21 @@ takim modulatorjem pravimo akusto-optični. Na koncu bomo spoznali poseben zelo 
 primer elektro-optičnih modulatorjev na osnovi tekočih kristalov.
 
 \section{Elektro-optični pojav}
-Če na snov priključimo električno polje (napetost), se njen dielektrični tenzor lahko spremeni.
-Omejimo se na statično zunanje polje oziroma na polje, katerega frekvenca 
-je bistveno manjša od optične frekvence. Omejitev na nizko frekvenco je potrebna zato, 
-da optično polje še lahko obravnavamo linearno. Kako je v nasprotnem primeru, ko je frekvenca
-polja primerljiva z optično frekvenco, smo na široko obravnavali v prejšnjem poglavju o
-nelinearni optiki (poglavje~\ref{chap:NLO}).
+Elektro-optični pojav\index{Elektro-optični pojav} opisuje spremembe optičnih lastnosti 
+snovi (dielektričnosti in lomnega količnika) pod vplivom zunanjega električnega polja. 
+Omejimo se na statično zunanje polje oziroma
+na polje, katerega frekvenca je bistveno manjša od optične frekvence. Omejitev na nizko 
+frekvenco je potrebna zato, da optično polje še lahko obravnavamo linearno. 
+Kako je v nasprotnem primeru, ko je frekvenca polja primerljiva z optično frekvenco, 
+smo na široko obravnavali v poglavju o nelinearni optiki (poglavje~\ref{chap:NLO}).
 
-Iz zgodovinskih razlogov namesto spremembe dielektričnega tenzorja pišemo 
-spremembo dielektričnega inverznega tenzorja 
+Namesto dielektričnega tenzorja navadno vpeljemo inverzni dielektrični tenzor
 \beq
 \underline{b}=\underline{\epsilon}^{-1}.
 \eeq
-Ker so spremembe razmeroma majhne, lahko spremembo komponente $b_{ij}$ zapišemo 
-kot potenčno vrsto zunanjega polja $E$
-\begin{equation}
-\delta b_{ij}=r_{ijk}E_{k}+q_{ijkl}E_{k}E_{l}.
-\label{7.1}
-\end{equation}
-Prvi člen, linearen z obzirom na zunanje polje, opisuje linearni elektro-optični
-ali Pockelsov pojav\footnote{Nemški fizik Friedrich Carl Alwin Pockels, 1865--1913.}. 
-Tenzor tretjega ranga $r_{ijk}$, ki lastnost snovi, imenujemo tako elektro-optični tenzor 
-ali tudi Pockelsov tenzor. Kvadratnemu elektro-optičnemu pojavu pravimo Kerrov 
-pojav\footnote{Škotski fizik John Kerr, 1824--1907}. Pockelsov tenzor je 
-različen od nič v snoveh brez centra inverzije, Kerrov pa je šibkejši, a v vseh snoveh
-različen od nič. Značilne vrednosti Pockelsovega
-tenzorja so okoli $r \sim 10^{-12} - 10^{-10}$~m/V, Kerrovega pa 
-$q \sim 10^{-24}$~m$^2$/V$^2$.
-
-Za uporabo trdnih kristalov je pomemben
-predvsem linearni člen, zato se bomo osredotočili le na prvi člen in zapisali
-\boxeq{eq:Pockels}{
-\delta b_{ij}=r_{ijk}E_{k}. 
-}
-
-Preden si pobližje ogledamo Pockelsov tenzor, zapišemo še,
-kako se z $\delta b_{ij}$ izrazijo spremembe komponent dielektričnega
-tenzorja. Vzemimo koordinatni sistem, v katerem je nemoten dielektrični
-tenzor $\underline{\tilde{\varepsilon}}$ diagonalen. Ker so spremembe majhne, velja 
+Izračunajmo zvezo med majhnimi spremembami inverznega tenzorja $\delta b_{ij}$ 
+in majhnimi spremembami dielektričnega tenzorja $\delta \varepsilon_{ij}$. 
+Če so spremembe majhne, velja 
 \begin{equation}
 \underline{\varepsilon} = \underline{\tilde{\varepsilon}} + \delta \underline{\varepsilon}=
 (\underline{b}+\delta \underline{b})^{-1}=\left(\underline{b}(1+\underline{b}^{-1}
@@ -77,33 +54,64 @@ Sprememba dielektričnega tenzorja je tako
  \delta \underline{\varepsilon}= -\underline{b}^{-1}\delta \underline{b}\, \underline{b}^{-1}
  = -\underline{\tilde{\varepsilon}}\, \delta \underline{b}\, \underline{\tilde{\varepsilon}}
 \eeq
-oziroma
+oziroma, če je nemoten dielektrični tenzor $\underline{\tilde{\varepsilon}}$ diagonalen, 
 \begin{equation}
 \delta\epsilon_{ij}=-\tilde{\epsilon}_{ik}\delta b_{kl}\tilde{\epsilon}_{lj}
 =-\tilde{\epsilon}_{ii}\tilde{\epsilon}_{jj}\delta b_{ij}.
 \label{7.3}
 \end{equation}
-V zadnjem zapisu smo upoštevali, da je nemoten dielektrični tenzor diagonalen.
+
+Pri elektro-optičnem pojavu so spremembe tenzorja dielektričnosti zaradi vpliva zunanjega polja razmeroma 
+majhne. Spremembo komponente $\delta b_{ij}$ lahko zato zapišemo kot potenčno vrsto zunanjega polja $E$, 
+pri čemer upoštevajmo zgolj prva dva člena v razvoju
+\boxeq{7.1}{
+\delta b_{ij}=r_{ijk}E_{k}+q_{ijkl}E_{k}E_{l}.
+}
+Prvi člen, linearno sorazmeren zunanjem polju, opisuje linearni elektro-optični
+ali Pockelsov\index{Pockelsov pojav} pojav\footnote{Nemški fizik Friedrich Carl Alwin Pockels, 1865--1913.}. 
+Tenzor tretjega ranga $r_{ijk}$, ki je lastnost snovi, imenujemo elektro-optični 
+tenzor\index{Elektro-optični tenzor}
+ali tudi Pockelsov tenzor\index{Pockelsov tenzor|see Elektro-optični tenzor}. 
+Pockelsov tenzor je različen od nič v snoveh brez centra inverzije, značilne vrednosti Pockelsovega
+tenzorja pa so okoli $r \sim 10^{-12} - 10^{-10}$~m/V,
+
+Kvadratnemu elektro-optičnemu pojavu pravimo Kerrov\index{Kerrov pojav}
+pojav\footnote{Škotski fizik John Kerr, 1824--1907}, tenzorju $q_{ijkl}$ pa Kerrov tenzor\index{Kerrov tenzor}. 
+Kerrov pojav je praviloma precej šibkejši od Pockelsovega, vendar je različen od nič v vseh snoveh, ne glede na
+njihove simetrijske lastnosti, torej tudi v tekočinah. 
+Značilna vrednost Kerrovega tenzorja je $q \sim 10^{-24}$~m$^2$/V$^2$. Navadno ločimo dva primera Kerrovega
+pojava: Kerrov elektro-optični pojav pri zunanjih poljih z nizko frekvenco, in optični Kerrov pojav, ki smo 
+ga podrobneje spoznali pri obravnavi nelinearnih optičnih pojavov (poglavje~\ref{OKP}).
+
+Za uporabo trdnih kristalov je pomemben
+predvsem linearni člen, zato se bomo osredotočili le nanj in zapisali
+\boxeq{eq:Pockels}{
+\delta b_{ij}=r_{ijk}E_{k}. 
+}
+
 
 \subsection*{Pockelsov tenzor}
-Simetrija pomembno vpliva na obliko tenzorjev, ki opisujejo lastnosti
-snovi. Pockelsov tenzor $r$ je tenzor tretjega ranga, zato je lahko različen
-od nič le v kristalih brez centra inverzije. Pri inverziji namreč električno 
-polje spremeni predznak, odziv pa bi moral biti na inverzijo neobčutljiv. 
+Simetrija snovi pomembno vpliva na obliko tenzorjev, ki opisujejo njene lastnosti.
+Pockelsov tenzor $r$ je tenzor tretjega ranga, zato je lahko različen
+od nič le v kristalih brez centra inverzije. 
+Simetrija kristala tudi v primeru, ko ni centra inverzije, močno
+zmanjša število neodvisnih komponent $r_{ijk}$. 
 
-Simetrija tudi v primeru, ko ni centra inverzije, navadno močno
-zmanjša število neodvisnih komponent $r_{ijk}$. Pockelsov tenzor
-je po definiciji simetričen v prvih dveh indeksih
+Po definiciji je Pockelsov tenzor simetričen v prvih dveh indeksih
 \beq
-r_{ijk} = r_{jik},
+r_{ijk} = r_{jik}.
 \eeq
-zato ima v najmanj simetričnem primeru triklinskega kristala 18 neodvisnih komponent,
-v kristalih z višjo simetrijo pa še manj. 
+V najmanj simetričnem primeru triklinskega kristala ima tako namesto 27 zgolj 
+18 neodvisnih komponent, v kristalih z višjo simetrijo pa še manj. 
 
 Za primer poglejmo, kako štirištevna simetrijska os zmanjša število komponent. 
-Naj bo simetrijska os v smeri $z$, električno polje pa vzporedno z njo.
+Simetrijska os naj bo obrnjena v smeri $z$, električno polje pa naj bo vzporedno z njo.
 Rotacija za $\pi/2$ okoli osi $z$ je simetrijska operacija in prevede
-os $x$ v $y$, zato mora biti $r_{xxz}=r_{yyz}$. Poglejmo še zvezo 
+os $x$ v $y$, zato mora biti 
+\beq
+r_{xxz}=r_{yyz}.
+\eeq
+Nadalje poglejmo zvezo 
 \begin{equation}
 \delta b_{xy}=r_{xyz}E_{z}.
 \label{7.4}
