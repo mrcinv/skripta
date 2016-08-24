@@ -104,8 +104,52 @@ r_{ijk} = r_{jik}.
 V najmanj simetričnem primeru triklinskega kristala ima tako namesto 27 zgolj 
 18 neodvisnih komponent, v kristalih z višjo simetrijo pa še manj. 
 
+Podobno kot pri nelinearni susceptibilnosti (poglavje~\ref{Chap:Chi}) 
+tudi elektro-optični tenzor pogosto zapišemo le z dvema komponentama. 
+Prva dva indeksa, v katerih je $r_{ijk}$ simetričen, združimo
+v enega z vrednostmi od 1 do 6 po dogovoru $xx=1$, $yy=2$, $zz=3$,
+$yz=4$, $zx=5$ in $xy=6$. Tako postane $r_{ijk}$ matrika velikosti
+$6\times3$, simetrični tenzor drugega ranga $b_{ij}$ pa šestkomponenten
+vektor.
+
 Za primer poglejmo, kako štirištevna simetrijska os zmanjša število komponent. 
-Simetrijska os naj bo obrnjena v smeri $z$, električno polje pa naj bo vzporedno z njo.
+Simetrijska os naj bo obrnjena v smeri $z$, zato morajo zasuki okoli te osi 
+za večkratnik $\pi/2$ dati isti rezultat. Za drugimi besedami, če priključimo
+polje v $x$ ali v $y$ smeri, mora biti sprememba tenzorja enaka
+\beq
+\left[\begin{array}{ccc}
+r_{11} & r_{12}& r_{13}\\
+r_{21} & r_{22}& r_{23}\\
+r_{31} & r_{32}& r_{33}\\
+r_{41} & r_{42}& r_{43}\\
+r_{51} & r_{52}& r_{53}\\
+r_{61} & r_{62}& r_{63}\\
+\end{array}\right] \times 
+\left[\begin{array}{c}
+E_{x}\\
+0\\
+0\\
+\end{array}\right] = 
+\left[\begin{array}{ccc}
+r_{11} & r_{12}& r_{13}\\
+r_{21} & r_{22}& r_{23}\\
+r_{31} & r_{32}& r_{33}\\
+r_{41} & r_{42}& r_{43}\\
+r_{51} & r_{52}& r_{53}\\
+r_{61} & r_{62}& r_{63}\\
+\end{array}\right] \times 
+\left[\begin{array}{c}
+0\\
+E_y\\
+0\\
+\end{array}\right]
+\label{7.8},
+\eeq
+od koder sledi 
+
+
+
+električno polje pa naj bo vzporedno z njo.
 Rotacija za $\pi/2$ okoli osi $z$ je simetrijska operacija in prevede
 os $x$ v $y$, zato mora biti 
 \beq
@@ -170,13 +214,7 @@ je podanih v tabeli~(\ref{table:Pockels}).
 \label{table:Pockels}
 \end{table}
 
-Podobno kot smo to naredili pri nelinearni susceptibilnosti (poglavje~\ref{Chap:Chi}), 
-tudi elektro-optični tenzor pogosto zapišemo le z dvema komponentama. 
-Prva dva indeksa, v katerih je $r_{ijk}$ simetričen, združimo
-v enega z vrednostmi od 1 do 6 po dogovoru $xx=1$, $yy=2$, $zz=3$,
-$yz=4$, $zx=5$ in $xy=6$. Tako postane $r_{ijk}$ matrika velikosti
-$6\times3$, simetrični tenzor drugega ranga $b_{ij}$ pa šetkomponenten
-vektor.
+
 
 \section{Longitudinalna modulacija}
 Poglejmo na primeru, kako električno polje spremeni lastnosti elektro-optičnega kristala
