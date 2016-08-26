@@ -8,8 +8,9 @@ preklop dobrote potrebujemo element, ki hitro spreminja prepustnost.
 Še pomembnejša je modulacija valovanja pri optičnem prenosu informacij.
 
 Svetlobno valovanje lahko moduliramo na več načinov. Z ustreznim moduliranjem
-lomnega količnika lahko valovanju spreminjamo amplitudo\index{Modulacija!amplitudna} 
-ali frekvenco oziroma fazo\index{Modulacija!frekvenčna}\index{Modulacija!fazna}. 
+lomnega količnika lahko valovanju spreminjamo amplitudo\index{Elektro-optična modulacija!amplitudna} 
+ali frekvenco oziroma fazo\index{Elektro-optična modulacija!frekvenčna}
+\index{Elektro-optična modulacija!fazna}. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{140truemm} 
@@ -311,6 +312,7 @@ so značilne za kristalne elektro-optične modulatorje in so njihova
 glavna pomanjkljivost. 
 
 \section{Transverzalna modulacija}
+\index{Elektro-optična modulacija!transverzalna}
 Iz praktičnih razlogov je navadno preprosteje priključiti električno polje v smeri, ki 
 je pravokotna na smer širjenja svetlobe. Taki postavitvi pravimo transverzalna in pojavu
 transverzalna modulacija\index{Elektro-optična modulacija!transverzalna}.
@@ -366,6 +368,7 @@ polarizacijama po preletu kristala z dolžino $L$ pa je
 \beq
 \Delta \phi = k_0 n_{y'} L - k_0 n_{x'} L = \frac{\omega}{c_0}L 
 n_o^3 r_{22}E_y.
+\label{fazaTM}
 \eeq
 Karakteristična $\pi$-napetost \index{$\pi$-napetost}je tako
 \beq
@@ -394,60 +397,76 @@ naravne dvolomnosti odšteje, zaradi modulacijske napetosti pa sešteje.
 
 \section{Amplitudna modulacija}
 \label{chap:ampmod}
+\index{Elektro-optična modulacija!amplitudna}
 Poglejmo, kako lahko elektro-optični pojav izkoristimo za modulacijo
-amplitude svetlobnega snopa. Vemo, da lahko v kristalu pride do
-faznega zamika med polarizacijama, ki je sorazmeren napetosti.
-Če tak kristal postavimo analizator, lahko z napetostjo spreminjamo 
-prepuščeno moč svetlobe - dobili smo amplitudni modulator.
+amplitude svetlobnega snopa. Pod vplivom polja pride v kristalu do
+faznega zamika med polarizacijama, ki je sorazmeren napetosti 
+(enačbi~\ref{phiAM} in \ref{fazaTM}).
+Če za tak kristal postavimo analizator, lahko z napetostjo spreminjamo 
+prepuščeno moč svetlobe -- dobili smo amplitudni modulator.
 
-Vrnimo se k prvemu primeru longitudinalne modulacije (slika~\ref{fig:amshema}).
-Naj bo vpadna polarizacija vzporedna osi $y$, električna poljska jakost pa $E_0$. 
-Ko priključimo napetost, os $y$ ni lastna os, zato moramo vpadno valovanje razstaviti 
-na komponenti $x'$ in $y'$
+Vrnimo se k prvemu primeru longitudinalne\index{Elektro-optična modulacija!longitudinalna}
+modulacije (slika~\ref{fig:amshema}).
+Naj bo vpadna električna poljska jakost $E_0$ polarizirana v smeri $y$. 
+Ko priključimo napetost, os $y$ ni več lastna os, ampak sta lastni osi zasukani 
+za kot $45~^\circ$ glede na prvotni lastni osi (slika~\ref{fig:amn}). Vpadno 
+valovanje razstavimo na komponenti $x'$ in $y'$
 \beq
-E_0\, \mathbf{e}_y = \frac{E_0}{\sqrt{2}}\left(\mathbf{e}_{x'} + \mathbf{e}_{y'}\right).
+\mathbf{E}_0 = E_0\, \mathbf{e}_y = \frac{E_0}{\sqrt{2}}\left(\mathbf{e}_{x'} + \mathbf{e}_{y'}\right).
 \eeq
 Po prehodu skozi kristal pride med njima do fazne razlike $\Delta \phi$ 
 (enačba~\ref{phiAM}), zato je polje $\mathbf{E}_1$ ob izstopu iz kristala
 \beq
 \mathbf{E}_1 = \frac{E_0}{\sqrt{2}}\left(e^{ik_0 n_{x'}L}\mathbf{e}_{x'} + e^{ik_0 n_{y'}L}\mathbf{e}_{y'}\right)
-= \frac{E_0}{\sqrt{2}}e^{ik_0 n_{x'}L}\left(\mathbf{e}_{x'} + e^{i\Delta\phi}\mathbf{e}_{y'}\right).
+= \frac{E_0}{\sqrt{2}}e^{ik_0 n_{x'}L}\left(\mathbf{e}_{x'} + 
+e^{i\Delta\phi}\mathbf{e}_{y'}\right).
 \eeq
-Naj bo polarizator na izhodni strani obrnjen v smeri $x$, pravokotno na smer vpadne polarizacije torej. 
-Analizator prepusti le projekcijo obeh lastnih polarizacij
+Analizator na izhodni strani je obrnjen v smeri $x$, to je pravokotno
+na smer vpadne polarizacije, in prepusti le projekcijo obeh lastnih polarizacij
+na os $x$
 \begin{equation}
-E_=\frac{E_0}{\sqrt{2}}e^{ik_0 n_{x'}L}
-\left(\frac{1}{\sqrt{2}} -\frac{1}{\sqrt{2}} e^{i\Delta\phi}\right).
+\mathbf{E}_2= \mathbf{E}_1 \cdot \mathbf{e}_x = 
+\frac{E_0}{\sqrt{2}}e^{ik_0 n_{x'}L}
+\left(\frac{1}{\sqrt{2}} -\frac{1}{\sqrt{2}} e^{i\Delta\phi}\right)\mathbf{e}_x .
 \label{7.16}
 \end{equation}
-Gostota prepuščenega svetlobnega toka je tako 
+Gostota prepuščenega svetlobnega toka ob vpadnem toku $j_0$ je tako 
 \begin{equation}
 j=\frac{1}{4}j_{0}\left|1-e^{i\Delta\phi}\right|^{2}=\frac{1}{2}j_{0}(1-\cos\Delta\phi).
 \label{7.17}
 \end{equation}
-Preoblikujemo izaz in zapišemo prepustnost takega modulatorja
+Preoblikujemo izraz in zapišemo prepustnost takega modulatorja ob upoštevanju 
+enačbe~(\ref{phiAM})
 \boxeq{AMfinal}{
-T = \frac{j}{j_0} = \sin\left(\frac{\Delta\phi}{2}\right)^2.
+T = \frac{j}{j_0} = \sin\left(\frac{\Delta\phi}{2}\right)^2 = 
+\sin\left(\frac{\pi n_o^3 r_{63}U}{\lambda}\right)^2 .
 }
-Ko je napetost na kristalu nič, je $\phi=0$ in je tudi intenziteta prepuščene svetlobe $j=0$.
-To je pričakovano, saj sta analizator in polarizator prekrižana, vpadni žarek pa se širi vzdolž lastne osi.
-Prepustnost je največja, ko je $\phi=\pi$. Ko torej napetost povečamo z 0 na $U_\pi$, se
-prepustnost modulatorja spremeni z 0 na 1 (slika~\ref{fig:amt}).
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/09_AMT.pdf_tex}
-\caption{Prepustnost amplitudnega modulatorja v odvisnosti od napetosti}
+\caption{Prepustnost amplitudnega modulatorja v odvisnosti od faznega zamika $\Delta \phi$, 
+ki je sorazmeren priključeni napetosti $U$. Če pred vzorec dodamo ploščico $\lambda/4$, 
+se pojavi stalni fazni zamik in odvisnost prepustnosti od priključene napetosti
+je približno  linearna.}
 \label{fig:amt}
 \end{figure}
 
-Včasih želimo, da je zveza med modulacijsko napetostjo in izhodno
-gostoto toka linearna. To lahko dosežemo, če modulator deluje v okolici $\Delta\phi=\pi/2$.
-Ena rešitev bi bila, da dodamo stalno visoko napetost, singal pa moduliramo okoli
+Ko je napetost na kristalu enaka nič, je $\Delta \phi=0$ in tudi intenziteta 
+prepuščene svetlobe $j=0$. To je pričakovano, saj sta analizator in polarizator prekrižana, 
+vpadni žarek pa se širi vzdolž lastne osi kristala.
+Prepustnost doseže največjo vrednost, ko je $\Delta \phi=\pi$, kar je ravno pri 
+$\pi$-napetosti\index{$\pi$-napetost}. Ko torej napetost povečamo z 0 na $U_\pi$, se
+prepustnost modulatorja spremeni z 0 na 1 (slika~\ref{fig:amt}).
+
+Pogosto želimo, da je zveza med modulacijsko napetostjo in izhodno
+gostoto toka linearna. To lahko dosežemo, če modulator deluje v okolici $\Delta\phi=\pi/2$
+(slika~\ref{fig:amt}).
+Ena rešitev bi bila dodati stalno visoko napetost, signal pa modulirati okoli
 te vrednosti. Precej bolj praktična rešitev je, da med polarizator
-in kristal dodamo ploščico $\lambda/4$, ki da zahtevani stalni
+in kristal dodamo ploščico $\lambda/4$\index{Ploščica $\lambda/4$}, ki da zahtevan stalni
 fazni premik med rednim in izrednim valom. Potem lahko z razmeroma majhno napetostjo
-naredimo linearen amplitudni modulator.
+naredimo linearen amplitudni modulator\index{Elektro-optična modulacija!linearna}.
 
 \section{Fazna in frekvenčna modulacija}
 
