@@ -303,9 +303,9 @@ jakosti $E_z$.
 
 Vpeljemo še karakteristično napetost $U_\pi$, pri kateri je dodatna \index{$\pi$-napetost}
 fazna razlika enaka $\pi$ in kristal deluje kot ploščica $\lambda/2$\index{Ploščica $\lambda/2$}
-\beq
+\boxeq{UpiL}{
 U_\pi = \frac{\pi c_o}{\omega n_o^3 r_{63}} = \frac{\lambda}{2 n_o^3 r_{63}}.
-\eeq
+}
 Za kristal KDP je $\pi$-vrednost napetosti pri valovni dolžini $633$~nm okoli  $9000$~V. 
 Izračunana napetost je precej velika. Velike delovne napetosti
 so značilne za kristalne elektro-optične modulatorje in so njihova
@@ -371,9 +371,9 @@ n_o^3 r_{22}E_y.
 \label{fazaTM}
 \eeq
 Karakteristična $\pi$-napetost \index{$\pi$-napetost}je tako
-\beq
+\boxeq{UpiT}{
 U_\pi = \frac{\lambda d}{2 Ln_o^3 r_{22}},
-\eeq
+}
 pri čemer moramo ločiti med $L$, ki je dolžina kristala v smeri $z$, in $d$, ki je  
 širina v prečni smeri v kateri priključimo napetost. 
 Za izbran kristal ($d=5$~mm, $L=1$~cm) je $\pi$-vrednost 
@@ -383,7 +383,7 @@ napetosti pri valovni dolžini $633$~nm okoli $2000$~V.
 Transverzalno modulacijo lahko dosežemo tudi tako, da se žarek širi vzdolž 
 osi $y$, električno polje pa priključimo vzdolž optične osi $z$.
 V tem primeru se lastne osi ohranijo in kristal ostane optično enoosen. Vendar 
-pa ima tudi ta rešitev določene slabosti. Ker je kristal že sam po sebi dvolomen, 
+pa ima tudi ta rešitev določene slabosti. Ker je kristal že sam po sebi dvolomen\index{Dvolomnost}, 
 povzroči zunanje polje le majhno dodatno fazno razliko, zato je najbolje, če je dolžina 
 kristala taka, da velja $k_{0}L(n_{o}-n_{e})=2N\pi$. Pri tem pa nastopi težava. 
 Pogoj je lahko zaradi temperaturnega raztezanja in odvisnosti lomnih količnikov od temperature
@@ -403,10 +403,10 @@ amplitude svetlobnega snopa. Pod vplivom polja pride v kristalu do
 faznega zamika med polarizacijama, ki je sorazmeren napetosti 
 (enačbi~\ref{phiAM} in \ref{fazaTM}).
 Če za tak kristal postavimo analizator, lahko z napetostjo spreminjamo 
-prepuščeno moč svetlobe -- dobili smo amplitudni modulator.
+prepuščeno moč svetlobe -- amplitudno moduliramo signal.
 
-Vrnimo se k prvemu primeru longitudinalne\index{Elektro-optična modulacija!longitudinalna}
-modulacije (slika~\ref{fig:amshema}).
+Vrnimo se k longitudinalni\index{Elektro-optična modulacija!longitudinalna}
+modulaciji (slika~\ref{fig:amshema}).
 Naj bo vpadna električna poljska jakost $E_0$ polarizirana v smeri $y$. 
 Ko priključimo napetost, os $y$ ni več lastna os, ampak sta lastni osi zasukani 
 za kot $45~^\circ$ glede na prvotni lastni osi (slika~\ref{fig:amn}). Vpadno 
@@ -417,7 +417,8 @@ valovanje razstavimo na komponenti $x'$ in $y'$
 Po prehodu skozi kristal pride med njima do fazne razlike $\Delta \phi$ 
 (enačba~\ref{phiAM}), zato je polje $\mathbf{E}_1$ ob izstopu iz kristala
 \beq
-\mathbf{E}_1 = \frac{E_0}{\sqrt{2}}\left(e^{ik_0 n_{x'}L}\mathbf{e}_{x'} + e^{ik_0 n_{y'}L}\mathbf{e}_{y'}\right)
+\mathbf{E}_1 = \frac{E_0}{\sqrt{2}}\left(e^{ik_0 n_{x'}L}\mathbf{e}_{x'} + 
+e^{ik_0 n_{y'}L}\mathbf{e}_{y'}\right)
 = \frac{E_0}{\sqrt{2}}e^{ik_0 n_{x'}L}\left(\mathbf{e}_{x'} + 
 e^{i\Delta\phi}\mathbf{e}_{y'}\right).
 \eeq
@@ -447,8 +448,8 @@ T = \frac{j}{j_0} = \sin\left(\frac{\Delta\phi}{2}\right)^2 =
 \input{slike/09_AMT.pdf_tex}
 \caption{Prepustnost amplitudnega modulatorja v odvisnosti od faznega zamika $\Delta \phi$, 
 ki je sorazmeren priključeni napetosti $U$. Če pred vzorec dodamo ploščico $\lambda/4$, 
-se pojavi stalni fazni zamik in odvisnost prepustnosti od priključene napetosti
-je približno  linearna.}
+se pojavi stalni fazni zamik $\pi/2$ in odvisnost prepustnosti od priključene napetosti
+je približno  linearna (modra črta).}
 \label{fig:amt}
 \end{figure}
 
@@ -466,28 +467,37 @@ Ena rešitev bi bila dodati stalno visoko napetost, signal pa modulirati okoli
 te vrednosti. Precej bolj praktična rešitev je, da med polarizator
 in kristal dodamo ploščico $\lambda/4$\index{Ploščica $\lambda/4$}, ki da zahtevan stalni
 fazni premik med rednim in izrednim valom. Potem lahko z razmeroma majhno napetostjo
-naredimo linearen amplitudni modulator\index{Elektro-optična modulacija!linearna}.
+linearno amplitudno moduliramo svetlobo\index{Elektro-optična modulacija!linearna}.
 
 \section{Fazna in frekvenčna modulacija}
-
-Amplitudno modulacijo svetlobe smo dobili tako, da smo z zunanjim
+\index{Elektro-optična modulacija!fazna}
+\index{Elektro-optična modulacija!frekvenčna}
+Svetlobo smo amplitudno modulirali, tako da smo z zunanjim
 poljem spremenili fazi lastnih valov, zaradi česar je postalo linearno
 polarizirano vpadno valovanje po prehodu kristala eliptično polarizirano.
 Spremembo polarizacije smo z analizatorjem prevedli v spremembo amplitude.
 
-Včasih pa želimo modulirati fazo vpadne svetlobe. To naredimo tako,
-da odstranimo izhodni polarizator, vhodno polarizacija pa izberemo tako, da je vzporedna 
-eni od novih lastnih osi kristala. 
+Včasih pa želimo modulirati fazo vpadne svetlobe. Vrnimo se k primeru longitudinalne
+ modulacije. Fazno oziroma frekvenčno modulacijo dosežemo tako,
+da vhodno polarizacijo izberemo vzporedno eni od novih lastnih osi kristala, 
+na primeri osi $x'$, izhodni polarizator pa odstranimo (slika~\ref{fig:fmshema}). 
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/09_FMshema.pdf_tex}
+\caption{Shema fazne modulacije signala. Vpadna polarizacija je vzporedna eni od 
+novih lastnih osi kristala, ki se pojavijo pod vplivom zunanjega polja.}
+\label{fig:fmshema}
+\end{figure}
 
-Če se vrnemo k primeru longitudinalnega modulatorja (slika~\ref{fig:amshema}), 
-ki je za fazni modulator brez analizatorja, izberemo polarizacijo 
-vpadnega valovanja v smeri nove lastne osi $x'$. Faznemu zamiku po preletu skozi
-kristal dodajmo še časovni faktor
+Celoten fazni zamik po preletu skozi kristal zapišemo kot 
 \beq
 \phi =  k_0 n_{x'} L -\omega_0 t= \frac{\omega_0}{c_0}L \left(n_o -
-\frac{1}{2}n_o^3 r_{63}\frac{U}{L}\right)-\omega_0 t.
+\frac{1}{2}n_o^3 r_{63}\frac{U}{L}\right)-\omega_0 t,
+\label{fmphi}
 \eeq
-Fazni zamik je torej odvisen od priključene napetosti.
+pri čemer smo za lomni količnik zapisali skladno z enačbo~(\ref{EOnx}). Opazimo,
+da je fazni zamik odvisen od priključene zunanje napetosti.
 
 Obravnavajmo dva primera spreminjajoče se napetosti. V prvem primeru naj bo 
 napetost linearna funkcija časa 
@@ -499,33 +509,35 @@ Celotna faza prepuščenega valovanja je potem
 \phi = \frac{\omega_0}{c_0}L n_o - \frac{\omega_0 n_o^3 r_{63}}{2c_0}\left( U_0 + 
 \frac{\Delta U}{\Delta t}t\right) - \omega_0 t.
 \eeq
-Spomnimo se, da ni trenutna frekvenca valovanja nič drugega kot negativni odvod faze po času
+Trenutno frekvenco valovanja izračunamo kot negativni odvod faze po času
 \beq
-\omega = -\frac{d\phi}{dt}.
+\omega = -\frac{d\phi}{dt} = \omega_0 + \frac{\omega_0 n_o^3 r_{63}}{2c_0}\frac{\Delta U}{\Delta t} 
 \eeq
-V našem primeru dobimo 
-\beq
-\omega = \omega_0 + \frac{\omega_0 n_o^3 r_{63}}{2c_0}\frac{\Delta U}{\Delta t} = 
-\omega_0 + \Delta \omega.
-\eeq
-Linearno naraščajoča modulacijska napetost da torej konstanten premik frekvence, kar v optiki 
+oziroma
+\boxeq{FMc}{
+\omega  = \omega_0 + \Delta \omega.
+}
+Linearno naraščajoča modulacijska napetost da torej konstanten frekvenčni premik, kar v optiki 
 pogosto potrebujemo. Dosegljive spremembe frekvence so seveda dokaj majhne,
-do nekaj sto MHz. Omejene so z možno hitrostjo spreminjanja napetosti.
+do nekaj sto~MHz, saj so omejene s hitrostjo spreminjanja napetosti.
 Napetost seveda tudi ne more neomejeno naraščati. Kadar se napetost
 vrača na nič, pride do frekvenčnega premika v nasprotni smeri, ki pa ga
-lahko zanemarimo, če je čas vračanja kratek primeri s časom naraščanja.
+lahko zanemarimo, če je čas vračanja bistveno krajši od časa naraščanja.
 
-Poglejmo še drug primer, pri katerem je priključena napetost periodična. Zapišemo jo kot
-\begin{equation}
+Poglejmo še drug primer, pri katerem se priključena napetost periodično spreminja. 
+Zapišemo jo kot \begin{equation}
 U=U_{0}\sin(\omega_{m}t).
 \label{7.21}
 \end{equation}
-Faza izhodnega valovanja bo tedaj 
+Vstavimo gornji izraz v enačbo~(\ref{fmphi}) in zapišemo fazo izhodnega valovanja 
 \beq
 \phi = \frac{\omega_0}{c_0}L n_o - \frac{\omega_0 n_o^3 r_{63}}{2c_0} U_0\sin(\omega_{m}t)
 - \omega_0 t.
 \eeq
-Konstantni člen lahko izpustimo in zapišemo polje  
+V primeru linearno spreminjajoče napetosti smo na tem mestu fazo odvajali in dobili hitrost, ki 
+je bila konstantna. V tem primeru pa z odvajanjem dobimo kotno hitrost, ki se spreminja s časom. Zato
+se računa lotimo drugače. Konstantni člen v gornjem izrazu lahko izpustimo in zapišemo električno
+poljsko jakost prepuščenega valovanja  
 \beq
 E = E_0 \cos\left( \omega_0 t + \frac{\omega_0 n_o^3 r_{63}}{2c_0} U_0\sin(\omega_{m}t)\right)
 = E_0 \cos\left( \omega_0 t + \delta \sin(\omega_{m}t)\right),
@@ -534,31 +546,35 @@ pri čemer je
 \beq
 \delta = \frac{\omega_0 n_o^3 r_{63}}{2c_0} U_0.
 \eeq
-Z uporabo Jacobi-Angerjevih identitet 
+Z uporabo Jacobi-Angerjevih\footnote{Nemška matematika Carl Gustav Jacob Jacobi, 1804--1851, in Carl
+Theodor Anger, 1803--1858.} identitet 
 \begin{align}
 \cos\left(\delta\sin x\right)  &=J_0(\delta)+2J_2(\delta)\cos2x+
-2J_4(\delta)\cos4x \ldots\nonumber \\
+2J_4(\delta)\cos4x + \ldots\nonumber \quad \mathrm{in}\\
 \sin\left(\delta\sin x\right) &=2J_1(\delta)\sin x+2J_3\sin3x+
 2J_5\sin5x+\ldots
+\label{JA}
 \end{align}
 je izhodno polje mogoče zapisati v obliki 
-\begin{equation}
-HELP!
-% \begin{split}
-% E = E_{0}\left[ J_0(\delta)\cos(\omega_0 t)+ J_1(\delta) \cos(\omega_0+\omega_m )t-
-% J_1 (\delta) \cos(\omega_0 -\omega_m)t + \\ J_2(\delta)\cos(\omega +2\omega_m)t + 
-% J_2(\delta)\cos(\omega -2\omega_m)t+ \\
-% J_3(\delta)\cos(\omega +3\omega_m)t - J_3(\delta)\cos(\omega -3\omega_m)t+
-% \right]
-% \end{split}
-\end{equation}
-Periodična fazna modulacija torej da v spektru stranske pasove, odmaknjene
-od osnovne frekvence $\omega_0$ za modulacijsko frekvenco. Njihova
-velikost je podana s kvadratom Besselovih funkcij parametra $\delta$.
-Če je ta majhen, se lahko zadovoljimo le s prvim členom.
+\boxeq{fmJA}{
+\begin{split}
+\frac{E}{E_0} &= J_0(\delta)\cos(\omega_0 t)+ \\
+&+J_1(\delta) \cos(\omega_0+\omega_m )t-
+J_1 (\delta) \cos(\omega_0 -\omega_m)t + \\ 
+&+J_2(\delta)\cos(\omega_0 +2\omega_m)t + 
+J_2(\delta)\cos(\omega_0 -2\omega_m)t+ \\
+&+ J_3(\delta)\cos(\omega_0 +3\omega_m)t - J_3(\delta)\cos(\omega_0 -3\omega_m)t+\ldots
+\end{split}
+}
 \begin{definition}
-Izpelji E. 
+Ob upoštevanju Jacobi-Angerjevih identitet (enačbi~\ref{JA}) pokaži, da električno polje
+izhodne svetlobe ob priključeni izmenični napetosti s frekvenco $\omega_m$ ustreza
+polju v enačbi~(\ref{fmJA}).
 \end{definition}
+Zaradi periodične fazne modulacije se torej v spektru pojavijo stranski pasovi, ki so 
+od osnovne frekvence $\omega_0$ odmaknjeni za večkratnike modulacijske frekvence $\omega_m$. 
+Njihova velikost je podana s kvadratom Besselovih funkcij parametra $\delta$.
+Ker je ta navadno majhen, se pogosto zadovoljimo le s prvim členom.
 
 \begin{remark}
 Uporaba elektro-optičnega pojava: za modulacijo svetlobe, DC do $10^{10}$~Hz, uklanjanje žarkov
