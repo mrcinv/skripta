@@ -36,7 +36,8 @@ frekvenco je potrebna zato, da optično polje še lahko obravnavamo linearno.
 Kako je v nasprotnem primeru, ko je frekvenca polja primerljiva z optično frekvenco, 
 smo na široko obravnavali v poglavju o nelinearni optiki (poglavje~\ref{chap:NLO}).
 
-Namesto dielektričnega tenzorja navadno vpeljemo inverzni dielektrični tenzor
+Namesto dielektričnega tenzorja\index{Dielektričnost!inverzna} 
+navadno vpeljemo inverzni dielektrični tenzor
 \beq
 \underline{b}=\underline{\epsilon}^{-1}.
 \eeq
@@ -72,7 +73,7 @@ Prvi člen, linearno sorazmeren zunanjem polju, opisuje linearni elektro-optičn
 ali Pockelsov\index{Pockelsov pojav} pojav\footnote{Nemški fizik Friedrich Carl Alwin Pockels, 1865--1913.}. 
 Tenzor tretjega ranga $r_{ijk}$, ki je lastnost snovi, imenujemo elektro-optični 
 tenzor\index{Elektro-optični tenzor}
-ali tudi Pockelsov tenzor\index{Pockelsov tenzor|see Elektro-optični tenzor}. 
+ali tudi Pockelsov tenzor\index{Pockelsov tenzor|see {Elektro-optični tenzor}}. 
 Pockelsov tenzor je različen od nič v snoveh brez centra inverzije, značilne vrednosti Pockelsovega
 tenzorja pa so okoli $r \sim 10^{-12} - 10^{-10}$~m/V,
 
@@ -664,7 +665,7 @@ bomo spoznali v naslednjem razdelku.
 \index{Akusto-optični pojav}
 Pri elasto-optičnem pojavu dielektrične lastnosti snovi in njen lomni količnik
 spreminjamo z mehansko deformacijo. Podobno kot pri elektro-optičnem pojavu opišemo pojav
-s spremembo inverznega dielektričnega tenzorja
+s spremembo inverznega dielektričnega tenzorja\index{Dielektričnost!inverzna}
 \begin{equation}
 \underline{b} = \underline{\tilde{b}}+ \Delta\underline{b},
 \end{equation}
@@ -782,7 +783,8 @@ Kote, pod katerimi se pojavijo ojačitve, izračunamo po preprosti enačbi
 pri čemer je $\lambda$ valovna dolžina svetlobe v snovi, $N$ pa celo število. Takemu pojavu 
 pravimo Raman-Nathov uklon\footnote{Indijski fizik in nobelovec Sir Chandrasekhara 
 Venkata Raman, 1888--1970, 
-in indijski fizik N. S. Nagendra Nath.}. Opazimo ga pri razmeroma nizkih zvočnih frekvencah 
+in indijski fizik N. S. Nagendra Nath.}\index{Raman-Nathov uklon}. 
+Opazimo ga pri razmeroma nizkih zvočnih frekvencah 
 (pod $\sim10$~MHz) in majhnih debelinah (pod $d\sim 1$~cm) pri poljubnem vpadnem 
 kotu $\vartheta$.
 \begin{figure}[h]
@@ -791,16 +793,17 @@ kotu $\vartheta$.
 \input{slike/09_AO_1.pdf_tex}\qquad
 \def\svgwidth{65truemm} 
 \input{slike/09_AO_2.pdf_tex}
-\caption{Ob vpadu na tanko plast zvočnega valovanja se pojavi veliko uklonskih vrhov, 
+\caption{Ob vpadu svetlobe na tanko plast zvočnega valovanja se pojavi veliko uklonskih vrhov, 
 na debeli plasti zvočnega valovanja pa je opazen zgolj en uklonjen vrh, 
 pa še ta le ob izpolnjenem Braggovem pogoju (enačba~\ref{7.29a}).}
 \label{fig:ao_bragg}
 \end{figure}
 
 V nasprotnem limitnem primeru se svetloba uklanja na ravnih zvočnih valovih in modulator deluje 
-kot debela uklonska mrežica. V splošnem je delež uklonjene svetlobe na taki mrežici neuporabno majhen. 
-Znaten postane le tedaj, kadar je za enega od uklonjenih valov izpolnjen Braggov
-pogoj\footnote{Angleška znanstvenika in nobelova nagrajenca Sir William Henry Bragg, 1862--1942,
+kot debela uklonska mrežica. V splošnem je delež uklonjene svetlobe na taki mrežici 
+neuporabno majhen. 
+Znaten postane le tedaj, kadar je izpolnjen Braggov\index{Braggov uklon}
+pogoj\footnote{Angleška znanstvenika in nobelovca Sir William Henry Bragg, 1862--1942,
 in Sir William Lawrence Bragg, 1890--1971.}
 \boxeq{7.29a}{
 2 \Lambda\sin\vartheta=\pm N\lambda.
@@ -879,7 +882,7 @@ premikamo po ravnini, kar s pridom uporabljamo v različnih optičnih napravah,
 na primer v optičnih pincetah, optičnih čitalcih ali 
 optičnih litografskih zapisovalnikih.
 
-Z vklapljanjem in izklaplanjem zvočnega valovanja, ki ga vzbujamo s piezoelektričnim elementom,
+Z vklapljanjem in izklapljanjem zvočnega valovanja, ki ga vzbujamo s piezoelektričnim elementom,
 na katerega pritisnemo izmenično napetost, lahko moduliramo intenziteto
 direktnega svetlobnega snopa. To potrebujemo na primer pri preklapljanju
 kvalitete laserskega resonatorja.
@@ -915,10 +918,10 @@ analiziramo z lečo, ki nam v goriščni ravnini da prostorsko
 Fourierevo transformacijo svetlobnega snopa pred lečo.
 
 \section{*Račun akusto-optičnega pojava}
-
+\index{Akusto-optični pojav}
 Izračunajmo intenziteto svetlobe, ki se uklanja na zvočnem valovanju. Izhajamo 
 iz valovne enačbe v nehomogenem sredstvu, kar je dokaj težaven problem
-in se moramo zateči k približkom. Poslužili se bomo metode sklopljenih valov. 
+in se moramo zateči k približkom. Uporabili bomo metodo sklopljenih valov. 
 
 Naj vzporeden snop zvočnega valovanja s širino $d$ in valovnim vektorjem $\mathbf{q}$ 
 potuje v smeri $x$.
@@ -957,7 +960,7 @@ Enačbo~(\ref{7.33a}) brez dodane polarizacije $\Delta P$ rešijo ravni valovi
 z valovnim vektorjem $\mathbf{k}$ in frekvenco $\omega$. Tej rešitvi se 
 primešajo valovi z valovnim vektorjem $\mathbf{k}\pm n\mathbf{q}$
 in frekvenco $\omega\pm n\Omega$. Zato iščemo rešitve v obliki vsote
-ravnih valov, torej Fourierove vrste
+ravnih valov, torej Fouriereve vrste
 \begin{equation}
 E=\sum_{n}A_{n}(z)e^{in(qx-\Omega t)}e^{i(k_{x}x+k_{z}z-\omega t)}.
 \label{7.34}
@@ -1071,7 +1074,7 @@ primer $m=1$. Tedaj so vse ostale amplitude $A_{m, m\ne0,1}$
 majhne in ne vplivajo na $A_{1}$. Zaradi velike pretvorbe 
 $A_{0}(z)$ ne smemo več obravnavati kot konstante. Upoštevamo 
 izpolnjen Braggov pogoj (enačba~\ref{7.43}) in iz sistema enačb~(\ref{7.37})
-dobimo
+dobimo\index{Braggov uklon}
 \begin{eqnarray}
 A_{0}'+\xi A_{1} & = & 0\nonumber \\
 A_{1}'-\xi A_{0} & = & 0.
@@ -1100,28 +1103,30 @@ odvisnosti od debeline plasti zvočnega valovanja}
 V gornja izraza vstavimo še parameter $\xi$, ki je podan z enačbo~(\ref{7.39}).
 Razmerje med močjo uklonjenega in vpadnega snopa je tako
 \boxeq{7.48}{
-\frac{I_{1}}{I_{0}}=\sin^{2}\left(\frac{\pi n_{0}^{3}pS_{0}d}{2\lambda\cos\varphi}\right).
+\frac{I_{1}}{I_{0}}=\sin^{2}\left(\frac{\pi n_{0}^{3}pS_{0}d}{2\lambda\cos\vartheta}\right).
 }
 
-Amplitudo deformacije v zvočnem valu $S_0$ izrazimo še z gostoto moči zvočnega vala 
+Amplituda deformacije $S_0$ je povezana z gostoto energijskega toka
+zvočnega valovanja 
 \begin{equation}
 j_{z}=\frac{1}{2}CS_{0}^{2}v_{z},
 \label{7.49}
 \end{equation}
 kjer je $C$ elastična konstanta snovi, $v_z$ pa hitrost zvoka v snovi. 
-Iz zveze $v_{z}^{2}=C/\rho$ izrazimo $C$ z gostoto, s čemer dobimo 
+Iz zveze $v_{z}^{2}=C/\varrho$ izrazimo $C$ z gostoto $\varrho$, s čemer dobimo 
 \begin{equation}
-S_{0}=\sqrt{\frac{2j_{z}}{\rho v_{z}^{3}}}.
+S_{0}=\sqrt{\frac{2j_{z}}{\varrho v_{z}^{3}}}.
 \label{7.50}
 \end{equation}
 Praktično je vpeljati merilo uporabnosti neke snovi za akusto-optični modulator. To je koeficient 
 \begin{equation}
-M=\frac{n_{0}^{6}p^{2}}{\rho v_{z}^{3}}.
+M=\frac{n_{0}^{6}p^{2}}{\varrho v_{z}^{3}}.
 \label{7.51}
 \end{equation}
+Večja kot je njegova vrednost, bolj izrazit je akusto-optični pojav v dani snovi. 
 
-Poglejmo primer. V kremenu z gostoto $\rho=2,2\cdot10^{3}$ kg/m$^{3}$ je hitrost zvoka $v_{z}=6000$~m/s,
-$n_{0}=1,46$ in $p=0,2$. To da $M=8\cdot10^{-16}$~W/m$^{2}$.
+Poglejmo primer. V kremenu z gostoto $\varrho=2,2\cdot10^{3}$ kg/m$^{3}$ je hitrost zvoka $v_{z}=6000$~m/s,
+$\tilde{n}=1,46$ in $p=0,2$. To da $M=8\cdot10^{-16}$~W/m$^{2}$.
 Pri gostoti zvočnega toka 10~W/cm$^{2}$ in valovni dolžini svetlobe 633~nm
 pride do popolnega prenosa moči v uklonjeni snop pri debelini $d=3$~cm. Gornja gostota
 zvočnega toka je kar velika in je ni prav lahko doseči, zato so 
@@ -1129,22 +1134,25 @@ uklonski izkoristki navadno nekaj manjši od 1.
 
 Izračunajmo še kot odklona uklonjenega vala $\theta = 2 \vartheta$  
 \begin{equation}
-\theta \approx \frac{q}{k}=\frac{\lambda}{n_{0}\Lambda}=1,7\cdot10^{-3}
-.\label{7.52}
+\theta \approx \frac{q}{k}=\frac{\lambda}{\tilde{n}\Lambda}=1,7\cdot10^{-3}.
+\label{7.52}
 \end{equation}
 Uklonski kot je torej precej majhen.
 
 \begin{remark}
 Opisani račun izkoristka uklona na zvočnih valovih je uporaben tudi
 pri računu izkoristka holograma. V primeru faznega holograma je račun
-čisto enak in nam kaže tudi razliko med tankim in debelim hologramom,
+povsem enak in nam kaže tudi razliko med tankim in debelim hologramom,
 kako pa je z izkoristkom amplitudnega holograma, kjer je modulirana
-absorpcija v snovi, lahko bralec izračuna sam.
+absorpcija v snovi, lahko bralec izračuna sam.\footnote{Glej H. Kogelnik, Bell Syst. Tech. J.
+48, 2909 (1969).}
 \end{remark}
 
-Vrnimo se k sistemu enačb~(\ref{7.37}), ki smo jo zaenkrat rešili za primer Braggovega odboja
-oziroma v njegovi bližini. Enačbe je preprosto rešiti še v enem primeru, v tako imenovanem
-Raman- Nathovem približku. Vpeljimo novo neodvisno spremenljivko $\zeta=2\xi z$. Zveza~(\ref{7.37})
+Oglejmo si še tretji primer. Izhajamo iz sistema enačb~(\ref{7.37}), ki smo ga 
+zaenkrat rešili za primer Braggovega odboja oziroma v njegovi bližini. 
+Enačbe je preprosto rešiti še v primeru Raman-Nathovega približka. 
+\index{Raman-Nathov uklon}Vpeljimo novo neodvisno spremenljivko $\zeta=2\xi z$. 
+Zveza~(\ref{7.37})
 preide v 
 \begin{equation}
 2\frac{dA_{m}(\zeta)}{d\zeta}+A_{m+1}(\zeta)-A_{m-1}(\zeta)=\frac{\beta_{m}}{i\xi}A_{m}.
@@ -1156,14 +1164,14 @@ preide v
 \ll 1,
 \label{7.54}
 \end{equation}
-oziroma če je valovna dolžina zvoka dovolj velika v primerjavi z valovno dolžino svetlobe. 
-V enačbi~(\ref{7.53}) prepoznamo rekurzijsko zvezo za Besselove funkcije 
+oziroma če je valovna dolžina zvoka dovolj velika v primerjavi z valovno dolžino svetlobe. Potem 
+v enačbi~(\ref{7.53}) prepoznamo rekurzijsko zvezo za Besselove funkcije 
 \begin{equation}
 2J_{n}'+J_{n+1}-J_{n-1}=0
 \label{7.55}
 \end{equation}
-z rešitvijo $A_{m}(z)=A_{0}J_{m}(2\xi z)$. Kadar je $2\xi L$ ničla funkcije
-J$_{0}$, prvič je to pri $2\xi L\approx 2.4$, se vsa energija ukloni iz
+z rešitvijo $A_{m}(z)=A_{0}J_{m}(2\xi z)$. Kadar je $2\xi d$ ničla funkcije
+J$_{0}$, prvič je to pri $2\xi d\approx 2.4$, se vsa energija ukloni iz
 vpadnega snopa, vendar se v tem primeru, ko Braggov pogoj ni izpolnjen,
 razporedi v mnogo uklonjenih snopov.
 
