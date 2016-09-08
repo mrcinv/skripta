@@ -1177,11 +1177,14 @@ razporedi v mnogo uklonjenih snopov.
 
 \section{Modulacija s tekočimi kristali}
 
+\subsection*{Nematični tekoči kristali}
 Za konec opišimo še modulacijo svetlobe s tekočimi kristali. 
 Tekoči kristali so anizotropne kapljevine. To pomeni, da so tekoči kot 
 kapljevine, imajo pa določene anizotropne lastnosti kot trdni kristali. 
 Tekoče kristale tvorijo podolgovate ali ploščate molekule, 
-ki odražajo različne stopnje urejenosti. Omejimo se najosnovnejši
+ki odražajo različne stopnje urejenosti. 
+
+Omejimo se najosnovnejši
 primer, to so podolgovate organske molekule v nematični fazi tekočega kristala. 
 Navadno so to molekule z relativno togim jedrom iz
 dveh ali treh benzenovih obročev, ki imajo na koncih krajše ali daljše
@@ -1203,12 +1206,12 @@ odklon molekul od $\mathbf{n}$ je nekaj deset stopinj, odvisno seveda od tempera
 \input{slike/09_5CB.pdf_tex}\qquad\qquad
 \def\svgwidth{50truemm} 
 \input{slike/09_nematik.pdf_tex}
-\caption{Molekula enega najbolj razširjenih tekočih kristalov, 4-ciano-4'pentilbifenila ali 5CB
-(levo) in shematski prikaz nematične faze (desno).}
+\caption{Molekula enega najbolj razširjenih tekočih kristalov, 4-ciano-4'pentilbifenila 
+ali 5CB (levo) in shematski prikaz nematične faze (desno).}
 \label{fig:5CB}
 \end{figure}
 
-Molekule so v nematični fazi v povprečju urejene, zato se nematični tekoči kristal
+Molekule so v nematični fazi v povprečju orientacijsko urejene, zato se nematični tekoči kristal
 obnaša kot enoosen dvolomni kristal\index{Dvolomnost}. Njegova optična os je vzporedna 
 z $\mathbf{n}$, lastni vrednosti dielektričnega tenzorja pa sta $\varepsilon_{\parallel}$
 in $\varepsilon_\bot$. 
@@ -1218,43 +1221,55 @@ velika, navadno med 0,1 in 0,2, seveda spet odvisno od temperature.
 
 V povprečju so molekule urejene v smeri direktorja. Če se lokalno smer direktorja
 spremeni, je energija takega deformiranega 
-stanja je nekoliko večja od energije homogenega urejenega stanja,
-zato na delček tekočega kristala okolica deluje z navorom v smeri zmanjševanja 
-nehonogenosti $\mathbf{n}$. 
+stanja nekoliko večja od energije homogenega urejenega stanja in 
+okolica na delček tekočega kristala deluje z navorom v smeri zmanjševanja 
+nehomogenosti $\mathbf{n}$. To lastnost, ki je značilna za tekoče kristale,
+imenujemo orientacijska elastičnost. Vendar so v makroskopskem vzorcu
+nematičnega tekočega kristala elastični navori prešibki,
+da bi uredili celoten vzorec, zato se v splošnem smer direktorja $\mathbf{n}$ 
+po vzorcu neurejeno spreminja. V optičnih napravah pa potrebujemo urejene vzorce, zato
+ moramo ureditev vzorca vsiliti. To naredimo z zunanjim električnim ali magnetnim poljem, 
+ ali pa vzorce pripravimo dovolj tanke, da ureditev vsilijo mejne površine. Poglejmo, kako.
 
-V makroskopskem vzorcu nematičnega tekočega kristala se v splošnem smer
-direktorja $\mathbf{n}$ po vzorcu neurejeno spreminja. Energija Temu pojavu, značilnemu za tekoče kristale,
-pravimo orientacijska elastičnost. Ti ti elastični navori so prešibki,
-da bi uredili razsežne neurejene vzorce. Urejene vzorce, kakršne potrebujemo
-v optičnih elementih, pripravimo v zunanjem polju ali pa dovolj tanke, da mejne 
-površine vsilijo ureditev v celem vzorcu. Poglejmo, kako.
-
-Na ureditev molekul tekočega kristala vpliva zunanje električno ali magnetno polje.
-Električna in magnetna susceptibilnost nematskega tekočega
-kristala nista skalarja, temveč imata dve različni lastni vrednosti,
+Na ureditev molekul tekočega kristala vpliva zunanje električno ali magnento polje.
+Zaradi urejenosti molekul električna (in magnetna) susceptibilnost nematskega tekočega
+kristala ni skalar, temveč ima dve različni lastni vrednosti,
 eno v za smer vzporedno z $\mathbf{n}$, drugo za pravokotno nanj. Zato je
-elektrostatična energija odvisna od kota med zunanjim poljem $vec{E}$
-in $\mathbf{n}$. Kotno odvisni del energije lahko zapišemo v obliki
+elektrostatična energija odvisna od kota med zunanjim poljem $\mathbf{E}$
+in $\mathbf{n}$. Gostoto električne energije zapišemo kot 
 \begin{equation}
-w_{a}=-\frac{1}{2}\epsilon_{0}\epsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2},
+w_{e}=-\frac{1}{2}\mathbf{E}\cdot \mathbf{D}.
+\end{equation}
+Električno polje lahko razstavimo na del, ki je vzporeden z $\mathbf{n}$, in del, ki je
+pravokoten nanj
+\beq
+\mathbf{E} = (\mathbf{E} \cdot \mathbf{n}) \mathbf{n} + \left( \mathbf{E} - 
+(\mathbf{E} \cdot \mathbf{n}) \mathbf{n} \right).
+\eeq
+Potem je 
+\beq
+\mathbf{D} = \varepsilon \varepsilon_\bot \mathbf{E} + \varepsilon_0 \varepsilon_a
+(\mathbf{E}\cdot\mathbf{n})\mathbf{n},
+\eeq
+pri čemer je $\varepsilon_a = \varepsilon_\parallel - \varepsilon_\bot$ anizotropni
+del dielektrične konstante. Anizotropni del energije je tako
+\beq
+w_a = -\frac{1}{2}\epsilon_{0}\epsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2},
 \label{7.56}
 \end{equation}
-kjer je $\epsilon_{a}=\epsilon_{\parallel}-\epsilon_{\perp}$ anizotropni
-del dielektrične konstante. Če je $\epsilon_{a}>0$, se molekule skušajo
-zasukati v smer polja, če je $\epsilon_{a}<0$, pa pravokotno nanj.
+Če je $\epsilon_{a}>0$, se molekule tekočega kristala uredijo v smeri 
+zunanjega polja, če je $\epsilon_{a}<0$, pa pravokotno nanj.
 
 Urejen vzorec je mogoče narediti tudi v tankih plasteh. Če površino,
-ki je v stiku s tekočim kristalom, prevlečemo z primerno pastjo, se
-molekule tekočega kristala tik ob povšini na določen način uredijo.
-Tanka plast najlona, ki jo podrgnemo v željeni smeri, povzroči, da
-je $\mathbf{n}$ ob površini vzporeden s površino v smeri drgnenja. Drgnenje
-deloma uredi verige najlona, zato se tudi molekule tekočega kristala
-raje uredijo v isti smeri. Da je $\mathbf{n}$ pravokoten na površino,
+ki je v stiku s tekočim kristalom, ustrezno pripravimo (prevlečemo s posebnimi 
+plastmi ali mehansko obdelamo), se molekule tekočega kristala tik ob povšini uredijo.
+Tako na primer podrgnjena tanka plast najlona uredi $\mathbf{n}$ ob površini v smeri
+drgnenja vzporedno s površino. Da je $\mathbf{n}$ pravokoten na površino,
 dosežemo na primer s tanko plastjo lecitina ali surfaktanta silana. 
 Ta imata polarno glavo, ki se adsorbira na stekleno površino, in alifatsko verigo, 
 ki stoji približno pravokotno na površino. Zato se tudi alifatski repi molekul
-tekočega kristala uredijo enako. V obeh primerih, vzporedni ali pravokotni
-orientaciji ob steni, se urejenost zaradi orientacijske elastičnosti
+tekočega kristala uredijo pravokotno na steklo. V obeh primerih, 
+vzporedni ali pravokotni ureditvi ob steni, se urejenost zaradi orientacijske elastičnosti
 ohranja tudi stran od stene, tako da lahko brez težav naredimo urejene
 vzorce debeline do kakih 200~$\mu$m. Pri večjih debelinah so elastični
 navori prešibki in v vzorcu nastanejo defekti.
@@ -1263,136 +1278,164 @@ Struktura tekočekristalnega vzorca je tako odvisna od orientacijske
 elastičnosti, od robnih pogojev, ki jih določimo z obdelavo mejne
 površine, in od zunanjega električnega ali magnetnega polja.
 
-Preprost elektro-optični modulator ali kazalnik na osnovi nematskih
-tekočih kristalov naredimo takole. Vzemimo vzorec tekočega kristala
-med dvema stekloma, na katerih sta prozorni elektrodi. Ureditev tekočega
-kristala naj bo vzporedna s površino stekel. Tudi optična os ima isto
-smer. Dovolj velika napetost zasuče $\mathbf{n}$ in s tem optično os
+\subsection*{Tekočekristalni prikazovalnik}
+
+Vzemimo tanko plast tekočega kristala med dvema površinama, ki vsiljujeta
+vzporedno ureditev. Vzorec je urejen in homogen, optična os leži v ravnini 
+plasti (slika~\ref{LCD1}). Če dodamo na površini še prozorni elektrodi, lahko
+z zunanjo napetostjo spreminjamo orientacijo molekul v plasti in tako tudi 
+smer optične osi. Dovolj velika napetost zasuče $\mathbf{n}$ in s tem optično os
 pravokotno na stene, razen tik ob površini. Pri debelini okoli 10~$\mu$m
 je potrebna napetost nekaj voltov.
 
-Naj debelina $h$ obravnavane plasti za izbrano valovno dolžino svetlobe
-ustreza pogoju 
+Ta pojav lahko izkoristimo za prepost optični preklopnik. Naj debelina plasti $d$
+ustreza debelini ploščice $\lambda/2$ za izbrano valovno dolžino svetlobe 
 \begin{equation}
-h(n_{i}-n_{r})=(2N+1)\frac{\lambda}{2}\;,\label{7.57}
+d(n_{e}-n_{o})=(2N+1)\frac{\lambda}{2},
+\label{7.57}
 \end{equation}
- kjer je $N$ celo število. Plast torej deluje kot ploščica $\lambda/2$.
-Ker je $n_{i}-n_{r}\simeq0,1$, je potrebna debelina nekaj $\mu$m.
-Vzorec damo med prekrižana polarizatorja s prepustno smerjo 45$^{o}$
-na $\mathbf{n}$. Ploščica polarizacijo svetlobe z izbrano valovno dolžino
-zasuče za 90$^{o}$, tako da gre svetlobe tudi skozi analizator. Ko
-vključimo napetost, se optična os obrne, polarizacija svetlobe se
-pri prehodu skozi plast ohrani in analizator je ne prepusti.
+kjer je $n_e$ izredni lomni količnik, $n_o$ redni 
+lomni količnik, $N$ pa celo število. Ker v nematikih $n_{e}-n_{o}\sim0,1$, 
+je ustrezna debelina $d$ nekaj $\mu$m. Vzorec damo med dva prekrižana 
+polarizatorja s prepustno smerjo pod kotom 45$^{o}$ glede na $\mathbf{n}$
+oziroma optično os. Vzorec, ki deluje kot ploščica $\lambda/2$, 
+polarizacijo svetlobe z izbrano valovno dolžino zasuče za 90$^{o}$ in 
+svetloba prehaja tudi skozi analizator. Ko
+priključimo napetost, se optična os obrne v smeri polja, 
+polarizacija svetlobe se pri prehodu skozi plast ohrani in 
+analizator je ne prepusti. Z električnim poljem smo torej preklopili iz
+stanja, ki prepušča svetlobo, v stanje, ki svetlobe ne prepusti.
 
-Tak preklopnik ima nekaj slabih lastnosti. Prepustnost je odvisna
-od valovne dolžine svetlobe in od temperature in debelina preklopnika
-mora biti povsod enaka. Zato se v praksi uporablja zasukana nematska
-plast.
+Tak preklopnik ima nekaj slabosti. Prepustnost je odvisna
+od valovne dolžine svetlobe in od temperature, poleg tega mora biti debelina 
+plasti povsod povsem enaka. Zato se v praksi uporablja zasukan nematik. 
 
-Obrnimo eno od stekel za 90$^{o}$, tako da sta smeri urejanja na
-obeh mejah med seboj pravokotni. Tedaj se smer $\mathbf{n}$ v plasti
-zvezno zavrti od ene do druge površine, kot kaže slika \ref{s7.13.}.
-Polarizacija svetlobe, ki je ob vstopu v plast polarizirana v smeri
-urejanja, skozi plast približno sledi smeri $\mathbf{n}$, kot bomo pokazali
-nekoliko kasneje, in je ob izstopu iz plasti polarizirana pravokotno
-na vpadno polarizacijo. Z električnim poljem preklopimo optično os
-pravokotno na plast in polarizacija se ne zasuče. Plast med prekrižanima
-polarizatorjema brez polja prepušča svetlobo, v polju pa ne. Pri tem
-delovanje kazalnika ni dosti odvisno niti od debeline plasti niti
-od valovne dolžine. Kadar želimo, da kazalnik deluje v odbiti svetlobi,
-damo za zadnji analizator še odbojno površino.
+Zasukan  nematik dobimo tako, da površini, ki vsiljujeta vzporedno ureditev,
+zasučemo za kot 90$^{o}$ eno glede na drugo (slika~\ref{LDC2}). 
+Tedaj se smer $\mathbf{n}$ v plasti zvezno zavrti od ene do druge površine.
+V nadaljevanju bomo pokazali, da polarizacija svetlobe, ki je ob vstopu 
+v plast polarizirana v smeri urejanja, pri prehodu skozi plast približno 
+sledi smeri $\mathbf{n}$ in je zato ob izstopu iz plasti polarizirana pravokotno
+na vpadno polarizacijo. Ko priključimo električno polje, spremenimo smer optične 
+osi, ki se obrne pravokotno na plast tekočega kristala. V tem primeru 
+se polarizacija ne zasuče in analizator svetlobe ne prepusti. Plast med prekrižanima
+polarizatorjema brez polja torej prepušča svetlobo, v polju pa ne. Pri tem
+delovanje prikazovalnika ni dosti odvisno niti od debeline plasti niti
+od valovne dolžine. 
 
-Pri kristalnem elektro-optičnem modulatorju smo lahko dobili tudi vmesne
-prepustnosti, medtem ko s tekočimi kristali na opisan način lahko
-dosežemo le zaprto in odprto stanje, vmesna stanja pa je zelo težko
-kontrolirati.
+Slabost uporabe tekočekristalnih preklopnikov je njihova diskretnost. Pri 
+kristalnem elektro-optičnem modulatorju smo nameč lahko dobili tudi vmesne
+prepustnosti, medtem ko lahko s tekočimi kristali na opisan način
+dosežemo le zaprto in odprto stanje.
 
-Pokažimo še, da polarizacija v sredstvu, ki je lokalno enoosno in
-se optična os suče v pravokotni smeri, v določenih pogojih res približno
-sledi optični osi. Poleg zasukane nematske celice je pomemben primer
+\begin{remark}
+ Kadar želimo, da kazalnik deluje v odbiti svetlobi,
+damo za zadnji analizator še odbojno površino. Barve pikslov, preklop, hitrost...
+
+\end{remark}
+
+Pokazati moramo še, da polarizacija svetlobe približno sledi zasuku optične osi. 
+Sredstvo naj bo lokalno enoosno, optična os pa se suče v smeri pravokotno
+glede na smer širjenja svetlobe. Poleg zasukane nematske celice je pomemben primer
 snovi s takimi lastnostmi holesteričen tekoči kristal, ki je zelo
-podoben nematskim, le da se $\mathbf{n}$ spontano počasi suče okoli
+podoben nematskim, le da se $\mathbf{n}$ spontano suče okoli
 smeri, pravokotne na $\mathbf{n}$.
 
 Optična os sredstva naj leži v ravnini $xy$ in naj se enakomerno
 suče, ko se premikamo vzdolž osi $z$. Kot med optično osjo in osjo
 $x$ lahko zapišemo 
 \begin{equation}
-\phi=qz\;.\label{7.58}
+\varphi=qz.
+\label{7.58}
 \end{equation}
- Pri tem je $2\pi/q$ perioda sukanja optične osi. Zanimajmo se le
-za širjenje svetlobe v smeri $z$. Tedaj potrebujemo le del dielektričnega
-tenzorja v $xy$ ravnini. Njegova oblika je 
-\begin{equation}
-\boldsymbol{\epsilon}(z)=\left[\begin{array}{cc}
-\bar{\epsilon}+\frac{1}{2}\epsilon_{a}\cos2\phi & \frac{1}{2}\epsilon_{a}\sin2\phi\\
-\frac{1}{2}\epsilon_{a}\sin2\phi & \bar{\epsilon}+\frac{1}{2}\epsilon_{a}\cos2\phi
-\end{array}\right]\;,\label{7.59}
-\end{equation}
- kjer je 
-\begin{equation}
-\bar{\epsilon}=\frac{\epsilon_{\parallel}+\epsilon_{\perp}}{2}\label{7.60}
-\end{equation}
- Valovna enačba za valovanje s frekvenco $\omega$ je 
-\begin{equation}
-\frac{d^{2}\mathbf{E}}{dz^{2}}=-\frac{\omega^{2}}{c^{2}}\boldsymbol{\epsilon}(z)\mathbf{E}\label{7.61}
-\end{equation}
- ali v komponentah 
-\begin{eqnarray}
--\frac{d^{2}E_{x}}{dz^{2}} & = & (\beta^{2}+\alpha^{2}\cos2qz)E_{x}+\alpha^{2}E_{y}\sin2qz\nonumber \\
--\frac{d^{2}E_{y}}{dz^{2}} & = & \alpha^{2}E_{x}\sin2qz+(\beta^{2}+\alpha^{2}\cos2qz)E_{y}\;,
-\end{eqnarray}
- kjer je $\alpha^{2}=\epsilon_{a}\omega^{2}/(2c^{2})$ in $\beta^{2}=\bar{\epsilon}\omega^{2}/c^{2}$.
+Zanimajmo se le za širjenje svetlobe v smeri $z$. 
+Tedaj potrebujemo le del dielektričnega
+tenzorja v $xy$ ravnini. 
 
-Ugodno je vpeljati krožni polarizaciji $E_{+}=E_{x}+iE_{y}$ in $E_{-}=E_{x}-iE_{y}$.
-Enačbi \ref{7.62} preieta v 
-\begin{eqnarray}
--\frac{d^{2}E_{+}}{dz^{2}}=\beta^{2}E_{+}+\alpha^{2}E_{-}e^{2iqz}\nonumber \\
--\frac{d^{2}E_{-}}{dz^{2}}=\alpha^{2}E_{+}e^{-2iqz}+\beta^{2}E_{-}\;.
-\end{eqnarray}
+\begin{definition}
+Pokaži, da se dielektrični tenzor v zasukani nematski plasti zapiše kot
+\begin{equation}
+\varepsilon (z)=\left[\begin{array}{cc}
+\bar{\varepsilon}+\frac{1}{2}\varepsilon_{a}\cos(2qz) & \frac{1}{2}\varepsilon_{a}\sin(2qz)\\
+\frac{1}{2}\varepsilon_{a}\sin(2qz) & \bar{\varepsilon}-\frac{1}{2}\varepsilon_{a}\cos(2qz)
+\end{array}\right],
+\label{7.59}
+\end{equation}
+kjer  je $z$ razdalja od spodnje plasti, v kateri je direktor
+obrnjen v smeri $x$, povprečna vrednost $\bar{\varepsilon}$ pa  
+\begin{equation}
+\bar{\varepsilon}=\frac{\varepsilon_{\parallel}+\varepsilon_{\perp}}{2}.
+\label{7.60}
+\end{equation}
+\end{definition}
 
+Iz Maxwellovih enačb~(enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
+hitro uvidimo, da je valovna enačba, ki jo rešujemo, 
+za valovanje s frekvenco $\omega$ oblike
+\begin{equation}
+\frac{d^{2}\mathbf{E}}{dz^{2}}+\frac{\omega^{2}}{c^{2}} \epsilon
+(z)\mathbf{E}=0
+\label{7.61}
+\end{equation}
+ali v komponentah, upoštevajoč tenzor dielektričnosti~(\ref{7.59})
+\beq
+\frac{d^{2}E_{x}}{dz^{2}} + 
+(\beta^{2}+\alpha^{2}\cos(2qz))E_{x}+\alpha^{2}E_{y}\sin(2qz) = 0
+\label{7.62a}
+\eeq
+in 
+\beq
+\frac{d^{2}E_{y}}{dz^{2}} +
+\alpha^{2}E_{x}\sin(2qz)+(\beta^{2}-\alpha^{2}\cos(2qz))E_{y} = 0,
+\label{7.62b}
+\eeq
+kjer je $\alpha^{2}=\epsilon_{a}\omega^{2}/(2c^{2})$ in 
+$\beta^{2}=\bar{\epsilon}\omega^{2}/c^{2}$. Dobili smo torej sistem
+dveh sklopljenih diferencialnih enačb. 
 
-Iščemo lastne rešitve valovne enačbe v sredstvu s periodično modulacijo
+Za reševanje je ugodno vpeljati krožni polarizaciji 
+$E_{+}=E_{x}+iE_{y}$ in $E_{-}=E_{x}-iE_{y}$.
+Enačbi~(\ref{7.62a}) in (\ref{7.62b}) potem preieta v 
+\beq
+-\frac{d^{2}E_{+}}{dz^{2}}=\beta^{2}E_{+}+\alpha^{2}E_{-}e^{2iqz}
+\label{lcm1}
+\eeq
+in 
+\beq
+-\frac{d^{2}E_{-}}{dz^{2}}=\alpha^{2}E_{+}e^{-2iqz}+\beta^{2}E_{-}.
+\label{lcm2}
+\eeq
+
+\begin{remark}
+Iščemo torej lastne rešitve valovne enačbe v sredstvu s periodično modulacijo
 lomnega količnika. Matematično podoben problem je iskanje lastnih
-funkcij elektronov v kristalu. Za te vemo, da morajo imeti Blochovo
-obliko, to je, biti morajo produkt periodične funkcije s periodo kristalne
+funkcij elektronov v kristalu. Za te vemo, da morajo 
+biti morajo produkt periodične funkcije s periodo kristalne
 mreže in faktorja exp($ikz$). Matematiki pravijo tej trditvi Floquetov
-izrek. Veljati mora tudi v našem primeru. Lastne valove torej poiščimo
-v obliki 
+izrek\footnote{Francoski matematik Achille Marie Gaston Floquet, 1847--1920.}. 
+\end{remark}
+
+Lastne rešitve poiščimo v obliki 
 \begin{eqnarray}
-E_{+} & = & Ae^{i(k+q)z}\nonumber \\
-E_{-} & = & Be^{i(k-q)z}\;.
+E_{+} & = & Ae^{i(k+q)z} \qquad \mathrm{in}\\
+E_{-} & = & Be^{i(k-q)z}.
 \end{eqnarray}
- Nastavek reši sistem \ref{63}, če $A$ in $B$ rešita sistem homogenih
-linearnih enačb 
+Nastavek reši sistem enačb~(\ref{lcm1}) in (\ref{lcm2}), 
+če $A$ in $B$ rešita sistem homogenih linearnih enačb 
 \begin{eqnarray}
-[(k+q)^{2}-\beta^{2}]A-\alpha^{2}B & = & 0\nonumber \\
--\alpha^{2}A+[(k-q)^{2}-\beta^{2}]B & = & 0\;.
+[(k+q)^{2}-\beta^{2}]A-\alpha^{2}B & = & 0\\
+-\alpha^{2}A+[(k-q)^{2}-\beta^{2}]B & = & 0.
 \end{eqnarray}
- Sistem je netrivialno rešljiv, če je determinanta kkoeficientov enaka
-nič: 
+ Sistem je netrivialno rešljiv, če je determinanta koeficientov enaka
+nič
 \begin{equation}
-(k^{2}+q^{2}-\beta^{2})^{2}-4k^{2}q^{2}-\alpha^{4}=0\;.\label{7.66}
+(k^{2}+q^{2}-\beta^{2})^{2}-4k^{2}q^{2}-\alpha^{4}=0.
+\label{7.66}
 \end{equation}
- $\beta$ in $\alpha$ sta sorazmerna z $\omega$. Dobljena enačba
-tako predstavlja disperzijsko relacijo - zvezo med $\omega$ in $k$
-- za svetlobo v zavitem sredstvu. Prikazana je na sliki \ref{s7.14}.
-Vsaki vrednosti $\omega$, razen v ozkem območju med $\omega_{-}$
-in $\omega_{+}$, recimo mu frekvenčna špranja, pripadajo 4 realne
-rešitve za $k$, po dve za valovanji v pozitivni in negativni smeri.
-V območju špranje je en par rešitev imaginaren. Vsaki vrednosti $k$
-pripada neko razmerje koeficientov $A$ in $B$, ki ga izračunamo
-iz enčb \ref{7.65} in ki določa polarizacijo lastnega vala. Polarizacije
-lastnih valov so v splošnem eliptične in med pri dani frekvenci med
-seboj niso pravokotne, kar je posledica tega, da sistem \ref{7.65}
-ne predstavlja čisto navadnega problema lastnih vektorjev simetrične
-matrike. V območju frekvenčne špranje le en par rešitev predstavlja
-potujoč val, drug pa polje, ki eksponento pojema v sredstvo. Zato
-se svetloba s frekvenco v špranji in z ustrezno polarizacijo, ki vpada
-na holesteričen tekoči kristal, totalno odbije. Pojav je povsem analogen
-Braggovemu odboju na kristalih in daje holesterikom značilen obarvan
-videz. Več o zanimivih podrobnostih optike holesteričnih tekočih kristalov
-najde bralec v \ref{degennes} in nalogah k temu poglavju.(naloga)
+Spomnimo se, da sta $\beta$ in $\alpha$ sorazmerna z $\omega$,
+zato dobljena enačba predstavlja disperzijsko relacijo -- zvezo med 
+$\omega$ in $k$ -- za svetlobo v zavitem sredstvu. 
+
 
 Za razlago delovanja zasukane nematske celice zadošča primer, ko je
 $q<<\beta$ in $\alpha$, ko je torej perioda sukanja optične osi
@@ -1422,6 +1465,26 @@ za pravi kot. V primeru, da vpadna polarizacija ne sovpada z eno od
 lastnih, jo moramo seveda razstaviti na obe lastni in po prehodu skozi
 tekoči kristal zopet sestaviti, s čemer seveda na splošno nastane eliptično
 polarizacijo.
+
+\begin{remark}
+Prikazana je na sliki \ref{s7.14}.
+Vsaki vrednosti $\omega$, razen v ozkem območju med $\omega_{-}$
+in $\omega_{+}$, recimo mu frekvenčna špranja, pripadajo 4 realne
+rešitve za $k$, po dve za valovanji v pozitivni in negativni smeri.
+V območju špranje je en par rešitev imaginaren. Vsaki vrednosti $k$
+pripada neko razmerje koeficientov $A$ in $B$, ki ga izračunamo
+iz enčb \ref{7.65} in ki določa polarizacijo lastnega vala. Polarizacije
+lastnih valov so v splošnem eliptične in med pri dani frekvenci med
+seboj niso pravokotne, kar je posledica tega, da sistem \ref{7.65}
+ne predstavlja čisto navadnega problema lastnih vektorjev simetrične
+matrike. V območju frekvenčne špranje le en par rešitev predstavlja
+potujoč val, drug pa polje, ki eksponento pojema v sredstvo. Zato
+se svetloba s frekvenco v špranji in z ustrezno polarizacijo, ki vpada
+na holesteričen tekoči kristal, totalno odbije. Pojav je povsem analogen
+Braggovemu odboju na kristalih in daje holesterikom značilen obarvan
+videz. Več o zanimivih podrobnostih optike holesteričnih tekočih kristalov
+najde bralec v \ref{degennes} in nalogah k temu poglavju.(naloga)
+\end{remark}
 
 
 \section{Dodatek}
