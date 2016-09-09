@@ -1238,7 +1238,8 @@ eno v za smer vzporedno z $\mathbf{n}$, drugo za pravokotno nanj. Zato je
 elektrostatična energija odvisna od kota med zunanjim poljem $\mathbf{E}$
 in $\mathbf{n}$. Gostoto električne energije zapišemo kot 
 \begin{equation}
-w_{e}=-\frac{1}{2}\mathbf{E}\cdot \mathbf{D}.
+w_{el}=-\frac{1}{2}\mathbf{E}\cdot \mathbf{D}.
+\label{lcwe}
 \end{equation}
 Električno polje lahko razstavimo na del, ki je vzporeden z $\mathbf{n}$, in del, ki je
 pravokoten nanj
@@ -1417,13 +1418,14 @@ izrek\footnote{Francoski matematik Achille Marie Gaston Floquet, 1847--1920.}.
 
 Lastne rešitve poiščimo v obliki 
 \begin{eqnarray}
-E_{+} & = & Ae^{i(k+q)z} \qquad \mathrm{in}\\
+E_{+} & = & Ae^{i(k+q)z} \label{7.65a} \qquad \mathrm{in}\\
 E_{-} & = & Be^{i(k-q)z}.
+\label{7.65}
 \end{eqnarray}
 Nastavek reši sistem enačb~(\ref{lcm1}) in (\ref{lcm2}), 
 če $A$ in $B$ rešita sistem homogenih linearnih enačb 
 \begin{eqnarray}
-[(k+q)^{2}-\beta^{2}]A-\alpha^{2}B & = & 0\\
+[(k+q)^{2}-\beta^{2}]A-\alpha^{2}B & = & 0 \\
 -\alpha^{2}A+[(k-q)^{2}-\beta^{2}]B & = & 0.
 \end{eqnarray}
  Sistem je netrivialno rešljiv, če je determinanta koeficientov enaka
@@ -1436,131 +1438,157 @@ Spomnimo se, da sta $\beta$ in $\alpha$ sorazmerna z $\omega$,
 zato dobljena enačba predstavlja disperzijsko relacijo -- zvezo med 
 $\omega$ in $k$ -- za svetlobo v zavitem sredstvu. 
 
-
-Za razlago delovanja zasukane nematske celice zadošča primer, ko je
-$q<<\beta$ in $\alpha$, ko je torej perioda sukanja optične osi
+V splošnem je iskanje rešitev gornje enačbe zapleten problem, vendar 
+za razlago delovanja zasukane nematske celice zadošča približek 
+$q\ll\beta$ in $\alpha$, ko je torej perioda sukanja optične osi
 velika v primeri z valovno dolžino svetlobe. Tedaj lahko $q$ v disperzijski
-zvezi kar zanemarimo, prvi popravek je šele reda $q^{2}$, in dobimo
+zvezi (enačba~\ref{7.66}) zanemarimo in dobimo
 \begin{equation}
-k^{2}=\left\{ \begin{matrix}\beta^{2}+\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilon_{\parallel}\end{matrix}\right.\label{7.67}
+k^{2}=\left\{ \begin{matrix}\beta^{2}+\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilon_{\parallel} 
+\\               \beta^{2}-\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilon_{\bot} 
+              \end{matrix}\right.
+\label{7.67}
 \end{equation}
- Ti vrednosti, ki ustrezata velikosti valovnega vektorja za izredni
-in redni val v običajnem enoosnem kristalu, postavimo v eno od enačb
-\ref{7.65} in izračunamo še polarizaciji lastnih valov: $B=\pm A$.
+ Ti vrednosti ustrezata velikosti valovnega vektorja za izredni
+in redni val v navadnem enoosnem kristalu. Vstavimo ju v eno od enačb~(\ref{7.65a}) ali
+(\ref{7.65}) in za polarizaciji lastnih valov dobimo $B=\pm A$.
 
 Izračunajmo obe kartezični komponenti električnega polja za prvo rešitev:
-\begin{equation}
-\begin{array}{lclclcl}
-E_{x} & = & \frac{1}{2}(E_{+}+E_{-}) & = & \frac{1}{2}Ae^{ikz}(e^{iqz}+e^{-iqz}) & = & Ae^{ikz}\cos qz\\
-E_{y} & = & \frac{1}{2}(E_{+}-E_{-}) & = & \frac{1}{2i}Ae^{ikz}(e^{iqz}-e^{-iqz}) & = & Ae^{ikz}\sin qz
-\end{array}\;.\label{7.68}
-\end{equation}
- Polarizacija torej res kar sledi optični osi. Druga rešitev da val,
+\begin{align}
+E_{x} &=  \frac{1}{2}(E_{+}+E_{-})  =  \frac{1}{2}Ae^{ikz}(e^{iqz}+e^{-iqz})  =  Ae^{ikz}\cos qz\\
+E_{y} & = \frac{1}{2i}(E_{+}-E_{-})  =  \frac{1}{2i}Ae^{ikz}(e^{iqz}-e^{-iqz})  =  Ae^{ikz}\sin qz.
+\label{7.68}
+\end{align}
+Polarizacija torej res sledi optični osi. Druga rešitev da val,
 ki je polariziran pravokotno na lokalno optično os in se prav tako
-suče z njo. Prvi val se širi s fzano hitrostjo $c/n_{i}$, torej kot
-izredni val, drugi pa s $c/n_{r}$, to je kot redni val. Če na zasukano
-nematsko celico vpada svetloba, polarizirana ali paralelno ali pravokotno
-na optično os ob meji, se pojavi na izhodni strani polarizacija, zasukano
+suče z njo. Pri tem se prvi val širi s fazno hitrostjo $c/n_{e}$, torej kot
+izredni val, drugi pa s $c/n_{o}$, to je kot redni val. Če na zasukano
+nematsko celico vpada svetloba, ki je polarizirana ali paralelno ali pravokotno
+na optično os ob meji, se pojavi na izhodni strani polarizacija, zasukana
 za pravi kot. V primeru, da vpadna polarizacija ne sovpada z eno od
-lastnih, jo moramo seveda razstaviti na obe lastni in po prehodu skozi
-tekoči kristal zopet sestaviti, s čemer seveda na splošno nastane eliptično
-polarizacijo.
+lastnih osi, jo moramo razstaviti na obe lastni in po prehodu skozi
+tekoči kristal zopet sestaviti, s čemer seveda v splošnem nastane eliptična
+polarizacija.
 
 \begin{remark}
-Prikazana je na sliki \ref{s7.14}.
-Vsaki vrednosti $\omega$, razen v ozkem območju med $\omega_{-}$
-in $\omega_{+}$, recimo mu frekvenčna špranja, pripadajo 4 realne
-rešitve za $k$, po dve za valovanji v pozitivni in negativni smeri.
-V območju špranje je en par rešitev imaginaren. Vsaki vrednosti $k$
-pripada neko razmerje koeficientov $A$ in $B$, ki ga izračunamo
-iz enčb \ref{7.65} in ki določa polarizacijo lastnega vala. Polarizacije
-lastnih valov so v splošnem eliptične in med pri dani frekvenci med
-seboj niso pravokotne, kar je posledica tega, da sistem \ref{7.65}
-ne predstavlja čisto navadnega problema lastnih vektorjev simetrične
-matrike. V območju frekvenčne špranje le en par rešitev predstavlja
+Disperzijsko zvezo (enačba~\ref{7.66}) lahko tudi numerično rešimo (slika~\ref{gap}). 
+Spomnimo se, da je parameter $\beta$ sorazmeren frekvenci $\omega$. Vidimo, da pri 
+vsaki frekvenci, razen v ozkem območju med $\omega_{-}$
+in $\omega_{+}$, recimo mu frekvenčna reža, obstajajo štiri realne
+rešitve za $k$, po dve za valovanji v pozitivni in v negativni smeri.
+V območju reže je en par rešitev imaginaren. Vsaki vrednosti $k$
+pripada neko razmerje amplitud $A$ in $B$, ki ga izračunamo
+iz enačb~(\ref{7.65a}) in (\ref{7.65}) in ki določa polarizacijo lastnega vala. Polarizacije
+lastnih valov so v splošnem eliptične in pri dani frekvenci med
+seboj niso pravokotne, saj zapisani sistem enačb ne predstavlja čisto 
+navadnega problema lastnih vektorjev simetrične matrike. 
+V območju frekvenčne reže le en par rešitev predstavlja
 potujoč val, drug pa polje, ki eksponento pojema v sredstvo. Zato
-se svetloba s frekvenco v špranji in z ustrezno polarizacijo, ki vpada
+se svetloba s frekvenco v reži in z ustrezno polarizacijo, ki vpada
 na holesteričen tekoči kristal, totalno odbije. Pojav je povsem analogen
 Braggovemu odboju na kristalih in daje holesterikom značilen obarvan
-videz. Več o zanimivih podrobnostih optike holesteričnih tekočih kristalov
-najde bralec v \ref{degennes} in nalogah k temu poglavju.(naloga)
+videz.
 \begin{figure}[h]
 \centering
 \def\svgwidth{80truemm} 
 \input{slike/09_gap.pdf_tex}
-\caption{GAP}
+\caption{Rešitve disperzijske zveze (enačba~\ref{7.66}) v zasukanem nematiku. Razen na ozkem 
+frekvenčnem območju ima zveza štiri rešitve za vsako frekvenco $(\beta \propto \omega)$. }
 \label{gap}
 \end{figure}
 \end{remark}
 
 
-\section{Dodatek}
+\section{*Izračun preklopa v tekočem kristalu}
 
-Energija nematskega tekočega kristala je najnižja, kadar ima $\mathbf{n}$
-povsod isto smer. Povečanje energije zaradi krajevne odvisnosti $\mathbf{n}$
-je v najnižjem redu sorazmerno s $(\nabla\mathbf{n}(\mathbf{r}))^{2}$.
-Najsplo\textquotedbl{}nejši izraz za {it orientacijsko elastično
-energijo} zapišemo tako, da tvorimo vse neodvisne člene, v katerih
-nastopa $(\nabla\mathbf{n}(\mathbf{r}))^{2}$ in ki so invariantni na simetrijske
-operacije nematske faze. Sledi\cite{degennes} 
+V prejšnjem poglavju smo omenili, da lahko z dovolj velikim zunanjim poljem 
+molekule tekočega kristala, razen tik ob površini, obrnemo v smeri polja. 
+Izračunajmo jakost polja, ki je potrebna za ta zasuk. 
+
+Energija nematičnega tekočega kristala je najnižja, kadar je direktor $\mathbf{n}$
+povsod obrnjen v isto smer. Povečanje energije zaradi krajevne odvisnosti $\mathbf{n}$
+v splošnem zapišemo z orientacijsko elastično energijo oziroma Frankovo prosto 
+energijo\footnote{Angleški fizik Sir Frederick Charles Frank, 1911--1998.}
 \begin{equation}
-F_{e}=\int\left\{ K_{1}(\nabla\cdot\mathbf{n})^{2}+K_{2}[\mathbf{n}\times(\nabla\times\mathbf{n})]^{2}+K_{3}[\mathbf{n}\cdot(\nabla\times\mathbf{n})]^{2}\right\} dV\label{7.70}
+F_{e}=\frac{1}{2}\int\left\{ K_{1}(\nabla\cdot\mathbf{n})^{2}+K_{2}
+[\mathbf{n}\cdot(\nabla\times\mathbf{n})]^{2}+K_{3}
+[\mathbf{n}\times(\nabla\times\mathbf{n})]^{2}\right\} dV.
+\label{7.70}
 \end{equation}
- $K_{1}$, $K_{2}$ in $K_{3}$ so tri Frankove orientacijske elastične
-konstante. Prvi člen predstavlja deformacijo v obliki pahljače, drugi
-upogib, tretji pa zasuk (slika \ref{s7.20})
+Pri tem so $K_{1}$, $K_{2}$ in $K_{3}$ so tri Frankove elastične
+konstante. Prvi člen predstavlja povečanje energije zaradi deformacije v obliki 
+pahljače, drugi zaradi zasuka, tretji pa zaradi upogiba (slika~\ref{s7.20})
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/09_gap.pdf_tex}
+\caption{Trije načini deformacije ureditve tekočega kristala: pahljačasta deformacija,
+zasuk in upogib.}
+\label{s7.20}
+\end{figure}
 
-V zunanjem električnem polju se energija spremeni. Običajno je neodvisna
-električna količina električna poljska jakost, ker je polje posledica
-predpisanih napetosti na fiksnih elektrodah. Ustrezni člen v termodinamičnem
-potencialu je tedaj $-\mathbf{D}\cdot\mathbf{E}/2$. $\mathbf{E}$ razstavimo
-na komponento, paraleleno in pravokotno z $\mathbf{n}$. Dielektrični
-tenzor ima v smeri $\mathbf{n}$ vrednost $\epsilon_{\parallel}$, v
-pravokotni smeri pa $\epsilon_{\perp}$. Tako je 
-\begin{eqnarray}
-\mathbf{D} & = & \epsilon_{0}\underline{\epsilon}\mathbf{E}=\epsilon_{0}\epsilon_{\parallel}(\mathbf{n}\cdot\mathbf{E})\mathbf{n}+\epsilon_{0}\epsilon_{\perp}[\mathbf{E}-(\mathbf{n}\cdot\mathbf{E})\mathbf{n}]\nonumber \\
- & = & \epsilon_{0}\epsilon_{a}(\mathbf{n}\cdot\mathbf{E})\mathbf{n}-\epsilon_{0}\epsilon_{\perp}\mathbf{E}\;,
-\end{eqnarray}
- kjer je $\epsilon_{a}=\epsilon_{\parallel}-\epsilon_{\perp}$. Drugi
-člen je neodvisen od $\mathbf{n}$, zato ga lahko izpustimo. Prosta energija
+V zunanjem električnem polju se energija tekočega kristala dodatno spremeni. 
+Navadno je neodvisna električna količina električna poljska jakost, saj je polje posledica
+zunanje napetosti na elektrodah. Ustrezni člen v termodinamičnem
+potencialu je tedaj (enačbi~\ref{lcwe} in~\ref{7.56})
+\beq
+w_{el} = -\frac{1}{2} \mathbf{D}\cdot\mathbf{E} = -\frac{1}{2} 
+\left( \varepsilon_0 \varepsilon_\bot \mathbf{E}\cdot\mathbf{E} + 
+\varepsilon_{0}\varepsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2}\right).
+\eeq
+Prvi člen je neodvisen od $\mathbf{n}$, zato ni pomemben. Prosta energija
 nematičnega tekočega kristala v električnem polju je tako 
 \begin{equation}
-F=F_{0}+F_{e}-\frac{1}{2}(\mathbf{n}\cdot\mathbf{E})^{2}\;.\label{7.72}
+F=F_{0}+F_{e}-\frac{1}{2}\varepsilon_{0}\varepsilon_{a}
+(\mathbf{E}\cdot \mathbf{n})^{2},
+\label{7.72}
 \end{equation}
- $F_{0}$ predstavlja del proste energije, ki je neodvisen od $\mathbf{n}$
+ kjer $F_{0}$ predstavlja del proste energije, ki je neodvisen od $\mathbf{n}$
 in $\mathbf{E}$. V ravnovesju je prosta energija najmanjša. Kadar je
 $\epsilon_{a}>0$, se zato skuša $\mathbf{n}$ postaviti vzporedno s
 poljem. Da lahko z minimizacijo $F$ izrazimo $\mathbf{n}(\mathbf{r})$, moramo
 poznati še robne pogoje.
 
-Poglejmo primer. Naj bo nematski kristal med dvema paralelnima steklenima
-ploščama v razmiku $h$. Na obeh ploščah naj bo $\mathbf{n}$ vzporeden
-s površino v isti smeri. Brez zunanjega polja je $\mathbf{n}$ povsod
-enako usmerjen. V dovolj velike zunanjem polju, pravokotnem na plošči,
-naj bo to smer $z$, dobi $\mathbf{n}$ komponento v smeri $z$: 
+Poglejmo primer. Naj bo nematični tekoči kristal med dvema vzporednima
+steklenima ploščama v razmiku $d$. Na obeh ploščah naj bo $\mathbf{n}$ vzporeden
+s površino in vsiljeni smeri naj bosta enaki, tako da je brez zunanjega 
+polja $\mathbf{n}$ povsod enako usmerjen. Naj bo to smer $x$.
+Na stekleni plošči dodamo elektrodi, ki ustvarjata polje pravokotno na 
+prvotno smer direktorja, naj bo to smer $z$.
+Ko priključimo polje, je energijsko ugodnejše, če
+se molekule vsaj delno zasučejo v smeri polja. Ta zasuk opišemo s
+komponento vektorja $\mathbf{n}$ v smeri $z$
 \begin{equation}
-\mathbf{n}(z)=(n_{1}(z),0,n_{3}(z))\;.\label{7.73}
+\mathbf{n}(z)=(n_{x}(z),0,n_{z}(z)).
+\label{7.73}
 \end{equation}
- Deformacija $n_{3}$ naj bo majhna. Tedaj je $n_{1}=1n_{3}^{2}/2$.
-Robna pogoja sta $n_{3}(0)=n_{3}(h)=0$. Približno rešitev, ki ustreza
-robnima pogojema, poiščemo z nastavkom 
+Robna pogoja, katerima mora direktor zadostiti,
+sta $n_{z}(0)=n_{z}(d)=0$. Približno rešitev zato iščemo z nastavkom 
 \begin{equation}
-n_{3}(z)=a\sin qz\;,\mbox{\hskip1cm}q=\frac{\pi}{h}\;.\label{7.74}
+n_{z}(z)=a\sin qz, \qquad q=\frac{\pi}{d},
+\label{7.74}
 \end{equation}
- Ta nastavek je prvi člen razvoja prave rešitve v Fourierovo vrsto.
-Velja 
+ki ni nič drugega kot prvi člen razvoja prave rešitve v Fourierevo vrsto.
+Vzdolž smeri $x$ in $y$ se direktor ne spreminja, zato velja
 \begin{equation}
-\nabla\times\mathbf{n}=(0,-\frac{dn_{1}}{dz},0)\label{7.75}
+\nabla\times\mathbf{n}=(0,-\frac{dn_{x}}{dz},0)
+\label{7.75}
 \end{equation}
  in 
 \begin{equation}
-\mathbf{n}\times(\nabla\times\mathbf{n})=(n_{3}\frac{dn_{1}}{dz},0,n_{1}\frac{dn_{3}}{dz})\simeq(0,0,n_{3}\frac{dn_{3}}{dz})\label{7.76}
+\mathbf{n}\times(\nabla\times\mathbf{n})=(n_{z}\frac{dn_{x}}{dz},0,
+-n_{x}\frac{dn_{x}}{dz})
+\label{7.76}
 \end{equation}
- do drugega reda v $n_{3}$. Prosta energija je tako 
+Prosta energija je tako 
 \begin{eqnarray}
-F & = & \frac{1}{2}\int\left[K_{1}\left(\frac{dn_{3}}{dz}\right)^{2}+K_{2}n_{3}^{2}\left(\frac{dn_{3}}{dz}\right)^{2}-\epsilon_{0}\epsilon_{a}(n_{3}E)^{2}\right]dz=\nonumber \\
- & = & \frac{1}{2}\int_{0}^{h}[K_{1}q^{2}a^{2}\cos^{2}qz+K_{3}q^{2}a^{4}\sin^{2}qz\cos^{2}qz-\epsilon_{0}\epsilon_{a}Ea^{2}\sin^{2}qz]dz=\nonumber \\
- & = & \frac{\pi}{4q}[K_{1}q^{2}a^{2}+\frac{1}{4}K_{3}q^{2}a^{4}-\epsilon_{0}\epsilon_{a}Ea^{2}]\;.
+F & = & \frac{1}{2}\int\left[K_{1}\left(\frac{dn_{z}}{dz}\right)^{2}+K_{2}n_{z}^{2}\left(\frac{dn_{z}}{dz}\right)^{2}-
+\epsilon_{0}\epsilon_{a}(n_{z}E)^{2}\right]dz=\nonumber \\
+ & = & \frac{1}{2}\int_{0}^{d}
+ [K_{1}q^{2}a^{2}\cos^{2}qz+K_{3}q^{2}a^{4}\sin^{2}qz\cos^{2}qz-
+ \epsilon_{0}\epsilon_{a}Ea^{2}\sin^{2}qz]dz=\nonumber \\
+ & = & \frac{\pi}{4q}[K_{1}q^{2}a^{2}+\frac{1}
+ {4}K_{3}q^{2}a^{4}-\epsilon_{0}\epsilon_{a}Ea^{2}]\;.
 \end{eqnarray}
  Iščemo amplitudo deformacije $a$, pri kateri je prosta energija
 najmanjša. Tedaj mora biti $a$ rešitev enačbe 
