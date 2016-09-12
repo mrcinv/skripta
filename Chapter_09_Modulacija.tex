@@ -1263,17 +1263,31 @@ zunanjega polja, če je $\epsilon_{a}<0$, pa pravokotno nanj.
 
 Urejen vzorec je mogoče narediti tudi v tankih plasteh. Če površino,
 ki je v stiku s tekočim kristalom, ustrezno pripravimo (prevlečemo s posebnimi 
-plastmi ali mehansko obdelamo), se molekule tekočega kristala tik ob povšini uredijo.
+plastmi ali mehansko obdelamo), se molekule tekočega kristala tik ob povšini uredijo
+(slika~\ref{s7.20a}).
 Tako na primer podrgnjena tanka plast najlona uredi $\mathbf{n}$ ob površini v smeri
 drgnenja vzporedno s površino. Da je $\mathbf{n}$ pravokoten na površino,
 dosežemo na primer s tanko plastjo lecitina ali surfaktanta silana. 
 Ta imata polarno glavo, ki se adsorbira na stekleno površino, in alifatsko verigo, 
 ki stoji približno pravokotno na površino. Zato se tudi alifatski repi molekul
 tekočega kristala uredijo pravokotno na steklo. V obeh primerih, 
-vzporedni ali pravokotni ureditvi ob steni, se urejenost zaradi orientacijske elastičnosti
+vzporedni (planarni) ali pravokotni (homeotropni) ureditvi ob steni, 
+se urejenost zaradi orientacijske elastičnosti
 ohranja tudi stran od stene, tako da lahko brez težav naredimo urejene
 vzorce debeline do kakih 200~$\mu$m. Pri večjih debelinah so elastični
 navori prešibki in v vzorcu nastanejo defekti.
+\begin{figure}[h]
+\centering
+\def\svgwidth{50truemm} 
+\input{slike/09_planarno.pdf_tex}\qquad
+\def\svgwidth{54truemm} 
+\input{slike/09_homeo.pdf_tex}
+\caption{Ureditev tekočega kristala navadno vsilimo z urejevalno površino. Dva primera
+sta planarna ureditev (levo), kjer je direktor vzporeden s plastjo snovi, in 
+homeotropna ureditev (desno), kjer je direktor pravokoten na plast snovi.}
+\label{s7.20a}
+\end{figure}
+
 
 Struktura tekočekristalnega vzorca je tako odvisna od orientacijske
 elastičnosti, od robnih pogojev, ki jih določimo z obdelavo mejne
@@ -1282,8 +1296,8 @@ površine, in od zunanjega električnega ali magnetnega polja.
 \subsection*{Tekočekristalni prikazovalnik}
 
 Vzemimo tanko plast tekočega kristala med dvema površinama, ki vsiljujeta
-vzporedno ureditev. Vzorec je urejen in homogen, optična os leži v ravnini 
-plasti (slika~\ref{LCD1}). Če dodamo na površini še prozorni elektrodi, lahko
+vzporedno planarno ureditev. Vzorec je urejen in homogen, optična os leži v ravnini 
+plasti. Če dodamo na površini še prozorni elektrodi, lahko
 z zunanjo napetostjo spreminjamo orientacijo molekul v plasti in tako tudi 
 smer optične osi. Dovolj velika napetost zasuče $\mathbf{n}$ in s tem optično os
 pravokotno na stene, razen tik ob površini. Pri debelini okoli 10~$\mu$m
@@ -1310,6 +1324,15 @@ stanja, ki prepušča svetlobo, v stanje, ki svetlobe ne prepusti.
 Tak preklopnik ima nekaj slabosti. Prepustnost je odvisna
 od valovne dolžine svetlobe in od temperature, poleg tega mora biti debelina 
 plasti povsod povsem enaka. Zato se v praksi uporablja zasukan nematik. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{50truemm} 
+%\input{slike/09_LCD1.pdf_tex}\qquad
+\def\svgwidth{54truemm} 
+%\input{slike/09_LCD2.pdf_tex}
+\caption{Preklop zasukanega nematika}
+\label{LCD2}
+\end{figure}
 
 Zasukan  nematik dobimo tako, da površini, ki vsiljujeta vzporedno ureditev,
 zasučemo za kot 90$^{o}$ eno glede na drugo (slika~\ref{LDC2}). 
@@ -1577,36 +1600,49 @@ Vzdolž smeri $x$ in $y$ se direktor ne spreminja, zato velja
  in 
 \begin{equation}
 \mathbf{n}\times(\nabla\times\mathbf{n})=(n_{z}\frac{dn_{x}}{dz},0,
--n_{x}\frac{dn_{x}}{dz})
+-n_{x}\frac{dn_{x}}{dz}).
 \label{7.76}
 \end{equation}
 Prosta energija je tako 
 \begin{eqnarray}
-F & = & \frac{1}{2}\int\left[K_{1}\left(\frac{dn_{z}}{dz}\right)^{2}+K_{2}n_{z}^{2}\left(\frac{dn_{z}}{dz}\right)^{2}-
+F & = & \frac{1}{2}\int\left[K_{1}\left(\frac{dn_{z}}{dz}\right)^{2}+K_{3}(n_x^2+n_{z}^{2})
+\left(\frac{dn_{x}}{dz}\right)^{2}-
 \epsilon_{0}\epsilon_{a}(n_{z}E)^{2}\right]dz=\nonumber \\
  & = & \frac{1}{2}\int_{0}^{d}
- [K_{1}q^{2}a^{2}\cos^{2}qz+K_{3}q^{2}a^{4}\sin^{2}qz\cos^{2}qz-
- \epsilon_{0}\epsilon_{a}Ea^{2}\sin^{2}qz]dz=\nonumber \\
- & = & \frac{\pi}{4q}[K_{1}q^{2}a^{2}+\frac{1}
- {4}K_{3}q^{2}a^{4}-\epsilon_{0}\epsilon_{a}Ea^{2}]\;.
+ [K_{1}q^{2}a^{2}\cos^{2}qz+K_{3}q^{2}a^{4}\sin^{2}qz\cos^2qz-
+ \epsilon_{0}\epsilon_{a}E^2a^{2}\sin^{2}qz]dz=\nonumber \\
+ & = & \frac{\pi}{4q}a^2\left( K_{1}q^{2}+\frac{1}{4}K_{3}q^{2}a^2-\epsilon_{0}\epsilon_{a}E^2\right).
 \end{eqnarray}
  Iščemo amplitudo deformacije $a$, pri kateri je prosta energija
 najmanjša. Tedaj mora biti $a$ rešitev enačbe 
 \begin{equation}
-(K_{1}q^{2}-\epsilon_{0}\epsilon_{a}E)a+\frac{1}{2}K_{3}q^{2}a^{3}=0\;.\label{7.78}
+2(K_{1}q^{2}-\epsilon_{0}\epsilon_{a}E)a+K_{3}q^{2}a^{3}=0.
+\label{7.78}
 \end{equation}
  Rešitvi sta 
 \begin{equation}
-a=0\mbox{\hskip1cm in \hskip1cm}a^{2}=2\frac{\epsilon_{0}\epsilon_{a}E-K_{1}q^{2}}{K_{3}q^{2}}\;.\label{7.79}
+a=0 \qquad \mathrm{in} \qquad a^{2}=2\frac{\epsilon_{0}\epsilon_{a}E^2-K_{1}q^{2}}{K_{3}q^{2}}.
+\label{7.79}
 \end{equation}
  Pri majhnih poljih, ko je $\epsilon_{0}\epsilon_{a}E<K_{1}q^{2}$,
-je fizikalno smiselna le prva rešitev, ko defomacije ni. Pri večjih
-poljih pa je stabilna druga rešitev. Ko večamo polje, deformacija
+je fizikalno smiselna le prva rešitev, torej brez deformacije, pri velikih poljih pa je  
+stabilna druga rešitev. Ko večamo polje, deformacija
 v sredini plasti hitro naraste, tako da se $\mathbf{n}$ postavi skoraj
 popolnoma v smer zunanjega polja. Tedaj naša rešitev seveda ni dobra,
-saj smo računali, kot da je $n_{3}<<1$. Prehodu iz nedefromiranega
-stanja v deformirano stanje pravimo tudi Fredericksov prehod. Na njem
-je osnovano preklaplanje optičnih kazalnikov na nematske tekoče kristale.
+saj smo pri računu privzeli, da je $n_{z}\ll1$. Prehodu iz nedefromiranega
+stanja v deformirano stanje pravimo tudi Frederiksov prehod\footnote{Ruski fizik
+Vsevolod Konstantinovič Frederiks, tudi Fr\'{e}edericksz, 1885--1944.}. Na njem
+temelji preklapljanje optičnih prikazovalnikov na nematične tekoče kristale.
+
+Izračunajmo še kritično jakost električnega polja, pri kateri pride do prehoda v deformirano fazo.
+To se zgodi pri 
+\beq
+\epsilon_{0}\epsilon_{a}E_c^2-K_{1}q^{2} = 0
+\eeq
+oziroma
+\beq
+E_c = \frac{\pi}{d}\sqrt{\frac{K_1}{\varepsilon_0\varepsilon_a}}.
+\eeq
 
 V primeru zasukane nematske celice je prehod podoben, le račun je
 nekoliko bolj zapleten, ker ima deformacija vse tri komponente, tudi
