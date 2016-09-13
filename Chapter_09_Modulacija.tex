@@ -1320,32 +1320,33 @@ priključimo napetost, se optična os obrne v smeri polja,
 polarizacija svetlobe se pri prehodu skozi plast ohrani in 
 analizator je ne prepusti. Z električnim poljem smo torej preklopili iz
 stanja, ki prepušča svetlobo, v stanje, ki svetlobe ne prepusti.
-
 Tak preklopnik ima nekaj slabosti. Prepustnost je odvisna
 od valovne dolžine svetlobe in od temperature, poleg tega mora biti debelina 
 plasti povsod povsem enaka. Zato se v praksi uporablja zasukan nematik. 
-\begin{figure}[h]
-\centering
-\def\svgwidth{50truemm} 
-%\input{slike/09_LCD1.pdf_tex}\qquad
-\def\svgwidth{54truemm} 
-%\input{slike/09_LCD2.pdf_tex}
-\caption{Preklop zasukanega nematika}
-\label{LCD2}
-\end{figure}
 
 Zasukan  nematik dobimo tako, da površini, ki vsiljujeta vzporedno ureditev,
-zasučemo za kot 90$^{o}$ eno glede na drugo (slika~\ref{LDC2}). 
-Tedaj se smer $\mathbf{n}$ v plasti zvezno zavrti od ene do druge površine.
-V nadaljevanju bomo pokazali, da polarizacija svetlobe, ki je ob vstopu 
-v plast polarizirana v smeri urejanja, pri prehodu skozi plast približno 
-sledi smeri $\mathbf{n}$ in je zato ob izstopu iz plasti polarizirana pravokotno
+zasučemo za kot 90$^{o}$ eno glede na drugo (slika~\ref{LCD1}\,a), zato se $\mathbf{n}$ 
+v plasti zvezno zavrti.
+Pokazali bomo, da polarizacija svetlobe, ki je ob vstopu 
+v plast polarizirana v smeri urejanja, pri prehodu skozi plast približno
+sledi $\mathbf{n}$ in je ob izstopu iz plasti pravokotna
 na vpadno polarizacijo. Ko priključimo električno polje, spremenimo smer optične 
-osi, ki se obrne pravokotno na plast tekočega kristala. V tem primeru 
+osi, ki se obrne pravokotno na plast tekočega kristala (slika~\ref{LCD1}\,b). V tem primeru 
 se polarizacija ne zasuče in analizator svetlobe ne prepusti. Plast med prekrižanima
 polarizatorjema brez polja torej prepušča svetlobo, v polju pa ne. Pri tem
 delovanje prikazovalnika ni dosti odvisno niti od debeline plasti niti
 od valovne dolžine. 
+\begin{figure}[h!]
+\centering
+\def\svgwidth{115truemm} 
+\input{slike/09_LCD1.pdf_tex}
+\caption{a) Zasukana nematična celica. 
+Polarizacija (P) približno sledi smeri zasukanega direktorja in analizator (A) 
+prepusti svetlobo. b) Ko priključimo električno polje, se tekočekristalne molekule
+zasučejo. Polarizacija svetlobe (P) se ohranja in analizator (A) 
+je ne prepusti. }
+\label{LCD1}
+\end{figure}
 
 Slabost uporabe tekočekristalnih preklopnikov je njihova diskretnost. Pri 
 kristalnem elektro-optičnem modulatorju smo nameč lahko dobili tudi vmesne
@@ -1353,9 +1354,21 @@ prepustnosti, medtem ko lahko s tekočimi kristali na opisan način
 dosežemo le zaprto in odprto stanje.
 
 \begin{remark}
- Kadar želimo, da kazalnik deluje v odbiti svetlobi,
-damo za zadnji analizator še odbojno površino. Barve pikslov, preklop, hitrost...
-
+Tekočekristalni zasloni, ki jih uporabljamo v praksi, so precej bolj zapleteni.
+Prikazovalniki, ki delujejo z odbito svetlobo (npr. žepna računala), 
+imajo za zadnjim analizatorjem odbojno površino. Svetloba tako dvakrat 
+prepotuje tekočekristalno celico. Večina prikazovalnikov (npr. računalniški 
+ali telefonski zasloni) pa uporablja osvetlitev z LED 
+ali fluorescenčnimi svetili. 
+Barve dosežemo z barvnimi filtri (rdečim, modrim in zelenim) na vsakem 
+pikslu posebej, natančno krmiljenje pikslov pa s tankoplastnimi 
+tranzistorji ({\it Thin film transistors}, TFT). Tekočekristalne zaslone lahko 
+z dodatnimi plastmi naredimo tudi občutljive na dotik.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=63truemm]{slike/LCD.jpg}
+\caption{ZAMENJAJ Z LASTNO SLIKO!}
+\end{figure}
 \end{remark}
 
 Pokazati moramo še, da polarizacija svetlobe približno sledi zasuku optične osi. 
@@ -1385,7 +1398,7 @@ Pokaži, da se dielektrični tenzor v zasukani nematski plasti zapiše kot
 \end{array}\right],
 \label{7.59}
 \end{equation}
-kjer  je $z$ razdalja od spodnje plasti, v kateri je direktor
+kjer  je $z$ razdalja od plasti, v kateri je direktor
 obrnjen v smeri $x$, povprečna vrednost $\bar{\varepsilon}$ pa  
 \begin{equation}
 \bar{\varepsilon}=\frac{\varepsilon_{\parallel}+\varepsilon_{\perp}}{2}.
@@ -1394,7 +1407,7 @@ obrnjen v smeri $x$, povprečna vrednost $\bar{\varepsilon}$ pa
 \end{definition}
 
 Iz Maxwellovih enačb~(enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
-hitro uvidimo, da je valovna enačba, ki jo rešujemo, 
+hitro uvidimo, da je valovna enačba
 za valovanje s frekvenco $\omega$ oblike
 \begin{equation}
 \frac{d^{2}\mathbf{E}}{dz^{2}}+\frac{\omega^{2}}{c^{2}} \epsilon
@@ -1447,10 +1460,13 @@ E_{-} & = & Be^{i(k-q)z}.
 \end{eqnarray}
 Nastavek reši sistem enačb~(\ref{lcm1}) in (\ref{lcm2}), 
 če $A$ in $B$ rešita sistem homogenih linearnih enačb 
-\begin{eqnarray}
-[(k+q)^{2}-\beta^{2}]A-\alpha^{2}B & = & 0 \\
--\alpha^{2}A+[(k-q)^{2}-\beta^{2}]B & = & 0.
-\end{eqnarray}
+\beq
+[(k+q)^{2}-\beta^{2}]A-\alpha^{2}B  =  0 
+\eeq
+in
+\beq
+-\alpha^{2}A+[(k-q)^{2}-\beta^{2}]B  =  0.
+\eeq
  Sistem je netrivialno rešljiv, če je determinanta koeficientov enaka
 nič
 \begin{equation}
@@ -1473,7 +1489,7 @@ k^{2}=\left\{ \begin{matrix}\beta^{2}+\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilo
 \label{7.67}
 \end{equation}
  Ti vrednosti ustrezata velikosti valovnega vektorja za izredni
-in redni val v navadnem enoosnem kristalu. Vstavimo ju v eno od enačb~(\ref{7.65a}) ali
+in redni val v navadnem enoosnem kristalu. Vstavimo ju v ~(\ref{7.65a}) ali
 (\ref{7.65}) in za polarizaciji lastnih valov dobimo $B=\pm A$.
 
 Izračunajmo obe kartezični komponenti električnega polja za prvo rešitev:
@@ -1513,14 +1529,14 @@ Braggovemu odboju na kristalih in daje holesterikom značilen obarvan
 videz.
 \begin{figure}[h]
 \centering
-\def\svgwidth{80truemm} 
+\def\svgwidth{70truemm} 
 \input{slike/09_gap.pdf_tex}
 \caption{Rešitve disperzijske zveze (enačba~\ref{7.66}) v zasukanem nematiku. Razen na ozkem 
-frekvenčnem območju ima zveza štiri rešitve za vsako frekvenco $(\beta \propto \omega)$. }
+frekvenčnem območju ima štiri rešitve za vsak $\beta$ oziroma za vsako frekvenco, saj je 
+$\beta \propto \omega$. }
 \label{gap}
 \end{figure}
 \end{remark}
-
 
 \section{*Izračun preklopa v tekočem kristalu}
 
@@ -1540,13 +1556,13 @@ F_{e}=\frac{1}{2}\int\left\{ K_{1}(\nabla\cdot\mathbf{n})^{2}+K_{2}
 \end{equation}
 Pri tem so $K_{1}$, $K_{2}$ in $K_{3}$ so tri Frankove elastične
 konstante. Prvi člen predstavlja povečanje energije zaradi deformacije v obliki 
-pahljače, drugi zaradi zasuka, tretji pa zaradi upogiba (slika~\ref{s7.20})
+pahljače, drugi zaradi zasuka, tretji pa zaradi upogiba (slika~\ref{s7.20}).
 \begin{figure}[h]
 \centering
-\def\svgwidth{80truemm} 
-\input{slike/09_gap.pdf_tex}
+\def\svgwidth{140truemm} 
+\input{slike/09_KKK.pdf_tex}
 \caption{Trije načini deformacije ureditve tekočega kristala: pahljačasta deformacija,
-zasuk in upogib.}
+zasuk in upogib}
 \label{s7.20}
 \end{figure}
 
@@ -1588,10 +1604,14 @@ komponento vektorja $\mathbf{n}$ v smeri $z$
 Robna pogoja, katerima mora direktor zadostiti,
 sta $n_{z}(0)=n_{z}(d)=0$. Približno rešitev zato iščemo z nastavkom 
 \begin{equation}
-n_{z}(z)=a\sin qz, \qquad q=\frac{\pi}{d},
+n_{z}(z)=a\sin (qz), \qquad q=\frac{\pi}{d},
 \label{7.74}
 \end{equation}
 ki ni nič drugega kot prvi člen razvoja prave rešitve v Fourierevo vrsto.
+Ker je direktor enotski vektor, potem velja
+\beq
+n_x = \sqrt{1-a^2\sin^2(qz)} \approx 1 - \frac{a^2}{2}\sin^2(qz)
+\eeq
 Vzdolž smeri $x$ in $y$ se direktor ne spreminja, zato velja
 \begin{equation}
 \nabla\times\mathbf{n}=(0,-\frac{dn_{x}}{dz},0)
@@ -1603,17 +1623,21 @@ Vzdolž smeri $x$ in $y$ se direktor ne spreminja, zato velja
 -n_{x}\frac{dn_{x}}{dz}).
 \label{7.76}
 \end{equation}
-Prosta energija je tako 
+Površinska gostota proste energije je tako 
 \begin{eqnarray}
 F & = & \frac{1}{2}\int\left[K_{1}\left(\frac{dn_{z}}{dz}\right)^{2}+K_{3}(n_x^2+n_{z}^{2})
 \left(\frac{dn_{x}}{dz}\right)^{2}-
 \epsilon_{0}\epsilon_{a}(n_{z}E)^{2}\right]dz=\nonumber \\
  & = & \frac{1}{2}\int_{0}^{d}
- [K_{1}q^{2}a^{2}\cos^{2}qz+K_{3}q^{2}a^{4}\sin^{2}qz\cos^2qz-
- \epsilon_{0}\epsilon_{a}E^2a^{2}\sin^{2}qz]dz=\nonumber \\
+ [K_{1}q^{2}a^{2}\cos^{2}(qz)+K_{3}q^{2}a^{4}\sin^{2}(qz)\cos^2(qz)-
+ \epsilon_{0}\epsilon_{a}E^2a^{2}\sin^{2}(qz)]dz=\nonumber \\
  & = & \frac{\pi}{4q}a^2\left( K_{1}q^{2}+\frac{1}{4}K_{3}q^{2}a^2-\epsilon_{0}\epsilon_{a}E^2\right).
 \end{eqnarray}
- Iščemo amplitudo deformacije $a$, pri kateri je prosta energija
+V našem primeru so integral lahko izračunali, saj smo vstavili nastavek (enačba~\ref{7.74}).
+Sicer bi morali uporabiti Euler-Lagrangevo metodo za minimizacijo proste energije, ki 
+jo poznamo iz variacijskega računa.
+
+Poiščimo amplitudo deformacije $a$, pri kateri je prosta energija
 najmanjša. Tedaj mora biti $a$ rešitev enačbe 
 \begin{equation}
 2(K_{1}q^{2}-\epsilon_{0}\epsilon_{a}E)a+K_{3}q^{2}a^{3}=0.
@@ -1644,6 +1668,33 @@ oziroma
 E_c = \frac{\pi}{d}\sqrt{\frac{K_1}{\varepsilon_0\varepsilon_a}}.
 \eeq
 
-V primeru zasukane nematske celice je prehod podoben, le račun je
-nekoliko bolj zapleten, ker ima deformacija vse tri komponente, tudi
-zasuk (Naloga).
+Poglejmo še, kako narašča amplituda deformacije v bližini prehoda. Iz enačbe~(\ref{7.79})
+sledi 
+\beq
+a = \sqrt{\frac{2 \varepsilon_0 \varepsilon_a}{K_3 q^2 }(E^2-E_c^2)}.
+\eeq
+Pogosto naredimo približek enakih konstant, kjer privzamemo, da so vse Frankove 
+elastične konstante enake vrednosti. V tem približku je 
+\beq
+a \approx \sqrt{\frac{2(E^2-E_c^2}{E_c^2}}
+\eeq
+in torej korensko narašča s naraščajočim poljem (slika~\ref{Fred}). Tak prehod je torej
+fazni prehod drugega reda, saj količina, ki opisuje prehod (amplituda deformacije $a$)
+zvezno preide iz vrednosti $a=0$ v končno vrednost. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/09_Fred.pdf_tex}
+\caption{Kvalitatitvno obnašanje amplitude deformacije ob Frederiksovem prehodu}
+\label{Fred}
+\end{figure}
+
+\begin{definition}
+Izračunaj Frederiksov prehod v zasukani nematski celici (kot zasuka med zgornjo in spodnjo 
+naj bo $\pi/2$) in pokaži, da je kritično polje za prehod enako
+\beq
+E_c =  \frac{\pi}{d}\sqrt{\frac{K_1}{\varepsilon_0\varepsilon_a}}
+\sqrt{1 + \frac{K_3-2K_2}{4K_1}}.
+\eeq
+\end{definition}
+
