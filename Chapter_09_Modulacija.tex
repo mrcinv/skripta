@@ -1179,7 +1179,7 @@ razporedi v mnogo uklonjenih snopov.
 
 \subsection*{Nematični tekoči kristali}
 \index{Tekoči kristali}
-\index{Nematik}
+\index{Tekoči kristali!Nematik}
 Za konec opišimo še modulacijo svetlobe s tekočimi kristali. 
 Tekoči kristali so anizotropne kapljevine. To pomeni, da so tekoči kot 
 kapljevine, imajo pa določene anizotropne lastnosti kot trdni kristali. 
@@ -1282,6 +1282,7 @@ Potem je
 \beq
 \mathbf{D} = \varepsilon \varepsilon_\bot \mathbf{E} + \varepsilon_0 \varepsilon_a
 (\mathbf{E}\cdot\mathbf{n})\mathbf{n},
+\label{7.56a}
 \eeq
 pri čemer je $\varepsilon_a = \varepsilon_\parallel - \varepsilon_\bot$ anizotropni
 del dielektrične konstante. Anizotropni del energije je tako do konstante
@@ -1361,33 +1362,33 @@ Tekočekristalni zasloni, ki jih uporabljamo v praksi, so precej bolj zapleteni.
 Najpreprostejši so črno-beli prikazovalniki, ki delujejo z odbito svetlobo (npr. 
 v žepnih računalih), zato imajo za analizatorjem odbojno površino. Večina 
 sodobnih prikazovalnikov (npr. računalniški ali telefonski zasloni) pa za 
-osvetlitev uporablja LED ali fluorescenčna svetila. 
+osvetlitev uporablja LED ali fluorescenčna svetila.
 Barve dosežemo z barvnimi filtri (rdečim, modrim in zelenim) na vsakem 
 pikslu posebej, natančno krmiljenje pikslov pa s tankoplastnimi 
-tranzistorji ({\it Thin film transistors}, TFT). Tekočekristalne zaslone lahko 
-z dodatnimi plastmi naredimo tudi občutljive na dotik.
+tranzistorji ({\it Thin film transistors}, TFT). Veliko
+sodobnejših zaslonov ima tekoče kristale urejene planarno, tekočekristalne 
+zaslone pa lahko z dodatnimi plastmi naredimo tudi občutljive na dotik.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=63truemm]{slike/LCD.jpg}
-\caption{ZAMENJAJ Z LASTNO SLIKO!}
+\includegraphics[width=63truemm]{slike/09_LCD.jpg}
+\caption{Vsak piksel tekočekristalnega zaslona je sestavljen iz treh barv.}
 \end{figure}
 \end{remark}
 
 Pokazati moramo še, da polarizacija svetlobe približno sledi zasuku optične osi. 
-Sredstvo naj bo lokalno enoosno, optična os naj se suče v smeri pravokotno
-glede na smer širjenja svetlobe (glej sliko~\ref{LCD1}\,a). 
-Poleg zasukane nematične celice je pomemben primer
-snovi s takimi lastnostmi holesteričen tekoči kristal, ki je zelo
-podoben nematičnim , le da se $\mathbf{n}$ spontano suče okoli
-smeri, pravokotne na $\mathbf{n}$.
-
-Optična os sredstva naj leži v ravnini $xy$ in naj se enakomerno
-suče, ko se premikamo vzdolž osi $z$. Kot med optično osjo in osjo
-$x$ lahko zapišemo 
+Vzemimo vzorec, kakršen je na sliki~(\ref{LCD1}\,a) in ga obravnavajmo
+kot lokalno optično enoosno snov. Pri $z=0$ naj bo optična
+os v smeri $x$, ko se premikamo vzdolž osi $z$, pa naj se optična os suče
+v ravnini $xy$. Kot med optično osjo in osjo $x$ tako zapišemo 
 \begin{equation}
 \varphi=qz.
 \label{7.58}
 \end{equation}
+
+Poleg zasukane nematične celice je pomemben primer
+snovi s takimi lastnostmi holesterični tekoči kristal, ki je zelo
+podoben nematičnim, le da je kiralen in se $\mathbf{n}$ spontano suče okoli
+smeri, pravokotne na $\mathbf{n}$.
 Zanimajmo se le za širjenje svetlobe v smeri $z$. 
 Tedaj potrebujemo le del dielektričnega
 tenzorja v $xy$ ravnini. 
@@ -1417,7 +1418,7 @@ za valovanje s frekvenco $\omega$ oblike
 (z)\mathbf{E}=0
 \label{7.61}
 \end{equation}
-ali v komponentah, upoštevajoč tenzor dielektričnosti~(\ref{7.59})
+ali po komponentah, upoštevajoč tenzor dielektričnosti~(enačba~\ref{7.59})
 \beq
 \frac{d^{2}E_{x}}{dz^{2}} + 
 (\beta^{2}+\alpha^{2}\cos(2qz))E_{x}+\alpha^{2}E_{y}\sin(2qz) = 0
@@ -1435,7 +1436,7 @@ dveh sklopljenih diferencialnih enačb.
 
 Za reševanje je ugodno vpeljati krožni polarizaciji 
 $E_{+}=E_{x}+iE_{y}$ in $E_{-}=E_{x}-iE_{y}$.
-Enačbi~(\ref{7.62a}) in (\ref{7.62b}) potem preieta v 
+Enačbi~(\ref{7.62a}) in (\ref{7.62b}) prepišemo v
 \beq
 -\frac{d^{2}E_{+}}{dz^{2}}=\beta^{2}E_{+}+\alpha^{2}E_{-}e^{2iqz}
 \label{lcm1}
@@ -1446,23 +1447,18 @@ in
 \label{lcm2}
 \eeq
 
-\begin{remark}
-Iščemo torej lastne rešitve valovne enačbe v sredstvu s periodično modulacijo
-lomnega količnika. Matematično podoben problem je iskanje lastnih
-funkcij elektronov v kristalu. Za te vemo, da morajo 
-biti morajo produkt periodične funkcije s periodo kristalne
-mreže in faktorja $\exp(ikz)$ oziroma $\exp(-ikz)$. Matematiki pravijo tej trditvi Floquetov
-izrek\footnote{Francoski matematik Achille Marie Gaston Floquet, 1847--1920.}. 
-\end{remark}
-
 Lastne rešitve poiščimo v obliki 
-\begin{eqnarray}
-E_{+} & = & Ae^{i(k+q)z} \label{7.65a} \qquad \mathrm{in}\\
+\beq
+E_{+} & = & Ae^{i(k+q)z} 
+\label{7.65a}
+\eeq
+in
+\beq
 E_{-} & = & Be^{i(k-q)z}.
 \label{7.65}
-\end{eqnarray}
+\eeq
 Nastavek reši sistem enačb~(\ref{lcm1}) in (\ref{lcm2}), 
-če $A$ in $B$ rešita sistem homogenih linearnih enačb 
+natanko takrat, kadar $A$ in $B$ rešita sistem homogenih linearnih enačb 
 \beq
 [(k+q)^{2}-\beta^{2}]A-\alpha^{2}B  =  0 
 \eeq
@@ -1478,12 +1474,18 @@ nič
 \end{equation}
 Spomnimo se, da sta $\beta$ in $\alpha$ sorazmerna z $\omega$,
 zato dobljena enačba predstavlja disperzijsko relacijo -- zvezo med 
-$\omega$ in $k$ -- za svetlobo v zavitem sredstvu. 
+$\omega$ in $k$ -- za svetlobo v zavitem sredstvu
+\begin{equation}
+(k^{2}+q^{2}-\frac{\bar{\epsilon}\omega^{2}}{c^{2}})^{2}-
+4k^{2}q^{2}- \frac{\epsilon_{a}^2\omega^{4}}{4c^{4}}
+=0.
+\label{7.66a}
+\end{equation}
 
 V splošnem je iskanje rešitev gornje enačbe zapleten problem, vendar 
 za razlago delovanja zasukane nematične celice zadošča približek 
 $q\ll\beta$ in $\alpha$, ko je torej perioda sukanja optične osi
-velika v primeri z valovno dolžino svetlobe. Tedaj lahko $q$ v disperzijski
+velika v primerjavi z valovno dolžino svetlobe. Tedaj lahko $q$ v disperzijski
 zvezi (enačba~\ref{7.66}) zanemarimo in dobimo
 \begin{equation}
 k^{2}=\left\{ \begin{matrix}\beta^{2}+\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilon_{\parallel} 
@@ -1492,10 +1494,10 @@ k^{2}=\left\{ \begin{matrix}\beta^{2}+\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilo
 \label{7.67}
 \end{equation}
  Ti vrednosti ustrezata velikosti valovnega vektorja za izredni
-in redni val v navadnem enoosnem kristalu. Vstavimo ju v ~(\ref{7.65a}) ali
+in redni val v navadnem enoosnem kristalu. Vstavimo ju v enačbi~(\ref{7.65a}) ali
 (\ref{7.65}) in za polarizaciji lastnih valov dobimo $B=\pm A$.
 
-Izračunajmo obe kartezični komponenti električnega polja za prvo rešitev:
+Izračunajmo še obe kartezični komponenti električnega polja za prvo rešitev
 \begin{align}
 E_{x} &=  \frac{1}{2}(E_{+}+E_{-})  =  \frac{1}{2}Ae^{ikz}(e^{iqz}+e^{-iqz})  =  Ae^{ikz}\cos qz\\
 E_{y} & = \frac{1}{2i}(E_{+}-E_{-})  =  \frac{1}{2i}Ae^{ikz}(e^{iqz}-e^{-iqz})  =  Ae^{ikz}\sin qz.
@@ -1505,19 +1507,20 @@ Polarizacija torej res sledi optični osi. Druga rešitev da val,
 ki je polariziran pravokotno na lokalno optično os in se prav tako
 suče z njo. Pri tem se prvi val širi s fazno hitrostjo $c/n_{e}$, torej kot
 izredni val, drugi pa s $c/n_{o}$, to je kot redni val. Če na zasukano
-nematično celico vpada svetloba, ki je polarizirana ali paralelno ali pravokotno
-na optično os ob meji, se pojavi na izhodni strani polarizacija, zasukana
-za pravi kot. V primeru, da vpadna polarizacija ne sovpada z eno od
-lastnih osi, jo moramo razstaviti na obe lastni in po prehodu skozi
-tekoči kristal zopet sestaviti, s čemer seveda v splošnem nastane eliptična
+nematično celico vpada svetloba, ki je polarizirana ali vzporedno z 
+optično osjo ob meji ali pravokotno nanjo, se pojavi na izhodni strani 
+polarizacija, zasukana za enak kot, kot je zasukana optična os. 
+V primeru, da vpadna polarizacija ne sovpada z eno od
+lastnih osi, jo razstavimo na obe lastni in po prehodu skozi
+tekoči kristal zopet sestavimo, s čemer seveda v splošnem nastane eliptična
 polarizacija.
 
 \begin{remark}
-Disperzijsko zvezo (enačba~\ref{7.66}) lahko tudi numerično rešimo (slika~\ref{gap}). 
-Spomnimo se, da je parameter $\beta$ sorazmeren frekvenci $\omega$. Vidimo, da pri 
-vsaki frekvenci, razen v ozkem območju med $\omega_{-}$
-in $\omega_{+}$, recimo mu frekvenčna reža, obstajajo štiri realne
-rešitve za $k$, po dve za valovanji v pozitivni in v negativni smeri.
+Disperzijsko zvezo (enačba~\ref{7.66} oziroma~\ref{7.66a}) 
+lahko rešimo numerično (slika~\ref{gap}). Vidimo, da pri 
+vseh frekvencah, razen v ozkem območju -- recimo mu frekvenčna reža --
+pri danem $\alpha$ obstajajo štiri realne rešitve za $k$, 
+po dve za valovanji v pozitivni in v negativni smeri.
 V območju reže je en par rešitev imaginaren. Vsaki vrednosti $k$
 pripada neko razmerje amplitud $A$ in $B$, ki ga izračunamo
 iz enačb~(\ref{7.65a}) in (\ref{7.65}) in ki določa polarizacijo lastnega vala. Polarizacije
@@ -1527,23 +1530,22 @@ navadnega problema lastnih vektorjev simetrične matrike.
 V območju frekvenčne reže le en par rešitev predstavlja
 potujoč val, drug pa polje, ki eksponentno pojema v sredstvo. Zato
 se svetloba s frekvenco v reži in z ustrezno polarizacijo, ki vpada
-na holesteričen tekoči kristal, totalno odbije. Pojav je povsem analogen
+na holesterični tekoči kristal, totalno odbije. Pojav je povsem analogen
 Braggovemu odboju na kristalih in daje holesterikom značilen obarvan
-videz.
+videz.\index{Tekoči kristali!Holesterik}
 \begin{figure}[h]
 \centering
 \def\svgwidth{70truemm} 
 \input{slike/09_gap.pdf_tex}
-\caption{Rešitve disperzijske zveze (enačba~\ref{7.66}) v zasukanem nematiku. Razen na ozkem 
-frekvenčnem območju ima štiri rešitve za vsak $\beta$ oziroma za vsako frekvenco, saj je 
-$\beta \propto \omega$. }
+\caption{Rešitve disperzijske zveze (enačba~\ref{7.66}) v zasukanem nematiku
+pri izbrani $\alpha$. Razen na ozkem frekvenčnem območju obstajajo štiri 
+rešitve za vsako frekvenco.}
 \label{gap}
 \end{figure}
 \end{remark}
 
 \section{*Izračun preklopa v tekočem kristalu}
-
-V prejšnjem poglavju smo omenili, da lahko z dovolj velikim zunanjim poljem 
+V prejšnjem razdelku smo omenili, da lahko z dovolj velikim zunanjim poljem 
 molekule tekočega kristala, razen tik ob površini, obrnemo v smeri polja. 
 Izračunajmo jakost polja, ki je potrebna za ta zasuk. 
 
@@ -1551,78 +1553,82 @@ Energija nematičnega tekočega kristala je najnižja, kadar je direktor $\mathb
 povsod obrnjen v isto smer. Povečanje energije zaradi krajevne odvisnosti $\mathbf{n}$
 v splošnem zapišemo z orientacijsko elastično energijo oziroma Frankovo prosto 
 energijo\footnote{Angleški fizik Sir Frederick Charles Frank, 1911--1998.}
+\index{Frankova prosta energija}
 \boxeq{7.70}{
 F_{e}=\frac{1}{2}\int\left\{ K_{1}(\nabla\cdot\mathbf{n})^{2}+K_{2}
 [\mathbf{n}\cdot(\nabla\times\mathbf{n})]^{2}+K_{3}
 [\mathbf{n}\times(\nabla\times\mathbf{n})]^{2}\right\} dV.
 }
-Pri tem so $K_{1}$, $K_{2}$ in $K_{3}$ so tri Frankove elastične
-konstante. Prvi člen predstavlja povečanje energije zaradi deformacije v obliki 
+Pri tem so $K_{1}$, $K_{2}$ in $K_{3}$ tri Frankove elastične
+konstante, ki so odvisne od snovi in tudi od temperature. 
+Prvi člen predstavlja povečanje energije zaradi deformacije v obliki 
 pahljače, drugi zaradi zasuka, tretji pa zaradi upogiba (slika~\ref{s7.20}).
 \begin{figure}[h]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/09_KKK.pdf_tex}
-\caption{Trije načini deformacije ureditve tekočega kristala: pahljačasta deformacija,
-zasuk in upogib}
+\caption{Trije načini deformacije ureditve tekočega kristala so pahljačasta deformacija,
+zasuk in upogib.}
 \label{s7.20}
 \end{figure}
 
 V zunanjem električnem polju se energija tekočega kristala dodatno spremeni. 
 Navadno je neodvisna električna količina električna poljska jakost, saj je polje posledica
 zunanje napetosti na elektrodah. Ustrezni člen v termodinamičnem
-potencialu je tedaj (enačbi~\ref{lcwe} in~\ref{7.56})
+potencialu je tedaj (enačbi~\ref{lcwe} in~\ref{7.56a})
 \beq
 w_{el} = -\frac{1}{2} \mathbf{D}\cdot\mathbf{E} = -\frac{1}{2} 
 \left( \varepsilon_0 \varepsilon_\bot \mathbf{E}\cdot\mathbf{E} + 
 \varepsilon_{0}\varepsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2}\right).
 \eeq
-Prvi člen je neodvisen od $\mathbf{n}$, zato ni pomemben. Prosta energija
+Prvi člen je neodvisen od $\mathbf{n}$, zato ni pomemben pri izračunu
+preklopa. Prosta energija
 nematičnega tekočega kristala v električnem polju je tako 
 \begin{equation}
 F=F_{0}+F_{e}-\frac{1}{2}\varepsilon_{0}\varepsilon_{a}
 (\mathbf{E}\cdot \mathbf{n})^{2},
 \label{7.72}
 \end{equation}
- kjer $F_{0}$ predstavlja del proste energije, ki je neodvisen od $\mathbf{n}$
-in $\mathbf{E}$. V ravnovesju je prosta energija najmanjša. Kadar je
+ kjer $F_{0}$ predstavlja del proste energije, ki je neodvisen od $\mathbf{n}$.
+Tekoči kristal je v ravnovesju, ko je prosta energija najmanjša. Kadar je
 $\epsilon_{a}>0$, se zato skuša $\mathbf{n}$ postaviti vzporedno s
-poljem. Da lahko z minimizacijo $F$ izrazimo $\mathbf{n}(\mathbf{r})$, moramo
-poznati še robne pogoje.
+poljem, popoln zasuk pa onemogoča mejna urejevalna plast. 
+Da lahko z minimizacijo $F$ izrazimo $\mathbf{n}(\mathbf{r})$, moramo
+torej poznati še robne pogoje.
 
 Poglejmo primer. Naj bo nematični tekoči kristal med dvema vzporednima
 steklenima ploščama v razmiku $d$. Na obeh ploščah naj bo $\mathbf{n}$ vzporeden
-s površino in vsiljeni smeri naj bosta enaki, tako da je brez zunanjega 
+s površino in obrnjen v isto smer, tako da je brez zunanjega 
 polja $\mathbf{n}$ povsod enako usmerjen. Naj bo to smer $x$.
 Na stekleni plošči dodamo elektrodi, ki ustvarjata polje pravokotno na 
 prvotno smer direktorja, naj bo to smer $z$.
 Ko priključimo polje, je energijsko ugodnejše, če
-se molekule vsaj delno zasučejo v smeri polja. Ta zasuk opišemo s
+se molekule vsaj delno zasučejo v smer polja. Ta zasuk opišemo s
 komponento vektorja $\mathbf{n}$ v smeri $z$
 \begin{equation}
 \mathbf{n}(z)=(n_{x}(z),0,n_{z}(z)).
 \label{7.73}
 \end{equation}
-Robna pogoja, katerima mora direktor zadostiti,
-sta $n_{z}(0)=n_{z}(d)=0$. Približno rešitev zato iščemo z nastavkom 
+Robni pogoj, kateremu mora direktor zadostiti,
+je $n_{z}(0)=n_{z}(d)=0$. Približno rešitev zato iščemo z nastavkom 
 \begin{equation}
 n_{z}(z)=a\sin (qz), \qquad q=\frac{\pi}{d},
 \label{7.74}
 \end{equation}
 ki ni nič drugega kot prvi člen razvoja prave rešitve v Fourierevo vrsto.
-Ker je direktor enotski vektor, potem velja
+Ker je direktor enotski vektor, velja
 \beq
-n_x = \sqrt{1-a^2\sin^2(qz)} \approx 1 - \frac{a^2}{2}\sin^2(qz)
+n_x = \sqrt{1-a^2\sin^2(qz)} \approx 1 - \frac{a^2}{2}\sin^2(qz).
 \eeq
 Vzdolž smeri $x$ in $y$ se direktor ne spreminja, zato velja
 \begin{equation}
-\nabla\times\mathbf{n}=(0,-\frac{dn_{x}}{dz},0)
+\nabla\times\mathbf{n}=(0,\frac{dn_{x}}{dz},0)
 \label{7.75}
 \end{equation}
  in 
 \begin{equation}
-\mathbf{n}\times(\nabla\times\mathbf{n})=(n_{z}\frac{dn_{x}}{dz},0,
--n_{x}\frac{dn_{x}}{dz}).
+\mathbf{n}\times(\nabla\times\mathbf{n})=(-n_{z}\frac{dn_{x}}{dz},0,
+n_{x}\frac{dn_{x}}{dz}).
 \label{7.76}
 \end{equation}
 Površinska gostota proste energije je tako 
@@ -1635,11 +1641,11 @@ F & = & \frac{1}{2}\int\left[K_{1}\left(\frac{dn_{z}}{dz}\right)^{2}+K_{3}(n_x^2
  \epsilon_{0}\epsilon_{a}E^2a^{2}\sin^{2}(qz)]dz=\nonumber \\
  & = & \frac{\pi}{4q}a^2\left( K_{1}q^{2}+\frac{1}{4}K_{3}q^{2}a^2-\epsilon_{0}\epsilon_{a}E^2\right).
 \end{eqnarray}
-V našem primeru so integral lahko izračunali, saj smo vstavili nastavek (enačba~\ref{7.74}).
-Sicer bi morali uporabiti Euler-Lagrangevo metodo za minimizacijo proste energije, ki 
+V našem primeru smo integral lahko izračunali, saj smo uporabili nastavek (enačba~\ref{7.74}).
+Sicer bi morali uporabiti Euler-Lagrangeevo metodo za minimizacijo proste energije, ki 
 jo poznamo iz variacijskega računa.
 
-Poiščimo amplitudo deformacije $a$, pri kateri je prosta energija
+Zdaj lahko poiščemo amplitudo deformacije $a$, pri kateri je prosta energija
 najmanjša. Tedaj mora biti $a$ rešitev enačbe 
 \begin{equation}
 2(K_{1}q^{2}-\epsilon_{0}\epsilon_{a}E)a+K_{3}q^{2}a^{3}=0.
@@ -1647,10 +1653,14 @@ najmanjša. Tedaj mora biti $a$ rešitev enačbe
 \end{equation}
  Rešitvi sta 
 \begin{equation}
-a=0 \qquad \mathrm{in} \qquad a^{2}=2\frac{\epsilon_{0}\epsilon_{a}E^2-K_{1}q^{2}}{K_{3}q^{2}}.
-\label{7.79}
+a=0
 \end{equation}
- Pri majhnih poljih, ko je $\epsilon_{0}\epsilon_{a}E<K_{1}q^{2}$,
+in
+\beq
+a^{2}=2\frac{\epsilon_{0}\epsilon_{a}E^2-K_{1}q^{2}}{K_{3}q^{2}}.
+\label{7.79}
+\eeq
+ Pri majhnih poljih, ko je $\epsilon_{0}\epsilon_{a}E^2<K_{1}q^{2}$,
 je fizikalno smiselna le prva rešitev, torej brez deformacije, pri velikih poljih pa je  
 stabilna druga rešitev. Ko večamo polje, deformacija
 v sredini plasti hitro naraste, tako da se $\mathbf{n}$ postavi skoraj
@@ -1659,6 +1669,7 @@ saj smo pri računu privzeli, da je $n_{z}\ll1$. Prehodu iz nedeformiranega
 stanja v deformirano stanje pravimo tudi Frederiksov prehod\footnote{Ruski fizik
 Vsevolod Konstantinovič Frederiks, tudi Fr\'{e}edericksz, 1885--1944.}. Na njem
 temelji preklapljanje optičnih prikazovalnikov na nematične tekoče kristale.
+\index{Frederiksov prehod}
 
 Izračunajmo še kritično jakost električnega polja, pri kateri pride do prehoda v deformirano fazo.
 To se zgodi pri 
