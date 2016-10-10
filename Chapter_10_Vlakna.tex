@@ -16,8 +16,8 @@ se pri kotih, ki so večji od kritičnega kota, totalno odbije.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
-%\input{slike/10_model.pdf_tex}
+\def\svgwidth{120truemm} 
+\input{slike/10_Vodnik.pdf_tex}
 \caption{Klasična razlaga valovnega vodnika}
 \label{fig:model}
 \end{figure}
@@ -36,12 +36,13 @@ Količini, ki določa največji kot divergence svetlobnega snopa,
 ki vpada na vodnik in ostane v njem ujet, pravimo
 numerična odprtina vlakna. Izračunamo jo kot 
 \beq
-NA = \sin \alpha = n_1 \sin \beta = \n_1 \sin(\pi/2-\vartheta) =
-n_1 \cos\vartheta = n_1 \sqrt{1-\sin^2\vartheta}.
+NA = \sin \alpha = n_1 \sin \beta = 
+n_1 \sin(\pi/2-\vartheta_c) =
+n_1 \cos\vartheta_c = n_1 \sqrt{1-\sin^2\vartheta_c}.
 \eeq
 Upoštevajoč enačbo~(\ref{10totalni}) sledi 
 \boxeq{10NA}{
-NA = n_1^2-n_2^2.
+NA = \sqrt{n_1^2-n_2^2}.
 }
 Ker je razlika lomnih količnikov v vodnikih razmeroma majhna,
 tipično le nekaj stotink, je tudi numerična apertura optičnih 
@@ -53,22 +54,31 @@ v vlakno, da se v njega ujame, je zato zelo majhen.
 Za podroben opis širjenja svetlobe po vodnikih ali vlaknih, 
 ki imajo navadno polmer
 sredice od nekaj do nekaj deset mikrometrov, geometrijska optika ne
-zadošča. Rešiti moramo Maxwellove enačbe z ustreznimi robnimi pogoji,
-kar je za praktična vlakna dokaj dolg račun. Ugotovimo najprej, kakšne
-so osnovne značilnosti valovanja po vodniku ali vlaknu.
+zadošča. Rešiti moramo Maxwellove enačbe (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
+z ustreznimi robnimi pogoji (enačbe~\ref{eq:robni-pogoji}--\ref{eq:robni-pogoji5}),
+kar je za praktična vlakna dokaj dolg račun. Zato ugotovimo najprej, kakšne
+so osnovne značilnosti valovanja, ki se širi po vodniku ali vlaknu.
 
-Geometrijskemu žarku, ki potuje po sredici pod kotom in se na meji
+Geometrijskemu žarku, ki pod kotom potuje po sredici in se na njeni meji
 odbija, ustreza v valovni sliki val, ki ima prečno komponento valovnega
-vektorja različno $k_{\perp}$ od nič. Kot totalnega odboja pri dani
-frekvenci določa največjo možno vrednost 
-$k_{\perp\max}\simeq n_{1}k_{0}\cos\vartheta_{c}=k_{0}\sqrt{n_{1}^{2}-n_{0}^{2}}\simeq k_{0}\sqrt{2n\Delta n}$,
-kjer je $k_{0}=\omega/c$, $n$ pa povprečni lomni količnik. Ker je
-valovanje v prečni smeri omejeno na sredico dimenzije $a$, ima lahko
-$k_{\perp}$ le diskretne vrendosti, ki so približno $N\pi/a$, kjer
-je $N$ celo število. Z vsakim $N$ je določen en \textit{rod }valovanj
-v vlaknu. Ker je omejen $k_{\perp}$, je število rodov je navzgor
-omejeno: $N_{\max}\simeq k_{0}a/\pi\sqrt{2n\Delta n}.$ $N$ je tudi
-število vozlov, ki jih ima valovanje v prečni smeri. Število rodov
+vektorja $k_{\perp}$ različno od nič. Ker je valovanje v prečni smeri 
+omejeno na sredico končne dimenzije (naj bo to debelina plasti $a$), ima lahko
+$k_{\perp}$ le diskretne vrendosti, ki so približno enake $N\pi/a$. Pri 
+tem je $N$ celo število in je enako številu vozlov, ki jih ima valovanje v prečni smeri.
+Pravimo tudi, da vsak $N$ določa en rod valovanj v vlaknu. 
+
+
+Po drugi strani pa obstoja v vodniku največji $k_\perp$, ki je določen 
+s kotom totalnega odboja 
+\beq
+k_{\perp \mathrm{max}} \approx k_0 n_1 \cos\vartheta_c = k_0 \sqrt{n_1^2 -n_2^2}.
+\eeq
+Možnih rešitev za $k_\perp$ je torej končno 
+
+. Z vsakim $N$ je določen en \textit{rod }valovanj
+v vlaknu. 
+Ker je omejen $k_{\perp}$, je število rodov je navzgor
+omejeno: $N_{\max}\simeq k_{0}a/\pi\sqrt{2n\Delta n}.$  Število rodov
 v danem vlaknu je odvisno od razlike lomnih količnikov in od dimenzije
 vlakna. Videli bomo, da v optičnih vlaknih en rod vselej obstaja,
 kar je ena od razlik med dielektričnimi in kovinskimi vodniki, kakršne
