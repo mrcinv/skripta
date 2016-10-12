@@ -13,13 +13,12 @@ Klasično lahko razložimo delovanje optičnih vlaken s totalnim odbojem
 na meji med dvema plastema. Kadar prehaja svetloba iz snovi 
 z večjim lomnim količnikom v sredstvo z manjšim lomnim količnikom,
 se pri kotih, ki so večji od kritičnega kota, totalno odbije. 
-
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/10_Vodnik.pdf_tex}
 \caption{Klasična razlaga valovnega vodnika}
-\label{fig:model}
+\label{fig:vodnik}
 \end{figure}
 
 Najpreprostejši model optičnega vodnika je planparalelna plast prozornega
@@ -97,29 +96,63 @@ frekvence, kar ima za uporabo vlaken pomembne posledice. Več o tem bomo spoznal
 proti koncu poglavja. 
 
 \section{Račun lastnih rodov v planparalelnem vodniku}
+Poiščimo zdaj rešitve valovne enačbe v planparalelnem vodniku. 
+To je preprost dvodimenzionalen model optičnega vlakna, ki je sestavljen iz 
+plasti prozornega dielektrika in plašča, ki naj bo zaradi enostavnosti na obeh 
+straneh sredice enak. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/10_VodnikRacun.pdf_tex}
+\caption{K izračunu lastnih rodov v vodniku}
+\label{fig:vodnikracun}
+\end{figure}
 
-Preprost dvodimenzionalen model optičnega vlakna je planparalelna
-plast prozornega dielektrika z lomnim količnikom večjim od okolice:
-$n_{1}>n_{0}$ (Slika \ref{sl9.1}). Rešitev krajevnega dela valovne
-enačbe 
+Krajevni del valovne enačbe, ki jo rešujemo,
+je
+\beq
+\nabla^{2}\mathbf{E}+n\left(x\right)^{2}k_{0}^{2}\mathbf{E}=0,
+\label{9.1}
+\eeq
+kjer je $k_{0}=\omega/c$, $n$ pa nezvezno spremeni vrednost, ko preidemo iz sredice v plašč. 
+Rešitev iščemo v obliki 
 \begin{equation}
-\nabla^{2}{\bf E+}n\left(x\right)^{2}k_{0}^{2}{\bf E=}0\label{9.1}
+{\mathbf E}(x,z)=\mathbf{e}\psi\left(x\right)\, e^{i\beta z}.
+\label{9.2}
 \end{equation}
- kjer je $k_{0}=\omega/c$, iščimo v obliki 
+Glede na smer vektorja $\bf{e}$ ločimo dva različna primera. Če leži električna poljska
+jakost vzporedno z mejnima ploskvama $\mathbf{e} = (0,1,0)$, 
+govorimo o transverzalnem električnem (TE) valovanju, v nasprotnem primeru, ko je 
+z mejnima ploskvama vzporedna magnetna poljska jakost in $\mathbf{e} = (e_x,0,e_z)$, pa 
+govorimo o transverzalnem magnetnem (TM) valovanju.
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/10_TETM.pdf_tex}
+\caption{TE in TM polarizaciji v valovnem vodniku}
+\label{fig:TETM}
+\end{figure}
+Omejimo se le na prvi primer, to je TE polarizacijo (za izračun lastnih rodov TM polariziranega
+valovanja glej nalogo~\ref{naloga:TM}). Vstavimo nastavek (enačba~\ref{9.2}) v valovno enačbo
+(\ref{9.1}) in dobimo
 \begin{equation}
-{\bf E}={\bf \psi}\left(x\right)\, e^{i\beta z}\label{9.2}
+\frac{d^{2}{\bf \psi}}{dx^{2}}+\left(k_{0}^{2}n_1^{2}-\beta^{2}\right){\bf \psi}=0
+\qquad \textrm{v sredici oziroma obmo\v cju II} 
+\label{9.3}
 \end{equation}
- Za amplitudo ${\bf \psi}\left(x\right)$ dobimo enačbo 
+in 
 \begin{equation}
-\frac{d^{2}{\bf \psi}}{dx^{2}}+\left[n\left(x\right)^{2}k_{0}^{2}-\beta^{2}\right]\,{\bf \psi}=0\label{9.3}
+\frac{d^{2}{\bf \psi}}{dx^{2}}+\left(k_{0}^{2}n_2^{2}-\beta^{2}\right){\bf \psi}=0
+\qquad \textrm{v plašču oziroma obmo\v cjih I in III.} 
+\label{9.3}
 \end{equation}
- kjer je v plasti (območje II.) lomni količnik $n_{1}$, v okolici
-(območji I. in III.) pa $n_{0}$. Robni pogoji so, da sta tangencialni
+
+
+
+
+Robni pogoji so, da sta tangencialni
 komponenti električne in magnetne poljske jakosti na meji zvezni.
-V planparalelnem primeru lahko valovanja ločimo na transverzalno električna
-(TE) in transverzalno magnetna (TM). V prvem primeru je ${\bf E}$
-v smeri osi $y,$ v drugem pa ${\bf H}$. Pri TE valovih je tangencialna
-komponenta magnetnega polja $H_{z}$. Ker je $\nabla\times{\bf E}=i\omega\mu_{0}{\bf H}$,
+Ker je $\nabla\times{\bf E}=i\omega\mu_{0}{\bf H}$,
 dobimo iz zveznosti $H_{z}$, da je na meji zvezen tudi odvod $\partial E_{y}/\partial x$.
 S tem postane problem matematično enak iskanju lastnih stanj energije
 za delec v končno globoki enodimenzionalni potencialni jami v kvantni
