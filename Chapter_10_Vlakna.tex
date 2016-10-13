@@ -56,7 +56,23 @@ sredice od nekaj do nekaj deset mikrometrov, geometrijska optika ne
 zadošča. Rešiti moramo Maxwellove enačbe (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
 z ustreznimi robnimi pogoji (enačbe~\ref{eq:robni-pogoji}--\ref{eq:robni-pogoji5}),
 kar je za praktična vlakna dokaj dolg račun. Zato ugotovimo najprej, kakšne
-so osnovne značilnosti valovanja, ki se širi po vodniku ali vlaknu.
+so osnovne značilnosti valovanja, ki se širi po vodniku.
+
+Glede na smer polarizacije električne poljske jakosti 
+ločimo dva različna primera. Če leži električna poljska
+jakost vzporedno z mejnima ploskvama (smer $y$), 
+govorimo o transverzalnem električnem (TE) valovanju. 
+V nasprotnem primeru, ko je 
+z mejnima ploskvama vzporedna magnetna poljska jakost in 
+leži električna poljska jakost v ravnini $xz$, 
+govorimo o transverzalnem magnetnem (TM) valovanju.
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/10_TETM.pdf_tex}
+\caption{TE in TM polarizaciji v valovnem vodniku}
+\label{fig:TETM}
+\end{figure}
 
 Geometrijskemu žarku, ki pod kotom potuje po sredici in se na njeni meji
 odbija, ustreza v valovni sliki val, ki ima prečno komponento valovnega
@@ -120,19 +136,7 @@ Rešitev iščemo v obliki
 {\mathbf E}(x,z)=\mathbf{e}\psi\left(x\right)\, e^{i\beta z}.
 \label{9.2}
 \end{equation}
-Glede na smer vektorja $\bf{e}$ ločimo dva različna primera. Če leži električna poljska
-jakost vzporedno z mejnima ploskvama $\mathbf{e} = (0,1,0)$, 
-govorimo o transverzalnem električnem (TE) valovanju, v nasprotnem primeru, ko je 
-z mejnima ploskvama vzporedna magnetna poljska jakost in $\mathbf{e} = (e_x,0,e_z)$, pa 
-govorimo o transverzalnem magnetnem (TM) valovanju.
-\begin{figure}[h]
-\centering
-\def\svgwidth{120truemm} 
-\input{slike/10_TETM.pdf_tex}
-\caption{TE in TM polarizaciji v valovnem vodniku}
-\label{fig:TETM}
-\end{figure}
-Omejimo se le na prvi primer, to je TE polarizacijo (za izračun lastnih rodov TM polariziranega
+Omejimo se le na primer TE polarizacije (za izračun lastnih rodov TM polariziranega
 valovanja glej nalogo~\ref{naloga:TM}). Vstavimo nastavek (enačba~\ref{9.2}) v valovno enačbo
 (\ref{9.1}) in dobimo
 \begin{equation}
@@ -146,12 +150,32 @@ in
 \qquad \textrm{v plašču oziroma obmo\v cjih I in III.} 
 \label{9.3}
 \end{equation}
+Ker je po enačbi~(\ref{9.0}) $n_1^2k_0^2-\beta^2=k_\perp^2$, lahko rešitve prve enačbe
+zapišemo v obliki
+\beq
+\psi_{II}(x) = A \cos(k_\perp x)+B \sin(k_\perp x).
+\eeq
+Rešitve v plašču pa so oblike
+\beq
+\psi_{I,III}(x) = C \exp(\kappa x)+D \exp(-\kappa x),
+\eeq
+pri čemer je $\kappa^2= \beta^2-n_2^2k_0^2$.
+
+Če želimo, da je valovanje ujeto v vlakno, mora biti $\kappa$ realno število.
+Le tako namreč dosežemo eksponentno pojemanje z oddaljenostjo od sredice,
+sicer je valovanje v vseh treh območjih oscilatorno in ni ujeto v vlakno. Zahteva po 
+končni rešitvi da tudi pogoj, da je v območju I (pri $x>a/2$) $C=0$, 
+v območju III (pri $x<-a/2$) pa $D=0$. 
+
+Zvezo med koeficienti določimo z upoštevanjem robnih pogojev. Na meji
+med sredico in plaščem morata biti tangencialni komponenti 
+električne in magnetne poljske jakosti zvezni. Iz tega takoj 
+izluščimo pogoj 
 
 
 
+Zaradi simetrije problema so rešitve lahko sode ali lihe.ešitve sode ali lihe. 
 
-Robni pogoji so, da sta tangencialni
-komponenti električne in magnetne poljske jakosti na meji zvezni.
 Ker je $\nabla\times{\bf E}=i\omega\mu_{0}{\bf H}$,
 dobimo iz zveznosti $H_{z}$, da je na meji zvezen tudi odvod $\partial E_{y}/\partial x$.
 S tem postane problem matematično enak iskanju lastnih stanj energije
@@ -168,8 +192,7 @@ na plast, se delno skoznjo lomijo, delno pa odbijejo. V rešitvi je
 upoštevana tudi interferenca na plasti (Naloga). Taka stanja v kvantni
 mehaniki opisujejo prost delec. 
 \end{description}
-Zanima nas predvsem prvi primer. Začnimo s TE polarizacijo, to je
-${\bf \psi(}x{\bf )=(}0,\psi(x),0)$. Naj bo $x=0$ v sredini plasti.
+
 Zaradi simetrije morajo biti rešitve za $\psi\left(x\right)$ ali
 sode ali lihe. Sode re\textquotedbl{}itve imajo v sredici obliko 
 \begin{equation}
