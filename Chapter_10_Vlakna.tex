@@ -150,59 +150,54 @@ in
 \qquad \textrm{v plašču oziroma obmo\v cjih I in III.} 
 \label{9.3}
 \end{equation}
-Ker je po enačbi~(\ref{9.0}) $n_1^2k_0^2-\beta^2=k_\perp^2$, lahko rešitve prve enačbe
+Ker je po enačbi~(\ref{9.0}) $k_0^2n_1^2-\beta^2=k_\perp^2$, lahko rešitve prve enačbe
 zapišemo v obliki
 \beq
-\psi_{II}(x) = A \cos(k_\perp x)+B \sin(k_\perp x).
+\psi_{\mathrm{II}}(x) = C \cos(k_\perp x)+D \sin(k_\perp x).
 \eeq
 Rešitve v plašču pa so oblike
 \beq
-\psi_{I,III}(x) = C \exp(\kappa x)+D \exp(-\kappa x),
+\psi_{\mathrm{I}}(x) = A \exp(-\kappa x)+B \exp(\kappa x),\\
+\psi_{\mathrm{III}}(x) = F \exp(-\kappa x)+G \exp(\kappa x),
 \eeq
 pri čemer je $\kappa^2= \beta^2-n_2^2k_0^2$.
 
 Če želimo, da je valovanje ujeto v vlakno, mora biti $\kappa$ realno število.
 Le tako namreč dosežemo eksponentno pojemanje z oddaljenostjo od sredice,
-sicer je valovanje v vseh treh območjih oscilatorno in ni ujeto v vlakno. Zahteva po 
-končni rešitvi da tudi pogoj, da je v območju I (pri $x>a/2$) $C=0$, 
-v območju III (pri $x<-a/2$) pa $D=0$. 
+sicer je valovanje v vseh treh območjih oscilatorno in ni ujeto v vlakno. 
+Tako dobimo pogoj za valovno število $\beta$
+\boxeq{vlaknobeta}{
+k_0n_2 < \beta < k_0 n_1.
+}
 
+Zahteva po končnost rešitve da pogoj, da je v območju I (pri $x>a/2$) $B=0$, 
+v območju III (pri $x<-a/2$) pa $F=0$. Dodatne omejitve se pojavijo zaradi 
+simetrije problema, saj so rešitve lahko le sode ali lihe funkcije. Tako 
+dobimo dve vrsti rešitev, sode in lihe:
+\begin{align}
+\psi_{\mathrm{I}}(x) =&~ A \exp(-\kappa x), \qquad \qquad &\psi_{\mathrm{I}}(x) =&~ A \exp(-\kappa x),\\
+\psi_{\mathrm{II}}(x) =&~ C \cos(k_\perp x), \qquad \qquad &\psi_{\mathrm{II}}(x) =&~ D \sin(k_\perp x)\\
+\psi_{\mathrm{III}}(x) =&~ A \exp(\kappa x), \qquad \qquad &\psi_{\mathrm{III}}(x) =&~ -A \exp(\kappa x).
+\end{align}
 Zvezo med koeficienti določimo z upoštevanjem robnih pogojev. Na meji
 med sredico in plaščem morata biti tangencialni komponenti 
 električne in magnetne poljske jakosti zvezni. Iz tega takoj 
-izluščimo pogoj 
+izluščimo pogoj, da se za TE valovanje na meji ohranja amplituda električne poljske jakosti.
+Drugi pogoj dobimo iz zveze, ki jo dobimo  $\nabla\times{\bf E}=i\omega\mu_{0}{\bf H}$ (
 
 
+in 
+\beq
+A \exp(-\kappa a/2) = C \cos(k_\perp a/2), \qquad \qquad A \exp(-\kappa a/2) = D \sin(k_\perp a/2).
+\eeq
 
-Zaradi simetrije problema so rešitve lahko sode ali lihe.ešitve sode ali lihe. 
 
-Ker je $\nabla\times{\bf E}=i\omega\mu_{0}{\bf H}$,
+Ker je 
 dobimo iz zveznosti $H_{z}$, da je na meji zvezen tudi odvod $\partial E_{y}/\partial x$.
 S tem postane problem matematično enak iskanju lastnih stanj energije
 za delec v končno globoki enodimenzionalni potencialni jami v kvantni
-mehaniki, kjer lastni vrednosti energije ustreza $\beta^{2}$. Poglejmo
-najprej, kakšne so možne rešitve:
-\begin{description}
-\item [{a.}] $k_{0}n_{0}<\beta<k_{0}n_{1}$. Tedaj so rešitve oscilatorne
-v sredici in eksponentno pojemajoče v plašču. Predstavljajo vodene
-valove v plasti. V kvantni mehaniki ustrezajo vezanim stanjem.
-\item [{b.}] $\beta<k_{0}n_{0}$. Rešitve so oscilatorne v vseh treh območjih
-in opisujejo valove, ki niso ujeti v plasti, temveč z ene strani vpadajo
-na plast, se delno skoznjo lomijo, delno pa odbijejo. V rešitvi je
-upoštevana tudi interferenca na plasti (Naloga). Taka stanja v kvantni
-mehaniki opisujejo prost delec. 
-\end{description}
+mehaniki, kjer lastni vrednosti energije ustreza $\beta^{2}$. 
 
-Zaradi simetrije morajo biti rešitve za $\psi\left(x\right)$ ali
-sode ali lihe. Sode re\textquotedbl{}itve imajo v sredici obliko 
-\begin{equation}
-\psi_{II}(x)=C_{1}\cos k_{\perp}x\label{9.4}
-\end{equation}
- v območjih I in III pa 
-\begin{equation}
-\psi_{I,III}\left(x\right)=C_{0}\, e^{\kappa\left(a\mp x\right)}\label{9.41}
-\end{equation}
- Tu je $k_{\perp}=\sqrt{n_{1}^{2}k_{0}^{2}-\beta^{2}}$ in $\kappa=\sqrt{\beta^{2}-n_{0}^{2}k_{0}^{2}}$.
 Zveznost električne poljske jakosti na meji nam da 
 \begin{equation}
 C_{1}\cos k_{\perp}a=C_{0}\label{9.5}
