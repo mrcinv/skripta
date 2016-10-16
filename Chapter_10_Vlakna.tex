@@ -158,7 +158,7 @@ zapišemo v obliki
 Rešitve v plašču pa so oblike
 \beq
 \psi_{\mathrm{I}}(x) = A \exp(-\kappa x)+B \exp(\kappa x),\\
-\psi_{\mathrm{III}}(x) = F \exp(-\kappa x)+G \exp(\kappa x),
+\psi_{\mathrm{III}}(x) = E \exp(-\kappa x)+F \exp(\kappa x),
 \eeq
 pri čemer je $\kappa^2= \beta^2-n_2^2k_0^2$.
 
@@ -171,7 +171,7 @@ k_0n_2 < \beta < k_0 n_1.
 }
 
 Zahteva po končnost rešitve da pogoj, da je v območju I (pri $x>a/2$) $B=0$, 
-v območju III (pri $x<-a/2$) pa $F=0$. Dodatne omejitve se pojavijo zaradi 
+v območju III (pri $x<-a/2$) pa $E=0$. Dodatne omejitve se pojavijo zaradi 
 simetrije problema, saj so rešitve lahko le sode ali lihe funkcije. Tako 
 dobimo dve vrsti rešitev, sode in lihe:
 \begin{align}
@@ -183,7 +183,12 @@ Zvezo med koeficienti določimo z upoštevanjem robnih pogojev. Na meji
 med sredico in plaščem morata biti tangencialni komponenti 
 električne in magnetne poljske jakosti zvezni. Iz tega takoj 
 izluščimo pogoj, da se za TE valovanje na meji ohranja amplituda električne poljske jakosti.
-Drugi pogoj dobimo iz zveze, ki jo dobimo  $\nabla\times{\bf E}=i\omega\mu_{0}{\bf H}$ (
+Drugi pogoj dobimo iz zveze $\nabla\times{\bf E}=i\omega\mu_{0}{\bf H}$, ki izhaja
+neposredno iz Maxwellove enačbe~(\ref{eq:Maxwell2}). Ta pogoj zahteva, da se na meji ohranja
+odvod električne poljske jakosti $dE/dx$. Tako pogoje za sode in lihe rešitve zapišemo kot
+\beq
+A \exp(-\kappa a/2) = C \cos(k_\perp a/2), \qquad \qquad A \exp(-\kappa a/2) = D \sin(k_\perp a/2).
+\eeq
 
 
 in 
