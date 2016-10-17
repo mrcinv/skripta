@@ -23,7 +23,7 @@ se pri kotih, ki so večji od kritičnega kota, totalno odbije.
 
 Najpreprostejši model optičnega vodnika je planparalelna plast prozornega
 dielektrika z lomnim količnikom $n_{1}$, ki je večji od lomnega količnika
-okolice $n_2$ (slika~\ref{fig:model}). 
+okolice $n_2$ (slika~\ref{fig:vodnik}). 
 Plasti z večjim lomnim količnikom rečemo sredica, okolici
 pa plašč vodnika. Žarek je ujet v sredici, če je vpadni kot 
 na mejno plast $\vartheta$ večji od kota totalnega odboja, 
@@ -200,7 +200,8 @@ načine tako velja
 \frac{\kappa}{k_x} = \tan \frac{k_x a}{2},
 }
 za lihe pa 
-\boxeq{sekular2}{- \frac{k_x}{\kappa} = \tan \frac{k_x a}{2}.
+\boxeq{sekular2}{
+-\frac{k_x}{\kappa} = \tan \frac{k_x a}{2}.
 }
 Pri tem zapišimo še zvezo med $k_x$ in $\kappa$
 \boxeq{kappak}{
@@ -218,7 +219,6 @@ bo za sode rešitve in modra za lihe rešitve. Število presečišč rdeče in m
  Vlaknu, v katerem se širi samo eno valovanje, pravimo enorodnovno vlakno, sicer so vlakna večrodovna.
  Za tipično enorodovno vlakno velja $a\lesssim 5~\mu$m, za večrodovno z okoli 20 rodovi pa 
  $a\sim 50~\mu$m.
- 
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
@@ -233,12 +233,23 @@ vrednost valovnega vektorja $k_x$, pri kateri valovanje še potuje po vlaknu, om
 pri kateri $\kappa$ pade na nič. Do te vrednosti pa je po ena rešitev na vsakih $\pi/a$. Celotno 
 število rodov je tako
 \beq
-N \approx \frac{k_{x\mathrm{text}}{\pi/a}  = \frac{k_0 a NA }{\pi},
+N \approx \frac{k_{x\mathrm{max}}}{\pi/a}  = \frac{k_0 a NA }{\pi},
 \eeq
 pri čemer smo uporabili zvezo~(\ref{kappak}) ob pogoju, da je $\kappa =0$. 
 
-
-
+Ko enkrat izračunamo dovoljene vrednosti $k_x$, končno poznamo celotno električno poljsko
+jakost v vodniku in izven njega. Za primer s slike~(\ref{fig:TEsec}) so osnovni načini 
+narisani na sliki~(\ref{fig:TESodi}).
+\begin{figure}[h]
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/10_TESodi.pdf_tex} 
+\quad
+\def\svgwidth{70truemm} 
+\input{slike/10_TELihi.pdf_tex} 
+\caption{Osnovni načini za širjenje svetlobe po valovnem vodniku, levo so sode rešitve, desno pa lihe.}
+\label{fig:TESodi}
+\end{figure}
 
 Osnovna lastna vrednost $\xi_{0}$ je pri $V<<1$ približno kar $V$.
 Zato je $k_{\perp}^{2}\simeq k_{0}^{2}(n_{1}^{2}-n_{0}^{2})$ in je
@@ -258,7 +269,14 @@ robnem pogoju za tangencialno komponento električnega polja nastopita
 dielektrični konstanti sredice in plašča, zato je predvsem najnižja
 lastna vrednost za $k_{\perp}$ nekoliko večja kot za TE valove. (Naloga)
 
-
+\begin{definition}
+\label{naloga:TM}
+Ponovi izračun za TM valovanje in pokaži, da se sekularni enačbi v primeru TM polarizacije
+zapišeta kot 
+\beq
+\frac{\kappa}{k_x} = \tan \frac{k_x a}{2} \qquad \mathrm{in} \qquad -\frac{k_x}{\kappa} = \tan \frac{k_x a}{2}.
+\eeq
+\end{definition}
 
 
 za delec v končno globoki enodimenzionalni potencialni jami v kvantni
@@ -280,7 +298,7 @@ zapleten. Glavna komplikacija je, da v cilindrični geomteriji ni več
 delitve na čisto električno in magnento transverzalne valove, zato
 postanejo robni pogoji bolj zapleteni. Rešitve se izrazajo v obliki
 kombinacij Besselovih funkcij. Podrobnosti si bralec lahko ogleda
-v literaturi \cite{vlakna}. Osnovne značilnosti rešite pa ostajajo
+v literaturi. Osnovne značilnosti rešite pa ostajajo
 enako kot v dvodimenzionalnem primeru. Kot smo ugotovili že na začetku,
 obstaja končno število vodenih valov, odvisno od premera sredice in
 razlike lomnih količnikov sredice in plašča. Če sta ti količini majhni,
