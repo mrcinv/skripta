@@ -76,17 +76,17 @@ govorimo o transverzalnem magnetnem (TM) valovanju.
 
 Geometrijskemu žarku, ki pod kotom potuje po sredici in se na njeni meji
 odbija, ustreza v valovni sliki val, ki ima prečno komponento valovnega
-vektorja $k_{\perp}$ različno od nič. Ker je valovanje v prečni smeri 
+vektorja $k_{x}$ različno od nič. Ker je valovanje v prečni smeri 
 omejeno na sredico končne dimenzije (naj bo to debelina plasti $a$), ima lahko
-$k_{\perp}$ le diskretne vrendosti, ki so približno enake $N\pi/a$. Pri 
+$k_{x}$ le diskretne vrendosti, ki so približno enake $N\pi/a$. Pri 
 tem je $N$ celo število in je enako številu vozlov, ki jih ima valovanje v prečni smeri.
 Pravimo tudi, da vsak $N$ določa en rod valovanj v vlaknu. Po drugi strani 
-pa obstaja v vodniku največji $k_\perp$, ki je določen 
+pa obstaja v vodniku največji $k_x$, ki je določen 
 s kotom totalnega odboja 
 \beq
-k_{\perp \mathrm{max}} \approx k_0 n_1 \cos\vartheta_c = k_0 \sqrt{n_1^2 -n_2^2}.
+k_{x \mathrm{max}} \approx k_0 n_1 \cos\vartheta_c = k_0 \sqrt{n_1^2 -n_2^2}.
 \eeq
-Številom možnih rešitev za $k_\perp$ je torej omejeno in točno določeno, odvisno
+Številom možnih rešitev za $k_x$ je torej omejeno in točno določeno, odvisno
 pa je od razlike lomnih količnikov in od dimenzije vodnika oziroma vlakna. 
 V nadaljevanju bomo spoznali, da v optičnih vlaknih en rod vselej obstaja,
 za razliko od dielektričnih in kovinskih vodnikov, kakršne
@@ -101,10 +101,10 @@ vlakna, recimo ji tudi valovno število, tako da je odvisnost polja
 od koordinate vzdolž vlakna $\exp (i\beta z)$. Po drugi strani pa velja
 zveza
 \begin{equation}
-n_{1}\frac{\omega}{c_0}=\sqrt{\beta^{2}+k_{\perp}^{2}}
+n_{1}\frac{\omega}{c_0}=\sqrt{\beta^{2}+k_{x}^{2}}
 \label{9.0}.
 \end{equation}
-Za dano vrednost $k_{\perp}$ torej zveza med valovnim številom $\beta$
+Za dano vrednost $k_{x}$ torej zveza med valovnim številom $\beta$
 in frekvenco $\omega$ ni linearna, zato je fazna hitrost $v_{f}=\omega/\beta$
 odvisna od frekvence in pride do disperzije. Grupna hitrost $v_{g}=d\omega/d\beta$ 
 je zaradi nelinearne odvisnosti različna od fazne hitrosti in tudi odvisna od 
@@ -150,10 +150,10 @@ in
 \qquad \textrm{v plašču oziroma obmo\v cjih I in III.} 
 \label{9.3}
 \end{equation}
-Ker je po enačbi~(\ref{9.0}) $k_0^2n_1^2-\beta^2=k_\perp^2$, lahko rešitve prve enačbe
+Ker je po enačbi~(\ref{9.0}) $k_0^2n_1^2-\beta^2=k_x^2$, lahko rešitve prve enačbe
 zapišemo v obliki
 \beq
-\psi_{\mathrm{II}}(x) = C \cos(k_\perp x)+D \sin(k_\perp x).
+\psi_{\mathrm{II}}(x) = C \cos(k_x x)+D \sin(k_x x).
 \eeq
 Rešitve v plašču pa so oblike
 \beq
@@ -176,7 +176,7 @@ simetrije problema, saj so rešitve lahko le sode ali lihe funkcije. Tako
 dobimo dve vrsti rešitev, sode in lihe:
 \begin{align}
 \psi_{\mathrm{I}}(x) =&~ A \exp(-\kappa x), \qquad \qquad &\psi_{\mathrm{I}}(x) =&~ A \exp(-\kappa x),\\
-\psi_{\mathrm{II}}(x) =&~ C \cos(k_\perp x), \qquad \qquad &\psi_{\mathrm{II}}(x) =&~ D \sin(k_\perp x)\\
+\psi_{\mathrm{II}}(x) =&~ C \cos(k_x x), \qquad \qquad &\psi_{\mathrm{II}}(x) =&~ D \sin(k_x x)\\
 \psi_{\mathrm{III}}(x) =&~ A \exp(\kappa x), \qquad \qquad &\psi_{\mathrm{III}}(x) =&~ -A \exp(\kappa x).
 \end{align}
 Zvezo med koeficienti določimo z upoštevanjem robnih pogojev. Na meji
@@ -187,83 +187,58 @@ Drugi pogoj dobimo iz zveze $\nabla\times{\bf E}=i\omega\mu_{0}{\bf H}$, ki izha
 neposredno iz Maxwellove enačbe~(\ref{eq:Maxwell2}). Ta pogoj zahteva, da se na meji ohranja
 odvod električne poljske jakosti $dE/dx$. Tako pogoje za sode in lihe rešitve zapišemo kot
 \beq
-A \exp(-\kappa a/2) = C \cos(k_\perp a/2), \qquad \qquad A \exp(-\kappa a/2) = D \sin(k_\perp a/2).
+A \exp(-\kappa a/2) = C \cos(k_x a/2), \qquad \qquad A \exp(-\kappa a/2) = D \sin(k_x a/2).
 \eeq
-
-
 in 
 \beq
-A \exp(-\kappa a/2) = C \cos(k_\perp a/2), \qquad \qquad A \exp(-\kappa a/2) = D \sin(k_\perp a/2).
+-A \kappa \exp(-\kappa a/2) = -C k_x \sin(k_x a/2), \qquad
+-\kappa A \exp(-\kappa a/2) = D k_x \cos(k_x a/2).
 \eeq
+Enačbo, ki določa rešitev $k_x$, dobimo iz zahteve, da sta gornja robna pogoja hkrati izpoljnjena. Za sode 
+načine tako velja
+\boxeq{sekular1}{
+\frac{\kappa}{k_x} = \tan \frac{k_x a}{2},
+}
+za lihe pa 
+\boxeq{sekular2}{- \frac{k_x}{\kappa} = \tan \frac{k_x a}{2}.
+}
+Pri tem zapišimo še zvezo med $k_x$ in $\kappa$
+\boxeq{kappak}{
+k_x^{2}+\kappa^{2}=k_{0}^{2}\left(n_{1}^{2}-n_{0}^{2}\right).
+}
+Sekularnih enačb za lastne načine nihanj ne moremo rešiti analitično. Zato jih rešujemo numerično,
+zelo nazorna pa je grafična predstavitev. S slike~(\ref{fig:TEsec}) lahko namreč hitro razberemo
+število rešitev in njihove vrednosti. Najprej narišemo desno stran enačb~(\ref{sekular1}) 
+in~(\ref{sekular2}), to je $\tan (k_x a/2)$ (črna črta). 
+Nato narišemo še levi strani enačb, pri čemer upoštevamo zvezo~(\ref{kappak}), rdeča krivulja naj 
+bo za sode rešitve in modra za lihe rešitve. Število presečišč rdeče in modre krivulje s črno
+ da število rodov, ki se lahko razširjajo po takem vlaknu. V našem primeru je takih rodov pet:
+ trije sodi in dva liha. Z grafa razberemo  še eno pomembno lastnost. Ne glede na to, kako tanek
+ je vodnik, vedno bo obstajala vsaj ena rešitev za $k_x$, saj rdeča krivulja vedno nekje seka črno. 
+ Vlaknu, v katerem se širi samo eno valovanje, pravimo enorodnovno vlakno, sicer so vlakna večrodovna.
+ Za tipično enorodovno vlakno velja $a\lesssim 5~\mu$m, za večrodovno z okoli 20 rodovi pa 
+ $a\sim 50~\mu$m.
+ 
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/10_TEsekularna.pdf_tex}
+\caption{K izračunu prečnih komponent valovnega vektorja v planparalelnem valovnem vodniku
+za TE polarizacijo. V skiciranem primeru je vodnik petrodoven.}
+\label{fig:TEsec}
+\end{figure}
+
+Ocenimo število možnih rodov še z izračunom. S slike~(\ref{fig:TEsec}) vidimo, da je največja možna 
+vrednost valovnega vektorja $k_x$, pri kateri valovanje še potuje po vlaknu, omejena z vrednostjo, 
+pri kateri $\kappa$ pade na nič. Do te vrednosti pa je po ena rešitev na vsakih $\pi/a$. Celotno 
+število rodov je tako
+\beq
+N \approx \frac{k_{x\mathrm{text}}{\pi/a}  = \frac{k_0 a NA }{\pi},
+\eeq
+pri čemer smo uporabili zvezo~(\ref{kappak}) ob pogoju, da je $\kappa =0$. 
 
 
-Ker je 
-dobimo iz zveznosti $H_{z}$, da je na meji zvezen tudi odvod $\partial E_{y}/\partial x$.
-S tem postane problem matematično enak iskanju lastnih stanj energije
-za delec v končno globoki enodimenzionalni potencialni jami v kvantni
-mehaniki, kjer lastni vrednosti energije ustreza $\beta^{2}$. 
 
-Zveznost električne poljske jakosti na meji nam da 
-\begin{equation}
-C_{1}\cos k_{\perp}a=C_{0}\label{9.5}
-\end{equation}
- Iz zveznosti odvoda dobimo 
-\begin{equation}
-C_{1}k_{\perp}\sin k_{\perp}a=\kappa C_{0}\label{9.6}
-\end{equation}
- Zadnji dve enačbi morata biti hkrati izpolnjeni, zato velja zveza
-\begin{equation}
-k_{\perp}\tan k_{\perp}a=\kappa\label{9.7}
-\end{equation}
- Iz izrazov za $k_{\perp}$ in $\kappa$ dobimo še drugo zvezo 
-\begin{equation}
-k_{\perp}^{2}+\kappa^{2}=k_{0}^{2}\left(n_{1}^{2}-n_{0}^{2}\right)\label{9.8}
-\end{equation}
- Vpeljimo brezdimenzijske količine $\xi=ak_{\perp}$ , $\eta=a\kappa$
-in $V^{2}=a^{2}k_{0}^{2}\left(n_{1}^{2}-n_{0}^{2}\right)$. Z njimi
-lahko gornji enačbi zapišemo v prglednejši obliki 
-\begin{eqnarray}
-\xi\tan\xi & = & \eta\label{9.9}\\
-\xi^{2}+\eta^{2} & = & V^{2}
-\end{eqnarray}
- Dovoljene vrednosti $\xi$ in $\eta$ dobimo kot presečišča krogov
-z radijem $V$ in funkcije $\xi\tan\xi$, kar je prikazano na sliki
-\ref{sl9.2}.
-
-Lihe rešitve imajo v sredici obliko 
-\begin{equation}
-\psi_{II}(x)=C_{1}\sin k_{\perp}x\label{9.11}
-\end{equation}
- v plašču pa 
-\begin{equation}
-\psi_{I,III}\left(x\right)=\pm C_{0}\, e^{\kappa\left(a\mp x\right)}\label{9.12}
-\end{equation}
- Na enak način kot za sode rešitve dobimo iz robnih pogojev, da mora
-veljati zveza 
-\begin{equation}
-k_{\perp}\cot k_{\perp}a=-\kappa\label{9.13}
-\end{equation}
- ali 
-\begin{equation}
--\xi\cot\xi=\eta\label{9.14}
-\end{equation}
- Funkcija $-\xi\cot\xi$ je na sliki \ref{sl9.2} prikazana črtkano.
-Lastne vrednosti za lihe rešitve dobimo kot njena presečišča s krogomz
-radijem $V$.
-
-Parameter $V$ meri globino potencialne jame; iz slike vidimo, da
-eno vodeno valovanje (ali vezano stanje v kvantni mehaniki) vselej
-obstaja. Pri velikih vrednostih $V$ je rešitev za dovoljene vrednosti
-$\xi$ več. Razen največje so zelo blizu mnogokratniku $\pi/2$, kar
-da za dovoljene vrednosti $k_{\perp}$ približno mnogokratnike $\pi/(2a)$,
-kot smo pričakovali že v uvodu. Ko smo določili lastne vrednosti $k_{\perp}$,
-poznamo za vsak rod tudi disperzijsko zvezo med frekvenco in valovnim
-številom: 
-\begin{equation}
-n_{1}^{2}\frac{\omega^{2}}{c^{2}}=\beta^{2}+k_{\perp}^{2}\label{9.10}
-\end{equation}
- Pri tem je tudi lastna vrednost $k_{\perp}$ lahko nekoliko odvisna
-od $\omega$, ker je ta vsebovana v $V$.
 
 Osnovna lastna vrednost $\xi_{0}$ je pri $V<<1$ približno kar $V$.
 Zato je $k_{\perp}^{2}\simeq k_{0}^{2}(n_{1}^{2}-n_{0}^{2})$ in je
@@ -283,6 +258,11 @@ robnem pogoju za tangencialno komponento električnega polja nastopita
 dielektrični konstanti sredice in plašča, zato je predvsem najnižja
 lastna vrednost za $k_{\perp}$ nekoliko večja kot za TE valove. (Naloga)
 
+
+
+
+za delec v končno globoki enodimenzionalni potencialni jami v kvantni
+mehaniki, kjer lastni vrednosti energije ustreza $\beta^{2}$. 
 
 \section{Cilindrično vlakno}
 
