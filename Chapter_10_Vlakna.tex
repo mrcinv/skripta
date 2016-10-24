@@ -272,55 +272,67 @@ tudi v tem primeru ena rešitev za vezano stanje vedno obstaja.
 \end{remark}
 
 \section{Cilindrično vlakno}
-
-Običajna vlakna so seveda tridimenzionalna s cilindrično geometrijo.
-Najpreprostejša strukutra, povsem analogna gornjemu primeru planparalene
-plasti, je jedro s konstatnim lomnim količnikom, ki je nekoliko večji
-od lomnega količnika plašča. Pogoste so tudi zapletenejše konstrukcije,
-pri katerih je sredica sestavljena iz več kolobarjev z različnimi
-lomnimi količniki. S primerno izbiro je tako mogoče zelo zmanjšati
-disperzijo (Slika \ref{sl9.3}).
+Do zdaj smo obravnavali ravninski valovni vodnik. V praksi svetlobo
+navadno usmerjamo po optičnih vlaknih, ki imajo cilindrično geometrijo.
+Najpreprostejša struktura, ki je analogna gornjemu primeru planparalene
+plasti, je cilindrično vlakno, pri katerem je lomni količnik cilindričnega
+jedra konstanten in nekoliko večji od lomnega količnika plašča. Pogosto se uporablja
+tudi bolj zapletene konstrukcije, pri katerih je sredica sestavljena iz več 
+kolobarjev z različnimi lomnimi količniki. Zapletenejšo geometrijo izberemo zato, 
+da zmanjšamo disperzijo v vlaknu. 
 
 Račun za širjenje svetlobe po cilindričnem vlaknu s homogeno sredico
-je sicer podoben kot za planparalelni primer, vendar je precej bolj
-zapleten. Glavna komplikacija je, da v cilindrični geomteriji ni več
-delitve na čisto električno in magnento transverzalne valove, zato
-postanejo robni pogoji bolj zapleteni. Rešitve se izrazajo v obliki
-kombinacij Besselovih funkcij. Podrobnosti si bralec lahko ogleda
-v literaturi. Osnovne značilnosti rešite pa ostajajo
-enako kot v dvodimenzionalnem primeru. Kot smo ugotovili že na začetku,
-obstaja končno število vodenih valov, odvisno od premera sredice in
+je podoben kot za planparalelni vodnik, vendar je precej bolj
+zapleten. V cilindrični geomteriji namreč ni delitve na čiste električne in 
+magnente transverzalne valove in robni pogoji so sklopljeni. Rešitve se izražajo 
+v obliki kombinacij Besselovih funkcij, kot bomo obravnavali v razdelku~(\ref{chap:Cilinder}).
+Tudi v cilindričnih vlaknih obstaja končno število vodenih valov, odvisno od premera sredice in
 razlike lomnih količnikov sredice in plašča. Če sta ti količini majhni,
 obstaja le eno vodeno valovanje in imamo enorodovno vlakno. Za njegovo
 valovno število velja $n_{0}k_{0}<\beta<n_{1}k_{0}$.
 
-
 \section{Cilindrično vlakno s paraboličnim profilom lomnega količnika}
-
-V treh dimenzijah lahko hitro poiščemo rešitve za vlakno, v katerem
-je dielektrična konstanta kvadratna funkcija radialne koordinate $r$:
+Čeprav je račun lastnih načinov v cilindričnem vlaknu razmeroma zapleten, lahko 
+razmeroma enostavno poiščemo rešitve za vlakno, v katerem je dielektrična konstanta kvadratna 
+funkcija radialne koordinate $r$
 \begin{equation}
-n\left(r\right)^{2}=n_{0}^{2}+n_{2}^{2}\, r^{2}\label{9.15}
+n^2\left(r\right)=n_{0}^{2}-n_{2}^{2}\frac{r^{2}}{a^2}.
+\label{9.15}
 \end{equation}
- Parameter $n_{2}$ je v praksi vselej majhen, zato ima za vse smiselne
+Parameter $n_{2}$ je v praksi vselej majhen, zato ima za vse smiselne
 vrednosti $r$ tudi lomni količnik paraboličen profil. Parabolična
-sredica mora sveda biti omejena, okoli nje imamo zopet plašč s konstantnim
-lomnim količnikom (Slika \ref{sl9.4}). Tipičen radij sredice je nekaj
+sredica je seveda biti omejena, okoli nje je plašč s konstantnim
+lomnim količnikom (Slika \ref{sl9.4}). Tipičen polmer sredice $a$ je nekaj
 deset mikrometrov.
 
 Komponento polja za izbrano polarizacijo napišimo v obliki 
 \begin{equation}
-E=E_{0}\psi(x,y)\, e^{i\beta z}\label{9.16}
+E=E_{0}\psi(x,y)\, e^{i\beta z} e^{-i\omega t}
+\label{9.16}
 \end{equation}
- Zanemarili smo, da zaradi odvisnosti od prečnih koordinat in $\nabla\cdot{\bf E}=0$
+Zanemarili smo, da zaradi odvisnosti od prečnih koordinat in $\nabla\cdot{\bf E}=0$
 polje ne more imeti povsod iste smeri; če hočemo biti natančni, moramo
-v gornji obliki zapisati vektorski potencial. Postavimo približni
-nastavek v valovno enačbo. Dobimo enačbo 
+v gornji obliki zapisati vektorski potencial. Vstavimo približni
+nastavek~(\ref{9.16}) v valovno enačbo~(\ref{eq:valovna-skalarna}) in dobimo 
 \begin{equation}
-\nabla_{\perp}^{2}\psi+\left[k_{0}^{2}\left(n_{0}^{2}+n_{2}^{2}r^{2}\right)-\beta^{2}\right]\,\psi=0\label{9.17}
+\nabla_{\perp}^{2}\psi+\left[k_{0}^{2}\left(n_{0}^{2}-n_{2}^{2}\frac{r^{2}}{a^2}\right)-
+\beta^{2}\right]\,\psi=0,
+\label{9.17}
 \end{equation}
- ki je popolnoma enaka enačbi za krajevni del lastnih funkcij dvodimenzionalnega
-harmonskega oscilatorja v kvantni mehaniki. Rešitve imajo obliko 
+Rešitve lahko zapišemo v obliki
+\beq
+\psi(x,y) = X(x)Y(y)
+\eeq
+in dobimo dve neodvisni enačbi
+\beq
+X'' - \frac{k_0^2 n_2^2}{a^2}\,X\,x^2 - \lambda_1 X = 0 \qquad \mathrm{in} \qquad
+Y'' - \frac{k_0^2 n_2^2}{a^2}\,Y\,y^2 - \lambda_2 Y = 0.
+\eeq
+Opazimo, da sta enačbi popolnoma enaka enačbama za krajevni del lastnih funkcij 
+dvodimenzionalnega harmonskega oscilatorja v kvantni mehaniki.
+Rešitev posamezne enačbe je tako produkt Gaussove in Hermitove funkcije
+
+
 \begin{equation}
 \psi_{lm}=H_{l}\left(\sqrt{2}\frac{x}{w}\right)\, H_{m}\left(\sqrt{2}\frac{y}{w}\right)\, e^{-(x^{2}+y^{2})/w^{2}},\qquad w^{2}=\frac{\lambda}{\pi n_{2}}\label{9.18}
 \end{equation}
@@ -350,6 +362,10 @@ katerega divergenca in premer morata ustrezati ujetemu valu enorodovnega
 vlakna, če naj ne bo izgub. Zato se za krajše zveze uporabljajo mnogorodovna
 vlakna, ki imajo sredico s približno paraboličnim profilom lomnega
 količnika.
+
+
+\section{Izračun rodov v cilindričnem vlaknu}
+\label{chap:Cilinder}
 
 
 % \section{Sprememba lomnega količnika vlakna}
@@ -609,7 +625,7 @@ od disperzije v enorodnih vlaknih, zato je pri dani dolžini vlakna
 popačitev signala dosti večja in se mnogorodovna vlakna ne uporabljajo
 za dolge zveze.
 
-\section{ Potovanje sunka po enorodovnem vlaknu}
+\section{Potovanje sunka po enorodovnem vlaknu}
 Poglejmo si nekoliko podrobneje, kako po enorodovnem vlaknu ali drugem
 sredstvu z disperzijo potuje sunek valovanja z dano začetno obliko.
 Denimo, da smo poiskali lastna valovanja in da torej poznamo zvezo
