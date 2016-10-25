@@ -285,13 +285,15 @@ Račun za širjenje svetlobe po cilindričnem vlaknu s homogeno sredico
 je podoben kot za planparalelni vodnik, vendar je precej bolj
 zapleten. V cilindrični geomteriji namreč ni delitve na čiste električne in 
 magnente transverzalne valove in robni pogoji so sklopljeni. Rešitve se izražajo 
-v obliki kombinacij Besselovih funkcij, kot bomo obravnavali v razdelku~(\ref{chap:Cilinder}).
+v obliki kombinacij Besslovih funkcij, kot bomo obravnavali v razdelku~(\ref{chap:Cilinder}).
+Izkaže se, da je osnovni rod, ki se širi po cilindričnem vlaknu, po obliki zelo podoben
+Gaussovem snovu, zato je sklopitev laserskih snopov v optična vlakna zelo učinkovita.
 Tudi v cilindričnih vlaknih obstaja končno število vodenih valov, odvisno od premera sredice in
 razlike lomnih količnikov sredice in plašča. Če sta ti količini majhni,
 obstaja le eno vodeno valovanje in imamo enorodovno vlakno. Za njegovo
 valovno število velja $n_{0}k_{0}<\beta<n_{1}k_{0}$.
 
-\section{Cilindrično vlakno s paraboličnim profilom lomnega količnika}
+\subsection{Cilindrično vlakno s paraboličnim profilom lomnega količnika}
 Čeprav je račun lastnih načinov v cilindričnem vlaknu razmeroma zapleten, lahko 
 razmeroma enostavno poiščemo rešitve za vlakno, v katerem je dielektrična konstanta kvadratna 
 funkcija radialne koordinate $r$
@@ -313,7 +315,8 @@ E=E_{0}\psi(x,y)\, e^{i\beta z} e^{-i\omega t}
 Zanemarili smo, da zaradi odvisnosti od prečnih koordinat in $\nabla\cdot{\bf E}=0$
 polje ne more imeti povsod iste smeri; če hočemo biti natančni, moramo
 v gornji obliki zapisati vektorski potencial. Vstavimo približni
-nastavek~(\ref{9.16}) v valovno enačbo~(\ref{eq:valovna-skalarna}) in dobimo 
+nastavek~(enačba~\ref{9.16}) in krajevno odvistnost lomnega količnika~(enačba~\ref{9.15})
+v valovno enačbo~(\ref{eq:valovna-skalarna}) in dobimo 
 \begin{equation}
 \nabla_{\perp}^{2}\psi+\left[k_{0}^{2}\left(n_{0}^{2}-n_{2}^{2}\frac{r^{2}}{a^2}\right)-
 \beta^{2}\right]\,\psi=0,
@@ -326,46 +329,97 @@ Rešitve lahko zapišemo v obliki
 in dobimo dve neodvisni enačbi
 \beq
 X'' - \frac{k_0^2 n_2^2}{a^2}\,X\,x^2 - \lambda_1 X = 0 \qquad \mathrm{in} \qquad
-Y'' - \frac{k_0^2 n_2^2}{a^2}\,Y\,y^2 - \lambda_2 Y = 0.
+Y'' - \frac{k_0^2 n_2^2}{a^2}\,Y\,y^2 - \lambda_2 Y = 0,
+\label{eq:XY}
 \eeq
-Opazimo, da sta enačbi popolnoma enaka enačbama za krajevni del lastnih funkcij 
-dvodimenzionalnega harmonskega oscilatorja v kvantni mehaniki.
-Rešitev posamezne enačbe je tako produkt Gaussove in Hermitove funkcije
-
-
+pri čemer sta $\lambda_1$ in $\lambda_2$ konstanti. 
+Opazimo, da sta enačbi popolnoma enaki enačbama za krajevni del lastnih funkcij 
+harmonskega oscilatorja v kvantni mehaniki. Rešitev posamezne enačbe je tako 
+produkt Gaussove in Hermitove funkcije
+\beq
+X_n(x) = e^{-\xi^2 x^2/2} H_n(\xi x),
+\label{eq:GH}
+\eeq
+pri čemer je $\xi = \sqrt{k_0n_2/a}$.
+\begin{definition}
+Uporabi nastavek~(\ref{eq:GH}) in pokaži, da reši enačbo~(\ref{eq:XY}). Pri tem si pomagaj z 
+diferencialno enačbo za Hermitove polinome
+\beq
+\left( \frac{d^2}{dx^2}-2x\frac{d}{dx}+2n \right) H_n(x) = 0.
+\eeq
+\end{definition}
+Lastne vrednosti enačbe pa so oblike
 \begin{equation}
-\psi_{lm}=H_{l}\left(\sqrt{2}\frac{x}{w}\right)\, H_{m}\left(\sqrt{2}\frac{y}{w}\right)\, e^{-(x^{2}+y^{2})/w^{2}},\qquad w^{2}=\frac{\lambda}{\pi n_{2}}\label{9.18}
+\beta_{mn}^{2}=n_{0}^{2}k_{0}^{2}\left(1-\frac{2n_{2}}{k_{0}n_{0}^2a}\left(m+n+1\right)\right).
+\label{9.19}
 \end{equation}
- z lastnimi vrednostmi 
+Drugi člen v oklepaju je navadno zelo majhen, zato lahko izraz razvijemo in 
+\beq
+\beta_{mn}=n_{0}k_{0}\left(1-\frac{n_{2}}{k_{0}n_{0}^2 a}\left(m+n+1\right)\right)
+= n_{0}k_{0} - \frac{n_{2} \left(m+n+1\right)}{n_{0} a}.
+\eeq
+Če je $n_{2}$ neodvisen od frekvence, je grupna hitrost 
 \begin{equation}
-\beta_{lm}^{2}=n_{0}^{2}k_{0}^{2}\left[1-\frac{2n_{2}}{k_{0}n_{0}}\left(l+m+1\right)\right]\label{9.19}
+v_{g}=\left(\frac{d\beta_{mn}}{d\omega}\right)^{-1}=\frac{c_{0}}{n_{0}}
+\label{9.21}
 \end{equation}
- Razmerje $2n_{2}/\left(k_{0}n_{0}\right)$ je majhno, zato je približno
-$\beta_{lm}=n_{0}k_{0}\left[1-\frac{n_{2}}{k_{0}n_{0}}\left(l+m+1\right)\right].$Če
-je $n_{2}$ neodvisen od frekvence, je grupna hitrost 
-\begin{equation}
-v_{g}=\left(\frac{d\beta_{lm}}{d\omega}\right)^{-1}=\frac{c_{0}}{n_{0}}\label{9.21}
-\end{equation}
- enaka za vse rodove, kar je značilnost vlakna s kvadratnim profilom
+in je enaka za vse rodove. To je pomembna značilnost vlakna s kvadratnim profilom
 lomnega količnika. V dejanskem vlaknu je seveda taka odvisnost možna
 le v omejenem območju sredice, zato je tudi gornja analiza le približna
-in velja dobro za tiste rodove, ki se ne raztezajo izven sredice.
+in velja dobro za tiste rodove, ki se ne raztezajo dosti izven sredice.
 
-Neodvisnost grupne hitrosti od reda valovanja v vlaknu je praktično
-pomembna. Grupna hitrost določa čas potovanja svetlobnega sunka, ki
-lahko predstavlja en bit informacije. Če se po vlaknu lahko širi več
-rodov, ki imajo različno grupno hitrost, se sunek po prehodu skozi
-vlakno razširi, kar omejuje uporabno dolžino vlakna, kot bomo podrobneje
-videli kasneje. Temu se lahko izognemo z uporabo enorodovnih vlaken,
-ki pa so dražja in je vanje te\textquotedbl{}je uvesti svetlobni snop,
-katerega divergenca in premer morata ustrezati ujetemu valu enorodovnega
-vlakna, če naj ne bo izgub. Zato se za krajše zveze uporabljajo mnogorodovna
-vlakna, ki imajo sredico s približno paraboličnim profilom lomnega
-količnika.
+Neodvisnost grupne hitrosti od roda je praktično zelo pomembna. 
+Grupna hitrost namreč določa čas potovanja svetlobnega sunka, ki
+lahko predstavlja en bit informacije. Če se po vlaknu širi več
+rodov z različno grupno hitrostjo, se sunek po prehodu skozi
+vlakno razširi, kar -- kot bomo podrobneje videli pozneje -- omejuje 
+uporabno dolžino vlakna. Temu se sicer lahko izognemo z uporabo enorodovnih vlaken,
+ki pa so dražja, poleg tega morata divergenca in polmer svetlobnega snopa 
+natančno ustrezati značilnostim enorodovnega vlakna, da se izognemo izgubam. 
+Zato se za krajše zveze uporabljajo mnogorodovna vlakna, ki imajo sredico s 
+približno paraboličnim profilom lomnega količnika.
 
-
-\section{Izračun rodov v cilindričnem vlaknu}
+\subsection{Rodov v cilindričnem vlaknu}
 \label{chap:Cilinder}
+Točen izračun za rodove v cilindričnem vlaknu presega okvire tega učbenika, zato
+si oglejmo le izhodiščne enačbe in rešitve\footnote{Točen izračun lahko bralec poišče npr. v Davis, 
+{\it Lasers and Electro-optics}.} Za vsako komponento jakosti električnega in magnetnega polja velja 
+Helmholtzeva enačba~(\ref{eq:Helmholtz})
+\beq
+\nabla^2 \mathbf{E} + k_0^2 n(r)^2 \mathbf{E} = 0,
+\eeq
+pri čemer je $n(r<a)=n_1$ lomni količnik v jedru in $n(r>a)=n_2$ lomni količnik plašča, ki je dovolj
+debel, da njegova debelina ne vpliva na potovanje svetlobe. $\mathbf{E}$ je v splošnem vektor in ima
+tri komponente, ki pa so med seboj odvisne. Izračunajmo naprej $E_z$ z nastavkom
+\beq
+E_z = R(r)e^{i \nu \phi}e^{i \beta z},
+\eeq
+pri čemer je $\nu$ celo število zaradi zahteve po enoličnosti rešitve. Za $R(r)$ dobimo v sredici vlakna enačbo
+\beq
+r^2 R(r)'' + r R(r)' + (k_s^2r^2 - \nu^2)R(r) = 0,
+\eeq
+kjer je $k_s^2=k_0^2n_1^2- \beta^2$,
+in v plašču
+\beq
+r^2 R(r)'' + r R(r)' + (-\kappa^2r^2 - \nu^2)R(r) = 0,
+\eeq
+kjer je $\kappa^2=\beta^2-k_0^2n_2^2$. V gornjih enačbah prepoznamo Besselovo differencialno enačbo. Upoštevajoč
+le končne funkcije, dobimo v sredici rešitev
+\beq
+E_z = J_\nu(k_sr)e^{i \nu \phi}e^{i \beta z}
+\eeq
+in v plašču
+\beq
+E_z = K_\nu(\kappa r)e^{i \nu \phi}e^{i \beta z},
+\eeq
+kjer je $J_\nu(x)$ Besslova funkcija prve vrste reda $\nu$, $K_\nu(x)$ pa modificirana Besslova
+funkcija druge vrste reda $\nu$.
+
+
+
+
+
+
 
 
 % \section{Sprememba lomnega količnika vlakna}
@@ -517,7 +571,7 @@ $\beta=m/R$. $\psi$ zadošča enačbi
 \begin{equation}
 \frac{d^{2}\psi}{dr^{2}}+\frac{1}{r}\,\frac{d\psi}{dr}+\left[k_{0}^{2}\, n^{2}\left(r\right)-\frac{m^{2}}{r^{2}}\right]\psi=0\label{9.33}
 \end{equation}
- Rešitve za $\psi$ so kombinacije Besselovih funkcij reda $m$, kar
+ Rešitve za $\psi$ so kombinacije Besslovih funkcij reda $m$, kar
 pa zaradi velikosti $m$ ni posebno zanimivo. Dosti več bomo izvedeli,
 če primerno preoblikujemo valovno enačbo \ref{9.31}. Namesto $r$
 in $\phi$ vpeljimo koordinati $x=r-R$ in $z=R\phi$. S tem smo prešli
