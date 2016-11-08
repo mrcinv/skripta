@@ -400,7 +400,7 @@ lomni količnik plašča, ki je dovolj debel, da njegova debelina ne
 vpliva na potovanje svetlobe. $\mathbf{E}$ (in $\mathbf{H}$) je v splošnem vektor in ima
 tri komponente, ki pa so med seboj odvisne. Izračunajmo naprej $E_z$ z nastavkom
 \beq
-E_z = R(r)e^{i \nu \phi}e^{i \beta z},
+E_z = R(r)e^{i \nu \varphi}e^{i \beta z},
 \eeq
 pri čemer je $\nu$ celo število zaradi zahteve po enoličnosti rešitve pri spremembi
 kota za $2\pi$. Za $R(r)$ dobimo v sredici vlakna enačbo
@@ -416,36 +416,49 @@ kjer je $\kappa^2=\beta^2-k_0^2n_2^2$.
 V gornjih enačbah prepoznamo Besslovo differencialno enačbo. 
 Upoštevajoč le končne funkcije, dobimo v sredici rešitev
 \beq
-E_z = J_\nu(k_sr)e^{i \nu \phi}e^{i \beta z}
+E_z (r, \varphi, z) = A J_\nu(k_sr)e^{i \nu \varphi}e^{i \beta z} \quad  \mathrm{in} \quad 
+H_z (r, \varphi, z) = B J_\nu(k_sr)e^{i \nu \varphi}e^{i \beta z} 
 \eeq
 in v plašču
 \beq
-E_z = K_\nu(\kappa r)e^{i \nu \phi}e^{i \beta z},
+E_z = C K_\nu(\kappa r)e^{i \nu \varphi}e^{i \beta z} \quad \mathrm{in} \quad 
+H_z = D K_\nu(\kappa r)e^{i \nu \varphi}e^{i \beta z},
 \eeq
-kjer je $J_\nu(x)$ Besslova funkcija prve vrste reda $\nu$, $K_\nu(x)$ pa modificirana Besslova
-funkcija druge vrste reda $\nu$.
+kjer je $J_\nu(x)$ Besslova funkcija prve vrste reda $\nu$, $K_\nu(x)$ modificirana Besslova
+funkcija druge vrste reda $\nu$, $A,B,C$ in $D$ pa so konstante.
 \begin{figure}[h]
 \centering
 \def\svgwidth{70truemm} 
-%\input{slike/10_J0.pdf_tex} 
+\input{slike/10_Bessel1.pdf_tex} 
 \quad
 \def\svgwidth{70truemm} 
-%\input{slike/10_J1.pdf_tex} 
-\caption{Osnovna rodova širjenja svetlobe po optičnem vlaknu}
+\input{slike/10_Bessel2.pdf_tex} 
+\caption{Levo: Besslove funkcije prve vrste $J_0(x)$ (črna), $J_1(x)$ (rdeča) in $J_2(x)$ (modra). Desno:
+modificirane Besslove funkcije druge vrste $K_0(x)$ (črna), $K_1(x)$ (rdeča) in $K_2(x)$ (modra).}
 \label{fig:J01}
 \end{figure}
+
+Ko enkrat poznamo komponente $E_z$ in $H_z$, lahko z uporabo Maxwellovih enačb izrazimo še ostale
+komponente. Nato z upoštevanjem robnih pogojev dobimo štiri enačbe za pet neznank ($A,B,C,D$ in $\beta$),
+tako da ostane ena spremenljivka (amplituda polja) prosta. Na ta način izračunamo celotni 
+jakosti električnega in magnetnega polja v vodniku in podobno kot pri valovnem vodniku 
+tudi tukaj dobimo sekularno enačbo, ki jo moramo rešiti numerično. Reš
+
+
+
+
+
+
+Zapis je zelo zapleten, navadno pa ga poenostavimo s približkom $n_1 \approx n_2$. 
+
+Rešitve so omejene z normiramo frekvenco in ničlami Besslove funkcije. Vlakno je enorodovno, kadar
+je $V<2,405$, pri čemer je to numerična vrednost prve ničle Besslove funkcije $J_0$. 
+
 
 Tudi tukaj velja zveza $\kappa^2+k_s^2=(NA)^2k_0^2$. Vpeljemo lahko še normirano frekvenco 
 $V = NA\, k_0 a$, ki se bo pozneje izkazala za uporabno, saj lahko z njo preprosto izrazimo število
 rodov, ki se širijo po vlaknu.
 
-Ko enkrat poznamo komponente $E_z$ in $H_z$, lahko z uporabo Maxwellovih enačb izrazimo še ostale
-komponente in z upoštevanjem robnih pogojev izračunamo celotni jakosti električnega in magnetnega
-polja. Zapis je zelo zapleten, navadno pa ga poenostavimo s približkom $n_1 \approx n_2$. Podobno
-kot pri valovnem vodniku tudi tukaj dobimo sekularno enačbo, ki jo moramo rešiti numerično.
-
-Rešitve so omejene z normiramo frekvenco in ničlami Besslove funkcije. Vlakno je enorodovno, kadar
-je $V<2,405$, pri čemer je to numerična vrednost prve ničle Besslove funkcije $J_0$. 
 
 Osnovni rod je linearno polariziran $LP_{01x}$ ali $LP_{01y}$. Je skoraj Gaussov, ga približamo 
 po Marcusejevi formuli $exp(-r^2/w^2)$,
