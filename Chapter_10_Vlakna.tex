@@ -294,9 +294,9 @@ obstaja le eno vodeno valovanje in imamo enorodovno vlakno. Za njegovo
 valovno število velja $n_{0}k_{0}<\beta<n_{1}k_{0}$.
 
 \subsection{Cilindrično vlakno s paraboličnim profilom lomnega količnika}
-Čeprav je račun lastnih načinov v cilindričnem vlaknu razmeroma zapleten, lahko 
-razmeroma enostavno poiščemo rešitve za vlakno, v katerem je dielektrična konstanta kvadratna 
-funkcija radialne koordinate $r$
+Čeprav je račun lastnih načinov v cilindričnem vlaknu zapleten, lahko 
+razmeroma enostavno poiščemo rešitve za vlakno, v katerem je dielektrična 
+konstanta kvadratna funkcija radialne koordinate $r$
 \begin{equation}
 n^2\left(r\right)=n_{0}^{2}-n_{2}^{2}\frac{r^{2}}{a^2}.
 \label{9.15}
@@ -304,8 +304,15 @@ n^2\left(r\right)=n_{0}^{2}-n_{2}^{2}\frac{r^{2}}{a^2}.
 Parameter $n_{2}$ je v praksi vselej majhen, zato ima za vse smiselne
 vrednosti $r$ tudi lomni količnik paraboličen profil. Parabolična
 sredica je seveda biti omejena, okoli nje je plašč s konstantnim
-lomnim količnikom (Slika \ref{sl9.4}). Tipičen polmer sredice $a$ je nekaj
+lomnim količnikom $n_1 \approx n_0-n_2^2/2n_0$ (slika~\ref{fig:GRIN}). Tipičen polmer sredice $a$ je nekaj
 deset mikrometrov.
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/10_GRIN.pdf_tex} 
+\caption{Parabolični profil lomnega količnika sredice zmanjša disperzijo v vlaknu.}
+\label{fig:GRIN}
+\end{figure}
 
 Komponento polja za izbrano polarizacijo napišimo v obliki 
 \begin{equation}
@@ -348,7 +355,7 @@ diferencialno enačbo za Hermitove polinome
 \left( \frac{d^2}{dx^2}-2x\frac{d}{dx}+2n \right) H_n(x) = 0.
 \eeq
 \end{definition}
-Lastne vrednosti enačbe pa so oblike
+Lastne vrednosti enačbe so oblike
 \begin{equation}
 \beta_{mn}^{2}=n_{0}^{2}k_{0}^{2}\left(1-\frac{2n_{2}}{k_{0}n_{0}^2a}\left(m+n+1\right)\right).
 \label{9.19}
@@ -358,12 +365,12 @@ Drugi člen v oklepaju je navadno zelo majhen, zato lahko izraz razvijemo in
 \beta_{mn}=n_{0}k_{0}\left(1-\frac{n_{2}}{k_{0}n_{0}^2 a}\left(m+n+1\right)\right)
 = n_{0}k_{0} - \frac{n_{2} \left(m+n+1\right)}{n_{0} a}.
 \eeq
-Če je $n_{2}$ neodvisen od frekvence, je grupna hitrost 
+Ob privzetku, da je $n_{2}$ neodvisen od frekvence, je grupna hitrost 
 \begin{equation}
 v_{g}=\left(\frac{d\beta_{mn}}{d\omega}\right)^{-1}=\frac{c_{0}}{n_{0}}
 \label{9.21}
 \end{equation}
-in je enaka za vse rodove. To je pomembna značilnost vlakna s kvadratnim profilom
+enaka za vse rodove. To je pomembna značilnost vlakna s kvadratnim profilom
 lomnega količnika. V dejanskem vlaknu je seveda taka odvisnost možna
 le v omejenem območju sredice, zato je tudi gornja analiza le približna
 in velja dobro za tiste rodove, ki se ne raztezajo dosti izven sredice.
@@ -379,22 +386,24 @@ natančno ustrezati značilnostim enorodovnega vlakna, da se izognemo izgubam.
 Zato se za krajše zveze uporabljajo mnogorodovna vlakna, ki imajo sredico s 
 približno paraboličnim profilom lomnega količnika.
 
-\subsection{Rodov v cilindričnem vlaknu}
+\subsection{Rodovi v cilindričnem vlaknu}
 \label{chap:Cilinder}
 Točen izračun za rodove v cilindričnem vlaknu presega okvire tega učbenika, zato
 si oglejmo le izhodiščne enačbe in rešitve\footnote{Točen izračun lahko bralec poišče npr. v Davis, 
-{\it Lasers and Electro-optics}.} Za vsako komponento jakosti električnega in magnetnega polja velja 
+{\it Lasers and Electro-optics}.} Za jakost električnega in magnetnega polja velja 
 Helmholtzeva enačba~(\ref{eq:Helmholtz})
 \beq
 \nabla^2 \mathbf{E} + k_0^2 n(r)^2 \mathbf{E} = 0,
 \eeq
-pri čemer je $n(r<a)=n_1$ lomni količnik v jedru in $n(r>a)=n_2$ lomni količnik plašča, ki je dovolj
-debel, da njegova debelina ne vpliva na potovanje svetlobe. $\mathbf{E}$ je v splošnem vektor in ima
+pri čemer je $n(r<a)=n_1$ lomni količnik sredice in $n(r>a)=n_2$ 
+lomni količnik plašča, ki je dovolj debel, da njegova debelina ne 
+vpliva na potovanje svetlobe. $\mathbf{E}$ (in $\mathbf{H}$) je v splošnem vektor in ima
 tri komponente, ki pa so med seboj odvisne. Izračunajmo naprej $E_z$ z nastavkom
 \beq
 E_z = R(r)e^{i \nu \phi}e^{i \beta z},
 \eeq
-pri čemer je $\nu$ celo število zaradi zahteve po enoličnosti rešitve. Za $R(r)$ dobimo v sredici vlakna enačbo
+pri čemer je $\nu$ celo število zaradi zahteve po enoličnosti rešitve pri spremembi
+kota za $2\pi$. Za $R(r)$ dobimo v sredici vlakna enačbo
 \beq
 r^2 R(r)'' + r R(r)' + (k_s^2r^2 - \nu^2)R(r) = 0,
 \eeq
@@ -425,6 +434,7 @@ funkcija druge vrste reda $\nu$.
 \caption{Osnovna rodova širjenja svetlobe po optičnem vlaknu}
 \label{fig:J01}
 \end{figure}
+
 Tudi tukaj velja zveza $\kappa^2+k_s^2=(NA)^2k_0^2$. Vpeljemo lahko še normirano frekvenco 
 $V = NA\, k_0 a$, ki se bo pozneje izkazala za uporabno, saj lahko z njo preprosto izrazimo število
 rodov, ki se širijo po vlaknu.
