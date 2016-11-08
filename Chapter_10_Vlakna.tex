@@ -416,13 +416,13 @@ kjer je $\kappa^2=\beta^2-k_0^2n_2^2$.
 V gornjih enačbah prepoznamo Besslovo differencialno enačbo. 
 Upoštevajoč le končne funkcije, dobimo v sredici rešitev
 \beq
-E_z (r, \varphi, z) = A J_\nu(k_sr)e^{i \nu \varphi}e^{i \beta z} \quad  \mathrm{in} \quad 
-H_z (r, \varphi, z) = B J_\nu(k_sr)e^{i \nu \varphi}e^{i \beta z} 
+E_z (r, \varphi, z) = A J_\nu(k_sr)\sin(\nu \varphi)e^{i \beta z} \quad  \mathrm{in} \quad 
+H_z (r, \varphi, z) = B J_\nu(k_sr)\cos(\nu \varphi)e^{i \beta z} 
 \eeq
 in v plašču
 \beq
-E_z = C K_\nu(\kappa r)e^{i \nu \varphi}e^{i \beta z} \quad \mathrm{in} \quad 
-H_z = D K_\nu(\kappa r)e^{i \nu \varphi}e^{i \beta z},
+E_z = C K_\nu(\kappa r)\sin(\nu \varphi)e^{i \beta z} \quad \mathrm{in} \quad 
+H_z = D K_\nu(\kappa r)\cos(\nu \varphi)e^{i \beta z},
 \eeq
 kjer je $J_\nu(x)$ Besslova funkcija prve vrste reda $\nu$, $K_\nu(x)$ modificirana Besslova
 funkcija druge vrste reda $\nu$, $A,B,C$ in $D$ pa so konstante.
@@ -442,8 +442,35 @@ Ko enkrat poznamo komponente $E_z$ in $H_z$, lahko z uporabo Maxwellovih enačb 
 komponente. Nato z upoštevanjem robnih pogojev dobimo štiri enačbe za pet neznank ($A,B,C,D$ in $\beta$),
 tako da ostane ena spremenljivka (amplituda polja) prosta. Na ta način izračunamo celotni 
 jakosti električnega in magnetnega polja v vodniku in podobno kot pri valovnem vodniku 
-tudi tukaj dobimo sekularno enačbo, ki jo moramo rešiti numerično. Reš
+tudi tukaj dobimo sekularno enačbo, ki jo moramo rešiti numerično. Pri vsakem $\nu$ tako dobimo več
+rešitev, ki jih zato označujemo z dvema indeksoma $\nu,m$. Pri tem $m$ določa število vrhov v
+radialni smeri, $2\nu$ pa število vrhov po kotu $\varphi$. 
 
+Najprej si oglejmo rešitve, pri katerih je $\nu=0$. V klasični sliki so to žarki, ki potujejo
+po osi vlakna. Iz robnih pogojev (in klasične analogije) sledi, da 
+so to transverzalni TE$_0m$ rodovi, za katere velja $E_z=0$, $E_r=0$ in $E_\varphi \propto J_1(k_sr)$.
+Podobno lahko prepoznamo tudi TM$_0m$ rodove, pri katerih je $H_z=0$, $H_r=0$ in $H_\varphi \propto J_1(k_sr)$.
+Opazimo, da je velikost Poyntingovega vektorja za TE in TM rodove 
+\beq
+S(r) \propto J_1^2(k_sr)
+\eeq
+v izhodišču enaka nič (glej sliko~\ref{fig:TE01}).
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/10_TE01.png} 
+\caption{Gostota svetlobnega toka za TE$_01$ rod. Električna poljska jakost }
+\label{fig:GRIN}
+\end{figure}
+
+
+
+
+Ustrezna sekularna enačba je
+\beq
+\frac{J_1(k_sr)}{k_srJ_0(k_sr)}+\frac{K_1(\kappa r)}{\kappa r K_0(\kappa r)}=0,
+\eeq
+katere zaporedne rešitve označimo z indeksom $m$. 
 
 
 
