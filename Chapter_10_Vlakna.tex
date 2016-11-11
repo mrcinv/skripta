@@ -448,35 +448,56 @@ radialni smeri, $2\nu$ pa število vrhov po kotu $\varphi$.
 
 Najprej si oglejmo rešitve, pri katerih je $\nu=0$. V klasični sliki so to žarki, ki potujejo
 po osi vlakna. Iz robnih pogojev (in klasične analogije) sledi, da 
-so to transverzalni TE$_0m$ rodovi, za katere velja $E_z=0$, $E_r=0$ in $E_\varphi \propto J_1(k_sr)$.
-Podobno lahko prepoznamo tudi TM$_0m$ rodove, pri katerih je $H_z=0$, $H_r=0$ in $H_\varphi \propto J_1(k_sr)$.
-Opazimo, da je velikost Poyntingovega vektorja za TE in TM rodove 
+so to transverzalni TE$_{0m}$ rodovi, za katere velja $E_z=0$, $E_r=0$ in $E_\varphi \propto J_1(k_sr)$.
+Podobno lahko prepoznamo tudi TM$_{0m}$ rodove, pri katerih je $H_z=0$, $H_r=0$ in $H_\varphi \propto J_1(k_sr)$.
+Velikost Poyntingovega vektorja za TE in TM je rodove 
 \beq
 S(r) \propto J_1^2(k_sr)
 \eeq
-v izhodišču enaka nič (glej sliko~\ref{fig:TE01}).
+v zato v izhodišču enaka nič (glej sliko~\ref{fig:TE01}).
+\begin{figure}[h]
+\centering
+\def\svgwidth{60truemm} 
+\input{slike/10_TE01.pdf_tex}
+\def\svgwidth{60truemm} 
+\input{slike/10_TE01s.pdf_tex} 
+\caption{Gostota svetlobnega toka in smer električna poljske jakosti za TE$_{01}$ rod}
+\label{fig:TE01}
+\end{figure}
+Podobno kot smo zapisali sekularno enačbo v valovnem vodniku (enačba~\ref{sekular1}) tudi tukaj
+zapišemo enačbo, s katero lahko določimo $k_s$. Ob približku, da se lomna količnika 
+sredice in plašča le malo razlikujeta, je ustrezna enačba za TE valovanje
+\beq
+\frac{J_1(k_sr)}{k_srJ_0(k_sr)}+\frac{K_1(\kappa r)}{\kappa r K_0(\kappa r)}=0,
+\label{sekFiber}
+\eeq
+pri čemer zaporedne rešitve enačbe označimo z indeksom $m$. V enačbi za TM rodove moramo
+členu na levi dodati še faktor $(n_1/n_2)^2$.
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
-\input{slike/10_TE01.png} 
-\caption{Gostota svetlobnega toka za TE$_01$ rod. Električna poljska jakost }
-\label{fig:GRIN}
-\end{figure}
+\input{slike/10_SekFiber.pdf_tex}
+\caption{K izračunu prečnih komponent valovnega vektorja za TE polarizacijo v cilindričnem vlaknu.
+Leva stran sekularne enačbe (enačba~\ref{sekFiber}) je narisana s črno, desna pa z rdečo in modro
+za dve različno debeli vlakni.}
+\label{fig:TEsecFib}
+\end{figure} 
+Leva in desna stran sekularne enačbe sta prikazani na sliki~\ref{fig:TEsecFib} za dve 
+debelini vlaken. V prvem primeru je $V = \sqrt{n_1^2-n_2^2}2\pi r/\lambda = 8$ in ima enačba
+dve rešitvi, v drugem pa je $V=2$ in enačba nima rešitev. Obstaja torej nek najmanjši polmer vlakna,
+pri katerem se TE (ali TM) valovanje sploh širi po takem vlaknu. Meja je določena s prvo ničlo
+Besslove funkcije $J_0$. Če je torej $V < 2,405$, se TE in TM valovanji po vlaknu ne širita. Iz
+tega (in tudi oblike rešitve) lahko sklepamo, da TE in TM nista osnovna načina za širjenje 
+svetlobe po vlaknu.
+
+Poglejmo še rešitve, pri katerih $\nu \neq 0$. 
 
 
 
-
-Ustrezna sekularna enačba je
-\beq
-\frac{J_1(k_sr)}{k_srJ_0(k_sr)}+\frac{K_1(\kappa r)}{\kappa r K_0(\kappa r)}=0,
-\eeq
-katere zaporedne rešitve označimo z indeksom $m$. 
+Razberemo,
+da ima v tem primeru enačba dve rešitvi, pri dovolj majhnem 
 
 
-
-
-
-Zapis je zelo zapleten, navadno pa ga poenostavimo s približkom $n_1 \approx n_2$. 
 
 Rešitve so omejene z normiramo frekvenco in ničlami Besslove funkcije. Vlakno je enorodovno, kadar
 je $V<2,405$, pri čemer je to numerična vrednost prve ničle Besslove funkcije $J_0$. 
@@ -786,14 +807,14 @@ v obliki
 \begin{equation}
 E\left(z,t\right)=a\left(z,t\right)\,\psi\left(x,y\right)\label{9.61}
 \end{equation}
- kjer je $\psi\left(x,y\right)$ lastna rešitev prečenega dela valovne
+kjer je $\psi\left(x,y\right)$ lastna rešitev prečenega dela valovne
 enačbe, ki določa tudi $\beta\left(\omega\right)$. Funkcijo $a\left(z,t\right)$,
 ki opisuje širjenje sunka in njegovo obliko v $z$ smeri, lahko zapišemo
 s Fourierovim integralom po frekvencah 
 \begin{equation}
 a\left(z,t\right)=\int a(\omega,z)\, e^{-i\omega t}d\omega\label{9.62}
 \end{equation}
- Sunek naj bo približno monokromatičen s frekvenco $\omega_{0}$,
+Sunek naj bo približno monokromatičen s frekvenco $\omega_{0}$,
 to pomeni, da je mnogo daljši od optične periode. Pri določeni $\omega$
 ima Fourierova amplituda krajevno odvisnost $\exp[i\,\beta\left(\omega\right)\, z]$,
 zato zadošča enačbi 
