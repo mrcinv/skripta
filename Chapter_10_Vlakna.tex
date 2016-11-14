@@ -446,7 +446,8 @@ tudi tukaj dobimo sekularno enačbo, ki jo moramo rešiti numerično. Pri vsakem
 rešitev, ki jih zato označujemo z dvema indeksoma $\nu,m$. Pri tem $m$ določa število vrhov v
 radialni smeri, $2\nu$ pa število vrhov po kotu $\varphi$. 
 
-Najprej si oglejmo rešitve, pri katerih je $\nu=0$. V klasični sliki so to žarki, ki potujejo
+Najprej si oglejmo rešitve, pri katerih je $\nu=0$ in nimajo kotne odvisnosti. 
+V klasični sliki so to žarki, ki potujejo
 po osi vlakna. Iz robnih pogojev (in klasične analogije) sledi, da 
 so to transverzalni TE$_{0m}$ rodovi, za katere velja $E_z=0$, $E_r=0$ in $E_\varphi \propto J_1(k_sr)$.
 Podobno lahko prepoznamo tudi TM$_{0m}$ rodove, pri katerih je $H_z=0$, $H_r=0$ in $H_\varphi \propto J_1(k_sr)$.
@@ -482,61 +483,49 @@ Leva stran sekularne enačbe (enačba~\ref{sekFiber}) je narisana s črno, desna
 za dve različno debeli vlakni.}
 \label{fig:TEsecFib}
 \end{figure} 
-Leva in desna stran sekularne enačbe sta prikazani na sliki~\ref{fig:TEsecFib} za dve 
-debelini vlaken. V prvem primeru je $V = \sqrt{n_1^2-n_2^2}2\pi r/\lambda = 8$ in ima enačba
-dve rešitvi, v drugem pa je $V=2$ in enačba nima rešitev. Obstaja torej nek najmanjši polmer vlakna,
+Leva in desna stran sekularne enačbe sta prikazani na sliki~(\ref{fig:TEsecFib}) za dve 
+debelini vlaken. V prvem primeru je $V = NA \, 2\pi r/\lambda = 8$ (rdeča črta) in ima enačba
+dve rešitvi, v drugem pa je $V=2$ (modra črta) in enačba nima rešitev. 
+Obstaja torej nek najmanjši polmer vlakna,
 pri katerem se TE (ali TM) valovanje sploh širi po takem vlaknu. Meja je določena s prvo ničlo
 Besslove funkcije $J_0$. Če je torej $V < 2,405$, se TE in TM valovanji po vlaknu ne širita. Iz
 tega (in tudi oblike rešitve) lahko sklepamo, da TE in TM nista osnovna načina za širjenje 
 svetlobe po vlaknu.
 
-Poglejmo še rešitve, pri katerih $\nu \neq 0$. 
+Poglejmo zdaj še rešitve, pri katerih $\nu \neq 0$. Iz robnih pogojev sledi, da je 
+vseh šest komponent električnega in magnetnega polja rodov različnih od nič in imajo vsi rodovi
+tudi komponento v smeri $z$. Take rodove imenujemo hibridni rodovi in jih 
+označimo s HE, če je $E_z$ razmeroma velik in primerljiv z $E_r$ in $E_\varphi$, 
+oziroma z EH, če je $H_z$ po velikosti primerljiv s $H_r$ in $H_\varphi$. Njihova sekularna 
+enačba je precej bolj zapletena in je niti ne bomo zapisali. Pomembno je le, da rešitev
+sekularne enačbe za HE vedno obstoja, ne glede na debelino vlakna.
 
+Za praktično uporabna optična vlakna navadno velja $n_1 \approx n_2$. Takrat se enačbe poenostavijo
+in posamezni rodovi postanejo degenerirani -- imajo enako rešitev. Tako so, na primer, degenerirani
+TE$_{0m}$, TM$_{0m}$ in HE$_{2m}$. Združimo jih lahko v linearno kombinacijo in dobimo bolj 
+priročen LP$_{01}$ rod, NAROBEki je pretežno linearno polariziran. Ta linearno polariziran rod je v središču različen od nič in je tudi osnovni rod, ki se širi po vlaknu. Je edini, za katerega rešitev obstaja
+v še tako tankem vlaknu.
+Zelo dobro ga lahko opišemo s približkom Gaussove oblike $\exp(-r^2/w^2)$ po tako imenovani Marcusejevi 
+formuli\footnote{D. Marcuse, Bell Syst. Tech. J. 56, 703 (1977).}
+\beq 
+w^2 = (0,65 + 1,619 V^{-3/2}+2,879V^{-6})a,
+\eeq
+kjer je $w$ efektivni polmer roda. 
 
-
-Razberemo,
-da ima v tem primeru enačba dve rešitvi, pri dovolj majhnem 
-
-
+Dodatna 
+degeneracija se pojavi med HE$_{\nu+1,m}$ in EH$_{\nu-1,m}$ rodovi.
 
 Rešitve so omejene z normiramo frekvenco in ničlami Besslove funkcije. Vlakno je enorodovno, kadar
 je $V<2,405$, pri čemer je to numerična vrednost prve ničle Besslove funkcije $J_0$. 
-
 
 Tudi tukaj velja zveza $\kappa^2+k_s^2=(NA)^2k_0^2$. Vpeljemo lahko še normirano frekvenco 
 $V = NA\, k_0 a$, ki se bo pozneje izkazala za uporabno, saj lahko z njo preprosto izrazimo število
 rodov, ki se širijo po vlaknu.
 
-
-Osnovni rod je linearno polariziran $LP_{01x}$ ali $LP_{01y}$. Je skoraj Gaussov, ga približamo 
-po Marcusejevi formuli $exp(-r^2/w^2)$,
-kjer je efektivni polmer polja
-\beq 
-w^2 = (0,65 + 1,619 V^{-3/2}+2,87V^{-6})a.
-\eeq
-
-Načini so TE, TM in hibridni;
-Hibdrini so HE, kjer j e $E_z$ primerljiv z $E_r, E_\phi$, ali pa EH, kjer je 
-$H_z$ primerljiv z $H_r, H_\phi$. Označimo jih z $HE_{\nu l}$ -KAJ JE l? Ali je isti?
-
-$TE_{0l}$ za $\nu=0$ število radialnih oscilacij, je $E_z=E_r=0$, Ephi je J1 = TE val.
-AMpak ima ničlo v sredini, torej to ni osnovni val. Osnovni način je hibridni HE11, kjer 
-nu ni enak nič. 
-
-TE, Tm in hibridne lahko združimo  v linearno polarizirane valove, LP01 = HE11.
-To je edini, ki je J0, in različen od nič za vsako vlakno.  Vsi ostali porebujejo neko
-najmanjšo debelino. 
-
-HE so v približamoku degenerirani, zato jih združimo v linearno polariziran
-LP0m = HE1m
-LP1m = vsota TE0m TM0m, HE2m...
-LP11 = TE01+HE21.
 LP01 = HE11 vedno dovoljen. 
-
-HE21+Te01 = LP11
-He21+TM01 = LP11
-
-
+LP0m = HE1m
+LP11 = TE01+HE21.
+LP1m = vsota TE0m TM0m, HE2m..
 
 
 
