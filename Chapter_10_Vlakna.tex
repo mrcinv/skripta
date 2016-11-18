@@ -447,37 +447,38 @@ rešitev, ki jih zato označujemo z dvema indeksoma $\nu,m$. Pri tem $m$ določa
 radialni smeri, $2\nu$ pa število vrhov po kotu $\varphi$. 
 
 \subsection*{TE in TM rodovi}
-Najprej si oglejmo rešitve, pri katerih je $\nu=0$ in nimajo kotne odvisnosti. 
+Najprej si oglejmo rešitve, pri katerih je $\nu=0$ in so neodvisni od kota $\varphi$. 
 V klasični sliki so to žarki, ki potujejo
 po osi vlakna. Iz robnih pogojev (in klasične analogije) sledi, da 
-so to transverzalni TE$_{0m}$ rodovi, za katere velja $E_z=0$, $E_r=0$ in $E_\varphi \propto J_1(k_sr)$.
-Podobno lahko prepoznamo tudi TM$_{0m}$ rodove, pri katerih je $H_z=0$, $H_r=0$ in $H_\varphi \propto J_1(k_sr)$.
-Velikost Poyntingovega vektorja za TE in TM je rodove 
+so to transverzalni TE rodovi, za katere velja $E_z=0$, $E_r=0$ in $E_\varphi \propto J_1(k_sr)$.
+Podobno lahko prepoznamo tudi TM rodove, pri katerih je $H_z=0$, $H_r=0$ in $H_\varphi \propto J_1(k_sr)$.
+Električna poljska jakost za TE in TM rodove potem
 \beq
-S(r) \propto J_1^2(k_sr)
+\mathbf{E} \propto { \mathbf{e}_\varphi \brace \mathbf{e}_r} \, J_1(k_s r),
 \eeq
-v zato v izhodišču enaka nič (glej sliko~\ref{fig:TE01}).
+in gostota svetlobnega toka v osi vlakna enaka nič (glej sliko~\ref{fig:TE01}).
 \begin{figure}[h]
 \centering
-\def\svgwidth{40truemm} 
-\input{slike/10_TE01.pdf_tex}\quad 
-\def\svgwidth{80truemm} 
-\input{slike/10_TE01s.pdf_tex} 
-\caption{Gostota svetlobnega toka in smeri električne poljske jakosti za TE$_{01}$ rod (levo)
-in TM$_{01}$ rod (desno)}
+\def\svgwidth{100truemm} 
+\input{slike/10_TE01.pdf_tex}
+\caption{Gostota svetlobnega toka (levo) in smeri električne poljske jakosti 
+za TE$_{01}$ in TM$_{01}$ rod}
 \label{fig:TE01}
 \end{figure}
 
 Podobno kot smo zapisali sekularno enačbo v valovnem vodniku (enačba~\ref{sekular1}) tudi tukaj
-zapišemo enačbo, s katero lahko določimo $k_s$. Tudi tukaj velja zveza $\kappa^2+k_s^2=(NA)^2k_0^2$. 
+zapišemo enačbo, s katero lahko določimo $k_s$. 
 Ob približku, da se lomna količnika 
 sredice in plašča le malo razlikujeta, je ustrezna enačba za TE valovanje
 \beq
 \frac{J_1(k_sr)}{k_srJ_0(k_sr)}+\frac{K_1(\kappa r)}{\kappa r K_0(\kappa r)}=0,
 \label{sekFiber}
 \eeq
-pri čemer zaporedne rešitve enačbe označimo z indeksom $m$. V enačbi za TM rodove moramo
-členu na levi dodati še faktor $(n_1/n_2)^2$.
+pri čemer velja zveza $\kappa^2+k_s^2=(NA)^2k_0^2$. Zaporedne rešitve enačbe, ki jih označimo 
+z indeksom $m$, ustrezajo rodovom TE$_{0m}$. V enačbi za TM rodove moramo
+členu na levi dodati še faktor $(n_1/n_2)^2$ in dobimo rešitve za rodove TM$_{0m}$. Ker se 
+v praksi lomna količnika sredice in plašča le malo razlikujeta, so rešitve za TM rodove skoraj
+enake kot za TE.
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
@@ -488,60 +489,56 @@ za dve različno debeli vlakni.}
 \label{fig:TEsecFib}
 \end{figure} 
 
-Leva in desna stran sekularne enačbe sta prikazani na sliki~(\ref{fig:TEsecFib}) za dve 
-debelini vlaken. V prvem primeru je $V = NA \, 2\pi r/\lambda = 8$ (rdeča črta) in ima enačba
-dve rešitvi, v drugem pa je $V=2$ (modra črta) in enačba nima rešitev. 
-Obstaja torej nek najmanjši polmer vlakna,
-pri katerem se TE (ali TM) valovanje sploh širi po takem vlaknu. Meja je določena s prvo ničlo
-Besslove funkcije $J_0$. Če je torej $V < 2,405$, se TE in TM valovanji po vlaknu ne širita. Iz
+Zapisano enačbo je treba rešiti numerično. Lahko pa narišemo levo in desno stran enačbe in poiščemo
+presečišča (slika~\ref{fig:TEsecFib}). S črno je narisana leva stran enačbe, z rdečo in modro črto
+pa sta narisani desni strani enačbe za dve vlakni različnih debelin. Če izrazimo parametre vlakna z
+normirano frekvenco
+\beq
+V = NA \, 2\pi r/\lambda,
+\eeq
+je rdeča črta narisana pri $V=8$ in modra pri $V=2$. Vidimo, da obstaja nek najmanjši polmer vlakna,
+pri katerem se TE (ali TM) valovanje sploh širi po vlaknu. Meja je določena s prvo ničlo
+Besslove funkcije $J_0$: valovanje se širi po vlaknu, le če je $V > 2,405$. Iz
 tega (in tudi oblike rešitve) lahko sklepamo, da TE in TM nista osnovna načina za širjenje 
 svetlobe po vlaknu.
 
 \subsection*{HE in EH rodovi}
 Poglejmo zdaj še rešitve, pri katerih $\nu \neq 0$. Iz robnih pogojev sledi, da je 
-vseh šest komponent električnega in magnetnega polja rodov različnih od nič in imajo vsi rodovi
+vseh šest komponent električnega in magnetnega polja valovanja različnih od nič in imajo vsi rodovi
 tudi komponento v smeri $z$. Take rodove imenujemo hibridni rodovi in jih 
-označimo s HE, če je $E_z$ razmeroma velik in primerljiv z $E_r$ in $E_\varphi$, 
-oziroma z EH, če je $H_z$ po velikosti primerljiv s $H_r$ in $H_\varphi$. 
+označimo s HE, če je $E_z$ razmeroma velik ali vsaj primerljiv z $E_r$ in $E_\varphi$, 
+oziroma z EH, če je $H_z$ po velikosti primerljiv s $H_r$ in $H_\varphi$ ali večji od njiju. 
 
-Sekularna enačba za hibridne rodove je precej bolj zapletena in je niti ne bomo zapisali. 
-Oglejmo si le njihovo obliko. Najpomembnejši hibridni rod je HE$_{11}$ rod, ki je v središču 
-različen od nič. To je osnovni rod, za katerega rešitev sekularne enačbe vedno obstaja in se
-zato širi po še tako tankem vlaknu. Zelo dobro ga lahko opišemo s približkom 
-Gaussove oblike $\exp(-r^2/w^2)$ po tako imenovani Marcusejevi 
-formuli\footnote{D. Marcuse, Bell Syst. Tech. J. 56, 703 (1977).}
+Sekularna enačba za hibridne rodove je precej bolj zapletena in je ne bomo zapisali. 
+Oglejmo si le njihovo obliko. Najpomembnejši hibridni rod je HE$_{11}$ (slika~\ref{fig:HE11}), ki
+je v središču različen od nič. To je osnovni rod, za katerega rešitev sekularne enačbe vedno obstaja in se
+zato širi po še tako tankem vlaknu. Po obliki je zelo podoben Gaussovi funkciji $\exp(-r^2/w^2)$,
+zato ga lahko razmeroma dobro opišemo s takim približko, pri čemer efektivni polmer snopa
+$w$ izračunamo po Marcusejevi formuli\footnote{D. Marcuse, Bell Syst. Tech. J. 56, 703 (1977).}
 \beq 
-w^2 = (0,65 + 1,619 V^{-3/2}+2,879V^{-6})a,
+w = (0,65 + \frac{1,619}{V^{3/2}}+\frac{2,879}{V^{6}})a.
 \eeq
-kjer je $w$ efektivni polmer roda. Obstoj tega roda nam omogoča dobro sklopitev med Gaussovimi
+Njegova podobnost z Gaussovo funkcijo omogoča zelo dobro sklopitev med Gaussovimi
 snopi, ki izhajajo iz laserja, in cilindričnimi vlakni. 
 
-Nekaj primerov višjih rodov je na sliki~(\ref{fig:HE11}). Opazimo, da imajo vsi rodovi, razen
-osnovnega HE$_{11}$  v izhodišču ničlo. Poleg tega opazimo tudi podobnost med oblikami posameznih
-rodov, do katere pride zaradi majhne razlike med lomnima količnikoma sredice in plašča
-($n_1 \approx n_2$). V takem
-primeru so namreč nekateri rodovi med seboj degenerirani in dajo enako rešitev. 
-V splošnem so degenerirani HE$_{\nu+1,m}$ in EH$_{\nu-1,m}$. Degenerirane 
+Na sliki~(\ref{fig:HE11}) je poleg osnovnega HE$_{11}$ roda še nekaj primerov višjih rodov. Opazimo, 
+da imajo vsi rodovi, razen osnovnega, v izhodišču ničlo. Poleg tega opazimo tudi podobnost med 
+oblikami posameznih rodov, do katere pride zaradi majhne razlike med lomnima količnikoma sredice in plašča
+($n_1 \approx n_2$). V takem primeru se sekularne enačbe poenostavijo, nekateri rodovi so 
+med seboj degenerirani in dajo enako rešitev. Poleg rodov enake oblike in različne polarizacije so med 
+seboj degenerirani HE$_{\nu+1,m}$ in EH$_{\nu-1,m}$ rodovi. Degenerirane 
 rodove lahko združimo v linearne kombinacije teh valov in dobimo pretežno linearno polarizirane 
 rodove. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{30truemm} 
-\input{slike/10_HE11.pdf_tex}\quad 
-\def\svgwidth{70truemm} 
-\input{slike/10_HE11s.pdf_tex} \\
-\def\svgwidth{30truemm} 
-\input{slike/10_TE01.pdf_tex}\quad 
-\def\svgwidth{70truemm} 
-\input{slike/10_HE21s.pdf_tex} \\
-\def\svgwidth{30truemm} 
-\input{slike/10_EH11.pdf_tex}\quad 
-\def\svgwidth{70truemm} 
-\input{slike/10_HE31s.pdf_tex} \\
-\def\svgwidth{30truemm} 
-\input{slike/10_EH11.pdf_tex}\quad 
-\def\svgwidth{70truemm} 
-\input{slike/10_EH11s.pdf_tex}
+\def\svgwidth{90truemm} 
+\input{slike/10_HE11.pdf_tex}\\
+\def\svgwidth{90truemm} 
+\input{slike/10_HE21.pdf_tex} \\
+\def\svgwidth{90truemm} 
+\input{slike/10_HE31.pdf_tex} \\
+\def\svgwidth{90truemm} 
+\input{slike/10_EH11.pdf_tex}
 \caption{Gostota svetlobnega toka in smeri električne poljske jakosti za hibridne rodove:
 HE$_{11}$, HE$_{21}$, HE$_{31}$ in EH$_{11}$.}
 \label{fig:HE11}
@@ -553,49 +550,40 @@ točne rešitve valovne enačbe v cilindričnih vlaknih, ampak jih zapišemo kot
 kombinacijo lastnih rodov, ki so zaradi majhne razlike med lomnima količnikoma sredice
 in plašča degenerirani. 
 
-Osnovni LP$_{01}$ je kar osnovni HE$_{11}$ rod. Električna poljska jakost v njem je 
+Osnovni LP$_{01}$ je kar približno enak osnovnemu HE$_{11}$ rodu. 
+Električna poljska jakost v njem je 
 sorazmerna
 \beq
-\mathbf{E}(LP_{01}) \propto \mathbf{e}_x J_0(k_s a) \quad \mathrm{ali} \quad \mathbf{e}_y J_0(k_s a),
+\mathbf{E}_{(LP01)} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_0(k_s a),
 \eeq
 odvisno od polarizacije.
-Podobno so LP$_{0m}$ praktično enaki kot rodovi HE$_{1m}$. Dodatne višje rodove, 
-na primer LP$_{11}$ sestavimo kot linearno kombinacijo TE$_{01}$ oziroma TM$_{01}$ in HE$_{21}$.
-Električna poljska jakost v LP$_{11}$  je sorazmerna
+Podobno so LP$_{0m}$ približno enaki rodovom HE$_{1m}$ z $m-1$ ničlami v radialni smeri. 
+Dodatne višje rodove, na primer LP$_{11}$ sestavimo kot linearno kombinacijo 
+TE$_{01}$ oziroma TM$_{01}$ in HE$_{21}$.
+Električna poljska jakost v LP$_{11}$  je tako 
 \beq
-\mathbf{E}(LP_{11}) \propto \mathbf{e}_x J_1(k_s a)\cos\varphi \quad \mathrm{ali} \quad
-\mathbf{e}_y J_1(k_s a)\cos\varphi \quad \mathrm{ali} \quad \mathbf{e}_x J_1(k_s a)\sin\varphi
-\quad \mathrm{ali} \quad \mathbf{e}_y J_1(k_s a)\sin\varphi,
+\mathbf{E}_{(LP11)} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_1(k_s a)
+{ \cos\varphi \brace \sin\varphi},
 \eeq
 v 
 LP$_{21}$ pa
 \beq
-\mathbf{E}(LP_{21}) \propto \mathbf{e}_x J_2(k_s a)\cos 2\varphi \quad \mathrm{ali} \quad
-\mathbf{e}_y J_2(k_s a)\cos 2\varphi \quad \mathrm{ali} \quad \mathbf{e}_x J_2(k_s a)\sin 2\varphi
-\quad \mathrm{ali} \quad \mathbf{e}_y J_2(k_s a)\sin 2\varphi.
+\mathbf{E}_{(LP21)} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_2(k_s a)
+{ \cos 2\varphi \brace \sin 2\varphi}.
 \eeq
-\begin{figure}[h]
+
+\begin{figure}[h!]
 \centering
-\def\svgwidth{20truemm} 
-\input{slike/10_HE11.pdf_tex}\quad 
-\def\svgwidth{40truemm} 
-\input{slike/10_LP01s.pdf_tex} \\
-\def\svgwidth{20truemm} 
-\input{slike/10_LP11a.pdf_tex}\quad 
-\def\svgwidth{40truemm} 
-\input{slike/10_LP11as.pdf_tex} \quad
-\def\svgwidth{20truemm} 
-\input{slike/10_LP11b.pdf_tex}\quad 
-\def\svgwidth{40truemm} 
-\input{slike/10_LP11bs.pdf_tex} \\
-\def\svgwidth{20truemm} 
-\input{slike/10_LP21b.pdf_tex}\quad 
-\def\svgwidth{40truemm} 
-\input{slike/10_LP21as.pdf_tex}\quad
-\def\svgwidth{20truemm} 
-\input{slike/10_LP21a.pdf_tex}\quad 
-\def\svgwidth{40truemm} 
-\input{slike/10_LP21bs.pdf_tex}
+\def\svgwidth{90truemm} 
+\input{slike/10_LP01.pdf_tex} \\
+\def\svgwidth{90truemm} 
+\input{slike/10_LP11a.pdf_tex} \\
+\def\svgwidth{90truemm} 
+\input{slike/10_LP11b.pdf_tex} \\
+\def\svgwidth{90truemm} 
+\input{slike/10_LP21a.pdf_tex} \\
+\def\svgwidth{90truemm} 
+\input{slike/10_LP21b.pdf_tex} \\
 \caption{Gostota svetlobnega toka in smeri električne poljske jakosti za približno linearne rodove:
 LP$_{01}$, LP$_{11}$ in LP$_{21}$.}
 \label{fig:LP}
