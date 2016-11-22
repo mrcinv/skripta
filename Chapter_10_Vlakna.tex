@@ -768,18 +768,35 @@ pri čemer je $D_m$ koeficient materialne disperzije
 \beq
 D_m = - \frac{\lambda}{c_0}\frac{d^2n_1}{d\lambda^2}.
 \eeq
-Navadno ga izrazimo v enotah ps/(nm km).
+Navadno ga izrazimo v enotah ps/(nm km), njegova vrednost pa je lahko pozitivna ali negativna. 
 V snoveh, ki jih uporabljamo za optična vlakna, je $D_m$ reda 10 ps/nm km, lahko pa seže
-tudi do več 100 ps/nm km, odvisno seveda od valovne dolžine, lahko je tudi negativen. 
+tudi do več 100 ps/nm km, odvisno seveda od valovne dolžine. 
 
 Materialno disperzijo lahko zmanjšamo na več načinov. Lahko uporabimo čim bolj enobarven
-vir svetlobe, da zmanjšamo $\Delta lambda$. Za snovi, ki so v uporabi, lahko celo izberemo 
-tako valovno dolžino, da bo koeficient materialne disperzije enak nič. Še najbolj uporabna
+vir svetlobe, da zmanjšamo $\Delta \lambda$. Za snovi, ki so v uporabi, lahko celo izberemo 
+tako valovno dolžino, pri kateri je koeficient materialne disperzije enak nič. Še najbolj uporabna
 pa je rešitev, pri kateri z materialno disperzijo izničimo vplive drugih disperzij in 
 na ta način zmanjšamo skupno disperzijo v vlaknu.
 
 \subsection*{Valovodna disperzija}
+Spomnimo se, da v vlaknu velja zveza med prečno $k_s$ in vzdolžno komponento $\beta$ 
+valovnega vektorja
+\beq
+\beta^2 + k_s^2 = k_0^2 n_1^2 = \left( \frac{\omega}{c_0}\right)^2n_1^2.
+\eeq
+Pri tem moramo $k_s$ izračunati numerično iz sekularne enačbe rešitev je odvisna od valovne dolžine
+svetlobe. Valovno število  
+\beq
+\beta = \sqrt{\left( \frac{\omega}{c_0}\right)^2n_1^2 - k_s(\omega)^2}.
+\eeq
+je tako nelinearna funkcija frekvence, zaradi česar pride do disperzije. Če naredimo podoben 
+račun kot pri materialni disperziji, je razširitev začetnega kratkega sunka enaka
 
+  
+
+
+Prispevek valovodne disperzije je praviloma najmanjši. Znaten postane v enorodovnih 
+vlaknih v območju, kjer je materialna disperzija zelo majhna ali celo enaka nič.
 
 Po enačbi \ref{9.0} je grupna hitrost odvisna od frekvence tako
 zaradi eksplicitne korenske zveze med $\omega$ in $\beta$ kot zaradi
