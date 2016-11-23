@@ -605,7 +605,7 @@ Neodvisnost grupne hitrosti od roda je praktično zelo pomembna.
 Grupna hitrost namreč določa čas potovanja svetlobnega sunka, ki
 lahko predstavlja en bit informacije. Če se po vlaknu širi več
 rodov z različno grupno hitrostjo, se sunek po prehodu skozi
-vlakno razširi, kar -- kot bomo podrobneje videli v naslednjem poglavju -- omejuje 
+vlakno razširi, kar -- kot bomo podrobneje videli v naslednjem razdelku -- omejuje 
 uporabno dolžino vlakna. Temu se sicer lahko izognemo z uporabo enorodovnih vlaken,
 ki pa so dražja, poleg tega morata divergenca in polmer svetlobnega snopa 
 natančno ustrezati značilnostim enorodovnega vlakna, da se izognemo izgubam. 
@@ -744,7 +744,7 @@ ima tudi neko končno spektralno širino $\lambda_{\mathrm{max}}-\lambda_{\mathr
 valovne dolžine svetlobe, zato različne spektralne komponente potujejo po vlaknu z različnimi
 hitrostmi. Dolžino sunka $\tau$ po prehodu skozi vlakno dolžine $L$ zapišemo kot
 \beq
-\tau = \frac{L}{v_g(\lambda_{\mathrm{max}})} - \frac{L}{v_g(\lambda_{\mathrm{min}})} = 
+\tau_m = \frac{L}{v_g(\lambda_{\mathrm{max}})} - \frac{L}{v_g(\lambda_{\mathrm{min}})} = 
 \frac{L}{c_0}\left(n_g(\lambda_{\mathrm{max}}) - n_g(\lambda_{\mathrm{max}}) \right) 
 = \frac{L}{c_0}\frac{\Delta n_g}{\Delta \lambda}\Delta \lambda.
 \label{MatD}
@@ -761,8 +761,8 @@ in
 \eeq
 To vstavimo v izraz za dolžino sunka~(enačba~\ref{MatD}) in dobimo
 \beq
-\tau = - \left(\frac{\lambda}{c_0}\frac{d^2n_1}{d\lambda^2} \right) L \Delta \lambda = 
-D_m L\, \Delta\, \lambda,
+\tau_m = - \left(\frac{\lambda}{c_0}\frac{d^2n_1}{d\lambda^2} \right) L \Delta \lambda = 
+D_m L\, \Delta \lambda,
 \eeq
 pri čemer je $D_m$ koeficient materialne disperzije
 \beq
@@ -773,8 +773,9 @@ V snoveh, ki jih uporabljamo za optična vlakna, je $D_m$ reda 10 ps/nm km, lahk
 tudi do več 100 ps/nm km, odvisno seveda od valovne dolžine. 
 
 Materialno disperzijo lahko zmanjšamo na več načinov. Lahko uporabimo čim bolj enobarven
-vir svetlobe, da zmanjšamo $\Delta \lambda$. Za snovi, ki so v uporabi, lahko celo izberemo 
-tako valovno dolžino, pri kateri je koeficient materialne disperzije enak nič. Še najbolj uporabna
+vir svetlobe, da zmanjšamo $\Delta \lambda$. Za snovi, ki so v uporabi, 
+lahko celo izberemo tako valovno dolžino, pri kateri je koeficient materialne disperzije enak nič.
+Pri SiO$_2$ je to okoli $1300-1500$~nm, odvisno od dopiranja stekla. Še najbolj uporabna
 pa je rešitev, pri kateri z materialno disperzijo izničimo vplive drugih disperzij in 
 na ta način zmanjšamo skupno disperzijo v vlaknu.
 
@@ -791,82 +792,84 @@ svetlobe. Valovno število
 \eeq
 je tako nelinearna funkcija frekvence, zaradi česar pride do disperzije. Če naredimo podoben 
 račun kot pri materialni disperziji, je razširitev začetnega kratkega sunka enaka
+\beq
+\tau_v = \frac{L}{v_g(\omega_{\mathrm{max}})} - \frac{L}{v_g(\omega_{\mathrm{min}})} = 
+L\frac{d \beta}{d\omega}(\omega_{\mathrm{max}}) - L\frac{d \beta}{d\omega}(\omega_{\mathrm{min}})=
+L \frac{d^2\beta}{d\omega^2}\Delta \omega = - 
+\frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}L \Delta \lambda.
+\label{ValD}
+\eeq
+Zapišemo
+\beq
+\tau_v= D_v\,L\, \Delta \lambda,
+\eeq
+pri čemer je  $D_v$ koeficient valovodne disperzije
+\beq
+D_m = - \frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}.
+\eeq
+Prispevek valovodne disperzije je praviloma najmanjši, reda $1-10$~ps/nm km. 
+Znaten postane v enorodovnih vlaknih v območju, kjer je materialna disperzija 
+zelo majhna ali celo enaka nič. V vlaknih s homogeno sredico se valovodni disperziji ne moremo
+izogniti, lahko pa jo izničimo z materialno~(slika~\ref{}). 
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/10_disperzija.pdf_tex} 
+\caption{Disperzija v enorodovnem vlaknu}
+\label{fig:MatVal}
+\end{figure}
 
-  
+Na valovodno disperzijo je mogoče vplivati tudi s konstrucijo vlakna. V
+idealnem primeru je profil parabolični in takrat smo že pokazali, da disperzije ni. V praksi
+je sredica sestavljena iz več plasti z različnimi lomnimi količniki in različnimi
+debelinami, s čimer se prispevek valovodne disperzije spremeni in 
+položaj ničle celotne disperzije se premakne k valovni dolžini izvora oziroma k 
+valovni dolžini, pri kateri je najmanj izgub.
 
-
-Prispevek valovodne disperzije je praviloma najmanjši. Znaten postane v enorodovnih 
-vlaknih v območju, kjer je materialna disperzija zelo majhna ali celo enaka nič.
-
-Po enačbi \ref{9.0} je grupna hitrost odvisna od frekvence tako
-zaradi eksplicitne korenske zveze med $\omega$ in $\beta$ kot zaradi
-odvisnosti lomnih količnikov sredice in plašča od frekvence. Prvemu
-prispevku recimo valovodna disperzija, ker je posledica omejitve valovanja
-v sredico vlakna, drugemu pa materialna disperzija. Oba prispevka
-sta pomembna.
-
-
-
-
- Naj bo tudi razmik me zaporednimi sunki $\tau.$ Da se sunki ne bodo
-prekrivali, mora biti $\Delta\tau<\tau$ in sme biti najvišja frekvenca
-modulacije kvečjemu 
-\begin{equation}
-v_{\max}=\frac{1}{2\Delta\tau}\label{9.54}
-\end{equation}
-
-Ločiti moramo dva mejna primera. Kadar je $\Delta\omega>>1/\tau$,
-to je, kadar je spektralna širina izvora mnogo večja od širine zaradi
-modulacije, je 
-\begin{equation}
-v_{\max}=\frac{1}{L\,\Delta\omega}\left(\frac{d^{2}\beta}{d\omega^{2}}\right)^{-1}\label{9.55}
-\end{equation}
- Največja gostota informacije, ki jo lahko prenašamo po vlaknu, je
-v tem primeru obratno sorazmerna z dolžino vlakna in spektralno širino
-laserja.
-
-V nasprotnem primeru, ko je laser dosti bolj monokromatski od razširitve
-zaradi same modulacije, imamo $\Delta\omega=1/\tau$. Pri najvišji
-možni frekvenci modulacije $v_{\max}$ je $\tau\simeq\Delta\tau$
-in je po enačbi \ref{9.53} 
-\begin{equation}
-(\Delta\tau)^{2}=L\,\frac{d^{2}\beta}{d\omega^{2}}\,\label{9.56}
-\end{equation}
- in je 
-\begin{equation}
-v_{\max}=\sqrt{\frac{1}{L\,}\left(\frac{d^{2}\beta}{d\omega^{2}}\right)^{-1}}\label{9.57}
-\end{equation}
- V tem primeru je najvišja frekvenca modulacije obratno sorazmerna
-s korenom dolžine vlakna.
-
-Večji del dicperzije grupne hitrosti prinese materialna disperzija,
-to je, odvisnost lomnega količnika od frekvence. Primer meritve razširitve
-sunka z znano spektralno širino v izbrani dolžini vlakna kaže slika
-\ref{sl9.7}. Pri valovni dolžini okoli 1,3 $\mu$m ima materialna
-disperzija, to je $d^{2}n/d\omega^{2},$ ničlo, ki je v celotni disperziji
-nekoliko premaknjena zaradi prispevka valovodne disperzije. Na valovodno
-disperzijo je mogoče vplivati s konstrucijo vlakna. Sredica je lahko
-sestavljena iz več plasti z različnimi lomnimi količniki in različnimi
-debelinami, s čimer se spremeni prispevek valovodne disperzije in
-se položaj ničle celotne disperzije premakne k valovni dolžini izvora.
-
-Iz slike \ref{sl9.7} razberemo, da je tipična disperzija enorodovnega
-vlakna okoli 10~ps/km pri spektralni širini 1~nm. Od tod je 
-$d^{2}\beta/d\omega^{2}=\Delta\tau\lambda/\left(\Delta\lambda L\omega\right)\simeq5\cdot10^{-23}$
-s$^{2}/$m. Po enačbi \ref{9.57} je v 100 km dolgem vlaknu tedaj
-najvišja frekvenca modulacije okoli $10^{9}$ Hz. Pri zmogljivih zvezah
-na velike razdalje je torej za največjo dolžino vlakna brez obnovitve
-signala disperzija hujaša omejitev kot izgube. Največja možna razdalja
+Količina podakov, ki jih lahko prenašamo po takem vlaknu je kar približno obratno 
+sorazmerna s širino izhodnih sunkov svetlobe. Pri celotni disperziji $5$~ps/nm km in 
+spektralni širini $1$~nm je tako v $100$~km dolgem vlaknu najvišja frekvenca modulacije
+okoli $2$~GHz. Videli bomo, da je omejitev disperzije v vlaknih precej hujša kot
+omejitev prenosa zaradi izgub. Največja možna razdalja
 in najvišje frekvenca modulacije sta danes nekaj sto kilometrov in
-nekaj GHz.
+nekaj deset GHz.
 
-V mnogorodvnih vlaknih se sunek širi zaradi razli\textquotedbl{}nih
-grupnih hitrosti posameznih rodov. Različne grupne hitrosti v valovni
-sliki ustrezajo različni dolžini optične poti za žarke, ki potujejo
-pod različnimi koti glede na os vlakna. Te razlike so mnogo večje
-od disperzije v enorodnih vlaknih, zato je pri dani dolžini vlakna
-popačitev signala dosti večja in se mnogorodovna vlakna ne uporabljajo
-za dolge zveze.
+\subsection*{Rodovna disperzija}
+Do zdaj smo obravnavali samo disperzijo v enodorovnih vlaknih. V večrodovnih vlaknih
+je poglavitni vzrok širjenja sunkov rodovna disperzija. Do nje pride zaradi razlike 
+v hitrostih posameznih rodov. 
+Obravnavajmo vlakno, v katerem se širi več rodov. Osnovni rod ima najmanjšo
+vrednost $k_s \approx 0$ in $\beta \approx k_0 n_1$. Zadnji še dovoljeni rod ima
+največjo vrednost $k_s \approx NA\, k_0$ in $\beta \approx k_0 n_2$. Grupna
+lomna količnika sta tako
+\beq
+n_{g0} = c_0 \left(\frac{d\beta}{d\omega}\right)_0 = c_0 \frac{d(k_0n_1)}{d\omega} = 
+n_1 + \omega \frac{dn_1}{d\omega}
+\eeq
+in
+\beq
+n_{gN} = c_0 \left(\frac{d\beta}{d\omega}\right)_0 = c_0 \frac{d(k_0n_2)}{d\omega} = 
+n_1 + \omega \frac{dn_2}{d\omega}.
+\eeq
+Razširitev sunka je 
+% \beq
+% \tau_r = \frac{L}{v_{g0}-\frac{L}{v_{gN}} = \frac{L}{c_0} (n_{g0}-n_{gN}) \approx 
+% \frac{L}{c_0} (n_1-n_2).
+% \eeq
+Za 1~km dolgo vlakno z razliko lomnih količnikov $\Delta n = 0,05$ dobimo 
+največjo frekvenco modulacije okoli 10~MHz, kar je znatno nižje od enorodovnih vlaken.
+Čeprav lahko disperzijo zmanjšamo s paraboličnim profilom lomnega količnika, so
+večrodovna vlakna za prenos informacije na dolge razdalje praktično neuporabna. 
+
+V večrodovnem vlaknu je treba upoštevati prispevke vseh treh disperzij. Materialna
+in valovodna sta obe odvisni od valovni dolžini in zato korelirani, rodovna pa 
+je predvsem odvisna od zgradbe vlakna in je od prvih dveh praktično neodvisna. Ko na 
+tako vlakno posvetimo s sunkom, katerega spekter je Gaussove oblike, bo dolžina 
+sunka po prehodu skozi vlakno
+\boxeq{Dtotal}{
+\tau = \sqrt{(\tau_m +\tau_v)^2 + \tau_r^2}.
+}
+
 
 \section{Izgube v optičnih vlaknih}
 Ena najpomembnejših lastnosti optičnih valken je majhno slabljenje
