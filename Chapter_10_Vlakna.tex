@@ -805,16 +805,16 @@ Zapišemo
 \eeq
 pri čemer je  $D_v$ koeficient valovodne disperzije
 \beq
-D_m = - \frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}.
+D_v = - \frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}.
 \eeq
 Prispevek valovodne disperzije je praviloma najmanjši, reda $1-10$~ps/nm km. 
 Znaten postane v enorodovnih vlaknih v območju, kjer je materialna disperzija 
 zelo majhna ali celo enaka nič. V vlaknih s homogeno sredico se valovodni disperziji ne moremo
-izogniti, lahko pa jo izničimo z materialno~(slika~\ref{}). 
+izogniti, lahko pa jo izničimo z materialno~(slika~\ref{fig:MatVal}). 
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
-\input{slike/10_disperzija.pdf_tex} 
+\input{slike/10_Zero.pdf_tex} 
 \caption{Disperzija v enorodovnem vlaknu}
 \label{fig:MatVal}
 \end{figure}
@@ -852,10 +852,10 @@ n_{gN} = c_0 \left(\frac{d\beta}{d\omega}\right)_0 = c_0 \frac{d(k_0n_2)}{d\omeg
 n_1 + \omega \frac{dn_2}{d\omega}.
 \eeq
 Razširitev sunka je 
-% \beq
-% \tau_r = \frac{L}{v_{g0}-\frac{L}{v_{gN}} = \frac{L}{c_0} (n_{g0}-n_{gN}) \approx 
-% \frac{L}{c_0} (n_1-n_2).
-% \eeq
+\beq
+\tau_r = \frac{L}{v_{g0}}-\frac{L}{v_{gN}} = \frac{L}{c_0} (n_{g0}-n_{gN}) \approx 
+\frac{L}{c_0} (n_1-n_2).
+\eeq
 Za 1~km dolgo vlakno z razliko lomnih količnikov $\Delta n = 0,05$ dobimo 
 največjo frekvenco modulacije okoli 10~MHz, kar je znatno nižje od enorodovnih vlaken.
 Čeprav lahko disperzijo zmanjšamo s paraboličnim profilom lomnega količnika, so
@@ -870,8 +870,12 @@ sunka po prehodu skozi vlakno
 \tau = \sqrt{(\tau_m +\tau_v)^2 + \tau_r^2}.
 }
 
-
 \section{Izgube v optičnih vlaknih}
+Pri prenosu informacij z optičnimi vlakni je zelo pomembno, da so 
+izgube čim manjše. Izgube so predvsem posledica absorpcije in sipanja 
+na nečistočah
+
+ali pa na stiku med vlakni. .
 Ena najpomembnejših lastnosti optičnih valken je majhno slabljenje
 svetlobnega vala, posebej še v vlaknih iz kremenovega stekla. Najboljša
 vlakna imajo danes izgube okoli 0,2 db/km pri valovni dolžini 1,55
