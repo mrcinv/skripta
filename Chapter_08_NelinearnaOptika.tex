@@ -576,7 +576,7 @@ moč podvojene svetlobe (enačbi~\ref{8.10} in \ref{8.11}), je torej v izbranem 
 \end{equation}
 
 \begin{definition}
-Izračunaj efektivno nelinearno susceptibilnost za frekvenčno podvajanje svetlobe z valovno
+Izračunaj največjo možno efektivno nelinearno susceptibilnost za frekvenčno podvajanje svetlobe z valovno
 dolžino $10~\si{\micro\metre}$ v kristalu telurja s simetrijsko grupo 32 (glej tabelo~\ref{table:chi}). 
 Lomni količniki: $n_o^{\omega} = 4,7969$, 
 $n_e^{\omega} = 6,2455$, $n_o^{2\omega} = 4,8657$ in $n_e^{2\omega} = 6,3152$.
@@ -906,7 +906,7 @@ resonator\index{Resonator!parametrični oscilator}
 in signal se ob vsakem obhodu ojača. Sestavili smo t.\,i.\,optični parametrični oscilator. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{90truemm} 
 \input{slike/08_opo.pdf_tex}
 \caption{Shematski prikaz tipičnega optičnega parametričnega oscilatorja. Ojačevalno sredstvo
 zapremo med resonatorja, da se signalni žarek ($\omega_1$) ob vsakem preletu ojači.}
@@ -922,28 +922,28 @@ hkrati pa mora ojačevano nihanje sovpadati z lastnim nihanjem resonatorja.
 S sukanjem ojačevalnega kristala lahko na ta način spreminjamo
 ojačano frekvenco in naredili smo nastavljiv izvor svetlobe, navadno infrardeče. 
 
-Za delovanje oscilatorja biti jakost črpalnega žarka tako velika, da je parametrično 
-ojačevanje na obhod večje od izgub. Izračunajmo za primer prag simetričnega oscilatorja. Signal z močjo 
+Za delovanje oscilatorja mora biti jakost črpalnega žarka tako velika, da je parametrično 
+ojačevanje na obhod večje od izgub. Izračunajmo za primer zgoraj narisanega oscilatorja. Signal z močjo 
 $P_0$ se ob prehodu skozi ojačevalno sredstvo ojača (enačba~\ref{eq:opa})
 \beq
 P_1 = P_0 \cosh^2 (\kappa L),
 \eeq
-hkrati pa se zaradi delno prepustnih zrcal z odbojnostjo $R$ intenziteta žarka zmanjšuje. 
-Pri tem ne pozabimo, da je pogoj ujemanja faz izpolnjen le v eni smeri in se svetloba
+hkrati pa se zaradi izhodnega zrcala z odbojnostjo $R$ in notranjih izgub $\Lambda_0$ 
+intenziteta žarka zmanjšuje. Pri tem je pogoj ujemanja faz izpolnjen le v eni smeri in se svetloba
 ojačuje le enkrat na celoten obhod. Ob preletu v drugo smer je namreč $\Delta k \neq 0$ in žarek se ne ojačuje.
 Moč žarka po obhodu $P_2$ je enaka začetni moči $P_0$, saj je pri pragu ojačanje ravno enako izgubam 
 \beq
-P_2 = R^2 P_1 = R^2 P_0 \cosh^2 (\kappa L) = P_0
+P_2 = P_1\,(1-\Lambda_0)R = P_0 \,(1-\Lambda_0) R \,\cosh^2 (\kappa L) = P_0
 \eeq
 oziroma
 \beq
-R^2 \cosh^2 (\kappa L) =1.
+(1-\Lambda_0)\, R\,\cosh^2 (\kappa L) =1.
 \eeq
 Iz gornjega pogoja določimo parameter $\kappa$, po enačbi~(\ref{opakapa}) pa mejno 
 amplitudo in intenziteto črpalnega žarka. Nadaljujmo še prejšnji primer ojačanja 
 svetlobe v 1~cm dolgem kristalu LiNbO$_{3}$.
-Če je odbojnost zrcal $R=0,9$ in prečni presek žarka $10~\si{\micro\metre^2}$, je moč 
-praga $P_{\omega_3} = 5$~W.
+Če je odbojnost izhodnega zrcala $R=0,85$, notranje izgube $\Lambda_0 = 0,05$ in prečni presek 
+žarka $10~\si{\micro\metre^2}$, je moč praga $P_{\omega_3} = 5$~W.
 
 \begin{remark}
 Optični parametrični oscilator torej oddaja svetlobo, podobno kot laser. Tudi sicer
@@ -1078,7 +1078,7 @@ električna polja. To naredimo z vsoto dveh kompleksno konjugiranih členov
 Podobno zapišemo tudi za polarizacijo, pri čemer nas bodo zanimali samo členi,
 ki nihajo s frekvenco $\omega$
 \begin{equation}
-\mathbf{P}=\frac{1}{2}(\mathbf{P}_\omega e^{i(kz-\omega t)}+\mathbf{P}_\omega^{*}e^{-i(kz-\omega t)}).
+\mathbf{P}=\frac{\mathbf{e}}{2}(\mathbf{P}_\omega e^{i(kz-\omega t)}+\mathbf{P}_\omega^{*}e^{-i(kz-\omega t)}).
 \label{8.71a}
 \end{equation}
 Ti členi nastopijo v primeru, da
