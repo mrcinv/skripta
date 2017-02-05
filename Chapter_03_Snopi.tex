@@ -147,7 +147,7 @@ Tako iz obosnega približka (enačba~\ref{eq:obosna-valovna-enacba}) dobimo
 \begin{equation}
 \frac{2ik}{q}-\frac{k^2r^2}{q^2}=ik\left(\frac{ikr^{2}}{q^2}q(z)^{\prime}+2i\phi^{\prime}\right).
 \end{equation}
-Gornji izraz mora veljati pri vsakem $r$, zato morajo biti koeficienti
+To velja pri vsakem $r$, zato so koeficienti
 pri $r^{2}$ in pri drugih členih posebej enaki 0. Dobimo
 \begin{equation}
 q(z)^{\prime}=1\mbox{\hskip1cm in \hskip1cm}\phi^{\prime}=-\frac{i}{q}.
@@ -184,35 +184,39 @@ Med $w_{0}$ in $z_{0}$ velja zveza
 \boxeq{eq:z0}{
 z_{0}=\frac{\pi w_{0}^{2}}{\lambda}.
 }
-Dolžina $z_{0}$ je ravno razdalja, pri kateri preide snop v asimptotično enakomerno širjenje.
+Dolžina $z_{0}$ je razdalja, pri kateri preide snop v asimptotično enakomerno širjenje.
 Pri $z_{0}$ tudi preidemo v območje veljavnosti Fraunhoferjevega uklonskega približka. 
 Celotna dolžina grla je $2z_0$, območju grla pa pravimo tudi območje bližnjega polja ali 
 Rayleighovo območje in dolžini $z_0$ \index{Rayleighova dolžina}Rayleighova 
 dolžina\footnote{Angleški fizik in nobelovec John William Strutt, 3. baron Rayleighški, 1842--1919.}.
-
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{80truemm} 
 \input{slike/03_Gauss.pdf_tex}
 \caption{Gaussov snop s karakterističnimi parametri}
 \label{fig:Gauss}
 \end{figure}
 
-Iz izraza za polmer snopa $w(z)$ (enačba~\ref{eq:w}) razberemo še kot divergence snopa v
-asimptotičnem območju. Najprej izračunajmo le polovični kot širjenja:
+Zapišimo še kot divergence snopa v asimptotičnem območju. Polovični kot širjenja je
 \begin{equation}
 \vartheta=\lim_{z \to \infty} \frac{dw}{dz} = \frac{w_{0}}{z_{0}}=\frac{\lambda}{\pi w_{0}}.\label{eq:divergenca-snopa}
 \end{equation}
-Nato pa zapišimo celotno divergenco snopa\index{Gaussov snop!divergenca}
+Celotna divergenca snopa\index{Gaussov snop!divergenca} pa
 \boxeq{eq:divergenca-snopa2}{
 \theta=2 \frac{w_{0}}{z_{0}}=\frac{2\lambda}{\pi w_{0}}.
 }
 
-Dobljena izraza za območje bližnjega polja (enačba~\ref{eq:z0}) in divergenco 
-(enačba~\ref{eq:divergenca-snopa}) sta v skladu z grobimi ocenami, ki smo jih 
+Izraza za območje bližnjega polja (enačba~\ref{eq:z0}) in divergenco 
+(enačba~\ref{eq:divergenca-snopa}) sta v skladu z ocenami, ki smo jih 
 napravili v začetku poglavja (enačbi~\ref{eq:kot_ocena} in \ref{eq:z_ocena}). Faktor 
 $1/\pi$ je značilen za Gaussov snop, ki ima od vseh mogočih oblik 
-najmanjšo divergenco.
+najmanjšo divergenco. Za določanje kakovosti dejanskega laserskega snopa 
+in njegovega odstopanja od idealnega snopa vpeljemo faktor $M^2$
+\beq
+\theta = M^2 \frac{2\lambda}{\pi w_{0}}.
+\eeq
+Dobri laserji dosegajo vrednost $M^2 \approx 1$,
+pri močnejših trdninskih ali polprevodniških laserjih pa je lahko $M^2 \sim 100$ ali več. 
 
 Vrnimo se k imaginarnemu delu eksponenta v enačbi~(\ref{eq:gaussov-snop-vmesni}).
 Vpeljimo količino 
@@ -296,7 +300,7 @@ krogelni val.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{90truemm} 
 \input{slike/03_fronte.pdf_tex}
 \caption{Ravni val, Gaussov snop ter
 krogelni val. Pri majhnih razdaljah od grla je Gaussov snop podoben
@@ -340,7 +344,7 @@ pri danem $w$ pa polmer snopa narašča z $n$ in $m$.
 \centering
 \def\svgwidth{110truemm} 
 \input{slike/03_Hermite_Gauss.pdf_tex}
-\caption{Prečni profil Hermite-Gaussovih snopov za različne vrednosti $(n,m)$}
+\caption{Prečni profil polja Hermite-Gaussovih snopov za različne vrednosti $(n,m)$}
 \label{fig:Gauss-Hermitevi-snopi}
 \end{figure}
 
@@ -396,7 +400,7 @@ je prikazanih nekaj oblik amplitud $|\Re\psi_{p,l}(r,\phi,0)|$.
 \centering
 \def\svgwidth{110truemm} 
 \input{slike/03_Laguerre_Gauss.pdf_tex}
-\caption{Prečni profil Laguerre-Gaussovih snopov za različne vrednosti $(p,l)$}
+\caption{Prečni profil polja Laguerre-Gaussovih snopov za različne vrednosti $(p,l)$}
 \label{fig:Laguerrovi_presek}
 \end{figure}
 
@@ -423,7 +427,7 @@ medtem ko leva in desna cirkularna polarizacija predstavljata spin fotona.
 
 Poglejmo si še poseben primer omejenega snopa, to je \index{Besslov snop}Besslov
 snop\footnote{Nemški astronom, matematik in fizik Friedrich Wilhelm Bessel, 1784--1846.}. 
-Kot nastavek za rešitev valovne enačbe (enačba~\ref{eq:valovna-enacba-hh})
+Kot nastavek za eksaktno rešitev valovne enačbe (enačba~\ref{eq:valovna-enacba-hh})
 izberemo
 \begin{equation}
 E=E_{0}\psi(x,y)e^{i\beta z-i\omega t},
@@ -467,7 +471,7 @@ snopov, ki imajo pomembne in uporabne lastnosti.
 \end{figure}
 
 \begin{remark}
-Z uporabo stožčaste leče lahko Gaussov snop
+Z uporabo stožčaste leče (aksiona) lahko Gaussov snop
 preoblikujemo v približek Besslovega snopa (slika~\ref{fig:Bessel_leca}). 
 Na plašču stožčaste leče se namreč Gaussov snop zlomi in valovni vektorji 
 nastalega žarka opisujejo stožec, kar je sicer lastnost Besslovih žarkov.
@@ -564,14 +568,14 @@ Tudi povečava polmera grla na desni, podana z enačbo (\ref{eq:preslikava-povec
 je precej drugačna kot v geometrijski optiki.\\
 
 Za primer vzemimo snop iz He-Ne laserja (valovna dolžina 632,8~nm), ki ima grlo s 
-polmerom $w_{01}=0,5~\milli\metre$ na izhodnem ogledalu in je $50~\centi\metre$ pred lečo z 
-goriščno razdaljo $f=25~\centi\metre$.
-Tedaj je $z_{01}=124~\centi\metre$. Po enačbi (\ref{eq:preslikava-grlo})
-leži grlo za lečo v oddaljenosti $1~\centi\metre$ od gorišča in 26~cm za lečo, 
-po enačbi (\ref{eq:preslikava-povecava})
-pa izračunamo polmer $w_{02}=100~\micro\metre$. Enačbe geometrijske optike bi
-dale popolnoma napačen položaj grla $50~\centi\metre$ za lečo, polmer grla pa 
-$0,5~\milli\metre$. Po drugi strani bi približek, da je vpadni
+polmerom $w_{01}=0,5~\si{\milli\metre}$ na izhodnem ogledalu in je $50~\si{\centi\metre}$ 
+pred lečo z goriščno razdaljo $f=25~\si{\centi\metre}$.
+Tedaj je $z_{01}=124~\si{\centi\metre}$. Po enačbi (\ref{eq:preslikava-grlo})
+leži grlo za lečo v oddaljenosti $1~\si{\centi\metre}$ od gorišča in $26~\si{\centi\metre}$ 
+za lečo, po enačbi (\ref{eq:preslikava-povecava})
+pa izračunamo polmer $w_{02}=100~\si{\micro\metre}$. Enačbe geometrijske optike bi
+dale popolnoma napačen položaj grla $50~\si{\centi\metre}$ za lečo, polmer grla pa 
+$0,5~\si{\milli\metre}$. Po drugi strani bi približek, da je vpadni
 snop kar raven, dal grlo na desni v gorišču s približno pravim polmerom. Zakaj da približek ravnih 
 valov bolj pravilen rezultat, lahko hitro uvidimo, če pogledamo
 Rayleighovo dolžino snopa: snop vpada na lečo še v območju bližnjega polja ($x_1 + f < z_{01}$), kjer 

@@ -805,16 +805,16 @@ Zapišemo
 \eeq
 pri čemer je  $D_v$ koeficient valovodne disperzije
 \beq
-D_m = - \frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}.
+D_v = - \frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}.
 \eeq
 Prispevek valovodne disperzije je praviloma najmanjši, reda $1-10$~ps/nm km. 
 Znaten postane v enorodovnih vlaknih v območju, kjer je materialna disperzija 
 zelo majhna ali celo enaka nič. V vlaknih s homogeno sredico se valovodni disperziji ne moremo
-izogniti, lahko pa jo izničimo z materialno~(slika~\ref{}). 
+izogniti, lahko pa jo izničimo z materialno~(slika~\ref{fig:MatVal}). 
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
-\input{slike/10_disperzija.pdf_tex} 
+\input{slike/10_Zero.pdf_tex} 
 \caption{Disperzija v enorodovnem vlaknu}
 \label{fig:MatVal}
 \end{figure}
@@ -852,10 +852,11 @@ n_{gN} = c_0 \left(\frac{d\beta}{d\omega}\right)_0 = c_0 \frac{d(k_0n_2)}{d\omeg
 n_1 + \omega \frac{dn_2}{d\omega}.
 \eeq
 Razširitev sunka je 
-% \beq
-% \tau_r = \frac{L}{v_{g0}-\frac{L}{v_{gN}} = \frac{L}{c_0} (n_{g0}-n_{gN}) \approx 
-% \frac{L}{c_0} (n_1-n_2).
-% \eeq
+\beq
+\tau_r = \frac{L}{v_{g0}}-\frac{L}{v_{gN}} = \frac{L}{c_0} (n_{g0}-n_{gN}) \approx 
+\frac{L}{c_0} (n_1-n_2).
+\label{DispRod}
+\eeq
 Za 1~km dolgo vlakno z razliko lomnih količnikov $\Delta n = 0,05$ dobimo 
 največjo frekvenco modulacije okoli 10~MHz, kar je znatno nižje od enorodovnih vlaken.
 Čeprav lahko disperzijo zmanjšamo s paraboličnim profilom lomnega količnika, so
@@ -870,43 +871,124 @@ sunka po prehodu skozi vlakno
 \tau = \sqrt{(\tau_m +\tau_v)^2 + \tau_r^2}.
 }
 
-
 \section{Izgube v optičnih vlaknih}
-Ena najpomembnejših lastnosti optičnih valken je majhno slabljenje
-svetlobnega vala, posebej še v vlaknih iz kremenovega stekla. Najboljša
-vlakna imajo danes izgube okoli 0,2 db/km pri valovni dolžini 1,55
-$\mu$m. (1 decibel je$\,0,1\,$log$(j_{0}/j).$). Glavni vzroki izgub
-so absorpcija in sipanje na nečistočah in sipanje na termičnih fluktuacijah
-gostote (Rayleighovo sipanje). Slika \ref{sl9.5} prikazuje tipično
-odvisnost izgub od valovne dolžine za dobro enorodovno vlakno iz kremenovega
-stekla s primesjo GeO$_{2}.$ Sipanje na fluktuacijah gostote je sorazmerno
-z $\lambda^{-4}$, zato dominira pri majhnih valovnih dolžinah, sipanje
-na defektih in nepravilnostih je skoraj zanemarljivo, pri valovnih
-dolžinah nad 1,6~$\mu$m pa prevlada absorpcija. Vrh med 1,3~$\mu$m
-in 1,5~$\mu$m je posledica absorpcije na OH ionih, ki se jih je
-v steklu zelo težko znebiti. Iz slike je razvidno, da so izgube najmanjše
-okoli 1,55~$\mu$m, zato se to območje največ uporablja za zveze
-na velike razdalje. Najboljših modernih vlaken tudi ni več mogoče
-kaj dosti izboljšati glede izgub, saj so že dosegla spodnjo mejo,
-določeno s termičnimi fluktuacijami.
+Pri prenosu informacij z optičnimi vlakni je zelo pomembno, da so 
+izgube čim manjše. Izgube so predvsem posledica absorpcije svetlobe v snovi,
+Rayleighovega sipanja na termičnih fluktuacijah gostote, sipanja na nečistočah, 
+izgub na stiku med vlakni in izgub zaradi upognjenosti vlakna. 
+Po drugi strani pa vhodni signal ne sme biti premočan,
+saj lahko v vlaknu pride do nelinearnih optičnih pojavov.
 
-Pri optičnih zvezah nastanejo še izgube na spojih vlaken, ki so okoli
-0,2 db na spoj. Skupne izgube so tako dosti manjše kot v koaksialnem
-kablu in je možen prenos signala do nekaj sto kilometrov brez vmesnega
-ojačevanja. S tem pri dolžini optičnih zvez izgube niso več glavna
+Pri izdelavi optičnih vlaken se najpogosteje uporablja kremenovo steklo, ki 
+ima najmanjšo absorpcijo svetlobe v bližnjem infrardečem območju (1300~do 1500~nm).
+Navadno mu dodamo še druge snovi, s čemer dosežemo izbran lomni količnik in 
+zmanjšanje disperzije. Za merilo izgub v vlaknu vpeljemo atenuacijski koeficient 
+\beq
+A [dB] = -10 \log_{10}\frac{j(z)}{j(0)}.
+\eeq
+Najboljša vlakna danes imajo pri valovni dolžini 1,55~$\mu$m izgube okoli 0,2 dB/km.
+Za primerjavo: navadno steklo ima atenuacijo okoli 1000~dB/km.
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/10_FibAbs.pdf_tex} 
+\caption{Absorpcija v vlaknu v odvisnosti od valovne dolžine}
+\label{FibAbs}
+\end{figure}
+Slika~(\ref{FibAbs}) prikazuje značilno odvisnost izgub od valovne dolžine 
+za dobro enorodovno vlakno iz kremenovega stekla (črna črta). Pri tem gre 
+za vrsto različnih pojavov. 
+Pri kratkih valovnih dolžinah (UV) je absorbcija velika zaradi elektronskih prehodov
+v steklu (vijolična črta). Širina reže za SiO$_2$ je namreč okoli 8,9~eV, kar ustreza valovni dolžini
+okoli 140~nm. Pri velikih valovnih dolžinah (IR) pride do absorpcije zaradi
+vibracijskih prehodov (črna črta). Čeprav so ti prehodi pri nižjih frekvencah, 
+so vrhovi zelo široki in sežejo do okoli 1500~nm. Absorpcijo na nečistočah lahko s pazljivo 
+izdelavo tako zmanjšajo, da postane skoraj v celotnem območju praktično zanemarljiva. 
+Najbolj problematična nečistoča je voda oziroma OH$^{-}$ ioni, ki imajo velik dipolni
+moment in izrazito absorpcijo pri 1380~nm (zelena črta). Zelo pomemben prispevek k 
+absorpciji, posebej pri krajših valovnih dolžinah, je sipanje na fluktuacijah 
+gostote (Rayleighovo sipanje), saj je sorazmerno z $\lambda^{-4}$ (modra črta). 
+
+S slike je razvidno, da so izgube najmanjše
+okoli 1,55~$\mu$m, zato se to območje največ uporablja za prenos
+na velike razdalje. Izgube so tako majhne, da omogočajo prenos signala 
+do nekaj sto kilometrov brez vmesnega ojačevanja. Teh izgub na vlaknih se tudi v prihodnosti 
+ne bo dalo več kaj dosti izboljšati, saj so že zdaj izgube na spodnji meji,
+določeni s termičnimi fluktuacijami. Pri dolžini optičnih zvez tako izgube niso več glavna
 omejitev, ampak je to popačitev signala zaradi disperzije.
 
-V optičnem vlaknu nastanejo izgube tudi, kadar je vlakno ukrivljeno.
-Te izgube postanejo znantne, kadar je krivinski radij vlakna centimeter
-ali manj. Ta pojav je dovolj zanimiv, da si ga je vredno nekoliko
-podrobneje ogledati.
+\begin{remark}
+Pri prenosu signalov z optičnimi vlakni vpeljemo različne pasove, ki ustrezajo 
+različnim valovnim dolžinam. Pri valovnih dolžinah $1260-1360$~nm je tako imenovani
+pas O (O - {\it original}), ki so ga sprva uporabljali zaradi razpoložljivih virov svetlobe
+in nizke disperzije. Sledita pas E ($1360-1460$~nm) in pas S ($1460-1530$~nm). 
+Najširše uporabljan je pas C (C - {\it conventional}) pri valovnih dolžinah $1530-1565$~nm,
+sledita mu še pas L ($1565-1625$~nm) in pas U ($1625-1675$~nm).
 
-Vzemimo spet dvodimenzionalno plast debeline $2a$ z lomnim količnikom
-$n_{1}$ v sredstvu z lomnim količnikom $n_{0},$ ki naj bo ukrivljena
-s krivinskim radijem $R$. Taka plast tvori del kolobarja z notranjim
-radijem $R-a$ in zunanjim radijem $R+a$, pri čemer je $\dot{R}>>a$
-(Slika \ref{sl9.6}). Zapišimo valovno enačbo za dve dimenziji v cilindrični
-geometriji: 
+V posameznem vlaknu lahko prenašamo več informacij, če za vsako posebej uporabimo
+drugo valovno dolžino. Temu procesu pravimo multipleksiranje po valovni dolžini
+({\it wavelength-division multiplexing, WDM}).
+Na ta način dosežemo vzporeden prenos podatkov in hitrosti do 100~Tb/s.
+Shematsko je prenos podatkov na sliki~(\ref{WDM}).
+Oddajniki (O) oddajo sunke svetlobe. Z multiplekserjem (M) zberemo
+signale iz različnih kanalov in jih usmerimo v enorodovno vlakno. Vlakno prenaša
+signal, vmes ga po potrebi ojačamo (A), nato z demultiplekserjem (DM) signal razstavimo
+na posamezne kanale, ki jih zaznamo z ločenimi detektorji (D).
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/10_WDM.pdf_tex} 
+\caption{Shematski prikaz prenosa signalov z enorodovnim vlaknom}
+\label{WDM}
+\end{figure}
+\end{remark}
+
+\subsection*{Mehanske izgube}
+Do zdaj smo opisali izgube, do katerih pride v vlaknu zaradi absorpcije
+ali sipanja. Pri optičnih zvezah pa se pojavijo izgube tudi na spojih vlaken.
+Tako naprimer izgubljamo pri prenosu med vlaknoma, katerih sredici nista povsem
+enako veliki. Signal izgubljamo, kadar sta vlakni nagnjeni pod nekim kotom 
+eno glede na drugo, ali pa je med njima prečen ali vzdolžen premik. Na tipičnem
+spoju vlaken je okoli $0,2-0,5$~dB izgub. 
+
+\begin{definition}
+Imamo dve vlakni z efektivnima polmeroma snopov $w_1$ in $w_2$, katerih 
+osi sta poravnani, vlakni pa se stikata. Pokaži, da je faktor sklopitve (prepustnost)
+\beq
+\eta = \left( \frac{2 w_1 w_2}{w_1^2+w_2^2}\right)^2.
+\eeq
+\end{definition}
+
+\begin{definition}
+Imamo dve vlakni z enakima efektivnima polmeroma snopov $w$. Osi vlaken 
+sta vzporedni, vendar izmaknjeni za $\Delta$. Pokaži, da je faktor sklopitve (prepustnost)
+\beq
+\eta = \exp \left( - \frac{\Delta^2}{w^2}\right).
+\eeq
+\end{definition}
+
+V optičnem vlaknu nastanejo izgube tudi, kadar je vlakno ukrivljeno, 
+saj takrat valovanje uhaja v plašč. Te izgube tipično postanejo znantne, 
+kadar je krivinski radij vlakna centimeter ali manj. Poglejmo si pojav podrobneje na
+planparalelnem vodniku.
+
+Naj bo vodnik dvodimenzionalna plast debeline $2a$ z lomnim količnikom
+$n_{1}$, ki je obdana s snovjo z lomnim količnikom $n_{2}$. Vodnik naj
+zdaj ne bo raven, temveč ukrivljen s krivinskim radijem $R$, tako da tvori 
+del kolobarja z notranjim radijem $R-a$ in zunanjim radijem $R+a$, pri 
+čemer je $\dot{R}\gg a$ (slika~\ref{sl9.6}). 
+\begin{figure}[h]
+\centering
+\def\svgwidth{60truemm} 
+%\input{slike/10_bend.pdf_tex} 
+\caption{K izračunu izgub v ukrivljenem vodniku}
+\label{fig:bend}
+\end{figure}
+
+Zapišimo valovno enačbo za dve dimenziji v cilindrični
+geometriji. Pri tem ne pozabimo, da $r$ ni več radialna koordinata vlakna, ampak
+
 \begin{equation}
 \frac{1}{r}\,\frac{\partial}{\partial r}\, r\,\frac{\partial E}{\partial r}+\frac{1}{r^{2}}\,\frac{\partial^{2}E}{\partial\phi^{2}}+k_{0}^{2}n^{2}\left(r\right)\, E=0\label{9.31}
 \end{equation}

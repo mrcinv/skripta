@@ -1,6 +1,6 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file '03_teleskop.pdf' (pdf, eps, ps)
+%% Accompanies image file '10_WDM.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{575.44941406bp}%
+    \setlength{\unitlength}{1041.36728516bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,18 +48,12 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.16844614)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{03_teleskop.pdf}}%
-    \put(0.13679503,0.08501703){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$F$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{03_teleskop.pdf}}%
-    \put(0.34228415,0.08766213){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$F$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{03_teleskop.pdf}}%
-    \put(0.8916993,0.087446){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$F$}}}%
-    \put(0.09728266,0.11324574){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$w_{01}$}}}%
-    \put(0.87912012,0.15131866){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$w_{02}$}}}%
-    \put(0.18640933,0.05502653){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$f_1$}}}%
-    \put(0.28347095,0.05520207){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$f_1$}}}%
-    \put(0.51497755,0.05242163){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$f_2$}}}%
-    \put(0.76592361,0.05301071){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$f_2$}}}%
+  \begin{picture}(1,0.21709714)%
+    \put(0,0){\includegraphics[width=\unitlength]{10_WDM.pdf}}%
+    \put(0.21641992,0.17652105){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$M$}}}%
+    \put(0.46756567,0.08738287){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$A$}}}%
+    \put(0.70926934,0.17558314){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$DM$}}}%
+    \put(0.01969294,0.20816327){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$O$}}}%
+    \put(0.96044533,0.20816327){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$D$}}}%
   \end{picture}%
 \endgroup%
