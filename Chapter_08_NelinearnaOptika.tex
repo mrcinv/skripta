@@ -1078,16 +1078,16 @@ električna polja. To naredimo z vsoto dveh kompleksno konjugiranih členov
 Podobno zapišemo tudi za polarizacijo, pri čemer nas bodo zanimali samo členi,
 ki nihajo s frekvenco $\omega$
 \begin{equation}
-\mathbf{P}=\frac{\mathbf{e}}{2}(\mathbf{P}_\omega e^{i(kz-\omega t)}+\mathbf{P}_\omega^{*}e^{-i(kz-\omega t)}).
+\mathbf{P}=\frac{\mathbf{e}}{2}(P_\omega e^{i(kz-\omega t)}+P_\omega^{*}e^{-i(kz-\omega t)}).
 \label{8.71a}
 \end{equation}
-Ti členi nastopijo v primeru, da
+Ti členi nastopijo v primeru, ko
 v izrazu $\mathbf{E}\mathbin \mathbf{E}\mathbin\mathbf{E}$ 
 vzamemo dvakrat nekonjugirani del, enkrat pa konjugiranega. To lahko naredimo na tri
 možne načine in dobimo tri enake člene. Sledi
 \beq
-\frac{1}{2}\mathbf{P}_{\omega,\mathrm{NL}} = 3 \frac{1}{8} A A^* \left( 
-\varepsilon_0 \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin \mathbf{e} \right) \mathbf{A}.
+\frac{\mathbf{e}}{2}P_{\omega,\mathrm{NL}} = 3 \frac{1}{8} A A^* \left( 
+\varepsilon_0 \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin \mathbf{e} \mathbin \mathbf{e} \right) A.
 \label{pomega}
 \eeq
 Celotna polarizacija je
@@ -1153,7 +1153,7 @@ velikostnih redov, $n_2$ pa je lahko tudi negativen.
 \end{table}
 
 Zanimivi posledici lomnega količnika, odvisnega od intenzitete svetlobe, 
-sta samozbiranje svetlobnega snopa in širjenje solitonov po vodnikih, 
+sta samozbiranje svetlobnega snopa in širjenje solitonov po optičnih vodnikih, 
 kar si bomo pogledali v naslednjih
 razdelkih.
 
@@ -1213,8 +1213,8 @@ na detektorju ($D$) naraste. Za lege vzorca levo
 od prvotnega gorišča ($z<0$) je ravno obratno, snop se razširi (črtkana črta) in 
 signal na detektorju se zmanjša. Za snovi z negativnim nelinearnim lomnim količnikom
 je odziv ravno nasprotnega predznaka. Pri določanju nelinearnga lomnega količnika je
-ključno, da smo uporabili zaslonko ($Z$), s katero smo omejili 
-velikost vpadnega snopa. Če zaslonko odstranimo in merimo 
+ključno uporabiti zaslonko ($Z$), s katero omejimo premer vpadnega snopa pred vpadom
+na detektor. Če zaslonko odstranimo in merimo 
 odvisnost celotne vpadne intenzitete od lege vzorca, nelinearnega lomnega količnika 
 ne moremo meriti, lahko pa določimo nelinearni absorpcijski koeficient. 
 
@@ -1250,9 +1250,9 @@ n(r)=\tilde{n}+n_2 j_0 e^{-2r^2/w_0^2} \approx \tilde{n}+n_2 j_0 \left(1 - 2\fra
 \label{8.76}
 \end{equation}
 Razlika med lomnim količnikom na osi in pri $w_{0}$ od osi je $\Delta n= 2j_{0} n_{2}$.
-Zaradi tega je razlika optičnih poti za žarek na osi in za $w_{0}$
-od osi $\Delta nz_{0} = 2 n_2 j_0 z_0$. Valovna fronta bi se na razdalji $z_0$ torej
-ukrivila na nek krivinski radij $-R$. Iz preproste geometrije velja zveza 
+Zaradi tega je na poti od grla do $z_0$ razlika optičnih poti med žarkoma na osi $(r=0)$ in 
+pri $r= w_{0}$ enaka $\Delta nz_{0} = 2 n_2 j_0 z_0$ in valovna fronta se 
+ukrivi na nek krivinski radij $-R$. Iz preproste geometrije velja zveza 
 \begin{equation}
 \Delta nz_{0}=R-R\sqrt{1-\frac{w_{0}^{2}}{R^{2}}}\approx \frac{w_{0}^{2}}{2R}
 \label{8.77}
@@ -1473,7 +1473,7 @@ Ta pojav spreminjanja frekvence znotraj kratkega sunka imenujemo čričkanje sun
 \end{figure}
 Pri prehodu optičnega sunka z osnovno frekvenco $\omega_0$ se torej različnim delom sunka
 frekvenca različno spremeni (slika~\ref{fig:chirp}\,a), začetnemu delu se zmanjša, 
-zadnjemu pa poveča. Po drugi strani pa v snoveh poznamo barvno disperzijo, 
+končnemu pa poveča. Po drugi strani pa v snoveh poznamo barvno disperzijo, 
 kar pomeni, da veljajo za valovanja z različnimi frekvencami različni lomni količniki.
 \index{Disperzija} Pojav disperzije je še bolj zapleten pri potovanju sunkov svetlobe,
 kar bomo podrobneje obravnavali pri optičnih vlaknih (poglavje~\ref{chap:Disperzija}).
@@ -1483,8 +1483,8 @@ z drugim odvodom lomnega količnika po valovni dolžini
 D = -\frac{\lambda}{c_0}\frac{d^2n}{d\lambda^2}.
 \eeq
 Pri določenih pogojih (izbrana snov in določeno frekvenčno območje) 
-lahko dosežemo, da potuje del valovanja z večjo valovno dolžino počasneje kot del valovanja
-z manjšo valovno dolžino (slika~\ref{fig:chirp}\,b). V tem primeru zadnji del sunka 
+lahko dosežemo, da potuje del valovanja z daljšo valovno dolžino počasneje kot del valovanja
+s krajšo valovno dolžino (slika~\ref{fig:chirp}\,b). V tem primeru končni del sunka 
 dohiteva sprednjega in učinek disperzije ravno izniči učinek nelinearnosti. 
 Nastane signal, ki ohranja svojo obliko~\textendash~soliton. 
 \begin{figure}[h]
