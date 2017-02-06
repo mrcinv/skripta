@@ -576,7 +576,7 @@ moč podvojene svetlobe (enačbi~\ref{8.10} in \ref{8.11}), je torej v izbranem 
 \end{equation}
 
 \begin{definition}
-Izračunaj efektivno nelinearno susceptibilnost za frekvenčno podvajanje svetlobe z valovno
+Izračunaj največjo možno efektivno nelinearno susceptibilnost za frekvenčno podvajanje svetlobe z valovno
 dolžino $10~\si{\micro\metre}$ v kristalu telurja s simetrijsko grupo 32 (glej tabelo~\ref{table:chi}). 
 Lomni količniki: $n_o^{\omega} = 4,7969$, 
 $n_e^{\omega} = 6,2455$, $n_o^{2\omega} = 4,8657$ in $n_e^{2\omega} = 6,3152$.
@@ -906,7 +906,7 @@ resonator\index{Resonator!parametrični oscilator}
 in signal se ob vsakem obhodu ojača. Sestavili smo t.\,i.\,optični parametrični oscilator. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{90truemm} 
 \input{slike/08_opo.pdf_tex}
 \caption{Shematski prikaz tipičnega optičnega parametričnega oscilatorja. Ojačevalno sredstvo
 zapremo med resonatorja, da se signalni žarek ($\omega_1$) ob vsakem preletu ojači.}
@@ -922,28 +922,28 @@ hkrati pa mora ojačevano nihanje sovpadati z lastnim nihanjem resonatorja.
 S sukanjem ojačevalnega kristala lahko na ta način spreminjamo
 ojačano frekvenco in naredili smo nastavljiv izvor svetlobe, navadno infrardeče. 
 
-Za delovanje oscilatorja biti jakost črpalnega žarka tako velika, da je parametrično 
-ojačevanje na obhod večje od izgub. Izračunajmo za primer prag simetričnega oscilatorja. Signal z močjo 
+Za delovanje oscilatorja mora biti jakost črpalnega žarka tako velika, da je parametrično 
+ojačevanje na obhod večje od izgub. Izračunajmo za primer zgoraj narisanega oscilatorja. Signal z močjo 
 $P_0$ se ob prehodu skozi ojačevalno sredstvo ojača (enačba~\ref{eq:opa})
 \beq
 P_1 = P_0 \cosh^2 (\kappa L),
 \eeq
-hkrati pa se zaradi delno prepustnih zrcal z odbojnostjo $R$ intenziteta žarka zmanjšuje. 
-Pri tem ne pozabimo, da je pogoj ujemanja faz izpolnjen le v eni smeri in se svetloba
+hkrati pa se zaradi izhodnega zrcala z odbojnostjo $R$ in notranjih izgub $\Lambda_0$ 
+intenziteta žarka zmanjšuje. Pri tem je pogoj ujemanja faz izpolnjen le v eni smeri in se svetloba
 ojačuje le enkrat na celoten obhod. Ob preletu v drugo smer je namreč $\Delta k \neq 0$ in žarek se ne ojačuje.
 Moč žarka po obhodu $P_2$ je enaka začetni moči $P_0$, saj je pri pragu ojačanje ravno enako izgubam 
 \beq
-P_2 = R^2 P_1 = R^2 P_0 \cosh^2 (\kappa L) = P_0
+P_2 = P_1\,(1-\Lambda_0)R = P_0 \,(1-\Lambda_0) R \,\cosh^2 (\kappa L) = P_0
 \eeq
 oziroma
 \beq
-R^2 \cosh^2 (\kappa L) =1.
+(1-\Lambda_0)\, R\,\cosh^2 (\kappa L) =1.
 \eeq
 Iz gornjega pogoja določimo parameter $\kappa$, po enačbi~(\ref{opakapa}) pa mejno 
 amplitudo in intenziteto črpalnega žarka. Nadaljujmo še prejšnji primer ojačanja 
 svetlobe v 1~cm dolgem kristalu LiNbO$_{3}$.
-Če je odbojnost zrcal $R=0,9$ in prečni presek žarka $10~\si{\micro\metre^2}$, je moč 
-praga $P_{\omega_3} = 5$~W.
+Če je odbojnost izhodnega zrcala $R=0,85$, notranje izgube $\Lambda_0 = 0,05$ in prečni presek 
+žarka $10~\si{\micro\metre^2}$, je moč praga $P_{\omega_3} = 5$~W.
 
 \begin{remark}
 Optični parametrični oscilator torej oddaja svetlobo, podobno kot laser. Tudi sicer
@@ -1078,16 +1078,16 @@ električna polja. To naredimo z vsoto dveh kompleksno konjugiranih členov
 Podobno zapišemo tudi za polarizacijo, pri čemer nas bodo zanimali samo členi,
 ki nihajo s frekvenco $\omega$
 \begin{equation}
-\mathbf{P}=\frac{1}{2}(\mathbf{P}_\omega e^{i(kz-\omega t)}+\mathbf{P}_\omega^{*}e^{-i(kz-\omega t)}).
+\mathbf{P}=\frac{\mathbf{e}}{2}(P_\omega e^{i(kz-\omega t)}+P_\omega^{*}e^{-i(kz-\omega t)}).
 \label{8.71a}
 \end{equation}
-Ti členi nastopijo v primeru, da
+Ti členi nastopijo v primeru, ko
 v izrazu $\mathbf{E}\mathbin \mathbf{E}\mathbin\mathbf{E}$ 
 vzamemo dvakrat nekonjugirani del, enkrat pa konjugiranega. To lahko naredimo na tri
 možne načine in dobimo tri enake člene. Sledi
 \beq
-\frac{1}{2}\mathbf{P}_{\omega,\mathrm{NL}} = 3 \frac{1}{8} A A^* \left( 
-\varepsilon_0 \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin \mathbf{e} \right) \mathbf{A}.
+\frac{\mathbf{e}}{2}P_{\omega,\mathrm{NL}} = 3 \frac{1}{8} A A^* \left( 
+\varepsilon_0 \chi^{(3)}\vdots \mathbin \mathbf{e}\mathbin \mathbf{e} \mathbin \mathbf{e} \right) A.
 \label{pomega}
 \eeq
 Celotna polarizacija je
@@ -1153,7 +1153,7 @@ velikostnih redov, $n_2$ pa je lahko tudi negativen.
 \end{table}
 
 Zanimivi posledici lomnega količnika, odvisnega od intenzitete svetlobe, 
-sta samozbiranje svetlobnega snopa in širjenje solitonov po vodnikih, 
+sta samozbiranje svetlobnega snopa in širjenje solitonov po optičnih vodnikih, 
 kar si bomo pogledali v naslednjih
 razdelkih.
 
@@ -1213,8 +1213,8 @@ na detektorju ($D$) naraste. Za lege vzorca levo
 od prvotnega gorišča ($z<0$) je ravno obratno, snop se razširi (črtkana črta) in 
 signal na detektorju se zmanjša. Za snovi z negativnim nelinearnim lomnim količnikom
 je odziv ravno nasprotnega predznaka. Pri določanju nelinearnga lomnega količnika je
-ključno, da smo uporabili zaslonko ($Z$), s katero smo omejili 
-velikost vpadnega snopa. Če zaslonko odstranimo in merimo 
+ključno uporabiti zaslonko ($Z$), s katero omejimo premer vpadnega snopa pred vpadom
+na detektor. Če zaslonko odstranimo in merimo 
 odvisnost celotne vpadne intenzitete od lege vzorca, nelinearnega lomnega količnika 
 ne moremo meriti, lahko pa določimo nelinearni absorpcijski koeficient. 
 
@@ -1250,9 +1250,9 @@ n(r)=\tilde{n}+n_2 j_0 e^{-2r^2/w_0^2} \approx \tilde{n}+n_2 j_0 \left(1 - 2\fra
 \label{8.76}
 \end{equation}
 Razlika med lomnim količnikom na osi in pri $w_{0}$ od osi je $\Delta n= 2j_{0} n_{2}$.
-Zaradi tega je razlika optičnih poti za žarek na osi in za $w_{0}$
-od osi $\Delta nz_{0} = 2 n_2 j_0 z_0$. Valovna fronta bi se na razdalji $z_0$ torej
-ukrivila na nek krivinski radij $-R$. Iz preproste geometrije velja zveza 
+Zaradi tega je na poti od grla do $z_0$ razlika optičnih poti med žarkoma na osi $(r=0)$ in 
+pri $r= w_{0}$ enaka $\Delta nz_{0} = 2 n_2 j_0 z_0$ in valovna fronta se 
+ukrivi na nek krivinski radij $-R$. Iz preproste geometrije velja zveza 
 \begin{equation}
 \Delta nz_{0}=R-R\sqrt{1-\frac{w_{0}^{2}}{R^{2}}}\approx \frac{w_{0}^{2}}{2R}
 \label{8.77}
@@ -1473,7 +1473,7 @@ Ta pojav spreminjanja frekvence znotraj kratkega sunka imenujemo čričkanje sun
 \end{figure}
 Pri prehodu optičnega sunka z osnovno frekvenco $\omega_0$ se torej različnim delom sunka
 frekvenca različno spremeni (slika~\ref{fig:chirp}\,a), začetnemu delu se zmanjša, 
-zadnjemu pa poveča. Po drugi strani pa v snoveh poznamo barvno disperzijo, 
+končnemu pa poveča. Po drugi strani pa v snoveh poznamo barvno disperzijo, 
 kar pomeni, da veljajo za valovanja z različnimi frekvencami različni lomni količniki.
 \index{Disperzija} Pojav disperzije je še bolj zapleten pri potovanju sunkov svetlobe,
 kar bomo podrobneje obravnavali pri optičnih vlaknih (poglavje~\ref{chap:Disperzija}).
@@ -1483,8 +1483,8 @@ z drugim odvodom lomnega količnika po valovni dolžini
 D = -\frac{\lambda}{c_0}\frac{d^2n}{d\lambda^2}.
 \eeq
 Pri določenih pogojih (izbrana snov in določeno frekvenčno območje) 
-lahko dosežemo, da potuje del valovanja z večjo valovno dolžino počasneje kot del valovanja
-z manjšo valovno dolžino (slika~\ref{fig:chirp}\,b). V tem primeru zadnji del sunka 
+lahko dosežemo, da potuje del valovanja z daljšo valovno dolžino počasneje kot del valovanja
+s krajšo valovno dolžino (slika~\ref{fig:chirp}\,b). V tem primeru končni del sunka 
 dohiteva sprednjega in učinek disperzije ravno izniči učinek nelinearnosti. 
 Nastane signal, ki ohranja svojo obliko~\textendash~soliton. 
 \begin{figure}[h]

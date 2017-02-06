@@ -13,7 +13,7 @@ ali frekvenco oziroma fazo\index{Elektro-optična modulacija!frekvenčna}
 \index{Elektro-optična modulacija!fazna}. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{140truemm} 
+\def\svgwidth{120truemm} 
 \input{slike/09_AMFM.pdf_tex}
 \caption{Amplitudno (levo) in fazno oziroma frekvenčno moduliran signal (desno)
 }
@@ -46,11 +46,14 @@ in spremembo dielektričnega tenzorja $\delta \varepsilon_{ij}$.
 Če so spremembe majhne, velja 
 \begin{equation}
 \underline{\varepsilon} = \underline{\tilde{\varepsilon}} + \delta \underline{\varepsilon}=
-(\underline{b}+\delta \underline{b})^{-1}=\left(\underline{b}(1+\underline{b}^{-1}
-\delta \underline{b})\right)^{-1}=(1+\underline{b}^{-1}\delta \underline{b})^{-1}\underline{b}^{-1}
-\approx \underline{b}^{-1}-\underline{b}^{-1}\delta \underline{b}\, \underline{b}^{-1}.
+(\underline{\tilde{b}}+\delta \underline{b})^{-1}=\left(\underline{\tilde{b}}(1+\underline{\tilde{b}}^{-1}
+\delta \underline{b})\right)^{-1}=(1+\underline{\tilde{b}}^{-1}\delta \underline{b})^{-1}\underline{\tilde{b}}^{-1}
+\approx \underline{\tilde{b}}^{-1}-\underline{\tilde{b}}^{-1}\delta \underline{b}\, \underline{\tilde{b}}^{-1},
 \label{7.2}
 \end{equation}
+pri čemer je $\underline{\tilde{\varepsilon}}$ označuje dielektrični in $\underline{\tilde{b}}$
+inverzni dielektrični tenzor v odsotnosti zunanjega polja (nemoten tenzor).
+
 Sprememba dielektričnega tenzorja je tako
 \beq
  \delta \underline{\varepsilon}= -\underline{b}^{-1}\delta \underline{b}\, \underline{b}^{-1}
@@ -75,7 +78,7 @@ Tenzor tretjega ranga $r_{ijk}$, ki je lastnost snovi, imenujemo elektro-optičn
 tenzor\index{Elektro-optični tenzor}
 ali tudi Pockelsov tenzor\index{Pockelsov tenzor|see {Elektro-optični tenzor}}. 
 Pockelsov tenzor je različen od nič v snoveh brez centra inverzije, značilne vrednosti Pockelsovega
-tenzorja pa so okoli $r \sim 10^{-12} - 10^{-10}$~m/V,
+tenzorja pa so okoli $r \sim 10^{-12} - 10^{-10}$~m/V.
 
 Kvadratnemu elektro-optičnemu pojavu pravimo Kerrov\index{Kerrov pojav}
 pojav\footnote{Škotski fizik John Kerr, 1824--1907.}, tenzorju $q_{ijkl}$ pa Kerrov tenzor\index{Kerrov tenzor}. 
@@ -279,7 +282,7 @@ novima lastnima količnikoma, ki ju izrazimo kot
 Kadar polarizacija vpadnega valovanja ne sovpada z novimi lastnimi osmi $x'$ ali $y'$, je 
 svetloba po preletu kristala v splošnem eliptično polarizirana.
 
-Za vsa eksperimentalno dosegljiva polja velja, da je $rE\ll1/n^2$, 
+Za vsa eksperimentalno dosegljiva polja velja, da je $rE\ll1/n_o^2$, 
 zato lahko gornja izraza razvijemo za majhne popravke
 \beq
 n_{x'} = \sqrt{\frac{n_o^2}{1+ n_o^2 r_{63}E_z}} \approx n_o \sqrt{1- n_o^2 r_{63}E_z}.
@@ -332,7 +335,7 @@ neodvisne komponente: $r_{51}=r_{42}, r_{13}=r_{23}, r_{33}$ in $r_{22}=-r_{12}=
 \pagebreak
 Naj se svetloba širi vzdolž osi $z$, ki je hkrati tudi optična os, 
 električno polje pa priključimo v smeri $y$ (slika~\ref{fig:tmshema}). 
-Krajši račun pokaže, da je inverzni dielektrični tenzor pod vplivom polja enak
+Krajši račun pokaže, da je inverzni dielektrični tenzor v polju enak
 \beq
 \underline{b} = 
  \left[\begin{array}{ccc}
@@ -344,7 +347,7 @@ Krajši račun pokaže, da je inverzni dielektrični tenzor pod vplivom polja en
 \eeq
 Tudi v tem primeru tenzor diagonaliziramo in poiščemo nove lastne vrednosti.
 Ob privzetku, da je sprememba zaradi električnega polja majhna ($rE\ll1$),
-so nove lastne vrednosti enake
+zanemarimo člene, v katerih $rE$ nastopa v kvadratni obliki, in dobimo nove lastne vrednosti 
 \begin{align}
 \lambda_1 &\approx \frac{1}{n_o^2}-r_{22}E_y \\
 \lambda_2 &\approx \frac{1}{n_o^2}+ r_{22}E_y \\
@@ -762,7 +765,7 @@ valovne dolžine zvočnega valovanja. Zvočno valovanje v snovi torej deluje kot
 optična fazna mrežica. Tipična frekvenca, s katero vzbujamo elastično
 deformacijo, je okoli $\Omega=50$~MHz, ustrezna valovna dolžina pa okoli $\Lambda = 100~\si{\micro\metre}$. 
 Frekvence, ki so v uporabi, navadno sežejo od nekaj MHz prek 10 GHz. Vsa ta valovanja imenujemo
-zvočno valovanje. 
+ultrazvočno valovanje. 
 
 \begin{figure}[h]
 \centering
@@ -1264,7 +1267,7 @@ homeotropna ureditev (desno), kjer je direktor pravokoten mejno ploskev.}
 Na ureditev molekul tekočega kristala vpliva zunanje električno ali magnetno polje.
 Zaradi urejenosti molekul električna (in magnetna) susceptibilnost nematičnega tekočega
 kristala ni skalar, temveč ima dve različni lastni vrednosti,
-eno v za smer vzporedno z $\mathbf{n}$, drugo za pravokotno nanj. Zato je
+eno za smer vzporedno z $\mathbf{n}$, drugo za pravokotno nanj. Zato je
 elektrostatična energija odvisna od kota med zunanjim poljem $\mathbf{E}$
 in direktorjem $\mathbf{n}$. Gostoto električne energije\index{Gostota energije} 
 zapišemo kot 
@@ -1303,8 +1306,8 @@ vzporedno planarno ureditev. Vzorec je urejen in homogen, optična os leži v ra
 plasti. Če dodamo na površini še prozorni elektrodi, lahko
 z zunanjo napetostjo spreminjamo orientacijo molekul v plasti in tako tudi 
 smer optične osi. Dovolj velika napetost zasuče $\mathbf{n}$ in optična os
-se postavi pravokotno na stene, razen tik ob površini. Pri debelini okoli $10~\si{\micro\metre}$
-je potrebna napetost nekaj voltov.
+se postavi pravokotno na stene, razen tik ob površini. Tipično so take napetosti okoli 
+nekaj voltov.
 
 Ta pojav lahko izkoristimo za izdelavo preprostega optičnega preklopnika. 
 Naj debelina plasti $d$ ustreza debelini ploščice $\lambda/2$\index{Ploščica $\lambda/2$} 
@@ -1351,11 +1354,6 @@ zasučejo v smer polja. Polarizacija svetlobe (P) se ohranja in analizator (A)
 je ne prepusti. }
 \label{LCD1}
 \end{figure}
-
-Slabost uporabe tekočekristalnih preklopnikov je njihova diskretnost. Pri 
-kristalnem elektro-optičnem modulatorju je mogoče doseči tudi vmesne
-prepustnosti, medtem ko s tekočimi kristali na opisan način
-dosežemo le zaprto in odprto stanje.
 
 \begin{remark}
 Tekočekristalni zasloni, ki jih uporabljamo v praksi, so precej bolj zapleteni.
@@ -1535,7 +1533,7 @@ Braggovemu odboju na kristalih in daje holesterikom značilen obarvan
 videz.\index{Tekoči kristali!Holesterik}
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{60truemm} 
 \input{slike/09_gap.pdf_tex}
 \caption{Rešitve disperzijske zveze (enačba~\ref{7.66}) v zasukanem nematiku
 pri izbrani $\alpha$. Razen na ozkem frekvenčnem območju obstajajo štiri 
@@ -1575,19 +1573,19 @@ zasuk in upogib.}
 
 V zunanjem električnem polju se energija tekočega kristala dodatno spremeni. 
 Navadno je neodvisna električna količina električna poljska jakost, saj je polje posledica
-zunanje napetosti na elektrodah. Ustrezni člen v termodinamičnem
-potencialu je tedaj (enačbi~\ref{lcwe} in~\ref{7.56a})
+zunanje napetosti na elektrodah. Ustrezni člen v prosti energiji je tedaj 
+(enačbi~\ref{lcwe} in~\ref{7.56a})
 \beq
-w_{el} = -\frac{1}{2} \mathbf{D}\cdot\mathbf{E} = -\frac{1}{2} 
+F_{el} = -\int \frac{1}{2} \mathbf{D}\cdot\mathbf{E} dV= -\frac{1}{2} \int
 \left( \varepsilon_0 \varepsilon_\bot \mathbf{E}\cdot\mathbf{E} + 
-\varepsilon_{0}\varepsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2}\right).
+\varepsilon_{0}\varepsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2}\right)dV = F_0 + F_{el,a}.
 \eeq
 Prvi člen je neodvisen od $\mathbf{n}$, zato ni pomemben pri izračunu
 preklopa. Prosta energija
 nematičnega tekočega kristala v električnem polju je tako 
 \begin{equation}
-F=F_{0}+F_{e}-\frac{1}{2}\varepsilon_{0}\varepsilon_{a}
-(\mathbf{E}\cdot \mathbf{n})^{2},
+F=F_{0}+F_{e}-\int \frac{1}{2}\varepsilon_{0}\varepsilon_{a}
+(\mathbf{E}\cdot \mathbf{n})^{2}dV = F_0 + F_e + F_{el,a},
 \label{7.72}
 \end{equation}
  kjer $F_{0}$ predstavlja del proste energije, ki je neodvisen od $\mathbf{n}$.
@@ -1640,7 +1638,7 @@ F & = & \frac{1}{2}\int\left[K_{1}\left(\frac{dn_{z}}{dz}\right)^{2}+K_{3}(n_x^2
  & = & \frac{1}{2}\int_{0}^{d}
  [K_{1}q^{2}a^{2}\cos^{2}(qz)+K_{3}q^{2}a^{4}\sin^{2}(qz)\cos^2(qz)-
  \epsilon_{0}\epsilon_{a}E^2a^{2}\sin^{2}(qz)]dz=\nonumber \\
- & = & \frac{\pi}{4q}a^2\left( K_{1}q^{2}+\frac{1}{4}K_{3}q^{2}a^2-\epsilon_{0}\epsilon_{a}E^2\right).
+ & = & \frac{d}{4q}a^2\left( K_{1}q^{2}+\frac{1}{4}K_{3}q^{2}a^2-\epsilon_{0}\epsilon_{a}E^2\right).
 \end{eqnarray}
 V našem primeru smo integral lahko izračunali, saj smo uporabili nastavek (enačba~\ref{7.74}).
 Sicer bi morali uporabiti Euler-Lagrangeevo metodo za minimizacijo proste energije, ki 
