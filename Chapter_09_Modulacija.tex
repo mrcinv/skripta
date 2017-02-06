@@ -976,7 +976,8 @@ le počasi spreminjajo.
 
 Izračunajmo 
 \begin{equation}
-\nabla^{2}E=\sum_{n}\left( -[k_{z}^{2}+(k_{x}+nq)^{2}]A_{n}(z)+2ik_{z}A_{n}'(z)\right) \, e^{i[(k_x+nq)x+k_{z}z-(\omega+n\Omega)t]}.
+\nabla^{2}E=\sum_{n}\left( -[k_{z}^{2}+(k_{x}+nq)^{2}]A_{n}(z)+2ik_{z}A_{n}'(z)\right) \, 
+e^{i[(k_x+nq)x+k_{z}z-(\omega+n\Omega)t]}.
 \label{7.35}
 \end{equation}
 Člene z $A_{n}''$ lahko izpustimo, če je le $k_{z}A_{n}'\gg A_{n}''$ oziroma 
@@ -984,7 +985,8 @@ kadar se $A_{n}$ spreminjajo počasi v primerjavi z exp$(ik_{z}z)$. Drugi odvod
 polarizacije po času da
 \beq
 \begin{split}
-\frac{\partial^2 \Delta P}{\partial t^2} =&-\frac{\varepsilon_0 \tilde{\varepsilon}^2pS_0}{2i} \sum_{n} A_n(z) \exp\left(i[(k_x+nq)x+k_{z}z-(\omega+n\Omega)t]\right) \cdot \\ &\left(
+\frac{\partial^2 \Delta P}{\partial t^2} =&-\frac{\varepsilon_0 \tilde{\varepsilon}^2pS_0}{2i} 
+\sum_{n} A_n(z) \exp\left(i[(k_x+nq)x+k_{z}z-(\omega+n\Omega)t]\right) \cdot \\ &\left(
 -[n\Omega+\omega+\Omega]^2e^{i(qx-\Omega t)} + [n\Omega+\omega-\Omega]^2e^{i(-qx+\Omega t)} \right),
 \label{7.35a}
 \end{split}
@@ -1107,14 +1109,21 @@ Razmerje med močjo uklonjenega in vpadnega snopa je tako
 \boxeq{7.48}{
 \frac{I_{1}}{I_{0}}=\sin^{2}\left(\frac{\pi n_{0}^{3}pS_{0}d}{2\lambda\cos\vartheta}\right).
 }
-V izrazu nastopa še amplituda deformacije $S_0$, ki pa je povezana z gostoto 
-energijskega toka zvočnega valovanja. Za longitudinalne (zvočne) valove v snovi
+Poiščimo še amplitudo deformacije $S_0$. Za longitudinalne (zvočne) valove v snovi oblike 
+$s = s_0 \cos(kz - \omega t)$ je deformacija 
+\beq
+S_{zz} = \frac{1}{2}\bigl( \frac{\partial s}{\partial z}+ 
+\frac{\partial s}{\partial z}\bigr) = \frac{\partial s}{\partial z}.
+\eeq
+Povprečna gostota energijskega toka je 
 \begin{equation}
-j_{z}=\frac{1}{2}CS_{0}^{2}v_{z},
+j_{z}=
+\frac{1}{2}v_z \left(\frac{1}{2} \varrho \left(\frac{\partial s}{\partial t}\right)^2
++ \frac{1}{2} \varrho v_z^2\left(\frac{\partial s}{\partial z}\right)^2
+\right) = \frac{1}{2} \varrho v_z^3 S_0^2,
 \label{7.49}
 \end{equation}
-kjer je $C$ elastična konstanta snovi, $v_z$ pa hitrost zvoka v snovi. 
-Iz zveze $v_{z}^{2}=C/\varrho$ izrazimo $C$ z gostoto $\varrho$, s čemer dobimo 
+kjer je $v_z$ hitrost zvoka v snovi in $\varrho$ gostota snovi. Sledi 
 \begin{equation}
 S_{0}=\sqrt{\frac{2j_{z}}{\varrho v_{z}^{3}}}.
 \label{7.50}
