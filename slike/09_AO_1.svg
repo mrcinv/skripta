@@ -15,7 +15,7 @@
    height="612.45935"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="09_AO_1.svg"
    inkscape:export-filename="/home/mojca/Delo/FotonikaSkripta/MojcaNova/slike/08_nl2.png"
    inkscape:export-xdpi="599"
@@ -252,16 +252,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.57691976"
-     inkscape:cx="356.98903"
-     inkscape:cy="79.473423"
+     inkscape:zoom="1.1538395"
+     inkscape:cx="454.19665"
+     inkscape:cy="305.9995"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1428"
-     inkscape:window-height="823"
+     inkscape:window-height="1008"
      inkscape:window-x="429"
-     inkscape:window-y="186"
+     inkscape:window-y="1"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -275,7 +275,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -339,15 +339,15 @@
          style="font-size:32px">$x$</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Sans"
-       x="-136.61044"
-       y="512.45264"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56px;line-height:125%;font-family:'Nimbus Sans L';-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="-205.94417"
+       y="495.1192"
        id="text4073-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4075-7"
-         x="-136.61044"
-         y="512.45264"
+         x="-205.94417"
+         y="495.1192"
          style="font-size:24px">$\vartheta$</tspan></text>
     <g
        id="g3897-3"
@@ -615,15 +615,40 @@
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
-       style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Sans"
-       x="302.96747"
-       y="516.44617"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:56px;line-height:125%;font-family:'Nimbus Sans L';-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="263.10059"
+       y="619.58014"
        id="text4073-2-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4075-7-0"
-         x="302.96747"
-         y="516.44617"
+         x="263.10059"
+         y="619.58014"
          style="font-size:24px">$\beta$</tspan></text>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path3438"
+       sodipodi:type="arc"
+       sodipodi:cx="6.3296094"
+       sodipodi:cy="526.09973"
+       sodipodi:rx="238.3347"
+       sodipodi:ry="228.80132"
+       sodipodi:start="3.1415927"
+       sodipodi:end="3.6017098"
+       sodipodi:open="true"
+       d="M -232.00509,526.09972 A 238.3347,228.80132 0 0 1 -207.2184,424.4998" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path3438-3"
+       sodipodi:type="arc"
+       sodipodi:cx="-30.772781"
+       sodipodi:cy="-525.22272"
+       sodipodi:rx="238.3347"
+       sodipodi:ry="228.80132"
+       sodipodi:start="3.1415927"
+       sodipodi:end="3.6017098"
+       sodipodi:open="true"
+       d="m -269.10748,-525.22273 a 238.3347,228.80132 0 0 1 24.78669,-101.59991"
+       transform="scale(-1,-1)" />
   </g>
 </svg>

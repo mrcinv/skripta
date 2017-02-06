@@ -2,18 +2,191 @@
 
 \chapter{Detektorji svetlobe}
 
-% \section{Termični detektorji}
-% 
-% \section{Fotoefekt}
-% 
-% \section{Fotopomnoževalka}
-% 
-% \section{Fotoprevodni detektorji}
-% 
-% \section{PN in PiN fotodiode}
-% 
-% \section{Plazovne fotodiode}
-% 
-% \section{CCD in CMOS detektorji}
-% 
-% \section{Šum pri optični detekciji}
+Detektorje svetlobe lahko razdelimo na dva tipa: kalorimetrične in kvantne. Pri prvih
+zanzamo svetlobo tako, da merimo povečanje temperature senzorja zaradi absorbirane svetlobe.
+Pri drugih pa na nek način direktno zaznavamo elektrone, ki so absorbirali svetlobne kvante.
+
+\section{Termični detektorji}
+Oglejmo si le  nekaj takih, ki se danes uporabljajo. Razlikujejo se predvsem po načinu
+detekcije spremembe temperature. Tipalo mora biti pri vseh dobro počrnjeno, da absorbira
+svetlobo v širokem spektralnem območju. Navadno tudi želimo, da je odziv hiter, zato mora 
+biti tipalni element majhen.
+
+Termočlen, katerega en spoj je počrnjen, drugi, referenčni, pa je zaščiten pred svetlobo.
+Zaradi svetlobe se počrnjeni spoj segreje, med obema spojema nastane temperaturna razlika in 
+zaradi termoelektričnega pojava tudi električna napetost. PAziti je treba, da je žica med 
+obema spojema čim tanjša, da je prevajanje toplote po njej čim manjše. Napetosti niso velike,
+pri temperaturni razliki ene stoopinje le nekaj deset mikrovoltov, zato včasih vežejo 
+več termočlenov zaporedno.
+
+Bolometer je počrnjen uporovni termometer, zvezan v Wheatstonov mostiček. Referenčni upor v
+mostičku je enak kot merilni, le da je zaščiten pred svetlobo. Napterost na mostički je tako 
+sorazmerna z razliko temperatur obeh uporov, torej z vpadlim svetlobnim tokom. Sama
+sprememba temperature okolice ne moti, ker se zaradi nje temperatura obeh uporov enako spremeni. 
+Kot uporovni termometer se pogosto uporablja termistor zaradi velikega temperaturnega koeficienta
+upornosti.
+
+Piroelektrični detektor je narejen iz ploščice snovi z lastno električno polarizacijo, ki 
+je odvisna od temperature. Piroelektričnost  je dovoljena v kristalih, ki nimajo centra 
+inverzije. Postavimo ploščico piroelektrika med dve elektrodi. Zaradi spremembe temperature se 
+bo spremenila polarizacija, kar bomo zaznali kot premikalni tok. Spremembo polarizacije lahko zapišemo
+kot 
+\beq
+dP = a dT,
+\eeq
+kjer je $a$ piroelektrični koeficient. Zaradi tega mora med obema elektrodama preteči naboj
+\beq
+de = I dt = S dP.
+\eeq
+Tok je torej
+\beq
+I = S a \frac{dT}{dt},
+\eeq
+kjer je $S$ površina detektorja. Piroelektrični detektor je torej občutljiv na časovni
+odvod temperature detektorja, s tem pa tudi na spreminjanje vpadne sveltobne moči. 
+
+Sprememba temperature bo sorazmerna razliki med vpadno svetlobno močjo in močjo, s katero
+se detektor hladi v okolico. Hlajenje je deloma s prevanjanjem na podlago in po žicah, deloma pa s
+sevanjem. Hlajenje s prevajanjem lahko zmanjšamo, s sevanjem pa ne, tako da je najmanjše
+hlajenje podano kar s Stefanovim zakonom, v katerem lahko upoštevamo, da je razlika
+v temperaturi med detektorjem in okolico majhna. Tedaj je sprememba temperature detektorja
+\beq
+c_r \varrho S b \frac{dT}{dt} = P_S - 4 \sigma S T_0^3 (T-T_0),
+\eeq
+kjer je $c_r$ specifična toplota piroelektrika, $b$ debelina detektorja, $T_0$ temperatura
+okolice, $P_S$ pa vpadli svetlobni tok. Naj bo ta moduliran s frekvenco $\omega$. Tedaj se tudi
+temperature spreminja s frekvenco $\omega$ in lahko pišemo
+\beq
+T - T_0 = T(\omega)e^{i \omega t}.
+\eeq
+Gornja enačba postane
+\beq
+c_r \varrho S b i \omega T(\omega) = P_S(\omega) - 4 \sigma S T_0^3 T(\omega),
+\eeq
+ali
+\beq
+i \omega T(\omega) = \frac{i \omega P_S}{G + i \omega C},
+\eeq
+kjer meri $G = 4 \sigma S T_0^3$ prevajanje toplote v okolico, $C$ pa toplotno
+kapaciteto. Če to združimo s prvo enačbo, dobimo, da je tok piroelektričnega detektorja
+pri frekvenci $\omega$ 
+\beq
+I(\omega) = \frac{Sai\omega P_S(\omega)}{G = i \omega C}.
+\eeq
+Tok je sorazmeren z $i\omega P_S$, torej s časovnim odvodom svetlobnega toka. Občutljivost
+raste dofrekvence $\omega_T = G/C$, nato pa je konstantna do električne karakteristične frekvence,
+določene z $RC$ konstanto merilnega kroga. Iz enačbe je tudi razvidno, da morata biti toplotna
+kapaciteta in prevodnost čim manjši, da bo občutljivost čim večj.a
+
+Če želimo s piroelektričnim senzorjem zaznavati konstanten svetlobni tok, da moramo najprej
+periodično moduliratim, navadno to naredimo kar z mehanskim zaklopom. Piroelektrični detektorji
+se uporabljajo kot dokaj ceneni in enostavni infrardeči detektorji, tudi v IR kamerah. 
+
+Za vse kalorimetrične detektorje je značilno, da so neobčutljivi na valovno dolžino sveltobe. So
+pa manj občutljivi od kvantnih detektorjev.
+
+\section{Kvatni detektorji}
+
+Kvantni detektorji temeljijo na fotoefektu ali na tvorbi parov elektron-vrzel
+v polprevodnikih, čemur pravimo tudi notranji fotoefekt. V obeh primerih je potrebna neka
+minimalna energija fotona, da ga detektor lahko zazna. Občutljivost je tako odvisna od 
+valovne dolžine svetlobe. Pomemeben podatek za kvantne detektorje, ki je v tesni zvezi 
+z občutljivostjo, je tudi kvantni izkotiste, to je delež vpadlih fotonov, ki povzročijo fotoefekt.
+
+\section{Fotoefekt}
+
+Najenostavnejši detektor na fotoefekt je fotocelica. Svetloba vpada na fotokatodo, tam povzroči
+fotoefekt, elektrone z zunanjo napetostjo potegnemo na anodo in merimo tok. Da je čas preleta
+elektronov od katode do anode čim krajši, je napetost na fotocelici pogosto nekaj kilovoltov.
+Tedaj je lahko odzivni čas okoli 0,1~ns. Enostavnost in hitrost so torej prednosti fotocelice, slaba
+stran pa majhna občutljivost.
+
+\section{Fotopomnoževalka}
+Fotopomnoževalke so fotocelice z vgrajenim ojačevanjem. Fotoelektron pospešimo z napetostjo
+okoli 100-150~V na vmesno elektrodo - dinodo, kjer izbije nekaj (3-5) sekundarnih elektronov. 
+Pomnoževanje se ponovi 8-14 krat, tako da dobimo na en fotoelektron na anodi $10^6 - 10^8$ 
+elektronov, česar ni težko zaznati. Fotopomnoževalkanasm tako omogoča štetje posameznih fotonov.
+Za manj zahtevne aplikacije pa pogosto merimo kar povprečni tok z anode. Zaravi delikega ojačenje
+je treba tudi paziti, da fotopomnoževalke ne osvetlimo preveč. Spektralna občutljivost
+tako fotocelice kot fotopomnoževalke je odvisna od sestave površine fotokatode. Večinoma
+je največja v modrem delu spektra. Spodnja meja delovanja fotopomnoževalk je okoli $1~\si{\micro\metre}$.
+Kvantni izkoristek je večinoma okoli $10~\%$, razen v bližnjem infrardečem območju, kjer
+je znantno manjši. 
+
+\section{Fotoprevodni detektorji}
+V fotoprevodnikih svetloba z dovolj veliko energijo tvori pare elektron-vrzel, zaradi  česar
+se poveča število nosilcev toka in s tem prevodnost. Hitrost odziva je odvisna od hitrosti
+rekombinacije elektronov in vrzeli, to je okoli mikrosekunde po do desetin milisekund, kar
+je dokaj počasi. 
+
+\section{PN in PiN fotodiode}
+Polvodniški detektroji so dveh vrst: fotoprevodniki in diodni. Spektralna občutljivost
+obojih je odvisna od velikosti energijske reže emd valenčnim in prevodnim pasom. Silicij
+z energijsko režo 1~eV je uporaben do valovne dolžine 1,2 mikron, germanij pa do 1,6 mikron.
+V vidnem in bližnjem infrardečem področju deluje še GaAs, CdS in PbS, zadnja dva le kot
+fotoprevodnika. Kot fotoprevodniki pri večjih valovnih dolžinah se uporabljajo  še PbTe
+in HgCdTe. Posebej zadni je zelo pomemben, ker ima pri pravem razmerju Hg in Cd vrh občutljivosti
+pri okoli 10 mikronov, to je ravno pri vrhu sevanja črnega telesa s temperaturo okoli 300~K. 
+Z ustreznim doziranjem pa lahko polvodniški fotoprevodniki delujejo do valovnih dolžin nekaj 100 mikronov.
+Detektorje  z majhno energijso režo je treba hladiti, navadno s tekočim dušikom, da zmanjšamo
+termično vzbujanje elektronov v prevodni pas. Pri energiji fotonov blizu energijske reže 
+imajo polvodniški detektorji zelo velik kvantni izkoriste, kar blizu 1.
+
+Fotodiode zaznajo le pare elektron-vrzel v območju izpraznjenega sloja p-n spoja. Električno 
+polje v tem sloju povzroči, da elektron odteče na eno stran, vrzel pa na drugo. Fotodopda tako
+generira tok, ki je sorazmeren z vpadlo svetlobno močjo. Zaradi nelinearne zveze med tokom in napetostjo
+na diodi je treba skrbeti, da je napetost na diodi vselej 0 ali celo v zaporni smeri, kar lahko
+dosežemo z zunanjo napetostjo v zaporni smeri. S tem tudi dosežemo hitrejši odziv, ker 
+se zmajša kapacitivnost p-n spoja. 
+
+Da se bo svetloba absorbirala ravno v p-n spoju, mora biti seveda spoj pri površini dopde, obenem
+pa mora biti spoj čim debelejši, kar dosežejo s tem, da je med  p in n stranjo še plast
+čistega polvodnika. Takim diodam pravimo pin diode. 
+
+V pn spoju je mooče doseči tudi pomnoževanje nastalih elektronov in vrzeli, če je zaporna napetost dovolj 
+velika, da lahko fotoelektron dobi toliko energije, preden zapusti izpraznjeni sloj, da tvori nove pare.
+Taka pomnoževalna dioda je zelo občutljiva, vendar ima tudi večji šum.
+
+\section{Plazovne fotodiode}
+ 
+\section{CCD in CMOS detektorji}
+ 
+\section{Šum pri optični detekciji}
+Sama občutljivost nekega detektorja, to je količina A/W za neko fotodiodo, nam ne pove, kolikšen 
+je najmanjši signal, ki ga je mogoče meriti. Ta je določen s šumom detektorja in pa s časom 
+meritve, to je s frekvenčno širino modulacije svetlobe, ki jo želimo meriti. Največja 
+možna frekvencčna širina je seveda določena s hitrostjo odziva detektorja.
+
+Ocenimo fluktuacije, torej šum, toka nekega detektorja, na primer fotodiode. V času
+meritve $\tau$ steče $n$ elektronov. Tok je torej
+\beq
+I = ne/\tau.
+\eeq
+Povprečni tok je seveda
+\beq
+\overline{I} = \overline{n}e/\tau.
+\eeq
+Napravimo mnogo meritev, vse dolge $\tau$. Ker so posamezni foto dogodki med seboj neodvisni, 
+lahko predpostavimo, da je porazdelitev pretečenih elektronov Poissonova: pa lahko izračunamo
+povprečni kvadrat fluktuacij toka
+\beq
+\sigma^2 = \overline{(I-\overline{I})^2} = \frac{e^2}{\tau^2} \overline{(n-\overline{n})^2} = 
+\frac{e^2}{\tau^2}\overline{n} = \frac{e\overline{I}}{\tau}.
+\eeq
+Tokovni šum je obratno sorazmeren korenu iz časa merjenja, oziroma sorazmeren s korenom
+iz širine merjenjega frekvenčnega intervala. Najmanjši povprečni tok diode je tok zaradi
+termičnega vzbujanja, s tem je seveda po enačbi določen tudi osnovni termični šum diode.
+Temni tok diode je sorazmeren s površino diode in eksponentno odvisen od temperature in 
+energijske reže polvodnika;
+\beq
+I_0 = Sj_0 e^{-E_g/kT}
+\eeq
+Tipičen temni tok silicijeve fotodiode s površino 1~mm$^2$ je pri sobni temperaturi 1~nA. 
+Tokovni šum je torej po gornji enačbi
+\beq
+I_N = \sqrt{eI_0\Delta \nu} \approx 10^{-15}~A/\sqrt{Hz} \sqrt{\Delta \nu}.
+\eeq
+
+Svetlobni tok, označen pogosto z NEP (noise equivalent power), ki da enak signal, je $10^4 $
+fotonov na sekundo ali $10^{-14}$~W. Še beseda o enoti za NEP. Navadno je podan na enoto 
+frekvenčnega intervala, to je po enačbi .. na $\sqrt{Hz}$. 

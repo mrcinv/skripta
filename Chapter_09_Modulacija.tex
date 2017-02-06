@@ -842,8 +842,10 @@ da se vsa vpadna svetloba uklanja.
 Izhajajmo iz pogoja, da je razširitev žarka na debelini plasti zvočnega valovanja dovolj
  majhna, da se snop ne širi iz območja zgoščine v območje razredčine, da se torej ne razširi za 
  več kot za $\Lambda/2$. Tako zapišemo
- divergenco kot (enačba~\ref{eq:divergenca-snopa}) $\theta \sim \lambda/w_0 \sim 2\lambda/\Lambda$,
-  ki ne sme presegati razširitve $\theta \sim \Lambda/2d$.
+ divergenco kot (enačba~\ref{eq:divergenca-snopa}) $\theta \sim \lambda/w_0 \sim 2\lambda/\Lambda$.
+ Podobno velja tudi za vpadno valovanje, ki zaradi modulacije valovnih front dobi divergenco, 
+ ki je enaka $\theta \sim \lambda/(\Lambda/2).$ Divergenca valovanja ne sme presegati 
+ razširitve $\theta \sim \Lambda/2d$.
   Sledi kriterij za debelino $d$, pri kateri preidemo iz enega v drug režim
 \beq
 d \sim \frac{\Lambda^2}{4 \lambda}.
@@ -982,15 +984,15 @@ kadar se $A_{n}$ spreminjajo počasi v primerjavi z exp$(ik_{z}z)$. Drugi odvod
 polarizacije po času da
 \beq
 \begin{split}
-\frac{\partial^2 \Delta P}{\partial t^2} =&-\frac{\varepsilon_0 \tilde{\varepsilon}^2pS_0}{2i} A_n(z) \exp\left(i[(k_x+nq)x+k_{z}z-(\omega+n\Omega)t]\right) \cdot \\ &\sum_{n}\left(
+\frac{\partial^2 \Delta P}{\partial t^2} =&-\frac{\varepsilon_0 \tilde{\varepsilon}^2pS_0}{2i} \sum_{n} A_n(z) \exp\left(i[(k_x+nq)x+k_{z}z-(\omega+n\Omega)t]\right) \cdot \\ &\left(
 -[n\Omega+\omega+\Omega]^2e^{i(qx-\Omega t)} + [n\Omega+\omega-\Omega]^2e^{i(-qx+\Omega t)} \right),
 \label{7.35a}
 \end{split}
 \eeq
 drugi odvod polja po času pa 
 \beq
-\frac{\partial E^{2}}{\partial t^{2}} = - (n\Omega + \omega)^2 
-\sum_{n}A_{n}(z)e^{in(qx-\Omega t)}e^{i(k_{x}x+k_{z}z-\omega t)}.
+\frac{\partial E^{2}}{\partial t^{2}} = - \sum_{n}(n\Omega + \omega)^2 
+A_{n}(z)e^{in(qx-\Omega t)}e^{i(k_{x}x+k_{z}z-\omega t)}.
 \label{7.35b}
 \eeq
 Vstavimo izraze (\ref{7.35}), (\ref{7.35a}) in (\ref{7.35b}) v valovno enačbo (\ref{7.33a})
@@ -1012,18 +1014,14 @@ A_{m}'+i\beta_{m}A_{m}+\xi(A_{m+1}-A_{m-1})=0,
 \end{equation}
 kjer sta
 \begin{equation}
-\beta_{m}=\frac{mq}{k_{z}}(k_{x}+\frac{1}{2}mq)
+\beta_{m}=\frac{mq}{k_{z}}(k_{x}+\frac{1}{2}mq) \quad \mathrm{in} \quad \xi=-\frac{\tilde{\epsilon} pS_0k^2}{4k_z}.
 \label{7.38}
-\end{equation}
- in 
-\begin{equation}
-\xi=-\frac{\tilde{\epsilon} pS_0k^2}{4k_z}.
-\label{7.39}
 \end{equation}
 Reševanje sistema enačb~(\ref{7.37}) je težavno, zato poiščimo rešitve le v treh
 pomembnih limitnih primerih. Amplituda vala, ki vpada z leve, naj bo $A_{0}(0)=A_{0}$, 
 za ostale pa naj velja $A_{n}(0)=0$.
 
+\subsection*{Braggov uklon ob šibki pretvorbi}
 Najprej privzemimo, da je $L\xi \ll 1$, da je torej velikost $\Delta \epsilon$
 majhna in debelina zvočnega snopa ne prevelika. Tedaj je pri vseh
 $z$ in za pozitivne $m$ $A_{m+1}\ll A_{m}$ in lahko člen $A_{m+1}$
@@ -1070,6 +1068,7 @@ kar lahko velja le, dokler je $\xi d\ll1$. Kadar intenziteta uklonjenega žarka
 tako naraste, da ta pogoj ni več izpolnjen, je treba v računu upoštevati tudi 
 zmanjšanje moči vpadnega snopa.
 
+\subsection*{Braggov uklon ob znatni pretvorbi}
 Drug primer naj bo približek, da sta le $A_{0}$ in $A_{1}$ različni od nič, 
 opustimo pa omejitev $d\xi\ll 1$. Ta približek je smiseln, saj je 
 Braggov pogoj hkrati lahko izpolnjen le za en uklonjen val, na
@@ -1103,14 +1102,13 @@ odvisnosti od debeline plasti zvočnega valovanja}
 \label{s7.10}
 \end{figure}
 
-V gornja izraza vstavimo še parameter $\xi$, ki je podan z enačbo~(\ref{7.39}).
+V gornja izraza vstavimo še parameter $\xi$, ki je podan z enačbo~(\ref{7.38}).
 Razmerje med močjo uklonjenega in vpadnega snopa je tako
 \boxeq{7.48}{
 \frac{I_{1}}{I_{0}}=\sin^{2}\left(\frac{\pi n_{0}^{3}pS_{0}d}{2\lambda\cos\vartheta}\right).
 }
-
-Amplituda deformacije $S_0$ je povezana z gostoto energijskega toka
-zvočnega valovanja 
+V izrazu nastopa še amplituda deformacije $S_0$, ki pa je povezana z gostoto 
+energijskega toka zvočnega valovanja. Za longitudinalne (zvočne) valove v snovi
 \begin{equation}
 j_{z}=\frac{1}{2}CS_{0}^{2}v_{z},
 \label{7.49}
@@ -1151,6 +1149,7 @@ absorpcija v snovi, lahko bralec izračuna sam.\footnote{Glej H. Kogelnik, Bell 
 48, 2909 (1969).}
 \end{remark}
 
+\subsection*{Raman-Nathov uklon}
 Oglejmo si še tretji primer. Izhajamo iz sistema enačb~(\ref{7.37}), ki smo ga 
 zaenkrat rešili za primer Braggovega odboja oziroma v njegovi bližini. 
 Enačbe je preprosto rešiti še v primeru Raman-Nathovega približka. 
