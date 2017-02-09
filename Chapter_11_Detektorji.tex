@@ -54,23 +54,139 @@ iz katere je detektor narejen.
 in šumom ($N$, {\it noise}) enako $S/N = 1$. 
 \end{enumerate}
 
-
 \section{Termični detektorji}
+Uporaba termičnih detektorjev je precej omejena zaradi njihovega počasnega odziva. Zato
+se večinoma uporabljajo za detekcijo svetlobe tistih valovnih dolžin, za katere ni drugih
+preprostih ali učinkovitih detektorjev, ali pa v primeru, ko hitrega odziva ne potrebujemo.
+Termični detektorji se zato danes uporabljajo predvsem v daljnem infrardečem, teraherčnem 
+in mikrovalovnem območju, še posebej v astronomiji, in za termografske kamere.
+
+Delovanje termičnih detektorjev temelji na spremembi temperature zaradi absorpcije svetlobe 
+(energije), detektorji pa se med seboj razlikujejo predvsem v načinu pretvorbe spremembe 
+temperature v električni signal.
+Tipalo termičnih detektorjev mora biti pri vseh vrstah dobro počrnjeno, da absorbira
+svetlobo v čim širšem spektralnem območju. Čeprav je njihova občutljivost načeloma 
+neodvisna od valovne dolžine vpadne svetlobe, se v praksi pojavijo omejitve zaradi
+prepustnosti okna in absorpcijskega spektra črnega nanosa. Tipala so majhna, zato 
+da dosežemo čim hitrejši odziv, ki pa je kljub temu navadno počasnejši od 1~ms. 
+Termične detektorje uporabljamo pri sobni temperaturi, za posebej zahtevne meritve pa 
+jih lahko hladimo na nekaj K. 
+
+Obravnavajmo termični detektor, katerega tipalo naj ima toplotno kapaciteto $C$. Toplota
+se s tipala odvaja v nek toplotni rezervoar s temperaturo $T_0$, 
+toplotne izgube pa označimo z $\Lambda$. Ko na tipalo vpada svetloba moč $P$, začne
+temperatura tipala $T$ zaradi absorpcije svetlobe naraščati, hkrati pa se tipalo 
+ohlaja zaradi odtekanja toplote:
+\beq
+\frac{dW}{dt} = C \frac{dT}{dt} = P - \Lambda (T-T_0).
+\label{TD1}
+\eeq
+V stacionarnem stanju, ki ga dosežemo pri konstantnem vpadnem svetlobnem toku, se
+temperatura tipala ne spreminja je enaka
+\beq
+T = T_0 + \frac{P}{\Lambda}.
+\eeq
+Občutljivost detektorja, ki je sorazmerna z razliko temperatur tipala in rezervoarja, 
+je torej obratno sorazmerna z močjo, s katero se tipalo hladi. Toplotne izgube detektorja moramo 
+torej kar se da zmanjšati. 
+
+Iz enačbe~(\ref{TD1}) razberemo, 
+da se temperatura približuje stacionarni vrednosti s časovno konstanto 
+\beq
+\tau = \frac{C}{\Lambda},
+\label{TermD_t}
+\eeq
+ki je ključni parameter za določanje odzivnega časa detektorja. Vidimo, da je odzivni
+čas sorazmeren s kapaciteto senzorja, zato so tipala praviloma zelo majhna. 
+
+Podrobneje poglejmo odziv termičnega detektorja od vpadne moči. Naj se vpadna moč
+spreminja s časom, temperatura na detektorju pa temu sledi z določeno zakasnitvijo. Odziv
+najlepše izračunamo v Fourierevem prostoru. Vpadna moč je tako
+\beq
+P(t) = \int_{-\infty}^{\infty} P_\omega e^{i\omega t}d\omega,
+\eeq
+temperatura pa
+\beq
+T = T_0 + \int_{-\infty}^{\infty} T_\omega e^{i\omega t}d\omega.
+\eeq
+To vstavimo v enačbo~(\ref{TD1}) in dobimo
+\beq
+\int_{-\infty}^{\infty} i \omega T_\omega e^{i\omega t}d\omega = \frac{1}{C}
+\int_{-\infty}^{\infty} (P_\omega - \Lambda T_\omega) e^{i\omega t}d\omega.
+\eeq
+Enačbi zadostimo, če izenačimo člene pred vsako spektralno komponento posebej
+\beq
+i \omega T_\omega = \frac{1}{C}\left(P_\omega - \Lambda T_\omega\right).
+\eeq
+Sledi 
+\beq
+T_\omega = \frac{1}{\Lambda}\left(\frac{1}{1+i \omega \tau}\right)P_\omega,
+\eeq
+pri čemer je $\tau$ odzivni čas (enačba~\ref{TermD_t}).
+
+\begin{definition}
+Pokaži, da je odziv termičnega detektorja na zelo kratek svetlobni sunek oblike 
+$P(t) = P_0 \delta(t-t_0)$ enak 
+\beq
+T(t)=\frac{iP_0}{\Lambda}e^{-(t-t_0)/\tau}.
+\eeq
+\end{definition}
+
+
+
+Spremembo polarizacije lahko zapišemo
+kot 
+\beq
+dP = a dT,
+\eeq
+kjer je $a$ piroelektrični koeficient. Zaradi tega mora med obema elektrodama preteči naboj
+\beq
+de = I dt = S dP.
+\eeq
+Tok je torej
+\beq
+I = S a \frac{dT}{dt},
+\eeq
+kjer je $S$ površina detektorja. Piroelektrični detektor je torej občutljiv na časovni
+odvod temperature detektorja, s tem pa tudi na spreminjanje vpadne sveltobne moči. 
+
+Hlajenje je deloma s prevanjanjem na podlago in po žicah, deloma pa s
+sevanjem. Hlajenje s prevajanjem lahko zmanjšamo, s sevanjem pa ne, tako da je najmanjše
+hlajenje podano kar s Stefanovim zakonom, v katerem lahko upoštevamo, da je razlika
+v temperaturi med detektorjem in okolico majhna. Tedaj je sprememba temperature detektorja
+\beq
+c_r \varrho S b \frac{dT}{dt} = P_S - 4 \sigma S T_0^3 (T-T_0),
+\eeq
+kjer je $c_r$ specifična toplota piroelektrika, $b$ debelina detektorja, $T_0$ temperatura
+okolice, $P_S$ pa vpadli svetlobni tok. Naj bo ta moduliran s frekvenco $\omega$. Tedaj se tudi
+temperature spreminja s frekvenco $\omega$ in lahko pišemo
+\beq
+T - T_0 = T(\omega)e^{i \omega t}.
+\eeq
+Gornja enačba postane
+\beq
+c_r \varrho S b i \omega T(\omega) = P_S(\omega) - 4 \sigma S T_0^3 T(\omega),
+\eeq
+ali
+\beq
+i \omega T(\omega) = \frac{i \omega P_S}{G + i \omega C},
+\eeq
+kjer meri $G = 4 \sigma S T_0^3$ prevajanje toplote v okolico, $C$ pa toplotno
+kapaciteto. Če to združimo s prvo enačbo, dobimo, da je tok piroelektričnega detektorja
+pri frekvenci $\omega$ 
+\beq
+I(\omega) = \frac{Sai\omega P_S(\omega)}{G = i \omega C}.
+\eeq
+Tok je sorazmeren z $i\omega P_S$, torej s časovnim odvodom svetlobnega toka. Občutljivost
+raste dofrekvence $\omega_T = G/C$, nato pa je konstantna do električne karakteristične frekvence,
+določene z $RC$ konstanto merilnega kroga. Iz enačbe je tudi razvidno, da morata biti toplotna
+kapaciteta in prevodnost čim manjši, da bo občutljivost čim večj.a
 
 
 
 
-Oglejmo si le  nekaj takih, ki se danes uporabljajo. Razlikujejo se predvsem po načinu
-detekcije spremembe temperature. Tipalo mora biti pri vseh dobro počrnjeno, da absorbira
-svetlobo v širokem spektralnem območju. Navadno tudi želimo, da je odziv hiter, zato mora 
-biti tipalni element majhen.
+\subsection*{Bolometer}
 
-Termočlen, katerega en spoj je počrnjen, drugi, referenčni, pa je zaščiten pred svetlobo.
-Zaradi svetlobe se počrnjeni spoj segreje, med obema spojema nastane temperaturna razlika in 
-zaradi termoelektričnega pojava tudi električna napetost. PAziti je treba, da je žica med 
-obema spojema čim tanjša, da je prevajanje toplote po njej čim manjše. Napetosti niso velike,
-pri temperaturni razliki ene stoopinje le nekaj deset mikrovoltov, zato včasih vežejo 
-več termočlenov zaporedno.
 
 Bolometer je počrnjen uporovni termometer, zvezan v Wheatstonov mostiček. Referenčni upor v
 mostičku je enak kot merilni, le da je zaščiten pred svetlobo. Napterost na mostički je tako 
@@ -78,6 +194,18 @@ sorazmerna z razliko temperatur obeh uporov, torej z vpadlim svetlobnim tokom. S
 sprememba temperature okolice ne moti, ker se zaradi nje temperatura obeh uporov enako spremeni. 
 Kot uporovni termometer se pogosto uporablja termistor zaradi velikega temperaturnega koeficienta
 upornosti.
+
+
+
+
+\subsection*{Termočlen}
+
+Termočlen, katerega en spoj je počrnjen, drugi, referenčni, pa je zaščiten pred svetlobo.
+Zaradi svetlobe se počrnjeni spoj segreje, med obema spojema nastane temperaturna razlika in 
+zaradi termoelektričnega pojava tudi električna napetost. PAziti je treba, da je žica med 
+obema spojema čim tanjša, da je prevajanje toplote po njej čim manjše. Napetosti niso velike,
+pri temperaturni razliki ene stoopinje le nekaj deset mikrovoltov, zato včasih vežejo 
+več termočlenov zaporedno.
 
 Piroelektrični detektor je narejen iz ploščice snovi z lastno električno polarizacijo, ki 
 je odvisna od temperature. Piroelektričnost  je dovoljena v kristalih, ki nimajo centra 
@@ -135,8 +263,7 @@ kapaciteta in prevodnost čim manjši, da bo občutljivost čim večj.a
 periodično moduliratim, navadno to naredimo kar z mehanskim zaklopom. Piroelektrični detektorji
 se uporabljajo kot dokaj ceneni in enostavni infrardeči detektorji, tudi v IR kamerah. 
 
-Za vse kalorimetrične detektorje je značilno, da so neobčutljivi na valovno dolžino sveltobe. So
-pa manj občutljivi od kvantnih detektorjev.
+
 
 \section{Kvatni detektorji}
 
