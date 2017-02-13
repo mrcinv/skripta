@@ -5,9 +5,9 @@
 Za konec bomo spoznali še detektorje svetlobe, ki so nepogrešljivi
 pri kvantitativni obravnavi optičnih pojavov. Detektorji se med seboj razlikujejo
 po svojih specifikacijah, ki jih bomo opisali v nadaljevanju, in po načinu delovanja. 
-V grobem delimo detektorje na termične in kvantne. Podrobneje bomo obravnavali 
-le kvantne detektorje, predvsem polprevodniške fotodiode in nazadnje spoznali 
-šum, ki omejuje uporabnost naprav.
+V grobem delimo detektorje na termične in kvantne. Podrobneje bomo spoznali nekaj vrst
+termičnih in več vrst kvantnih detektorjev, predvsem polprevodniške fotodiode, in 
+nazadnje spoznali šum, ki omejuje uporabnost naprav.
 
 \section{Osnovne karakteristike detektorjev}
 
@@ -30,12 +30,13 @@ Primeri termičnih detektorjev so bolometer, termočlen in piroelektrični detek
 
 Druga skupina so kvantni detektorji, v katerih se
 fotoni absorbirajo in povzročijo pojav prostih nosilcev naboja. Taki detektorji
-torej zaznavajo število vpadlih fotonov. Odlikuje jih zelo hiter odziv in pri določenih 
-valovnih dolžinah velika občutljivost, vendar je obseg valovnih dolžin, pri katerih
-zaznavajo svetlobo, omejen. Primeri so vakuumske, polprevodniške in plazovne fotodiode.
+torej zaznavajo število vpadlih fotonov. Odlikuje jih zelo hiter odziv (pod $\si{\micro\second}$)
+in pri velika občutljivost. Njihova slabost je omejen obseg valovnih dolžin,
+pri katerih zaznavajo svetlobo, poleg tega jih je za optimalno delovanje treba 
+hladiti. Primeri so vakuumske, polprevodniške in plazovne fotodiode.
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{65truemm} 
 \input{slike/11_ShemaTermKv.pdf_tex}
 \caption{Primerjava spektralnega odziva termičnega in kvantnega detektorja}
 \label{fig:shemaTermKv}
@@ -182,7 +183,8 @@ pa se časovna konstanta $\tau \sim 10-2000~\si{\milli\second}$.
 
 \subsection*{Piroelektrični detektor}
 Piroelektriki so snovi brez centra inverzije, v katerih je lastna električna 
-polarizacija odvisna od temperature (npr. LiTaO$_3$ ali triglicin sulfat TGS). 
+polarizacija odvisna od temperature (npr. LiTaO$_3$, triglicin sulfat TGS ali
+polivinilidenfluorid, PVDF). 
 Vsi feroelektriki so tudi piroelektriki. Piroelektrični detektor je narejen iz 
 ploščice piroelektrične snovi med dvema elektrodama oziroma ploščama kondenzatorja.
 Ko se ploščica zaradi absorbirane svetlobe segreje, se ji spremeni polarizacija in 
@@ -202,13 +204,16 @@ I = S a \frac{dT}{dt}.
 \label{piro}
 \eeq
 Piroelektrični detektor je torej občutljiv na časovni odvod temperature detektorja, 
-s tem pa tudi na spreminjanje vpadne sveltobne moči. V stacionarnem stanju 
+s tem pa tudi na spreminjanje vpadne svetlobne moči. V stacionarnem stanju 
 detektor ne proizvaja električnega toka, zato moramo za merjenje 
 konstantnega svetlobnega toka vpadno svetlobo najprej periodično modulirati.
 Navadno to naredimo kar z mehanskim zaklopom. Piroelektrični detektorji
 se uporabljajo kot dokaj ceneni in enostavni infrardeči detektorji, tudi v IR kamerah. 
 Njihova občutljivost je $R \sim 1~\si{\micro\ampere/\watt}$, odzivni čas pa odvisen od 
 upornika v vezju, ampak lahko doseže vrednosti $\tau \sim 10~\si{\micro\second}$.
+Zavedati se je treba, da so piroelektrični koeficienti navadno močno 
+odvisni od temperature in naraščajo do faznega prehoda pri Curiejevi temperaturi, 
+pri kateri spontana polarizacija snovi izgine. 
 
 Poglejmo temperaturni odziv na tipalu. Izhajamo iz enačb~(\ref{TermTF}), (\ref{TermOdziv}) in
 (\ref{piro}) in izračunajmo tok $I$ vo odvisnosti od frekvence modulacije.
@@ -224,35 +229,94 @@ I_\omega = \frac{i \omega\, SaP_\omega/\Lambda}{1 + i \omega \tau}.
 Vidimo, da pri majhnih frekvencah tok narašča, pri velikih frekvencah pa postane neodvisen od
 frekvence modulacije vpadne svetlobe. Vendar to še ne pomeni, da lahko moduliramo s poljubno 
 veliko frekvenco. Poleg relaksacijskega časa detektorja ima namreč karakteristični čas tudi
-elektronsko vezje, ki določa zgornjo mejo za frekvenco.
+elektronsko vezje, ki določa zgornjo mejo za frekvenco. Ta je enak $\tau_e = R_eC_e$, pri čemer
+sta $R_e$ upornost sistema in $C_e$ kapaciteta detektorja. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/11_Piro.pdf_tex}
+\caption{Spektralni odziv piroelektričnega detektorja. Karakteristični čas odziva je 
+določen s toplotnimi izgubami $\Lambda$ in toplotno kapaciteto detektorja $C$, navzgor
+pa odziv omejuje odziv elektronskega vezja $\tau_e$.}
+\label{fig:Piro}
+\end{figure}
 
 \begin{definition}
-Piroelektrični detektor naredimo iz kristala TGS s koeficientom piroelektričnosti
-$a = 280~{\si \micro \coloumb /\metre^2 \kelvin}$ specifično toploto
-$c = 2,3\times 10^6~{\si \joule /\metre^4 \kelvin}$.
-Izračunaj električno upornost sistema
+Piroelektrični detektor naredimo iz kristala LiTaO$_3$ s koeficientom piroelektričnosti
+$a = 2,3 \times 10^{-4}~\si{\ampere \second /\metre^2 \kelvin}$ in povprečno 
+dielektričnostjo $\varepsilon = 50$. Izračunaj dovoljeno električno upornost sistema, 
+če želimo, da detektor dobro deluje za frekvence do 1~MHz. 
+Dimenzija detektorja je $S = 1~\si{\centi\metre^2}$ in debelina $d = 1~\si{\milli\metre}$.
 \end{definition}
 
-
-
-
-
-
-\section{Kvantni detektorji}
-
-Kvantni detektorji temeljijo na fotoefektu ali na tvorbi parov elektron-vrzel
-v polprevodnikih, čemur pravimo tudi notranji fotoefekt. V obeh primerih je potrebna neka
-minimalna energija fotona, da ga detektor lahko zazna. Občutljivost je tako odvisna od 
-valovne dolžine svetlobe. Pomemeben podatek za kvantne detektorje, ki je v tesni zvezi 
-z občutljivostjo, je tudi kvantni izkotiste, to je delež vpadlih fotonov, ki povzročijo fotoefekt.
-
 \section{Fotoefekt}
+Delovanje kvantnih detektorjev temelji na fotoefektu, pri katerem vpadli
+foton iz kovine izbije elektrone (fotoelektrone). Pri fotoefektu s svetlobo
+dane valovne dožine osvetlimo katodo, nato pa merimo tok, ki teče med katodo
+in anodo pri dani napetosti. S spreminjanjem napetosti lahko izmerimo kinetično 
+energijo fotoelektronov, ki so izstopili iz kovine. Izkaže se, da pri določenih 
+valovnih dolžinah svetlobe tok fotoelektronov povsem izgine, ne glede na moč vpadne svetlobe.
+Fotoelektroni nastanejo le, če je energija vpadnih fotonov večja od izstopnega
+dela kovine. Fotoefekt je prvič opazil Hertz leta 1887, razložil pa ga
+je Einstein leta 1905 in zanj dobil nobelovo nagrado. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{65truemm} 
+\input{slike/11_Fotoefekt.pdf_tex}
+\caption{Shema fotocelice, v kateri poteka fotoefekt. 
+Vpadna svetloba iz katode izbije elektrone, da med katodo in anodo steče tok.}
+\label{fig:Fotoefekt}
+\end{figure}
 
-Najenostavnejši detektor na fotoefekt je fotocelica. Svetloba vpada na fotokatodo, tam povzroči
-fotoefekt, elektrone z zunanjo napetostjo potegnemo na anodo in merimo tok. Da je čas preleta
+Poglejmo uporabnost fotoefekta za optično detekcijo. Glavna omejitev je 
+izstopno delo snovi, na katero vpada svetloba. Za kovine je izstopno delo $\Phi$
+od okoli 2~eV za cezij pa do okoli 6~eV za platino. 
+Ustrezna valovna dolžina svetlobe, ki še povzroči fotoefekt, je tako 
+\beq
+\lambda \leq \frac{hc}{\Phi},
+\eeq
+kar je 640~nm za primer cezija in samo okoli 200~nm za platino. Če želimo ta pojav
+izkostisti za detektorje, območje občutljivosti povečamo z uporabo drugih snovi,
+na primer kompozitnih materialov (Cs-Te, Cs-Sb, Na-K-Sb-Cs) ali polprevodnikov (GaAs:Cs).
+Izstopno delo s tem zmanjšamo na $\Phi \sim 0,7$~eV, tako da lahko zaznavamo 
+vpadne fotone z valovnimi dolžinami od ultravijolične svetlobe pa vse do infrardeče. 
+
+Omenimo še enkrat, da je pri detektorjih, ki temeljijo na fotoefektu
+(kvantnih detektorjih), odziv sorazmeren s številom vpadnih fotonov in ne energijo 
+vpadne svetlobe. V idealnem primeru je tako spektralni odziv konstanen, 
+če gledamo na število vpadlih fotonov, in linearno
+narašča z valovno dolžino, če gledamo na moč vpadne svetlobe.
+
+Beseda fotoefekt je prvotno označevala opisan pojav: izbijanje elektronov iz snovi. 
+Pojem pa lahko razširimo na pojav, pri katerem izbiti elektron ne zapusti snovi, 
+ampak zgolj preide iz enega energijskega pasu v drugega. Pri tem zaradi
+absorpcije fotona nastane par elektron-vrzel, prag za nastanek para pa je določen
+z režo med energijskima nivojema. Prvemu pojavu zato pravimo zunanji fotoefekt, 
+drugemu pa notranji fotoefekt. Primeri detektorjev, ki temeljijo na zunanjem fotoefektu, so 
+fotocelice in fotopomnoževalke, detektorjev, ki temeljijo na notranjem fotoefektu, pa
+fotoprevodniki, polprevodniške in plazovne fotodiode.
+
+
+\section{Vakuumska fotodioda in fotopomnoževalka}
+
+Najpreprostejši kvantni detektor na zunanji fotoefekt je fotocelica (slika~\ref{fig:Fotoefekt}). 
+Svetloba vpada na fotokatodo, ki je zaprta v vakuumirani stekleni bučki, in tam povzroči
+fotoefekt. Fotoelektrone, ki zapustijo katodo, z zunanjo napetostjo potegnemo na anodo 
+in merimo električni tok. 
+
+Da je čas preleta
 elektronov od katode do anode čim krajši, je napetost na fotocelici pogosto nekaj kilovoltov.
 Tedaj je lahko odzivni čas okoli 0,1~ns. Enostavnost in hitrost so torej prednosti fotocelice, slaba
 stran pa majhna občutljivost.
+
+PMT 0,9A/W, 0.2-1.1 mum, dc-1Ghz
+celica 0.001 A/W isto.
+
+termally generated atoms -> noise; cooling. 
+
+Pomemeben podatek za kvantne detektorje, ki je v tesni zvezi 
+z občutljivostjo, je tudi kvantni izkotiste, to je delež vpadlih fotonov, ki povzročijo fotoefekt.
+
 
 \section{Fotopomnoževalka}
 Fotopomnoževalke so fotocelice z vgrajenim ojačevanjem. Fotoelektron pospešimo z napetostjo
@@ -265,6 +329,9 @@ tako fotocelice kot fotopomnoževalke je odvisna od sestave površine fotokatode
 je največja v modrem delu spektra. Spodnja meja delovanja fotopomnoževalk je okoli $1~\si{\micro\metre}$.
 Kvantni izkoristek je večinoma okoli $10~\%$, razen v bližnjem infrardečem območju, kjer
 je znantno manjši. 
+
+Ojačanje ne poslabša S/N ratio. 
+
 
 \section{Fotoprevodni detektorji}
 V fotoprevodnikih svetloba z dovolj veliko energijo tvori pare elektron-vrzel, zaradi  česar
