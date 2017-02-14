@@ -261,7 +261,7 @@ dela kovine. Fotoefekt je prvič opazil Hertz leta 1887, za njegovo razlago leta
 1905 pa je Einstein dobil nobelovo nagrado. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{65truemm} 
+\def\svgwidth{60truemm} 
 \input{slike/11_Fotoefekt.pdf_tex}
 \caption{Shema fotocelice, v kateri poteka fotoefekt. 
 Vpadna svetloba iz katode izbije elektrone, da med katodo in anodo steče tok.}
@@ -275,17 +275,11 @@ Ustrezna valovna dolžina svetlobe, ki še povzroči fotoefekt, je tako
 \beq
 \lambda \leq \frac{hc}{\Phi},
 \eeq
-kar je 640~nm za primer cezija in samo okoli 200~nm za platino. Če želimo fotoefekt
+kar je 580~nm za primer cezija in samo okoli 200~nm za platino. Če želimo fotoefekt
 izkostisti za detektorje, območje občutljivosti povečamo z uporabo drugih snovi,
 na primer Cs-Te, Cs-Sb, Na-K-Sb-Cs ali GaAs:Cs.
 Izstopno delo s tem zmanjšamo na $\Phi \sim 0,7$~eV, tako da lahko zaznavamo 
 vpadne fotone z valovnimi dolžinami od ultravijolične svetlobe pa vse do infrardeče. 
-
-Omenimo še enkrat, da je pri detektorjih, ki temeljijo na fotoefektu
-(kvantnih detektorjih), odziv sorazmeren s številom vpadnih fotonov in ne energijo 
-vpadne svetlobe. V idealnem primeru je tako spektralni odziv konstanen, 
-če gledamo na število vpadlih fotonov, in linearno
-narašča z valovno dolžino, če gledamo na moč vpadne svetlobe.
 
 Ključen parameter pri detekciji svetlobe je kvantni izkoristek $\eta$.
 Ta nam pove verjetnost, da vpadli foton z valovno dolžino $\lambda$ iz 
@@ -309,34 +303,48 @@ fotoprevodniki, polprevodniške in plazovne fotodiode.
 Najpreprostejši kvantni detektor na zunanji fotoefekt je fotocelica (slika~\ref{fig:Fotoefekt}). 
 Svetloba vpada na fotokatodo, ki je zaprta v vakuumirani stekleni bučki, in tam povzroči
 fotoefekt. Fotoelektrone, ki zapustijo katodo, z zunanjo napetostjo pospešimo do anode 
-in merimo električni tok. 
+in merimo električni tok, ki je sorazmeren s številom vpadlih fotonov. 
+Fotocelice so pogosto narejene v cilindrični obliki, pri kateri leži
+katoda v sredini valja, ki ga tvori mrežasta anoda.
 
-Da je čas preleta
-elektronov od katode do anode čim krajši, je napetost na fotocelici pogosto nekaj kilovoltov.
-Tedaj je lahko odzivni čas okoli 0,1~ns. Enostavnost in hitrost so torej prednosti fotocelice, slaba
-stran pa majhna občutljivost.
+Območje detekcije je določeno s snovjo, iz katere izbijamo elektrone, in z njenim izstopnim delom
+oziroma širino reže v primeru polprevodnika.
+Potrebno energijo fotona lahko precej zmanjšamo, 
+če namesto čistih kovin uporabimo kombinirane bi- ali večalkalne katode,
+ali pa polprevodnike, na katere nanesemo tanko plast Cs ali Cs$_2$O. Na ta način ustvarimo 
+negativno elektronsko afiniteto in izstopno delo je kar enako energijski
+reži polprevodnika. Z GaAs:Cs$_2$O ali InGaAs:Cs 
+katodami lahko tako zaznavamo svetlobo do valovnih dolžin okoli $9000-1000~\si{\nano\metre}$,
+z InP/InGaAs pa celo do okoli 1600~nm. 
 
-PMT 0,9A/W, 0.2-1.1 mum, dc-1Ghz
-celica 0.001 A/W isto.
+Čas odziva je odvisen od časa preleta elektronov od katode do anode. Da je ta čas čim krajši, 
+je napetost na fotocelici pogosto več kV. Tedaj lahko dosežemo zelo kratke odzivne čase, tudi 
+do 0,1~ns. Enostavnost in hitrost so torej prednosti fotocelice, njena glavna pomanjkljivost 
+pa je majhna občutljivost oziroma nizek kvantni izkoristek. Izkoristek je seveda močno odvisen
+od valovne dolžine vpadlega valovanja in snovi, iz katere je katoda. Tipično znaša 
+med $10^{-4}$ in $10^{-1}$. Vrednosti so zato tako nizke, ker se izbiti elektroni gibljejo v vse
+smeri in se pogosto sipljejo na mreži preden sploh dosežejo površino. 
+Za primer vpadne svetlobe z energijo $h\nu = 2$~eV in kvantnega
+izkoristka $1~\%$ je občutljivost $R = 5~\si{\milli\ampere/\watt}$. 
 
-termally generated atoms -> noise; cooling. 
+Pri vakuumskih fotodiodah pride pri končnih temperaturah tudi do spontane oddaje elektrona, zato 
+bo nekaj toka teklo, tudi če je detektor v popolni temi. Ta tok imenujemo temni tok in lahko dosega
+vrednosti več nA, odvisno seveda od katode, velikosti detektorja in temperature. Za občutljive
+meritve je treba vakuumsko fotodiodo hladiti. 
 
-Pomemeben podatek za kvantne detektorje, ki je v tesni zvezi 
-z občutljivostjo, je tudi kvantni izkotiste, to je delež vpadlih fotonov, ki povzročijo fotoefekt.
 
-
-\section{Fotopomnoževalka}
 Fotopomnoževalke so fotocelice z vgrajenim ojačevanjem. Fotoelektron pospešimo z napetostjo
 okoli 100-150~V na vmesno elektrodo - dinodo, kjer izbije nekaj (3-5) sekundarnih elektronov. 
-Pomnoževanje se ponovi 8-14 krat, tako da dobimo na en fotoelektron na anodi $10^6 - 10^8$ 
+Pomnoževanje se ponovi 8-14 krat, tako da dobimo na en fotoelektron na anodi $10^6 - 10^8$  irena 10e16
 elektronov, česar ni težko zaznati. Fotopomnoževalkanasm tako omogoča štetje posameznih fotonov.
 Za manj zahtevne aplikacije pa pogosto merimo kar povprečni tok z anode. Zaravi delikega ojačenje
 je treba tudi paziti, da fotopomnoževalke ne osvetlimo preveč. Spektralna občutljivost
 tako fotocelice kot fotopomnoževalke je odvisna od sestave površine fotokatode. Večinoma
 je največja v modrem delu spektra. Spodnja meja delovanja fotopomnoževalk je okoli $1~\si{\micro\metre}$.
-Kvantni izkoristek je večinoma okoli $10~\%$, razen v bližnjem infrardečem območju, kjer
+Kvantni izkoristek je večinoma okoli $30~\%$, razen v bližnjem infrardečem območju, kjer
 je znantno manjši. 
 
+PMT 0,9A/W, 0.2-1.1 mum, dc-1Ghz
 Ojačanje ne poslabša S/N ratio. 
 
 
