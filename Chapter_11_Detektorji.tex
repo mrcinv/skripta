@@ -11,7 +11,7 @@ Nazadnje bomo spoznali šum, ki omejuje uporabnost naprav.
 
 Osnovna naloga optičnih detektorjev je pretvoriti vpadni svetlobni signal 
 v nek drug signal, ki ga lahko natančno merimo. Navadno sta to električni tok 
-ali električna napetost, ki sta sorazmerna z intenziteto ali močjo vpadne svetlobe 
+ali električna napetost, ki sta sorazmerna z močjo vpadne svetlobe 
 (in ne z amplitudo električne poljske jakosti). V grobem delimo detektorje v dve skupini, 
 na termične in kvantne. Prvi pretvorijo energijo vpadne svetlobe 
 v toploto, drugi pa temeljijo na fotoefektu, kjer vpadli foton izbije elektron ali 
@@ -24,8 +24,9 @@ predvsem za merjenje optične moči, lahko tudi zelo velike. Po drugi strani pa 
 termičnih detektorjev neodvisen
 od valovne dolžine vpadne svetlobe, zaradi česar so termični detektorji uporabni na 
 širokem območju od globoke ultravijolične do daljne infrardeče svetlobe. Uporaba
-prevlada predvsem v infrardrečem, teraherčnem ali celo mikrovalovnem območju, kjer drugi 
-detektorji ne delujejo. Primeri termičnih detektorjev so bolometer, termočlen in piroelektrični detektor.
+prevlada predvsem v infrardrečem, teraherčnem ali celo mikrovalovnem območju, kjer so 
+drugi detektorji bistveno manj občutljivi. 
+Primeri termičnih detektorjev so bolometer, termočlen in piroelektrični detektor.
 
 Druga skupina so kvantni detektorji, v katerih se
 fotoni absorbirajo in povzročijo pojav prostih nosilcev naboja. Taki detektorji
@@ -46,9 +47,10 @@ so občutljivost, spektralni odziv, odzivni čas in prag detekcije.
 
 \begin{enumerate}
 \item Občutljivost detektorja $R$ pove, koliko signala dobimo na enoto vpadnega svetlobnega toka. 
-enota za občutljivost je tako A/W (ali tudi V/W). 
-\item Spektralni odziv pove, kako se občutljivost spreminja z valovno dolžino $R(\lambda)$. 
-Kvantni detektorji delujejo le v določenem območju valovnih dolžin, ki je odvisen od snovi, 
+Enota za občutljivost je tako A/W ali V/W. 
+\item Spektralni odziv pove, kako se občutljivost spreminja z valovno dolžino $R(\lambda)$.
+Pri termičnih detektorjih je $R(\lambda)$ konstanta, medtem ko kvantni detektorji 
+delujejo le v določenem območju valovnih dolžin, ki je odvisen od snovi, 
 iz katere je detektor narejen. 
 \item Odzivni čas pove, kako hitro se detektor odzove na spremembo optičnega signala. 
 \item Prag detekcije pove, pri kolikšni vpadni svetlobni moči postane razmerje med signalom ($S$)
@@ -58,8 +60,8 @@ in šumom ($N$, {\it noise}) enako $S/N = 1$.
 \section{Termični detektorji}
 Termične detektorje se zaradi njihovega razmeroma počasnega odziva uporablja predvsem 
 za merjenje vpadne moči in za detekcijo svetlobe tistih valovnih dolžin, za katere 
-ni drugih preprostih ali učinkovitih detektorjev. Zato se pogosto uporabljajo tudi v 
-astronomiji in za termografske kamere.
+ni drugih preprostih ali učinkovitih detektorjev. Pogosto se uporabljajo za termografske 
+kamere in v astronomiji.
 
 Delovanje termičnih detektorjev temelji na spremembi temperature zaradi absorpcije svetlobe 
 (energije), detektorji pa se med seboj razlikujejo predvsem v načinu pretvorbe spremembe 
@@ -83,11 +85,12 @@ ohlaja zaradi odtekanja toplote:
 \label{TD1}
 \eeq
 V stacionarnem stanju, ki ga dosežemo pri konstantnem vpadnem svetlobnem toku, se
-temperatura tipala ne spreminja je enaka
+temperatura tipala ne spreminja in razlika temperature tipala in rezervoarja je 
 \beq
-T = T_0 + \frac{P}{\Lambda}.
+T - T_0 = \frac{P}{\Lambda}.
+\label{temp_sens}
 \eeq
-Občutljivost detektorja, ki je sorazmerna z razliko temperatur tipala in rezervoarja, 
+Občutljivost detektorja, ki je sorazmerna z razliko temperatur, 
 je torej obratno sorazmerna z močjo, s katero se tipalo hladi. Za večjo občutljivost moramo
 torej toplotne izgube detektorja kar se da zmanjšati. 
 
@@ -98,15 +101,15 @@ Po enačbi~(\ref{TD1}) se temperatura približuje stacionarni vrednosti s časov
 \eeq
 ki je ključni parameter za določanje odzivnega časa detektorja. Odzivni
 čas je sorazmeren s kapaciteto senzorja, zato so tipala praviloma zelo majhna.
-Vidimo, da moramo za dosego čim krajšega odzivnega časa toplotne izgube kar se da povečati. Če majhne izgube
-povečajo občutljivost, pa po drugi strani podaljšajo karakteristični čas $\tau$, 
-zato pri termičnih detektorjih ne moremo imeti hkrati močnega in hitrega odziva. 
-Če želimo velike toplotne izgube, detektorje hladimo z zrakom ali vodo, majhne toplotne
-izgube pa so omejene s sevanjem.  
+Vidimo, da moramo za dosego čim krajšega odzivnega časa toplotne izgube kar se da povečati. Če velike
+izgube skrajšajo odzivni čas, pa po drugi strani zmanjšajo občutljivost (enačba~\ref{temp_sens}), 
+zato pri termičnih detektorjih ne moremo imeti hkrati velikega in hitrega odziva. 
+Če želimo toplotne izgube povečati, da s tem skrajšamo odzivni čas, detektorje hladimo z zrakom 
+ali celo z vodo, majhne toplotne izgube pa so omejene s sevanjem.  
 
 Podrobneje poglejmo odziv termičnega detektorja od vpadne moči. Naj se vpadna moč
 spreminja s časom, temperatura na detektorju pa temu sledi z določeno zakasnitvijo. Odziv
-najlepše izračunamo v Fourierevem prostoru. Vpadna moč in temperatura sta tako
+najlepše izračunamo v Fourierevem prostoru. Vpadno moč in temperaturo izrazimo kot
 \beq
 P(t) = \int_{-\infty}^{\infty} P_\omega e^{i\omega t}d\omega \quad \mathrm{in} \quad
 T = T_0 + \int_{-\infty}^{\infty} T_\omega e^{i\omega t}d\omega.
@@ -137,7 +140,9 @@ T(t)=\frac{iP_0}{\Lambda}e^{-(t-t_0)/\tau}.
 
 \subsection*{Bolometer}
 Bolometer je termični detektor, pri katerem zaznavamo spremembo električne upornosti
-zaradi spremembe temperature tipala. Tipalo je praviloma počrnjena tanka ploščica, 
+zaradi spremembe temperature tipala\footnote{Prvi bolometer je leta 1881 naredil
+ameriški fizik, astronom in letalski inženir Samuel Pierpont Langley, 1834--1906.}. 
+Tipalo je praviloma počrnjena tanka ploščica, 
 navadno je narejena iz termistorja, polprevodnika ali superprevodnika. Tipalo preko
 referenčnega upora priključimo na napetost, preko kondenzatorja pa merimo napetost na njem.
 Za meritve konstantega svetlobnega toka tipalo navadno vežemo v Wheatstonov mostiček. V obeh
@@ -151,20 +156,21 @@ tako da postane sistem neobčutljiv na morebitne spremembe temperature okolice.
 \label{fig:Bolometer-shema}
 \end{figure}
 
-Pri bolometrih s termistorjem velja približno linearna zveza med upornostjo in 
-temperaturo, vendar spremembe niso zelo velike, zato taki detektorji niso zelo 
-občutljivi ($R\sim 100~\si{\volt/\watt}$). So pa robustni, stabilni in delujejo pri sobni 
+Prednost bolometrov bolometrih s termistorjem je približno linearna zveza med upornostjo in 
+temperaturo. Uporabljamo jih predvsem za merjenje večjih vpadnih moči, saj taki 
+detektorji niso zelo občutljivi ($R\sim 100~\si{\volt/\watt}$). 
+So pa robustni, stabilni in delujejo pri sobni 
 temperaturi. Odzivni časi so okoli $\tau \sim 1-20~\si{\milli\second}$. 
 Pri polprevodniških bolometrih upornost narašča eksponentno s temperaturo. 
-Primerni so za detekcijo teraherčnih valovanj, vendar mora biti za ta namen germanijev
-bolometer hlajen s tekočim helijem. Tako lahko dosežemo
+Primerni so za detekcijo teraherčnih valovanj, vendar mora biti za ta namen 
+bolometer (npr. germanijev) hlajen s tekočim helijem. Tako lahko dosežemo
 občutljivosti večje od $R \sim 10^8~\si{\volt/\watt}$. Zelo občutljivi so tudi 
 detektorji s superprevodnimi tipali, saj je odvisnost upornosti od temperature v bližini
 prehoda v superprevodno stanje zelo velika ($R \sim 10^3~\si{\volt/\watt}$).
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=70truemm]{slike/11_Bolometer.jpg}
+\includegraphics[width=80truemm]{slike/11_Bolometer.jpg}
 \caption{Bolometer za merjenje prasevanja. Premer kovanca za primerjavo je 18~mm. 
 Vir: NASA/JPL-Caltech.}
 \label{fig:Bolometer}
@@ -176,7 +182,7 @@ referenčnega, pa zaščitimo pred svetlobo. Zaradi vpadne svetlobe se počrnjen
 segreje, med obema spojema nastane temperaturna razlika in zaradi termoelektričnega 
 pojava tudi električna napetost, ki jo lahko merimo. Pri tem pazimo, da je prevodnost
 vodnikov čim večja, toplotna prevodnost pa čim manjša. Odzivni čas termočlenov je 
-okoli $\tau \sim 10-20~\si{\milli\second}$, občutljivost pa je $R \sim 10~\si{\volt/\watt}$.
+okoli $\tau \sim 10-20~\si{\milli\second}$, občutljivost pa okoli $R \sim 10~\si{\volt/\watt}$.
 Ker so napetosti, ki se pojavijo med stikoma, razmeroma majhne (le okoli 
 $\sim 10~\si{\micro\volt/K}$) pogosto vežemo več termočlenov zaporedno v termobaterijo, navadno
 nekaj deset. Občutljivost s tem naraste na $R \sim 200~\si{\volt/\watt}$, podaljša 
@@ -184,9 +190,8 @@ pa se časovna konstanta $\tau \sim 10-2000~\si{\milli\second}$.
 
 \subsection*{Piroelektrični detektor}
 Piroelektriki so snovi brez centra inverzije, v katerih je lastna električna 
-polarizacija odvisna od temperature (npr. LiTaO$_3$, triglicin sulfat TGS ali
-polivinilidenfluorid, PVDF). 
-Vsi feroelektriki so tudi piroelektriki. Piroelektrični detektor je narejen iz 
+polarizacija odvisna od temperature (npr. LiTaO$_3$, triglicin sulfat TGS,
+polivinilidenfluorid PVDF in vsi feroelektriki). Piroelektrični detektor je narejen iz 
 ploščice piroelektrične snovi med dvema elektrodama oziroma ploščama kondenzatorja.
 Ko se ploščica zaradi absorbirane svetlobe segreje, se ji spremeni polarizacija in 
 med elektrodama se pojavi premikalni tok, ki ga merimo na merilnem uporniku.
@@ -195,7 +200,9 @@ Zveza med spremembo temperature in spremembo polarizacije je
 \beq
 dP = a dT,
 \eeq
-kjer je $a$ piroelektrični koeficient. Med obema elektrodama s površino $S$ preteče naboj
+kjer je $a$ piroelektrični koeficient. 
+
+Med obema elektrodama s površino $S$ preteče naboj
 \beq
 de = I dt = S dP = S a dT.
 \eeq
@@ -207,17 +214,14 @@ I = S a \frac{dT}{dt}.
 Piroelektrični detektor je torej občutljiv na časovni odvod temperature detektorja, 
 s tem pa tudi na spreminjanje vpadne svetlobne moči. V stacionarnem stanju 
 detektor ne proizvaja električnega toka, zato moramo za merjenje 
-konstantnega svetlobnega toka vpadno svetlobo najprej periodično modulirati.
+konstantnega svetlobnega toka vpadno svetlobo najprej modulirati.
 Navadno to naredimo kar z mehanskim zaklopom. Piroelektrični detektorji
-se uporabljajo kot preprosto dostopni in enostavni infrardeči detektorji, tudi v IR kamerah. 
+se večinoma uporabljajo kot preprosti infrardeči detektorji. 
 Njihova občutljivost je $R \sim 1~\si{\micro\ampere/\watt}$, odzivni čas pa odvisen od 
 upornika v vezju, ampak lahko doseže vrednosti $\tau \sim 10~\si{\micro\second}$.
-Zavedati se je treba, da so piroelektrični koeficienti navadno močno 
-odvisni od temperature in naraščajo do faznega prehoda pri Curiejevi temperaturi, 
-pri kateri spontana polarizacija snovi izgine. 
 
 Poglejmo temperaturni odziv na tipalu. Izhajamo iz enačb~(\ref{TermTF}), (\ref{TermOdziv}) in
-(\ref{piro}) in izračunajmo tok $I$ vo odvisnosti od frekvence modulacije.
+(\ref{piro}) in izračunajmo tok $I$ v odvisnosti od frekvence modulacije.
 \beq
 I = Sa \frac{dT}{dt} = Sa \frac{d}{dt} \int_{-\infty}^{\infty} T_\omega e^{i\omega t}d\omega 
 =Sa\int_{-\infty}^{\infty}\frac{1}{\Lambda}\left(\frac{P_\omega}{1+i \omega \tau}\right) \,i \omega\,
@@ -231,10 +235,10 @@ Vidimo, da pri majhnih frekvencah tok narašča, pri velikih frekvencah pa posta
 frekvence modulacije vpadne svetlobe. Vendar to še ne pomeni, da lahko moduliramo s poljubno 
 veliko frekvenco. Poleg relaksacijskega časa detektorja ima namreč karakteristični čas tudi
 elektronsko vezje, ki določa zgornjo mejo za frekvenco. Ta je enak $\tau_e = R_eC_e$, pri čemer
-sta $R_e$ upornost sistema in $C_e$ kapaciteta detektorja. 
+sta $R_e$ upornost sistema in $C_e$ električna kapaciteta detektorja. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{80truemm} 
+\def\svgwidth{65truemm} 
 \input{slike/11_Piro.pdf_tex}
 \caption{Spektralni odziv piroelektričnega detektorja na eni strani določajo toplotne izgube 
 $\Lambda$ in toplotna kapaciteta detektorja $C$, navzgor pa odziv omejuje odziv elektronskega vezja $\tau_e$.}
@@ -245,20 +249,22 @@ $\Lambda$ in toplotna kapaciteta detektorja $C$, navzgor pa odziv omejuje odziv 
 Piroelektrični detektor naredimo iz kristala LiTaO$_3$ s koeficientom piroelektričnosti
 $a = 2,3 \times 10^{-4}~\si{\ampere \second /\metre^2 \kelvin}$ in povprečno 
 dielektričnostjo $\varepsilon = 50$. Izračunaj dovoljeno električno upornost sistema, 
-če želimo, da detektor dobro deluje za frekvence do 1~MHz. 
+če želimo, da detektor deluje za frekvence do 1~MHz. 
 Dimenzija detektorja je $S = 1~\si{\centi\metre^2}$ in debelina $d = 1~\si{\milli\metre}$.
 \end{definition}
 
 \section{Fotoefekt}
 Delovanje kvantnih detektorjev temelji na fotoefektu, pri katerem vpadli
 foton iz kovine izbije elektrone (fotoelektrone). Pri fotoefektu s svetlobo
-dane valovne dožine osvetlimo katodo, nato pa merimo tok, ki teče med katodo
+dane valovne dožine osvetlimo kovinsko katodo, nato pa merimo tok, ki teče med katodo
 in anodo pri dani napetosti. S spreminjanjem napetosti lahko izmerimo kinetično 
-energijo fotoelektronov, ki so izstopili iz kovine. Izkaže se, da pri določenih 
+energijo fotoelektronov, ki izstopajo iz kovine. Izkaže se, da pri določenih 
 valovnih dolžinah svetlobe tok fotoelektronov povsem izgine, ne glede na moč vpadne svetlobe.
 Fotoelektroni nastanejo le, če je energija vpadnih fotonov večja od izstopnega
-dela kovine. Fotoefekt je prvič opazil Hertz leta 1887, za njegovo razlago leta
-1905 pa je Einstein dobil nobelovo nagrado. 
+dela kovine. Fotoefekt je prvič opazil Hertz\footnote{Nemški fizik Heinrich Hertz, 1857--1894.} 
+leta 1887, za njegovo razlago leta
+1905 pa je Einstein\footnote{Nemški fizik in nobelovec Albert Einstein, 1879--1955.} 
+dobil nobelovo nagrado. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{60truemm} 
@@ -268,7 +274,7 @@ Vpadna svetloba iz katode izbije elektrone, da med katodo in anodo steče tok.}
 \label{fig:Fotoefekt}
 \end{figure}
 
-Poglejmo uporabnost fotoefekta za optično detekcijo. Glavna omejitev je 
+Poglejmo uporabnost fotoefekta za optično detekcijo. Glavno merilo je 
 izstopno delo snovi, na katero vpada svetloba. Za kovine je izstopno delo $\Phi$
 od okoli 2~eV za cezij pa do okoli 6~eV za platino. 
 Ustrezna valovna dolžina svetlobe, ki še povzroči fotoefekt, je tako 
@@ -283,10 +289,23 @@ vpadne fotone z valovnimi dolžinami od ultravijolične svetlobe pa vse do infra
 
 Ključen parameter pri detekciji svetlobe je kvantni izkoristek $\eta$.
 Ta nam pove verjetnost, da vpadli foton z valovno dolžino $\lambda$ iz 
-snovi izbije elektron. Električni tok, ki steče pri vpadni svetlobni moči $P$, je
+snovi izbije elektron. Električni tok, ki steče pri vpadni svetlobni moči $P$, je tako
 \boxeq{11:eta}{
 I = \eta e N = \eta \frac{e P}{h \nu}.
 }
+Kvantni izkoristek je močno odvisen od valovne dolžine vpadne svetlobe in seveda
+od snovi, na katero svetloba vpada. Za fotone z energijo, ki je manjša od izstopnega 
+dela oziroma energijske reže, je kvatni izkoristek enak nič, nato pa strmo naraste in za
+dane valovne dolžine lahko doseže vrednosti, večje od $90~\%$. Podrobneje ga bomo 
+obravnavali pri posameznih primerih detektorjev.
+
+\begin{remark}
+V praksi ločimo dve vrsti kvantega izkoristka: zunanji in notranji. Zunanji je vpeljan kot 
+razmerje števila izbitih elektronov in fotonov, ki vpadejo na detektor. Ker pa se 
+ob vpadu na detektor vedno nekaj fotonov odbije ali siplje, vpeljemo še notranji kvatni 
+izkoristek kot razmerje števila elektronov in fotonov, ki se dejansko absorbirajo v detektorju.
+Zunanji izkoristek je vedno manjši od notranjega in je neke vrste efektivni izkoristek.
+\end{remark}
 
 Beseda fotoefekt je prvotno označevala izbijanje elektronov iz snovi. 
 Pojem pa lahko razširimo na pojav, pri katerem izbiti elektron ne zapusti snovi, 
@@ -303,8 +322,8 @@ fotoprevodniki, polprevodniške in plazovne fotodiode.
 Najpreprostejši kvantni detektor na zunanji fotoefekt je fotocelica (slika~\ref{fig:Fotoefekt}). 
 Svetloba vpada na fotokatodo, ki je zaprta v vakuumirani stekleni bučki, in tam povzroči
 fotoefekt. Fotoelektrone, ki zapustijo katodo, z zunanjo napetostjo pospešimo do anode 
-in merimo električni tok, ki je sorazmeren s številom vpadlih fotonov. 
-Fotocelice so pogosto narejene v cilindrični obliki, pri kateri leži
+in merimo električni tok, ki je sorazmeren s številom vpadlih fotonov. Najpreprostejša
+shema je na skici, sicer pa so fotocelice pogosto narejene v cilindrični obliki, pri kateri leži
 katoda v sredini valja, ki ga tvori mrežasta anoda.
 
 Območje detekcije je določeno s snovjo, iz katere izbijamo elektrone, in z njenim izstopnim delom
@@ -316,6 +335,13 @@ negativno elektronsko afiniteto in izstopno delo je kar enako energijski
 reži polprevodnika. Z GaAs:Cs$_2$O ali InGaAs:Cs 
 katodami lahko tako zaznavamo svetlobo do valovnih dolžin okoli $9000-1000~\si{\nano\metre}$,
 z InP/InGaAs pa celo do okoli 1600~nm. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/11_Fotodioda_Spekter.pdf_tex}
+\caption{Kvantni izkoristek fotodiod za različne snovi}
+\label{fig:Fotodioda}
+\end{figure}
 
 Čas odziva je odvisen od časa preleta elektronov od katode do anode. Da je ta čas čim krajši, 
 je napetost na fotocelici pogosto več kV. Tedaj lahko dosežemo zelo kratke odzivne čase, tudi 
