@@ -316,10 +316,10 @@ drugemu pa notranji fotoefekt. Primeri detektorjev, ki temeljijo na zunanjem fot
 fotocelice in fotopomnoževalke, detektorjev, ki temeljijo na notranjem fotoefektu, pa
 fotoprevodniki, polprevodniške in plazovne fotodiode.
 
-
 \section{Vakuumska fotodioda in fotopomnoževalka}
 
-Najpreprostejši kvantni detektor na zunanji fotoefekt je fotocelica (slika~\ref{fig:Fotoefekt}). 
+Najpreprostejši kvantni detektor na zunanji fotoefekt je fotocelica ali vakuumska fotodioda
+(slika~\ref{fig:Fotoefekt}). 
 Svetloba vpada na fotokatodo, ki je zaprta v vakuumirani stekleni bučki, in tam povzroči
 fotoefekt. Fotoelektrone, ki zapustijo katodo, z zunanjo napetostjo pospešimo do anode 
 in merimo električni tok, ki je sorazmeren s številom vpadlih fotonov. Najpreprostejša
@@ -329,7 +329,7 @@ katoda v sredini valja, ki ga tvori mrežasta anoda.
 Območje detekcije je določeno s snovjo, iz katere izbijamo elektrone, in z njenim izstopnim delom
 oziroma širino reže v primeru polprevodnika.
 Potrebno energijo fotona lahko precej zmanjšamo, 
-če namesto čistih kovin uporabimo kombinirane bi- ali večalkalne katode,
+če namesto čistih kovin uporabimo kombinirane bi- ali večalkalne katode (npr. Na$_2$KSbCs),
 ali pa polprevodnike, na katere nanesemo tanko plast Cs ali Cs$_2$O. Na ta način ustvarimo 
 negativno elektronsko afiniteto in izstopno delo je kar enako energijski
 reži polprevodnika. Z GaAs:Cs$_2$O ali InGaAs:Cs 
@@ -337,38 +337,53 @@ katodami lahko tako zaznavamo svetlobo do valovnih dolžin okoli $9000-1000~\si{
 z InP/InGaAs pa celo do okoli 1600~nm. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{80truemm} 
-\input{slike/11_Fotodioda_Spekter.pdf_tex}
-\caption{Kvantni izkoristek fotodiod za različne snovi}
+\def\svgwidth{110truemm} 
+\input{slike/11_SpekterKatode.pdf_tex}
+\caption{Kvantni izkoristek fotodiod za različne snovi. Povzeto po Hamamatsu Photonics.}
 \label{fig:Fotodioda}
 \end{figure}
 
-Čas odziva je odvisen od časa preleta elektronov od katode do anode. Da je ta čas čim krajši, 
-je napetost na fotocelici pogosto več kV. Tedaj lahko dosežemo zelo kratke odzivne čase, tudi 
-do 0,1~ns. Enostavnost in hitrost so torej prednosti fotocelice, njena glavna pomanjkljivost 
-pa je majhna občutljivost oziroma nizek kvantni izkoristek. Izkoristek je seveda močno odvisen
-od valovne dolžine vpadlega valovanja in snovi, iz katere je katoda. Tipično znaša 
-med $10^{-4}$ in $10^{-1}$. Vrednosti so zato tako nizke, ker se izbiti elektroni gibljejo v vse
+Čas odziva vakuumske fotodiode je odvisen od časa preleta elektronov od katode do anode. 
+Da je ta čas čim krajši, je napetost na fotocelici pogosto več kV. Tedaj lahko dosežemo 
+zelo kratke odzivne čase, tudi do 0,1~ns. Enostavnost in hitrost so torej prednosti fotocelice, 
+njena glavna pomanjkljivost pa je majhna občutljivost oziroma nizek kvantni izkoristek. 
+Izkoristek je seveda močno odvisen od valovne dolžine vpadlega valovanja in snovi, iz 
+katere je katoda. Največje vrednosti, ki jih dosega, so okoli $40~\%$, pogosto pa precej manj. 
+Vrednosti so razmeroma nizke, saj se izbiti elektroni gibljejo v vse
 smeri in se pogosto sipljejo na mreži preden sploh dosežejo površino. 
-Za primer vpadne svetlobe z energijo $h\nu = 2$~eV in kvantnega
-izkoristka $1~\%$ je občutljivost $R = 5~\si{\milli\ampere/\watt}$. 
+Za primer vzemimo svetlobo z energijo $h\nu = 2$~eV, kar ustreza valovni dolžini $620$~nm.
+S slike~(\ref{fig:Fotodioda}) odčitamo, da je kvantni izkoristek GaAs katode okoli $20~\%$. 
+Občutljivost je tako $R = 100~\si{\milli\ampere/\watt}$. 
 
 Pri vakuumskih fotodiodah pride pri končnih temperaturah tudi do spontane oddaje elektrona, zato 
-bo nekaj toka teklo, tudi če je detektor v popolni temi. Ta tok imenujemo temni tok in lahko dosega
-vrednosti več nA, odvisno seveda od katode, velikosti detektorja in temperature. Za občutljive
-meritve je treba vakuumsko fotodiodo hladiti. 
+nekaj toka teče, tudi če je detektor v popolni temi. Ta tok imenujemo temni tok in tipično dosega
+vrednosti okoli $10^{-15}~\ampere$, lahko pa tudi do več nA, odvisno seveda od katode, velikosti 
+detektorja in temperature. Za občutljive meritve je treba vakuumsko fotodiodo hladiti. 
 
+Fotopomnoževalke so fotocelice z vgrajenim ojačevanjem. Ojačevanje dosežemo tako, da 
+izbit fotoelektron najprej pospešimo z napetostjo $100-150~\si{\volt}$ na vmesno elektrodo, 
+tako imenovano dinodo, iz katere izbije več ($\sim 5 - 40$) sekundarnih elektronov. Ti elektroni
+potujejo do naslednje dinode, ki je pod višjo pozitivno napetostjo, in ponovno izbijejo elektrone, 
+ki vpadejo na naslednjo dinodo ... To pomnoževanje se večkrat ponovi 
+in na vpadli foton lahko dobimo $10^9$ elektronov na anodi. 
+Fotopomnoževalka tako omogoča štetje posameznih fotonov. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/11_PMT.pdf_tex}
+\caption{Shema fotopomnoževalke. Vpadna svetloba iz katode izbije elektrone, ti pa 
+iz dinod izbijajo dodatne elektrone in izhodni signal se močno ojača.}
+\label{fig:PMT}
+\end{figure}
 
-Fotopomnoževalke so fotocelice z vgrajenim ojačevanjem. Fotoelektron pospešimo z napetostjo
-okoli 100-150~V na vmesno elektrodo - dinodo, kjer izbije nekaj (3-5) sekundarnih elektronov. 
-Pomnoževanje se ponovi 8-14 krat, tako da dobimo na en fotoelektron na anodi $10^6 - 10^8$  irena 10e16
-elektronov, česar ni težko zaznati. Fotopomnoževalkanasm tako omogoča štetje posameznih fotonov.
+Odzivni čas fotopomnoževalke je odvisen od notranje postavitve dinod. Ker posamezni elektroni
+do anode potujejo različno dolgo, je sunek na izhodu vedno razširjen, tipično okoli $\sim 0,1-20~
+\si{\nano\second}$.
+
+irena 10e16
 Za manj zahtevne aplikacije pa pogosto merimo kar povprečni tok z anode. Zaravi delikega ojačenje
 je treba tudi paziti, da fotopomnoževalke ne osvetlimo preveč. Spektralna občutljivost
-tako fotocelice kot fotopomnoževalke je odvisna od sestave površine fotokatode. Večinoma
-je največja v modrem delu spektra. Spodnja meja delovanja fotopomnoževalk je okoli $1~\si{\micro\metre}$.
-Kvantni izkoristek je večinoma okoli $30~\%$, razen v bližnjem infrardečem območju, kjer
-je znantno manjši. 
+tako fotocelice kot fotopomnoževalke je odvisna od sestave površine fotokatode. 
 
 PMT 0,9A/W, 0.2-1.1 mum, dc-1Ghz
 Ojačanje ne poslabša S/N ratio. 
