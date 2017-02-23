@@ -362,11 +362,13 @@ detektorja in temperature. Za občutljive meritve je treba vakuumsko fotodiodo h
 
 Fotopomnoževalke so fotocelice z vgrajenim ojačevanjem. Ojačevanje dosežemo tako, da 
 izbit fotoelektron najprej pospešimo z napetostjo $100-150~\si{\volt}$ na vmesno elektrodo, 
-tako imenovano dinodo, iz katere izbije več ($\sim 5 - 40$) sekundarnih elektronov. Ti elektroni
-potujejo do naslednje dinode, ki je pod višjo pozitivno napetostjo, in ponovno izbijejo elektrone, 
-ki vpadejo na naslednjo dinodo ... To pomnoževanje se večkrat ponovi 
-in na vpadli foton lahko dobimo $10^9$ elektronov na anodi. 
-Fotopomnoževalka tako omogoča štetje posameznih fotonov. 
+tako imenovano dinodo, iz katere izbije več ($\sim 5 - 10$, redkeje tudi do 40) 
+sekundarnih elektronov. Ti elektroni
+potujejo do naslednje dinode, ki je pod višjo pozitivno napetostjo in ponovno izbijejo elektrone, 
+ki vpadejo na naslednjo dinodo ... To pomnoževanje se večkrat ponovi (navadno okoli desetkrat),
+število elektronov eksponentno narašča in na en vpadli foton lahko dobimo $10^9$ elektronov na anodi. 
+Fotopomnoževalka tako omogoča štetje posameznih fotonov, po drugi strani pa moramo pri 
+običajnih osvetlitvah paziti, da fotopomnoževalke ne osvetlimo preveč. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{80truemm} 
@@ -376,15 +378,17 @@ iz dinod izbijajo dodatne elektrone in izhodni signal se močno ojača.}
 \label{fig:PMT}
 \end{figure}
 
-Odzivni čas fotopomnoževalke je odvisen od notranje postavitve dinod. Ker posamezni elektroni
-do anode potujejo različno dolgo, je sunek na izhodu vedno razširjen, tipično okoli $\sim 0,1-20~
-\si{\nano\second}$.
+Poleg tega, da so fotopomnoževalke zelo občutljive, imajo tudi zelo kratek 
+odzivni čas. Ta je odvisen od notranje postavitve dinod. Posamezni 
+elektroni do anode potujejo različno dolgo, zato je sunek na izhodu 
+vedno razširjen, tipično okoli $\sim 0,1-20~\si{\nano\second}$. Podobne velikosti je tudi 
+elektronska omejitev zaradi kapacitete in električne upornosti. 
+Za manj zahtevne aplikacije pogosto merimo kar povprečni tok z anode. Kadar pa opazujemo
+posamezne fotone, zaznamo na izhodu zaporedje diskretnih sunkov. Takrat lahko 
+amplituda signala na izhodu močno niha. Koeficient ojačanja je namreč
+močno odvisen od števila izbitih elektronov, kar pa je statistični proces. 
 
-irena 10e16
-Za manj zahtevne aplikacije pa pogosto merimo kar povprečni tok z anode. Zaravi delikega ojačenje
-je treba tudi paziti, da fotopomnoževalke ne osvetlimo preveč. Spektralna občutljivost
-tako fotocelice kot fotopomnoževalke je odvisna od sestave površine fotokatode. 
-
+delilnik napetosti
 PMT 0,9A/W, 0.2-1.1 mum, dc-1Ghz
 Ojačanje ne poslabša S/N ratio. 
 
