@@ -284,8 +284,17 @@ Ustrezna valovna dolžina svetlobe, ki še povzroči fotoefekt, je tako
 kar je 580~nm za primer cezija in samo okoli 200~nm za platino. Če želimo fotoefekt
 izkostisti za detektorje, območje občutljivosti povečamo z uporabo drugih snovi,
 na primer Cs-Te, Cs-Sb, Na-K-Sb-Cs ali GaAs:Cs.
-Izstopno delo s tem zmanjšamo na $\Phi \sim 0,7$~eV, tako da lahko zaznavamo 
-vpadne fotone z valovnimi dolžinami od ultravijolične svetlobe pa vse do infrardeče. 
+Potrebno energijo s tem zmanjšamo na $\Phi \sim 0,7$~eV, tako da lahko zaznavamo 
+fotone z valovnimi dolžinami od ultravijolične svetlobe pa vse do infrardeče. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/11_Nivoji.pdf_tex}
+\caption{Shema energijskih nivojev v kovini (levo) in polprevodniku (desno). $\Phi$ označuje
+izstopno delo pri kovini, $E_g$ energijo med valenčnim in prevodnim pasom poprevodnika,
+$E_a$ pa elektronsko afiniteto. }
+\label{fig:Nivoji}
+\end{figure}
 
 Ključen parameter pri detekciji svetlobe je kvantni izkoristek $\eta$.
 Ta nam pove verjetnost, da vpadli foton z valovno dolžino $\lambda$ iz 
@@ -322,9 +331,7 @@ Najpreprostejši kvantni detektor na zunanji fotoefekt je fotocelica ali vakuums
 (slika~\ref{fig:Fotoefekt}). 
 Svetloba vpada na fotokatodo, ki je zaprta v vakuumirani stekleni bučki, in tam povzroči
 fotoefekt. Fotoelektrone, ki zapustijo katodo, z zunanjo napetostjo pospešimo do anode 
-in merimo električni tok, ki je sorazmeren s številom vpadlih fotonov. Najpreprostejša
-shema je na skici, sicer pa so fotocelice pogosto narejene v cilindrični obliki, pri kateri leži
-katoda v sredini valja, ki ga tvori mrežasta anoda.
+in merimo električni tok, ki je sorazmeren s številom vpadlih fotonov. 
 
 Območje detekcije je določeno s snovjo, iz katere izbijamo elektrone, in z njenim izstopnim delom
 oziroma širino reže v primeru polprevodnika.
@@ -333,11 +340,12 @@ Potrebno energijo fotona lahko precej zmanjšamo,
 ali pa polprevodnike, na katere nanesemo tanko plast Cs ali Cs$_2$O. Na ta način ustvarimo 
 negativno elektronsko afiniteto in izstopno delo je kar enako energijski
 reži polprevodnika. Z GaAs:Cs$_2$O ali InGaAs:Cs 
-katodami lahko tako zaznavamo svetlobo do valovnih dolžin okoli $9000-1000~\si{\nano\metre}$,
-z InP/InGaAs pa celo do okoli 1600~nm. 
+katodami lahko tako zaznavamo svetlobo do valovnih dolžin okoli $900-1000~\si{\nano\metre}$,
+z InP/InGaAs pa celo do okoli 1600~nm. Na ultravijoličnem območju je delovanje
+omejeno na okoli 160~nm zaradi neprepustnosti stekla, iz katerega je narejena bučka.
 \begin{figure}[h]
 \centering
-\def\svgwidth{110truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/11_SpekterKatode.pdf_tex}
 \caption{Kvantni izkoristek fotodiod za različne snovi. Povzeto po Hamamatsu Photonics.}
 \label{fig:Fotodioda}
@@ -350,10 +358,10 @@ njena glavna pomanjkljivost pa je majhna občutljivost oziroma nizek kvantni izk
 Izkoristek je seveda močno odvisen od valovne dolžine vpadlega valovanja in snovi, iz 
 katere je katoda. Največje vrednosti, ki jih dosega, so okoli $40~\%$, pogosto pa precej manj. 
 Vrednosti so razmeroma nizke, saj se izbiti elektroni gibljejo v vse
-smeri in se pogosto sipljejo na mreži preden sploh dosežejo površino. 
-Za primer vzemimo svetlobo z energijo $h\nu = 2$~eV, kar ustreza valovni dolžini $620$~nm.
+smeri in se pogosto sipljejo, preden sploh dosežejo površino. 
+Za primer vzemimo svetlobo z energijo $h\nu = 2$~eV ($\lambda=620$~nm).
 S slike~(\ref{fig:Fotodioda}) odčitamo, da je kvantni izkoristek GaAs katode okoli $20~\%$. 
-Občutljivost je tako $R = 100~\si{\milli\ampere/\watt}$. 
+Občutljivost je tako $R = e_0 \eta / h\nu = 100~\si{\milli\ampere/\watt}$. 
 
 Pri vakuumskih fotodiodah pride pri končnih temperaturah tudi do spontane oddaje elektrona, zato 
 nekaj toka teče, tudi če je detektor v popolni temi. Ta tok imenujemo temni tok in tipično dosega
@@ -364,9 +372,12 @@ Fotopomnoževalke so fotocelice z vgrajenim ojačevanjem. Ojačevanje dosežemo 
 izbit fotoelektron najprej pospešimo z napetostjo $100-150~\si{\volt}$ na vmesno elektrodo, 
 tako imenovano dinodo, iz katere izbije več ($\sim 5 - 10$, redkeje tudi do 40) 
 sekundarnih elektronov. Ti elektroni
-potujejo do naslednje dinode, ki je pod višjo pozitivno napetostjo in ponovno izbijejo elektrone, 
-ki vpadejo na naslednjo dinodo ... To pomnoževanje se večkrat ponovi (navadno okoli desetkrat),
+potujejo do naslednje dinode, ki je pod višjo pozitivno napetostjo (tipično okoli $100~\si{\volt}$
+višjo), kjer ponovno izbijejo elektrone, ki vpadejo na naslednjo dinodo ... 
+To pomnoževanje se večkrat ponovi (navadno okoli desetkrat),
 število elektronov eksponentno narašča in na en vpadli foton lahko dobimo $10^9$ elektronov na anodi. 
+Občutljivost fotopomnoževalk je tako precej večja od občutljivosti vakuumske fotodiode in
+dosega odzivnost na anodi do $R\sim 10^6~\si{\ampere/\watt}$.
 Fotopomnoževalka tako omogoča štetje posameznih fotonov, po drugi strani pa moramo pri 
 običajnih osvetlitvah paziti, da fotopomnoževalke ne osvetlimo preveč. 
 \begin{figure}[h]
@@ -378,21 +389,15 @@ iz dinod izbijajo dodatne elektrone in izhodni signal se močno ojača.}
 \label{fig:PMT}
 \end{figure}
 
-Poleg tega, da so fotopomnoževalke zelo občutljive, imajo tudi zelo kratek 
-odzivni čas. Ta je odvisen od notranje postavitve dinod. Posamezni 
+Fotopomnoževalke imajo zelo kratek odzivni čas, ki je odvisen od postavitve dinod. Posamezni 
 elektroni do anode potujejo različno dolgo, zato je sunek na izhodu 
-vedno razširjen, tipično okoli $\sim 0,1-20~\si{\nano\second}$. Podobne velikosti je tudi 
-elektronska omejitev zaradi kapacitete in električne upornosti. 
+razširjen, tipično okoli $\sim 0,1-20~\si{\nano\second}$.  
 Za manj zahtevne aplikacije pogosto merimo kar povprečni tok z anode. Kadar pa opazujemo
-posamezne fotone, zaznamo na izhodu zaporedje diskretnih sunkov. Takrat lahko 
-amplituda signala na izhodu močno niha, saj je koeficient ojačanja 
-močno odvisen od števila izbitih elektronov, kar pa je statistični proces. 
+posamezne fotone, zaznamo na izhodu zaporedje sunkov. Takrat lahko 
+amplituda izhodnega signala močno niha, saj je koeficient ojačanja 
+odvisen od števila izbitih elektronov, kar pa je statistični proces. 
 
-Občutljivost fotopomnoževalk je seveda precej večja od občutljivosti vakuumske fotodiode
 
-delilnik napetosti
-PMT 0,9A/W, 0.2-1.1 mum, dc-1Ghz
-Ojačanje ne poslabša S/N ratio. 
 
 
 \section{Fotoprevodni detektorji}
