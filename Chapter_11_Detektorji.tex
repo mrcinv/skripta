@@ -398,13 +398,119 @@ amplituda izhodnega signala močno niha, saj je koeficient ojačanja
 odvisen od števila izbitih elektronov, kar pa je statistični proces. 
 
 
-
-
 \section{Fotoprevodni detektorji}
-V fotoprevodnikih svetloba z dovolj veliko energijo tvori pare elektron-vrzel, zaradi  česar
-se poveča število nosilcev toka in s tem prevodnost. Hitrost odziva je odvisna od hitrosti
-rekombinacije elektronov in vrzeli, to je okoli mikrosekunde po do desetin milisekund, kar
-je dokaj počasi. 
+Fotoprevodni detektorji\footnote{Fotoprevodne detektorje včasih imenujejo tudi fotouporniki.} 
+so detektorji, katerih delovanje temelji na notranjem fotoefektu.
+Vpadli foton z dovolj veliko energijo se absorbira, pri tem pa ne izbije elektronov v prostor, 
+ampak povzroči nastanek para elektron-vrzel. Ob priključeni napetosti se nosilci naboja
+začnejo premikati in steče tok, ki ga merimo. Z naraščajočim številom fotonov 
+se prevodnost fotoprevodnika manjša, zato lahko z merjenjem upornosti določimo 
+intenziteto vpadle svetlobe. Tipično so fotoprevodniki iz polprevodnikov, 
+lahko pa so tudi iz izolatorjev. 
+
+Da foton lahko vzbudi elektron iz valenčnega v prevodni pas, mora biti njegova energija dovolj velika. 
+V čistih (nedopiranih) polprevodnikih to pomeni, da mora biti energija fotona večja od 
+širine reže. Za silicij, na primer, je širina reže 1,1~eV, kar ustreza valovni dolžini do okoli 
+$1,1~\si{\micro\meter}$, za germanij 0,67~eV ($1,8~\si{\micro\meter}$) in za PbS 0,37~eV
+($3,4~\si{\micro\meter}$). Za detekcijo daljših valovnih dolžin pa ne uporabljamo polprevodnikov
+z manjšo energijsko režo, ampak dopirane polprevodnike (slika~\ref{fig:FPrevodnik}), s
+čimer občutno zmanjšamo potrebno vpadlo energijo fotonov. Vendar je tem primeru prispevek termično 
+vzbujenih elektronov že tako velik, da je treba detektorje hladiti, navadno s tekočim
+dušikom ali celo tekočim helijem. Tak primer je germanij, dopiran s cinkom, 
+s katerim lahko zaznavamo svetlobo do okoli $40~\si{\micro\meter}$. Pri tem ga hladimo
+na $4~\si{\kelvin}$, da zmanjšamo pojav termično vzbujenih nosilcev naboja. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{150truemm} 
+\input{slike/11_FPrevodnik.pdf_tex}
+\caption{Shema prehoda elektrona v fotoprevodniku. Levo je čisti polprevodik, v sredini n-dopiran
+polprevodnik in desno p-dopiran polprevodnik. Z dopiranjem povečamo območje delovanja
+detektorja v infra-rdeče območje. }
+\label{fig:FPrevodnik}
+\end{figure}
+
+Izračunajmo električni tok, ki steče, ko posvetimo na fotoprevodnik. Spomnimo se, da
+je gostota električnega toka $j$ enaka vsoti prispevkov elektronov in vrzeli
+\beq
+j = e_0 n_v v_v + e_0 n_e v_e,
+\eeq
+pri čemer $n_v$ in $n_e$ pomenita gostoto vrzeli in elektronov v snovi, $v_v$ in $v_e$ pa 
+hitrost vrzeli in elektronov. Ta je sorazmerna z električno poljsko jakostjo $E$, ki je priključena
+ na vzorec, sorazmernostni faktor pa je gibljivost $\beta$. Ko posvetimo na vzorec, 
+ se $n_v$ in $n_e$ povečata
+ \beq
+ n_v = \tilde{n}_v + \Delta n_v \quad \mathrm{in} \quad 
+ n_e = \tilde{n}_e + \Delta n_e,
+ \eeq
+gostota električnega toka pa naraste za
+\beq
+\Delta j = e_0 \Delta n_v v_v + e_0 \Delta n_e v_e.
+\label{FP_j}
+\eeq
+V stacionarnem primeru se število nosilcev naboja ne spreminja in velja
+\beq
+0 = \frac{dn_v}{dt} = \frac{\eta_v P}{h \nu (Sl)} - \frac{\Delta n_v}{\tau_v}
+\eeq
+in podobno za elektrone. Pri tem je $\eta$ kvatni izkoristek, $P$ moč vpadne svetlobe,
+$Sl$ prostornina detektorja in $\tau$ življenjski čas vrzeli. 
+Ko stacionarno vrednost $\Delta n_v$ in $\Delta n_e$ vstavimo v enačbo~(\ref{FP_j}), dobimo
+\beq
+\Delta j = e_0 \frac{\eta_v P \tau_v}{h \nu (Sl)} \beta_v  E + 
+e_0 \frac{\eta_e P \tau_e}{h \nu (Sl)} \beta_e  E.
+\eeq
+Če vpeljemo še napetost $U = E/l$, zapišemo celotni tok skozi fotoprevodnik zaradi vpadle svetlobe kot
+\beq
+\Delta I = \Delta j S = \frac{e_0 U P }{h \nu l^2} \left(\eta_v \tau_v \beta_v + 
+\eta_e \tau_e \beta_e \right).
+\eeq
+Pogosto je gibljivost elektronov znatno večja od gibljivosti vrzeli (npr.
+$0,135~\si{\meter}^2/\si{\volt\second}$ proti $0,048~\si{\meter}^2/\si{\volt\second}$ za silicij), 
+zato prvi člen v oklepaju
+zanemarimo in zapišemo
+\beq
+\Delta I = G \left( \frac{e_0 \eta_e}{h\nu}\right) P,
+\eeq
+pri čemer je koeficient ojačanja 
+\beq
+G = \frac{\beta_e \tau_e U}{l^2} = \frac{\tau_e}{\tau}.
+\eeq
+Vpeljali smo še čas preleta $\tau = v_e/l = \beta_e E/l = \beta_e U/l^2$.
+
+Koeficient $G$ opiše ojačanje signala. Njegova vrednost je odvisna od 
+vrste snovi (in gibljivosti nosilcev naboja v njej), velikosti
+detektorja in tudi priključene napetosti, zato lahko $G$ zavzane vrednosti od manj kot ena pa
+vse do $10^6$. 
+
+\begin{definition}
+Izračunali smo spremembo toka, če fotoprevodnik osvetlimo s konstantno vpadno močjo. Pokaži, da
+ je v primeru spremenljive konstante moči odziv enak
+ \beq
+\Delta I_\omega = G \left( \frac{e_0 \eta_e}{h\nu}\right) \frac{P_\omega}{1+i \omega \tau_e}.
+ \eeq
+ 
+\end{definition}
+
+Fotoprevodniki so uporabni na širokem spektralnem območju, od ultra\-vijolične 
+do daljne infra\-rdeče svetlobe. V vidnem in bližnjem infrardečem omočju se 
+uporablja pretežno silicijeve fotoprevodnike, germanijeve
+pa za valovne dolžine do $1,8~\si{\micro\meter}$. Za zaznavanje valovnih dolžin med okoli 
+$2~\si{\micro\meter}$ in $7~\si{\micro\meter}$ so najprimernejši InAs, InSb in PbS detektorji, 
+pri še daljših valovnih dolžinah pa se uporablja germanij, dopiran z zlatom, bakrom, cinkom, borom ...
+Kvatni izkoristek takih detektorjev je razmeroma velik ($\eta = 0,5$ za Ge:Cu), vendar
+je lahko faktor $G \ll 1$ (npr. $G = 0,03$ za Ge:Hg). 
+
+Hitrost odziva fotoprevodnika je odvisna od časa preleta nosilcev naboja,
+ki je določen z geometrijo detektorja, in od karakterističnega časa elektronskega vezja. 
+Tipični odzivni časi, ki jih dosegajo detektorji, so okoli mikrosekunde, vendar lahko sežejo
+tudi do desetin milisekund, ali pa v izjemnih primerih do nanosekund za zelo majhne detektorje.
+S skrajšanjem rekombinacijskega časa lahko sicer skrajšamo odzivni čas detektorja, 
+vendar hkrati zmanjšamo njegovo občutljivost.
+
+\begin{remark}
+Fotoprevodni detektorji so narejeni iz zelo tankih plasti fotoprevodnika, saj močno absorbira
+svetlobo. Tako za absorpcijo $70-90\%$ svetlobe zadošča le $1-2~\si{\micro\meter}$ debela plast.
+Elektrode se pogosto prepletajo, da se zmanjša dolžina preleta $l$ in poveča ojačanje $G$. 
+\end{remark}
 
 \section{PN in PiN fotodiode}
 Polvodniški detektroji so dveh vrst: fotoprevodniki in diodni. Spektralna občutljivost
