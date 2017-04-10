@@ -512,17 +512,76 @@ svetlobo. Tako za absorpcijo $70-90\%$ svetlobe zadošča le $1-2~\si{\micro\met
 Elektrode se pogosto prepletajo, da se zmanjša dolžina preleta $l$ in poveča ojačanje $G$. 
 \end{remark}
 
-\section{PN in PiN fotodiode}
-Polvodniški detektroji so dveh vrst: fotoprevodniki in diodni. Spektralna občutljivost
+\section{PN in PIN fotodiode}
+Drugi primer detektorjev, ki temeljijo na notranjem fotoefektu, so polprevodniške diode.
+Te so danes najpogostejši in najbolj razširjen detektor svetlobe, uporabljamo jih med
+drugim v fotoaparatih in sončnih celicah. Fotodiode so sestavljene iz p- in n-dopiranega 
+polprevodnika (PN fotodiode) ali pa je med njima še plast nedopiranega (intrinzičnega) polprevodnika 
+(PIN fotodioda). Ko svetloba vpade na PN (ali PIN) stik,
+povzroči nastanek para elektron-vrzel in nosilca naboja zaradi električnega polja na stiku potujeta 
+v različnih smereh. Če je dioda v odprtem električnem krogu, se pojavi električna napetost
+in dioda deluje v t.i. fotovoltaičnem načinu. Če pa diodo priključimo v zaprt električni 
+krog, steče tok. Na diode navadno priključimo dodatno napetost v zaporni smeri,
+tako da je tok skozi diodo linearno sorazmeren z intenziteto vpadne svetlobe.
+
+Spektralni odziv fotodiod je seveda odvisen od energijske reže polprevodnika. Silicijeve
+fotodiode so tako uporabne za zaznavanje valovnih dolžin do okoli $1,1~\si{\micro\meter}$, za
+večje valovne dolžine (do $1,6~\si{\micro\meter}$) uporabljamo InGaAs. Izkoristek fotodiod
+je navadno zelo velik in presega $50~\%$. Za razliko od fotoprevodnikov fotodiode signala
+ne ojačujejo, imajo pa praviloma hitrejši odziv, tipično nanosekunde.
+
+\subsection*{Stik p-n in p-i-n}
+Stik p-n pomeni stik dveh različno dopiranih polprevodnikov. Pri tem tip $p$ označuje
+polprevodnike, dopirane s trivalentnimi akceptorskimi primesmi, ki v snovi ustvarijo vrzeli.
+Njihov energijski nivo je malo nad vrhom valenčnega pasu, zato se Fermijeva energija
+premakne proti valenčnem pasu (
+slika~\ref{11_PN1}). Po drugi strani $n$ tip označuje polprevodnike s petvalentnimi 
+donorskimi primesmi, ki v snov prinesejo dodatne elektrone. Njihov energijski nivo pa je malo 
+pod prevodnim pasom, Fermijeva energija pa je pomaknjena navzgor proti prevodnemu pasu.
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/11_PN1.pdf_tex}
+\caption{Shema energijskih nivojev v $p$ in $n$ tipu polprevodnika ter na p-n stiku, ko se
+Fermijevi energiji izenačita. Med obema polprevodnikoma se pojavi izpraznjeni sloj. }
+\label{11_PN1}
+\end{figure}
+
+Ko staknemo polprevodnik tipa $p$ in polprevodnik tipa $n$, elektroni 
+z območja z višjo koncentracijo (tip $n$) difundirajo v območje z nižjo koncentracijo
+(tip $p$), kjer se rekombinirajo z vrzelmi. 
+Ob stiku tako nastane ozek pas,  t.i. izpraznjeni sloj, kjer ni več 
+prostih nosilcev naboja. Ostanejo pa pozitivno nabiti donorski atomi na strani $n$
+in analogno negativno nabiti akceptorski atomi na strani $p$. Zato se pojavi 
+električno polje, ki kaže od $n$ proti $p$ in zaustavi rekombinacijo, saj odbija
+elektrone in vrzeli od stika. V ravnovesju se Fermijeva energija izenači, potencialni
+skok pa je približno enak $\Delta E \approx E_d-E_a$, kar je le malo manj od 
+širine reže $E_g$.
+
+\begin{definition}
+ Pokaži, da je širina izpraznjenega sloja na stiku p-n enaka 
+ \beq
+ d = \sqrt{\frac{4 \varepsilon \varepsilon_0 V_0}{e n_d}}, 
+ \eeq
+ pri čemer je ..
+\end{definition}
+
+
+
+
+PIN larger sensitive volume, faster response time. 
+
+\subsection*{Fotovoltaični način}
+
+\subsection*{Dioda v zaporni smeri reverse-biased}
+
+
+
+Spektralna občutljivost
 obojih je odvisna od velikosti energijske reže emd valenčnim in prevodnim pasom. Silicij
 z energijsko režo 1~eV je uporaben do valovne dolžine 1,2 mikron, germanij pa do 1,6 mikron.
 V vidnem in bližnjem infrardečem področju deluje še GaAs, CdS in PbS, zadnja dva le kot
-fotoprevodnika. Kot fotoprevodniki pri večjih valovnih dolžinah se uporabljajo  še PbTe
-in HgCdTe. Posebej zadni je zelo pomemben, ker ima pri pravem razmerju Hg in Cd vrh občutljivosti
-pri okoli 10 mikronov, to je ravno pri vrhu sevanja črnega telesa s temperaturo okoli 300~K. 
-Z ustreznim doziranjem pa lahko polvodniški fotoprevodniki delujejo do valovnih dolžin nekaj 100 mikronov.
-Detektorje  z majhno energijso režo je treba hladiti, navadno s tekočim dušikom, da zmanjšamo
-termično vzbujanje elektronov v prevodni pas. Pri energiji fotonov blizu energijske reže 
+fotoprevodnika. Pri energiji fotonov blizu energijske reže 
 imajo polvodniški detektorji zelo velik kvantni izkoriste, kar blizu 1.
 
 Fotodiode zaznajo le pare elektron-vrzel v območju izpraznjenega sloja p-n spoja. Električno 
