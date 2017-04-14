@@ -519,23 +519,33 @@ drugim v fotoaparatih in sončnih celicah. Fotodiode so sestavljene iz p- in n-d
 polprevodnika (PN fotodiode) ali pa je med njima še plast nedopiranega (intrinzičnega) polprevodnika 
 (PIN fotodioda). Ko svetloba vpade na PN (ali PIN) stik,
 povzroči nastanek para elektron-vrzel in nosilca naboja zaradi električnega polja na stiku potujeta 
-v različnih smereh. Če je dioda v odprtem električnem krogu, se pojavi električna napetost
-in dioda deluje v t.i. fotovoltaičnem načinu. Če pa diodo priključimo v zaprt električni 
-krog, steče tok. Na diode navadno priključimo dodatno napetost v zaporni smeri,
-tako da je tok skozi diodo linearno sorazmeren z intenziteto vpadne svetlobe.
-
-Spektralni odziv fotodiod je seveda odvisen od energijske reže polprevodnika. Silicijeve
-fotodiode so tako uporabne za zaznavanje valovnih dolžin do okoli $1,1~\si{\micro\meter}$, za
+v različnih smereh. Spektralni odziv fotodiod je seveda odvisen od energijske reže polprevodnika. 
+Silicijeve fotodiode so tako uporabne za zaznavanje valovnih dolžin do okoli $1,1~\si{\micro\meter}$, za
 večje valovne dolžine (do $1,6~\si{\micro\meter}$) uporabljamo InGaAs. Izkoristek fotodiod
 je navadno zelo velik in presega $50~\%$. Za razliko od fotoprevodnikov fotodiode signala
 ne ojačujejo, imajo pa praviloma hitrejši odziv, tipično nanosekunde.
 
+Dioda lahko deluje v različnih načinih (slika~\ref{11_PD}). 
+Lahko jo priključimo v prevodni smeri, najpogosteje jo priključimo v zaporni smeri, saj je v
+tem primeru tok skozi diodo linearno sorazmeren z intenziteto vpadne svetlobe, lahko 
+je dioda kratko sklenjena, lahko pa je dioda v odprtem električnem krogu, v t.i. fotovoltaičnem 
+načinu. V nadaljevanju bomo vse primere podrobneje spoznali.
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/11_diode.pdf_tex}
+\caption{Različne vezave fotodiode: v prevodni smeri, v zaporni smeri, kratko sklenjena in 
+v fotovoltaičnem načinu}
+\label{11_PD}
+\end{figure}
+
 \subsection*{Stik p-n in p-i-n}
-Stik p-n pomeni stik dveh različno dopiranih polprevodnikov. Pri tem tip $p$ označuje
+Fotodiode zgrajene iz stika p-n, kar pomeni stik dveh različno dopiranih polprevodnikov. 
+Pri tem tip $p$ označuje
 polprevodnike, dopirane s trivalentnimi akceptorskimi primesmi, ki v snovi ustvarijo vrzeli.
 Njihov energijski nivo je malo nad vrhom valenčnega pasu, zato se Fermijeva energija
-premakne proti valenčnem pasu (
-slika~\ref{11_PN1}). Po drugi strani $n$ tip označuje polprevodnike s petvalentnimi 
+premakne proti valenčnem pasu (slika~\ref{11_PN1}). 
+Po drugi strani $n$ tip označuje polprevodnike s petvalentnimi 
 donorskimi primesmi, ki v snov prinesejo dodatne elektrone. Njihov energijski nivo pa je malo 
 pod prevodnim pasom, Fermijeva energija pa je pomaknjena navzgor proti prevodnemu pasu.
 \begin{figure}[h]
@@ -543,7 +553,8 @@ pod prevodnim pasom, Fermijeva energija pa je pomaknjena navzgor proti prevodnem
 \def\svgwidth{140truemm} 
 \input{slike/11_PN1.pdf_tex}
 \caption{Shema energijskih nivojev v $p$ in $n$ tipu polprevodnika ter na p-n stiku, ko se
-Fermijevi energiji izenačita. Med obema polprevodnikoma se pojavi izpraznjeni sloj. }
+Fermijevi energiji izenačita. Med obema polprevodnikoma nastane izpraznjeni sloj, kar 
+povzroči nastanek električnega polja.}
 \label{11_PN1}
 \end{figure}
 
@@ -558,22 +569,14 @@ elektrone in vrzeli od stika. V ravnovesju se Fermijeva energija izenači, poten
 skok pa je približno enak $\Delta E \approx E_d-E_a$, kar je le malo manj od 
 širine reže $E_g$.
 
-\begin{definition}
- Pokaži, da je širina izpraznjenega sloja na stiku p-n enaka 
- \beq
- d = \sqrt{\frac{4 \varepsilon \varepsilon_0 V_0}{e n_d}}, 
- \eeq
- pri čemer je ..
-\end{definition}
-
 Ko na diodo priključimo napetost, se potencialna razlika med $p$ in $n$ stranjo 
-spremeni. Napetost $U$ je pozitivna, če pozitivni pol priključimo na $p$ stran, 
-negativnega pa na $n$. Takrat pravimo, da smo diodo priključili v prevodni smeri. 
+spremeni. Napetost $U$ je pozitivna,Takrat pravimo, da smo diodo priključili v prevodni smeri. 
 V nasprotnem primeru, ko torej pozitivni pol priključimo na $n$ in negativni na $p$, 
 pa pravimo, da smo priključili napetost v zaporni smeri. 
 
-Naj bo dioda priključena v prevodni smeri. S priključeno napetostjo spremenimo
-potencialno razliko med $p$ in $n$ stranjo in sicer jo 
+Naj bo dioda priključena v prevodni smeri. To pomeni, da smo na $p$ stran diode priključili
+pozitivni pol, na $n$ stran pa negativnega. S priključeno napetostjo spremenimo
+potencialno razliko med $p$ in $n$ stranjo in sicer skok napetosti zmanjšamo. 
 
 
 PIN larger sensitive volume, faster response time. 
