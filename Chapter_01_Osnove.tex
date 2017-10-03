@@ -17,7 +17,7 @@ polja\index{Magnetno polje!gostota} $\mathbf{B}(\mathbf{r},t)$.
 Vsa ta polja povezujejo \index{Maxwellove enačbe}Maxwellove enačbe\footnote{
 Škotski fizik James Clerk Maxwell, 1831--1879.}
 \boxeq{eq:Maxwell1}{
-\nabla\times\mathbf{H} & =\frac{\partial\mathbf{D}}{\partial t}+\mathbf{j_e}\\
+\nabla\times\mathbf{H} & =\frac{\partial\mathbf{D}}{\partial t}+\mathbf{j}_e\\
 \nabla\times\mathbf{E} & =-\frac{\partial\mathbf{B}}{\partial t}\label{eq:Maxwell2}\\
 \nabla\cdot\mathbf{D} & =\mbox{\ensuremath{\rho}}_{e}\label{eq:Maxwell3}\\
 \nabla\cdot\mathbf{B} & =0.\label{eq:Maxwell4}
@@ -45,8 +45,8 @@ pa se zvezi poenostavita v
 \mathbf{M}=\chi_m \mathbf{H} = (\mu-1)\mathbf{H}
 \label{eq:PM}.
 \eeq
-Vpeljali smo \index{Električna susceptibilnost} električno ($\chi_e$) in 
-\index{Magnetna susceptibilnost}magnetno ($\chi_m$) susceptibilnost ter
+Vpeljali smo \index{Susceptibilnost!električna} električno ($\chi_e$) in 
+\index{Susceptibilnost!magnetna}magnetno ($\chi_m$) susceptibilnost ter
 \index{Dielektričnost}dielektričnost $\epsilon$ in
 \index{Magnetna permeabilnost}magnetno permeabilnost $\mu$. Ko združimo gornje
 enačbe, lahko zapišemo dve konstitutivni
@@ -72,13 +72,13 @@ B_{1n} &=  B_{2n}\\
 E_{1t} &=  E_{2t}\label{eq:robni-pogoji4}\\
 H_{1t} &=  H_{2t}\label{eq:robni-pogoji5}.
 }
-Pri tem smo privzeli, da na meji med dielektrikoma ni površinskih
+Privzeli smo, da na meji med dielektrikoma ni površinskih
 tokov ali nabojev, sicer bi morali robna pogoja za $D_n$ in $H_t$
 ustrezno popraviti. Na meji dielektrika z idealnim prevodnikom (kovino,
 zrcalom) so robni pogoji drugačni. Za magnetno polje jih ne moremo
 preprosto zapisati, za električno polje pa velja, da mora biti tangentna
-komponenta jakosti električnega polja enaka nič. Posledica tega robnega
-pogoja je, da se pri pravokotnem vpadu valovanja na zrcalo faza valovanja
+komponenta jakosti električnega polja enaka nič. Posledica tega 
+pogoja je, da se pri pravokotnem vpadu na zrcalo faza valovanja
 spremeni za $\pi$. 
 
 \begin{figure}[h]
@@ -88,7 +88,7 @@ spremeni za $\pi$.
 \caption{Na meji med dvema dielektrikoma brez površinskih tokov
 in nabojev so tangentna
 komponenta jakosti električnega in magnetnega polja ter normalna komponenta
-gostote magnetnega in električnega polja zvezne količine.}
+gostote električnega in magnetnega polja zvezne količine.}
 \label{fig:Robni-pogoji}
 \end{figure}
 
@@ -103,12 +103,13 @@ enačbo\index{Valovna enačba} za jakost električnega ali magnetnega polja
 \quad \mathrm{in} \quad
 \nabla^{2}\mathbf{H}-\frac{1}{c^{2}}\frac{\partial^{2}\mathbf{H}}{\partial t^{2}} = 0.
 }
-Pri tem je hitrost valovanja v snovi enaka 
+Pri tem je hitrost valovanja\index{Hitrost valovanja} v snovi enaka 
 \beq
 c=\frac{1}{\sqrt{\epsilon\epsilon_{0}\mu\mu_{0}}}=\frac{c_{0}}{n}.
 \eeq
 Magnetne in dielektrične lastnosti snovi smo pospravili
-v lomni količnik\index{Lomni količnik} 
+v lomni količnik\index{Lomni količnik}, ki pove, kolikokrat je hitrost svetlobe v snove manjša
+od hitrosti svetlobe v praznem prostoru.
 \beq
 n=\frac{c_{0}}{c}=\sqrt{\epsilon\mu}.
 \eeq
@@ -137,14 +138,15 @@ Iz Maxwellovih enačb izpelji kontinuitetno enačbo v odsotnosti električnih to
 -\nabla\cdot\mathbf{\mathbf{S}}=\frac{\partial}{\partial t}\left(\frac{1}{2}\epsilon_{0}\mathbf{E}^{2}+
 \frac{1}{2}\mu_{0}\mathbf{H}^{2}\right)+\mathbf{E}\cdot\frac{\partial\mathbf{P}}{\partial t}+
 \mu_{0}\mathbf{H}\cdot\frac{\partial\mathbf{M}}{\partial t}.
+\label{eq:PoyntingTh}
 \eeq
 Pomagaj si z zvezo $\nabla\cdot(\mathbf{E}\times\mathbf{H})=(\nabla\times\mathbf{E})\cdot\mathbf{H}-
 (\nabla\times\mathbf{H})\cdot\mathbf{E}$.
 \end{definition}
 
 \index{Poyntingov teorem}Opazimo, da predstavlja Poyntingov teorem
-izrek o ohranitvi energije. Prvi in drugi člen na desni strani gornje
-enačbe opišeta gostoto energije, shranjene v električnem in magnetnem
+izrek o ohranitvi energije. Prvi in drugi člen na desni strani Poyntingovega 
+teorema (enačba~\ref{eq:PoyntingTh}) opišeta gostoto energije, shranjene v električnem in magnetnem
 polju, medtem ko tretji in četrti člen opišeta energijo,
 ki je shranjena v snovi (električnih in magnetnih dipolih). Za valovanje
 v homogeni izotropni snovi tako velja
@@ -191,8 +193,7 @@ V homogenem in izotropnem sredstvu ju zapišemo kot
 \nabla^{2}\mathbf{E}(\mathbf{r})+k^{2}\mathbf{E}(\mathbf{r}) &=0\label{eq:Helmholtz}\\
 \nabla^{2}\mathbf{H}(\mathbf{r})+k^{2}\mathbf{H}(\mathbf{r}) &=0,
 \end{align}
-kjer je $k=nk_{0}=n\omega/c_{0}$ velikost valovnega vektorja oziroma
-valovno število. 
+kjer je $k=nk_{0}=n\omega/c_{0}$ valovno število\index{Valovno število}. 
 
 Vpeljimo še kompleksni Poyntingov vektor\index{Poyntingov vektor}
 \beq
@@ -226,7 +227,7 @@ in podobno za magnetno polje
 \mathbf{H}_{0}e^{i\mathbf{k}\cdot\mathbf{r}-i \omega t},
 \end{equation}
 pri čemer sta vektorja $\mathbf{E}_{0}$ ter $\mathbf{H}_{0}$ od kraja in časa neodvisna. 
-Velikost valovnega vektorja\index{Valovni vektor} $\mathbf{k}$ je $k=nk_{0},$ pri
+Velikost valovnega vektorja\index{Valovni vektor} $\mathbf{k}$ je valovno število $k=nk_{0},$ pri
 čemer je $n$ lomni količnik izotropne in homogene snovi. 
 
 Vektorja jakosti električnega in magnetnega polja zadostujeta
@@ -263,7 +264,7 @@ j=\Re\left(\frac{1}{4}E_{0}H_{0}^{*}+\frac{1}{4}E_{0}^*H_{0}\right)=
 Gostota svetlobnega toka (intenziteta svetlobe) je torej sorazmerna
 s kvadratom amplitude jakosti električnega polja. Poglejmo nekaj primerov.
 Gostoti toka $j=1~\si{kW/m^{2}}$
-(približna gostota svetlobnega toka s Sonca) tako v praznem prostoru ustreza 
+(približna gostota svetlobnega toka s Sonca na Zemljinem površju) tako v praznem prostoru ustreza 
 jakost električnega polja $E_{0}=868~\si{V/m}$, gostoti $j=1~\si{W/\micro m^{2}}$ 
 (intenziteta močno fokusiranega laserskega žarka) pa $E_{0}=27~\si{MV/m}$. 
 
@@ -295,24 +296,26 @@ vala.
 \section{Polarizacija EM valovanja}
 
 Jakost električnega polja elektromagnetnega valovanja je v izotropnem
-sredstvu pravokotna na smer valovnega vektorja\footnote{V splošnem je
-jakost električnega polja pravokotna na smer Poyntingovega vektorja ($\mathbf{E}\perp\mathbf{S}$) in 
-gostota električnega polja pravokotna na smer valovnega vektorja ($\mathbf{D}\perp\mathbf{k}$). 
-V anizotropnih sredstvih velja $\mathbf k\nparallel\mathbf S$.}. Vektor $\mathbf{E}$
+sredstvu pravokotna na smer valovnega vektorja\footnote{V splošnem velja $\mathbf{E}\perp\mathbf{S}$ 
+(enačba~\ref{eq:Poyntingov-vektor}) in $\mathbf{D}\perp\mathbf{k}$ (naloga~\ref{naloga-TEM-ortogonalnost}). 
+To velja tudi v anizotropnih sredstvih, vendar je tam $\mathbf{E} \nparallel \mathbf{D}$ in 
+$\mathbf k\nparallel\mathbf S$.}. Vektor $\mathbf{E}$
 torej leži v ravnini, pravokotni na smer valovnega vektorja, njegovo
 smer pa opiše polarizacija\index{Polarizacija valovanja}. 
 
 V splošnem je ravni val eliptično polariziran. Takrat vektor $\mathbf E$
 v ravnini, pravokotni na valovni vektor, oriše elipso. Obe komponenti vektorja 
 $\mathbf{E}(\mathbf{r})$ nihata sinusno z enako frekvenco, lahko pa se razlikujeta
-v amplitudi in fazi. Kadar je elipsa izrojena v daljico, govorimo o linearno polariziranem valovanju,
-kadar pa je krog, govorimo o cirkularno polariziranem valu. Poljubno polarizacijo
-lahko vedno zapišemo kot vsoto dveh linearno ali dveh cirkularno polariziranih
+v amplitudi in fazi. Kadar je elipsa izrojena v daljico, govorimo o linearno polariziranem 
+valovanju\index{Polarizacija valovanja!linearna},
+kadar pa je krog, govorimo o cirkularno polariziranem valu\index{Polarizacija valovanja!cirkularna}. 
+Poljubno polarizacijo lahko vedno zapišemo kot vsoto dveh linearno ali dveh cirkularno polariziranih
 valovanj. 
 
 Polarizacijo valovanja lahko zapišemo s kompleksnim \index{Jonesov vektor}Jonesovim 
 vektorjem\footnote{Ameriški fizik Robert Clark Jones, 1916--2004.}
-$\mathbf{J}$. Za monokromatski ravni val, ki se širi v smeri $z$, je 
+$\mathbf{J}$. Za monokromatski ravni val, ki se širi v smeri $z$ in ima komponenti $E_x$ in $E_y$ je
+Jonesov vektor
 \beq
 \mathbf{J}=\frac{1}{|E_{0}|}\left[\begin{array}{c}
 E_{x}\\
@@ -331,26 +334,25 @@ levo cirkularno polarizirano pa z $\mathbf{J}=\left(1,i\right)/\sqrt{2}$.
 V našem zapisu je desno polariziran val tisti val, pri katerem se električna
 poljska jakost na danem mestu vrti v desno, če gledamo proti izvoru valovanja. 
 
-
 Zapis z Jonesovim vektorjem je prikladen, saj omogoča preprost izračun
 prehoda ravnega vala skozi optične elemente, ki spreminjajo polarizacijo,
 a ohranjajo obliko ravnega vala. V splošnem se pri prehodu skozi
 sredstvo spremeni kompleksna amplituda $\mathbf{E}_1 = (E_{1x}, E_{1y})$
 \begin{align}
-E_{2x} & =T_{11}E_{1x}+T_{12}E_{1y}\\
-E_{2y} & =T_{21}E_{1x}+T_{22}E_{1y},
+E_{2x} & =A_{11}E_{1x}+A_{12}E_{1y}\\
+E_{2y} & =A_{21}E_{1x}+A_{22}E_{1y},
 \end{align}
-pri čemer so komponente $T_{ij}$ odvisne od lastnosti sredstva. Enačbi zapišemo 
+pri čemer so komponente $A_{ij}$ odvisne od lastnosti sredstva. Enačbi zapišemo 
 v matrični obliki
 \beq
-\mathbf{E}_{2}=T\cdot\mathbf{E}_{1},
+\mathbf{E}_{2}=A\cdot\mathbf{E}_{1},
 \eeq
 kjer sta $\mathbf{E}_{1}$ in $\mathbf{E}_{2}$
-vstopni in izstopni val, $T$ pa je \index{Jonesova matrika}Jonesova
+vstopni in izstopni val, $A$ pa je \index{Jonesova matrika}Jonesova
 matrika. Jonesova matrika za prehod skozi linearni polarizator, ki
 polarizira v smeri $x$, je
 \beq
-T=\left[\begin{array}{cc}
+A=\left[\begin{array}{cc}
 1 & 0\\
 0 & 0
 \end{array}\right].
@@ -360,30 +362,30 @@ Jonesova matrika za  ploščico $\lambda/2$\index{Ploščica $\lambda/2$},
 ki spremeni desno cirkularno polariziran val v levo polariziran in obratno,
 je
 \beq
-T=\left[\begin{array}{cc}
+A=\left[\begin{array}{cc}
 1 & 0\\
 0 & -1
 \end{array}\right].
 \eeq
 Jonesova matrika za  ploščico $\lambda/4$\index{Ploščica $\lambda/4$} pa je 
 \beq
-T=\left[\begin{array}{cc}
+A=\left[\begin{array}{cc}
 1 & 0\\
 0 & i
 \end{array}\right].
 \eeq
-Ta optični element linearno polarizirano valovanje oblike $\frac{E_{0}}{\sqrt{2}}(1,1)$
+Ta optični element linearno polarizirano valovanje z Jonesovim vektorjem $(1,1)/\sqrt{2}$
 spremeni v levo cirkularno polarizirano valovanje, cirkularno polarizirano
 valovanje pa nazaj v linearno. 
 
 \begin{definition}
 Pokaži, da je Jonesova matrika za polarizator,
 ki prepušča polarizacijo pod kotom $\vartheta$ glede na os $x$, podana s spodnjo matriko. 
-Namig: matriko $T'$, ki predstavlja polarizator v smeri $x$, zapiši v zavrtenem
-koordinatnem sistemu $T=R(\vartheta) \cdot {T'}\cdot R(\vartheta)^\textrm{T}$, 
+Namig: matriko $A'$, ki predstavlja polarizator v smeri $x$, zapiši v zavrtenem
+koordinatnem sistemu $A=R(\vartheta) \cdot {A'}\cdot R(\vartheta)^\textrm{A}$, 
 kjer je $R(\vartheta)$ rotacijska matrika.
 \beq
-T=\left[\begin{array}{cc}
+A=\left[\begin{array}{cc}
 \cos^{2}\vartheta & \sin\vartheta\cos\vartheta\\
 \sin\vartheta\cos\vartheta & \sin^{2}\vartheta
 \end{array}\right].
@@ -394,52 +396,37 @@ T=\left[\begin{array}{cc}
 \section{Lom in odboj EM valovanja}
 
 Na ravni meji med dvema izotropnima dielektrikoma se del svetlobe
-odbije po odbojnem zakonu, del pa lomi po lomnem zakonu\index{Lomni zakon}
-\boxeq{eq:lomni_zakon}{
+odbije po odbojnem zakonu, ki pravi, da je odbojni kot enak vpadnemu, 
+del pa lomi po lomnem zakonu\index{Lomni zakon} \boxeq{eq:lomni_zakon}{
 n_{1}\sin\vartheta_{1}=n_{2}\sin\vartheta_{2}.
 }
 S kotoma $\vartheta_{1}$in $\vartheta_{2}$ smo označili vpadni in lomni
 kot, $n_{1}$in $n_{2}$ pa sta lomna količnika prve in druge snovi.
-Poglejmo, kaj se pri lomu in odboju zgodi s polarizacijo valovanja.
-Os $x$ naj bo pravokotna na vpadno ravnino (slika~\ref{fig:Lom}). 
-Valovanje, polarizirano v tej smeri, je transverzalno električno
-(TE) valovanje\index{Polarizacija valovanja!TE}. 
-Takrat je električna poljska jakost vzporedna mejni ravnini. 
-Kadar leži v mejni ravnini jakost magnetnega polja, govorimo o transverzalnem
-magnetnem valovanju (TM)\index{Polarizacija valovanja!TM}.\\
+Poglejmo, kaj se pri lomu in odboju zgodi s polarizacijo valovanja (slika~\ref{fig:Lom}).
+Dogovorimo se, da valovanje, pri katerem je električna poljska jakost vzporedna z mejno 
+ravnino in pravokotna na vpadno ravnino, imenujemo transverzalno električno
+(TE) valovanje\index{Polarizacija valovanja!TE}. Kadar leži v mejni ravnini 
+jakost magnetnega polja, govorimo o transverzalnem magnetnem valovanju 
+(TM)\index{Polarizacija valovanja!TM}.\\
 
 \begin{figure}[h]
 \centering \def\svgwidth{120truemm} 
   \input{slike/01_lom.pdf_tex}
-\caption{Lom elektromagnetnega valovanja. Levo: transverzalno električno (TE) valovanje. 
-Desno: transverzalno magnetno (TM) valovanje. Os $x$ je pravokotna na vpadno ravnino 
-in kaže iz lista.}
+\caption{Lom elektromagnetnega valovanja na meji dveh izotropnih dielektrikov. 
+Levo: transverzalno električno (TE) valovanje. Desno: transverzalno magnetno (TM) valovanje. 
+Os $x$ je pravokotna na vpadno ravnino in kaže iz lista.}
 \label{fig:Lom}
 \end{figure}
 
-Jonesovi matriki za prepustnost $t$ in odbojnost $r$ 
-na plasti med dvema dielektrikoma zapišemo kot 
-\beq
- t=\left[\begin{array}{cc}
-t_{x} & 0\\
-0 & t_{y}
-\end{array}\right]
- \qquad \textrm{in} \qquad 
- r=\left[\begin{array}{cc}
-r_{x} & 0\\
-0 & r_{y}
-\end{array}\right].
-\eeq
-
-Potem je 
+Z $E_1$ označimo jakost električnega polja vpadnega valovanja, z $E_2$ prepuščenega in z $E_3$ odbitega.
+Nato vpeljemo prepustnost $t$ in odbojnost $r$, ki pa sta odvisni od vpadne polarizacije. Zapišemo
 \begin{align}
 E_{2x} & =t_{x}E_{1x} \qquad \qquad E_{3x} =r_{x}E_{1x}\\
-E_{2y} & =t_{y}E_{1y} \qquad \qquad E_{3y}=r_{y}E_{1y},
+E_{2y} & =t_{y}E_{1y} \qquad \qquad E_{3y}=r_{y}E_{1y}.
 \end{align}
-pri čemer smo z $\mathbf{E}_{2}$ označili prepuščeni val, z $\mathbf{E}_{3}$ pa odbitega.
+
 Iz robnih pogojev (enačbe \ref{eq:robni-pogoji}--\ref{eq:robni-pogoji5}) 
-izračunamo koeficiente matrik\index{Jonesova matrika}
-$r$ in $t$ s \index{Fresnelove enačbe}Fresnelovimi 
+izračunamo koeficiente $r$ in $t$ s \index{Fresnelove enačbe}Fresnelovimi 
 enačbami\footnote{Francoski fizik Augustin-Jean Fresnel, 1788--1827.}:
 \beq
 r_{x}=\frac{n_{1}\cos\vartheta_{1}-n_{2}\cos\vartheta_{2}}{n_{1}\cos\vartheta_{1}+n_{2}\cos\vartheta_{2}},
@@ -447,7 +434,7 @@ r_{x}=\frac{n_{1}\cos\vartheta_{1}-n_{2}\cos\vartheta_{2}}{n_{1}\cos\vartheta_{1
 \eeq
 in
 \beq
-r_{y}=\frac{n_{2}\cos\vartheta_{1}-n_{1}\cos\vartheta_{2}}{n_{1}\cos\vartheta_{2}+n_{2}\cos\vartheta_{1}},
+r_{y}=\frac{n_{1}\cos\vartheta_{2}-n_{2}\cos\vartheta_{1}}{n_{2}\cos\vartheta_{1}+n_{1}\cos\vartheta_{2}},
 \qquad t_{y}=(1+r_{y})\frac{\cos\vartheta_{1}}{\cos\vartheta_{2}}=\frac{2n_{1}\cos\vartheta_{1}}
 {n_{1}\cos\vartheta_{2}+n_{2}\cos\vartheta_{1}}.
 \eeq
@@ -464,11 +451,7 @@ amplituda jakosti električnega polja. Razmerje med intenziteto odbite
 in vpadne svetlobe $\mathcal{R}$ oziroma razmerje med intenziteto prepuščene in vpadne svetlobe
 $\mathcal{T}$ izračunamo kot 
 \beq
-\mathcal{R}=\left|r\right|^{2}
-\eeq
-in
-\beq
-\mathcal{T}=1-\mathcal{R}.
+\mathcal{R}=\left|r\right|^{2} \qquad \mathrm{in} \qquad \mathcal{T}=1-\mathcal{R}.
 \eeq
 Slednja enačba sledi iz ohranitve energije. V splošnem $\mathcal{T}$
 ni enak $\left|t\right|^{2},$ saj energijski tok potuje po različnih
@@ -476,6 +459,8 @@ snoveh in v različnih smereh. Velja zveza
 \beq
 \mathcal{T}=\frac{n_{2}\cos\vartheta_{2}}{n_{1}\cos\vartheta_{1}}\left|t\right|^{2}.
 \eeq
+
+
 
 \begin{figure}[h]
 \centering
