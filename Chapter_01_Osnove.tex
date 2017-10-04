@@ -460,8 +460,7 @@ snoveh in v različnih smereh. Velja zveza
 \eeq
 Zanimiva je odvisnost odbojnosti od vpadnega kota. Pri nekem kotu, 
 imenujemo ga \index{Brewsterjev kot}Brewsterjev kot\footnote{Škotski fizik in znanstvenik Sir David Brewster, 1781--1868.}, 
-odbojnost za TM polarizacijo enaka nič in vsa vpadla
-svetloba je prepuščena. Brewsterjeva
+odbojnost za TM polarizirano valovanje enaka nič. Brewsterjeva
 okna (steklene ploščice, postavljene pod Brewsterjevim kotom) uporabljamo
 v resonatorjih laserjev za povečanje izgub TE in zmanjšanje izgub
 TM polariziranega valovanja.
@@ -501,28 +500,28 @@ antirefleksno plastjo.
 
 \section{Uklon svetlobe}
 \index{Uklon}
-Ko svetloba vpade na oviro, za oviro nastane senca. Nastala senca ni ostra, ampak
+Kadar svetloba vpade na oviro, za oviro nastane senca. Nastala senca ni ostra, ampak
 ima zaradi uklona zabrisane robove. Obravnave 
-uklona svetlobe na odprtinah (zaslonkah) se lotimo z uporabo
-skalarnega približka teorije elektromagnetnega polja. To pomeni, da vpliv 
-polarizacije zanemarimo. Vpliv polarizacije je pomemben zgolj pri zelo majhnih odprtinah, 
-torej kadar je $\lambda\sim a$, kjer je $a$ velikost
-odprtine. Treba pa je povedati, da so tudi v tem primeru uklonske slike za 
-različne polarizacije podobne, razlikujejo pa se po intenziteti prepuščene svetlobe.
+uklona svetlobe na odprtinah ali zaslonkah se lotimo z uporabo
+skalarnega približka teorije elektromagnetnega polja. To pomeni, da vpliva 
+polarizacije ne upoštevamo. Ta je pomemben zgolj pri zelo majhnih odprtinah, 
+kjer je velikost odprtine po velikosti podobna valovni dolžini svetlobe $a \sim \lambda$. 
+Vendar so tudi v tem primeru uklonske slike za različne polarizacije podobne, 
+razlikujejo pa se po intenziteti prepuščene svetlobe.
 
 \begin{remark}{{\bf Žičnati polarizatorji}}\\ \\
 Primer, kjer skalarni približek ne da pravih rezultatov, je uklon na mrežici, narejeni 
-iz zelo tankih prevodnik žic s periodo mrežice $d\ll \lambda$. Takšna mrežica 
-deluje kot polarizator za valovanje s polarizacijo, ki je pravokotno na žice (TE polarizacija). 
-Elektromagnetni val s TM polarizacijo pri prečkanju inducira tok v žicah, medtem
-ko je za TE polarizacijo inducirani tok bistveno manjši, saj je smer toka omejena
-vzdolž žice. Posledično je prepustnost za TE val velika, medtem ko se TM val delno
-absorbira in odbije. Takšni polarizatorji se večinoma uporabljajo v mikrovalovni tehniki, 
+iz zelo tankih prevodnih žic. Takšna mrežica deluje kot polarizator za vpadno elektromagnetno valovanje.
+Elektromagnetni val s polarizacijo, ki je vzporedna žicam, pri prečkanju v žicah inducira tok
+in val se delno odbije in delno absorbira. Za valovanje, ki je polarizirano pravokotno 
+na žice, je ta inducirani tok bistveno manjši, saj je smer toka omejena
+vzdolž žice. Posledično je prepustnost velika le za eno polarizacijo. 
+Takšni polarizatorji se večinoma uporabljajo v mikrovalovni tehniki, 
 vendar se v zadnjih letih z razvojem in izboljšavo litografskih postopkov
 vse pogosteje uporabljajo tudi v bližnjem infrardečem področju svetlobe.
 \end{remark}
 
-Pri velikostih odprtin $a\gg\lambda$ torej uporabimo skalarno valovno enačbo 
+Pri velikostih odprtin $a\gg\lambda$ torej uporabimo skalarno obliko valovne enačbe 
 (enačba~\ref{eq:valovna-skalarna})
 \beq
 \nabla^2 E - \frac{1}{c^2}\frac{\partial^2 E}{\partial t^2} = 0.
@@ -544,22 +543,14 @@ do ploskve $dS$. Kirchhoffov integral velja splošno za katerokoli harmonično
 funkcijo, ki reši valovno enačbo (enačba~\ref{eq:skalarna-valovna-enačba}), ne samo $E$, in torej
 ni vezan na obravnavo uklona svetlobe. 
 
-Kot prvi primer vzemimo točkast izvor v točki $S$. Svetloba iz njega vpada na zaslon, 
-v katerem je odprtina poljubne oblike. Izračunajmo skalarno polje v točki $P$ na drugi 
+Vzemimo točkast izvor v točki $S$. Svetloba iz njega vpada na zaslon, 
+z odprtino poljubne oblike. Izračunajmo skalarno polje v točki $P$ na drugi 
 strani zaslona. Vpadno svetlobo zapišemo kot
 \beq
 \label{eq:polje-krogelni-val}
 E = A \frac{e^{ikr'}}{r'},
 \eeq
 kjer je $r'$ razdalja od izvora do točke na zaslonu, A pa zaradi ohranitve energije konstanta.
-
-\begin{figure}[h]
-\centering \def\svgwidth{85truemm} 
-  \input{slike/01_uklonFK.pdf_tex}
-\caption{Integracijska ploskev v Kirchhoffovem integralu zajema odprtino in objema točko $P$.}
-\label{fig:UklonFK}
-\end{figure}
-
 Integracijska ploskev je lahko poljubna sklenjena ploskev, ki objema točko $P$. Izberemo tako, ki
 zajema odprtino na zaslonu, poleg tega pa naredimo še dva približka:\\
 \begin{enumerate}
@@ -569,10 +560,17 @@ pa sta njuna prispevka zanemarljivo majhna.\\
 \end{enumerate}
 Gornja približka sta precej groba, vendar se izkaže, da se kljub temu
 dobro ujemata z eksperimentalno določeno uklonsko sliko, s čimer 
-upravičimo njuno uporabo pri izračunu uklonske slike.
+upravičimo njuno uporabo.
+
+\begin{figure}[]
+\centering \def\svgwidth{85truemm} 
+  \input{slike/01_uklonFK.pdf_tex}
+\caption{Integracijska ploskev v Kirchhoffovem integralu zajema odprtino in objema točko $P$.}
+\label{fig:UklonFK}
+\end{figure}
 
 Kirchhoffov integral za primer točkastega izvora svetlobe se potem zapiše kot integral, pri čemer
-integriramo po odprtini
+integriramo zgolj po odprtini
 \beq
 E_P = -\frac{ik A e^{-i\omega t}}{4\pi}\int\frac{e^{ik(r+r')}}{rr'}\left[\cos(\mathbf{n},
 \mathbf{r})-\cos(\mathbf{n},\mathbf{r'})\right] dS.
@@ -633,33 +631,34 @@ pogosto poslužujemo dveh približkov: Fraunhoferjevega\footnote{Nemški fizik
 Joseph von Fraunhofer, 1787--1826.} in Fresnelovega\index{Fresnelov uklon}. 
 Fraunhoferjeva uklonska slika\index{Fraunhoferjev uklon} velja za daljno polje, kadar lahko 
 vpadni in uklonjeni val zapišemo kot ravna valova. Bolj zapleteno Fresnelovo uklonsko sliko pa moramo
-uporabiti, kadar obravnavamo primer bližnjega polja. 
+uporabiti, kadar obravnavamo primer bližnjega polja in ukrivljene valovne fronte.
 \begin{figure}[h]
 \centering \def\svgwidth{90truemm} 
-  \input{slike/01_uklonFF.pdf_tex}
+  \input{slike/01_uklonFF2.pdf_tex}
 \caption{V Fraunhoferjevem približku valovanji obravnavamo kot ravna valova 
-(levo). Fresnelov približek moramo uporabiti za obravnavno uklona v primeru bližnjega polja (desno).}
+in dobimo znano uklonsko sliko (levo). Fresnelov približek moramo uporabiti za obravnavno uklona v 
+primeru bližnjega polja (desno).}
 \label{fig:UklonFF}
 \end{figure}
 
-Mejo med daljnim in bližnjim poljem kvalitativno določa Fresnelovo število\index{Fresnelovo število}
+Mejo med daljnim in bližnjim poljem kvalitativno določa Fresnelovo 
+število\index{Fresnelovo število}
 \beq
 F= \frac{a^2}{L\lambda}.
 \eeq 
 Pri tem je $a$ karakteristična dimenzija odprtine, $L$ tipična oddaljenost od odprtine ter
-$\lambda$ valovna dolžina. 
-
-V grobem velja, da za oddaljenosti $L$ od odprtine, za
-katere velja $F<1$, polje obravnavamo kot daljno polje, medtem ko $F>1$ pove, da 
-moramo uklon obravnavati v Fresnelovem približku ali celo v polni obliki. 
+$\lambda$ valovna dolžina. V grobem velja, da lahko Fraunhoferjev približek uporabimo, kadar je $F<1$ in je odstopanje
+faze od ravnega vala znotraj odprtine majhno. Sicer moramo uklon obravnavati v Fresnelovem 
+približku ali celo v polni obliki. 
 
 Zapišimo uklonske integrale za oba približka. Izhajajmo iz Fresnel-Kirchhoffovega integrala
 za točkast izvor
 (enačba~\ref{eq:Fresnel-Kirchoffov-integral}) in zapišimo razdaljo $r$ s koordinatama na zaslonu $x', y'$ ter
-lego točke $P$ s koordinatami $x,y,z$ (slika \ref{fig:Uklon-koordinate}).
+lego točke $P$ s koordinatami $x,y,z$ (slika \ref{fig:Uklon-koordinate}). Privzamemo,
+da je oddaljenost do zaslona bistveno večja od prečnih dimenzij. 
 
 \begin{figure}[h]
-\centering \def\svgwidth{95truemm} 
+\centering \def\svgwidth{105truemm} 
   \input{slike/01_uklon_koordinate.pdf_tex}
 \caption{K izračunu Fraunhoferjevega in Fresnelovega uklona. Zaslon, kjer opazujemo uklonsko sliko,
 je od odprtine oddaljen za $z$.}
@@ -670,22 +669,23 @@ Zapišemo
 \beq
 r = \sqrt{(x-x')^2+(y-y')^2 + z^2}
 \eeq
-in privzamemo,  da je $z$ razmeroma velik v primerjavi s prečnima razlikama. Potem lahko $r$ razvijemo
+in razvijemo
 \beq
 r \approx z + \frac{(x-x')^2}{2z} +\frac{(y-y')^2}{2z}.
 \eeq
+
 V Fraunhoferjevem približku zadošča uporaba le linearnih členov v gornjem izrazu in za Fraunhoferjev
 uklonski integral dobimo
 \beq
 \label{eq:FraunhoferApprox}
-E_P =  -\frac{i}{z\lambda} \int \int E_S e^{-ik (xx'+yy')/z} dx' dy',
+E_P =  \frac{1}{i\lambda z} e^{i k (z + (x^2+y^2) /2z)}\int \int E_S e^{-ik (xx'+yy')/z} dx' dy',
 \eeq
 kar ni nič drugega kot Fouriereva transformacija polja $E_S$.
 
 V Fresnelovem približku upoštevamo tudi kvadratne člene v razvoju in dobimo
 \beq
 \label{eq:FresnelApprox}
-E_P =  -\frac{i}{z\lambda} \int \int E_S e^{-ik ((x-x')^2+(y-y')^2)/2z} dx' dy'.
+E_P =  \frac{1}{i \lambda z } e^{i k z}\int \int E_S e^{-ik ((x-x')^2+(y-y')^2)/2z} dx' dy'.
 \eeq
 
 \begin{definition}
@@ -705,7 +705,7 @@ valovanja neodvisna od njegove smeri. V splošnem so snovi anizotropne,
 dielektričnost\index{Dielektričnost} je tenzor, hitrost potovanja svetlobe skozi snov pa
 je odvisna od smeri razširjanja in od polarizacije valovanja. 
 
-Gostoto električnega polja v anizotropni snovi zapišemo kot 
+Gostoto električnega polja~\index{Električno polje!gostota} v anizotropni snovi zapišemo kot 
 \beq
 \mathbf{D}=\epsilon_{0}\underline{\epsilon} \cdot\mathbf{E} = 
 \epsilon_{0}
@@ -716,10 +716,10 @@ Gostoto električnega polja v anizotropni snovi zapišemo kot
 \end{array}\right]\mathbf{E},
 \label{eq:gostota-elektricnega-polja-tenzor}
 \eeq
-kjer je $\epsilon_{ij}$ tenzor drugega reda in ima v splošnem devet komponent.
+kjer je $\underline{\epsilon}$ tenzor drugega reda in ima v splošnem devet komponent.
 V dielektričnih snoveh, v katerih ne pride do optične aktivnosti ali absorpcije, je tenzor
 realen in simetričen $\epsilon_{ij}=\epsilon_{ji}^*$. Tak tenzor lahko vedno
-diagonaliziramo, torej poiščemo koordinatni sistem, v katerem je tenzor $\underline{\epsilon}$
+diagonaliziramo, torej poiščemo koordinatni sistem, v katerem je 
 diagonalen. V takem koordinatnem sistemu velja 
 \beq
 \mathbf{D} = \epsilon_{0}
@@ -740,7 +740,7 @@ in gostota električnega polja vzporedni, lastne vrednosti
 pa ustrezajo trem lomnim količnikom\index{Lomni količnik} $\epsilon_{i}=\sqrt{n_{i}}$. Kristale,
 za katere so vse tri vrednosti $n_i$ različne, imenujemo optično dvoosni kristali, 
 medtem ko sta v optično enoosnih kristalih dve lastni vrednosti enaki $n_{1}=n_{2}$. 
-Če so enake vse tri vrednosti, je snov izotropna.
+Če so enake vse tri lastne vrednosti, je snov izotropna.
 
 \subsection*{Optična indikatrisa}
 Poglejmo, kako se po anizotropnih snoveh širi valovanje v odvisnosti
