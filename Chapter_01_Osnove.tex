@@ -303,7 +303,7 @@ $\mathbf k\nparallel\mathbf S$.}. Vektor $\mathbf{E}$
 torej leži v ravnini, pravokotni na smer valovnega vektorja, njegovo
 smer pa opiše polarizacija\index{Polarizacija valovanja}. 
 
-V splošnem je ravni val eliptično polariziran. Takrat vektor $\mathbf E$
+V splošnem je ravni val eliptično polariziran\index{Polarizacija!eliptična}. Takrat vektor $\mathbf E$
 v ravnini, pravokotni na valovni vektor, oriše elipso. Obe komponenti vektorja 
 $\mathbf{E}(\mathbf{r})$ nihata sinusno z enako frekvenco, lahko pa se razlikujeta
 v amplitudi in fazi. Kadar je elipsa izrojena v daljico, govorimo o linearno polariziranem 
@@ -692,7 +692,7 @@ E_P =  \frac{1}{i \lambda z } e^{i k z}\int \int E_S e^{-ik ((x-x')^2+(y-y')^2)/
 \label{naloga-Frauhofer-Kirchhoff-uklon}
 Pokaži, da je v Fraunhoferjevi uklonski sliki uklon na okrogli odprtini s premerom $a$ podan z
 \beq
-E_P = E_0\frac{J_1(\pi a \rho/ \lambda z)}{\pi a \rho/ \lambda z},
+I_P = I_0\frac{4 J_1(\pi a \rho/ \lambda z)}{\pi a \rho/ \lambda z},
 \eeq
 kjer je $\rho = \sqrt{x^2+y^2}$.
 \end{definition}
@@ -702,8 +702,8 @@ kjer je $\rho = \sqrt{x^2+y^2}$.
 Do zdaj smo obravnavali elektromagnetno valovanje
 v izotropnih snoveh, v katerih je dielektričnost skalar in hitrost širjenja
 valovanja neodvisna od njegove smeri. V splošnem so snovi anizotropne,
-dielektričnost\index{Dielektričnost} je tenzor, hitrost potovanja svetlobe skozi snov pa
-je odvisna od smeri razširjanja in od polarizacije valovanja. 
+dielektričnost\index{Dielektričnost} je tenzor, hitrost potovanja svetlobe \index{Hitrost valovanja}
+skozi snov pa je odvisna od smeri razširjanja in od polarizacije valovanja. 
 
 Gostoto električnega polja~\index{Električno polje!gostota} v anizotropni snovi zapišemo kot 
 \beq
@@ -737,13 +737,14 @@ D_{3}&=\epsilon_{0}\epsilon_{3}E_{3}.\label{eq:gostota-elektricnega-polja-lastni
 \end{align}
 Glavne osi sistema določajo smeri, vzdolž katerih sta jakost
 in gostota električnega polja vzporedni, lastne vrednosti 
-pa ustrezajo trem lomnim količnikom\index{Lomni količnik} $\epsilon_{i}=\sqrt{n_{i}}$. Kristale,
-za katere so vse tri vrednosti $n_i$ različne, imenujemo optično dvoosni kristali, 
-medtem ko sta v optično enoosnih kristalih dve lastni vrednosti enaki $n_{1}=n_{2}$. 
+pa ustrezajo trem lomnim količnikom\index{Lomni količnik} $\epsilon_{i}=\sqrt{n_{i}}$. Snovi,
+za katere so vse tri vrednosti $n_i$ različne, imenujemo optično dvoosne snovi\index{Dvoosne snovi}, 
+medtem ko sta v optično enoosnih snoveh\index{Enoosne snovi} dve lastni vrednosti enaki $n_{1}=n_{2}$. 
 Če so enake vse tri lastne vrednosti, je snov izotropna.
 
-\subsection*{Optična indikatrisa}
-Poglejmo, kako se po anizotropnih snoveh širi valovanje v odvisnosti
+\subsection*{Elipsoid lomnega količnika}
+\index{Elipsoid lomnega količnika}
+Poglejmo, kako se v anizotropnih snoveh širi valovanje v odvisnosti
 od njegove smeri in polarizacije. Preprost primer je valovanje, ki se širi vzdolž lastne
 osi $z$, polarizirano pa je vzdolž lastne osi $x$. Pri prehodu
 skozi kristal se polarizacija valovanja ohrani, lomni količnik za
@@ -751,23 +752,24 @@ tak val pa je $n_{1}$. Podobno velja za val, polariziran v smeri
 $y$, za katerega je lomni količnik enak $n_{2}$. Če se valovanje širi vzdolž lastne
 osi $z$, vendar njegova polarizacija ne sovpada z lastnima osema
 $x$ ali $y$, nastane po prehodu skozi kristal iz vpadnega linearno polariziranega valovanja
-v splošnem eliptično valovanje. Lastni komponenti namreč potujeta z različnima
-hitrostma, zato pride med njima do faznega zamika.\\
+v splošnem eliptično valovanje\index{Polarizacija!eliptična}. Lastni komponenti namreč potujeta z različnima
+hitrostma, zato pride med njima do faznega zamika.
+
 \begin{figure}[h]
 \centering
 \def\svgwidth{40truemm} 
 \input{slike/01_indikatrisa.pdf_tex}
-\caption{\label{fig:Indikatrisa}Optična indikatrisa oziroma elipsoid lomnega količnika. Glavne osi
+\caption{Elipsoid lomnega količnika oziroma optična indikatrisa. Glavne osi
 elipsoida sovpadajo z glavnimi osmi tenzorja $\varepsilon$, polosi elipsoida pa so enake
 lomnim količnikom $n_i$. V primeru optično enoosnega kristala je indikatrisa  
-rotacijski elipsoid, v primeru izotropne snovi pa je optična indikatrisa krogla. }
+rotacijski elipsoid, v primeru izotropne snovi pa je optična indikatrisa krogla.}
+\label{Indikatrisa}
 \end{figure}
 
 Za poljubno smer širjenja valovanja ter poljubno polarizacijo je račun
 bolj zapleten in je treba lomne količnike še izračunati. Pri tem si pomagamo 
-z grafično upodobitvijo, s tako imenovano 
-\index{Optična indikatrisa}optično indikatriso (elipsoidom lomnega
-količnika). 
+z grafično upodobitvijo, s tako imenovanim elipsoidom lomnega količnika oziroma
+\index{Optična indikatrisa|see {Elipsoid lomnega količnika}}optično indikatriso. 
 
 Optična indikatrisa je elipsoid, podan z enačbo
 \beq
@@ -775,8 +777,8 @@ Optična indikatrisa je elipsoid, podan z enačbo
 \eeq
 Glavne osi elipsoida sovpadajo z glavnimi osmi tenzorja $\epsilon$, 
 polosi elipsoida pa so $n_{1}$, $n_{2}$ in $n_{3}$. 
-Za val, ki se širi z valovnim vektorjem $\mathbf{k}$, skozi izhodišče
-narišemo ravnino, pravokotno na smer valovnega vektorja (slika \ref{fig:Indikatrisa}).
+Lomne količnike za val, ki se širi z valovnim vektorjem $\mathbf{k}$, skozi izhodišče
+narišemo ravnino, pravokotno na smer valovnega vektorja (slika~\ref{Indikatrisa}).
 Presečišče ravnine in elipsoida je elipsa, katere glavni osi podata
 vrednosti lomnih količnikov $n_{a}$ in $n_{b}$ za obe lastni polarizaciji,
 njuni smeri pa predstavljata lastni smeri gostote električnega polja. Ker
@@ -784,13 +786,14 @@ sta to lastni osi, smer jakosti električnega polja izračunamo z
 enačbo (\ref{eq:gostota-elektricnega-polja-lastni}).
 
 \subsection*{Optično enoosni kristali}
+\index{Enoosne snovi}
 V optično enoosnih kristalih sta dve lastni vrednosti enaki in indikatrisa je rotacijski 
 elipsoid. Po dogovoru izberemo lastne vrednosti tako, da velja $n_{1}=n_{2}\neq n_{3}$. 
 Za valovanje, ki se razširja v smeri $z$, sta lomna količnika za obe polarizaciji 
 enaka in os $z$ imenujemo \index{Optična os}optična os. Hitrost valovanja, ki
 se širi vzdolž optične osi, je torej neodvisna od njegove polarizacije.
-Navadno vpeljemo tudi nove oznake: $n_{1}=n_{2}=n_{o}$, ki označuje redni (\textit{ordinary})
-lomni količnik\index{Lomni količnik!redni}, $n_{3}=n_{e}$ pa izredni 
+Navadno vpeljemo tudi nove oznake: $n_{1}=n_{2}=n_{o}=n_{\perp}$, ki označuje redni (\textit{ordinary})
+lomni količnik\index{Lomni količnik!redni}, $n_{3}=n_{e}=n_\parallel$ pa izredni 
 (\textit{extraordinary}) lomni količnik\index{Lomni količnik!izredni}. 
 
 \begin{table}[h]
@@ -810,15 +813,15 @@ lomni količnik\index{Lomni količnik!redni}, $n_{3}=n_{e}$ pa izredni
 \label{table:none}
 \end{table}
 
-Zaradi simetrije je pri izračunu lomnega količnika pomemben le kot 
+Za lažjo predstavo skiciramo ploskev valovnega vektorja, ki jo zaradi simetrije v tem 
+primeru lahko upodobimo kar ravninsko (slika~\ref{fig:Elipsa}). 
+Smer valovnega vektorja določa le kot 
 $\vartheta$ med valovnim vektorjem $\mathbf{k}$ in optično osjo $z$. Dvema 
-lastnima polarizacijama pripadata dva različna lomna količnika. 
-Za lažjo predstavo oba lomna količnika skiciramo v odvisnosti
-od kota $\vartheta$ (slika~\ref{fig:Elipsa}). Lomni količnik za žarek, ki
-je polariziran pravokotno na vpadno ravnino, je neodvisen od $\vartheta$, zato narišemo krožnico.
-Takemu žarku pravimo redni žarek. 
-Žarek, ki je polariziran v vpadni ravnini, je tako imenovan izredni žarek. Pripadajoč
-lomni količnik je odvisen od kota $\vartheta$ in ga izračunamo iz sledeče enačbe elipse
+lastnima polarizacijama pa pripadata dva različna lomna količnika. 
+Lomni količnik za žarek, ki je polariziran pravokotno na vpadno ravnino, 
+je enak $n_o$ in neodvisen od $\vartheta$, zato narišemo krožnico. Takemu žarku pravimo redni žarek. 
+Žarek, ki je polariziran v vpadni ravnini, je izredni žarek. Pripadajoč
+lomni količnik\index{Lomni količnik} je odvisen od kota $\vartheta$ in ga izračunamo iz sledeče enačbe elipse
 s polosema $n_o$ in $n_e$: 
 \boxeq{eq:izreden}{
 \frac{1}{n^{2}(\vartheta)}=\frac{\cos^{2}\vartheta}{n_{o}^{2}}+\frac{\sin^{2}\vartheta}{n_{e}^{2}}.
@@ -830,13 +833,14 @@ valovanje širi vzdolž optične osi in lomna količnika sta za obe polarizaciji
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/01_elipsa.pdf_tex}
-\caption{\label{fig:Elipsa}V optično enoosnih kristalih je lomni količnik odvisen
+\caption{V optično enoosnih kristalih je lomni količnik odvisen
 od smeri valovnega vektorja in njegove polarizacije. a) primer pozitivno anizotropne
 snovi ($n_e>n_o$). b) Redni žarek je polariziran pravokotno na vpadno ravnino. Zanj velja, 
 da je $\mathbf{D} \parallel \mathbf{E}$ in $\mathbf{S} \parallel \mathbf{k}$. Izredni žarek
 je polariziran v vpadni ravnini. Smer širjenja žarka $\mathbf{S}$ ni vzporedna z valovnim vektorjem
 $\mathbf{k}$,
 prav tako valovne fronte niso pravokotne nanjo. c) Primer negativno anizotropne snovi ($n_e< n_o$).}
+\label{fig:Elipsa}
 \end{figure}
 
 Navadno sta pri ravnem valu vektorja $\mathbf{E}$ in $\mathbf{D}$ vzporedna, 
@@ -845,14 +849,14 @@ valovne fronte pa so pravokotne nanj. To velja tudi za redni žarek v anizotropn
 snoveh. Izredni žarek pa ima, kot že ime nakazuje, ``izredne'' lastnosti. Vektorja
 $\mathbf{E}$ in $\mathbf{D}$ nista vzporedna, zato tudi valovni vektor $\mathbf{k}$ ni vzporeden
 toku energije oziroma Poyntingovemu vektorju $\mathbf{S}$ (slika \ref{fig:Elipsa}\,b). 
-Žarek, ki ga vidimo, torej potuje v smeri, ki ni enaka smeri valovnega vektorja. Smer
+Žarek, ki ga vidimo, tako potuje v smeri, ki ni enaka smeri valovnega vektorja. Smer
 Poyntingovega vektorja določimo kot normalo na elipso pri kotu $\vartheta$. 
 
 \subsection*{Dvojni lom}
 Ko vpade žarek na anizotropno snov, se lomi. Privzemimo, da je lomni količnik snovi,
 iz katere valovanje prehaja v anizotropen kristal, enak 1. Vemo, da je hitrost valovanja v 
 snovi -- in s tem tudi kot, pod katerim se lomi -- odvisna od polarizacije valovanja. V splošnem
-se pojavita dva lomljena žarka z različnima polarizacijama, kar
+se v anizotropnih snoveh pojavita dva lomljena žarka z različnima polarizacijama, kar
 da ime pojavu: \index{Dvolomnost}dvolomnost (slika~\ref{fig:dvolomnost}). 
 Da zadostimo ohranitvi faze
 pri prehodu, moramo popraviti tudi \index{Lomni zakon}lomni zakon (enačba \ref{eq:lomni_zakon}).
@@ -867,14 +871,16 @@ Za izredni val s TM polarizacijo (električna poljska jakost leži v vpadni ravn
 \sin\vartheta_{1}=n(\vartheta_e)\sin\vartheta_{e},
 \eeq
 pri čemer $n(\vartheta_e)$ izračunamo iz enačbe (\ref{eq:izreden}).
+
 \begin{figure}
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/01_dvolom.pdf_tex}
-\caption{\label{fig:dvolomnost}Dvojni lom. a) Pri poševnem vpadu na anizotropno snov se
+\caption{Dvojni lom. a) Pri poševnem vpadu na anizotropno snov se
 valovanje loči na dva različno polarizirana žarka. b) Tudi pri pravokotnem vpadu se žarka 
 ločita, če je optična os pod poljubnim kotom glede na normalo mejne ravnine. Valovni vektorji
-so v tem kolinearni, Poyntingovi vektorji pa imajo različne smeri.}
+so v tem primeru kolinearni, Poyntingovi vektorji pa imajo različne smeri.}
+\label{fig:dvolomnost}
 \end{figure}
 
 Kadar vpada valovanje pravokotno na izotropno snov, se žarek ne lomi. V 
