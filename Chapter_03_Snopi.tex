@@ -234,7 +234,7 @@ R=z\left[1+\left(\frac{z_{0}}{z}\right)^{2}\right],
 ki meri krivinski radij valovnih front\index{Gaussov snop!krivinski radij} 
 snopa na razdalji $z$. To najlažje
 uvidimo, če krogelni val razvijemo po majhnih odmikih $r$ od osi
-$z$: 
+$z$
 \begin{equation}
 \frac{1}{R}e^{ikR}=\frac{1}{R}e^{ik\sqrt{z^{2}+r^{2}}}\approx \frac{1}{R}e^{ik(z+\frac{r^{2}}{2R})}.\label{eq:krogelni-val}
 \end{equation}
@@ -289,12 +289,12 @@ Pokaži, da je znotraj širine snopa $w$ približno $87~\%$ celotnega svetlobneg
 \end{definition}
 
 Povejmo še nekaj o parametru $q(z)$, ki smo ga uporabili pri izračunu Gaussovega snopa. Spom\-nimo 
-se, da parameter $q$ narašča linearno z oddaljenostjo od grla:
+se, da parameter $q$ narašča linearno z oddaljenostjo od grla
 \boxeq{eq:q}{
 q(z) = z -iz_0.
 }
 Parameter $q$ imenujemo kompleksni krivinski radij\index{Kompleksni krivinski radij}, 
-njegov inverz pa kompleksna ukrivljenost\index{Kompleksna ukrivljenost}: 
+njegov inverz pa kompleksna ukrivljenost\index{Kompleksna ukrivljenost}
 \boxeq{eq:q-inv}{
 \frac{1}{q(z)}=\frac{1}{R}+i\frac{2}{kw^{2}}.
 }
@@ -327,7 +327,8 @@ tudi \index{Hermite-Gaussovi snopi}Hermite-Gaussovi snopi\footnote{Francoski mat
 \exp\left[\frac{ik(x^{2}+y^{2})}{2q}-i\eta_{n,m}\right],
 \label{eq:Gauss-Hermitevi}
 \end{equation}
-kjer so $H_{n}$ Hermitovi polinomi stopnje $n$. V to se lahko
+kjer so $H_{n}$ Hermitovi polinomi stopnje $n$ (npr. $H_0(x)=1, H_1(x)=2x, H_2(x)=4x^2-2, H_3(x)=8x^3-12x$ ...). 
+V to se lahko
 prepričamo, če izraz vstavimo v obosno valovno enačbo (enačba~\ref{eq:obosna-valovna-enacba}) in upoštevamo, 
 da Hermitovi polinomi zadoščajo enačbi 
 \begin{equation}
@@ -336,7 +337,7 @@ H_{n}^{\prime\prime}-2xH_{n}^{\prime}+2nH_{n}=0.
 Osnovni Gaussov snop je očitno poseben primer gornje rešitve za $m=n=0$.
 Polmer snopa $w(z)$ in kompleksni krivinski radij $q(z)$ sta za
 vse $m$ in $n$ enaka kot za osnovni snop in podana z enačbama (\ref{eq:w})
-in (\ref{eq:q}). Razlika je v fazi, ki je odvisna tudi od $n$ in $m$: 
+in (\ref{eq:q}). Razlika je v fazi, ki je odvisna tudi od $n$ in $m$\index{Guoyeva faza}
 \begin{equation}
 \eta_{n,m}\left(z\right)=(n+m+1)\arctan\left(\frac{z}{z_{0}}\right).
 \end{equation}
@@ -345,8 +346,8 @@ je analogno večji fazni hitrosti valov višjega reda v valovodih.
 
 Nekaj višjih redov Hermite-Gaussovih snopov je na sliki (\ref{fig:Gauss-Hermitevi-snopi}),
 kjer rišemo $|\Re\psi_{n,m}(x, y, 0)|$.
-Vidimo, da indeksa $n$ in $m$ predstavljata število vozlov v prečni smeri,
-pri danem $w$ pa polmer snopa narašča z $n$ in $m$. 
+Indeksa $n$ in $m$ določata število vozlov v prečni smeri,
+polmer snopa pa narašča z $n$ in $m$. 
 
 \begin{figure}[h]
 \centering
@@ -361,16 +362,16 @@ pri danem $w$ pa polmer snopa narašča z $n$ in $m$.
 Pokaži, da za Hermite-Gaussove snope višjih redov efektivni polmer snopa 
 narašča sorazmerno s korenom iz števila prečnih vozlov $ w_{eff}\propto w\sqrt{n+m}$.
 Namig: pri zapisu prečne odvisnosti polja upoštevaj le vodilni člen
- Hermitovih polinomov ($\psi_{n,m}\propto x^{n}y^{m}\exp(-(x^{2}+y^{2})/w^{2})$)
- in določi, na kateri razdalji od središča snopa ima polje $\psi$
+ Hermitovih polinomov in določi, na kateri razdalji od središča snopa ima polje $\psi$
 največjo amplitudo.
 \end{definition}
 
-Hermite-Gaussovi snopi (enačba~\ref{eq:Gauss-Hermitevi}) tvorijo popoln
-ortogonalen sistem funkcij koordinat $x$ in $y$:
+\begin{remark}
+ Hermite-Gaussovi snopi (enačba~\ref{eq:Gauss-Hermitevi}) tvorijo popoln
+ortogonalen sistem funkcij koordinat $x$ in $y$
 \begin{equation}
 \int\psi_{n,m}^{*}(x,y)\psi_{n',m'}(x,y)\, dx dy=\pi w_{0}^{2}\; 
-2^{n+m-1}n!\;m!\; \delta_{n,n'}\;\delta_{m,m'}
+2^{n+m-1}n!\;m!\; \delta_{n,n'}\;\delta_{m,m'}.
 \end{equation}
 Polje nekega valovanja, ki ga poznamo v ravnini $z=0$, lahko pri
 poljubnem $z$ dobimo z razvojem po Hermite-Gaussovih snopih. Pri tem
@@ -383,17 +384,22 @@ uklonski integral.
 Pri velikih $z$, kjer velja Fraunhoferjeva uklonska teorija, je
 polje Fouriereva transformacija polja pri $z=0$. Hermite-Gaussovi
 snopi ohranjajo prečno obliko, ki pa se z naraščajočim $z$ širi. 
-Od tod vidimo, da je Fouriereva transformacija Hermite-Gaussove funkcije 
-$H_{n}(x)e^{-x^{2}/2}$ zopet Hermite-Gaussova funkcija.
+To je v skladu s tem, da je Fouriereva transformacija Hermite-Gaussove funkcije 
+$H_{n}(x)e^{-x^{2}/2}$ kar Hermite-Gaussova funkcija.
+\end{remark}
 
 V cilindričnih koordinatah imajo snopi višjega reda obliko Laguerre-Gaussovih 
 snopov\index{Laguerre-Gaussovi snopi}\footnote{Francoski matematik Edmond Nicolas Laguerre, 1834--1886.}
 \begin{equation}
-\psi_{p,l}(r,\phi,z)=\frac{w_{0}}{w}\left(\frac{\sqrt{2}r}{w}\right)^{|l|}
-L_{p}^{|l|}\left(\frac{2r^{2}}{w^{2}}\right)e^{\pm il\phi}\exp\left[\frac{ikr^{2}}{2q}-i\eta_{p,l}\right],
+\psi_{p,l}(r,\varphi,z)=\frac{w_{0}}{w}\left(\frac{\sqrt{2}r}{w}\right)^{|l|}
+L_{p}^{|l|}\left(\frac{2r^{2}}{w^{2}}\right)e^{\pm il\varphi}\exp\left[\frac{ikr^{2}}{2q}-i\eta_{p,l}\right],
 \label{eq:Gauss-Laguerrevi}
 \end{equation}
-kjer je $L_{p}^{l}$ pridruženi Laguerrov polinom in 
+kjer so $L_{p}^{l}$ pridruženi Laguerrovi polinomi (npr. 
+$L_{0}^{l}(x) = 1, 
+L_{1}^{l}(x) = -x+l+1, 
+L_{2}^{l}(x) = x^2/2-(l+2)x+(l+2)(l+1)/2
+$ ...) in 
 \beq
 \eta_{p,l}\left(z\right)=(2p+l+1)\arctan\left(\frac{z}{z_{0}}\right).
 \label{eq:etaGL}
@@ -402,7 +408,7 @@ kjer je $L_{p}^{l}$ pridruženi Laguerrov polinom in
 Podobno kot je v kartezičnem primeru red polinoma določal število prečnih ničel,
 določata $p$ in $l$ v cilindričnem primeru število vozelnih črt, kjer je gostota 
 svetlobnega toka nič. Na sliki~(\ref{fig:Laguerrovi_presek})
-je prikazanih nekaj oblik amplitud $|\Re\psi_{p,l}(r,\phi,0)|$.
+je prikazanih nekaj oblik amplitud $|\Re\psi_{p,l}(r,\varphi,0)|$.
 
 \begin{figure}[h]
 \centering
@@ -440,24 +446,24 @@ izberemo
 \begin{equation}
 E=E_{0}\psi(x,y)e^{i\beta z-i\omega t},
 \end{equation}
-kjer mora nastavek $\psi$ zadostovati Helmholtzevi enačbi
+kjer mora nastavek $\psi$ zadostovati Helmholtzevi enačbi\index{Helmholtzeva enačba}
 \begin{equation}
 \nabla_{\perp}^{2}\psi+k_{\perp}^{2}\psi=0,
 \end{equation}
 pri $k_{\perp}^{2}=k^{2}-\beta^{2}$. V cilindričnih
-koordinatah ($x=r\cos\phi$, $y=r\sin\phi$) se enačba prepiše v 
+koordinatah ($x=r\cos\varphi$, $y=r\sin\varphi$) se enačba prepiše v 
 \beq
 \frac{\partial^2 \psi}{\partial r^2}+ \frac{1}{r}\frac{\partial \psi}{\partial r}
-+ \frac{1}{r^2}\frac{\partial^2 \psi}{\partial \phi^2}+k_{\perp}^{2}\psi=0.
++ \frac{1}{r^2}\frac{\partial^2 \psi}{\partial \varphi^2}+k_{\perp}^{2}\psi=0.
 \eeq
-Rešitve gornje enačbe so s faznim faktorjem pomnožene Besslove funkcije:
+Rešitve gornje enačbe so s faznim faktorjem pomnožene Besslove funkcije
 \begin{equation}
-\psi_m(x,y)=A_{m}J_{m}(k_{\perp}r)e^{im\phi},
+\psi_m(x,y)=A_{m}J_{m}(k_{\perp}r)e^{im\varphi},
 \end{equation}
 kjer je $J_{m}$ Besslova funkcija in $m=0,\pm1,\pm2 \ldots$ Za
 $m=0$ ima val obliko
 \begin{equation}
-E(r,\phi,z,t)=A_{0}J_{0}(k_{\perp}r)e^{i\beta z-i \omega t},
+E(r,z,t)=A_{0}J_{0}(k_{\perp}r)e^{i\beta z-i \omega t},
 \label{eq:Besslov-snop}
 \end{equation}
 ki ga imenujemo Besslov snop. Valovne fronte takega snopa so ravne 
@@ -474,12 +480,12 @@ snopov, ki imajo pomembne in uporabne lastnosti.
 \centering
 \def\svgwidth{80truemm} 
 \input{slike/03_Bessel_profil.pdf_tex}
-\caption{Prečni presek in profil intenziteta Besslovega snopa}
+\caption{Prečni presek in profil intenzitete Besslovega snopa}
 \label{fig:Besslov_presek}
 \end{figure}
 
 \begin{remark}
-Z uporabo stožčaste leče (aksiona) lahko Gaussov snop
+Z uporabo stožčaste leče (aksikona) lahko Gaussov snop
 preoblikujemo v približek Besslovega snopa (slika~\ref{fig:Bessel_leca}). 
 Na plašču stožčaste leče se namreč Gaussov snop zlomi in valovni vektorji 
 nastalega žarka opisujejo stožec, kar je sicer lastnost Besslovih žarkov.
@@ -504,7 +510,7 @@ Vrnimo se h Gaussovim snopom in poglejmo, kaj se zgodi z njimi pri prehodu
 skozi optične naprave\index{Preslikava čez lečo}. Začnimo
 z enostavno tanko lečo z goriščno razdaljo $f$. V geometrijski optiki
 je krivinski radij krogelnega vala, ki izhaja iz točke na osi, kar
-enak razdalji do točke. Leča preslika točko na osi v točko na osi,
+enak razdalji do točke. Leča točko na osi preslika v točko na osi,
 od tod pa sledi, da se sferični val s krivinskim radijem $R_{1}$
 po prehodu skozi lečo spremeni v val s krivinskim radijem $R_{2}$.
 Pri tem velja zveza 
@@ -520,7 +526,7 @@ kompleksni krivinski radij tik pred lečo in tik za njo
 \frac{1}{q_{1}}-\frac{1}{q_{2}}=\frac{1}{f}.
 \label{eq:preslikava-zveza-leca}
 \end{equation}
-Kompleksni krivinski radij $q$ je po enačbi~(\ref{eq:q}) linearna funkcija koordinate $z$.
+Kompleksni krivinski radij $q$ pa je po enačbi~(\ref{eq:q}) linearna funkcija koordinate $z$.
 To nam skupaj z enačbo~(\ref{eq:preslikava-zveza-leca})
 omogoča račun prehoda snopa skozi poljuben sistem leč brez aberacij.
 Kot primer poglejmo, kako z zbiralno lečo zberemo snop.
@@ -536,7 +542,7 @@ leče.}
 \label{fig:Prehod-Gaussovega-snopa}
 \end{figure}
 Vpadni snop naj ima grlo s polmerom $w_{01}$ in parametrom $z_{01}$. Lega grla je 
-v točki, ki je za $x_{1}$ oddaljena od levega gorišča leče (slika
+v točki, ki je za $x_{1}$ oddaljena od levega gorišča leče $F$ (slika
 \ref{fig:Prehod-Gaussovega-snopa}). Naj bosta 
 \begin{equation}
 q_{1}^{F}=x_{1}-iz_{01}\mbox{\hskip1cm in \hskip1cm}q_{2}^{F}=-x_{2}-iz_{02}
@@ -559,15 +565,15 @@ x_{1}x_{2}=f^{2}-z_{01}z_{02} \qquad \mathrm{in} \qquad
 \frac{x_{1}}{z_{01}}=\frac{x_{2}}{z_{02}}.
 \end{equation}
 Dobimo enačbi za preslikavo Gaussovega snopa čez lečo z goriščno razdaljo $f$.
-Prva da povečavo:
-\boxeq{eq:preslikava-povecava}{
-\frac{w_{02}}{w_{01}}=\sqrt{\frac{x_{2}}{x_{1}}},
-}
-druga enačba pa lego grla na desni strani leče: 
+Prva enačba da 
 \boxeq{eq:preslikava-grlo}{
-x_{2}=\frac{x_{1}f^{2}}{x_{1}^{2}+z_{01}^{2}}.
+x_{2}=\frac{x_{1}f^{2}}{x_{1}^{2}+z_{01}^{2}},
 }
-Gornja enačba se ujema z izrazom za preslikavo točke v geometrijski
+ki določa lego grla na desni strani leče, druga pa povečavo
+\boxeq{eq:preslikava-povecava}{
+\frac{w_{02}}{w_{01}}=\sqrt{\frac{x_{2}}{x_{1}}}.
+}
+Enačba (\ref{eq:preslikava-grlo}) se ujema z izrazom za preslikavo točke v geometrijski
 optiki le, kadar je $z_{01}\ll x_{1}$. Kadar je $z_{01}\gg f$, je
 val na leči pri vsakem $x_{1}$ skoraj raven in $x_2 \to 0$, kar pomeni, da leži
 grlo na desni strani v gorišču. V praksi dobimo Gaussove snope iz laserjev in pogosto ne
@@ -575,10 +581,10 @@ velja ne prva ne druga limita, temveč je treba uporabiti izraz (\ref{eq:preslik
 Tudi povečava polmera grla na desni, podana z enačbo (\ref{eq:preslikava-povecava}),
 je precej drugačna kot v geometrijski optiki.\\
 
-Za primer vzemimo snop iz He-Ne laserja (valovna dolžina 632,8~nm), ki ima grlo s 
+Za primer vzemimo snop iz He-Ne laserja (valovna dolžina $632,8~\si{\nano\metre}$), ki ima grlo s 
 polmerom $w_{01}=0,5~\si{\milli\metre}$ na izhodnem ogledalu in je $50~\si{\centi\metre}$ 
-pred lečo z goriščno razdaljo $f=25~\si{\centi\metre}$.
-Tedaj je $z_{01}=124~\si{\centi\metre}$. Po enačbi (\ref{eq:preslikava-grlo})
+oddaljeno od leče z goriščno razdaljo $f=25~\si{\centi\metre}$.
+Za tak snop je $z_{01}=124~\si{\centi\metre}$. Po enačbi (\ref{eq:preslikava-grlo})
 leži grlo za lečo v oddaljenosti $1~\si{\centi\metre}$ od gorišča in $26~\si{\centi\metre}$ 
 za lečo, po enačbi (\ref{eq:preslikava-povecava})
 pa izračunamo polmer $w_{02}=100~\si{\micro\metre}$. Enačbe geometrijske optike bi
@@ -591,23 +597,24 @@ je približno oblike ravnih valov.
 
 Če postavimo grlo snopa v gorišče leče ($x_{1}=0$), je grlo na
 desni strani tudi v gorišču ($x_{2}=0$). Razmerje polmerov grl
-na eni in drugi strani leče lahko izračunamo:
+na eni in drugi strani leče lahko izračunamo
 \beq
 \lim_{x_1 \to 0}~\frac{x_{2}}{x_{1}}=\frac{f^{2}}{z_{01}^{2}} \qquad \textrm{in} \qquad
 \frac{w_{02}}{w_{01}}= \frac{f}{z_{01}}.
 \eeq
 Velikost grla na desni strani je 
 \beq
-w_{02}=\frac{\lambda f}{\pi w_{01}},
+w_{02}=\frac{\lambda f}{\pi w_{01}}.
 \eeq
-torej tem manjša, čim večji je polmer grla na levi. Vpadni žarek je tako smiselno
+Če torej želimo doseči čim manjše grlo ob prehodu skozi lečo, mora biti polmer
+vpadnega žarka čim večji. Vpadni žarek je tako smiselno
 razširiti, vendar je polmer žarka lahko največ enak polmeru leče $a$. 
-Najmanjša velikost grla na desni je tako 
+Najmanjša velikost grla, ki jo še lahko dosežemo z zbiralno lečo, je tako 
 \boxeq{eq:wmin}{
 w_{02~\textrm{min}} = \frac{\lambda f}{\pi a} \sim \lambda.
 }
 Dobri mikroskopski in fotografski
-objektivi dosegajo numerično odprtino $f/a\simeq1$ in z njimi je mogoče Gaussov snop
+objektivi dosegajo $f/a\simeq 1$, zato je mogoče z njimi Gaussov snop
 zbrati v piko velikosti $\sim\lambda$. 
 
 Omenili smo, da je treba za dosego majhnega polmera grla za lečo žarek pred lečo čim bolj razširiti.
@@ -620,7 +627,7 @@ leč sovpadata. Povečava teleskopa je pri taki postavitvi leč enaka razmerju m
 \def\svgwidth{140truemm} 
 \input{slike/03_teleskop.pdf_tex}
 \caption{Prehod Gaussovega snopa
-skozi sistem dveh leč z goriščnima razdaljama $f_{1}$ in $f_{2}$}
+skozi teleskop iz leč z goriščnima razdaljama $f_{1}$ in $f_{2}$}
 \label{fig:Prehod-Gaussovega-snopa-teleskop}
 \end{figure}
 
@@ -647,7 +654,7 @@ povezana s spreminjanjem naklona žarkov, pri čemer bomo privzeli, da so
 nakloni žarkov glede na os majhni.
 
 Geometrijski žarek v izbrani ravnini $z$ lahko opišemo z dvema parametroma: 
-oddaljenostjo od osi $y$ in naklonom glede na os $\theta$. Ti dve količini 
+oddaljenostjo $y$ od osi in naklonom $\theta$ glede na os sistema. Ti dve količini 
 sta med seboj neodvisni in ju sestavimo 
 v vektor
 \begin{equation}
@@ -666,7 +673,7 @@ C & D
 \end{equation}
 zato jih imenujemo tudi ABCD matrike\index{ABCD matrike}. Zapišimo nekaj primerov.
 
-Pri premiku za $d$ se spremeni odmik od osi, naklon pa ostane enak:
+Pri premiku za $d$ vzdolž osi se zaradi končnega naklona spremeni odmik od osi, naklon pa ostane enak
 \begin{equation}
 \left[\begin{array}{c}
 y_{2}\\
@@ -694,10 +701,10 @@ Matrika za premik $d$ vzdolž osi $z$ je tako
 M= \left[\begin{array}{cc}
 1 & d\\
 0 & 1
-\end{array}\right]
+\end{array}\right].
 \eeq
 Poglejmo še matriko za prehod skozi lečo. 
-Pri prehodu skozi tanko lečo se spremeni nagib žarka. Če je pred
+Pri prehodu skozi tanko lečo se spremeni nagib žarka. Če je žarek pred
 lečo vzporeden z osjo, gre za lečo skozi gorišče, zato 
 \begin{equation}
 \left[\begin{array}{c}
@@ -715,7 +722,7 @@ y_{1}\\
 \end{array}\right].
 \end{equation}
 Pri tem koeficientov $B$ in $D$ še ne poznamo. Določimo jih iz drugega pogoja, 
-ki pravi, da ostane žarek, ki gre skozi lečo na osi, nespremenjen: 
+ki pravi, da ostane žarek, ki gre skozi lečo na osi, nespremenjen
 \begin{equation}
 \left[\begin{array}{c}
 y_{2}\\
@@ -790,9 +797,10 @@ C & D
 \label{eq:Mdf}
 \end{eqnarray}
 
+\begin{remark}
 Gornji matrični formalizem je zelo prikladen predvsem za računanje zapletenih
-optičnih sistemov, saj ga je prav lahko izvesti na računalnik. Poleg
-tega bomo spoznali, da je enolično povezan z matričnim formalizmom izračuna
+optičnih sistemov, saj ga je prav lahko izvesti z računalnikom. Poleg
+tega je enolično povezan z matričnim formalizmom izračuna
 kompleksne ukrivljenosti Gaussovih snopov, zato da preprosto možnost
 prenosa rezultatov računov geometrijske optike v optiko
 snopov.
@@ -808,11 +816,12 @@ v $(y_{2},\theta_{2})$. Matriko za prehod poljubnega zaporedja optičnih
  elementov dobimo z množenjem matrik.}
 \label{fig:K-matricni-obravnavi}
 \end{figure}
+\end{remark}
 
 \section{Linearne racionalne transformacije kompleksnega krivinskega radija}
 
 Poskusimo zdaj zapisati podoben matrični formalizem še za kompleksne krivinske
-radije. Za opis Gaussovega snopa zadošča, če v izbrani ravnini $z$ poznamo kompleksni
+radije. Za opis Gaussovega snopa zadošča, da v izbrani ravnini $z$ poznamo kompleksni
 krivinski radij $q$. Ugotovili smo že, da je $q$ linearna funkcija
 premika po $z$ (enačba~\ref{eq:q}). Vemo tudi, kako se $q$ spremeni pri prehodu skozi tanko
 lečo (enačba~\ref{eq:preslikava-zveza-leca}). 
@@ -881,7 +890,7 @@ AD-BC = \frac{n_1}{n_2}.
 \end{table}
 
 \begin{definition}
-Pokaži, da za naslednje prehode veljajo ustrezne ABCD matrike. \\
+Pokaži, da za naslednje prehode veljajo ustrezne ABCD matrike. 
 \end{definition}
 \begin{tabular}{|c|c|c|} \hline  
       Prehod skozi prostor in lečo & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_df.pdf_tex}} & 
