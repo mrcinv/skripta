@@ -151,7 +151,7 @@ pri $r^{2}$ in pri drugih členih posebej enaki na obeh straneh enačbe. Sledi
 \begin{equation}
 q(z)^{\prime}=1\mbox{\hskip1cm in \hskip1cm}\phi^{\prime}=-\frac{i}{q}.
 \end{equation}
- Z integracijo dobimo najprej 
+Z integracijo dobimo najprej 
 \begin{equation}
 q=z-iz_{0},
 \label{eq:alpha}
@@ -175,24 +175,27 @@ polmer, ki je funkcija koordinate $z$, zapišemo kot\index{Gaussov snop!polmer}
 w^{2}=\frac{2z_{0}}{k}\left[1+\left(\frac{z}{z_{0}}\right)^{2}\right].
 \end{equation}
 V izhodišču pri $z=0$ je snop najožji in pravimo, da je tam grlo snopa\index{Gaussov snop!grlo}. 
-Polmer snopa v grlu označim z $w_0$ in med $w_{0}$ in $z_{0}$ velja zveza 
-\boxeq{eq:z0}{
-z_{0}=\frac{\pi w_{0}^{2}}{\lambda}.
-}
-
-Potem zapišemo hiperbolično odvisnost $w$ od $z$
+Polmer snopa v grlu označimo z $w_0$ in zapišemo hiperbolično odvisnost $w$ od $z$
 \boxeq{eq:w}{
 w^2 = w_{0}^{2}\left[1+\left(\frac{z}{z_{0}}\right)^{2}\right].
 }
-
-Dolžina $z_{0}$ je razdalja, pri kateri preide snop v asimptotično enakomerno širjenje.
-Pri $z_{0}$ tudi preidemo v območje veljavnosti Fraunhoferjevega uklonskega približka. 
-Celotna dolžina grla je $2z_0$, območju grla pa pravimo tudi območje bližnjega polja ali 
-Rayleighovo območje in dolžini $z_0$ \index{Rayleighova dolžina}Rayleighova 
+Pri tem velja 
+\begin{equation}
+w_0^2 = \frac{2z_0}{k}
+\end{equation}
+oziroma
+\boxeq{eq:z0}{
+z_{0}=\frac{\pi w_{0}^{2}}{\lambda}.
+}
+Dolžina $z_{0}$ je razdalja, pri kateri preide snop v asimptotično enakomerno širjenje in določa
+dolžino grla. Celotna dolžina grla je $2z_0$, območju grla pa pravimo tudi območje bližnjega polja
+\index{Območje bližnjega polja} ali Rayleighovo območje\index{Rayleighovo 
+območje|see{Območje bližnjega polja}} in dolžini $z_0$ \index{Rayleighova dolžina}Rayleighova 
 dolžina\footnote{Angleški fizik in nobelovec John William Strutt, 3. baron Rayleighški, 1842--1919.}.
+Pri $z_{0}$ tudi preidemo v območje veljavnosti Fraunhoferjevega uklonskega približka. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{80truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/03_Gauss.pdf_tex}
 \caption{Gaussov snop s karakterističnimi parametri}
 \label{fig:Gauss}
@@ -211,13 +214,17 @@ Izraza za območje bližnjega polja (enačba~\ref{eq:z0}) in divergenco
 (enačba~\ref{eq:divergenca-snopa}) sta v skladu z ocenami, ki smo jih 
 napravili v začetku poglavja (enačbi~\ref{eq:kot_ocena} in \ref{eq:z_ocena}). Faktor 
 $1/\pi$ je značilen za Gaussov snop, ki ima od vseh mogočih oblik 
-najmanjšo divergenco. Za določanje kakovosti dejanskega laserskega snopa 
-in njegovega odstopanja od idealnega snopa vpeljemo faktor $M^2$
+najmanjšo divergenco. 
+
+Za določanje kakovosti dejanskega laserskega snopa 
+in njegovega odstopanja od idealnega snopa se pogosto vpelje faktor \index{Faktor $M^2$}$M^2$
 \beq
 \theta = M^2 \frac{2\lambda}{\pi w_{0}}.
 \eeq
 Dobri laserji dosegajo vrednost $M^2 \approx 1$,
 pri močnejših trdninskih ali polprevodniških laserjih pa je lahko $M^2 \sim 100$ ali več. 
+V splošnem velja, da $M^2$ narašča z močjo laserja in snop močnih laserjev navadno znatno
+odstopa od idealnega Gaussovega snopa.  
 
 Vrnimo se k imaginarnemu delu eksponenta v enačbi~(\ref{eq:gaussov-snop-vmesni}).
 Vpeljimo količino 
@@ -235,13 +242,14 @@ $z$:
 
 \begin{definition}
 \label{naloga-ukrivljenost-snopa}
-Pokaži, da je največja ukrivljenost valovnih front snopa (najmanjši $R$) ravno pri $z=\pm z_{0}$.
+Pokaži, da je največja ukrivljenost valovnih front snopa (in s tem najmanjši $R$) ravno pri $z=\pm z_{0}$.
 Izračunaj še ukrivljenost front v grlu in v veliki oddaljenosti od grla.
 \end{definition}
  
 Ostane nam še faktor pred eksponentom v izrazu~(\ref{eq:gaussov-snop-vmesni}). Ta faktor meri
 zmanjševanje amplitude snopa in s tem poskrbi za ohranitev energijskega
 toka ob širjenju žarka, poleg tega pa da še dodatno spremembo faze. Zapišimo ga v obliki
+\index{Gaussov snop!faza}
 \begin{equation}
 \frac{1}{1+i\frac{z}{z_{0}}}=\frac{1}{\sqrt{1+(\frac{z}{z_0})^{2}}}e^{-i\eta(z)}=\frac{w_{0}}{w}e^{-i\eta(z)},
 \end{equation}
@@ -252,8 +260,8 @@ toka ob širjenju žarka, poleg tega pa da še dodatno spremembo faze. Zapišimo
 Dodatna faza $\eta$, imenujemo jo tudi \index{Gouyeva faza}Gouyeva 
 faza\footnote{Francoski fizik Louis Georges Gouy, 1854--1926.}
 je posledica povečane fazne hitrosti valovanja,
-kadar je omejeno v prečni smeri. Pojav je najizrazitejši v bližini
-grla snopa. Srečamo ga tudi pri valovanju v valovodih.
+kadar je omejeno v prečni smeri. Podoben pojav srečamo tudi pri valovanju, ki je 
+omejeno v valovode.
 
 S tem lahko končno zapišemo izraz za električno poljsko jakost osnovnega \index{Gaussov snop}Gaussovega 
 snopa\footnote{Nemški matematik Carl Friedrich Gauss, 1777--1855.}
@@ -266,11 +274,11 @@ e^{-i\eta(z)}.
 \centering
 \def\svgwidth{110truemm} 
 \input{slike/03_Gauss_3D.pdf_tex}
-\caption{Upodobitev gostota svetlobnega toka v Gaussovem snopu za $z>0$ }
+\caption{Upodobitev gostote svetlobnega toka v Gaussovem snopu za $z>0$ }
 \label{fig:Gauss_3D}
 \end{figure}
 
-Intenziteta svetlobe je sorazmerna z $E(r,z)E^*(r,z)$ in zanjo velja
+Intenziteta svetlobe\index{Gaussov snop!intenziteta}je sorazmerna z $E(r,z)E^*(r,z)$ in zanjo velja
 \boxeq{eq:gaussov-snop-intenziteta}{
 I(r,z)= I_{0}\,\frac{w_0^2}{w(z)^2}\,e^{-2r^{2}/w^{2}(z)}.
 }
@@ -305,8 +313,7 @@ krogelni val.
 \input{slike/03_fronte.pdf_tex}
 \caption{Ravni val, Gaussov snop ter
 krogelni val. Pri majhnih razdaljah od grla je Gaussov snop podoben
-ravnemu valu, pri velikih razdaljah pa krogelnemu valu. Faza Gaussovega snopa
-se razlikuje od faze ravnega in krogelnega vala.}
+ravnemu valu, pri velikih razdaljah pa krogelnemu valu, vendar njegova faza zaostaja za $\pi/2$. }
 \label{fig:ravni-Gaussov-krogelni-val}
 \end{figure}
 
