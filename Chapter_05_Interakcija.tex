@@ -19,14 +19,13 @@ Ravni valovi\index{Ravni val} so enostavne in zelo prikladne rešitve valovne
 enačbe~(\ref{eq:valovna-skalarna}), zato jih pri reševanju problemov pogosto uporabimo kot 
 bazo, po kateri razvijemo elektromagnetno polje\index{Elektromagnetno valovanje}. Možen je razvoj
 po celotnem prostoru, vendar je tedaj nekoliko nerodna normalizacija baznih
-funkcij. Če je omejimo na le del prostora, se temu problemu izognemo. Mora pa biti 
+funkcij. Če se omejimo na le del prostora, se temu problemu izognemo. Mora pa biti 
 izbrani del prostora dovolj velik, da končni rezultat ni odvisen od izbire 
 njegove velikosti in oblike.
 
-
 Najpreprosteje je vzeti votlino v obliki velike kocke s stranico
 $L$ in idealno prevodnimi stenami. Rešitve Maxwellovih enačb~(\ref{eq:Maxwell1} do \ref{eq:Maxwell4}) 
-znotraj take votline so ob upoštevanju robnih pogojev (\ref{eq:robni-pogoji}) 
+znotraj take votline so ob upoštevanju robnih pogojev (enačba~\ref{eq:robni-pogoji}) 
 stoječa valovanja. Zapišemo jih v obliki
 \begin{eqnarray}
 E_{x} & = & E_{x0}\cos\frac{\pi lx}{L}\sin\frac{\pi my}{L}\sin\frac{\pi nz}{L}e^{-i\omega t},\nonumber \\
@@ -35,7 +34,7 @@ E_{z} & = & E_{z0}\sin\frac{\pi lx}{L}\sin\frac{\pi my}{L}\cos\frac{\pi nz}{L}e^
 \label{eq:stojece_votlina}
 \end{eqnarray}
 kjer so $l,m$ in $n$ cela števila. Vsako stoječe valovanje je določeno z valovnim 
-vektorjem 
+vektorjem\index{Valovni vektor}
 \beq
 \mathbf{k}=\left(\frac{\pi l}{L},\frac{\pi m}{L},\frac{\pi n}{L}\right),
 \eeq 
@@ -49,7 +48,6 @@ neodvisni polarizaciji.
  Pokaži, da stoječe valovanje, zapisano v obliki~(\ref{eq:stojece_votlina}), reši 
  valovno enačbo v kocki s stranico $L$ in zadosti robnim pogojem idealno prevodnih sten votline.
 \end{definition}
-
 
 Preštejmo, koliko je lastnih nihanj v intervalu velikosti valovnega
 vektorja med $k$ in $k+dk$ - to smo na hitro naredili že pri obravnavni
@@ -75,24 +73,22 @@ in ga prevedemo na frekvenčno odvisnost
 \eeq
 oziroma
 \boxeq{4.4}{
-\rho(\omega)\, d\omega=\frac{\omega^{2}}{\pi^{2}c^{3}}d\omega.
+\rho(\omega)=\frac{\omega^{2}}{\pi^{2}c^{3}}.
 }
 Številu nihanj na frekvenčni interval in enoto volumna votline $\varrho (\omega)$ 
 pravimo gostota stanj\index{Gostota stanj}.
 
-
-Vsote po lastnih valovanjih, to je po dovoljenih vrednostih valovnega vektorja $k$
+Vsote po lastnih valovanjih, to je po dovoljenih vrednostih valovnega vektorja $k$,
 lahko s pomočjo gostote stanj spremenimo v integrale po $k$ ali po $\omega$
 \begin{equation}
 \sum_{k}\ldots \quad \rightarrow \quad V\int\rho(k)\ldots dk=V\int\rho(\omega)\ldots d\omega.
 \label{4.5}
 \end{equation}
 
-
-Označimo zdaj brezdimenzijski krajevni del rešitve~(\ref{eq:stojece_votlina}) z 
+Označimo zdaj brezdimenzijski krajevni del rešitve~(enačba~\ref{eq:stojece_votlina}) z 
 $E_{\alpha}$, kjer $\alpha$
-označuje vsa tri cela števila $l$, $m$ in $n$ in še obe možni polarizaciji, da bo manj pisave. 
-Pripadajoče magnetno polje izračunamo z Maxwellovo enačbo~(\ref{eq:Maxwell2}) 
+označuje trojico števil $l$, $m$ in $n$ in še obe možni polarizaciji. 
+Pripadajoče magnetno polje izračunamo z Maxwellovo enačbo (enačba~\ref{eq:Maxwell2}) 
 \beq
 \nabla\times\mathbf{E}_{\alpha}=i\omega\mathbf{B}_{\alpha}.
 \label{Maxalfa}
@@ -106,8 +102,8 @@ sistem, zato lahko vsako elektromagnetno polje v votlini razvijemo
 \omega_{\alpha}q_{\alpha}(t)\mathbf{B}_{\alpha}(\mathbf{r}).
 \label{eq:pqrazvoj}
 \end{eqnarray}
-Postavimo razvoj~(\ref{eq:pqrazvoj}) v Maxwellovi enačbi~(\ref{eq:Maxwell2}
-in \ref{eq:Maxwell1}), upoštevamo zvezo~(\ref{Maxalfa}) in njej analogno za rotor magnetnega polja
+Postavimo razvoj~(enačba~\ref{eq:pqrazvoj}) v Maxwellovi enačbi~(\ref{eq:Maxwell2}
+in \ref{eq:Maxwell1}), upoštevamo zvezo~(enačba~\ref{Maxalfa}) in njej analogno za rotor magnetnega polja
 in dobimo 
 \begin{equation}
 p_{\alpha}=\dot{q}_{\alpha} \quad \mathrm{in} \quad 
@@ -119,8 +115,7 @@ od koder sledi še
 \ddot{p}_{\alpha}+\omega_{\alpha}^{2}p_{\alpha}=0.
 \label{4.8}
 \end{equation}
-Ta enačba da seveda pričakovano odvisnost od časa oblike $e^{-i \omega_\alpha t}$.
-
+Ta enačba da seveda pričakovano časovno odvisnost oblike $e^{-i \omega_\alpha t}$.
 
 Z upoštevanjem razvoja (enačbi~\ref{eq:pqrazvoj}) lahko zapišemo še energijo 
 polja -- \index{Hamiltonova funkcija}Hamiltonovo 
@@ -133,44 +128,43 @@ dV=\frac{1}{2}\sum_{\alpha}(p_{\alpha}^{2}+\omega_{\alpha}^{2}q_{\alpha}^{2}).
 Enačbi~(\ref{4.8}) in (\ref{4.9}) kažeta, da lahko elektromagnetno polje v votlini
 obravnavamo kot sistem neodvisnih harmonskih oscilatorjev\index{Harmonski oscilator}. 
 Pri tem se koeficienti razvoja $p_{\alpha}$ in $q_{\alpha}$ obnašajo kot
-impulzi in koordinate. 
+gibalne količine in koordinate. 
 
-
-Prehod v kvantno mehaniko dosežemo tako, da klasičnim spremenljivkam impulza in koordinate
-priredimo operatorje $\hat{p}_{\alpha}$ in $\hat{q}_{\alpha}$,
+Prehod v kvantno mehaniko dosežemo tako, da klasičnim spremenljivkam gibalne količine
+in koordinate priredimo operatorje $\hat{p}_{\alpha}$ in $\hat{q}_{\alpha}$,
 ki morajo zadoščati komutacijskim pravilom 
 \begin{equation}
 [\hat{q}_{\alpha},\hat{p}_{\beta}]=i\hbar \delta_{\alpha, \beta}.
 \label{4.10}
 \end{equation}
 
-
 Iz kvantne mehanike vemo, da so lastne vrednosti energije harmonskega oscilatorja, 
 opisanega s Hamiltonianom (enačba~\ref{4.9}), enake
 \boxeq{4.11}{
-W_{n,\alpha}=\hbar\omega_{\alpha}(n_{\alpha}+\frac{1}{2}), \quad n_{\alpha}=1,\;2,\ldots
+W_{n,\alpha}=\hbar\omega_{\alpha}(n_{\alpha}+\frac{1}{2}), \quad n_{\alpha}= 0, 1, 2 \ldots
 }
+{\bf Razliki energije harmonskega oscilatorja, če se $n_{\alpha}$
+spremeni za 1, pravimo foton.}\index{Foton} Energija
+fotona je torej enaka $\hbar \omega$, $n_\alpha$ pa predstavlja število fotonov z dano energijo. 
+
 Celotna energija kvantiziranega elektromagnetnega polja v votlini
-je torej 
+je tako 
 \beq
 W=\sum_{\alpha}\hbar\omega_{\alpha}n_{\alpha},
 \eeq
 pri čemer smo izpustili ničelno energijo. Izpuščali jo bomo tudi v nadaljevanju, saj
 je to energija osnovnega stanja, ki se ne more sprostiti. 
 
-
-{\bf Razliki energije harmonskega oscilatorja, če se $n_{\alpha}$
-spremeni za 1, pravimo foton.}\index{Foton} Iz same konstrukcije vidimo,
+Iz same konstrukcije fotona vidimo,
 da je pojem fotona vezan na določen opis elektromagnetnega polja --
 reprezentacijo. V njej na primer vprašanje, kje se foton nahaja, očitno
 nima smisla.
-
 
 \section{Sevanje črnega telesa}
 
 Obravnavajmo sevanje v votlini, ki je v toplotnem ravnovesju s stenami s temperaturo
 $T$. Iz statistične fizike vemo, da verjetnost $P$, da je v izbranem stanju 
-votline $\alpha$ $n_{\alpha}$ fotonov, zapišemo s kanonično porazdelitvijo
+votline $\alpha$ število fotonov enako $n_{\alpha}$, zapišemo s kanonično porazdelitvijo
 \begin{equation}
 P(n_{\alpha})=\frac{e^{-W_{n,\alpha}/k_BT}}{\sum_{n_{\alpha}}e^{-W_{n,\alpha}/k_BT}} = 
 \frac{e^{-\beta\hbar\omega_{\alpha}n_{\alpha}}}
@@ -184,16 +178,12 @@ v stanju $\alpha$ je potem\index{Sevanje črnega telesa}
 \overline{n_{\alpha}}=\sum_{n_{\alpha}}n_{\alpha}P(n_{\alpha})=\frac{1}{e^{\beta\hbar\omega_{\alpha}}-1}.
 \label{4.13}
 \end{equation}
-S tem izrazom lahko tudi verjetnost $P(n)$ zapišemo nekoliko drugače
-\begin{equation}
-P(n)=\frac{\overline{n}^{n}}{(1+\overline{n})^{1+n}}.
-\label{4.14}
-\end{equation}
+
 Ravnovesno gostoto energije elektromagnetnega polja v votlini na
 frekvenčni interval $u$ dobimo tako, da povprečno energijo posameznega
 stanja $n_{\alpha}\hbar\omega_{\alpha}$ pomnožimo s številom stanj
 na frekvenčnem intervalu, to je, z gostoto stanj $\varrho (\omega)$ 
-(enačba~ref{4.4})
+(enačba~\ref{4.4})
 \begin{equation}
 u(\omega)\, d\omega=\hbar\omega\overline{n}\, \rho(\omega)\, 
 d\omega=\frac{\hbar}{\pi^{2}c^{3}}\frac{\omega^{3}\, d\omega}{e^{\beta\hbar\omega}-1}.
@@ -212,13 +202,14 @@ na interval valovne dolžine
 \beq
 u(\lambda)=\frac{8 \pi h c}{\lambda^5}\frac{1}{e^{\beta h c/\lambda}-1}.
 \eeq
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=7truecm]{slike/05_Planck.png}
+\def\svgwidth{100truemm} 
+%\input{slike/05_Planck.pdf_tex}
 \caption{Planckov spekter za sevanje črnega telesa pri različnih temperaturah}
 \label{fig:Planck}
 \end{figure}
-
 
 \section{Absorpcija, spontano in stimulirano sevanje}
 
