@@ -4,7 +4,7 @@
 Osnovni gradnik vsakega laserja je resonator. V njem je vzbujeno lastno valovanje,
 ki skozi delno prepustno steno resonatorja izhaja iz sistema. V tem poglavju bomo 
 najprej spoznali optične resonatorje in kriterije za njihovo stabilno delovanje,
-nato pa izračunali lastne frekvence ter povezali širino črt z izgubami v sistemu. 
+nato pa izračunali lastne frekvence resonatorja ter povezali širino črt z izgubami v sistemu. 
 
 \section{Odprti resonatorji}
 Optični resonatorji\index{Resonator} so votline, v katerih je mogoče 
@@ -18,7 +18,7 @@ resonatorja. Zaradi dušenja imajo lastne frekvence končno frekvenčno oziroma 
 
 Optične resonatorje uporabljamo predvsem v dva namena:
 \begin{enumerate}
-\item V resonatorjih lahko z razmeroma šibkim zunanjim vzbujanjem nastane velika
+\item V resonatorjih lahko ob razmeroma šibkem zunanjem vzbujanju nastane velika
 električna poljska jakost pri resonančni frekvenci. Za vzdrževanje
 konstantne amplitude lastnega nihanja mora zunanji vir zgolj pokrivati izgube
 v resonatorju. Če so te majhne, je zunanji vir lahko šibek, polje
@@ -31,7 +31,8 @@ v nadaljevanju poglavja.
 
 Resonatorje poznamo z različnih področij, na primer akustične pri glasbilih ali 
 mikrovalovne in radijske. V mikrovalovnem področju, kjer so valovne dolžine valovanja
-okoli 1 cm, so resonatorji zaprte kovinske votline z dimenzijami, ki so primerljive z 
+okoli $1~\si{\centi\metre}$, 
+so resonatorji zaprte kovinske votline z dimenzijami, ki so primerljive z 
 valovno dolžino vzbujenega valovanja. Resonančne frekvence so v takem resonatorju 
 med seboj dobro ločene in ni težko doseči enega samega nihanja v izbranem 
 frekvenčnem intervalu.
@@ -89,7 +90,7 @@ dimenzija resonatorja. Lastne frekvence so
 \omega_{l,m,n}=c|\mathbf{k}_{l,m,n}|.\label{eq:omega-votlina}
 \end{equation}
 Dolžina resonatorja $L$ je velika v primerjavi z $\lambda$ in zato je $n$
-veliko število. Če prečnih sten ni, mora biti $\mathbf{k}$ približno
+zelo veliko število. Če prečnih sten ni, mora biti $\mathbf{k}$ približno
 vzporeden z osjo $z$, zato morata biti $l$ in $m$ majhna. Tedaj
 lahko velikost valovnega vektorja razvijemo in frekvenco zapišemo kot
 \begin{equation}
@@ -101,8 +102,8 @@ lastne frekvence odprtih optičnih resonatorjev odvisne predvsem od
 števila vozlov v vzdolžni smeri. To število je navadno veliko, med $10^{5}$
 in $10^{7}$. Možna so tudi lastna nihanja z nekaj vozli v prečni
 smeri, ki pa le malo vplivajo na lastne frekvence. Zato bomo v nadaljevanju
-obravnavali predvsem lastna stanja brez vozlov v prečni smeri, ki
-jih bomo označili z enim samim indeksom $n$.
+obravnavali predvsem lastna stanja brez vozlov v prečni smeri in
+jih označili z enim samim indeksom $n$.
 
 Razlika med frekvencama dveh zaporednih lastnih nihanj\index{Lastne frekvence resonatorja} 
 $n$ in $n+1$ je
@@ -120,7 +121,7 @@ biti izpolnjena dva pogoja:
 
 \begin{enumerate} 
 \item Snop geometrijskih žarkov mora ostati po mnogih odbojih ujet med zrcaloma resonatorja.\\
-\item Polmer zrcala mora biti večji od polmera uklonsko razširjenega snopa, ki izhaja iz nasprotnega zrcala. 
+\item Polmer zrcala mora biti večji od polmera uklonsko razširjenega snopa, ki se širi od nasprotnega zrcala. 
 \end{enumerate}
 
 Resonatorjem, ki zadoščajo gornjima pogojema, pravimo stabilni resonatorji\index{Stabilnost resonatorja}.
@@ -178,7 +179,7 @@ kjer je $\delta = kL\cos{\vartheta}$, $L$ razmik med zrcaloma, $\vartheta$ vpadn
 $k$ pa valovni vektor svetlobe.
 \end{definition}
 
-Prvemu pogoju stabilnosti ustrezajo v Fabry-Perotovem interferometru
+Prvemu pogoju za stabilnost ustrezajo v Fabry-Perotovem interferometru
 le žarki, ki so natanko pravokotni na zrcali. Čim sta zrcali le
 malo nevzporedni, stabilnih žarkov sploh ni več. Tako imenovani planparalelni 
 interferometer\index{Resonator!planparalelni} je tako na meji stabilnosti. Z izpolnjevanjem drugega
@@ -193,13 +194,13 @@ osi.
 
 \section{Gaussovi snopi v resonatorjih}
 V stabilnih resonatorjih s konkavnima zrcaloma pričakujemo, da so
-lastna valovanja omejena na bližino osrednje osi in zrcali mnogo 
+lastna valovanja omejena na bližino osrednje osi in zrcali znatno 
 večji od polmera lastnega nihanja. Tedaj lahko za obravnavo
 električnega polja uporabimo obosno valovno\index{Obosna valovna enačba} 
 enačbo (enačba~\ref{eq:obosna-valovna-enacba}). Upoštevajmo še zahtevo,
 da svetloba po odboju od zrcala konstruktivno interferira sama s sabo.
-Od tod izhaja robni pogoj, ki pravi, da valovna fronta stoječega valovanja na 
-zrcalu sovpada s površino zrcala, električno polje na površini zrcala
+Od tod izhaja robni pogoj, ki pravi, da se valovna fronta stoječega valovanja na 
+zrcalu ujema z obliko površine zrcala, električno polje na površini zrcala
 pa je približno enako nič.
 
 \begin{figure}[h]
@@ -217,10 +218,10 @@ V prečni smeri omejene rešitve obosne enačbe smo našli v obliki potujočih
 Gaussovih snopov\index{Gaussov snop} (enačba~\ref{eq:gaussov-snop}). 
 Podobno kot zapišemo stoječe valovanje na vrvi kot
 vsoto valovanj v nasprotnih smereh
-lahko stoječe snope zapišemo kot s superpozicijo snopov, ki se širijo v različnih smereh ob osi. 
+lahko stoječe snope zapišemo s superpozicijo snopov, ki se širijo v različnih smereh ob osi. 
 Da zadostimo robnim pogojem na zrcalih, se mora krivinski radij snopa ujemati s
 krivinskima radijema zrcal $R_{1}$ in $R_{2}$ (slika \ref{fig:Gaussov-snop-v-resonatorju}).
-Pri tem sta neznanki polmer grla snopa, ki je podan s parametrom $z_{0}$,
+Pri tem sta neznanki polmer grla snopa $w_0$, ki je povezan s parametrom $z_{0}$,
 in lega grla. 
 
 Postavimo izhodišče osi $z$ v grlo, kot smo
@@ -254,8 +255,8 @@ v obliki stabilnostnega kriterija\index{Stabilnost resonatorja}
 Resonatorji, ki zadoščajo gornjemu pogoju, so stabilni. 
 
 \begin{definition}
-Izhajajoč iz pogoja, da se na zrcalih krivinski radij valovnih front snopa ujema s krivinjskim
-radijem zrcal (enačbi~\ref{eq:krivinski1} in \ref{eq:krivinski}) izpelji 
+Izhajajoč iz pogoja, da se na zrcalih krivinski radij valovnih front snopa ujema s krivinskim
+radijem zrcal (enačbi~\ref{eq:krivinski1} in \ref{eq:krivinski}), izpelji 
 kriterij za stabilno delovanje resonatorja 
 (enačba~\ref{eq:stabilnost}).
 \end{definition}
@@ -313,18 +314,18 @@ za $w_1/w_0=\sqrt{2}$.
 \end{definition}
 
 Pri dejanskem načrtovanju laserjev velja dodatna omejitev, saj želimo 
-ojačevalno sredstvo, ki je v resonatorju, čim boljše izrabiti. Pogosto je zato 
+ojačevalno sredstvo, ki je v resonatorju, čim bolj izkoristiti. Pogosto je zato 
 polmer grla snopa razmeroma velik. Iz enačbe~(\ref{eq:grlo_v_res})
 sledi, da mora biti v tem primeru velik tudi krivinski radij zrcal. S tem
 pridobimo na ojačanju, po drugi strani pa se nekoliko poslabša stabilnost.
 
 Poglejmo primer. Naj bo dolžina resonatorja laserja $L=1~\si{\metre}$ in valovna
-dolžina $\lambda = 633$~nm. Tedaj je v konfokalni geometriji po enačbi~(\ref{eq:grlo_v_res})
-polmer grla $w_{0}=0,32$~mm. Premer razelektritvene cevi je navadno
+dolžina $\lambda = 633~\si{\nano\metre}$. Tedaj je v konfokalni geometriji po enačbi~(\ref{eq:grlo_v_res})
+polmer grla $w_{0}=0,32~\si{\milli\metre}$. Premer razelektritvene cevi je navadno
 nekaj milimetrov in približno tako debel mora biti tudi svetlobni
 snop, če naj dobro izkoristi ojačanje zaradi stimuliranega sevanja.
-Da bi pri isti dolžini laserja dobili grlo s premerom 2~mm, moramo vzeti
-zrcali s krivinskim radijem okoli 50~m. Primer kaže, da že majhna ukrivljenost 
+Da bi pri isti dolžini laserja dobili grlo s premerom $2~\si{\milli\metre}$, moramo vzeti
+zrcali s krivinskim radijem okoli $50~\si{\metre}$. Primer kaže, da že majhna ukrivljenost 
 zrcal zagotovi dokaj ozke snope.
 
 \begin{remark}
@@ -387,7 +388,7 @@ A & B\\
 C & D
 \end{array}\right],
 \eeq
-kompleksni krivinski radij po prehodu pa je enak začetnemu kompleksnemu radiju
+kompleksni krivinski radij po obhodu pa je enak začetnemu kompleksnemu radiju
 \beq
 q_2 = \frac{Aq+B}{Cq+D} = q.
 \eeq
@@ -426,14 +427,14 @@ da se mora faza snopa pri enem obhodu
 (preletu resonatorja v obeh smereh) spremeniti za mnogokratnik
 $2\pi$. Fazo za osnovni snop zapišemo po enačbi~(\ref{eq:gaussov-snop})\index{Gouyeva faza}
 \begin{equation}
-kz+\frac{kr^{2}}{2R} -\eta(z) = kz-\arctan \left(\frac{z}{z_{0}}\right),
+\phi = kz+\frac{kr^{2}}{2R} -\eta(z) = kz-\arctan \left(\frac{z}{z_{0}}\right),
 \label{eq:fazag}
 \end{equation}
 pri čemer  gledamo valovanje na osi, pri $r=0$. 
 Razlika faze pri enem preletu je 
 \begin{equation}
 \frac{\omega_{n}}{c}L-\left[\arctan \left(\frac{z_{2}}{z_{0}}\right)-
-\arctan\left(\frac{z_{1}}{z_{0}}\right)\right]=n\pi
+\arctan\left(\frac{z_{1}}{z_{0}}\right)\right]=n\pi.
 \label{eq:fazan}
 \end{equation}
 Pri tem smo zanemarili, da lahko pride do dodatne majhne spremembe
@@ -618,7 +619,7 @@ Potem sledi iz enačbe~(\ref{taulambda})
 \eeq
 Do istega rezultata pridemo tudi z razvojem izraza za prepustnost Fabry-Perotovega 
 interferometra\index{Fabry-Perotov interferometer} (enačba~\ref{eq:Fabry-Perot-prepustnost})
-okoli vrha pri $\omega_{n}$:
+okoli vrha pri $\omega_{n}$
 \begin{equation}
 T=\frac{1}{1+\frac{4{\cal R}}{(1-{\cal R})^{2}}\sin^{2}L\frac{(\omega-\omega_{n})}{c}}\approx 
 \frac{1}{1+\left[\frac{2}{(1-{\cal R})}\frac{L}{c}(\omega-\omega_{n})\right]^{2}},
@@ -659,7 +660,7 @@ K(P_{1},P_{2}) = -\frac{i}{2\lambda}\frac{e^{ikr}(1+\cos\vartheta)}{r},
 \eeq
 ki predstavlja jedro integralske enačbe. Polje na prvem zrcalu mora
 biti na enak način povezano s poljem na drugem. Če naj zapisano polje predstavlja lastno nihanje
-resonatorja, mora biti po dveh odbojih sorazmerno začetnemu polju:
+resonatorja, mora biti po dveh odbojih sorazmerno začetnemu polju
 \begin{equation}
 E_{1}(P)=\gamma\int_{1}\int_{2}E_{1}(P_{1})K(P_{1},P_{2})K(P_{2},P_1)\, dS_{1}\, dS_{2}.
 \label{3.71}
@@ -785,295 +786,295 @@ pride do Braggovega odboja (f).
 \label{fig:resonatorji}
 \end{figure}
 
-% \section{*Sklopitev resonatorja z okolico}
-% Na začetku poglavja smo omenili, da resonatorjev ne uporabljamo samo pri 
-% izdelavi laserjev, ampak lahko služijo tudi kot frekvenčni in
-% prostorski filtri za svetlobno valovanje. Povezavo med lastnimi nihanji
-% resonatorja in prepustnostjo ter odbojnostjo za valovanje, ki na resonator
-% vpada, bomo poiskali s formalizmom sklapljanja valovanj\index{Sklopitev valovanj}, 
-% ki je neke vrste perturbacijska analiza in je pogosto zelo uporaben.
-% 
-% Začnimo z resonatorjem z idealno odbojnimi stenami brez notranjih izgub. Stoječe
-% lastno valovanje v resonatorju zapišemo kot produkt krajevnega in časovnega
-% dela
-% \begin{equation}
-% E(\mathbf{r},t)=f(t)g(\mathbf{r}).
-% \label{3.31}
-% \end{equation}
-% Krajevni del $g(\mathbf{r})$ naj bo normaliziran tako, da je $\int g^{2}dV=1$. Iz valovne
-% enačbe (enačba~\ref{eq:valovna-skalarna}) sledi, da mora časovni del zadoščati 
-% nihajni enačbi drugega reda
-% \begin{equation}
-% \frac{\partial^2 f}{\partial t^2}+\omega_{n}^{2}f= \ddot{f} + \omega_{n}^{2}f=0.
-% \label{3.32}
-% \end{equation}
-% Vpeljemo novo kompleksno spremenljivko $a$, ki je kombinacija funkcije $f$ in njenega
-% časovnega odvoda
-% \begin{equation}
-% a=\sqrt{\frac{\epsilon_{0}}{2}}(f+\frac{i}{\omega_{n}}\dot{f}).
-% \label{3.33}
-% \end{equation}
-% Izbira predfaktorja bo razvidna v nadaljevanju. 
-% Z odvajanjem in uporabo nihajne enačbe (enačba~\ref{3.32}) ugotovimo, da za $a$ velja 
-% preprosta diferencialna enačba 
-% \begin{equation}
-% \dot{a}=-i\omega_{n}a.
-% \label{3.34}
-% \end{equation}
-% Funkcija $a$ ima preprosto odvisnost od časa $e^{-i\omega_{n}t}$. 
-% 
-% Zapišimo elektromagnetno energijo v resonatorju. Električni
-% del energije polja, ki je ravno polovica celotne energije, zapišemo kot
-% \beq
-% W_e = \frac{1}{2}\varepsilon_0 \int E^2 dV = \frac{1}{2}\epsilon_{0}f^{2}
-% \int g^{2}dV = \frac{1}{4} (a+a^{*})^2.
-% \eeq
-% V spremenljivki $a$ in konjugirani spremenljivki $a^{*}$ lahko prepoznamo 
-% klasično obliko kreacijskih in anihilacijskih operatorjev v kvantno-mehanskem 
-% opisu harmonskega oscilatorja. 
-% 
-% Celotna energija lastnega nihanja resonatorja je po analogiji enaka
-% \begin{equation}
-% W=|a|^2.
-% \label{3.35}
-% \end{equation}
-% Vpeljana nova spremenljivka $a(t)$ je sorazmerna z $e^{-i\omega_{n}t}$, 
-% zato ji pravimo tudi komponenta amplitude s pozitivno frekvenco. 
-% Prednost spremenljivke $a$ je v preprostejših enačbah, ki so le prvega reda. 
-% 
-% Do zdaj smo obravnavali resonator brez izgub. Poglejmo si še primer z izgubami. 
-% Celotne izgube resonatorja lahko opišemo z dodatnim členom v enačbi~(\ref{3.34})
-% \begin{equation}
-% \dot{a}=-i\omega_{n}a-\frac{1}{\tau}a.
-% \label{3.36}
-% \end{equation}
-% V taki obliki lahko zapišemo enačbo le v primeru, če so izgube majhne. Če niso, 
-% je treba uporabiti navadno nihajno enačbo drugega reda. Gornji približek
-% namreč ne vsebuje zmanjšanja nihajne frekvence pri velikem dušenju.
-% Prehod na dve nesklopljeni enačbi prvega reda za $a$ in $a^*$
-% je točen le, kadar ni izgub. Izgube sklopijo enačbi za $a$ in $a^{\ast}$, 
-% vendar smo v našem približku to sklopitev zanemarili.
-% 
-% Naj bo odbojnost enega zrcala resonatorja nekoliko manjša od 1. Izgube v resonatorju 
-% se zato povečajo za (enačba~\ref{eq:taucca}) $1/\tau=c/(4L)(1-{\cal R})$. Druga posledica
-% zrcala z zmanjšano odbojnostjo pa je sklopitev resonatorja z okolico. To pomeni, 
-% da valovanje izhaja iz resonatorja, po drugi strani pa to pomeni tudi, da je 
-% lastno nihanje mogoče vzbujati z valovanjem, ki na resonator vpada.
-% 
-% Naj $s_{+}$ opiše snop valovanja, ki vpada na resonator. Amplituda $s_{+}$
-% naj bo izbrana tako, da je $|s_{+}|^{2}$ enako moči vpadnega valovanja. Zaenkrat
-% tudi zanemarimo notranje izgube resonatorja. Potem lahko
-% zapišemo 
-% \begin{equation}
-% \dot{a}=-i\omega_{n}a-\frac{1}{\tau}a+\kappa s_{+},
-% \label{3.37}
-% \end{equation}
-% kjer je $\kappa$ sklopitveni koeficient med vpadnim valovanjem in
-% amplitudo lastnega nihanja. Koeficient $\kappa$ je določen
-% s prepustnostjo zrcala, ki pa je vsebovana tudi v $1/\tau$. Koeficient
-% $\kappa$ torej ni neodvisen in poiščimo zvezo med $\kappa$ in $1/\tau$.
-% 
-% Naj ima vpadno valovanje frekvenco $\omega$. Tedaj lahko iz enačbe~(\ref{3.37}) 
-% izračunamo amplitudo nihanja v stacionarnem stanju. Da dobimo konstantno amplitudo, 
-% mora imeti nihanje enako frekvenco kot vpadni val. Potem dobimo
-% \begin{equation}
-% a=\frac{\kappa s_{+}}{i(\omega_{n}-\omega)+1/\tau}.
-% \label{3.38}
-% \end{equation}
-%  
-% Označimo zdaj del valovanja, ki se odbije ali izhaja od resonatorja, s $s_{-}$.
-% Če vpadnega vala ni, energija nihanja pojema zaradi odtekanja v $s_{-}$.
-% Ohranitev energije da 
-% \begin{equation}
-% -\frac{dW}{dt}=-\frac{d}{dt}|a|^{2}=\frac{2}{\tau}|a|^{2}=|s_{-}|^{2}
-% \label{3.39}
-% \end{equation}
-% ali 
-% \begin{equation}
-% |s_{-}|=\sqrt{\frac{2}{\tau}}|a|,
-% \label{3.40}
-% \end{equation}
-% kjer smo fazo $s_{-}$ priredili z izbiro referenčne ravnine, v kateri
-% opazujemo $s_{-}$.
-% 
-% Ob prisotnosti vpadnega vala $s_{+}$ lahko odbiti val zapišemo kot
-% vsoto direktnega odboja vpadnega vala $s_{+}$ in prispevka iz resonatorja
-% \begin{equation}
-% s_{-}=rs_{+}+\sqrt{\frac{2}{\tau}}a,
-% \label{3.41}
-% \end{equation}
-% kjer $r$ zaenkrat še ne poznamo. Ker ni notranjih izgub, mora bit v 
-% stacionarnem stanju vpadna moč enaka odbiti 
-% \begin{equation}
-% |s_{+}|^{2}=|s_{-}|^{2}.
-% \label{3.42}
-% \end{equation}
-% Uporabimo še izraz za stacionarno vrednost $a$  (enačba~\ref{3.38}) in dobimo
-% enakost 
-% \begin{equation}
-% r^{2}+\frac{2(\tau_{e}\kappa^{2}+r\kappa\sqrt{2\tau_{e}})}{1+\tau_{e}^{2}(\omega_{n}-\omega)^{2}}=1.
-% \label{3.43}
-% \end{equation}
-%  Veljati mora pri vsaki frekvenci, to je pri vsaki vrednosti imenovalca
-% ulomka. Zato mora biti $r^{2}=1$ in $\tau_{e}\kappa=-r\sqrt{2\tau_{e}}$.
-% Ker sta $\tau_{e}$ in $\kappa$ pozitivna, je $r=-1$ in 
-% \begin{equation}
-% \kappa=\sqrt{\frac{2}{\tau_{e}}}\;\;.\label{3.44}
-% \end{equation}
-%  Odbito valovanje lahko torej zapišemo 
-% \begin{equation}
-% s_{-}=-s_{+}+\sqrt{\frac{2}{\tau_{e}}}a\;\;.\label{3.45}
-% \end{equation}
-% 
-% Z upoštevanjem notranjih izgub amplituda nihanja uboga enačbo 
-% \begin{equation}
-% \dot{a}=-i\omega_{n}a-(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e}})a+\sqrt{\frac{2}{\tau_{e}}}s_{+}\;\;.
-% \label{3.46}
-% \end{equation}
-%  Enačbi (\ref{3.45}) in (\ref{3.46}) sta osnovna izraza za sklapljanje
-% resonatorjev z enim vhodom. Za primer uporabe izračunajmo odbojnost
-% resonatorja $s_{-}/s_{+}$ kot funkcijo frekvence vpadnega vala. V
-% enačbo~(\ref{3.45}) postavimo izraz za stacionarno vrednost amplitude
-% nihanja 
-% \begin{equation}
-% a=\frac{\sqrt{\frac{2}{\tau_{e}}}s_{+}}{i(\omega_{n}-\omega)+(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e}})}
-% \label{3.47}
-% \end{equation}
-%  pa imamo 
-% \begin{equation}
-% \frac{s_{-}}{s_{+}}=\frac{\frac{1}{\tau_{0}}-\frac{1}{\tau_{e}}-i(\omega_{n}-\omega)}{\frac{1}{\tau_{0}}
-% +\frac{1}{\tau_{e}}+i(\omega_{n}-\omega)}\;\;.\label{3.48}
-% \end{equation}
-%  Daleč od resonance je odbojnost -1. V resonanci, $\omega_{n}=\omega$,
-% odboja ni, kadar je $\tau_{e}=\tau_{0}$. Takrat je moč, ki gre iz
-% vpadnega valovanja v vzbujanje resonatorja, največja in je sklopitev,
-% ki jo meri $\tau_{e}$, popolnoma prilagojena izgubam. Taka prilagoditev
-% je analogna zahtevi, da mora biti impedanca bremena na koncu valovoda
-% ali koaksialnega kabla enaka impedanci valovoda oziroma kabla.
-% 
-% Če sta obe zrcali resonatorja delno prepustni, kot na primer pri običajnem
-% Fabry-Perotovem interferometru, bo enačba za amplitudo nihanja 
-% \begin{equation}
-% \dot{a}=-i\omega_{n}a-(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e1}}+\frac{1}{\tau_{e2}})+\kappa_{1}s_{+1}+
-% \kappa_{2}s_{+2}\;\;.\label{3.49}
-% \end{equation}
-%  $s_{+1}$ in $s_{+2}$ sta valovanji, ki vpadata z ene in druge strani.
-% Izgube zaradi končne prepustnosti so še vedno 
-% \begin{equation}
-% \frac{1}{\tau_{ei}}=\frac{c}{4L}(1-{\cal R}_{i})\;\;,\mbox{\hskip1cm}i=1,2\label{3.50}
-% \end{equation}
-%  S podobnim razmislekom kot prej, s tem da je najprej eno, nato drugo
-% vpadno valovanje nič, dobimo 
-% \begin{equation}
-% \kappa_{i}=\sqrt{\frac{2}{\tau_{ei}}}\;\;.\label{3.51}
-% \end{equation}
-%  Prepustnost resonatorja, to je razmerje med močjo vpadnega valovanja
-% z ene strani in izhodnega z druge, bo 
-% \begin{equation}
-% T=\frac{|s_{-2}|^{2}}{|s_{+1}|^{2}}=\frac{2}{\tau_{e2}}\frac{|a|^{2}}{|s_{+1}|^{2}}=\frac{4\tau^{2}/
-% \tau_{e1}\tau_{e2}}{1+\tau^{2}(\omega_{n}-\omega)^{2}}\;\;,\label{3.52}
-% \end{equation}
-%  kjer je $1/\tau=1/\tau_{0}+1/\tau_{e1}+1/\tau_{e2}$. Če ni notranjih
-% izgub, je prepustnost v resonanci 
-% \begin{equation}
-% T=\frac{4/\tau_{e1}\tau_{e2}}{(1/\tau_{e1}+1/\tau_{e2})^{2}}\;\;.\label{3.53}
-% \end{equation}
-%  Prepustnost je v resonanci popolna, če sta obe zrcali enaki, $\tau_{e1}=\tau_{e2}$.
-% Gornja izraza se ujemata z znanim izrazom 
-% za prepustnost Fabry-Perotovega interferometra v bližini resonanc,
-% če so izgube in prepustnost zrcal majhne (enačba~\ref{eq:Fabry-Perot-prepustnost}).
-% 
-% Resonatorji imajo mnogo lastnih nihanj. Očitno veljajo gornji izrazi
-% za vsako posebej in dobimo celoten odziv resonatorja na poljubno vpadno
-% valovanje kot vsoto po vseh lastnih nihanjih. Pri tem ne smemo pozabiti,
-% da mora vpadno valovanje, ki se sklaplja z izbranim lastnim nihanjem,
-% imeti prostorsko odvisnost, ki ustreza lastnemu stanju. V primeru
-% stabilnih resonatorjev iz prejšnjih razdelkov mora torej biti vpadni
-% snop Gaussov z enakim $w_{0}$ in istega prečnega reda kot resonatorsko
-% stanje. Če vpadno valovanje ni tako, ga moramo najprej razviti po
-% Gaussovih snopih, ki ustrezajo resonatorju.
-% 
-% V praksi pri zahtevnejših interferometričnih meritvah je za to, da
-% vzbudimo le eno resonanco, potrebno vpadni snop prilagoditi resonatorju,
-% to je, polmer na vhodnem zrcalu mora biti enak polmeru lastnega nihanja,
-% krivinski radij vpadne valovne fronte pa enak krivinskemu radiju zrcala.
-% Obratno pa resonator deluje ne le kot frekvenčni filter, ampak tudi
-% kot prostorski. Recimo, da ima vpadno valovanje isto frekvenco kot
-% eno od nihanj resonatorja. Prepuščeno valovanje bo imelo tedaj obliko
-% Gaussovega snopa, kot jo določa resonator, ne glede na obliko vpadnega
-% snopa.
-% 
-% Gornji način obravnave resonatorjev in sklopitve z vpadnim valovanjem
-% je posebej prikladen za račun nestacionarnega obnašanja in za primer,
-% ko je resonator napolnjen z nelinearnim sredstvom.
-% 
-% 
-% \section{*Sklopitev dveh resonatorjev}
-% 
-% \begin{figure}
-%  \caption{Resonatorja, sklopljena s polprepustnim zrcalom}
-% 
-% 
-% \label{sl3.5}\vskip7cm 
-% \end{figure}
-% 
-% 
-% Podobno kot sklopitev z zunanjim valovanjem lahko obravnavamo tudi
-% sklopitev med dvema resonatorjema. Imejmo dva resonatorja brez izgub,
-% sklopljena z delno prepustnim zrcalom, kot kaže slika (\ref{sl3.5}).
-% Sklopitev naj bo šibka, pa lahko zapišemo 
-% \begin{eqnarray}
-% \dot{a}_{1} & = & -i\omega_{1}a_{1}+\kappa_{12}a_{2}\nonumber \\
-% \dot{a}_{2} & = & -i\omega_{2}a_{2}+\kappa_{21}a_{1}\;\;.
-% \end{eqnarray}
-% 
-% Zaradi ohranitve energije sklopitvena koeficienta $\kappa_{12}$ in
-% $\kappa_{21}$ nista neodvisna. Vsota energij obeh resonatorjev mora
-% biti konstantna, zato 
-% \begin{eqnarray}
-% \frac{d}{dt}(|a_{1}|^{2}+|a_{2}|^{2}) & = & a_{1}\dot{a}_{1}^{*}+a_{1}^{*}\dot{a}_{1}+
-% a_{2}\dot{a}_{2}^{*}+a_{2}^{*}\dot{a}_{2}\nonumber \\
-%  & = & a_{1}^{*}\kappa_{12}a_{2}+a_{1}\kappa_{12}^{*}a_{2}^{*}+a_{2}^{*}\kappa_{21}a_{1}+
-%  a_{2}\kappa_{21}^{*}a_{1}^{*}\nonumber \\
-%  & = & 0\;\;.
-% \end{eqnarray}
-%  Od tu vidimo, da mora biti 
-% \begin{equation}
-% \kappa_{12}+\kappa_{21}^{*}=0\;\;.\label{3.56}
-% \end{equation}
-% 
-% Za primer na sliki (\ref{sl3.5}) znamo sklopitveni koeficient brez
-% težav izračunati. V drugem resonatorju imamo stoječe valovanje. Moč
-% tistega dela, ki potuje proti prvemu resonatorju, je polovica energije,
-% deljena s časom preleta od enega zrcala do drugega: 
-% \begin{equation}
-% |s_{+}|^{2}=\frac{1}{2}|a_{2}|^{2}\frac{c}{L}\;\;.\label{3.57}
-% \end{equation}
-%  Z upoštevanjem enačbe (\ref{3.44}) je 
-% \begin{equation}
-% \kappa_{12}a_{2}=\sqrt{\frac{2}{\tau_{e}}}\, s_{+}=\sqrt{\frac{c}{\tau_{e}L}}\, a_{2}\;\;,\label{3.58}
-% \end{equation}
-%  tako da je 
-% \begin{equation}
-% \kappa_{12}=\frac{c}{2L}\sqrt{1-{\cal R}}\;\;,\mbox{\hskip1cm}\kappa_{21}=-\kappa_{12}\;\;.\label{3.59}
-% \end{equation}
-% 
-% Zaradi sklopitve se spremenijo lastne frekvence. Poglejmo dva enaka
-% sklopljena resonatorja: 
-% \begin{eqnarray}
-% \dot{a}_{1} & = & -i\omega_{0}a_{1}+\kappa_{12}a_{2}\nonumber \\
-% \dot{a}_{2} & = & -i\omega_{0}a_{2}-\kappa_{12}a_{1}\;\;.
-% \end{eqnarray}
-%  Iščemo rešitve oblike $A_{i}e^{-i\omega t}$. Če to postavimo v gornji
-% diferencialni enačbi, dobimo homogen linearen sistem za $A_{1}$ in
-% $A_{2}$, ki je netrivialno rešljiv, če je determinanta enaka nič.
-% To nam da enačbo za frekvenco 
-% \begin{equation}
-% (\omega-\omega_{0})^{2}=\kappa_{12}^{2}\label{3.61}
-% \end{equation}
-%  in 
-% \begin{equation}
-% \omega_{1,2}=\omega_{0}\pm\kappa_{12}\;\;.\label{3.62}
-% \end{equation}
-%  Zaradi sklopitve sta se prej enaki frekvenci razcepili v dve, kot
-% smo lahko pričakovali.
+\section{*Sklopitev resonatorja z okolico}
+Na začetku poglavja smo omenili, da resonatorjev ne uporabljamo samo pri 
+izdelavi laserjev, ampak lahko služijo tudi kot frekvenčni in
+prostorski filtri za svetlobno valovanje. Povezavo med lastnimi nihanji
+resonatorja in prepustnostjo ter odbojnostjo za valovanje, ki na resonator
+vpada, bomo poiskali s formalizmom sklapljanja valovanj\index{Sklopitev valovanj}, 
+ki je neke vrste perturbacijska analiza in je pogosto zelo uporaben.
+
+Začnimo z resonatorjem z idealno odbojnimi stenami brez notranjih izgub. Stoječe
+lastno valovanje v resonatorju zapišemo kot produkt krajevnega in časovnega
+dela
+\begin{equation}
+E(\mathbf{r},t)=f(t)g(\mathbf{r}).
+\label{3.31}
+\end{equation}
+Krajevni del $g(\mathbf{r})$ naj bo normaliziran tako, da je $\int g^{2}dV=1$. Iz valovne
+enačbe (enačba~\ref{eq:valovna-skalarna}) sledi, da mora časovni del zadoščati 
+nihajni enačbi drugega reda
+\begin{equation}
+\frac{\partial^2 f}{\partial t^2}+\omega_{n}^{2}f= \ddot{f} + \omega_{n}^{2}f=0.
+\label{3.32}
+\end{equation}
+Vpeljemo novo kompleksno spremenljivko $a$, ki je kombinacija funkcije $f$ in njenega
+časovnega odvoda
+\begin{equation}
+a=\sqrt{\frac{\epsilon_{0}}{2}}(f+\frac{i}{\omega_{n}}\dot{f}).
+\label{3.33}
+\end{equation}
+Izbira predfaktorja bo razvidna v nadaljevanju. 
+Z odvajanjem in uporabo nihajne enačbe (enačba~\ref{3.32}) ugotovimo, da za $a$ velja 
+preprosta diferencialna enačba 
+\begin{equation}
+\dot{a}=-i\omega_{n}a.
+\label{3.34}
+\end{equation}
+Funkcija $a$ ima preprosto odvisnost od časa $e^{-i\omega_{n}t}$. 
+
+Zapišimo elektromagnetno energijo v resonatorju. Električni
+del energije polja, ki je ravno polovica celotne energije, zapišemo kot
+\beq
+W_e = \frac{1}{2}\varepsilon_0 \int E^2 dV = \frac{1}{2}\epsilon_{0}f^{2}
+\int g^{2}dV = \frac{1}{4} (a+a^{*})^2.
+\eeq
+V spremenljivki $a$ in konjugirani spremenljivki $a^{*}$ lahko prepoznamo 
+klasično obliko kreacijskih in anihilacijskih operatorjev v kvantno-mehanskem 
+opisu harmonskega oscilatorja. 
+
+Celotna energija lastnega nihanja resonatorja je po analogiji enaka
+\begin{equation}
+W=|a|^2.
+\label{3.35}
+\end{equation}
+Vpeljana nova spremenljivka $a(t)$ je sorazmerna z $e^{-i\omega_{n}t}$, 
+zato ji pravimo tudi komponenta amplitude s pozitivno frekvenco. 
+Prednost spremenljivke $a$ je v preprostejših enačbah, ki so le prvega reda. 
+
+Do zdaj smo obravnavali resonator brez izgub. Poglejmo si še primer z izgubami. 
+Celotne izgube resonatorja lahko opišemo z dodatnim členom v enačbi~(\ref{3.34})
+\begin{equation}
+\dot{a}=-i\omega_{n}a-\frac{1}{\tau}a.
+\label{3.36}
+\end{equation}
+V taki obliki lahko zapišemo enačbo le v primeru, če so izgube majhne. Če niso, 
+je treba uporabiti navadno nihajno enačbo drugega reda. Gornji približek
+namreč ne vsebuje zmanjšanja nihajne frekvence pri velikem dušenju.
+Prehod na dve nesklopljeni enačbi prvega reda za $a$ in $a^*$
+je točen le, kadar ni izgub. Izgube sklopijo enačbi za $a$ in $a^{\ast}$, 
+vendar smo v našem približku to sklopitev zanemarili.
+
+Naj bo odbojnost enega zrcala resonatorja nekoliko manjša od 1. Izgube v resonatorju 
+se zato povečajo za (enačba~\ref{eq:taucca}) $1/\tau=c/(4L)(1-{\cal R})$. Druga posledica
+zrcala z zmanjšano odbojnostjo pa je sklopitev resonatorja z okolico. To pomeni, 
+da valovanje izhaja iz resonatorja, po drugi strani pa to pomeni tudi, da je 
+lastno nihanje mogoče vzbujati z valovanjem, ki na resonator vpada.
+
+Naj $s_{+}$ opiše snop valovanja, ki vpada na resonator. Amplituda $s_{+}$
+naj bo izbrana tako, da je $|s_{+}|^{2}$ enako moči vpadnega valovanja. Zaenkrat
+tudi zanemarimo notranje izgube resonatorja. Potem lahko
+zapišemo 
+\begin{equation}
+\dot{a}=-i\omega_{n}a-\frac{1}{\tau}a+\kappa s_{+},
+\label{3.37}
+\end{equation}
+kjer je $\kappa$ sklopitveni koeficient med vpadnim valovanjem in
+amplitudo lastnega nihanja. Koeficient $\kappa$ je določen
+s prepustnostjo zrcala, ki pa je vsebovana tudi v $1/\tau$. Koeficient
+$\kappa$ torej ni neodvisen in poiščimo zvezo med $\kappa$ in $1/\tau$.
+
+Naj ima vpadno valovanje frekvenco $\omega$. Tedaj lahko iz enačbe~(\ref{3.37}) 
+izračunamo amplitudo nihanja v stacionarnem stanju. Da dobimo konstantno amplitudo, 
+mora imeti nihanje enako frekvenco kot vpadni val. Potem dobimo
+\begin{equation}
+a=\frac{\kappa s_{+}}{i(\omega_{n}-\omega)+1/\tau}.
+\label{3.38}
+\end{equation}
+ 
+Označimo zdaj del valovanja, ki se odbije ali izhaja od resonatorja, s $s_{-}$.
+Če vpadnega vala ni, energija nihanja pojema zaradi odtekanja v $s_{-}$.
+Ohranitev energije da 
+\begin{equation}
+-\frac{dW}{dt}=-\frac{d}{dt}|a|^{2}=\frac{2}{\tau}|a|^{2}=|s_{-}|^{2}
+\label{3.39}
+\end{equation}
+ali 
+\begin{equation}
+|s_{-}|=\sqrt{\frac{2}{\tau}}|a|,
+\label{3.40}
+\end{equation}
+kjer smo fazo $s_{-}$ priredili z izbiro referenčne ravnine, v kateri
+opazujemo $s_{-}$.
+
+Ob prisotnosti vpadnega vala $s_{+}$ lahko odbiti val zapišemo kot
+vsoto direktnega odboja vpadnega vala $s_{+}$ in prispevka iz resonatorja
+\begin{equation}
+s_{-}=rs_{+}+\sqrt{\frac{2}{\tau}}a,
+\label{3.41}
+\end{equation}
+kjer $r$ zaenkrat še ne poznamo. Ker ni notranjih izgub, mora bit v 
+stacionarnem stanju vpadna moč enaka odbiti 
+\begin{equation}
+|s_{+}|^{2}=|s_{-}|^{2}.
+\label{3.42}
+\end{equation}
+Uporabimo še izraz za stacionarno vrednost $a$  (enačba~\ref{3.38}) in dobimo
+enakost 
+\begin{equation}
+r^{2}+\frac{2(\tau_{e}\kappa^{2}+r\kappa\sqrt{2\tau_{e}})}{1+\tau_{e}^{2}(\omega_{n}-\omega)^{2}}=1.
+\label{3.43}
+\end{equation}
+ Veljati mora pri vsaki frekvenci, to je pri vsaki vrednosti imenovalca
+ulomka. Zato mora biti $r^{2}=1$ in $\tau_{e}\kappa=-r\sqrt{2\tau_{e}}$.
+Ker sta $\tau_{e}$ in $\kappa$ pozitivna, je $r=-1$ in 
+\begin{equation}
+\kappa=\sqrt{\frac{2}{\tau_{e}}}\;\;.\label{3.44}
+\end{equation}
+ Odbito valovanje lahko torej zapišemo 
+\begin{equation}
+s_{-}=-s_{+}+\sqrt{\frac{2}{\tau_{e}}}a\;\;.\label{3.45}
+\end{equation}
+
+Z upoštevanjem notranjih izgub amplituda nihanja uboga enačbo 
+\begin{equation}
+\dot{a}=-i\omega_{n}a-(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e}})a+\sqrt{\frac{2}{\tau_{e}}}s_{+}\;\;.
+\label{3.46}
+\end{equation}
+ Enačbi (\ref{3.45}) in (\ref{3.46}) sta osnovna izraza za sklapljanje
+resonatorjev z enim vhodom. Za primer uporabe izračunajmo odbojnost
+resonatorja $s_{-}/s_{+}$ kot funkcijo frekvence vpadnega vala. V
+enačbo~(\ref{3.45}) postavimo izraz za stacionarno vrednost amplitude
+nihanja 
+\begin{equation}
+a=\frac{\sqrt{\frac{2}{\tau_{e}}}s_{+}}{i(\omega_{n}-\omega)+(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e}})}
+\label{3.47}
+\end{equation}
+ pa imamo 
+\begin{equation}
+\frac{s_{-}}{s_{+}}=\frac{\frac{1}{\tau_{0}}-\frac{1}{\tau_{e}}-i(\omega_{n}-\omega)}{\frac{1}{\tau_{0}}
++\frac{1}{\tau_{e}}+i(\omega_{n}-\omega)}\;\;.\label{3.48}
+\end{equation}
+ Daleč od resonance je odbojnost -1. V resonanci, $\omega_{n}=\omega$,
+odboja ni, kadar je $\tau_{e}=\tau_{0}$. Takrat je moč, ki gre iz
+vpadnega valovanja v vzbujanje resonatorja, največja in je sklopitev,
+ki jo meri $\tau_{e}$, popolnoma prilagojena izgubam. Taka prilagoditev
+je analogna zahtevi, da mora biti impedanca bremena na koncu valovoda
+ali koaksialnega kabla enaka impedanci valovoda oziroma kabla.
+
+Če sta obe zrcali resonatorja delno prepustni, kot na primer pri običajnem
+Fabry-Perotovem interferometru, bo enačba za amplitudo nihanja 
+\begin{equation}
+\dot{a}=-i\omega_{n}a-(\frac{1}{\tau_{0}}+\frac{1}{\tau_{e1}}+\frac{1}{\tau_{e2}})+\kappa_{1}s_{+1}+
+\kappa_{2}s_{+2}\;\;.\label{3.49}
+\end{equation}
+ $s_{+1}$ in $s_{+2}$ sta valovanji, ki vpadata z ene in druge strani.
+Izgube zaradi končne prepustnosti so še vedno 
+\begin{equation}
+\frac{1}{\tau_{ei}}=\frac{c}{4L}(1-{\cal R}_{i})\;\;,\mbox{\hskip1cm}i=1,2\label{3.50}
+\end{equation}
+ S podobnim razmislekom kot prej, s tem da je najprej eno, nato drugo
+vpadno valovanje nič, dobimo 
+\begin{equation}
+\kappa_{i}=\sqrt{\frac{2}{\tau_{ei}}}\;\;.\label{3.51}
+\end{equation}
+ Prepustnost resonatorja, to je razmerje med močjo vpadnega valovanja
+z ene strani in izhodnega z druge, bo 
+\begin{equation}
+T=\frac{|s_{-2}|^{2}}{|s_{+1}|^{2}}=\frac{2}{\tau_{e2}}\frac{|a|^{2}}{|s_{+1}|^{2}}=\frac{4\tau^{2}/
+\tau_{e1}\tau_{e2}}{1+\tau^{2}(\omega_{n}-\omega)^{2}}\;\;,\label{3.52}
+\end{equation}
+ kjer je $1/\tau=1/\tau_{0}+1/\tau_{e1}+1/\tau_{e2}$. Če ni notranjih
+izgub, je prepustnost v resonanci 
+\begin{equation}
+T=\frac{4/\tau_{e1}\tau_{e2}}{(1/\tau_{e1}+1/\tau_{e2})^{2}}\;\;.\label{3.53}
+\end{equation}
+ Prepustnost je v resonanci popolna, če sta obe zrcali enaki, $\tau_{e1}=\tau_{e2}$.
+Gornja izraza se ujemata z znanim izrazom 
+za prepustnost Fabry-Perotovega interferometra v bližini resonanc,
+če so izgube in prepustnost zrcal majhne (enačba~\ref{eq:Fabry-Perot-prepustnost}).
+
+Resonatorji imajo mnogo lastnih nihanj. Očitno veljajo gornji izrazi
+za vsako posebej in dobimo celoten odziv resonatorja na poljubno vpadno
+valovanje kot vsoto po vseh lastnih nihanjih. Pri tem ne smemo pozabiti,
+da mora vpadno valovanje, ki se sklaplja z izbranim lastnim nihanjem,
+imeti prostorsko odvisnost, ki ustreza lastnemu stanju. V primeru
+stabilnih resonatorjev iz prejšnjih razdelkov mora torej biti vpadni
+snop Gaussov z enakim $w_{0}$ in istega prečnega reda kot resonatorsko
+stanje. Če vpadno valovanje ni tako, ga moramo najprej razviti po
+Gaussovih snopih, ki ustrezajo resonatorju.
+
+V praksi pri zahtevnejših interferometričnih meritvah je za to, da
+vzbudimo le eno resonanco, potrebno vpadni snop prilagoditi resonatorju,
+to je, polmer na vhodnem zrcalu mora biti enak polmeru lastnega nihanja,
+krivinski radij vpadne valovne fronte pa enak krivinskemu radiju zrcala.
+Obratno pa resonator deluje ne le kot frekvenčni filter, ampak tudi
+kot prostorski. Recimo, da ima vpadno valovanje isto frekvenco kot
+eno od nihanj resonatorja. Prepuščeno valovanje bo imelo tedaj obliko
+Gaussovega snopa, kot jo določa resonator, ne glede na obliko vpadnega
+snopa.
+
+Gornji način obravnave resonatorjev in sklopitve z vpadnim valovanjem
+je posebej prikladen za račun nestacionarnega obnašanja in za primer,
+ko je resonator napolnjen z nelinearnim sredstvom.
+
+
+\section{*Sklopitev dveh resonatorjev}
+
+\begin{figure}
+ \caption{Resonatorja, sklopljena s polprepustnim zrcalom}
+
+
+\label{sl3.5}\vskip7cm 
+\end{figure}
+
+
+Podobno kot sklopitev z zunanjim valovanjem lahko obravnavamo tudi
+sklopitev med dvema resonatorjema. Imejmo dva resonatorja brez izgub,
+sklopljena z delno prepustnim zrcalom, kot kaže slika (\ref{sl3.5}).
+Sklopitev naj bo šibka, pa lahko zapišemo 
+\begin{eqnarray}
+\dot{a}_{1} & = & -i\omega_{1}a_{1}+\kappa_{12}a_{2}\nonumber \\
+\dot{a}_{2} & = & -i\omega_{2}a_{2}+\kappa_{21}a_{1}\;\;.
+\end{eqnarray}
+
+Zaradi ohranitve energije sklopitvena koeficienta $\kappa_{12}$ in
+$\kappa_{21}$ nista neodvisna. Vsota energij obeh resonatorjev mora
+biti konstantna, zato 
+\begin{eqnarray}
+\frac{d}{dt}(|a_{1}|^{2}+|a_{2}|^{2}) & = & a_{1}\dot{a}_{1}^{*}+a_{1}^{*}\dot{a}_{1}+
+a_{2}\dot{a}_{2}^{*}+a_{2}^{*}\dot{a}_{2}\nonumber \\
+ & = & a_{1}^{*}\kappa_{12}a_{2}+a_{1}\kappa_{12}^{*}a_{2}^{*}+a_{2}^{*}\kappa_{21}a_{1}+
+ a_{2}\kappa_{21}^{*}a_{1}^{*}\nonumber \\
+ & = & 0\;\;.
+\end{eqnarray}
+ Od tu vidimo, da mora biti 
+\begin{equation}
+\kappa_{12}+\kappa_{21}^{*}=0\;\;.\label{3.56}
+\end{equation}
+
+Za primer na sliki (\ref{sl3.5}) znamo sklopitveni koeficient brez
+težav izračunati. V drugem resonatorju imamo stoječe valovanje. Moč
+tistega dela, ki potuje proti prvemu resonatorju, je polovica energije,
+deljena s časom preleta od enega zrcala do drugega: 
+\begin{equation}
+|s_{+}|^{2}=\frac{1}{2}|a_{2}|^{2}\frac{c}{L}\;\;.\label{3.57}
+\end{equation}
+ Z upoštevanjem enačbe (\ref{3.44}) je 
+\begin{equation}
+\kappa_{12}a_{2}=\sqrt{\frac{2}{\tau_{e}}}\, s_{+}=\sqrt{\frac{c}{\tau_{e}L}}\, a_{2}\;\;,\label{3.58}
+\end{equation}
+ tako da je 
+\begin{equation}
+\kappa_{12}=\frac{c}{2L}\sqrt{1-{\cal R}}\;\;,\mbox{\hskip1cm}\kappa_{21}=-\kappa_{12}\;\;.\label{3.59}
+\end{equation}
+
+Zaradi sklopitve se spremenijo lastne frekvence. Poglejmo dva enaka
+sklopljena resonatorja: 
+\begin{eqnarray}
+\dot{a}_{1} & = & -i\omega_{0}a_{1}+\kappa_{12}a_{2}\nonumber \\
+\dot{a}_{2} & = & -i\omega_{0}a_{2}-\kappa_{12}a_{1}\;\;.
+\end{eqnarray}
+ Iščemo rešitve oblike $A_{i}e^{-i\omega t}$. Če to postavimo v gornji
+diferencialni enačbi, dobimo homogen linearen sistem za $A_{1}$ in
+$A_{2}$, ki je netrivialno rešljiv, če je determinanta enaka nič.
+To nam da enačbo za frekvenco 
+\begin{equation}
+(\omega-\omega_{0})^{2}=\kappa_{12}^{2}\label{3.61}
+\end{equation}
+ in 
+\begin{equation}
+\omega_{1,2}=\omega_{0}\pm\kappa_{12}\;\;.\label{3.62}
+\end{equation}
+ Zaradi sklopitve sta se prej enaki frekvenci razcepili v dve, kot
+smo lahko pričakovali.
