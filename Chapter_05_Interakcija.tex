@@ -49,7 +49,7 @@ neodvisni polarizaciji.
  valovno enačbo v kocki s stranico $L$ in zadosti robnim pogojem idealno prevodnih sten votline.
 \end{definition}
 
-Preštejmo, koliko je lastnih nihanj v intervalu velikosti valovnega
+Preštejmo, koliko je lastnih stanj v intervalu velikosti valovnega
 vektorja med $k$ in $k+dk$ - to smo na hitro naredili že pri obravnavni
 resonatorjev (enačba~\ref{eq:N-stevilo-stanj}). Možni valovni vektorji tvorijo tridimenzionalno
 mrežo v prvem oktantu prostora vseh valovnih vektorjev. Razmik med
@@ -62,21 +62,20 @@ Upoštevati moramo še, da imamo pri vsakem $\mathbf{k}$ dve polarizaciji, in do
 dN=\left(\frac{L}{\pi}\right)^{3}\pi k^{2}\, dk.
 \label{4.2}
 \end{equation}
-Zapišemo število nihanj na enoto volumna
+Zapišemo število stanj na enoto volumna
 \beq
-\rho(k)\, dk=\frac{ k^{2}}{\pi^{2}} dk
+\frac{dN}{V}=\frac{ k^{2}}{\pi^{2}} dk
 \label{4.3}
 \eeq
 in ga prevedemo na frekvenčno odvisnost
 \beq
-\rho(\nu)\, d\nu=\frac{8 \pi \nu^{2} }{c^{3}}d\nu.
+\frac{dN}{V}=\frac{8 \pi \nu^{2} }{c^{3}}d\nu = \frac{\omega^2}{\pi^2c^3}d\omega.
 \eeq
-oziroma
+Vpeljemo gostoto stanj  $\varrho (\omega)$, to je število stanj na frekvenčni interval in enoto volumna 
+votline\index{Gostota stanj}
 \boxeq{4.4}{
-\rho(\omega)=\frac{\omega^{2}}{\pi^{2}c^{3}}.
+\rho(\omega)=\frac{dN}{V d\omega}=\frac{\omega^{2}}{\pi^{2}c^{3}}.
 }
-Številu nihanj na frekvenčni interval in enoto volumna votline $\varrho (\omega)$ 
-pravimo gostota stanj\index{Gostota stanj}.
 
 Vsote po lastnih valovanjih, to je po dovoljenih vrednostih valovnega vektorja $k$,
 lahko s pomočjo gostote stanj spremenimo v integrale po $k$ ali po $\omega$
@@ -117,6 +116,11 @@ od koder sledi še
 \end{equation}
 Ta enačba da seveda pričakovano časovno odvisnost oblike $e^{-i \omega_\alpha t}$.
 
+\begin{definition}
+ Uporabi nastavek za razvoj polja (enačbi~\ref{eq:pqrazvoj}) in iz Maxwellovih enačb izpelji
+ enačbo~(\ref{4.8}).
+\end{definition}
+
 Z upoštevanjem razvoja (enačbi~\ref{eq:pqrazvoj}) lahko zapišemo še energijo 
 polja -- \index{Hamiltonova funkcija}Hamiltonovo 
 funkcijo\footnote{Irski fizik in matematik Sir William Rowan Hamilton, 1805--1865.}
@@ -138,33 +142,28 @@ ki morajo zadoščati komutacijskim pravilom
 \label{4.10}
 \end{equation}
 
-Iz kvantne mehanike vemo, da so lastne vrednosti energije harmonskega oscilatorja, 
-opisanega s Hamiltonianom (enačba~\ref{4.9}), enake
+Iz kvantne mehanike vemo, da imajo lastne vrednosti energije harmonskega oscilatorja, 
+opisanega s Hamiltonianom (enačba~\ref{4.9}), diskretne vrednosti in so enake
 \boxeq{4.11}{
 W_{n,\alpha}=\hbar\omega_{\alpha}(n_{\alpha}+\frac{1}{2}), \quad n_{\alpha}= 0, 1, 2 \ldots
 }
 {\bf Razliki energije harmonskega oscilatorja, če se $n_{\alpha}$
 spremeni za 1, pravimo foton.}\index{Foton} Energija
-fotona je torej enaka $\hbar \omega$, $n_\alpha$ pa predstavlja število fotonov z dano energijo. 
+fotona je torej enaka $\hbar \omega$, $n$ pa predstavlja število fotonov z dano energijo. 
 
-Celotna energija kvantiziranega elektromagnetnega polja v votlini
-je tako 
+Celotno energijo kvantiziranega elektromagnetnega polja v votlini
+dobimo tako, da seštejemo prispevke vseh možnih stanjih
 \beq
 W=\sum_{\alpha}\hbar\omega_{\alpha}n_{\alpha},
 \eeq
 pri čemer smo izpustili ničelno energijo. Izpuščali jo bomo tudi v nadaljevanju, saj
 je to energija osnovnega stanja, ki se ne more sprostiti. 
 
-Iz same konstrukcije fotona vidimo,
-da je pojem fotona vezan na določen opis elektromagnetnega polja --
-reprezentacijo. V njej na primer vprašanje, kje se foton nahaja, očitno
-nima smisla.
-
 \section{Sevanje črnega telesa}
 
 Obravnavajmo sevanje v votlini, ki je v toplotnem ravnovesju s stenami s temperaturo
 $T$. Iz statistične fizike vemo, da verjetnost $P$, da je v izbranem stanju 
-votline $\alpha$ število fotonov enako $n_{\alpha}$, zapišemo s kanonično porazdelitvijo
+votline $\alpha$ število fotonov enako $n_{\alpha}$, zapišemo z Boltzmannovo porazdelitvijo
 \begin{equation}
 P(n_{\alpha})=\frac{e^{-W_{n,\alpha}/k_BT}}{\sum_{n_{\alpha}}e^{-W_{n,\alpha}/k_BT}} = 
 \frac{e^{-\beta\hbar\omega_{\alpha}n_{\alpha}}}
@@ -175,29 +174,29 @@ e^{-\beta\hbar\omega_{\alpha}n_{\alpha}}(1-e^{-\beta\hbar\omega_{\alpha}}),
 pri čemer $\beta = 1/k_BT$ in $k_B$ Boltzmannova konstanta. Povprečno število fotonov 
 v stanju $\alpha$ je potem\index{Sevanje črnega telesa}
 \begin{equation}
-\overline{n_{\alpha}}=\sum_{n_{\alpha}}n_{\alpha}P(n_{\alpha})=\frac{1}{e^{\beta\hbar\omega_{\alpha}}-1}.
+\langle n_{\alpha}\rangle =\sum_{n_{\alpha}}n_{\alpha}P(n_{\alpha})=\frac{1}{e^{\beta\hbar\omega_{\alpha}}-1}.
 \label{4.13}
 \end{equation}
 
-Ravnovesno gostoto energije elektromagnetnega polja v votlini na
-frekvenčni interval $u$ dobimo tako, da povprečno energijo posameznega
-stanja $n_{\alpha}\hbar\omega_{\alpha}$ pomnožimo s številom stanj
-na frekvenčnem intervalu, to je, z gostoto stanj $\varrho (\omega)$ 
-(enačba~\ref{4.4})
+Povprečno energijo posameznega stanja zapišemo kot produkt energije tega stanja in 
+povprečnega števila fotonov v tem stanju
 \begin{equation}
-u(\omega)\, d\omega=\hbar\omega\overline{n}\, \rho(\omega)\, 
-d\omega=\frac{\hbar}{\pi^{2}c^{3}}\frac{\omega^{3}\, d\omega}{e^{\beta\hbar\omega}-1}.
-\label{4.15}
+\langle W_{\alpha}\rangle = \hbar \omega \langle n_\alpha \rangle
+= \frac{\hbar \omega}{e^{\beta\hbar\omega_{\alpha}}-1}.
 \end{equation}
-Dobimo znano formulo za energijo na enoto volumna na enoto frekvence, 
+Ravnovesno gostoto energije elektromagnetnega polja v votlini na
+frekvenčni interval $u$ izračunamo tako, da povprečno energijo posameznega
+stanja pomnožimo še z gostoto stanj $\varrho (\omega)$ 
+(enačba~\ref{4.4}). Dobimo znano formulo za energijo na enoto volumna na enoto frekvence, 
 to je \index{Planckov zakon}Planckov 
-zakon\footnote{Nemški fizik in nobelovec Max Karl Ernst Ludwig Planck, 1858--1947.} 
-za spekter svetlobe v toplotnem ravnovesju z okolico s temperaturo $T$
+zakon\footnote{Nemški fizik in nobelovec Max Karl Ernst Ludwig Planck, 1858--1947.}.
+Opiše spekter svetlobe, izsevane iz črnega telesa, ki je v toplotnem ravnovesju z 
+okolico s temperaturo $T$
 \boxeq{eq:Planck}{
-u(\omega)=\hbar\omega\overline{n}\, \rho(\omega)\, 
-d\omega=\frac{\hbar}{\pi^{2}c^{3}}\frac{\omega^{3}}{e^{\beta\hbar\omega}-1}.
+u(\omega)=\hbar\omega\langle n\rangle \rho(\omega)
+=\frac{\hbar}{\pi^{2}c^{3}}\frac{\omega^{3}}{e^{\beta\hbar\omega}-1}.
 }
-Lahko ga zapišemo tudi z valovno dolžino in dobimo energijo na enoto volumna
+Planckov zakon lahko zapišemo tudi z valovno dolžino in dobimo energijo na enoto volumna
 na interval valovne dolžine
 \beq
 u(\lambda)=\frac{8 \pi h c}{\lambda^5}\frac{1}{e^{\beta h c/\lambda}-1}.
@@ -206,7 +205,7 @@ u(\lambda)=\frac{8 \pi h c}{\lambda^5}\frac{1}{e^{\beta h c/\lambda}-1}.
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
-%\input{slike/05_Planck.pdf_tex}
+\input{slike/05_Planck.pdf_tex}
 \caption{Planckov spekter za sevanje črnega telesa pri različnih temperaturah}
 \label{fig:Planck}
 \end{figure}
