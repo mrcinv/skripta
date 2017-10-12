@@ -190,7 +190,7 @@ stanja pomnožimo še z gostoto stanj $\varrho (\omega)$
 (enačba~\ref{4.4}). Dobimo znano formulo za energijo na enoto volumna na enoto frekvence, 
 to je \index{Planckov zakon}Planckov 
 zakon\footnote{Nemški fizik in nobelovec Max Karl Ernst Ludwig Planck, 1858--1947.}.
-Opiše spekter svetlobe, izsevane iz črnega telesa, ki je v toplotnem ravnovesju z 
+Opiše spektralno gostoto energije svetlobe, izsevane iz črnega telesa, ki je v toplotnem ravnovesju z 
 okolico s temperaturo $T$
 \boxeq{eq:Planck}{
 u(\omega)=\hbar\omega\langle n\rangle \rho(\omega)
@@ -216,7 +216,7 @@ Oglejmo si zdaj osnovne procese interakcije svetlobe s snovjo. Naj
 bo v votlini poleg elektromagnetnega polja še $N$ atomov, ki se med
 seboj ne motijo. Za začetek naj bodo atomi prav enostavni\index{Dvonivojski sistem}:
 imajo naj le dve energijski stanji z energijama $E_{1}$ in $E_{2}$ (slika~\ref{sl4.1}\,a). 
-Stanje $E_2$ naj bo nad $E_1$, razlika med njima pa naj bo enaka
+Stanje $E_2$ naj bo nad $E_1$, razlika med njima pa naj bo
 \begin{equation}
  E_2 - E_1 = \hbar \omega_0.
 \end{equation}
@@ -226,10 +226,10 @@ atomi prehajajo iz nižjega stanja v višje in obratno. To prehajanje opisujejo 
 spontano sevanje, absorpcija in stimulirano sevanje.
 
 \begin{figure}[h]
-\centering
-\includegraphics[width=14truecm]{slike/05_Dvonivojski.png}
+\def\svgwidth{140truemm} 
+\input{slike/05_Dvonivojski.pdf_tex}
 \caption{Shema energijskih nivojev dvonivojskega atoma (a) in prehodov med njima:
-spontano sevanje (a), absorpcija (b) in stimulirano sevanje (c).}
+spontano sevanje (b), absorpcija (c) in stimulirano sevanje (d).}
 \label{sl4.1}
 \end{figure}
 
@@ -238,23 +238,29 @@ Vemo, da atom v vzbujenem stanju tudi brez vpliva zunanjega polja
 ni stabilen, temveč prej ali slej preide v nižje stanje. Temu pojavu
 pravimo spontano sevanje\index{Spontano sevanje} ali spontana emisija (slika~\ref{sl4.1}\,b). 
 Pri spontanem sevanju se izseva foton v katerokoli stanje polja v bližini 
-frekvence prehoda. Verjetnost za prehod na enoto časa označimo z $A_{21}$.
-Karakteristični razpadni čas gornjega stanja je tako
-$1/A_{21}$.
+frekvence prehoda, pri tem sta smer in polarizacija izsevane svetlobe poljubni.
+Verjetnost za prehod na časovno enoto označimo z $A_{21}$.
+Za dovoljene prehode je vrednost $A_{21} \sim 10^6-10^8/\si{\second}$, 
+za prepovedane pa okoli $\sim 10^4/\si{\second}$. 
+Karakteristični (naravni) razpadni čas gornjega stanja vpeljemo kot
+$\tau = 1/A_{21}$. 
 
 \subsection*{Absorpcija}
 Absorpcija fotona\index{Absorpcija fotona} je prehod, pri katerem se foton 
-z ustrezno energijo absorbira, atom pa preide iz spodnjega stanja v zgornje (slika~\ref{sl4.1}\,c). 
+z ustrezno energijo absorbira, atom pa preide iz nižjega stanja v višje (slika~\ref{sl4.1}\,c). 
 Verjetnost za prehod na časovno enoto $r_{12}$ je sorazmerna spektralni gostoti
 energije polja $u(\omega)$, to je energiji na enoto volumna in frekvenčni interval, 
-pri frekvenci prehoda $\omega_{0}$
+pri frekvenci prehoda $\omega_{0}$. Sorazmernostni koeficient označimo z $B_{12}$ in 
+dobimo 
 \begin{equation}
 r_{12}=B_{12}u(\omega_{0}).
 \label{4.16}
 \end{equation}
-Vpeljali smo sorazmernostni koeficient $B_{12}$. Pri absorpciji se
-seveda zmanjša število fotonov v enem od stanj polja pri frekvenci
-$\omega_{0}$.
+To je enostavno razumeti. Več kot je fotonov v votlini pri frekvenci, ki je
+v bližini frekvence prehoda, več fotonov se bo absorbiralo in večja je 
+verjetnost za prehod atoma v višje stanje. Pri absorpciji se
+seveda število fotonov v enem od stanj polja pri frekvenci
+$\omega_{0}$ zmanjša.
 
 \subsection*{Stimulirano sevanje}
 Tretji pojav je prehod atoma iz gornjega stanja v spodnje zaradi interakcije
@@ -266,19 +272,24 @@ r_{21}=B_{21}u(\omega_{0}).
 \label{4.17}
 \end{equation}
 V tem primeru smo sorazmernostni koeficient označili z $B_{21}$. V primeru
-stimuliranega sevanja, se število fotonov v stanju, ki je prehod povzročilo, poveča za ena. 
+stimuliranega sevanja, se število atomov v vzbujenem stanju zmanjša, 
+število fotonov v stanju, ki je prehod povzročilo, pa se poveča za ena. 
+Izsevana svetloba ima enako fazo, frekvenco, polarizacijo in smer potovanja kot 
+vpadla. 
 
 Preden nadaljujemo, se še nekoliko pomudimo pri izrazih za absorpcijo
 (enačba~\ref{4.16}) in stimulirano emisijo (enačba~\ref{4.17}).
-Zaradi končnega življenjskega časa ima gornje
-stanje tudi končno spektralno širino. Zapisani enačbi~(\ref{4.16}) in (\ref{4.17})
+Zaradi končnega življenjskega časa ima vzbujeno
+stanje končno spektralno širino. Zapisani enačbi~(\ref{4.16}) in (\ref{4.17})
 veljata le, kadar je spektralna gostota elektromagnetnega polja $u(\omega)$
-preko celotne širine prehoda približno konstantna (slika~\ref{fig:spektri}\,a). To je gotovo res, če
+preko celotne spektralne širine prehoda približno konstantna 
+(slika~\ref{fig:spektri}\,a). To je gotovo res, če
 obravnavamo sevanje v votlini, ki je v termičnem ravnovesju (črno telo). 
 
-Če pa na atome svetimo s svetlobo s spektrom, ki je ozek v primerjavi s širino prehoda, na
-primer iz laserskega resonatorja, je verjetnost za prehod odvisna tudi od tega, kako
-blizu centralne frekvence prehoda je frekvenca vpadne svetlobe (slika~\ref{fig:spektri}\,b). 
+Če pa na atome svetimo s svetlobo s spektrom, ki je ozek v primerjavi s spektralno 
+širino prehoda, na primer iz laserskega resonatorja, je verjetnost za prehod 
+odvisna tudi od tega, kako blizu centralne frekvence prehoda je frekvenca vpadne 
+svetlobe (slika~\ref{fig:spektri}\,b). 
 Naj bo $w_{\omega R}$ gostota energije (ne spekter!) monokromatske svetlobe s frekvenco
 $\omega_R$. Tedaj lahko verjetnost za absorpcijo na časovno enoto zapišemo
 v obliki 
@@ -288,7 +299,7 @@ r_{12}=B_{12}g(\omega_R)\, w_{\omega R}.
 \end{equation}
 Pri tem funkcija $g(\omega)$ opisuje obliko atomske spektralne črte z vrhom 
 pri $\omega_{0}$. \\
-\begin{figure}[h]
+\begin{figure}
 \centering
 \includegraphics[width=12truecm]{slike/05_Spektri.png}
 \caption{Pri izračunu verjetnosti za absorpcijo in stimulirano emisijo je pomembno, ali je 
