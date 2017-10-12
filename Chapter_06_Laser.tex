@@ -1,0 +1,1375 @@
+\chapter{Laser}
+
+Stoječe valovanje v optičnem resonatorju se obnaša kot dušeno
+harmonično nihalo. Iz nihala lahko napravimo oscilator, to je napravo, ki
+samostojno niha brez zunajega vzbujanja, če nam dano nihalo uspe povezati v
+povratno zvezo z ustreznim ojačevalnikom, ki pokriva izgube nihala zaradi
+dušenja. Primeri so ure z mehanskimi nihali, oscilatorji z električnim
+nihajnim krogom v elektroniki, pa vrsta glasbenih inštrumentov.
+
+Ugotovili smo, da je ojačevanje svetlobe mogoče dobiti v sredstvu z
+obrnjeno zasedenostjo med dvema nivojema. Postavimo tako snov v optični
+resonator. Na začetku dobimo predvsem spontano sevano svetlobo, ki se
+odbija med zrcaloma resonatorja in se pri prehodu skozi snov ojačuje. Tako
+se vzbujajo nihanja resonatorja z nihajnimi frekvencami blizu frekvence
+atomskega prehoda, pri katerem snov ojačuje. Energija nihanj z dovolj
+majhnimi izgubami bo rasla, dokler se ojačevanje ne bo izenačilo z
+izgubami. Tak izvor svetlobe je laser. Beseda je nastala iz kratice za Light
+Amplification by Stimulated Emission of Radiation.
+
+Kot analogija za laser so posebno zanimiva glasbila, predvsem pihala.
+Vzemimo na primer klarinet. To glasbilo razdelimo na dve bistveni enoti:
+cev, v kateri lahko nastane stojni zvočni val, in ustnik, katerega naloga
+je dovajati energijo in s tem vzdrževati konstantno amplitudo nihanja.
+
+Frekvenca stoječega vala, to je nihanja zračnega stolpca v piščali, je
+določena z dolžino cevi ( pravzaprav le do prve odprte tonske luknjice,
+vendar te podrobnosti za nas niso pomembne ) in s številom vozlov
+stoječega vala v cevi. Na gornjem koncu, pri ustniku, lahko predpostavimo,
+da je cev zaprta, zato imamo tam hrbet nihanja pritiska. Cev je torej
+zvočni resonator.
+
+Ustnik je polobel zaključek cevi, ki ga skoraj povsem zapira ploščat,
+prožen jeziček. Ko glasbenik piha v ustnik, se ta trese in s tem proizvaja
+zvok. "Ce ustnik ni nataknjen na cev klarineta, je nastali zvok bolj
+nekakšen šum kot pa lep, dobro določen ton. Tresenje jezička je le
+približno periodično in vsebuje mnogo frekvenc.
+
+Ko ustnik nataknemo na cev in pihnemo vanj, začne tresenje jezička
+vzbujati tiste stoječe valove v cevi, katerih frekvence so vsebovane v
+spektru tresenja jezička. Dokler je vzbujanje šibko, se ne zgodi nič
+posebnega, ko pa amplituda tlaka v cevi dovolj naraste, pride do čisto
+novega pojava. Nihanje tlaka v gornjem koncu cevi povratno deluje na ustnik
+in ga sili, da niha s frekvenco najbolj vzbujenega stoječega vala v cevi,
+nihanje jezička z drugimi frekvencami pa zamre. Moč pihanja gre le še v
+nihanje jezička s pravo frekvenco in ojačuje nihanje zračnega stolpca. S
+pihanjem v ustnik lahko torej zaradi povratne zveze med nihanjem jezička in
+nihanji zračnega stolpca v cevi vzdržujemo stoječe valovanje s konstantno
+amplitudo. Dovedena moč se seveda izseva kot zvok na odprtem koncu
+klarineta.
+
+\begin{figure}[tbp]
+\label{s5.1} \vskip 5cm
+\caption{Osnovna shema laserja}
+\end{figure}
+
+Vrnimo se k svetlobi in si najprej oglejmo najpreprostejši model laserja.
+Privzemimo, da je le eno resonatorsko nihanje tako, da njegova frekvenca
+sovpada s frekvenco prehoda aktivne snovi, ki jo konstantno črpamo in s tem
+vzdržujemo obrnjeno zasedenost. Ta privzetek v večini laserjev ni
+avtomatično izpolnjen, vendar je pogosto z dodatnimi elementi v resonatorju
+mogoče doseči, da je vzbujeno le eno nihanje, kot bomo videli nekoliko
+kasneje.
+
+Naj bo $W$ energija svetlobnega valovanja v resonatorju. Zaradi izgub skozi
+zrcali in zaradi absorpcije in sipanja se energija na en prelet resonatorja
+zmanjša za 
+\begin{equation}
+\Delta W_{izgube}=-\Lambda W=-[\alpha L+(1-\frac{1}{2}{\cal {R}}_{1})+\frac{1%
+}{2}(1-{\cal {R}}_{2})]\,W\;\;,  \label{5.1}
+\end{equation}
+kjer so $\Lambda $ celotne izgube, $\alpha $ izgube na enoto poti zaradi
+absoprcije in sipanja, ${\cal {R}}_{1}$ in ${\cal {R}}_{2}$ pa odbojnosti
+obeh zrcal. Vsaj eno od obeh zrcal mora imeti odbojnost manj od 1, če naj
+laser nekaj svetlobe tudi izseva.
+
+Zaradi ojačevanja s stimuliranim sevanjem snovi z obrnjeno zasedenostjo se
+energija nihanja resonatorja na en prelet po enačbi \ref{4.43} poveča za 
+\begin{equation}  \label{5.2}
+\Delta W_{oj}=\frac{LGW}{1+W/W_s}\;\;.
+\end{equation}
+Upoštevali smo, da pride pri veliki energiji svetlobe do nasičenja, pri
+čemer smo namesto saturacijske gostote svetlobnega toka $j_s$ vpeljali
+saturacijsko energijo $W_s=Vj_s/c$. Privzeli smo tudi, da je ojačenje na en
+prelet dovolj majhno, da nam enačbe \ref{4.43} ni treba integrirati.
+
+V stacionarnem stanju se morajo izgube izenačiti z ojačenjem: \newline
+$-\Delta W_{izgube}=\Delta W_{oj}$, od koder dobimo, da je ali $W=0$ ali 
+\begin{equation}  \label{5.3}
+\Lambda=\frac{LG}{1+W/W_s}\;\;.
+\end{equation}
+Energija svetlobnega nihanja je torej 
+\begin{equation}  \label{5.4}
+W=\frac{LG-\Lambda}{\Lambda}\,W_s
+\end{equation}
+in je pozitivna le, če je ojačenje $G$ večje od praga 
+\begin{equation}  \label{5.5}
+G_{pr}=\frac{\Lambda}{L}\;\;.
+\end{equation}
+Ojačenje je seveda odvisno od stopnje obrnjene zasedenosti, ki jo lahko
+spreminjamo z močjo optičnega črpanja. Pogosto, na primer pri
+trinivojskem sistemu, obravnavanem v razdelku 4.7, je kar sorazmerno z
+močjo črpanja. Energija svetlobe v laserju je pod pragom nič, nad pragom
+pa je linearna funkcija ojačenja, kot kaže slika \ref{s5.2}.
+
+\begin{figure}[tbp]
+\label{s5.2} \vskip 5cm
+\caption{Odvisnost energije svetlobe v laserju od ojačenja}
+\end{figure}
+
+Izhodno moč laserja dobimo tako, da delež energije, ki gre na en prelet
+skozi izhodno zrcalo, delimo s časom preleta preko resonatorja $L/c$: 
+\begin{equation}
+P_{izh}=\frac{1}{2}(1-{\cal {R}}_{1})\frac{c}{L}\,W\;\;.  \label{5.6}
+\end{equation}
+"Ce upoštevamo en. \ref{5.1} in \ref{5.4}, vidimo, da je izhodna moč v
+primeru, da imamo le izgube skozi izhodno zrcalo, največja, če je
+reflektivnost čim bliže 1. Ker imamo vedno še druge izgube, je izhodna
+moč največja pri ${\cal {R}}_{1}<1$ (Naloga).
+
+\section{Zasedbene enačbe}
+
+Za podrobnejšo sliko se moramo vrniti k enačbam za zasedenost atomskih
+nivojev \ref{4.39}, ki jim dodamo še enačbo za energijo lastnega valovanja
+v resonatorju. "Se naprej se omejimo na primer, ko je vzbujeno le eno
+resonatorsko stanje.
+
+Zaradi enostavnosti obravnave lahko enačbe \ref{4.39} brez škode precej
+poenostavimo. Privzemimo, da je razpadni čas spodnjega laserskega stanja $%
+|1\rangle$, ki ga določa koeficient $A_{10}$, dosti krajši od razpadnega
+časa zgornjega stanja $|2\rangle$. Tedaj je $N_1\simeq0$, če le ni preveč
+stimuliranega sevanja, in lahko zasedenost atomskih stanj popišemo z eno
+samo spremenljivko $N_2$. Energijo v izbranem stanju resonatorja zapišimo s
+števi\-lom fotonov $n$, tako da je gostota energije polja $n\hbar\omega/V$,
+kjer je $V$ volumen resonatorja. S tem dobimo za zasedenost 
+\begin{equation}  \label{5.7}
+\frac{dN_2}{dt}=- \frac{1}{V}\hbar\omega B_{21}g(\omega)n\,N_2-N_2A_{21}+rN
+\end{equation}
+
+Energija svetlobe v resonatorju se povečuje zaradi stimuliranega sevanja.
+Atomi z gornjega stanja prehajajo še s spontanim seva\-njem, ki ga nekaj
+tudi gre v izbrano nihanje resonatorja. V razdelku 4.8 prejšnjega poglavja
+smo videli, da je verjetnost za prehod atoma z višjega na nižje stanje z
+izsevanjem fotona v izbrano stanje elektromagnetnega polja sorazmerno z $n+1$%
+, kjer je $n$ število fotonov v stanju. Od tod sledi, da upoštevamo
+prispevek spontanega sevanja s tem, da v prvem členu desnega dela izraza 
+\ref{5.7} pišemo $n+1$ namesto $n$. Energija resonatorja se zmanjšuje
+zaradi izgub skozi zrcala in absorpcije in sipanja, kar smo v tretjem
+poglavju opisali z razpadnim časom $\tau/2=\Lambda c/L$. Tako imamo 
+\begin{equation}  \label{5.8}
+\frac{dn}{dt}=\frac{1}{V}\hbar\omega B_{21}g(\omega)(n+1)\, N_2-\frac{2}{\tau%
+}\,n\;\;.
+\end{equation}
+
+Dobili smo sistem dveh diferencialnih enačb za časovni razvoj števila
+fotonov v resonatorskem stanju in za zasedenost atomskega stanja. Enačbi
+sta nelinearni in ju ne znamo analitično rešiti.
+
+Kot je pri nelinearnih diferencialnih enačbah običajno, poglejmo
+najprej, kakšne so stacionarne, to je, od časa neodvisne rešitve $\dot{%
+N}_{2}=0$ in $\dot{n}=0$. Izrazimo $N_{2}$ iz \ref{5.7} in postavimo v \ref
+{5.8}. Dobimo kvadratno enačbo za število fotonov: 
+\begin{equation}
+\frac{2}{V\tau }n(A_{21}+B_{21}\hbar \omega g(\omega )n)-\frac{1}{V}%
+B_{21}\hbar \omega g(\omega )rN(n+1)=0\;\;.  \label{5.9}
+\end{equation}
+Preden zapišemo rešitve dobljene enačbe, jo še nekoliko
+preoblikujmo. Ulomek $\frac{B_{21}\hbar \omega g(\omega )rN}{VcA_{21}}$ je
+koeficient ojačenja, ki smo ga v prejšnjem poglavju označili z $G$. $%
+2/c\tau $ so izgube,ki morajo biti enake ojačenju na pragu $G_{pr}$.
+Vpeljimo še brezdimenzijsko konstanto $p$: 
+\begin{equation}
+p=\frac{VA_{21}}{B_{21}\hbar \omega g(\omega )}=\frac{V\omega ^{2}}{\pi
+^{2}c^{3}g(\omega )}=\frac{VA_{21}}{B_{21}\hbar \omega g(\omega )}\simeq 
+\frac{V\omega ^{2}}{\pi ^{2}c^{3}}\Delta \omega \;\;.  \label{5.10}
+\end{equation}
+V zadnjem izrazu smo upoštevali, da je v maksimumu $g(\omega )\simeq
+=1/\Delta \omega $. $p$ je torej približno produkt gostote stanj
+elektromagnetnega polja v resonatorju in širine atomskega prehoda, torej
+kar število vseh stanj v frekvenčnem intervalu atomskega prehoda. To je
+navadno precj veliko, okoli $10^{8}$ do $10^{10}$. S primerjavo izraza \ref
+{4.34} za saturacijsko gostoto toka vidimo še, da je $p$ tudi število
+fotonov v resonatorju, pri katerem pride do nasičenja ojačenja, če je
+frekvenca nihanja resonatorja blizu centra atomske črte. S tem en. \ref
+{5.9} dobi obliko 
+\begin{equation}
+\frac{1}{p}\,n^{2}-(\frac{G}{G_{pr}}-1)n-\frac{G}{G_{pr}}=0  \label{5.11}
+\end{equation}
+s pozitivno rešitvijo 
+\begin{equation}
+n=\frac{p}{2}\left[ (\frac{G}{G_{pr}}-1)+\sqrt{(\frac{G}{G_{pr}}-1)^{2}+%
+\frac{4G}{pG_{pr}}}\right] \;\;.  \label{5.12}
+\end{equation}
+Ker je $p$ veliko število, lahko koren razvijemo, če le ni ojačenje
+preveč blizu praga, ko je $\frac{G}{G_{pr}}\simeq 1$. Pod pragom je $%
+G<G_{pr}$ in je 
+\begin{equation}
+n\simeq \frac{p}{2}\left[ (\frac{G}{G_{pr}}-1)+(1-\frac{G}{G_{pr}})+\frac{2G%
+}{p(G_{pr}-G)}\right] =\frac{G}{G_{pr}-G}\;\;.  \label{5.13}
+\end{equation}
+Pri razvoju korena smo upoštevali, da mora biti pozitiven. Nad pragom je
+število fotonov 
+\begin{equation}
+n\simeq p(\frac{G}{G_{pr}}-1)\;\;.  \label{5.14}
+\end{equation}
+
+Poglejmo, kaj smo dobili. Pod pragom je število fotonov v izbranem
+resonatorskem nihanju blizu ena do neposredne bližine praga, kjer hitro
+naraste in doseže takoj nad pragom red velikosti $p$. Moč črpanja, s
+katero spreminjamo koeficient ojačenja $G$, gre pod pragom preko spontanega
+sevanja skoraj vsa v veliko število stanj elektromagnetnega polja, nad
+pragom pa povsem prevlada stimulirano sevanje v eno samo izbrano nihanje
+resonatorja. Obnašanje števila fotonov $n$ pri spremi\-njanju ojačenja $G$
+kaže slika \ref{s5.3}. Prehod preko praga je zaradi velikega $p$ v večini
+laserjev tako hiter, da ga ni mogoče izmeriti; izjema so polvodniški
+laserji, katerih volumen je zelo majhen, zato je tudi $p$ dovolj majhen, da
+je mogoče opaziti zvezen prehod preko praga.
+
+\begin{figure}[tbp]
+\label{s5.3} \vskip 5cm
+\caption{Odvisnost števila fotonov od ojačenja}
+\end{figure}
+
+Iz enačbe \ref{5.8} lahko izračunamo še zasedenost gornjega atomskega
+nivoja v stacionarnem stanju: 
+\begin{equation}  \label{5.15}
+N_2=\frac{2V}{\tau B_{21}\hbar\omega g(\omega)}\frac{n}{n+1}\;\;.
+\end{equation}
+Na pragu je po enačbi \ref{5.12} $n=\sqrt{p}$. Tako dobimo 
+\begin{equation}  \label{5.16}
+N_{2pr}=\frac{2V}{\tau B_{21}\hbar\omega g(\omega)}\frac{\sqrt{p}}{\sqrt{p}+1%
+}\;\;.
+\end{equation}
+Ker je tudi $\sqrt{p}$ veliko število, sledi iz gornjih enačb, da obrnjena
+zasedenost narašča do bližine praga, nad pragom pa je praktično
+konstantna in skoraj natanko enaka kot na pragu. To ni težko razumeti. Nad
+pragom je število fotonov v resonatorju veliko in linearno (v našem
+preprostem modelu) narašča s povečevanjem moči črpanja, zato se
+povečuje tudi hitrost praznenja gornjega atomskega stanja s stimuliranim
+sevanjem, kar ravno izniči učinek povečanja črpanja. V stacionarno
+delujočem laserju torej ni mogoče povečati obrnjene zasedenosti nad
+vrednost na pragu $N_{2pr}$, kar ima pomembne praktične posledice, kot bomo
+videli nekoliko kasneje.
+
+V laserju nad pragom je število fotonov zelo veliko, zato prispevka
+spontanega sevanja v enačbi \ref{5.8} v nadaljevanju ne bomo upoštevali.
+
+Obravnava laserja z zasedbenimi enačbami je seveda zelo groba. Nismo
+upoštevali, da je svetloba v resonatorju valovanje, ki uboga valo\-vno
+enačbo. S tem smo privzeli, da je prostorska odvisnost polja v delujočem
+laserju enaka kot za lastno stanje praznega resonatorja. Poleg tega smo
+privzeli, da so atomi lahko le v lastnih energijskih stanjih, kar je res le
+v primeru stacionarnih stanj brez zunanjega, časovno odvisnega polja
+svetlobe. "Ce za opis svetlobe uporabimo klasično valovno enačbo, za atome
+pa kvantno mehaniko, dobimo {\it polklasični približek} vedenja laserja,
+ki je mnogo zahtevnejši od zasedbenih enačb, opiše pa skoraj vse pojave v
+laserjih, razen vpliva spontanega sevanja. Za dosledno in podrobno obravnavo
+tega pa je potrebno tudi svetlobo opisati s pomočjo kvantne elektrodinamike.
+
+Povzemimo, kaj smo z modelom zasedbenih enačb ugotovili o delovanju
+enofrekvenčnega laserja. Pri dovolj velikem ojačenju s stimuliranim
+sevanjem, ki pokriva izgube resonatorja, je v stacionarnem stanju energija
+in s tem amplituda izbranega lastnega nihanja resonatorja različna od nič.
+Del valovanja izhaja skozi eno ali obe zrcali. Frekvenca svetlobe je
+določena z izbranim lastnim stanjem resonatorja. To določa tudi prostorsko
+odvisnost valovanja v resonatorju in izhodnega snopa. Ugotovili smo, da ima
+v običajnem stabilnem resonatorju polje obliko zelo blizu Gaussovega snopa,
+zato je tak tudi izhodni snop.
+
+Lepa prostorska odvisnost izhodnega snopa je morda najpomembnejša lastnost
+laserjev. Gaussov snop se najmanj širi zaradi uklona in ga je mogoče
+zbrati v piko približne velikosti valovne dolžine. S tem se tudi najbolj
+približa idealno točkastemu izvoru svetlobe. Te lastnosti so zelo pomembne
+za uporabo; na njih so osnovani optični komunikacijski sistemi, čitanje
+optičnih diskov, laserski obdelovalni stroji...
+
+\section{Spektralna širina enega laserskega nihanja}
+
+Spektralni širini svetlobe enofrekvenčnega laserja je treba posvetiti
+nekaj več pozornosti. Videli smo, da je amplituda svetlobe laserja
+konstantna. Spektralna širina klasičnega harmonskega nihala s stalno
+amplitudo je nič, frekvenca nihanja je natanko določena. "Ce bi se lastno
+stanje elektromagnetnega polja v resonatorju obnašalo povsem enako kot
+klasično harmonsko nihalo, bi bil tudi spekter laserja neskončno ozek.
+Laserji imajo seveda končno spektralno širino, v idealnem primeru zaradi
+kvantizacije elektromagnetnega polja, v praksi pa zaradi zunanjih motenj.
+
+Poskusimo najprej oceniti razširitev zaradi vpliva kvantizacije. Zaradi nje
+imamo poleg stimuliranega tudi spontano sevanje. To je kvantni šum, ki
+povzroči majhno razširitev spektra. Stroga obravnava tega pojava je
+mogoča le z dosledno uporabo kvantne elektrodinamike, kar seže izven
+okvira te knjige, zato se zadovoljimo le z grobo oceno.
+
+\begin{figure}[tbp]
+\label{s5.4} \vskip 5cm
+\caption{Amplituda polja v resonatorju in prispevek spontanega sevanja.}
+\end{figure}
+
+Amplitudo svetlobe na izbranem mestu v resonatorju predstavimo kot število
+v kompleksni ravnini (Slika \ref{s5.4}). Kot, ki ga amplituda tvori z realno
+osjo, je faza glede na neko izbrano začetno fazo. Energija svetlobe je
+sorazmerna s številom fotonov; velikost amplitude polja zato lahko merimo
+kar s korenom iz števila fotonov v nihanju. Velikost amplitude je
+praktično konstantna, vzdržuje jo stimulirano sevanje, ki ravno pokriva
+izgube resonatorja. Pri tem ostaja  tudi faza nespremenjena. Pač pa se
+faza spremeni zaradi majhnega prispevka spontanega sevanja.
+
+Pri spontani emisiji se foton izseva s poljubno fazo; prispevek k kompleksni
+amplitudi na sliki \ref{s5.4} ima torej dolžino 1 in poljubno smer. Zanima
+nas povprečni kvadrat spremembe faznega kota pri enem spontano izsevanem
+fotonu: 
+\begin{equation}
+\overline{\delta \phi _{1}^{2}}=\frac{1}{\overline{n}}\,\overline{\cos
+^{2}\psi }=\frac{1}{2\overline{n}}\;\;,  \label{5.17}
+\end{equation}
+kjer smo s $\psi $ označili slučajno fazno razliko med celotnim poljem
+in spontano izsevanim fotonom, indeks 1 pa označuje, da gre za spremembo
+za 1 foton. Zaporedne spontane emisije so med seboj neodvisne, zato dobimo
+povprečni kvadrat spremembe faze pri $m$ emisijah kar tako, da seštejemo
+povprečne kvadrate za posamezne fotone: 
+\begin{equation}
+\ \overline{\delta \phi _{m}^{2}}=m\overline{\delta \phi _{1}^{2}}=\frac{m}{2%
+\overline{n}}\;\;.  \label{5.18}
+\end{equation}
+
+Prešteti moramo še, koliko je spontano izsevanih fotonov na enoto
+časa. Stimulirano sevanje ravno pokrije izgube resonatorja, zato je
+stimulirano izsevnih fotonov na enoto časa $2\overline{n/}\tau $. Iz
+razdelka 4.8, enačba \ref{4.56} vemo, da je razmerje med verjetnostjo za
+stimulirano in spontano sevanje enako številu fotonov v danem stanju
+polja, zato je število spontanih sevanj na časovno enoto kar $2/\tau $.
+Tako imamo v poljubnem času $m=2t/\tau $ in 
+\begin{equation}
+\overline{\delta \phi ^{2}(t)}=\frac{t}{\overline{n}\tau }\;\;.  \label{5.19}
+\end{equation}
+"Cas $t_{p}$, v katerem se bo faza znatno spremenila, recimo za 1, je torej
+velikostnega reda 
+\begin{equation}
+t_{p}\simeq 2\overline{n}\tau =\frac{W}{\hbar \omega }\,\tau =\frac{P}{\hbar
+\omega }\tau ^{2}\;\;.  \label{5.20}
+\end{equation}
+To lezenje faze nam seveda da spektralno širino $1/t_{p}$.
+
+"Stevilo fotonov v laserskem nihanju je nad pragom zelo veliko, recimo $10^9$
+v majhnem He-Ne laserju. $\tau$ je reda velikosti $10^{-7}$, tako da je
+karakteristični čas - koherenčni čas - idealnega laserja mnogo sekund.
+Iz enačbe \ref{5.20} vidimo še, da je spektralna širina obratno
+sorazmerna z izhodno močjo laserja. V neposredni bližini praga, kjer je $%
+\overline{n}\simeq 1$, je spektralna širina približno enaka širini nihanj
+praznega resonatorja.
+
+Dejanski laserji seveda nimajo niti približno tako ozkega spektra, kot smo
+pravkar ocenili. Frekvenca laserja je določena z dolžino resonatorja: $%
+\omega=n\pi c/L$, pri čemer je $n$ zelo veliko celo število. Majhna
+sprememba dolžine resonatorja povzroči tudi spremembo frekvence laserja,
+pri znatnejši spremembi dolžine pa lahko pride tudi do preskoka vzbujenega
+stanja resonatorja, to je števila $n$. Dolžina resonatorja se lahko
+spreminja predvsem zaradi zunanjih mehanskih motenj in zaradi spreminjanja
+temperature. Zato se spreminja tudi frekvenca laserja in če se posebej ne
+potrudimo s konstrukcijo resonatorja, so te fluktuacije frekvence kar reda
+velikosti razmika med sosednimi stanji resonatorja, to je reda velikosti 100
+MHz.
+
+Tu velja opozoriti, da je narava spektralne razširitve v laserju tako v
+idealnem kot v praktičnem primeru drugačna kot v navadnih svetilih. V
+prvem poglavju smo videli, da intenziteta svetlobe navadnega svetila
+fluktuira na časovni skali koherenčnega časa, ki je obraten spektralni
+širini. Po elektrotehniško lahko rečemo, da je taka svetloba amplitudno
+moduliran šum. Pri enofrekvenčnem laserju je drugače. Amplituda in s tem
+intenziteta izhodne svetlobe je konstantna, fluktuira le frekvenca oziroma
+faza. "Sum laserja je torej v obliki frekvenčne modulacije.
+
+Fluktuacije dolžine in s tem frekvence laserja je mogoče zmanjšati. S
+skrbno konstrukcijo in uporabo materialov z majhnim toplotnim raztezkom se
+zmanjša vpliv vibracij in temperaturnih sprememb v okolici. Poleg tega
+lahko okolico temperaturno stabiliziramo in laser postavimo na vibracijsko
+izolirano mizo. Na tak način je mogoče dobiti laser z efektivno spektralno
+širino pod 1 MHz.
+
+"Se ožjo lasersko črto lahko dobimo z aktivno stabilizacijo dolžine
+resonatorja. Ideja je taka: frekvenco svetlobe, ki izhaja iz laserja,
+primerjamo z nekim standardom in iz razlike ugotovimo spremembo dolžine
+resonatorja. Eno od obeh zrcal je nameščeno na piezoelektričnem nosilcu,
+ki mu z električno napetostjo lahko spreminjamo dolžino in tako popravimo
+dolžino resonatorja.
+
+Pogalvitna težava je seveda, kako najti dovolj stabilen primerjalni
+standard za frekvenco. Ena možnost je, da izhodno svetlobo spustimo skozi
+konfokalni interferometer, ki je skoraj v resonanci z laserjem in ima dovolj
+ozek vrh prepustnosti. Majhen premik frekvence laserja bo povzročil, da se
+bo spremenil skozi interferometer prepuščeni svetlobni tok. Na prvi pogled
+je videti, da s tem nismo nič pridobili, saj bo resonančna frekvenca
+interferometra stabilna tudi le toliko, kot je stabilna njegova dolžina.
+Vendar je z izolacijo in temperaturno stabilizacijo možno držati dolžino
+praznega resonatorja - interferometra - mnogo natančneje kot dolžino
+laserja, v katerem imamo aktivno sredstvo, ki mu moramo dovajati energijo.
+
+Druga možnost je stabilizirati laser na primerno molekularno absorpcijsko
+črto. Te so lahko zelo ozke, zato je tudi spekter laserja lahko izredno
+ozek, pod 1 kHz. Pri tem moti Dopplerjeva raziširitev absorpcijske črte,
+ki pa se ji je mogoče izogniti. Kako to napravimo in kako je bila s tem
+omogočena nova definicija metra, si bomo pogledali v razdelku ????.
+
+\section{Primerjava laserjev in običajnih svetil}
+
+"Cas je, da povzamemo, kar smo doslej dognali o lastnostih laserjev in jih
+primerjamo z običajnimi svetili. Kot ves čas doslej obravnavajmo
+enofrekvenčni laser, v katerem je vzbujeno le eno osnovno stanje
+resonatorja, ki je Gaussove oblike.
+
+Svetlobni snop, ki izhaja iz laserja, ima dve takoj očitni odliki. Je zelo
+usmerjen in zelo enobarven. Prva lastnost je seveda posledica tega, da je
+lastno stanje stabilnega resonatorja Gaussove oblike in je zato tak tudi
+izhodni snop. Kot smo videli v 3. poglavju, je divergenca takega snopa samo
+posledica uklona in je najmanjša možna. Valovne fronte so gladke in na
+dani razdalji ves čas enake, laserski snop je torej prostorsko idealno
+koherenten. Je tudi najboljši približek točkastega svetila, kar je v
+neposredni zvezi s prostorsko koherenco.
+
+Koherenten Gaussov snop lahko z ustrezno optiko zberemo v piko velikosti
+valovne dolžine, s čimer dosežemo že pri skromni moči zelo veliko
+gostoto svetobnega toka. To izkoriščajo v tehnologiji za natančno in
+čisto obdelavo materialov in v medicini, kjer laserje uporabljajo za
+zahtevne kirurške posege.
+
+Kako pa je z običajnimi svetili? V njih vsak atom sveti po svoje, zato
+nimamo prostorske koherence. Valovna fronta na danem mestu je nepravilna in
+se v koherenčnem času znatno spremeni. Svetlost površine svetila je
+neodvisna od smeri (Lambertov zakon). Osvetljenost slike, ki jo dobimo s
+poljubnim optičnim sistemom, ne more biti večja od izsevane gostote
+svetlobnega toka.
+
+\begin{figure}[tbp]
+\label{s5.5} \vskip 5cm
+\caption{Zaslonke za pripravo prostorsko koherentnega snopa iz
+nekoherentnega svetila}
+\end{figure}
+
+Tudi iz svetlobe običajnega nekoherentnega svetila lahko pripravimo
+koherenten snop. Na neki razdalji od svetila moramo postaviti zaslonko, ki
+je manjša od koherenčne ploskve na tistem mestu (glej razdelek 1.3).
+Ocenimo, kolikšna je moč snopa za zaslonko. Svetilo naj ima svetlost%
+\footnote{%
+Svetlost je svetilnost na enoto ploskve} $B$. Pri najsvetlejših
+nekoherentnih izvorih, to so živosrebrne svetilke, doseže $B$ vrednost
+do 100 W/cm$^{2}$. Moč snopa za zaslonko je (slika \ref{s5.5}) 
+\begin{equation}
+P=BS_{0}\Delta \Omega =\frac{BS_{0}S_{c}}{z^{2}}\simeq \frac{BS_{0}}{z^{2}}\,%
+\frac{\lambda ^{2}z^{2}}{S_{0}}=B\lambda ^{2}\;\;.  \label{5.21}
+\end{equation}
+Tu je $S_{0}$ površina svetila, $z$ oddlajenost zaslonke, $S_{c}$ pa
+velikost koherenčne ploskve, za katero smo uporabili oceno \ref{1.8} iz
+prvega poglavja. Pri svetlosti 100 W/cm$^{2}$ dobimo, da je moč
+koherentnega snopa le približno $3\cdot 10^{-7}$ W, kar je štiri rede
+velikost manj od prav šibkih laserjev z močjo 1 mW.
+
+Druga odlična lastnost svetlobe iz enofrekvenčnega laserja je zelo majhna
+spektralna širina. Z nekaj truda je ta lahko pod 1 kHz, emisijske črte v
+plinu pa so zaradi Dopplerjeve razširitve široke vsaj nekaj GHz, pa še to
+le v razmeroma redkem in hladnem plinu, kjer je svetlost majhna.
+
+Različne širine spektrov običajne svetilke in laserja lahko
+upoštevamo tako, da kot primerjalno količino vzamemo namesto celotne
+moči v koherentnem snopu spektralno gostoto moči. Majhen šolski He-Ne
+laser seva 1 mW v približno $10^{7}$ Hz, tako da je spektralna gostota
+moči $dP/d\nu \simeq 10^{-10}$ W/Hz. Zelo svetla živosrebrna svetilka
+seva v močno razširjene spektralne črte s širino okoli 10 nm $\simeq
+10^{13}$ Hz. Spektralna gostota v koherentnem snopu, ki ga pripravimo iz
+take svetilke, bo tako le okoli $3\cdot 10^{-20}$ W/Hz. Majhen šolski
+He-Ne laser tako prekaša najmočnejše nekoherentno svetilo za skoraj 10
+velikostnih redov. Z laserji je seveda mogoče doseči mnogo večje
+moči, v sunkih tja do $10^{12}$ W, tako da po spektralni gostoti moči v
+koherentnem snopu laserji prekašajo običajna svetila do preko 20
+velikostnih redov. Za toliko je tudi večja dosegljiva gostota moči na
+enoto ploskve in frekvence, kar je za vrsto uporab laserjev, posebno v
+spektroskopiji, odločilnega pomena. Najbrž v zgodovini težko najdemo
+še kak drug izum, ki je prinesel tolikšno izboljšavo v neki bistveni
+količini in tako ni čudno, da je prihod laserjev v začetku 60-tih let
+povzročil novo rojstvo optike.
+
+Med laserji in običajnimi svetili je še ena pomembna, a manj opazna
+razlika. Z ustreznim interferometrom lahko tudi snop iz nekoherentnega
+svetila filtriramo, tako da dobimo enako spektralno širino kot iz laserja,
+sveda z mnogo manjšo močjo. Vendar je narava spektralne razširitve
+različna. "Sum laserja je v obliki frekvenčne modulacije, pri čemer je
+amplituda svetlobnega vala konstantna, šum nekohernetnega svetila pa je v
+obliki amplitudne modulacije.
+
+\section{Mnogofrekvenčni laser}
+
+Doslej smo obravnavali le laser, v katerem je bilo vzbujeno eno samo stanje
+resonatorja. Ojačevalna širina večine aktivnih sredstev je precej
+velika. V plinih je na primer zaradi Dopplerjevega pojava vsaj nekaj GHz.
+Lastne frekvence resonatorja so navadno mnogo manj narazen, pri 30 cm dolgem
+resonatorju je razmik 500 MHz. Tako se prav lahko zgodi, da je ojačenje v
+laserju dovolj veliko za več nihanj hkrati. Vzbujena bodo vsa tista
+nihanja, za katere je ojačenje večje od ojačenja na pragu $G_{pr}$.
+Svetloba iz takega mnogofrekvenčnega laserja ni več monokromatska,
+temveč je sestavljena iz množice ozkih črt znotraj ojačevalnega pasu
+in tako ni mnogo bolj monokromatska kot ustrezna spektralna komponenta
+svetlečega plina. Ostaja pa prostorsko koherentna.
+
+\begin{figure}[tbp]
+\label{s5.6} \vskip 5cm
+\caption{ Frekvenčna odvisnost ojačenja, položaj lastnih frekvenc
+resonatorja in ojačenje na pragu.}
+\end{figure}
+
+Za holografijo, interferometrijo in nekatere spektroskopske uporabe
+potrebujemo ozko spektralno črt. Zato moramo poskrbeti, da bo vzbujeno le
+eno nihanje resonatorja, najbolje tisto, ki je najbližje vrhu ojačenja
+ativnega sredstva, kar napravimo tako, da povečamo izgube za vsa ostala
+nihanja. Ena možnost je, da v resonator postavimo še Fabry-Perotov
+interferometer, kot kaže slika \ref{s5.6}. Njegova prepustnost v
+odvisnosti od frekvence, razmika med zrcali $L_{f}$ in nagiba glede na os
+resonatorja je podana z enačbo (glej 3. poglavje) 
+\begin{equation}
+T=\frac{1}{1+\frac{4{\cal {R}}}{(1-{\cal {R}})^{2}}\sin ^{2}(\frac{\omega }{c%
+}L_{f}\cos \phi )}  \label{5.22}
+\end{equation}
+in jo kaže slika \ref{s5.7}. Izrazitost vrhov prepustnosti je odvisna od
+reflektivnosti zrcal interferometra. Z ustrezno izbiro razmika med zrcali in
+nagiba lahko dosežemo, da vrh prepustnosti ravno sovpada z izbranim
+stanjem resonatorja. Izgube za ostala nihanja, vsebovane v $G_{pr}$, so se s
+tem povečale in laser sveti le pri eni sami izbrani frekvenci. Na sliki 
+\ref{s5.7} so prikazane povečane izgube, lastna stanja 
+\begin{figure}[tbp]
+\label{s5.7} \vskip 7cm
+\caption{Frekvenčna odvisnost ojačenja, položaj lastnih frekvenc
+resonatorja in ojačenje na pragu, kadar je v resonator vgrajen
+Fabry-Perotov interferometer.}
+\end{figure}
+resonatorja in ojačenje aktivnega sredstva. Ker zadošča že zmerno
+povečanje izgub, je reflektivnost zrcal interferometra običajno dokaj
+nizka, pod 0,5.
+
+Naloga: Izberi ustrezne parametre interferometra.
+
+Nagib interferometra je potreben tudi zato, da se neprepuščena svetloba
+odbije ven iz smeri osi resonatorja. "Ce bi bila os interferometra vzporedna
+z osjo resonatorja, bi nastale dodatne, neželjene resonance z osnovnimi
+zrcali resonatorja, kar bi močno motilo delovanje laserja.
+
+\section{Relaksacijske oscilacije}
+
+Doslej smo obravnavali le stacionarno delovanje laserjev. Včasih želimo
+izhodno moč modulirati s spreminjanjem črpanja. Pogosto laserji delujejo v
+sunkih. V nekaterih aktivnih sredstvih je mogoče doseči obrnjeno
+zasedenost le za kratek čas, črpanje v sunkih je včasih enostavnješe,
+recimo z bliskavko pri trdnih laserjih, dostikrat pa tudi želimo dobiti iz
+laserja kratke in močne koherentne sunke svetlobe. Za obravnavo
+nestacionarnega delovanja moramo seveda reševati sistem diferencialnih
+enačb \ref{5.7} in \ref{5.8}, kar gre v splošnem le numerično.
+
+Preden se lotimo sunkov, poglejmo, kako se obnaša laser, ki je blizu
+stacionarnega stanja. Spet se omejimo na enofrekvenčni laser, ki ga
+opišemo z enačbami \ref{5.7} in \ref{5.8}. Te zaradi preglednosti
+zapišimo nekoliko drugače. Vpeljimo brezdimnezijski čas $t^{\prime}=t A$
+in $\tau^{\prime}=\tau A$, čas torej merimo v enotah življenskega časa
+laserskega nivoja. Upoštevajmo še, da je $VA/(B\hbar\omega g(\omega_0))=p$%
+, kjer je $p$ število stanj elektromagnetnega polja v volumnu $V$ in
+znotraj spektralne širine laserskega nivoja. Tako imamo 
+\begin{eqnarray}  \label{5.23}
+\frac{d N_2}{d t^{\prime}}&=&-\frac{1}{p}\,nN_2-N_2+N_{20} \\
+\frac{d n}{d t^{\prime}}& = & \frac{1}{p}\,nN_2-\frac{2}{\tau^{\prime}}n
+\;\;.
+\end{eqnarray}
+Pri tem smo vpeljali konstanto $N_{20}= rN/A$, ki ima tudi nazornen pomen:
+je zasedenost, ki bi jo dobili pri danem stacionarnem črpanju, če v
+izbranem stanju ne bi bilo fotonov in s tem ne stimuliranega sevanja in
+torej meri moč črpanja. V enačbi za hitrost spreminjanja števila fotonov
+smo zanemarili prispevek spontanega sevanja, za katerega smo že ugotovili,
+da se pozna le do praga.
+
+Pri nelinearnih diferencialnih enačbah lahko pogosto dobimo upora\-bne
+približke z linearizacijo. Naj laser najprej deluje stacionarno, v nekem
+trenutku pa ga nekoliko izmaknemo iz stacionarnega stanja, recimo tako, da
+spremenimo moč črpanja. Trenutno zasedenost $N_2$ in število fotonov $n$
+lahko zapišemo v obliki 
+\begin{equation}  \label{5.24}
+N_2= N_{2s}+x \mbox{\hskip 1cm in \hskip 1cm} n=n_s+y\;\;,
+\end{equation}
+kjer sta $N_{2s}$ in $n_s$ vrednosti $N_2$ in $n_s$ v stacionarnem stanju.
+Zanju velja 
+\begin{equation}  \label{5.25}
+N_{2s}=\frac{2p}{\tau^{\prime}}
+\end{equation}
+in 
+\begin{equation}  \label{5.26}
+n_s=p\frac{N_{20}-N_{2s}}{N_{2s}}=p(a-1)\;\;.
+\end{equation}
+Kot smo ugotovili že v drugem razdelku, je stacionarna zasedenost enaka
+zasedenosti na pragu, ki je odvisna od izgub resonatorja, kar kaže tudi
+enačba \ref{5.25}. Razmerje $a=N_{20}/N_{2s}$ je mera za moč črpanja in
+mora biti v delujočem laserju večje od 1. V večini praktičnih primerov
+doseže $a$ vrednosti do 3 ali 5.
+
+Postavimo sedaj nastavka \ref{5.24} v enačbi \ref{5.23}. Dobimo 
+\begin{eqnarray}  \label{5.27}
+\frac{d x}{d t^{\prime}} &=&-\frac{1}{p}n_sN_{2s}-N_{2s}+N_{20}- \frac{1}{p}
+(n_sx+N_{2s}y+xy)-x \\
+\frac{d y}{d t^{\prime}} &=& \frac{1}{p}n_sN_{2s}-\frac{2}{\tau^{\prime}}n_s
++ \frac{1}{p}(n_s x+N_{2s} y+xy)-\frac{2}{\tau^{\prime}}y
+\end{eqnarray}
+
+Ker sta $x$ in $y$ majhna v primeri s stacionarnimi vrednostmi, lahko
+zanemarimo produkt $xy$. Vsi členi, ki vsebujejo le stacionarne vrednosti,
+dajo ravno 0, saj smo jih tako določili. "Ce upoštevamo še izraza \ref
+{5.25} in \ref{5.26}, dobimo željeni linearizirani diferencialni enačbi
+za odmika od stacionarnih vrednosti 
+\begin{eqnarray}
+\frac{dx}{dt^{\prime }} &=&-a\,x-\frac{2}{\tau ^{\prime }}\,y  \label{5.28}
+\\
+\frac{dy}{dt^{\prime }} &=&(a-1)\,x\;\;.
+\end{eqnarray}
+Kot smo pri linearnih sistemih diferencialnih enačb s konstantnimi
+koeficienti vajeni, poiščemo rešitev v obliki eksponentne funkcije 
+\begin{equation}
+x=x_{0}e^{\lambda t^{\prime }}\mbox{\hskip 1cm in \hskip 1cm}%
+y=y_{0}e^{\lambda t^{\prime }}\;\;.  \label{5.29}
+\end{equation}
+Dobljeni homogeni sistem linearnih enačb 
+\begin{eqnarray}
+(a+\lambda )x_{0}+\frac{2}{\tau ^{\prime }}y_{0} &=&0  \label{5.30} \\
+-(a-1)x_{0}+\lambda y_{0} &=&0
+\end{eqnarray}
+bo imel netrivialno rešitev le, če bo njegova determinanta nič: 
+\begin{equation}
+\lambda ^{2}+a\lambda +\frac{2}{\tau ^{\prime }}(a-1)=0\;\;.  \label{5.301}
+\end{equation}
+Rešitvi sta 
+\begin{equation}
+\lambda =-\frac{a}{2}\pm \sqrt{\frac{a^{2}}{4}-\frac{2}{\tau ^{\prime }}(a-1)%
+}\;\;.  \label{5.31}
+\end{equation}
+Narava rešitve je odvisna od velikosti brezdimenzijskega relaksacijskega
+časa nihanja resonatorja $\tau ^{\prime }=A\tau $. Za $\tau ^{\prime }>2$
+je izraz pod korenom pozitiven pri vseh $a$ in laser se vrača v
+stacionarno stanje eksponentno. Za $\tau <2$ pa je koren v nekem območju
+parametra $a$ imaginaren in laser se vrača v stacionarno stanje z
+dušenim nihanjem, ki mu pravimo {\it relaksacijske oscilacije}.
+
+\begin{figure}[tbp]
+\label{s5.8} \vskip 5cm
+\caption{Relaksacijske oscilacije}
+\end{figure}
+
+V običajnih resonatorjih je $\tau$ velikostnega reda $10^{- 7}$~s. Razpadna
+konstanta laserskega nivoja $A$ je navadno dokaj majhna, ker je le v takih
+primerih lahko doseči obrnjeno zasedenost, tipična vrednost je recimo $%
+10^5 $ s$^{-1}$, lahko pa je še dosti manjša. Tedaj je $%
+\tau^{\prime}\simeq 10^{-2}$ in imamo relaksacijske oscilacije pri vseh
+dosegljivih vrednostih črpanja nad pragom, to je za $a>1$. Ker $a$ v praksi
+ni nikoli dosti večji od 3, je frekvenca oscilacij $\omega^{\prime}_r$ v
+brezdimenzijskih enotah približno $1/\sqrt{\tau^{\prime}}$. "Ce preidemo
+nazaj na prave enote časa, dobimo $\omega_r\simeq \sqrt{A/\tau}$. V tem
+primeru je torej frekvenca relaksacijskih oscilacij velikostnega reda
+geometrijske sredine med razpadnima konstantama nihanja resonatorja in
+atomskega stanja. Primer takega nihanja pri vključitvi laserja kaže slika 
+\ref{s5.8}.
+
+Relaksacijske oscilacije so praktično pomembne, ker določajo gornjo mejo
+hitrosti, s katero lahko izhodna moč laserja sledi modulaciji črpanja.
+Poleg tega imamo pri tej frekvenci resonanco, pri kateri se šum črpanja
+ojačano prenaša v šum izhodne moči.
+
+\section{Delovanje v sunkih s preklopom dobrote}
+
+Veliko trenutno moč dobimo iz laserjev, kadar delujejo v kratkih sunkih.
+Pogosto tedaj tudi ojačevalno sredstvo črpamo v sunkih. Pri tem se
+pojavi težava. Ko ob močnem črpanju obrnjena zasedenost znatno
+preseže zasedenost praga (v nestacionarnem stanju je to mogoče), laser
+posveti in v kratkem času zasedenost pade nazaj pod prag. "Ce tedaj
+črpanje še traja, čez čas zasedenost zopet dovolj naraste in laser
+ponovno posveti. To se lahko večkrat ponovi. Razmiki med zaporednimi sunki
+so reda velikosti periode relaksacijskih oscilacij, so pa lahko precej
+nepravilni. Pri takem režimu delovanja v posameznem sunku ne dobimo
+razpoložljive energije črpanja v enem samem lepo oblikovanem sunku, kar
+je za vrsto uporab zelo pomembno.
+
+Opisani težavi se je moč izogniti. V sistemu atomov v stanju obrnjene
+zasedenosti je shranjena energija, ki se preko stimuliranega sevanja lahko
+pretvori v koherenten svetlobni sunek. "Cim večja je stopnja inverzije, tem
+več energije je na voljo. Ugotovili pa smo, da obrnjene zasedenosti v
+resonatorju z danimi izgubami ni mogoče povečati znatno nad prag. Pri
+velikih izgubah je prag visoko in je shranjene energije več. Zato postopamo
+takole. Najprej držimo izgube resonatorja velike in ustvarimo veliko
+obrnjeno zasedenost. Nato dovolj hitro izgube zmanjšamo. Optično ojačenje
+je veliko in energija svetlobe v kratkem času močno naraste. S tem se tudi
+obrnjena zasedenost hitro zniža na vrednost močno pod pragom.
+Predstavljamo si lahko, da dobimo prvi nihaj relaksacijskih oscilacij, le da
+je začetno stanje daleč od stacionarnega in je zato linearni približek
+zelo slab. Iz laserja dobimo kratek in zelo močan sunek svetlobe. Energija
+sunka je skoraj tolikšna kot je bila energija obrnjene zasedenosti.
+Elektrotehniki izgube resonatorjev podajajo z dobroto, to je razmerjem
+frekvence lastnega stanja in njegove širine, zato opisano tehniko imenujemo 
+{\it preklop dobrote}. Dogajanje kaže slika \ref{s5.9}.
+
+\begin{figure}[tbp]
+\label{s5.9} \vskip 10cm
+\caption{Obrnjena zasedenost in energija v laserju pri preklopu dobrote}
+\end{figure}
+
+Izgube resonatorja je mogoče spreminjati na mnogo načinov. Najenostavneje
+je vrteti eno od ogledal. Tedaj dobimo uglašen resonator le v kratkem
+trenutku, ko je ogledalo pravokotno na os. Metoda je dokaj uspešna, a
+zastarela. Boljši in danes največkrat uporabljani način je, da v
+resonator vgradimo elektrooptični ali akustooptični modulator, o katerih
+bomo govorili kasneje. Z njimi lahko električno krmilimo izgube.
+
+Kot smo že povedali, nelinearnih laserskih enačb ne moremo analitično
+rešiti. Zato najprej napravimo nekaj ocen. Trajanje sunka je odvisno od
+hitrosti, s katero se izprazni gornji laserski nivo. To se ne more zgoditi
+hitreje kot v nekaj preletih sunka skozi resonator. Trajanje sunka je torej
+vsaj nekajkrat $2L/c$, to je za 15 cm dolg resonator vsaj 10 ns.
+
+Ocenimo lahko še tudi hitrost naraščanja na začetku in upadanja na koncu
+sunka. Zapišimo najprej še enkrat enačbi za zasedenost in število
+fotonov, pri čemer upoštevajmo, da nas zanima le dogajanje v času sunka,
+ki je zeko kratek v primeri atomskim razpadnim časom, zato zanemarimo
+ustrezni člen v enačbi \ref{5.7}. Navadno je tudi črpanje prešibko, da
+bi med sunkom znatno vplivalo na zasedenost, zato lahko člen $rN$
+izpustimo. S črpanjem seveda ustvarimo začetno zasedenost $N_{20}$. Tako
+nam ostane 
+\begin{eqnarray}  \label{5.32}
+\frac{d N_2}{d t}&=&-\frac{1}{V}B\hbar\omega g(\omega)\,n\,N_2 \\
+\frac{d n}{d t}&=&\frac{1}{V}B\hbar\omega g(\omega)\,n\,N_2 - \frac{2}{\tau}%
+\,n\;.
+\end{eqnarray}
+Na začetku sunka se vrednost $N_2$ ne razlikuje dosti od začetne vrednosti 
+$N_{20}$, tako da število fotonov narašča približno eksponentno: 
+\begin{equation}  \label{5.33}
+n(t)=n_0e^{\frac{1}{V}B\hbar\omega g(\omega)t}= n_0e^{t/\tau_r}\;\;.
+\end{equation}
+Začetnega števila fotonov ne poznamo, vemo pa, da je velikostnega reda 1,
+saj ga dobimo zaradi spontane emisije. Da bo $n$ narastel na znatno
+vrednost, recimo več od 10$^{10}$ fotonov, je potreben čas blizu 30 $%
+\tau_r $.
+
+Vzemimo za primer neodimov laser. Presek za stimulirano sevanje $\sigma
+(\omega )=\frac{1}{c}B\hbar \omega g(\omega )$ (razdelek 4.4) je okoli 10$%
+^{-19}$ cm$^{2}$. Naj bo začetna gostota zasedenosti $N_{20}/V=10^{19}/%
+\mbox{cm}^{3}$. Tedaj je $\tau _{r}=3$ ns. Proti koncu sunka pade obrnjena
+zasedenost precej pod prag in za grobo oceno lahko predpostavimo, da
+ojačevanja ni več. "Stevilo fotonov bo tedaj upadalo s
+krakterističnim razpadnim časom resonatorja $\tau /2\simeq 2L/c(1-{\cal R%
+})^{-1}$. V laserjih s preklopom dobrote je odbojnost izhodnega zrcala
+navadno dokaj nizka, recimo 0,5. Pri $L=15\;\mbox{cm}$ je tako $\tau =4$ ns.
+Celotno trajanje sunka je v izbranem primeru tako približno 10 ns, pri
+čemer traja okoli 100 ns od preklopa dobrote, da sunek zraste iz šuma
+spontanega sevanja. Energija sunka je blizu $N_{20}\hbar \omega $, to je pri
+aktivnem volumnu 0,5 cm$^{3}$ nekaj desetink joula. Od tod lahko ocenimo
+še, da je moč v vrhu sunka velikostnega reda 10 MW.
+
+Iz enačb \ref{5.32} sicer ne moremo izračunati časovnih odvisnosti $%
+N_{2}$ in $n$, lahko pa najdemo njuno medsebojno zvezo. Izrazimo iz prve $dt$
+in ga postavimo v drugo enačbo. Dobimo 
+\begin{equation}
+dn=-dN_{2}+\frac{N_{2p}}{N_{2}}dN_{2}\;\;,  \label{5.341}
+\end{equation}
+kjer smo upoštevali, da je $N_{2p}=2V/(B\hbar \omega g(\omega )\tau )$.
+Enačbo brez težav integriramo: 
+\begin{equation}
+n=N_{20}-N_{2}+N_{2p}\ln \frac{N_{2}}{N_{20}}\;\;.  \label{5.351}
+\end{equation}
+Vzeli smo, da je na začetku $N_{2}=N_{20}$ in $n=0$. Iz dobljene zveze
+lahko najprej izračunamo, kolikšna je končna zasedenost $N_{2k}$. Na
+koncu mora biti zopet $n=0$, kar nam da transcendentno enačbo za $N_{2k}$.
+Ima obliko $(x/a)=\exp (x-a)$, kjer je $x=N_{2k}/N_{20}$ in $a=N_{20}/N_{2p}$%
+. Kadar je začetna zasedenost le malo nad pragom, tudi končna ne pade
+dosti pod prag, zato je izraba energije slabša. Pri večjih začetnih
+vrednostih $N_{20}$ pa pade končna skoraj na nič. Za $a=2$, na primer,
+je $x=0,41$, medtem ko je že pri $a=4$ $x$ le še 0,08. S tem lahko
+izračunamo celotno energijo sunka: $W=\hbar \omega (N_{20}-N_{2k})$.
+
+Trenutna moč, ki izhaja iz laserja, je dana s $P=(2\hbar \omega /\tau )n$.
+Največja bo v vrhu sunka, ki je določen z $dn/dN_{2}=0$. Ta enačba ima
+očitno rešitev pri $N_{2}=N_{2p}$, vrh sunka je torej natanko tedaj, ko
+pade zasedenost na prag. Moč je tedaj $P_{max}=(2\hbar \omega /\tau
+)[N_{20}-N_{2p}-N_{2p}\ln (N_{20}/N_{2p})]$.
+
+S preklopom dobrote dobimo zelo kratke in močne svetlobne sunke. Vendar je
+največja energija omejena. "Ce je začetna obrnjena zasedenost dovolj
+velika, postane ojačenje tolikšno, da se svetloba že v enem preletu
+aktivnega sredstva močno ojači in izprazni laserski nivo. To omejuje
+nadaljne črpanje. Večje moči dosežejo tako, da sunke iz laserja ojačijo
+s prehodom skozi enako aktivno snov, kot je v laserju. Z večstopenjskim
+ojačevanjem je mogoče doseči zelo velike energije v nanosekundnih sunkih,
+do 100 kJ. Da se ojačevalniki med seboj ne motijo, jih je treba ločiti s
+Faradayevimi izolatorji.
+
+Naloga: Oceni, kolikšna je dosegljiva zasedenost pri dani dolžini Nd:YAG
+paličke.
+
+\section{Uklepanje faz}
+
+"Se dosti krajše sunke kot s preklopom dobrote je mogoče dobiti na
+povsem drug način, ki je prav presentljiva manifestacija koherentnosti
+laserske svetlobe. Naj v laserju niha več nihanj hkrati. Njihove frekvence
+so enakomerno razmaknjene za $\Delta \omega =\pi c/L$. Celotno električno
+polje v neki točki v laserju je 
+\begin{equation}
+E(t)=\sum_{m=-N/2}^{N/2}A_{m}e^{i[(\omega _{0}+m\Delta \omega )t+\varphi
+_{m}(t)]}\;\;.  \label{5.342}
+\end{equation}
+$N$ je število vseh vzbujenih nihanj. Upoštevali smo, da ima vsako
+nihanje lahko poljubno fazo $\varphi _{m}(t)$, ki je v splošnem predvsem
+zaradi zunanjih motenj slučajna funkcija časa. Zaradi tega se tudi
+celotno polje slučajno spreminja, kar močno zmanjšuje uporabnost
+takega laserja tam, kjer je potrebna časovna koherenca.
+
+\begin{figure}[tbp]
+\label{s5.10} \vskip 5cm
+\caption{"Casovna odvisnost moči mnogofrekvenčnega laserja z enakimi
+fazami }
+\end{figure}
+
+Denimo, da so faze vseh nihanj enake. Poleg tega zaradi enostavnosti
+računa privzemimo še, da so tudi vse amplitude $A_{m}$ enake. Tedaj
+postane vsota \ref{5.342} geometrijska in jo lahko brez težav seštejemo: 
+\begin{equation}
+E(t)=A_{0}e^{i\omega _{0}t}\frac{\sin (N\Delta \omega t/2)}{sin(\Delta
+\omega t/2)}\;\;.  \label{5.352}
+\end{equation}
+Trenutna moč izhodne svetlobe ima časovno odvisnost 
+\begin{equation}
+P(t)=P_{0}\frac{\sin ^{2}(N\Delta \omega t/2)}{\sin ^{2}(\Delta \omega t/2)}
+\label{5.36}
+\end{equation}
+in jo kaže slika \ref{5.10}. Predstavlja periodično zaporedje sunkov, ki
+si slede s periodo $T=2\pi /\Delta \omega =2L/c$, kar je enako času obhoda
+svetlobe v resonatorju. Konstanta $P_{0}$ je moč posameznega nihanja.
+Moč v vrhu sunka je tako $N^{2}P_{0}$, povprečna moč pa $NP_{0}$.
+Računsko je pojav enak kot uklon na mrežici in lahko rečemo, da imamo
+opravka z interferenco v času. Dolžina sunkov je 
+\begin{equation}
+\tau _{ML}=\frac{T}{N}=\frac{2\pi }{N\Delta \omega }=\frac{2\pi }{\Delta
+\omega _{G}}\;\;,  \label{5.37}
+\end{equation}
+ker je $N$ ravno število nihanj znotraj širine ojačevanja $\Delta
+\omega _{G}$. Dolžina sunka je torej obratno sorazmerna s širino
+ojačevanja aktivnega sredstva.
+
+Premislimo še, kakšna je prostorska odvisnost električnega polja v
+resonatorju. Polje na danem mestu opisuje enačba \ref{5.352}. "Se
+krajevno odvisnost dobimo, če v \ref{5.352} zamenjamo $t$ s $(t-z/c)$. To
+pa predstavlja svetlobni paket, ki potuje sem in tja med ogledali
+resonatorja. Na izhodnem ogledalu se ga vsakič nekaj odbije, nekaj pa gre
+ven iz resonatorja (slika \ref{5.11}). Razmik med sunki, ki izhajajo iz
+resonatorja, je $2L$, prostorska dolžina posameznega sunka pa $\tau
+_{ML}c=2L/N$.
+
+\begin{figure}[tbp]
+\label{5.11} \vskip 5cm
+\caption{Prostorska odvisnost fazno uklenjenih sunkov.}
+\end{figure}
+
+V našem računu predpostavka, da so vse amplitude $A_{m}$ enake, ni prav
+nič bistvena za osnovne ugotovitve. "Ce vzamemo realističen primer, da
+so amplitude oblike $A_{m}=A_{0}\exp [(m\Delta \omega /\Delta \omega
+_{G})^{2}]$, vsote \ref{5.342} ne znamo točno sešteti, lahko pa jo
+približno pretvorimo v integral, ki je Fourierova transformacija Gaussove
+funkcije (Pri prehodu z diskretne vsote na integral seveda izgubimo
+periodičnost zaporedja sunkov.). Ta je zopet Gaussova funkcija, katere
+širina je obratna vrednost širine prvotne funkcije, prav podobno, kot
+smo dobili zgoraj. Odvisnost amplitud nihanj od $m$ vpliva torej le na
+točno obliko sunkov, osnovne ugotovitve pa se ne spremene. (Naloga).
+
+Pač pa je predpostavka, da so vse faze $\varphi_m$ enake, bistvena. V naši
+dosedanji sliki mnogofrekvenčnih laserjev so resonatorska stanja med seboj
+neodvisna, zato so faze poljubne in se zaradi motenj lahko še spreminjajo.
+Da dobijo za vsa nihanja isto vrednost, moramo poskrbeti posebej. Tako {\it %
+uklepanje faz} je mogoče doseči na več načinov. Ena možnost je, da
+moduliramo izgube resonatorja s frekvenco, ki je ravno enaka razliki
+frekvenc med resonatorskimi stanji. To ni težko razložiti. Naj bo
+modulator tak, da je večino časa zaprt, le v razmikih $T=2L/c$ naj bo
+kratek čas odprt. Postavimo ga tik ob eno ogledalo. Tedaj se v resonatorju
+očitno lahko uspešno ojačuje le kratek sunek, kakršen je na sliki \ref
+{***}. Izgube za vsa nihanja bodo majhne le tedaj, kadar bodo vse faze
+enake. V praksi ni potrebno, da je modulacija tako izrazita. Običajno
+zadošča sinusna modulacija izgub, kjer je relativna prepustnost v minimumu
+za nekaj destink manjša od maksimalne.
+
+Kako pri modulaciji pride do uklepanja faz, lahko uvidimo še drugače.
+Modulacija amplitude posameznega nihanja povzroči, da se v spektru nihanja
+pojavita še stranska pasova pri frekvencah $\omega_m \pm \Delta\omega$. Ta
+se ravno pokrivata z obema sosednjima nihanjema in se konstruktivno
+prištejeta, če imata enako fazo. S tem pa so tudi izgube manjše in ima
+delovanje laserja z uklenjenimi fazami najnižji prag. Zadnji razmislek nam
+tudi pove, da ni dobra le amplitudna modulacija, temveč tudi fazna (ali
+frekvenčna), saj se tudi tedaj pojavijo stranski pasovi.
+
+Za modulacijo se najpogosteje uporabljajo akustooptični modulatorji, pri
+katerih izkoriščamo uklon svetlobe na stoječih zvočnih valovih v
+primernem kristalu (Glej 7. poglavje). Frekvenca zvočnega vala mora biti
+enaka polovici zahtevane modulacijske frekvence, za 1,5~m dolg laser torej
+50~MHz.
+
+Poleg opisanega aktivnega postopka je mogoče faze ukleniti tudi tako, da v
+resonator postavimo plast barvila, ki močno absorbira svetlobo laserja pri
+majnhi gostoti toka, pri veliki gostoti toka pa pride do nasičenja
+absorpcije (glej razdelek 4.5), zato postane barvilo prozorno. Na začetku
+imamo v laserju predvsem spontano sevanje, ki se pri enem prehodu skozi
+aktivno snov deloma ojači. Barvilo najmanj absorbira največjo fluktuacijo.
+Pri dovolj velikem ojačenju bo ta rastla in spet dobimo fazno uklenjeni
+sunek. Ker mora po prehodu sunka absorpcija v barvilu zopet hitro narasti,
+mora biti relaksacijski čas barvila zelo kratek, v območju pikosekund.
+
+Z uklepanjem faz je danes mogoče dobiti sunke z dolžino pod 100~fs ($%
+10^{-13}$~s). Tak sunek traja le še nekaj deset optičnih period. S
+posebnimi prijemi jih lahko še skrajšajo na okoli 10~fs. "Ce je potrebna
+večja energija sunkov, jih ojačijo, kar ne pokvari mnogo osnovnega sunka.
+Zelo kratke svetlobne sunke danes na široko uporabljajo za študij hitre
+molekularne dinamike in kratkoživih vzbujenih elektronskih stanj v
+polvodnikih in mnogih drugih snoveh. Z njimi se je časovna ločljivost
+povečala za nekaj redov velikosti \cite{pikosekunde}.
+
+\section{*Stabilizacija frekvence laserja na na\-sičeno absorpcijo}
+
+V drugem razdelku smo videli, da je efektivna spektralna širina
+eno\-frekvenčnega laserja odvisna od fluktuacij dolžine optične poti
+svetlobe pri preletu resonatorja. Na to lahko poleg spreminjanja
+geometrijske dolžine vpliva še spreminjanje lomnega količnika. "Ce se
+posebej ne potrudimo, laser sveti nekje blizu vrha ojačevalnega pasu, pri
+čemer frekvenca pleše za znaten del razmika med resonatorskimi stanji. V
+šolskem He-Ne laserju je to na primer nekaj deset MHz.
+
+Bistveno manjšo širino lahko dosežemo z aktivno stabilizacijo dolžine
+resonatorja. Pri tem je pogalvitni problem, kako dobiti primerjalni
+standard. S stabilizacijo na pomožni interferometer, ki smo jo na kratko
+opisali v drugem razdelku, lahko dobimo zelo ozko črto, ki pa ima le toliko
+natančno določeno frekvenco, kot poznamo dolžino interferometra. Včasih,
+na primer za natančna interferometrična merjenja dolžin, s tem nismo
+zadovoljni in potrebujemo drug, absoluten standard.
+
+Tak standard za frekvenco so ozki prehodi v primernem razredčenem plinu.
+Vendar naletimo na težavo. Zaradi Dopplerjevega pojava so absorpcijske
+črte močno razširjene. Pomaga nam pojav nasičenja absorpcije, o katerem
+smo govorili v razdelku 4.9. Tam smo videli, da se pri dvakratnem prehodu
+monokromatskega snopa svetlobe skozi plin v nasprotnih smereh pojavi v
+sredini Dopplerjevo razširjene črte vdolbina, ki ima obliko homogeno
+razširjene črte. Homogena širina je lahko mnogo manjša od Dopplerjeve in
+je zato vdolbina uporabna kot frekvenčni standard.
+
+V laserski resonator postavimo poleg aktivnega sredstva še celico s
+primernim plinom, ki ima absorpcijsko črto v bližini vrha ojačenja
+aktivnega sredstva. Za He-Ne laser pri 633 nm so to na primer pare ioda.
+Zaradi absorpcije se povečajo izgube v laserju in izhodna moč se zmanjša.
+Spreminjajmo sedaj dolžino resonatorja in s tem frekvenco laserja. Ko se ta
+približa na homogeno širino centru absorpcijske črte pri $\omega_0$, se
+absorpcija zmanjša in s tem se moč laserja poveča. Odvisnost moči
+laserja z absorberjem od dolžine kaže slika \ref{s5.12}. Povečanje moči
+v vrhu običajno ni prav veliko, manj od procenta.
+
+\begin{figure}[tbp]
+\label{s5.12} \vskip 5cm
+\caption{Odvisnost moči laserja z nasičenim absorberjem od frekvence}
+\end{figure}
+
+Shema stabilizacije na nasičeno absorpcijo je prikazana na sliki \ref{****}%
+. Eno od zrcal resonatorja je na piezoelektričnem nosilcu. Nanj vodimo
+izmenično napetost s frekvenco $\Omega$ in s tem moduliramo frekvenco
+laserja, da se vozi preko absorpcijske vdolbine pri $\omega_0$. Zaradi tega
+se spreminja tudi izhodna moč laserja, ki jo opazujemo s fotodiodo. Kadar
+je srednja frekvenca laserja enaka $\omega_0$, se moč zmanjša simetrično
+pri odmikih navzgor in navzdol od $\omega_0$ in se zato spreminja z dvojno
+frekvenco modulacije $2\Omega$. Kadar pa je srednja frekvenca laserja
+nekoliko odmaknjena od $\omega_0$, se izhodna moč pri odmiku v zrcala v eno
+stran spremeni drugače kot v drugo, kar pomeni, da je v signalu s fotodiode
+tudi komponenta s frekvenco $\Omega$. Da držimo srednjo frekvenco laserja
+enako $\omega_0$, moramo torej meriti komponento izhodne moči pri
+modulacijski frekvenci in s povratno zanko skrbeti, da je ta enaka nič.
+
+\begin{figure}[tbp]
+\label{s5.13} \vskip 7cm
+\caption{Shema stabilizacije laserja na nasičeno absoprcijo}
+\end{figure}
+
+Komponento signala s frekvenco $\Omega$ zaznamo s faznim detektorjem, ki
+deluje tako, da signal množi z refenčno modulacijsko napetostjo. V
+produktu dobimo istosmerno komponento, ki je sorazmerna signalu pri
+frekvenci $\Omega$ in ki jo izločimo z nizkopasovnim filtrom. Izhod iz
+faznega detektorja je tako sorazmeren odmiku srednje frekvence laserja od $%
+\omega_0$. Preko primernega ojačevalnika ga vodimo na piezoelektrični
+nosilec zrcala in tako popravljamo dolžino laserja.
+
+Napravimo kvantitativno oceno opisane stabilizacijske sheme. Odvisnost
+izhodne moči od frekvence laserja $\omega$ lahko približno zapišemo v
+obliki 
+\begin{equation}  \label{5.40}
+P(\omega)=P_0 + \frac{P_1\gamma^2}{(\omega- \omega_0)^2+\gamma^2}\;\;.
+\end{equation}
+$P_0$ je moč laserja brez saturacijskega vrha pri $\omega_0$, $P_1$ pa
+povečanje moči pri $\omega_0$. Predpostavili smo, da se ojačenje laserja
+in nehomogeno razširjeni del absorpcije ne spreminjata mnogo preko homogene
+širine absorberja in je zato $P_0$ približno konstantna. Frekvenco laserja
+moduliramo: 
+\begin{equation}  \label{5.41}
+\omega=\omega_0+\Delta\omega+a \sin \Omega t\;\;.
+\end{equation}
+Z $\Delta\omega$ smo označili odstopanje srednje frekvence laserja od
+centra absorpcijske črte $\omega_0$. "Ce sta $a$ in $\Delta\omega$ majhna v
+primeri s homogeno širino $\gamma$, lahko imenovalec v enačbi \ref{5.40}
+razvijemo: 
+\begin{equation}  \label{5.42}
+P(\omega)=P_0+P_1 [1-\frac{1}{\gamma^2}\Delta\omega^2 +\frac{2}{\gamma^2} a
+\Delta\omega \sin\Omega t - \frac{a^2}{\gamma^2}\sin^2\Omega t ]\;\;.
+\end{equation}
+Amplituda signala pri $\Omega$ je $2P_1 a \Delta\omega/\gamma^2$. Najmanjša
+razlika, ki jo lahko zaznamo, je določena s šumom meritve. Kot bomo videli
+v poglavju o detekciji svetlobe, je osnovni izvor šuma fotodiode Poissonov
+šum števila parov elektron-vrzel, ki nastanejo zaradi fotoefekta v p-n
+spoju. Najmanjša sprememba svetlobne moči, ki jo lahko izmerimo, je (glej
+10??. poglavje) 
+\begin{equation}  \label{5.43}
+P_N\simeq \sqrt{\hbar\omega P \frac{1}{\tau}}\;,
+\end{equation}
+kjer je $P$ celotna svetlobna moč, ki vpada na diodo, $\tau$ pa čas
+meritve, ki je v našem primeru določen s časovno konstanto nizkopasovnega
+filtra na izhodu faznega detektorja.
+
+Vzemimo na primer He-Ne laser, stabiliziran na iodove pare. Povprečna moč
+laserja $P_0$ naj je 10 mW in $P_1=0.1 $ mW. "Sirina absorpcijske črte $%
+\gamma= 10^6$ s$^{-1}$. Izberimo amplitudo modulacije $a=10^5$ s$^{-1}$ in $%
+\tau=10^{-4}$ s. "Casovna konstanta $\tau$ ne sme biti prevelika, določa
+namreč, kako hitro popravljamo dolžino laserja. Gornje vrednosti nam dajo
+za najmanjšo zaznavno moč pri $\Omega$ $P_N=0.5\times10^{-8}$ W.
+Najmanjše merljivo odstopanje frekvence laserja je tedaj 
+\begin{equation}  \label{5.44}
+\Delta\omega_N=\frac{P_N \gamma^2}{2P_1 a}=2.5\times 10^3\;s^{-1}\;.
+\end{equation}
+Takšno in še boljšo stabilnost frekvence tudi zares dosežejo. Pozoren
+bralec bo opazil, da je $\Delta\omega_N<0.01 \gamma$, to je, položaj
+absorpcijskega vrha je na opisan način mogoče določiti z natančnostjo
+nekaj tisočink celotne širine.
+
+Na absorpcijsko črto stabiliziranega laserja navadno ne uporabljamo
+direktno, temveč z njim kontroliramo drug laser. Del izhodne svetlobe iz
+obeh laserjev zmešamo na detekcijski fotodiodi. V signalu dobimo utripanje,
+ki je enako razliki frekvenc obeh laserjev. S spreminjanjem dolžine drugega
+laserja skrbimo, da je frekvenca utripanja konstantna. Na ta način lahko v
+ozkem frekvenčnem intervalu še spreminjamo frekvenco drugega laserja.
+
+Z merjenjem utripanja med dvema stabiliziranima laserjema ugotavljajo tudi
+njihovo stabilnost.
+
+\section{*Absolutna meritev frekvence laserja in definicija metra}
+
+Najnatančneje merljiva količina je čas odnosno frekvenca. Frekvence
+laserja, ki sveti v vidnem področju seveda ni mogoče direktno prešteti.
+Pač pa je v začetku sedemdesetih let uspelo s heterodinsko tehniko, ki se
+v mikrovalovni tehniki pogosto uporablja, napraviti primerjavo
+stabiliziranega He-Ne laserja z osnovno cezijevo uro in tako določiti
+frekvenco absorpcijske črte metana pri 3.39 $\mu$m z isto natan"nostjo, kot
+jo ima cezijeva ura.
+
+S heterodinsko tehniko primerjamo frekvenci dveh ali več valovanj tako, da
+jih zmešamo na primernem nelinearnem elementu, običajno neki diodi. Zaradi
+nelinearnosti dobimo v odzivu diode različne mnogokratnike vpadnih
+frekvenc, njihove vsote in razlike. Od teh je kaktera lahko dovolj nizka, da
+jo lahko direktno preštejemo.
+
+Za primerjanje frekvenc nad mikrovalvnim področjem je potreben ustrezen
+mešalni element. Polvodniške diode nehajo biti uporabne pri približno 20
+GHz. Za višje frekvence uporabijo diode kovina-izolator-kovina, ki jih
+sestavljajo oksidirana površina niklja, ki se je dotika ostra volframska
+konica. Taka dioda deluje kot uporaben mešalni element do frekvenc okoli
+200 THz, to je skoraj do vidnega področja.
+
+\begin{figure}[tbp]
+\label{s5.14} \vskip 15cm
+\caption{Primerjalna veriga za meritev frekvence He-Ne laserja}
+\end{figure}
+
+Za primerjavo He-Ne laserja, stabiliziranega na metan pri 3.39 $\mu$m, z
+osnovno cezijevo uro je bilo potrebno zgraditi celo verigo vmesnih
+primerjav, ki jo kaže slika \ref{*****}. Frekvenco CO$_2$ laserja dobimo na
+primer iz utripanja med frekvencama CO$_2$ laserja pri 10.2 $\mu$m in pri
+9.3 $\mu$m, trikratnikom frekvence HCN laserja in še klistrona s frekvenco
+20 GHz. Na ta način so izmerili, da je frekvenca CH$_4$ črte na katero je
+stabiliziran He-Ne laser, 88.376181627 THz.
+
+Valovno dolžino laserja dobimo z interferometrično primerjavo z
+dolžinskim standardom, ki je bil do leta 1984 določen z neko kriptonovo
+črto. Iz znane frekvence in valovna dolžine določimo hitrost svetlobe.
+Zaradi relativno velike širine črte kriptonove svetilke je bil po starem
+meter definiran le z relativno natančnostjo 10$^{- 8}$, kar je pomenilo, da
+tudi hitrost svetlobe ne more biti določena bolj natančno. Meritev
+frekvence laserja pa je dosti natančnejša. Zato je bilo smiselno opustiti
+meter kot osnovno enoto in raje definirati hitrost svetlobe kot pretvornik
+med sekundo in metrom. Z njeno vrednost so vzeli, kar so dobili z naboljšo
+primerjavo stabiliziranega laserja in kriptonove črte: $c=299 792
+458\;m/s\;. $ Na metan ali jod stabilizirani laser je postal sekundarni
+standard za dolžino. Laser je pravzaprav pri tem le pomožna naprava;
+standard je ustrezni molekularni prehod.
+
+\section{*Semiklasični model laserja}
+
+Doslej smo laserje obravnavali le z modelom zasedbenih enačb. Ta je zelo
+grob, saj smo zanemarili nekaj pomembnih pojavov. Svetlobo v resonatorju smo
+opisali smo opisali le s celotno energijo ali številom fotonov in se za
+njeno valovno naravo nismo menili. Kar privzeli smo, da je frekvenca
+delujočega laserja in oblika polja v njem enaka kot za lastno stanje
+praznega resonatorja. Aktivno snov smo opisali le z zasedenostjo zgornjega
+in spodnjega laserskega stanja in smo s tem izpustili možnost, da se zaradi
+sodelovanja z elektromagnetnim poljem atomi nahajajo v nestacionarnem,
+mešanem stanju.
+
+Gornje pomanjkljivosti odpravimo s tem, da elektromagnetno polje v
+resonatorju obravnavamo z valovno enačbo, za atome aktivne snovi pa
+upoštevamo, da se pokoravajo Schroedingerjevi enačbi. S tem dobimo {\it %
+semiklasični model} laserja. Za še natančnejši opis pa moramo tudi
+svetlobo obravnavati kvantno, kar presega okvir te knjige.
+
+Aktivna snov naj bo še naprej kar najenostavnejša, to je množica enakih
+dvonivojskih atomov s stanji $|1\rangle$ in $|2\rangle$, ki imata energiji $%
+W_1$ in $W_2$. Atomi s svetlobo sodelujejo preko dipolne interakcije oblike $%
+e\hat{x}E(t)$, kjer je $E(t)$ polje v resonatorju, ki naj bo zaradi
+preprostosti polarizirano v smeri osi $x$. "Casovno odvisno stanje atomov
+zapišimo v obliki 
+\begin{equation}  \label{5.45}
+|\psi\rangle=c_1(t)|1\rangle\exp(-iW_1t/\hbar)+
+c_2(t)|2\rangle\exp(-iW_2t/\hbar)\;.
+\end{equation}
+Iz Schroedingerjeve enačbe dobimo za koeficienta $c_1(t)$ in $c_2(t)$ 
+\begin{equation}  \label{5.46}
+\dot{c}_1=\frac{1}{i\hbar}\,E(t)v_{12}e^{-i\omega_0 t}c_2 \dot{c}_2=\frac{1}{%
+i\hbar}\,E(t)v_{12}e^{i\omega_0 t}c_1\;,
+\end{equation}
+kjer je $\omega_0=(W_2-W_1)/\hbar$ in $v_{12}=e\langle 1|\hat{x}||2\rangle$.
+
+Električni dipolni moment atoma v stanju $ket{\psi}$ je 
+\begin{equation}  \label{5.47}
+p=-e\langle\psi|\hat{x}|\psi\rangle=-(c_1^{\ast}c_2e^{-i \omega_0
+t}+c_1c_2^{\ast}e^{i \omega_0 t}) v_{12}\;.
+\end{equation}
+Razdelimo $p$ na dva dela: 
+\begin{equation}  \label{5.48}
+p=p^++p^-=v_{12}[\eta(t)+\eta^{\ast}(t)]\;,
+\end{equation}
+kjer smo vpeljali $\eta(t)=c_1^{\ast}c_2e^{-i \omega_0 t}$.
+
+Zanima nas, kako se dipolni moment spreminja s časom. Zato s pomočjo
+enačb \ref{5.46} izrazimo 
+\begin{equation}  \label{5.49}
+\dot{\eta}=- i \omega_0\eta-\frac{1}{i\hbar}\,E(t)v_{12} (|c_2|^2-|c_1|^2)\;.
+\end{equation}
+$|c_i|^2$ je verjetnost za zasedenost stanja $|i\rangle$. Izraz v oklepaju
+na desni strani gornje enačbe torej meri razliko zasednosti obeh stanj;
+označimo ga z $\zeta$. Podobno kot zgoraj izrazimo časovni odvod 
+\begin{equation}  \label{5.50}
+\dot{\zeta}=\frac{2v_{12}}{i\hbar}\,E(t)(\eta^{\ast}- \eta)\;.
+\end{equation}
+S tem smo iz Schroedingerjeve enačbe dobili enačbe za časovni razvoj
+diponega momenta in obrnjene zasedenosti, ki pa jih moramo še dopolniti.
+Naj bo atom na začetku v stanju $|2\rangle$ in naj bo $E(t)=0$. Začetna
+vrednost $\zeta(0)=1$ in po enačbi \ref{5.50} naj bi bila $\zeta(t)$
+konstantna. Vemo pa, da se atom, ki je v vzbujenem stanju, sčasoma vrne v
+osnovno stanje. Verjetnost za prehod na časovno enoto smo označili z $A$.
+Poleg tega moramo na nek način upoštevati še črpanje, s katerim
+vzdržujemo obrnjeno zasedenost in s tem lasersko delovanje. Za podroben
+opis črpanja bi morali v Hamiltonov operator dodati ustrezne člene in
+morda upoštevati še druga stanja atomov, vendar nas take podrobnosti na
+tem mestu ne zanimajo. Zaradi črpanja stacionarna vrednost $\zeta$ v
+odsotnosti laserskega polja $E(t)$ ni -1, temveč zavzame neko vrendost $%
+\zeta_0$ med -1 in 1, odvisno od moči črpanja. Tako lahko enačbo \ref
+{5.50} popravimo: 
+\begin{equation}  \label{5.51}
+\dot{\zeta}=A(\zeta_0-\zeta)+ \frac{2v_{12}}{i\hbar}\,E(t)(\eta^{\ast}-\eta)%
+\;,
+\end{equation}
+kjer prvi člen popisuje spontane prehode v nižje stanje in vpliv črpanja.
+
+Podobno dopolnimo še enačbo \ref{5.49}. Pri $E(t)=0$ da časovno odvisnost 
+$\eta$ oblike $e^{-i \omega_0 t}$, to je brez dušenja. Vema pa, da
+polarizacija v mešanem stanju razpada vsaj zaradi spontanega sevanja, lahko
+pa še zaradi drugih vplivov, na primer trkov z drugimi atomi. Označimo
+koeficient dušenja polarizacije z $\gamma$, ki meri tudi spektralno širino
+svetlobe, ki jo sevajo atomi pri prehodu $2\rightarrow 1$. Tako imamo 
+\begin{equation}  \label{5.52}
+\dot{\eta}=- (i \omega_0\eta+\gamma)- \frac{1}{i\hbar}\,E(t)v_{12} \zeta \;.
+\end{equation}
+Tej enačbi moramo dodati še konjugirano kompleksno enačbo. Enačbe \ref
+{5.51} in \ref{5.52} pogosto imenujejo Blochove enačbe. Najprej so jih
+uporabili za obravnavo jedrske magnetne resonance.
+
+Potrebujemo še enačbo za polje $E(t)$. Zanj dobimo iz Maxwellovih enačb
+valovno enačbo, kjer moramo upoštevati, da imamo tudi od nič različno
+polarizacijo snovi, ki je v primeru, da so vsi atomi enakovredni, podana z 
+\begin{equation}  \label{5.53}
+P=\frac{N}{V}\,v_{12}(\eta+\eta^{\ast})=P^++P^-\;.
+\end{equation}
+Valovna enačba je tedaj \cite{empolje} 
+\begin{equation}  \label{5.54}
+\nabla^2 E-\frac{1}{c^2}\ddot{E}=\mu_0 \ddot{P}\;.
+\end{equation}
+
+Namesto mikroskopske količine $\zeta$ lahko uvedemo še gostoto obrnjene
+zasedenosti $Z=(N/V)\zeta$, pa lahko enačbi \ref{5.51} in \ref{5.52}
+prepišemo v obliko 
+\begin{eqnarray}  \label{5.56}
+\dot{P}^{\pm}&=&(\mp i \omega_0-\gamma)P^{\pm}+ \frac{v_{12}^2}{i\hbar} E\,Z
+\\
+\dot{Z}&=&A(Z_0-Z)-\frac{2}{i\hbar}E(P^--P^+)\;.
+\end{eqnarray}
+Prehod od enačb \ref{5.51} in \ref{5.52} na \ref{5.55} je mogoč le, kadar
+so vsi atomi enakovredni, to je, kadar ni nehomogene razširitve. Kako je v
+primeru nehomogene razširitve, si bralec lahko ogleda v \cite{haken2}.
+
+Enačbe \ref{5.51}, \ref{5.52} ali \ref{5.55}, skupaj z \ref{5.54} dajejo
+semiklasični opis sodelovanja svetlobe in snovi. Iz izpeljave je vidno, da
+je v njem spontano sevanje obravnavano pomankljivo, le s fenomenološkim
+na\-stavkom, kar je moč popraviti tako, da tudi elektromagnetno polje
+kvantiziramo. Kljub tej pomanjkljivosti je s semiklasičnim modelom mogoče
+zelo podrobno obravnavati večino pojavov v laserjih in tudi druge probleme
+širjenja svetlobe po snovi. Reševanje zapisanega sistema nelinearnih
+parcialnih diferencialnih enačb pa je v splošnem zelo težavno.
+
+Da bomo semiklasične enačbe le nekoliko pobliže spoznali, na kratko
+poglejmo najenostavnejši primer, to je laser, v katerem je vzbujeno le eno
+resonatorsko stanje. Polje ima tedaj obliko 
+\begin{equation}  \label{5.57}
+E(\vec{r},t)=E_{\lambda}(t)u_{\lambda}(\vec{r})\;,
+\end{equation}
+kjer je $u_{\lambda}(\vec{r})$ krajevni del lastnega stanja resonatorja, ki
+zadošča enačbi 
+\begin{equation}  \label{5.58}
+\nabla^2 u_{\lambda}- \frac{\omega_{\lambda}^2}{c^2}u_{\lambda}=0\;.
+\end{equation}
+$E_{\lambda}(t)$ opisuje časovno odvisnost, ki je za laser v stacionarnem
+delovanju periodična, vendar frekvenca ni nujno kar enaka lastni frekvneci
+praznega resonatorja $\omega_{\lambda}$, temveč jo moramo še izračunati.
+
+Tudi polarizacijo lahko razvijemo po lastnih funkcijah $u_{\lambda}(\vec{r})$%
+. Ker so te med seboj ortogonalne, preide valovna enačba \ref{5.54} v 
+\begin{equation}  \label{5.59}
+\omega_{\lambda}^2 E_{\lambda}-\ddot{E_{\lambda}}= \frac{1}{\epsilon_0}\ddot{%
+P}_{\lambda}\;.
+\end{equation}
+
+Razstavimo $E_{\lambda}(t)$ na dva dela: 
+\begin{equation}  \label{5.60}
+E_{\lambda}(t)=E_{\lambda}^+(t)+E_{\lambda}^-(t)=A^+(t)e^{-i
+\omega_{\lambda}t}+A^-(t)e^{i \omega_{\lambda}t}\;.
+\end{equation}
+Dejanska frekvenca laserja je blizu $\omega_{\lambda}$, zato pričakujemo,
+da bosta amplitudi $A^{\pm}(t)$ v primerjavi z $e^{-i \omega_{\lambda}t}$ le
+počasni funkciji časa. Izračunajmo 
+\begin{eqnarray}  \label{5.61}
+\ddot{E}_{\lambda}^+&=&-\omega_{\lambda}^2 E_{\lambda}^+-2i \omega_{\lambda} 
+\dot{A}^+ e^{-i \omega_{\lambda}t} + \ddot{A}^+ e^{-i \omega_{\lambda}t} 
+\nonumber \\
+&\simeq&-\omega_{\lambda}^2 E_{\lambda}^+-2i \omega_{\lambda}(\dot{E}%
+_{\lambda}^++i \omega_{\lambda}E_{\lambda}^+)
+\end{eqnarray}
+V drugi vrstici smo izpustili člen z $\ddot{A}^+$, ker pričakujemo, da je
+majhen. S tem smo napravili približek {\it počasne amplitude}.
+
+Polarizacija snovi je približno periodična s frekvenco $\omega_0$, z
+amplitudo, ki je tudi počasna funkcija časa. Zato je $\ddot{P}%
+_{\lambda}^+\simeq- \omega_0^2 P_{\lambda}^+$. Pri drugem odvodu polja po
+času smo potrebovali en člen več, ker se člen $-\omega_{\lambda}^2
+E_{\lambda}^+$ na levi strani enačbe \ref{5.54} odšteje. Z uporabo tega
+približka in enačb \ref{5.58} in \ref{5.61} preide valovna enačba \ref
+{5.54} za eno nihanje v 
+\begin{equation}  \label{5.62}
+\dot{E}_{\lambda}^+=-i \omega_{\lambda} E_{\lambda}^++\frac{i \omega_0}{%
+2\epsilon_0}P_{\lambda}^+\;.
+\end{equation}
+
+Doslej nismo upoštevali, da je polje v praznem resonatorju dušeno, zato
+moramo gornjo enačbo še popraviti: 
+\begin{equation}  \label{5.63}
+\dot{E}_{\lambda}^+=(-i \omega_{\lambda}-\frac{1}{\tau}) E_{\lambda}^++\frac{%
+i \omega_0}{2\epsilon_0}P_{\lambda}^+\;.
+\end{equation}
+Kadar v reosnatorju ni snovi, je dobljena enačba enaka kot enačba \ref
+{3.45}.
+
+Enačbi \ref{5.55} in \ref{5.56} sta nelinearni, zato ju n moč kar tako
+prepisati za primer razvoja po lastnih stanjih resonatorja. Pri enačbi za
+razvoj polarizacije \ref{5.55} imamo v zadnjem členu na desni produkt
+komponente polja $E_{\lambda}$ in obrnjene zasedenosti $Z$, od katere
+bistveno prispeva le krajevno povprečje $\bar{Z}$, ki se tudi s časom le
+počasi spreminja. Seveda vsebuje $Z$ tudi krajevno odvisne komponente, ki
+pa so pomembne predvsem zato, ker sklaplajo različna lastna stanja
+resonatorja, kar presega našo trenutno obravnavo. Tako imamo 
+\begin{equation}  \label{5.64}
+\dot{P}_{\lambda}^+=(-i \omega_0- \gamma)P_{\lambda}^++\frac{v_{12}^2} {%
+i\hbar}\,E_{\lambda}^+\bar{Z}\;.
+\end{equation}
+
+Enačbo za $\bar{Z}$ dobimo iz \ref{5.56}. V zadnjem členu imamo produkte $%
+E^{\pm}P^{\pm}=E_{\lambda}^{\pm}P_{\lambda}^{\pm} u_{\lambda}^2(\vec{r})$,
+kar moramo prostorsko povprečiti. Funkcije $u_{\lambda}(\vec{r})$ naj so
+normalizirane tako, da je $\int u_{\lambda}^2(\vec{r}) \,dV=V$. Tako imamo $%
+\overline{u_{\lambda}^2(\vec{r})}=1$ in 
+\begin{equation}  \label{5.65}
+\dot{\bar{Z}}= A(\bar{Z}_0-\bar{Z})- \frac{2}{i\hbar}(E_{\lambda}^++
+E_{\lambda}^-)(P_{\lambda}^- - P_{\lambda}^+)\;,
+\end{equation}
+kjer je $\bar{Z}_0$ povprečje nenasičene zasedenosti $Z_0$. V zadnjem
+členu nastopajo produkti, ki nihajo s frekvencami $\omega_{\lambda}-
+\omega_0$ in $\omega_{\lambda}+ \omega_0$. Obe frekvenci sta si zelo blizu,
+zato je njuna vsota mnogo večja od razlike. "Cleni $E_{\lambda}^+
+P_{\lambda}^+$ in $E_{\lambda}^- P_{\lambda}^-$ se torej zelo hitro
+spreminjajo in skoraj nič ne vplivajo na valovanje blizu $\omega_{\lambda}$%
+, zato jih izpustimo. S tem je časovna odvisnost $\bar{Z}$ podana z 
+\begin{equation}  \label{5.66}
+\dot{\bar{Z}}= A(\bar{Z}_0-\bar{Z})- \frac{2}{i\hbar}(E_{\lambda}^+
+P_{\lambda}^- - E_{\lambda}^- P_{\lambda}^+)\;.
+\end{equation}
+Enačbe \ref{5.63}, \ref{5.64} in \ref{5.66}, skupaj s konjugirano
+kompleksnimi enačbami za $E_{\lambda}^-$ in $P_{\lambda}^-$, so zaključen
+sistem, ki opisuje delovanje enofrekvenčnega laserja. Uporabimo jih za
+izračun frekvence izhodne svetlobe.
+
+Naj bo stanje stacionarno. Tedaj lahko polje zapišemo v obliki $E_{\lambda
+}^{+}=E_{0}e^{-i\Omega t}$, kjer je $E_{0}$ realna konstanta, frekvenca
+svetlobe $\omega $ pa je blizu $\omega _{0}$ in $\omega _{\lambda }$. V
+stacionarnem stanju mora imeti polarizacija enako časovno odvisnost: $%
+P_{\lambda }^{+}=P_{0}e^{-i\Omega t}$. Tedaj je v enačbi \ref{5.66} drugi
+oklepaj konstanten in mora biti tudi $\bar{Z}$ v stacionarnem stanju od
+časa neodvisna. Sistem enačb \ref{5.63}, \ref{5.64} in \ref{5.66} nam
+tako da 
+\begin{eqnarray}
+-[i(\omega _{\lambda }-\Omega )+\frac{1}{\tau }]E_{0}-\frac{i\omega _{0}}{%
+2\epsilon _{0}}\,P_{0} &=&0  \nonumber  \label{5.67} \\
+-[i(\omega _{0}-\Omega )+\gamma ]P_{0}+\frac{v_{12}^{2}}{i\hbar }\,E_{0}\bar{%
+Z} &=&0  \nonumber \\
+A(\bar{Z}_{0}-\bar{Z})-\frac{2}{i\hbar }\,E_{0}(P_{0}^{*}-P_{0}) &=&0\;.
+\end{eqnarray}
+
+Najprej izračunamo $P_0$ iz druge enačbe, ga postavimo v tretjo in
+izračunamo $\bar{Z}$: 
+\begin{equation}  \label{5.68}
+\bar{Z}=\bar{Z}_0\left[1+\frac{v_{12}^2}{\hbar^2 A}\,E_0^2\, \frac{2\gamma}{%
+(\omega_0-\Omega)^2+\gamma^2}\right]^{-1}
+\end{equation}
+Ta izraz že poznamo. $\pi v_{12}^2/(\epsilon_0\hbar^2)$ je Einsteinov
+koeficient $B$. $E_0^2$ je sorazmern gostoti energije polja v resonatorju,
+zadnji ulomek v oklepaju pa nam podaja obliko homogeno razširjene atomske
+črte: 
+\begin{equation}  \label{5.69}
+\bar{Z}=\bar{Z}_0\left[1+\frac{2B}{A}\,g(\omega_0- \Omega)w\right]^{-1}
+\end{equation}
+To je natanko enako izrazu za nasičenje zasedenosti stanj, ki smo ga
+izpeljali iz zasedbenih enačb v četrtem poglavju.
+
+Postavimo $P_0$ iz prve enačbe sistema \ref{5.67} v drugo: 
+\begin{equation}  \label{5.70}
+E_0[i(\Omega-\omega_{\lambda})+\frac{1}{\tau}] [i(\Omega- \omega_0)
++\gamma]=-\frac{v_{12}^2 \omega_0}{2\hbar\epsilon_0}\,E_0\,\bar{Z}\;.
+\end{equation}
+V delujočem laserju je $E_0\ne 0$, zato lahko krajšamo. $\bar{Z}$ je
+realen, tako da mora biti imaginarni del leve strani enak nič: 
+\begin{equation}  \label{5.71}
+(\Omega- \omega_{\lambda})\gamma+(\Omega- \omega_0)\frac{1}{\tau} = 0 \;.
+\end{equation}
+Od tod lahko izračunamo frekvenco laserja 
+\begin{equation}  \label{5.72}
+\Omega=\frac{\omega_{\lambda}\gamma+ \omega_0\frac{1}{\tau}}{\gamma + \frac{1%
+}{\tau}}\;.
+\end{equation}
+Frekvenca torej ni enaka frekvenci praznega resonatorja $\omega_{\lambda}$,
+temveč je premaknjena proti centru atomske črte $\omega_0$. Premik je
+odvisen od razmerja širine atomske črte in izgub resonatorja.
+
+Bralec lahko sam iz enačbe \ref{5.70} izračuna še energijo svetlobe v
+resonatorju in rezultat primerja s tistim, ki smo ga dobili z uporabo
+zasedbenih enačb.
+
+Gornji primer uporabe polklasičnih enačb je zelo preprost. Prava moč
+modela se pokaže pri obravnavi mnogofrekvenčnega laserja, na primer pri
+računu uklepanja faz laserskih nihanj, kar pa presega okvir te knjige. Več
+bo bralec našel v \cite{haken2}.
