@@ -245,6 +245,21 @@ za prepovedane pa okoli $\sim 10^4/\si{\second}$.
 Karakteristični (naravni) razpadni čas gornjega stanja vpeljemo kot
 $\tau = 1/A_{21}$. 
 
+Zaradi končnega življenjskega časa ima vzbujeno stanje končno spektralno 
+širino. Najpogosteje je atomska spektralna črta\index{Atomska črta} kar 
+Lorentzove oblike\index{Spekter!Lorentzov}
+\begin{equation}
+g(\omega)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}}.
+\label{4.21}
+\end{equation}
+Funkcija $g(\omega)$ je normirana
+\begin{equation}
+\int_{-\infty}^\infty g(\omega)\, d\omega=1,
+\label{4.20}
+\end{equation}
+za grobe ocene pa funkcijo $g(\omega)$ aproksimiramo tudi s pravokotnikom širine
+$2\gamma$ in višine $1/2\gamma$.
+
 \subsection*{Absorpcija}
 Absorpcija fotona\index{Absorpcija fotona} je prehod, pri katerem se foton 
 z ustrezno energijo absorbira, atom pa preide iz nižjega stanja v višje (slika~\ref{sl4.1}\,c). 
@@ -260,13 +275,13 @@ To je enostavno razumeti. Več kot je fotonov v votlini pri frekvenci, ki je
 v bližini frekvence prehoda, več fotonov se bo absorbiralo in večja je 
 verjetnost za prehod atoma v višje stanje. Pri absorpciji se
 seveda število fotonov v enem od stanj polja pri frekvenci
-$\omega_{0}$ zmanjša.
+$\omega_{0}$ zmanjša za ena.
 
 \subsection*{Stimulirano sevanje}
-Tretji pojav je prehod atoma iz gornjega stanja v spodnje zaradi interakcije
+Tretji pojav je prehod atoma iz višjega stanja v nižje zaradi interakcije
 s poljem. Temu procesu pravimo stimulirano sevanje\index{Stimulirano sevanje} ali 
 stimulirana emisija. Tudi verjetnost za stimuliran prehod na časovno enoto $r_{21}$ 
-je sorazmerna spektralni gostoti energije polja pri frekvenci prehoda $\omega_{0}$
+je sorazmerna s spektralno gostoto energije polja pri frekvenci prehoda $\omega_{0}$
 \begin{equation}
 r_{21}=B_{21}u(\omega_{0}).
 \label{4.17}
@@ -279,77 +294,62 @@ vpadla.
 
 Preden nadaljujemo, se še nekoliko pomudimo pri izrazih za absorpcijo
 (enačba~\ref{4.16}) in stimulirano emisijo (enačba~\ref{4.17}).
-Zaradi končnega življenjskega časa ima vzbujeno
-stanje končno spektralno širino. Zapisani enačbi~(\ref{4.16}) in (\ref{4.17})
+Zapisani enačbi~(\ref{4.16}) in (\ref{4.17})
 veljata le, kadar je spektralna gostota elektromagnetnega polja $u(\omega)$
 preko celotne spektralne širine prehoda približno konstantna 
 (slika~\ref{fig:spektri}\,a). To je gotovo res, če
 obravnavamo sevanje v votlini, ki je v termičnem ravnovesju (črno telo). 
 
-Če pa na atome svetimo s svetlobo s spektrom, ki je ozek v primerjavi s spektralno 
-širino prehoda, na primer iz laserskega resonatorja, je verjetnost za prehod 
-odvisna tudi od tega, kako blizu centralne frekvence prehoda je frekvenca vpadne 
-svetlobe (slika~\ref{fig:spektri}\,b). 
-Naj bo $w_{\omega R}$ gostota energije (ne spekter!) monokromatske svetlobe s frekvenco
-$\omega_R$. Tedaj lahko verjetnost za absorpcijo na časovno enoto zapišemo
-v obliki 
-\begin{equation}
-r_{12}=B_{12}g(\omega_R)\, w_{\omega R}.
-\label{4.18}
-\end{equation}
-Pri tem funkcija $g(\omega)$ opisuje obliko atomske spektralne črte z vrhom 
-pri $\omega_{0}$. \\
 \begin{figure}
 \centering
 \includegraphics[width=12truecm]{slike/05_Spektri.png}
 \caption{Pri izračunu verjetnosti za absorpcijo in stimulirano emisijo je pomembno, ali je 
-širina spektralne gostote elektromagnetnega polja bistveno večja (a) ali bistveno manjša (b)
-glede na atomsko spektralno črto.}
+širina spektralne gostote elektromagnetnega polja $u(\omega)$ bistveno večja (a) ali bistveno manjša (b)
+od atomske spektralne črte $g(\omega)$.}
 \label{fig:spektri}
 \end{figure}
 
 V splošnem primeru, ko se spekter vpadne svetlobe spreminja v območju 
-frekvence prehoda, moramo sešteti prispevke pri posameznih frekvencah (\ref{4.18}) 
-po ozkih frekvenčnih intervalih
+frekvence prehoda, moramo sešteti prispevke po ozkih frekvenčnih intervalih
 \begin{equation}
 r_{12}=B_{12}\int g(\omega)\, u(\omega)\, d\omega.
 \label{4.19}
 \end{equation}
-Če preverimo gornji zapis na primeru spektra črnega telesa, ki se ne spreminja 
-dosti v območju prehoda, lahko $u(\omega)$ postavimo pred integral in po pričakovanju
-dobimo znano enačbo~(\ref{4.16}). Iz tega sledi, da mora biti funkcija $g(\omega)$ normirana
+Gornji zapis preverimo na primeru spektra črnega telesa, ki se ne spreminja 
+dosti v območju prehoda. Takrat $u(\omega)$ postavimo pred integral in po pričakovanju
+dobimo znano enačbo~(\ref{4.16}). 
+
+Če pa na atome svetimo s svetlobo s spektrom, ki je ozek v primerjavi s spektralno 
+širino prehoda, na primer iz laserskega resonatorja, je verjetnost za prehod 
+odvisna tudi od tega, kako blizu centralne frekvence prehoda je frekvenca vpadne 
+svetlobe (slika~\ref{fig:spektri}\,b). Zapišemo $w_{\omega R}$ gostoto energije 
+monokromatske svetlobe s frekvenco $\omega_R$. Verjetnost za absorpcijo na časovno 
+enoto je potem  
 \begin{equation}
-\int g(\omega)\, d\omega=1.
-\label{4.20}
+r_{12}=B_{12}g(\omega_R)\, w_{\omega R}.
+\label{4.18}
 \end{equation}
-Zelo pogosto je $g(\omega)$ Lorentzove oblike\index{Spekter!Lorentzov}
-\begin{equation}
-g(\omega)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}}.
-\label{4.21}
-\end{equation}
-Za grobe ocene lahko funkcijo $g(\omega)$ aproksimiramo tudi s pravokotnikom širine
-$\delta\omega\simeq\gamma$ in višine $1/\delta\omega$.
+
+Koeficiente $A_{21}$, $B_{12}$ in $B_{21}$, s katerimi smo opisali spontano sevanje,
+absorpcijo in stimulirano emisijo je prvi vpeljal Einstein\footnote{Nemški fizik
+in nobelovec Albert Einstein, 1879--1955.}, zato jih imenujemo 
+tudi Einsteinovi koeficienti\index{Einsteinovi koeficienti}. Poglejmo si jih podrobneje.
 
 \subsection*{Einsteinovi koeficienti}
 \label{AB}
-Vrnimo se k fenomenološkim koeficientom $A_{21}$, $B_{21}$ in $B_{12}$, ki jih je 
-vpeljal Einstein\footnote{Nemški fizik in nobelovec Albert Einstein, 1879--1955.}. 
-S temi koeficienti, pravimo jim tudi Einsteinovi koeficienti\index{Einsteinovi koeficienti}, 
-je mogoče uspešno opisati velik del pojavov pri interakciji svetlobe s snovjo.
-
-Vpeljimo pojem zasedenost stanj\index{Zasedenost stanj}, ki pove število 
+Vpeljimo zasedenost stanj\index{Zasedenost stanj}, ki pove število 
 atomov v določenem stanju. Ker obravnavamo preproste modele atomov z zgolj 
 dvema stanjema, zapišemo samo dve zasedenosti. Naj bo $N_1$ zasedenost 
-spodnjega stanja, $N_{2}$ zasedenost zgornjega, skupno število atomov pa
+nižjega stanja, $N_{2}$ zasedenost višjega stanja, skupno število atomov pa
 $N=N_1+N_2$. V prisotnosti svetlobe 
 se bo število atomov v spodnjem in zgornjem stanju v splošnem spreminjalo, skupno 
 število pa se bo ohranjalo.
 
 Obravnavajmo termično ravnovesje, ko je spekter svetlobe bistveno širši
 od širine atomskega prehoda (slika~\ref{fig:spektri}\,a), tako da lahko
-uporabljamo enačbi~(\ref{4.16}) in (\ref{4.17}). Zasedenost zgornjega nivoja
-se zmanjšuje zaradi spontanih in stimuliranih prehodov v spodnje
-stanje, povečuje pa se zaradi absorpcije s spodnjega stanja. To zapišemo z enačbo
+uporabljamo enačbi~(\ref{4.16}) in (\ref{4.17}). Zasedenost višjega nivoja
+se zmanjšuje zaradi spontanih in stimuliranih prehodov v nižje
+stanje, povečuje pa se zaradi absorpcije. To zapišemo z enačbo
 \begin{equation}
 \frac{dN_{2}}{dt}=-A_{21}N_2 - r_{21}N_2 + r_{12}N_1 = 
 -A_{21}N_{2}-B_{21}u(\omega_{0})N_{2}+B_{12}u(\omega_{0})N_{1}.
@@ -364,44 +364,54 @@ V termičnem ravnovesju sta zasedenosti konstantni, tako da lahko zapišemo
 \frac{dN_{1}}{dt}=A_{21}N_{2}+B_{21}u(\omega_{0})N_{2}-B_{12}u(\omega_{0})N_{1}=0.
 \label{4.23}
 \end{equation}
-Vemo pa, da mora biti v termičnem ravnovesju spektralna gostota energije sevanja
-$u(\omega)$ kar termična Planckova gostota $u_{T}(\omega)$.
-Izrazimo najprej spektralno gostoto iz enačbe~(\ref{4.23})
-\begin{equation}
-u_{T}(\omega_{0})=\frac{A_{21}}{B_{12}\frac{N_{1}}{N_{2}}-B_{21}}.
-\label{4.24}
-\end{equation}
 Vemo tudi, da v termičnem ravnovesju za zasedenosti $N_{1}$ in $N_{2}$ velja
 kanonična porazdelitev
 \begin{equation}
 \frac{N_{2}}{N_{1}}=e^{-\beta(E_{2}-E_{1})} = e^{-\beta \hbar \omega_0},
 \label{4.25}
 \end{equation}
-kjer je $\beta=1/k_BT$. Sledi
+kjer je $\beta=1/k_BT$. Izrazimo spektralno gostoto $u(\omega)$ 
+iz enačbe~(\ref{4.23})
 \begin{equation}
-u_{T}(\omega_{0})=\frac{A_{21}/B_{12}}{e^{\beta\hbar\omega_{0}}-B_{21}/B_{12}}.
+u(\omega_{0})=\frac{A_{21}}{B_{12}\frac{N_{1}}{N_{2}}-B_{21}}
+\label{4.24}
+\end{equation}
+in uporabimo enačbo~(\ref{4.25}), da dobimo
+\begin{equation}
+u(\omega_{0})=\frac{A_{21}/B_{12}}{e^{\beta\hbar\omega_{0}}-B_{21}/B_{12}}.
 \label{4.26}
 \end{equation}
-Za določitev koeficientov primerjamo gornji izraz s Planckovo formulo za $u_{T}(\omega_{0})$
-(enačba~\ref{eq:Planck}). Očitno morata biti koeficienta $B_{21}$ in $B_{12}$ enaka 
-(če sta stanji nedegenerirani), med $A_{21}$ in $B_{12}$ pa velja zveza 
+Po drugi strani pa vemo, da je v termičnem ravnovesju spektralna gostota energije sevanja
+$u(\omega)$ kar enaka termični Planckovi gostoti $u_{T}(\omega_{0})$~(enačba\ref{eq:Planck}).
+Iz primerjave obeh zapisov ugotovimo, da morata biti koeficienta $B_{21}$ in $B_{12}$ enaka,
+med $A_{21}$ in $B_{12}$ pa velja zveza 
 \boxeq{4.27}{
 A_{21}=\frac{\hbar\omega^{3}}{\pi^{2}c^{3}}\, B_{12} \qquad \mathrm{in} \qquad B_{12}=B_{21}.
 }
 Koeficient pred $B_{12}$ je ravno enak gostoti stanj elektromagnetnega polja 
 $\rho(\omega)$ (enačba~\ref{4.4}), pomnoženi z energijo fotona $\hbar\omega$. 
-Videli bomo, da to ni slučajno in da sledi iz verjetnosti za prehod v kvantni 
+Videli bomo, da to ni slučaj, saj to izhaja iz verjetnosti za prehod v kvantni 
 elektrodinamiki (poglavje~\ref{chap:verjetnost}).
 Pozoren bralec je lahko tudi opazil, da je z enačbo~(\ref{4.26}),
 ki smo jo dobili le z uporabo kanonične porazdelitve za atome, že
 določena oblika Planckove formule, ne da bi karkoli rekli o fotonih.
+
+\begin{remark}
+ Zveza, da je $B_{12}=B_{21}$ velja le v primeru nedegeneriranih stanj. V realnih sistemih
+ pa so stanja pogosto degenerirana. Takrat je treba gornje enačbe ustrezno popraviti in dobimo
+\begin{equation}
+\frac{B_{21}}{B_{12}} = \frac{g_1}{g_2},
+\label{eq:ABdeg}
+\end{equation}
+pri čemer $g_{1}$ in $g_2$ označujeta degeneriranost stanj. 
+\end{remark}
 
 \section{Absorpcijski koeficient}
 
 V prejšnjem razdelku smo napovedali, da lahko velik del pojavov pri interakciji 
 svetlobe s snovjo opišemo z Einsteinovimi koeficienti. Poskusimo zdaj 
 koeficienta $A_{21}$ in $B_{21}$ povezati z makroskopskim absorpcijskim
-koeficientom plina atomov. 
+koeficientom v plinu atomov. 
 
 Naj na izbran volumen plina vpada snop svetlobe s frekvenco
 $\omega$, ki je blizu frekvence atomskega prehoda $\omega_{0}$. Gostota
@@ -413,7 +423,7 @@ priročne pozneje pri obravnavi laserja. Privzemimo še, da
 je stanje stacionarno. 
 \begin{figure}[h]
 \centering
-\includegraphics[width=6truecm]{slike/05_Absorpcija.png}
+\includegraphics[width=5truecm]{slike/05_Absorpcija.png}
 \caption{K absorpciji snopa svetlobe v plasti atomov}
 \label{fig:abs}
 \end{figure}
@@ -422,20 +432,20 @@ Ko svetloba vpade na plast plina debeline $dz$, se gostota
 energijskega toka zmanjša zaradi absorpcije in hkrati poveča zaradi 
 stimulirane emisije (slika~\ref{fig:abs}). 
 Spontano sevanje, ki je seveda tudi prisotno, lahko zanemarimo, saj
-bo izsevano na vse strani enakomerno in ga bo le zelo majhen del v smeri snopa.
+bo izsevano na vse strani enakomerno in le majhen del bo izsevan v smeri snopa.
 Sprememba energije snopa na enoto časa je enaka razliki med 
 številom absorpcij in stimuliranih prehodov na enoto časa, pomnoženih z 
-energijo fotona. To popišemo z enačbo 
+energijo fotona
 \begin{equation}
-dP=S\, dj=(N_{2}-N_{1}) \, \frac{S dz}{V} \, \hbar\omega \,r_{12} = 
-(N_{2}-N_{1})\, \frac{S dz}{V}\, \hbar\omega \, B_{21}g(\omega) w_{\omega},
+dP=r_{12}\,\frac{(N_{2}-N_{1})}{V} \, \hbar\omega \,S dz= 
+B_{21}g(\omega) w_{\omega} \frac{(N_{2}-N_{1})}{V}\, \hbar\omega \,S dz,
 \label{4.28}
 \end{equation}
 pri čemer smo verjetnost z prehod izrazili iz enačbe~(\ref{4.18}).
 S $S$ smo označili presek snopa, z $V$ pa volumen plina. Tako dobimo 
 enačbo za spreminjanje gostote toka 
 \begin{equation}
-dj=\frac{1}{V}(N_{2}-N_{1})\, B_{21}g(\omega)\, \frac{\hbar\omega}{c}j_{\omega}\, dz
+dj=\frac{(N_{2}-N_{1})}{V}\, B_{21}g(\omega)\, \frac{\hbar\omega}{c}j_{\omega}\, dz.
 \label{4.29}
 \end{equation}
 Priročno je vpeljati še presek za absorpcijo\index{Presek za absorpcijo} ali
@@ -451,17 +461,14 @@ Z njim se izraz (\ref{4.29}) poenostavi v
 Navadno imamo opravka s plinom, ki je blizu termičnega ravnovesja,
 zato je $N_{2}<N_{1}$ in je $dj$ negativen. V tem primeru pride do
 absorpcije\index{Absorpcija} z absorpcijskim koeficientom\index{Absorpcijski koeficient}
-\begin{equation}
-\mu(\omega)=\frac{N_{1}-N_{2}}{V}\, B_{21}\, g(\omega)\frac{\hbar\omega}{c}=
-\frac{N_{1}-N_{2}}{V}\sigma(\omega),
-\label{4.31}
-\end{equation}
-za gostoto energijskega toka pa velja enačba
+$\mu$. Zapišemo 
 \beq
-\frac{dj}{j} = -\mu dz.
+\frac{dj}{j} = -\mu dz \qquad \mathrm{in} \qquad 
+\mu(\omega)=\frac{N_{1}-N_{2}}{V}\, B_{21}\, g(\omega)\frac{\hbar\omega}{c}=
+\frac{N_{1}-N_{2}}{V}\sigma(\omega).
 \label{eq:jabs}
 \eeq
-Energija se pri absorpciji na našem plinu dvonivojskih atomov seveda
+Energija se pri absorpciji na plinu dvonivojskih atomov seveda
 ne izgublja, temveč le siplje. Atom, ki je prešel v vzbujeno stanje,
 se s spontano emisijo vrne nazaj v osnovno, svetloba pa se izseva
 na vse strani -- se siplje.
@@ -475,11 +482,11 @@ je ni mogoče enostavno integrirati, saj je $\mu$ odvisen od
 gostote energijskega toka. Pri dovolj veliki gostoti
 svetlobnega toka namreč z absorpcijo znaten delež
 atomov preide v višje stanje, zaradi česar se zmanjša razlika $N_{1}-N_{2}$,
-posledično se pa zmanjša tudi absorpcijski koeficient -- absorpcija
-se nasiti. Zato temu pojavu pravimo nasičenje absorpcije\index{Nasičena absorpcija}.
-Obravnavajmo ga še matematično.
+posledično se pa zmanjša tudi absorpcijski koeficient. Takrat se absorpcija
+v plinu nasiti in pojavu pravimo nasičenje absorpcije\index{Nasičena absorpcija}.
+Obravnavajmo ta pojav še matematično.
 
-Obravnavajmo snop monokromatske svetlobe, ki vpada na plin. 
+Naj na plin vpada snop monokromatske svetlobe. 
 Atomi v plinu prehajajo med nivoji zaradi absorpcije, spontane in stimulirane emisije. 
 Podobno kot smo zapisali enačbo~(\ref{4.23}) za termično ravnovesje v primeru
 širokega spektra, zapišemo stacionarno enačbo za naš primer kot
