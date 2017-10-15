@@ -704,7 +704,7 @@ Poglejmo zdaj, kaj se ob vpadu na plast trinivojskega plina zgodi s svetlobo s f
 gostoto svetlobnega toka $j=wc$. Račun je zelo podoben računu pri absorpciji (enačba~\ref{4.29}). Zapišemo
 spremembo gostote toka na debelini $dz$ 
 \begin{equation}
-dj=\frac{1}{V}(N_{2}-N_{1})\, B_{21}g(\omega)\, \frac{\hbar\omega}{c}j\, dz,
+dj=\frac{(N_{2}-N_{1})}{V}\, B_{21}g(\omega)\, \frac{\hbar\omega}{c}j\, dz,
 \label{eq:dj}
 \end{equation}
 pri čemer gostota toka $j = wc$ nastopa tudi v izrazu za razliko zasedenosti (enačba~\ref{eq:3n_N}). 
@@ -718,8 +718,8 @@ oziroma
 dj=\frac{G}{1+\frac{j}{j_{s}}}\, j\, dz,
 }
 ki je spet zelo podobna enačbi za absorpcijo (enačba~\ref{4.36}).
-Z $G$ smo označili t.i. koeficient ojačenja pri majhnih vpadnih gostotah
-toka. Podan je z 
+Z $G$ smo označili t.i. koeficient ojačanja pri majhnih vpadnih gostotah
+toka\index{Koeficient ojačanja}. Podan je z 
 \begin{equation}
 G=\frac{rNB_{21}\hbar\omega g(\omega)}{VcA_{21}}.\label{4.44}
 \end{equation}
@@ -727,7 +727,7 @@ Rešitev diferencialne enačbe je prikazana na sliki~(\ref{fig:ojacanje}).
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
-%\input{slike/05_joja.pdf_tex}
+\input{slike/05_jabs.pdf_tex}
 \caption{Naraščanje gostote svetlobnega toka pri optičnem ojačanju}
 \label{fig:ojacanje}
 \end{figure}
@@ -741,7 +741,7 @@ j(z)=j_{0}e^{Gz}.
 Pri velikih gostotah toka pride do nasičenja in gostota svetlobnega
 toka se ojačuje linearno z razdaljo
 \begin{equation}
-j(z)=\tilde{j_{0}}+j_{s}Gz=\tilde{j_{0}}+\frac{rN}{V}\hbar \omega z.
+j(z)=j_{0}+j_{s}Gz=j_{0}+\frac{rN}{V}\hbar \omega z.
 \label{4.46}
 \end{equation}
  V tem primeru je gostota toka dovolj velika, da vsi atomi, ki jih
@@ -756,26 +756,11 @@ pri isti frekvenci $\omega_{0}$ in z isto spektralno širino, ki smo
 jo popisali s funkcijo $g(\omega)$, z vrhom pri $\omega_0$. Če to drži, 
 pravimo, da je razširitev spektralne črte homogena\index{Spektralna črta!homogena razširitev}. 
 Primera homogene razširitve sta naravna širina in razširitev zaradi trkov med atomi. 
-Funkcija $g(\omega)$ je v tem primeru Lorentzove oblike
+Funkcija $g(\omega)$ je v tem primeru Lorentzove oblike\index{Spekter!Lorentzov} 
 \beq
 g(\omega)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}}
 \eeq
-s širino črte $\gamma$. 
-
-% %izračunaj širino zaradi trkov v HeNE laserju. Tlak p, molska masa M, 
-% collision time tc sqrt(2/3 MkT)/8 pi pa^2.
-% pri 0.5 atm, tc 0.5 mus, delta ni 0.64 MHz << 5 10^14 hz. 
-% Primerjaj z naravno širino, = kako sešteješ.
-% 
-% Nehomogena razširitev - Gauss, impurities v steklu, local elektctic field, 
-% Stark shift, NdGlass, 5.4 THz, 
-% 
-% Doppler / Gauss.HenE 1.7 GHz
-% 
-% Seštevanje razširitev s konvolucijo int g*(x) g(omega - omega 0-x) dx
-% voigt funkcija
-% če dva homogena, delta je vsota delta.
-% če dva nehomogena delata je sqrt delta^2
+s širino črte $\Delta \omega_L = 2\gamma$ (glej sliko~\ref{fig:SpekterAc}). 
 
 Spektralna črta je lahko razširjena tudi zato, ker vsi atomi ne svetijo
 pri povsem enaki frekvenci. Tedaj govorimo o nehomogeni 
@@ -784,30 +769,32 @@ Najpomembnejši primer nehomogene razširitve je Dopplerjeva
 \index{Dopplerjeva razširitev} razširitev v plinu. 
 Atomi plina vedno sevajo pri praktično isti frekvenci, vendar jih zaradi gibanja
 opazovalec v mirujočem (laboratorijskem) sistemu v skladu z Dopplerjevim pojavom 
-zazna pri različnih frekvencah. Tako so frekvence $\omega$ posameznih atomov 
+zazna pri različnih frekvencah. Tako so opazovane frekvence posameznih atomov $\omega$
 odvisne od hitrosti $v$ atoma glede na smer opazovanja. Zapišemo jih kot  
 \begin{equation}
 \omega=\omega_{0}-\frac{v}{c}\omega_{0}=\omega_{0}-k_{0}v.
 \label{4.81}
 \end{equation}
-Označimo z ${\cal N}(v)$ porazdelitev gostote atomov po hitrostih
-v smeri opazovanja. V termičnem ravnovesju je ${\cal N}(v)$ Maxwellova
-porazdelitev
+Označimo z ${\cal N}(v)$ porazdelitev gostote atomov po hitrostih, pri čemer se omejimo 
+le na premikanje v smeri opazovanja. V termičnem ravnovesju je ${\cal N}(v)$
+Maxwellova porazdelitev
 \begin{equation}
-{\cal N}(v)=\frac{N}{V}\left(\frac{m}{2\pi k_{B}T}\right)^{1/2}e^{-\frac{mv^{2}}{2k_{B}T}}.
+{\cal N}(v)=\frac{N}{V}\left(\frac{m}{2\pi k_{B}T}\right)^{1/2}e^{-\frac{mv^{2}}{2k_{B}T}},
 \label{4.82}
 \end{equation}
- Porazdelitev atomov po frekvencah dobimo tako, da hitrost izrazimo
+pri čemer je $m$ masa posameznega atoma.
+Porazdelitev atomov po frekvencah izračunamo tako, da hitrost izrazimo
 iz enačbe~(\ref{4.81}), pri čemer dobljeno funkcijo $g_{D}(\omega)$
-normiramo tako. Dobimo
+normiramo. Sledi
 \begin{equation}
 g_{D}(\omega)=\frac{c}{\omega_{0}}\left(\frac{m}{2\pi 
 k_{B}T}\right)^{1/2}e^{-\frac{mc^{2}}{2k_{B}T}\frac{(\omega-\omega_{0})^{2}}{\omega_{0}}}.
 \label{4.821}
 \end{equation}
-Dopplerjeva razširitev v plinu je torej Gaussove oblike. Njena širina pri polovični 
+Dopplerjeva razširitev v plinu je torej Gaussove oblike\index{Spekter!Gaussov}.
+Njena širina pri polovični 
 višini\footnote{To širino imenujemo FWHM -- \it{Full width at half maximum}.} je
-\begin{equation}
+\begin{equation} 
 \Delta\omega_{D}=2 \sqrt{\frac{2k_{B}T \ln 2}{mc^{2}}}\omega_{0}.
 \label{4.83}
 \end{equation}
@@ -822,22 +809,31 @@ $\Delta\omega_{D}=8\times10^{9}~\si{\hertz}$. Nehomogena Dopplerjeva razširitev
 redkem plinu je navadno nekaj redov velikosti večja od homogene naravne širine in 
 razširitve zaradi trkov.
 
-\section{*Nasičenje nehomogeno razširjene absorpcijske črte}
+\begin{remark}
+Pri nehomogeni Dopplerjevi razširitvi bi za bolj natančen izračun morali upoštevati 
+tudi naravno širino posameznega atoma. To bi zapisali s konvolucijo Lorentzove
+in Gaussove funkcije in dobili tako imenovan Voigtov 
+profil\footnote{Nemški fizik Woldemar Voigt, 1850--1919.}, ki pa ga ne moremo 
+preprosto analitično zapisati.
+\end{remark}
 
+
+\section{*Nasičenje nehomogeno razširjene absorpcijske črte}
+\index{Nasičenje absorpcije!nehomogeno razširjene črte}
 V razdelku~(\ref{chap:NasAbs}) smo obravnavali nasičenje absorpcije pri homogeno 
 razširjenem prehodu. Pri nasičenju absorpcije, kadar prevladuje nehomogena razširitev,
 nastopijo pomembni novi pojavi, zato si to podrobneje oglejmo.
 
-Naj na plin vpada močan snop monokromatske svetlobe s frekvenco $\omega$,
+Naj na dvonivojski plin vpada močan snop monokromatske svetlobe s frekvenco $\omega$,
 ki je blizu osrednje frekvence $\omega_{0}$ Dopplerjevo razširjene črte. S svetlobo
 lahko sodeluje le skupina atomov, pri kateri se Dopplerjevo premaknjena
 frekvenca od $\omega$ ne razlikuje več kot za homogeno širino, ki
 jo opisuje funkcija $g(\omega)$. Zato ne moremo zapisati zasedbenih
 enačb za vse atome hkrati, ampak le za tiste, ki imajo hitrost med
-$v$ in $v+dv$ in ki absorbirajo pri frekvenci $\omega_{0}-kv$.
+$v$ in $v+dv$ in ki absorbirajo svetlobo pri frekvenci $\omega_{0}-kv$.
 
-Naj sta ${\cal N}_{1}(v)$ in ${\cal N}_{2}(v)$ hitrostni porazdelitvi
-atomov v spodnjem in v zgornjem stanju. Enačba za spreminjanje gostote
+Naj bosta ${\cal N}_{1}(v)$ in ${\cal N}_{2}(v)$ hitrostni porazdelitvi
+atomov v osnovnem in vzbujenem stanju. Enačba za spreminjanje gostote
 ${\cal N}_{2}(v)$ je analogna enačbi~(\ref{4.22}) za celotno
 zasedenost v homogenem primeru
 \begin{equation}
