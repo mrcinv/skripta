@@ -245,9 +245,9 @@ $\tau = 1/A_{21}$.
 
 Zaradi končnega življenjskega časa ima vzbujeno stanje končno spektralno 
 širino. Najpogosteje je atomska spektralna črta\index{Atomska črta} kar 
-Lorentzove oblike\index{Spekter!Lorentzov}
+Lorentzove oblike\index{Spekter!Lorentzov} z vrhom pri $\omega_0$
 \begin{equation}
-g(\omega)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}}.
+g(\omega-\omega_0)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}}.
 \label{4.21}
 \end{equation}
 Funkcija $g(\omega)$ je normirana
@@ -255,7 +255,7 @@ Funkcija $g(\omega)$ je normirana
 \int_{-\infty}^\infty g(\omega)\, d\omega=1,
 \label{4.20}
 \end{equation}
-za grobe ocene pa funkcijo $g(\omega)$ aproksimiramo tudi s pravokotnikom širine
+za grobe ocene pa funkcijo $g$ aproksimiramo tudi s pravokotnikom širine
 $2\gamma$ in višine $1/2\gamma$.
 
 \subsection*{Absorpcija}
@@ -304,14 +304,14 @@ obravnavamo sevanje v votlini, ki je v termičnem ravnovesju (črno telo).
 \input{slike/05_Spektri.pdf_tex}
 \caption{Pri izračunu verjetnosti za absorpcijo in stimulirano emisijo je pomembno, ali je 
 širina spektralne gostote elektromagnetnega polja $u(\omega)$ bistveno večja (a) ali bistveno manjša (b)
-od atomske spektralne črte $g(\omega)$.}
+od širine atomske spektralne črte $g(\omega-\omega_0)$.}
 \label{fig:spektri}
 \end{figure}
 
 V splošnem primeru, ko se spekter vpadne svetlobe spreminja v območju 
 frekvence prehoda, moramo sešteti prispevke po ozkih frekvenčnih intervalih
 \begin{equation}
-r_{12}=B_{12}\int g(\omega)\, u(\omega)\, d\omega.
+r_{12}=B_{12}\int g(\omega-\omega_0)\, u(\omega)\, d\omega.
 \label{4.19}
 \end{equation}
 Gornji zapis preverimo na primeru spektra črnega telesa, ki se ne spreminja 
@@ -325,7 +325,7 @@ svetlobe (slika~\ref{fig:spektri}\,b). Zapišemo $w_{\omega R}$ gostoto energije
 monokromatske svetlobe s frekvenco $\omega_R$. Verjetnost za absorpcijo na časovno 
 enoto je potem  
 \begin{equation}
-r_{12}=B_{12}g(\omega_R)\, w_{\omega R}.
+r_{12}=B_{12}g(\omega_R-\omega_0)\, w_{\omega R}.
 \label{4.18}
 \end{equation}
 
@@ -434,23 +434,24 @@ Spontano sevanje, ki je seveda tudi prisotno, lahko zanemarimo, saj
 bo izsevano na vse strani enakomerno in le majhen del bo izsevan v smeri snopa.
 Sprememba energije snopa na enoto časa je enaka razliki med 
 številom absorpcij in stimuliranih prehodov na enoto časa, pomnoženih z 
-energijo fotona
+energijo fotona\footnote{Za poenostavitev tukaj pišemo obliko atomske spektralne črte kot $g$, 
+pri čemer je to Lorentzova krivulja okoli osrednje frekvence $\omega_0$.}
 \begin{equation}
 dP=r_{12}\,\frac{(N_{2}-N_{1})}{V} \, \hbar\omega \,S dz= 
-B_{21}g(\omega) w_{\omega} \frac{(N_{2}-N_{1})}{V}\, \hbar\omega \,S dz,
+B_{21}g w_{\omega} \frac{(N_{2}-N_{1})}{V}\, \hbar\omega \,S dz,
 \label{4.28}
 \end{equation}
-pri čemer smo verjetnost z prehod izrazili iz enačbe~(\ref{4.18}).
+pri čemer smo verjetnost z prehod izrazili iz 
+enačbe~(\ref{4.18}).
 S $S$ smo označili presek snopa, z $V$ pa volumen plina. Tako dobimo 
 enačbo za spreminjanje gostote toka 
 \begin{equation}
-dj=\frac{(N_{2}-N_{1})}{V}\, B_{21}g(\omega)\, \frac{\hbar\omega}{c}j_{\omega}\, dz.
+dj=\frac{(N_{2}-N_{1})}{V}\, B_{21}g\, \frac{\hbar\omega}{c}j_{\omega}\, dz.
 \label{4.29}
 \end{equation}
-Priročno je vpeljati še presek za absorpcijo\index{Presek za absorpcijo} ali
-stimulirano sevanje\index{Presek za stimulirano sevanje} 
+Priročno je vpeljati še presek za absorpcijo\index{Presek za absorpcijo} 
 \beq
-\sigma(\omega)=\frac{B_{21}\, g(\omega)\, \hbar\omega}{c}.
+\sigma(\omega)=\frac{B_{21}\, g \hbar\omega}{c}.
 \label{sigma}
 \eeq
 Tipične velikosti presekov so $\sigma \sim 10^{-22}-10^{-16}~\si{\metre^2}$. 
@@ -464,7 +465,7 @@ absorpcije\index{Absorpcija} z absorpcijskim koeficientom\index{Absorpcijski koe
 $\mu$. Zapišemo 
 \beq
 \frac{dj}{j} = -\mu dz \qquad \mathrm{in} \qquad 
-\mu(\omega)=\frac{N_{1}-N_{2}}{V}\, B_{21}\, g(\omega)\frac{\hbar\omega}{c}=
+\mu(\omega)=\frac{N_{1}-N_{2}}{V}\, B_{21}\, g\frac{\hbar\omega}{c}=
 \frac{N_{1}-N_{2}}{V}\sigma(\omega).
 \label{eq:jabs}
 \eeq
@@ -478,23 +479,23 @@ na vse strani -- se siplje.
 Čeprav je na prvi pogled enačba~(\ref{eq:jabs}) za zmanjševanje 
 gostote svetlobnega toka pri prehodu skozi absorbirajoči plin preprosta,
 je ni mogoče enostavno integrirati, saj je $\mu$ odvisen od 
-gostote energijskega toka. Pri dovolj veliki gostoti
-svetlobnega toka namreč z absorpcijo znaten delež
-atomov preide v višje stanje, zaradi česar se zmanjša razlika $N_{1}-N_{2}$,
-posledično se pa zmanjša tudi absorpcijski koeficient. Takrat se absorpcija
+gostote energijskega toka. Pri dovolj velikem svetlobnem toku namreč z 
+absorpcijo znaten delež atomov preide v višje stanje, zato se zmanjša razlika $N_{1}-N_{2}$,
+posledično se tudi absorpcijski koeficient. Takrat se absorpcija
 v plinu nasiti in pojavu pravimo nasičenje absorpcije\index{Nasičena absorpcija}.
-Obravnavajmo ta pojav še matematično.
 
 Naj na plin vpada snop monokromatske svetlobe. 
 Atomi v plinu prehajajo med nivoji zaradi absorpcije, spontane in stimulirane emisije. 
 Podobno kot smo zapisali enačbo~(\ref{4.23}) za termično ravnovesje v primeru
-širokega spektra, zapišemo stacionarno enačbo za naš primer
+širokega spektra, zapišemo stacionarno enačbo za naš 
+primer
 \begin{equation}
-\frac{dN_{1}}{dt}=A_{21}N_{2}+B_{21}\,g(\omega)\,(N_{2}-N_{1})\frac{j}{c}=0,
+\frac{dN_{1}}{dt}=A_{21}N_{2}+B_{21}\,g\,(N_{2}-N_{1})\frac{j}{c}=
+0,
 \label{4.32}
 \end{equation}
-pri čemer smo za verjetnost za prehod namesto enačbe~(\ref{4.17}) vzeli
-enačbo~(\ref{4.18}) in upoštevali, da je $w=j/c$. Zasedenost višjega stanja $N_{2}$ lahko izrazimo s 
+pri čemer smo za verjetnost za prehod vzeli
+enačbo~(\ref{4.18}) in upoštevali $w=j/c$. Zasedenost višjega stanja $N_{2}$ lahko izrazimo s 
 celotnim številom atomov $N$ in razliko zasedenosti 
 \beq
 N_{2}=\frac{1}{2}N+\frac{1}{2}(N_{2}-N_{1}).
@@ -502,7 +503,7 @@ N_{2}=\frac{1}{2}N+\frac{1}{2}(N_{2}-N_{1}).
 \eeq
 S tem lahko izračunamo razliko zasedenosti 
 \begin{equation}
-N_{2}-N_{1}=-\frac{N}{1+2\frac{Bg(\omega)}{cA}j}.
+N_{2}-N_{1}=-\frac{N}{1+2\frac{Bg}{cA}j}.
 \label{4.33}
 \end{equation}
 Pri majhni gostoti toka $j$ so praktično vsi atomi v osnovnem stanju in prispevajo
@@ -512,17 +513,17 @@ Ko drugi člen v imenovalcu enačbe~(\ref{4.33}) doseže vrednost 1, pravimo, da
 gostota energijskega toka doseže vrednost saturacijske gostote\index{Saturacijska gostota toka}.
 Zapišemo jo kot 
 \begin{equation}
-j_{s}(\omega)=\frac{cA_{21}}{2B_{21}g(\omega)}=
-\frac{\hbar\omega^{3}}{2\pi^{2}c^{2}g(\omega)},
+j_{s}(\omega)=\frac{cA_{21}}{2B_{21}g}=
+\frac{\hbar\omega^{3}}{2\pi^{2}c^{2}g},
 \label{4.34}
 \end{equation}
 pri čemer smo upoštevali zvezo~(\ref{4.27}) med koeficientoma $A_{21}$ in $B_{21}$.
 Kot vidimo, je saturacijska gostota odvisna le od frekvence vpadnega valovanja 
-in širine atomskega prehoda. Za črto z valovno dolžino okoli $600~\si{\nano\metre}$ 
-in širino črte $10^{8}~\si{\hertz}$ znaša saturacijska gostota svetlobnega toka okoli 
-$20~\si{\milli\watt/\centi\metre^2}$. Tako veliko gostoto svetlobnega toka v tako ozkem
-frekvenčnem intervalu z običajnimi svetili, na primer plinsko razelektritveno cevjo,
-praktično nemogoče doseči, medtem ko jo iz laserjev dobimo z lahkoto.
+in širine atomskega prehoda. Za črto z valovno dolžino $600~\si{\nano\metre}$ 
+in širino $10^{8}~\si{\hertz}$ znaša saturacijska gostota svetlobnega toka okoli 
+$20~\si{\milli\watt/\centi\metre^2}$. Tako veliko gostoto svetlobnega toka je v tako ozkem
+frekvenčnem intervalu z običajnimi svetili praktično nemogoče doseči, 
+medtem ko jo iz laserjev dobimo z lahkoto.
 Izraz za razliko zasedenosti stanj lahko zdaj zapišemo v pregledni obliki
 \begin{equation}
 N_{2}-N_{1}=-\frac{N}{1+\frac{j}{j_{s}(\omega)}}.
@@ -533,7 +534,10 @@ dobimo
 \boxeq{4.36}{
 dj=-\frac{\mu_{0}}{1+\frac{j}{j_{s}}}\, j\, dz,
 }
-kjer smo z $\mu_{0}=N\,B_{21}\,g(\omega)\,\hbar\omega/Vc$ označili
+kjer je 
+\begin{equation}
+\mu_{0}=N\,B_{21}\,g\,\hbar\omega/Vc = \frac{N}{V}\sigma
+\end{equation}
 absorpcijski koeficient\index{Absorpcijski koeficient} pri majhnih gostotah vpadnega toka.
 
 Enačbo brez težav integriramo in dobimo 
@@ -634,7 +638,9 @@ prvim vzbujenim in osnovnim stanjem (c).}
 \begin{remark}
 Trinivojski laserski sistem na sliki (\ref{fig:3nivojski}\,a) je pravzaprav 
 poseben primer bolj realističnega štirinivojskega sistema\index{Štirinivojski sistem}, 
-pri katerem gornji črpalni nivo sovpada z gornjim laserskim nivojem. Obravnava 
+pri katerem gornji črpalni nivo sovpada z gornjim laserskim nivojem. Sicer se četrti nivo, 
+v katerega črpamo, praviloma zelo hitro prazni v tretjega, od tam pa počasi v drugega, kot kaže slika.
+Obravnava 
 štirinivojskih sistemov je bolj zapletena kot obravnava trinivojskih sistemov, 
 ki za opis delovanja laserjev povsem zadošča. Podrobneje bomo štirinivojske sisteme predstavili
 na konkretnih laserskih primerih (poglavje~\ref{chap:Primeri}).
@@ -652,8 +658,8 @@ Pri tem velja, da je vsota vseh treh zasedenosti enaka številu vseh atomov: $N_
 Zasedbene enačbe so tako
 \begin{eqnarray}
 \frac{dN_{0}}{dt} & = & -rN_0+A_{20}N_{2}+A_{10}N_{1} \label{4.39.1}\\
-\frac{dN_{1}}{dt} & = & -A_{10}N_{1}+B_{21}\,g(\omega)\,w\, (N_{2}-N_{1})+A_{21}N_{2} \label{4.39.2}\\
-\frac{dN_{2}}{dt} & = & rN_0-A_{20}N_{2}-A_{21}N_{2}-B_{21}\,g(\omega)\,w\, (N_2-N_1),
+\frac{dN_{1}}{dt} & = & -A_{10}N_{1}+B_{21}\,g\,w\, (N_{2}-N_{1})+A_{21}N_{2} \label{4.39.2}\\
+\frac{dN_{2}}{dt} & = & rN_0-A_{20}N_{2}-A_{21}N_{2}-B_{21}\,g\,w\, (N_2-N_1),
 \label{4.39}
 \end{eqnarray}
 pri čemer predpostavili, da je $N_0 \approx N \gg N_1, N_2$ in zato lahko črpanje $B_{20}\, 
@@ -663,11 +669,11 @@ smo tako skrili v $r$ in prav nič ni pomembno, na kakšen način poteka.\index{
 Zanima nas stacionarno stanje, ko so vsi trije časovni odvodi enaki nič. 
 Tako iz druge enačbe sistema~(\ref{4.39.2}) sledi
 \begin{eqnarray}
-B_{21}\,g(\omega\,)w\, N_{2}+A_{21}N_{2} = B_{21}\,g(\omega\,)w\, N_{1} + A_{10}N_{1} 
+B_{21}\,g\,w\, N_{2}+A_{21}N_{2} = B_{21}\,g\,w\, N_{1} + A_{10}N_{1} 
 \end{eqnarray}
 in
 \begin{eqnarray}
-N_2 = \frac{B_{21}\,g(\omega\,)w + A_{10}}{B_{21}\,g(\omega\,)w+A_{21}}N_1.  
+N_2 = \frac{B_{21}\,g\,w + A_{10}}{B_{21}\,g\,w+A_{21}}N_1.  
 \end{eqnarray}
 Brez škode lahko zanemarimo tudi spontano sevanje iz stanja
 $|2\rangle$ v osnovno stanje. Tako iz prve enačbe sistema~(\ref{4.39.1}) dobimo 
@@ -677,7 +683,7 @@ N_1= \frac{rN}{A_{10}}
 in zapišemo razliko zasedenosti kot 
 \begin{equation}
 N_{2}-N_{1}=\left(\frac{N_2}{N_1}-1\right)N_1=\frac{A_{10}-A_{21}}{A_{21}+
-B_{21}g(\omega)w} \,\frac{rN}{A_{10}}.
+B_{21}g\,w} \,\frac{rN}{A_{10}}.
 \label{4.42}
 \end{equation}
 Iz gornje enačbe sledi, da pride do obrnjene zasedenosti, če je $A_{10}>A_{21}$, torej kadar je
@@ -687,11 +693,11 @@ Tak rezultat smo seveda lahko pričakovali.
 V praktični primerih navadno velja $A_{10}\gg A_{21}$. Ob upoštevanju zveze $j=wc$ povežemo
 razliko zasedenosti z gostoto vpadnega svetlobnega toka
 \beq
-N_{2}-N_{1}=\frac{rN}{A_{21}} \, \frac{1}{1+\frac{B_{21}g(\omega)j}{c A_{21}}} = 
+N_{2}-N_{1}=\frac{rN}{A_{21}} \, \frac{1}{1+\frac{B_{21}gj}{c A_{21}}} = 
 \frac{rN}{A_{21}} \, \frac{1}{1+j/j_s}.
 \label{eq:3n_N}
 \eeq
-Konstante $c A_{21}/B_{21}g(\omega)$ smo pospravili v $j_s$, ki ga bomo imenovali 
+Konstante $c A_{21}/B_{21}g$ smo pospravili v $j_s$, ki ga bomo imenovali 
 saturacijska gostota svetlobnega toka\index{Saturacijska gostota toka}. 
 \begin{remark}
  Vidimo, da je dobljen izraz za saturacijsko gototo toka v trinivojskem sistemu zelo 
@@ -704,7 +710,7 @@ Poglejmo zdaj, kaj se ob vpadu na plast trinivojskega plina zgodi s svetlobo s f
 gostoto svetlobnega toka $j=wc$. Račun je zelo podoben računu pri absorpciji (enačba~\ref{4.29}). Zapišemo
 spremembo gostote toka na debelini $dz$ 
 \begin{equation}
-dj=\frac{(N_{2}-N_{1})}{V}\, B_{21}g(\omega)\, \frac{\hbar\omega}{c}j\, dz,
+dj=\frac{(N_{2}-N_{1})}{V}\, B_{21}g\, \frac{\hbar\omega}{c}j\, dz,
 \label{eq:dj}
 \end{equation}
 pri čemer gostota toka $j = wc$ nastopa tudi v izrazu za razliko zasedenosti (enačba~\ref{eq:3n_N}). 
@@ -721,13 +727,16 @@ ki je spet zelo podobna enačbi za absorpcijo (enačba~\ref{4.36}).
 Z $G$ smo označili t.i. koeficient ojačanja pri majhnih vpadnih gostotah
 toka\index{Koeficient ojačanja}. Podan je z 
 \begin{equation}
-G=\frac{rNB_{21}\hbar\omega g(\omega)}{VcA_{21}}.\label{4.44}
+G=\frac{rNB_{21}\hbar\omega g}{VcA_{21}} = \frac{N}{V}\frac{r}{A}\sigma,
+\label{4.44}
 \end{equation}
+pri čemer smo koeficient ojačanja izrazili s presekom za stimulirano 
+\index{Presek za stimulirano sevanje}sevanje $\sigma$. 
 Rešitev diferencialne enačbe je prikazana na sliki~(\ref{fig:ojacanje}). 
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
-\input{slike/05_jabs.pdf_tex}
+\input{slike/05_joja.pdf_tex}
 \caption{Naraščanje gostote svetlobnega toka pri optičnem ojačanju}
 \label{fig:ojacanje}
 \end{figure}
@@ -749,16 +758,33 @@ s črpanjem spravimo v najvišje stanje, preidejo v stanje $|1\rangle$
 s stimuliranim sevanjem. Pri konstantnem črpanju je tedaj 
 linearno naraščanje gostote toka razumljivo. 
 
+Pomudimo se še malo pri preseku za stimulirano sevanje $\sigma$, \index{Presek
+za stimulirano sevanje} ki smo 
+ga vpeljali v enačbi~(\ref{4.44}). Opazimo, da je ta presek enak preseku za
+absorpcijo (enačba~\ref{sigma}) dvonivojskega sistema. Presek za stimulirano
+sevanje je tako odvisen od frekvence in je sorazmeren vrednosti atomske spektralne 
+črte pri frekvenci prehoda. Za He-Ne laser, ki deluje pri valovni dolžini 633~nm in ima 
+širino prehoda $\Delta \omega \sim 10~\si{\giga\hertz}$, znaša tako  $\sigma \sim 10^{-16}~\si{\metre}^2$, 
+za Nd:YAG pri 1064~nm in širini prehoda 
+$\Delta \omega \sim 900~\si{\giga\hertz}$ pa  $\sigma \sim 10^{-21}~\si{\metre}^2$.
+Zaradi različnih presekov, različnih gostot atomov in različnih načinov črpanja se 
+koeficienti ojačanja v večnivojskih sistemih med seboj precej razlikujejo. Primere 
+laserjev bomo sicer podrobneje obravnavali v nadaljevanju, zaenkrat povejmo 
+le, da je tipičen koeficient ojačanja v He-Ne laserju $G \sim 1,015$, v Nd:YAG laserju
+pa $G \sim 50$. Pri prvem laserju je sicer velik presek za stimulirano sevanje, vendar 
+je gostota atomov v obrnjeni zasedenosti razmeroma majhna. V drugem primeru pa močno 
+črpanje prevlada nad majhnim presekom in pride do močnega ojačanja.
+
 \section{Homogena in nehomogena razširitev spektralne črte}
 \label{Razsiritev}
 Doslej smo predpostavili, da svetijo vsi atomi obravnavane snovi
 pri isti frekvenci $\omega_{0}$ in z isto spektralno širino, ki smo
-jo popisali s funkcijo $g(\omega)$, z vrhom pri $\omega_0$. Če to drži, 
+jo popisali s funkcijo $g(\omega-\omega_0)$, z vrhom pri $\omega_0$. Če to drži, 
 pravimo, da je razširitev spektralne črte homogena\index{Spektralna črta!homogena razširitev}. 
 Primera homogene razširitve sta naravna širina in razširitev zaradi trkov med atomi. 
-Funkcija $g(\omega)$ je v tem primeru Lorentzove oblike\index{Spekter!Lorentzov} 
+Funkcija $g(\omega-\omega_0)$ je v tem primeru Lorentzove oblike\index{Spekter!Lorentzov} 
 \beq
-g(\omega)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}}
+g(\omega-\omega_0)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}}
 \eeq
 s širino črte $\Delta \omega_L = 2\gamma$ (glej sliko~\ref{fig:SpekterAc}). 
 
@@ -784,10 +810,10 @@ Maxwellova porazdelitev
 \end{equation}
 pri čemer je $m$ masa posameznega atoma.
 Porazdelitev atomov po frekvencah izračunamo tako, da hitrost izrazimo
-iz enačbe~(\ref{4.81}), pri čemer dobljeno funkcijo $g_{D}(\omega)$
+iz enačbe~(\ref{4.81}), pri čemer dobljeno funkcijo $g_{D}(\omega-\omega_0)$
 normiramo. Sledi
 \begin{equation}
-g_{D}(\omega)=\frac{c}{\omega_{0}}\left(\frac{m}{2\pi 
+g_{D}(\omega-\omega_0)=\frac{c}{\omega_{0}}\left(\frac{m}{2\pi 
 k_{B}T}\right)^{1/2}e^{-\frac{mc^{2}}{2k_{B}T}\frac{(\omega-\omega_{0})^{2}}{\omega_{0}}}.
 \label{4.821}
 \end{equation}
@@ -805,9 +831,13 @@ in pokaži, da je njena širina podana z enačbo~(\ref{4.83}).
 
 Izračunajmo Dopplerjevo razširitev na primeru He-Ne laserja. Za prehod
 atoma neona pri 632,8~nm in temperaturi 300~K dobimo 
-$\Delta\omega_{D}=8\times10^{9}~\si{\hertz}$. Nehomogena Dopplerjeva razširitev v 
-redkem plinu je navadno nekaj redov velikosti večja od homogene naravne širine in 
-razširitve zaradi trkov.
+$\Delta\omega_{D}=8\times10^{9}~\si{\hertz}$. Dejanske izmerjene vrednosti širine 
+črte za He-Ne laser znašajo okoli $10~\si{\giga\hertz}$, kar je znatno več od naravne širine
+črte ($7,5~\si{\mega\hertz}$). Še bolj izrazite so nehomogene razširitve v trdninskih laserjih.
+V Nd:YAG laserju je naravna širina le okoli $1~\si{\kilo\hertz}$, celotna širina črte
+pa $140~\si{\giga\hertz}$. Nehomogena razširitev zaradi Dopplerjevega pojava v 
+redkem plinu ali zaradi sipanja v trdnih snoveh je tako kar nekaj redov velikosti 
+večja od homogene naravne širine in razširitve zaradi trkov.
 
 \begin{remark}
 Pri nehomogeni Dopplerjevi razširitvi bi za bolj natančen izračun morali upoštevati 

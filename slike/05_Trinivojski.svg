@@ -455,7 +455,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -661,7 +661,7 @@
          y="101.2151"
          x="257.92941"
          id="tspan4452-2-3"
-         sodipodi:role="line">$\hbar\omega$</tspan></text>
+         sodipodi:role="line">$\hbar\omega_0$</tspan></text>
     <rect
        inkscape:transform-center-y="-103.93682"
        inkscape:transform-center-x="-8.2001963"
@@ -893,7 +893,7 @@
          sodipodi:role="line"
          id="tspan5399"
          x="421.60193"
-         y="102.16773">$laser$</tspan></text>
+         y="102.16773">laser</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Nimbus Sans L';-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -904,28 +904,28 @@
          sodipodi:role="line"
          id="tspan5399-2"
          x="612.93457"
-         y="157.33282">$laser$</tspan></text>
+         y="157.33282">laser</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Nimbus Sans L';-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="412.32968"
+       x="414.32968"
        y="158.79471"
        id="text5419"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5421"
-         x="412.32968"
+         x="414.32968"
          y="158.79471">hiter prehod</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Nimbus Sans L';-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="604.00983"
+       x="606.00983"
        y="99.377205"
        id="text5419-9"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5421-1"
-         x="604.00983"
+         x="606.00983"
          y="99.377205">hiter prehod</tspan></text>
   </g>
 </svg>
