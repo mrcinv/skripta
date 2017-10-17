@@ -766,7 +766,7 @@ sevanje je tako odvisen od frekvence in je sorazmeren vrednosti atomske spektral
 črte pri frekvenci prehoda. Za He-Ne laser, ki deluje pri valovni dolžini 633~nm in ima 
 širino prehoda $\Delta \omega \sim 10~\si{\giga\hertz}$, znaša tako  $\sigma \sim 10^{-16}~\si{\metre}^2$, 
 za Nd:YAG pri 1064~nm in širini prehoda 
-$\Delta \omega \sim 900~\si{\giga\hertz}$ pa  $\sigma \sim 10^{-21}~\si{\metre}^2$.
+$\Delta \omega \sim 900~\si{\giga\hertz}$ pa  $\sigma \sim 10^{-22}~\si{\metre}^2$.
 Zaradi različnih presekov, različnih gostot atomov in različnih načinov črpanja se 
 koeficienti ojačanja v večnivojskih sistemih med seboj precej razlikujejo. Primere 
 laserjev bomo sicer podrobneje obravnavali v nadaljevanju, zaenkrat povejmo 
@@ -808,7 +808,7 @@ Maxwellova porazdelitev
 {\cal N}(v)=\frac{N}{V}\left(\frac{m}{2\pi k_{B}T}\right)^{1/2}e^{-\frac{mv^{2}}{2k_{B}T}},
 \label{4.82}
 \end{equation}
-pri čemer je $m$ masa posameznega atoma.
+kjer je $m$ masa posameznega atoma.
 Porazdelitev atomov po frekvencah izračunamo tako, da hitrost izrazimo
 iz enačbe~(\ref{4.81}), pri čemer dobljeno funkcijo $g_{D}(\omega-\omega_0)$
 normiramo. Sledi
@@ -835,18 +835,17 @@ $\Delta\omega_{D}=8\times10^{9}~\si{\hertz}$. Dejanske izmerjene vrednosti širi
 črte za He-Ne laser znašajo okoli $10~\si{\giga\hertz}$, kar je znatno več od naravne širine
 črte ($7,5~\si{\mega\hertz}$). Še bolj izrazite so nehomogene razširitve v trdninskih laserjih.
 V Nd:YAG laserju je naravna širina le okoli $1~\si{\kilo\hertz}$, celotna širina črte
-pa $140~\si{\giga\hertz}$. Nehomogena razširitev zaradi Dopplerjevega pojava v 
-redkem plinu ali zaradi sipanja v trdnih snoveh je tako kar nekaj redov velikosti 
+pa $900~\si{\giga\hertz}$. Nehomogena razširitev zaradi Dopplerjevega pojava v 
+redkem plinu ali zaradi nehomogenosti v trdnih snoveh je tako kar nekaj redov velikosti 
 večja od homogene naravne širine in razširitve zaradi trkov.
 
 \begin{remark}
-Pri nehomogeni Dopplerjevi razširitvi bi za bolj natančen izračun morali upoštevati 
+Pri nehomogenih razširitvah bi za bolj natančen izračun morali upoštevati 
 tudi naravno širino posameznega atoma. To bi zapisali s konvolucijo Lorentzove
 in Gaussove funkcije in dobili tako imenovan Voigtov 
 profil\footnote{Nemški fizik Woldemar Voigt, 1850--1919.}, ki pa ga ne moremo 
 preprosto analitično zapisati.
 \end{remark}
-
 
 \section{*Nasičenje nehomogeno razširjene absorpcijske črte}
 \index{Nasičenje absorpcije!nehomogeno razširjene črte}
@@ -854,11 +853,11 @@ V razdelku~(\ref{chap:NasAbs}) smo obravnavali nasičenje absorpcije pri homogen
 razširjenem prehodu. Pri nasičenju absorpcije, kadar prevladuje nehomogena razširitev,
 nastopijo pomembni novi pojavi, zato si to podrobneje oglejmo.
 
-Naj na dvonivojski plin vpada močan snop monokromatske svetlobe s frekvenco $\omega$,
+Naj na dvonivojski plin vpada močan snop monokromatske svetlobe s frekvenco $\omega_S$,
 ki je blizu osrednje frekvence $\omega_{0}$ Dopplerjevo razširjene črte. S svetlobo
 lahko sodeluje le skupina atomov, pri kateri se Dopplerjevo premaknjena
-frekvenca od $\omega$ ne razlikuje več kot za homogeno širino, ki
-jo opisuje funkcija $g(\omega)$. Zato ne moremo zapisati zasedbenih
+frekvenca od $\omega_S$ ne razlikuje več kot za homogeno širino, ki
+jo opisuje funkcija $g(\omega-\omega_S)$. Zato ne moremo zapisati zasedbenih
 enačb za vse atome hkrati, ampak le za tiste, ki imajo hitrost med
 $v$ in $v+dv$ in ki absorbirajo svetlobo pri frekvenci $\omega_{0}-kv$.
 
@@ -867,111 +866,137 @@ atomov v osnovnem in vzbujenem stanju. Enačba za spreminjanje gostote
 ${\cal N}_{2}(v)$ je analogna enačbi~(\ref{4.22}) za celotno
 zasedenost v homogenem primeru
 \begin{equation}
-\frac{d{\cal N}_{2}(v)}{dt}=-A{\cal N}_{2}(v) -B\, g(\omega-\omega_{0}+kv)
-\frac{j_{\omega}}{c}\,
+\frac{d{\cal N}_{2}(v)}{dt}=-A{\cal N}_{2}(v) -B\, g(\omega_S-\omega_{0}+kv)
+\frac{j}{c}\,
 [{\cal N}_{2}(v)-{\cal N}_{1}(v)],
 \label{4.85}
 \end{equation}
- kjer je $j_{\omega}$ gostota vpadnega svetlobnega toka. Upoštevali
+ kjer je $j$ gostota vpadnega svetlobnega toka. Upoštevali
 smo, da je zaradi Dopplerjevega pojava prehod premaknjen k frekvenci
 $\omega_{0}-kv$. Velja tudi
 \begin{equation}
 {\cal N}_{1}(v)+{\cal N}_{2}(v)={\cal N}(v)\mbox{\hskip1cm in \hskip1cm}\frac{d{\cal N}_{2}(v)}{dt}=-\frac{d{\cal N}_{1}(v)}{dt}.
 \label{4.86}
 \end{equation}
-Vpeljimo ${\cal Z}(v)={\cal N}_{2}(v)-{\cal N}_{1}(v)$. Podobno kot 
+Vpeljimo ${\cal Z}(v)={\cal N}_{1}(v)-{\cal N}_{2}(v)$. Podobno kot 
 v enačbi~(\ref{4.321}) zapišemo
 \beq
-{\cal N}_{2}(v)=1/2{\cal N}(v)+1/2{\cal Z}(v)
+{\cal N}_{2}(v)=1/2{\cal N}(v)-1/2{\cal Z}(v)
 \eeq
 in dobimo 
 \begin{equation}
-\dot{{\cal Z}}(v)=-A{\cal Z}(v)-A{\cal N}(v)
--2B\,g(\omega-\omega_{0}+kv)\frac{j_{\omega}}{c}
+\dot{{\cal Z}}(v)=-A{\cal Z}(v)+A{\cal N}(v)
+-2B\,g(\omega_S-\omega_{0}+kv)\frac{j}{c}
 {\cal Z}(v).
 \label{4.87}
 \end{equation}
 V stacionarnem stanju je 
 \begin{equation}
-{\cal Z}(v)=\frac{{\cal N}(v)}{1+\frac{2B}{Ac}g(\omega-\omega_{0}+kv)j_{\omega}}.\label{4.88}
+{\cal Z}(v)=\frac{{\cal N}(v)}{1+\frac{2B}{Ac}g(\omega_S-\omega_{0}+kv)j}.
+\label{4.88}
 \end{equation}
  Če je nasičenje majhno, lahko imenovalec v gornji enačbi razvijemo
 \begin{equation}
-{\cal Z}(v)\simeq{\cal N}(v)[1-\frac{2B}{Ac}g(\omega-\omega_{0}+kv)j_{\omega}].\label{4.89}
+{\cal Z}(v)\approx{\cal N}(v)\left(1-\frac{2B}{Ac}g(\omega_S-\omega_{0}+kv)j\right).
+\label{4.89}
 \end{equation}
- Porazdelitev ${\cal Z}(v)$je podobna nemoteni porazdelitvi atomov
-po hitrosti ${\cal N}(v)$, le da je pri hitrosti $v=(\omega_{0}-\omega)/k$
+Porazdelitev ${\cal Z}(v)$je podobna nemoteni porazdelitvi atomov
+po hitrosti ${\cal N}(v)$, le da je pri hitrosti $v=(\omega_{0}-\omega_S)/k$
 zmanjšana zaradi vpliva vpadne svetlobe, ki jo atomi s to hitrostjo
 lahko absorbirajo in s tem prehajajo v gornje stanje. V porazdelitvi
-atomov v spodnjem stanju tako nastane vdolbina, pravijo ji tudi Bennetova
-vdolbina, v gornjem stanju, ki je bilo na začetku prazno, pa dobimo
-ustrezen ozek vrh (Slika \ref{***}). Širina vdolbine je določena
-s homogeno širino prehoda, to je s funkcijo $g(\omega-\omega_{0}+kv)$,
+atomov v spodnjem stanju tako nastane vdolbina, pravimo ji tudi Bennettova
+vdolbina\footnote{Ameriški fizik William Ralph Bennett Jr., 1930--2008.}, 
+v gornjem stanju, ki je bilo na začetku prazno, pa dobimo
+ustrezen ozek vrh (slika \ref{fig:Bennet}). Širina vdolbine je določena
+s homogeno širino prehoda, to je s funkcijo $g(\omega_S-\omega_{0}+kv)$,
 globina pa z gostoto vpadnega toka.
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/05_Hole.pdf_tex}
+\caption{Porazdelitev atomov po hitrosti v osnovnem stanju, kjer zaradi
+absorbirane svetlobe nastane Bennettova vdolbina. Enako obliko ima 
+tudi absorpcijski koeficient.}
+\label{fig:Bennet}
+\end{figure}
 
 Zapišimo sedaj absorpcijski koeficient pri neki frekvenci $\omega^{\prime}$,
 ki ga izmerimo tako, da na plin posvetimo z dodatnim, šibkim testnim
 snopom. Upoštevati moramo, da k absorpciji prispevajo vsi atomi, katerih
-hitrost je taka, da je prehod dovolj blizu $\omega^{\prime}$. Zato
-dobimo absorpcijski koeficient s seštevanjem po porazdelitvi ${\cal Z}(v)$
+hitrost je taka, da je prehod dovolj blizu $\omega^{\prime}$. Absorpcijski 
+koeficient potem izračunamo s seštevanjem po porazdelitvi ${\cal Z}(v)$
+(enačba~\ref{eq:jabs})
 \begin{equation}
-\mu(\omega^{\prime})=\frac{\hbar\omega^{\prime}}{c}\int{\cal Z}(v)Bg(\omega^{\prime}-\omega_{0}+k^{\prime}v)\, dv\label{4.90}
+\mu(\omega^{\prime})=\frac{\hbar\omega^{\prime}}{c}\int{\cal Z}(v)Bg
+(\omega^{\prime}-\omega_{0}+k'v)\, dv.
+\label{4.90}
 \end{equation}
- Homogena razširitev je navadno dosti manjša od Dopplerjeve širine.
-V prvem približku vzemimo, da lahko $g(\omega)$ nadomestimo kar z
-$\delta(\omega)$, pri čemer to ne smemo narediti tudi v imenovalcu
-izraza za ${\cal Z}(v)$. Tako dobimo 
-% \begin{eqnarray}
-% \mu(\omega^{\prime}) & = & \frac{\hbar\omega^{\prime}}{k^{\prime}c}B\frac{{\cal N}
-% (\frac{\omega^{\prime}-\omega0}{k})}{1+\frac{2B}{Ac}g(\omega-\omega^{\prime})j_{\omega}} \\ \nonumber 
-%  & \simeq & \hbar B{\cal N}(\frac{\omega^{\prime}-\omega0}{k})[1-\frac{2B}{Ac}g(\omega-\omega^{\prime})j_{\omega}].
-% \end{eqnarray}
- V drugi vrstici smo uporabili približek \ref{4.89}. Odvisnost $\mu(\omega^{\prime})$,
+Homogena razširitev je navadno dosti manjša od Dopplerjeve širine.
+V prvem približku vzemimo, da lahko Lorentzovo $g(\omega)$ nadomestimo kar z
+$\delta(\omega)$, vendar tega ne smemo narediti v imenovalcu
+izraza za ${\cal Z}(v)$. Tako je absorpcijski koeficient za šibko testno svetlobo 
+\begin{eqnarray}
+\mu(\omega^{\prime}) & = & \frac{\hbar\omega^{\prime}}{k'c}B\frac{{\cal N}
+(\frac{\omega^{\prime}-\omega_0}{k'})}{1+\frac{2B}{Ac}g(\omega'-\omega_S)j} \\ \nonumber 
+ & \approx & \hbar B{\cal N}\left(\frac{\omega'-\omega_0}{k'}\right)\left(1-\frac{2B}{Ac}g(\omega'-\omega_S)j\right).
+\end{eqnarray}
+ V drugi vrstici smo uporabili približek (enačba~\ref{4.89}). Odvisnost $\mu(\omega^{\prime})$,
 ki jo izmerimo tako, da spreminjamo frekvenco testnega snopa $\omega^{\prime}$,
-je Gaussove oblike z vdolbino pri $\omega$ in je podobna porazdelitvi
-${\cal Z}(v)$, kot jo kaže slika \ref{***}. Vdolbina ima obliko
+je Gaussove oblike z vdolbino pri $\omega_S$ in je podobna porazdelitvi
+${\cal Z}(v)$, kot jo kaže slika (\ref{fig:Bennet}). Vdolbina ima obliko
 homogeno razširjene črte. Merjenje nasičenja absorpcije s testnim
-žarkom torej omogoča dobiti obliko homogene črte kljub mnogo večji
+žarkom torej omogoča opazovanje oblike homogene črte kljub mnogo večji
 nehomogeni Dopplerjevi razširitvi in je zato v moderni spektroskopiji
 velikega pomena.
-
-Absorpcijski koeficient za prvi, močan vpadni snop dobimo s tem, da
-v gornjem izrazu postavimo $\omega^{\prime}=\omega$. ${\cal N}((\omega-\omega^{\prime})/k)$
-opisuje običajno Gaussovo obliko Dopplerjevo razširjene črte, izraz
-v oglatem oklepaju pa da zmanjšanje absorpcije zaradi nasičenja, ki
-je odvisno le od vrednosti $g(0)$ in zato enako pri vseh $\omega$.
-Z enim samim snopom izmerjena črta je kljub nasičenju še vedno Gaussove
-oblike. Vdolbina, ki jo izžge svetloba v hitrostni porazdelitvi atomov,
-s takim preprostim opazovanjem ne moremo zaznati.
 
 Namesto z dvema različnima snopoma, od katerih lahko enemu spreminjamo
 frekvenco, lahko vdolbino v porazdelitvi zaznamo tudi z enim snopom
 spremenljive frekvence, ki se po prvem prehodu skozi plin odbije od
 ogledala in vrne v nasprotni smeri. S tem se v porazdelitvi atomov
-v spodnjem stanju simetrično pri hitrostih $\pm(\omega_{0}-\omega)/k$
-pojavita dve vdolbini. Kadar je $\omega$ blizu $\omega_{0}$, se
-začneta obe vdolbini prekrivati, stopnja nasičenja se poveča in s
-tem se celotna absorpcija po dveh prehodih zmanjša (Slika \ref{***}).
+v spodnjem stanju simetrično pri hitrostih $\pm(\omega_{0}-\omega_S)/k$
+pojavita dve Bennettovi vdolbini in v koeficientu absorpcije
+dve tako imenovani Lambovi vdolbini\footnote{Ameriški fizik in nobelovec 
+Willis Eugene Lamb Jr., 1913--2008}. 
+Kadar je $\omega_S$ blizu $\omega_{0}$, se začneta obe vdolbini prekrivati, 
+stopnja nasičenja se poveča in s tem se celotna absorpcija po dveh 
+prehodih zmanjša (slika \ref{fig:Lamb}).
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/05_Lamb.pdf_tex}
+\caption{Porazdelitev atomov po hitrosti v osnovnem stanju, če svetloba prehaja 
+skozi plin v dveh smereh (a). Če frekvenca vpadne svetlobe sovpada s centralno 
+frekvenco prehoda, se obe vdolbini prekrivata in absorpcija se zmanjša (b).}
+\label{fig:Lamb}
+\end{figure}
 
 Zapišimo še enačbe za ta primer. Snop povzroči spremembo zasedenosti
 pri prehodu skozi plin v obeh smereh, zato je sedaj 
 \begin{equation}
-{\cal Z}(v)\simeq{\cal N}(v)\{1-\frac{2B}{Ac}j_{\omega}[g(\omega-\omega_{0}+kv)+g(\omega-\omega_{0}-kv)]\}.\label{4.92}
+{\cal Z}(v)\approx{\cal N}(v)\left(1-\frac{2B}{Ac}j\left(g(\omega_S-\omega_{0}+kv)+
+g(\omega_S-\omega_{0}-kv)\right)\right).
+\label{4.92}
 \end{equation}
- Enako kot prej je absorpcijski koeficient za širjenje svetlobe v
+Podobno kot prej izračunamo absorpcijski koeficient za širjenje svetlobe v
 pozitivni smeri 
 \begin{eqnarray}
-\mu_{+}(\omega) & = & \frac{\hbar\omega}{c}B\int{\cal Z}(v)g(\omega-\omega_{0}+kv)\, dv\nonumber \\
- & \simeq & \hbar B{\cal N}(\frac{\omega-\omega0}{k})\{1-\frac{2B}{Ac}[g(0)+g(2(\omega-\omega_{0}))]j_{\omega}\}\;.
+\mu_{+}(\omega_S) & = & \frac{\hbar\omega}{c}B\int{\cal Z}(v)g(\omega_S-\omega_{0}+kv)\, dv\nonumber \\
+ & \approx & \hbar B{\cal N}\left(\frac{\omega_S-\omega_0}{k}\right)\left(1-\frac{2B}{Ac}\left(1+g(2(\omega_S-\omega_{0}))\right)j\right)\;.
+ \label{eq:lamb}
 \end{eqnarray}
  Ker je ${\cal Z}(v)={\cal Z}(-v)$, je izraz za absorpcijo v negativni
 smeri enak. Pri $\omega=\omega_{0}$ je nasičenje večje in absorpcija
 se zato zmanjša. Izmerjeni absorpcijski profil ima na sredini vdolbino,
 ki je zopet podobna homogeno razširjeni črti. Faktor 2 v argumentu
-funkcije $g(2(\omega-\omega_{0}))$ je posledica našega grobega približka,
-ko smo v integraciji $g(\omega-\omega_{0}+kv)$ nadomestili kar z
+funkcije $g(2(\omega_S-\omega_{0}))$ je posledica našega grobega približka,
+ko smo v integraciji $g(\omega_S-\omega_{0}+kv)$ nadomestili kar z
 $\delta$ funkcijo. Natančnejši račun pokaže, da je vrh pri $\omega_{0}$
-kar oblike $g(\omega-\omega_{0})$ (Naloga).
+kar oblike $g(\omega_S-\omega_{0})$.
+
+\begin{definition}
+Pokaži, da se rezultat natančnejše izpeljave absorpcijskega koeficienta  
+od izraza (enačba~\ref{eq:lamb}) razlikuje le za faktor 2 v Lorentzovi funkciji.
+\end{definition}
 
 \section{Izpeljava verjetnosti za prehod}
 \label{chap:verjetnost}
@@ -997,16 +1022,16 @@ Med atomom in poljem privzemimo električno dipolno interakcijo
 \end{equation}
 kjer je $\hat{x}$ operator koordinate elektrona v atomu. Privzeli
 smo, da je nihajoče polje polarizirano v smeri osi $x$. Stanja celotnega sistema, 
-to je atoma in polja, zapišimo v obliki produkta atomskih stanj in
-stanja elektromagnetnega polja, pri čemeer moramo navesti število fotonov
-v vsakem nihanju votline $\alpha$
+to je atoma in polja, zapišemo v obliki produkta atomskih stanj in
+stanja elektromagnetnega polja, pri čemer moramo navesti število fotonov
+v vsakem nihanju votline $\alpha$. Zapišemo okrajšano
 \begin{equation}
-|i,\{n_{\alpha}\}\rangle\equiv|i\rangle|\{n_{\alpha}\}\rangle.
+|i,n_{\alpha}\rangle\equiv|i\rangle|\{n_{\alpha}\}\rangle.
 \label{4.48}
 \end{equation}
 Začetno stanje celotnega sistem naj bo tako $|2,n_{\alpha}\rangle$, kar pomeni, da je
 atom v gornjem stanju, polje pa ima $n_{\alpha}$ fotonov v enem samem stanju $\alpha$.
-Ustrezno končno stanje je $|1,n_{\alpha}+1\rangle$.
+Ustrezno končno stanje po prehodu je $|1,n_{\alpha}+1\rangle$.
 
 V prvem redu teorije motenj je verjetnost za prehod iz začetnega v končno stanje
 na časovno enoto enaka
@@ -1026,7 +1051,7 @@ razvijemo po lastnih nihanjih votline
 \hat{p}_{\alpha}(t)E_{\alpha}(\mathbf{r}),
 \label{4.50}
 \end{equation}
-kjer je $\hat{p}_{\alpha}$ operator impulza nihanja $\alpha$, $E_{\alpha}$
+kjer je $\hat{p}_{\alpha}$ operator gibalne količine stanja $\alpha$, $E_{\alpha}$
 pa funkcija, ki popisuje krajevno odvisnost polja. Vemo, da se vsako 
 elektromagnetno nihanje votline obnaša kot harmonski oscilator.
 Zato lahko vpeljemo kreacijske in anihilacijske operatorje
@@ -1035,7 +1060,7 @@ Zato lahko vpeljemo kreacijske in anihilacijske operatorje
 (\omega_{\alpha}\hat{q}_{\alpha}-i\hat{p}_{\alpha}) \\
 \hat{a}_{\alpha} & = & \frac{1}{\sqrt{2\hbar\omega_{\alpha}}}\,(\omega_{\alpha}\hat{q}_{\alpha}+i\hat{p}_{\alpha}).
 \end{eqnarray}
- Kreacijski operatorji povečujejo, anihilacijski pa znižujejo število
+ Kreacijski operatorji povečujejo, anihilacijski pa zmanjšujejo število
 fotonov v danem stanju
 \begin{eqnarray}
 \hat{a}_{\alpha}^{\dagger}|n_{\alpha}\rangle & = & \sqrt{n_{\alpha}+1}
