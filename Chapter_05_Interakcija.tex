@@ -1,3 +1,5 @@
+\chapterimage{slike/Trinivojski.png} 
+% Chapter heading image
 \chapter{Interakcija svetlobe s snovjo}
 
 V prejšnjih poglavjih smo obravnavali svetlobo v praznem prostoru. Oglejmo si
@@ -246,10 +248,9 @@ $\tau = 1/A_{21}$.
 Zaradi končnega življenjskega časa ima vzbujeno stanje končno spektralno 
 širino. Najpogosteje je atomska spektralna črta\index{Atomska črta} kar 
 Lorentzove oblike\index{Spekter!Lorentzov} z vrhom pri $\omega_0$
-\begin{equation}
+\boxeq{4.21}{
 g(\omega-\omega_0)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}}.
-\label{4.21}
-\end{equation}
+}
 Funkcija $g(\omega)$ je normirana
 \begin{equation}
 \int_{-\infty}^\infty g(\omega)\, d\omega=1,
@@ -324,10 +325,9 @@ odvisna tudi od tega, kako blizu centralne frekvence prehoda je frekvenca vpadne
 svetlobe (slika~\ref{fig:spektri}\,b). Zapišemo $w_{\omega R}$ gostoto energije 
 monokromatske svetlobe s frekvenco $\omega_R$. Verjetnost za absorpcijo na časovno 
 enoto je potem  
-\begin{equation}
+\boxeq{4.18}{
 r_{12}=B_{12}g(\omega_R-\omega_0)\, w_{\omega R}.
-\label{4.18}
-\end{equation}
+}
 
 Koeficiente $A_{21}$, $B_{12}$ in $B_{21}$, s katerimi smo opisali spontano sevanje,
 absorpcijo in stimulirano emisijo je prvi vpeljal Einstein\footnote{Nemški fizik
@@ -700,7 +700,7 @@ N_{2}-N_{1}=\frac{rN}{A_{21}} \, \frac{1}{1+\frac{B_{21}gj}{c A_{21}}} =
 Konstante $c A_{21}/B_{21}g$ smo pospravili v $j_s$, ki ga bomo imenovali 
 saturacijska gostota svetlobnega toka\index{Saturacijska gostota toka}. 
 \begin{remark}
- Vidimo, da je dobljen izraz za saturacijsko gototo toka v trinivojskem sistemu zelo 
+ Vidimo, da je dobljen izraz za saturacijsko gostoto toka v trinivojskem sistemu zelo 
  podoben saturacijski gostoti za dvonivojski sistem (enačba~\ref{4.34}), razlikujeta se le
 v faktorju 2. Do te razlike pride zaradi različnega števila stanj, saj pogoj $N_{1}+N_{2}=N$
 v tem primeru ne velja. 
@@ -998,7 +998,7 @@ Pokaži, da se rezultat natančnejše izpeljave absorpcijskega koeficienta
 od izraza (enačba~\ref{eq:lamb}) razlikuje le za faktor 2 v Lorentzovi funkciji.
 \end{definition}
 
-\section{Izpeljava verjetnosti za prehod}
+\section{*Izpeljava verjetnosti za prehod}
 \label{chap:verjetnost}
 Verjetnosti za prehod atoma iz enega stanja v drugo s sevanjem, ki
 smo jih opisali s fenomenološkimi Einsteinovimi koeficienti $A_{21}$
@@ -1141,27 +1141,38 @@ A_{21}=\frac{\pi e^{2}x_{12}^{2}}{2\hbar\epsilon_{0}}\int\rho(\omega_{\alpha})\o
 \end{equation}
  Z $\omega_{0}=(E_{2}-E_{1})/\hbar$ smo označili frekvenco prehoda. S tem smo 
  izpeljali vrednost Einsteinovega koeficienta $A_{21}$. 
- Wikipedia 1/3 tukaj 1/2.
+\begin{remark}
+Pri gornjem izračunu Einsteinovega koeficienta $A_{21}$ smo privzeli, da so vsi dipoli urejeni  
+ v smeri širjenja svetlobe. Če želimo rezultat izenačiti s koeficientom, ki smo ga vpeljali
+ za izotropno sevanje črnega telesa, ga moramo pomnožiti s faktorjem $\langle \cos^2\vartheta
+ \rangle = 1/3$.
+\end{remark}
 
-Zaradi spontanega sevanja vzbujeno atomsko stanje ne more biti popolnoma
-stacionarno. Poleg tega energija stanja s končnim razpadnim časom ni natančno
-določeno. Zato moramo verjetnost za stimulirano sevanje (enačba~\ref{4.56}) malo 
-popraviti. Delta funkcijo energije nadomestimo s končno široko funkcijo $g(\omega)$, 
-ki ima vrh pri $\omega_{0}$ in je njen integral enak 1. Pri tem dobimo zaradi 
-spremembe integracijske spremenljivke še en dodaten faktor $1/\hbar$. Tako imamo 
+Zaradi spontanega sevanja vzbujeno atomsko stanje nikoli ni popolnoma
+stacionarno. Poleg tega pa energija stanja s končnim razpadnim časom ni natančno
+določena, zato moramo verjetnost za stimulirano sevanje (enačba~\ref{4.56}) malo 
+popraviti. Delta funkcijo energije nadomestimo s končno široko  
+funkcijo $g(\omega-\omega_0)$, ki ima vrh pri $\omega_{0}$. Zaradi 
+spremembe integracijske spremenljivke dobimo še dodaten faktor $1/\hbar$. Tako imamo 
 \begin{equation}
 w_{21}=\frac{\pi e^{2}\omega_{\alpha}x_{12}^{2}}{2V\epsilon_{0}\hbar}
-(n_{\alpha}+1)g(\omega_{\alpha}).
+(n_{\alpha}+1)g(\omega_{\alpha}-\omega_0).
 \label{4.59}
 \end{equation}
-Einsteinov koeficient za stimulirano sevanje lahko izrazimo iz enačbe~(\ref{4.18}), 
-če upoštevamo, da je gostota energije polja $n_{\alpha}\hbar\omega_{\alpha}/V$
+
+Poglejmo še Einsteinov koeficient za stimulirano sevanje $B_{21}$. Lahko ga 
+izrazimo iz enačbe~(\ref{4.18}), če upoštevamo, da je gostota energije 
+polja $n_{\alpha}\hbar\omega_{\alpha}/V$. Dobimo
 \begin{equation}
-B_{21}g(\omega_{\alpha})=\frac{Vw_{21}}{n_{\alpha}\hbar\omega_{\alpha} g(\omega_{\alpha})}
+B_{21}=\frac{Vw_{21}}{n_{\alpha}\hbar\omega_{\alpha} g(\omega_{\alpha}-\omega_0)}
 =\frac{\pi e^{2}x_{12}^{2}}{2\epsilon_{0}\hbar^{2}}.
 \label{4.60}
 \end{equation}
 Poglejmo  še razmerje izračunanih Einsteinovih koeficientov iz enačb~(\ref{4.58}) in 
-(\ref{4.60}). Vidimo, da se ujema z razmerjem, ki smo ga izpeljali z uporabo
+(\ref{4.60})
+\begin{equation}
+ \frac{A_{21}}{B_{21}}=\frac{\hbar \omega_\alpha^3}{\pi^2 c^3},
+\end{equation}
+ki se ujema z razmerjem, ki smo ga izpeljali z uporabo
 Planckove formule (enačba~\ref{4.27}). Prehojena pot jasno kaže zvezo med spontanim in
 stimuliranim sevanjem ter gostoto stanj elektromagnetnega polja. 
