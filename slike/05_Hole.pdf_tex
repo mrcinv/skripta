@@ -51,9 +51,8 @@
   \begin{picture}(1,0.45938654)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{05_Hole.pdf}}%
     \put(0.94458916,0.0108273){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$v_x$}}}%
-    \put(0.49793779,0.44317153){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{${\cal Z}$}}}%
+    \put(0.49793779,0.44317153){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{${\cal N}_1$}}}%
     \put(0.47530888,0.00305187){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
-    \put(0.31414553,-0.00059285){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\frac{\omega_S-\omega_0}{k}$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{05_Hole.pdf}}%
+    \put(0.31414553,-0.00059285){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\frac{\omega_0-\omega_S}{k}$}}}%
   \end{picture}%
 \endgroup%
