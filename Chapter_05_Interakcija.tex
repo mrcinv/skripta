@@ -896,7 +896,8 @@ zasedenost v homogenem primeru (enačba~\ref{4.22})
 smo, da je zaradi Dopplerjevega pojava prehod premaknjen k frekvenci
 $\omega_{0}-kv$. Velja tudi
 \begin{equation}
-{\cal N}_{1}(v)+{\cal N}_{2}(v)={\cal N}(v)\mbox{\hskip1cm in \hskip1cm}\frac{d{\cal N}_{2}(v)}{dt}=-\frac{d{\cal N}_{1}(v)}{dt}.
+{\cal N}_{1}(v)+{\cal N}_{2}(v)={\cal N}(v)\mbox{\hskip1cm in 
+\hskip1cm}\frac{d{\cal N}_{2}(v)}{dt}=-\frac{d{\cal N}_{1}(v)}{dt}.
 \label{4.86}
 \end{equation}
 Vpeljimo ${\cal Z}(v)={\cal N}_{1}(v)-{\cal N}_{2}(v)$. Podobno kot 
@@ -941,7 +942,8 @@ tudi absorpcijski koeficient.}
 \label{fig:Bennet}
 \end{figure}
 
-Zapišimo še absorpcijski koeficient pri neki frekvenci $\omega^{\prime}$,
+Zapišimo še absorpcijski koeficient za šibko vpadno valovanje pri 
+frekvenci $\omega^{\prime}$.
 ki ga izmerimo tako, da na plin posvetimo z dodatnim, šibkim testnim
 snopom. Upoštevati moramo, da k absorpciji prispevajo vsi atomi, katerih
 hitrost je taka, da je prehod dovolj blizu $\omega^{\prime}$. Absorpcijski 
@@ -949,26 +951,24 @@ koeficient\index{Absorpijski koeficient} potem izračunamo s seštevanjem
 po porazdelitvi ${\cal Z}(v)$
 (enačba~\ref{eq:jabs})
 \begin{equation}
-\mu(\omega^{\prime})=\frac{\hbar\omega^{\prime}}{c}\int{\cal Z}(v)Bg
+\mu(\omega^{\prime})=\frac{\hbar\omega^{\prime}}{c}\int{\cal Z}(v)Bg'
 (\omega^{\prime}-\omega_{0}+k'v)\, dv.
 \label{4.90}
 \end{equation}
+V splošnem se funkcija $g'$ razlikuje od funkcije $g$, ki nastopa v izrazu za
+${\cal Z}$, saj sta širini lahko različni.
 Homogena razširitev je navadno dosti manjša od Dopplerjeve širine.
-V prvem približku vzemimo, da lahko Lorentzovo $g(\omega)$ nadomestimo kar z
-$\delta(\omega)$, vendar tega ne smemo narediti v imenovalcu
-izraza za ${\cal Z}(v)$. Tako je absorpcijski koeficient za šibko testno svetlobo 
+V prvem približku vzemimo, da lahko Lorentzovo $g'(\omega)$ nadomestimo kar z
+$\delta(\omega)$. Tako je absorpcijski koeficient za šibko testno svetlobo 
 \begin{eqnarray}
 \mu(\omega^{\prime}) & = & \frac{\hbar\omega^{\prime}}{k'c}B\frac{{\cal N}
-(\frac{\omega^{\prime}-\omega_0}{k'})}{1+\frac{2B}{Ac}g(\omega'-\omega_S)j} \\ \nonumber 
- & \approx & \hbar B{\cal N}\left(\frac{\omega'-\omega_0}{k'}\right)\left(1-\frac{2B}{Ac}g(\omega'-\omega_S)j\right).
+(\frac{\omega_0-\omega'}{k'})}{1+\frac{2Bj}{Ac}g(\omega_S-\omega')} \\ \nonumber 
+ & \approx & \hbar B{\cal N}\left(\frac{\omega_0-\omega'}{k'}\right)\left(1-\frac{2Bj}{Ac}g(\omega_S-\omega')\right).
 \end{eqnarray}
  V drugi vrstici smo uporabili približek (enačba~\ref{4.89}). Odvisnost $\mu(\omega^{\prime})$,
 ki jo izmerimo tako, da spreminjamo frekvenco testnega snopa $\omega^{\prime}$,
 je Gaussove oblike z vdolbino pri $\omega_S$ in je podobna porazdelitvi, 
-kot jo kaže slika (\ref{fig:Bennet}). Vdolbini pri koeficientu
-absorpcije, ki ima obliko homogeno razširjene črte, pravimo
-Lambova vdolbina\footnote{Ameriški fizik in nobelovec 
-Willis Eugene Lamb Jr., 1913--2008.}\index{Lambova vdolbina}. 
+kot jo kaže slika (\ref{fig:Bennet}). 
 
 Merjenje nasičenja absorpcije s testnim
 žarkom torej omogoča opazovanje oblike homogene črte kljub mnogo večji
@@ -1026,6 +1026,12 @@ funkcije $g(2(\omega_S-\omega_{0}))$ je posledica našega grobega približka,
 ko smo v integraciji $g(\omega_S-\omega_{0}+kv)$ nadomestili kar z
 $\delta$ funkcijo. Natančnejši račun pokaže, da je vrh pri $\omega_{0}$
 kar oblike $g(\omega_S-\omega_{0})$.
+
+Vdolbini pri koeficientu
+absorpcije, ki ima obliko homogeno razširjene črte, pravimo
+Lambova vdolbina\footnote{Ameriški fizik in nobelovec 
+Willis Eugene Lamb Jr., 1913--2008.}\index{Lambova vdolbina}. 
+
 
 \begin{definition}
 Pokaži, da se rezultat natančnejše izpeljave absorpcijskega koeficienta  
