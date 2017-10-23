@@ -335,7 +335,7 @@ dosti v območju prehoda. Takrat $u(\omega)$ postavimo pred integral in po prič
 dobimo znano zvezo~(enačba~\ref{4.16}). 
 
 Če pa na atome svetimo s svetlobo s spektrom, ki je ozek v primerjavi s spektralno 
-širino prehoda, na primer iz laserskega resonatorja, je verjetnost za prehod 
+širino prehoda (na primer iz laserskega resonatorja), je verjetnost za prehod 
 odvisna tudi od tega, kako blizu centralne frekvence prehoda je frekvenca vpadne 
 svetlobe (slika~\ref{fig:spektri}\,b). Naj bo  $w_{\omega R}$ gostota energije 
 monokromatske svetlobe s frekvenco $\omega_R$. Verjetnost za absorpcijo na časovno 
@@ -384,7 +384,7 @@ Boltzmannova porazdelitev\index{Boltzmannova porazdelitev}
 \frac{N_{2}}{N_{1}}=e^{-\beta(E_{2}-E_{1})} = e^{-\beta \hbar \omega_0},
 \label{4.25}
 \end{equation}
-kjer je $\beta=1/k_BT$. Izrazimo spektralno gostoto $u(\omega)$ 
+kjer je $\beta=1/k_BT$. Izrazimo spektralno gostoto\index{Spektralna gostota energije} $u(\omega)$ 
 iz enačbe~(\ref{4.23})
 \begin{equation}
 u(\omega_{0})=\frac{A_{21}}{B_{12}\frac{N_{1}}{N_{2}}-B_{21}}
@@ -655,8 +655,9 @@ prvim vzbujenim in osnovnim stanjem (c). Pogosto so laserji štirinivojski (d).}
 \begin{remark}
 Trinivojski laserski sistem na sliki (\ref{fig:3nivojski}\,b) je pravzaprav 
 poseben primer bolj realističnega štirinivojskega sistema\index{Štirinivojski sistem}, 
-pri katerem gornji črpalni nivo sovpada z gornjim laserskim nivojem. Sicer se četrti nivo, 
-v katerega črpamo, praviloma zelo hitro prazni v tretjega, od tam pa počasi v drugega, kot kaže slika~(\ref{fig:3nivojski}\,d).
+pri katerem gornji črpalni nivo sovpada z gornjim laserskim nivojem. Sicer se tretji vzbujeni nivo, 
+v katerega črpamo, praviloma zelo hitro prazni v drugega vzbujenega, od tam pa počasi v prvega vzbujenega, 
+kot kaže slika~(\ref{fig:3nivojski}\,d).
 Obravnava štirinivojskih sistemov je bolj zapletena kot obravnava trinivojskih sistemov, 
 ki za opis delovanja laserjev povsem zadošča. Podrobneje bomo štirinivojske sisteme predstavili na konkretnih laserskih primerih (poglavje~\ref{chap:Primeri}).
 \end{remark}
@@ -830,11 +831,10 @@ kjer je $m$ masa posameznega atoma.
 Porazdelitev atomov po frekvencah izračunamo tako, da hitrost izrazimo
 iz enačbe~(\ref{4.81}), pri čemer dobljeno funkcijo $g_{D}(\omega-\omega_0)$
 normiramo. Sledi
-\begin{equation}
+\boxeq{4.821}{
 g_{D}(\omega-\omega_0)=\frac{c}{\omega_{0}}\left(\frac{m}{2\pi 
-k_{B}T}\right)^{1/2}e^{-\frac{mc^{2}}{2k_{B}T}\frac{(\omega-\omega_{0})^{2}}{\omega_{0}}}.
-\label{4.821}
-\end{equation}
+k_{B}T}\right)^{1/2}e^{-\frac{mc^{2}}{2k_{B}T}\frac{(\omega-\omega_{0})^{2}}{\omega_{0}^2}}.
+}
 Dopplerjeva razširitev v plinu je torej Gaussove oblike\index{Spekter!Gaussov}.
 Njena širina pri polovični 
 višini\footnote{To širino imenujemo FWHM -- \it{Full width at half maximum}.} je
