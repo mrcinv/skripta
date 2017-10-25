@@ -54,7 +54,7 @@ pri valovni dolžini $632,8~\si{\nano\metre}$ v rdečem delu spektra, poleg
 tega pa tudi pri infrardečih $1,15~\si{\micro\metre}$ in 
 $3,39~\si{\micro\metre}$ ter nekaterih drugih
 valovnih dolžinah v oranžnem in zelenem delu spektra. Laser deluje v zveznem 
-načinu delovanja s tipičnimi močmi $0,5 - 50~\si{\milli\watt}$.
+načinu delovanja s tipičnimi močmi $0,5 - 100~\si{\milli\watt}$.
 
 Slika~(\ref{fig:HeNeE}) kaže relevantne energijske nivoje helija in neona. Atome helija
 vzbudimo s trki z elektroni v eno izmed dveh dolgoživih metastabilnih stanj $2^3S$ ali
@@ -65,6 +65,13 @@ prenese z vzbujenih helijevih atomov na atome neona, ki s tem preidejo v
 že omenjeni vzbujeni stanji, helijevi atomi pa se vrnejo v osnovno stanje. 
 Majhna energijska razlika (okoli $1,2~\si{\tera\hertz}$) pa preide v
 kinetično energijo obeh atomov. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/07_HeNeE.pdf_tex}
+\caption{Shema energijskih nivojev v He-Ne laserju}
+\label{fig:HeNeE}
+\end{figure}
 
 Znano rdečo svetlobo He-Ne laserja pri $632,8~\si{\nano\metre}$ dobimo 
 pri prehodu iz $5s$ stanja v eno od $3p$ stanj. Pri tem je življenjski čas 
@@ -72,7 +79,8 @@ $5s$ stanja okoli $100~\si{\nano\second}$, stanja $3p$ pa okoli $10~\si{\nano\se
 Spodnji $3p$ nivo se prazni s spontano emisijo v zelo metastabilno stanje $3s$. 
 V njem se atomi nabirajo, saj so dipolni sevalni prehodi v osnovno stanje prepovedani,
 in le s trki s steno cevi prehajajo v osnovno stanje. Za dovolj hitre prehode in 
-večje ojačanje je tako treba zmanjšati premer cevi.
+večje ojačanje je tako treba zmanjšati premer cevi. Zaradi gibanja atomov je 
+spektralna črta seveda Dopplerjevno razširjena. 
 
 Lasersko delovanje dobimo tudi pri prehodu iz $5s$ v stanje $4p$, pri katerem 
 se izseva svetloba z valovno dolžino $3,39~\si{\micro\metre}$. 
@@ -83,55 +91,130 @@ deloma pa zaradi kratke življenske dobe spodnjega laserskega nivoja $4p$.
 Zato bi pričakovali, da bo He-Ne laser svetil v infrardečem območju in ne vidnem. 
 To delno prepreči absorpcija v steklu, delno pa jo povečamo s selektivno reflektivnostjo
 resonatorskih zrcal, ki dvigne prag delovanja za $3,39~\si{\micro\metre}$ 
-nad prag za $632,8~\si{\nano\metre}$.
+nad prag za $632,8~\si{\nano\metre}$. V nekaterih primerih v laser dodamo
+celico metana, ki infrardečo svetlobo močno absorbira, rdeče pa ne.
 
 Omenimo še prehode iz stanja $4s$, v katerega pridejo neonovi atomi s trki
 vzbujenih helijevih atomov iz nivoja $2^3S$. Prehod $4s$ v $3p$ da svetlobo
 pri $1,15~\si{\micro\metre}$ in je bil tudi prvi opaženi prehod. 
 
-Je stabilen, robusten in dolgo služi. He-Ne laser je monokromatsko sevanje z majhno
-divergenco snopa. Uporaba za različne aplikacije, npr. holografijo, kjer se potrebuje
-veliko koherenco in majhno divergenco. 
-
-Slika \ref{s6.3} kaže shemo tipičnega plinskega laserja, kakršen je He-Ne
-laser. Električni tok teče skozi razelektritveno cev, v kateri je
-mešanica približno 1~mb He in 0.1~mb Ne. Okna cevi so nagnjena za
-Brewsterjev kot, da so izgube pri odboju za eno polarizacijo čim manjše.
+Tipičen He-Ne laser je razmeroma preprosto zgrajen (slika~\ref{fig:HeNeShema}). 
+V razelektritveni cevi (napetost  $\sim 1~\si{\kilo\volt}$), skozi
+katero teče električni tok ($\sim 10~\si{\milli\ampere}$), 
+se nahaja mešanica helija in neona v razmerju 
+$5:1 - 10:1$. Skupni tlak v cevi je nizek, le okoli $3~\si{\milli\bar}$, 
+cev pa je tipično dolga okoli $0,5~\si{\metre}$ s premerom $1-2~\si{\milli\metre}$.  
+Cev na obeh straneh zapirata okni, ki sta nagnjeni za Brewsterjev kot (glej
+***), tako da so izgube pri odboju za eno polarizacijo čim manjše.
 Izhodna svetloba iz laserja je zato seveda polarizirana. V manjših laserjih
 so namesto Brewsterjevih oken na razelektritveno cev privarjena kar
-resonatorska zrcala. Tak laser je nepolariziran. Elektroni, ki so glavni
-nosilci toka, s trki vzbujajo atome He v več vzbujenih stanj. 
+resonatorska zrcala. Tak laser je nepolariziran. 
+Razelektritvena cev je obdana z dvema ukrivljenima zrcaloma, 
+ki imata zelo veliko odbojnost za izbrano valovno dolžino.
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/07_HeNeShema.pdf_tex}
+\caption{Shema He-Ne laserja: $Z$ - ukrivljeni zrcali resonatorja, $B$ - Brewsterjevi
+okni.}
+\label{fig:HeNeShema}
+\end{figure}
 
-Izhodna moč He-Ne laserja je od nekaj desetink mW do 100~mW. So preprosti,
-zanesljivi in poceni, zato so poleg polvodniških največ uporabljani
-laserji. Uporabljamo jih merilnih napravah, v optičnih čitalnih sistemih,
-na primer v čitalcih črtne kode, v šolah, v raziskovalnih laboratorijih
-za intereferometrijo itd. Na njem je osnovan tudi sekundarni standard za
-meter, kot smo videli v prejšnjem poglavju.
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|c|}\hline
+Valovna dolžina $\lambda$ & $632,8~\si{\nano\metre}$ \\ \hline
+Verjetnost za spontani prehod $A$ & $3,4 \times 10^6/\si{\second}$  \\ \hline
+Presek za stimulirano emisijo $\sigma$ & $3 \times 10^{-17}~\si{\metre}^2$  \\ \hline
+Spektralna širina črte $\Delta \nu$ & $1,5 \times 10^{9}~\si{\hertz}$  \\ \hline
+Gostota obrnjene zasedenosti $\Delta N/V$ & $5 \times 10^{15}/\si{\metre}^3$ \\ \hline
+\end{tabular}
+\caption{Izbrani podatki za He-Ne laser}
+\label{tab:HeNe}
+\end{center}
+\end{table}
+
+He-Ne laserji so preprosti, stabilni, zanesljivi, poceni in dolgo služijo (do 50 000 ur).
+Danes jih sicer izrivajo polprevodniški laserji, vendar so še vedno v uporabi
+v merilnih napravah, v optičnih čitalnih sistemih, v šolah, v raziskovalnih 
+laboratorijih za intereferometrijo, holografijo itd. Na njem je osnovan tudi 
+sekundarni standard za meter.
 
 \section{Argonski ionski laser}
 
-Prehodi v ioniziranem Ar omogočajo lasersko delovanje v pri vrsti valovnih
-dolžin v zelenem, modrem in bližnjem UV področju spektra. Zato je Ar
-ionski laser med najpomembnejšimi, ki se danes porabljajo. Kot večino
-drugih plinskih laserjev tudi tega črpamoz električnim tokom. Da dobimo
-ioniziran argon z obrnjeno zasedenostjo in dovolj velikim ojačenjem, mora
-biti električni tok precej velik, nekaj deset amperov. S tem je velika tudi
-potrebna električna moč, do 10 kW in več. Zaradi velike količine
-odvečne toplote je navadno Ar laser vodno hlajen.
+Kot drugi primer plinskega laserja obravnavajmo argonski ionski (Ar$^+$) laser,
+ki je najbolj poznan po zveznem delovanju v modrem in zelenem delu spektra pri 
+valovnih dolžinah $488~\si{\nano\metre}$ in $514,4~\si{\nano\metre}$, deluje 
+pa tudi v bližnjem ultravijoličnem območju. Tipične moči delovanja Ar$^+$ laserja
+so $100~\si{\milli\watt} - 50~\si{\watt}$.
 
-Ar laser da največjo svetlobno moč pri 488 nm in 514.5~nm, do kakih 20 W.
+Kot večino drugih plinskih laserjev tudi tega črpamo z električnim tokom.
+Atome argona vzbudimo s trki z elektroni v ione argona, ti pa z nadaljnjimi
+trki preidejo v vzbujena stanja. Obrnjeno zasedenost
+dosežemo med nivojema $4p$ in $4s$ (slika~\ref{fig:ArE}).
+
+\begin{remark}
+ Kadar deluje $Ar^+$ laser v sunkovnem načinu, je vzbujanje atomov drugačno.
+ Takrat je vzbujanje enostopenjsko in trki z elektroni argonove atome
+ vzbudijo neposredno v vzbujeno ionsko stanje.
+\end{remark}
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/07_ArE.pdf_tex}
+\caption{Shema energijskih nivojev v Ar$^+$ laserju}
+\label{fig:ArE}
+\end{figure}
+
+Nivoja $4p$ in $4s$ vsebujeta veliko podnivojev, zato je tudi prehodov med
+njima zelo veliko. Argonski laser tako seva pri več kot tridesetih različnih
+valovnih dolžinah, najznačilnejši sta že omenjeni 488~nm in 514,5~nm. Ioni argona
+iz spodnjega nivoja hitro preidejo v osnovno stanje in nato z rekombinacijo z elektroni
+v osnovno stanje atoma.
+
+Argonski laser je v osnovi zgrajen podobno kot He-Ne laser. V razelektritveni cevi
+(tipična dolžina $1~\si{\metre}$ in premer $1-2~\si{\milli\metre}$)
+se nahaja argon pri pritisku okoli $10~\si{\milli\bar}$
+
+Laserji imajo tudi vzdolžno magnetno polje, ki preprečuje elektronom, da bi predčasno
+zapustili ojačevalno območje in trčili v steno. 
+
+Ker gre pri vzbujanju atomov argona za dvostopenjski proces, mora biti električni tok, 
+s katerim dosežemo obrnjeno zasedenost, precej velik, lahko tudi nekaj deset amperov. 
+Pri tipični napetosti nekaj kV to pomeni,
+da so potrebne velike električne moči, pogosto več deset $\si{\kilo\watt}$, in 
+laserji so zato zaradi velike količine odvečne toplote najpogosteje vodno hlajeni.
+
+
+
+
+
 Da izberemo eno od možnih črt, moramo v resonator vgraditi še nek
 frekvenčno selektiven element. Najpogosteje uporabijo kar majhno prizmo
 pred enim od obeh zrcal, kot kaže slika \ref{s6.3a}. Z vrtenjem sklopa
 prizme in zrcala lahko izberemo valovno dolžino svetlobe, ki je pravokotna
 na obe zrcali.
 
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|c|}\hline
+Valovna dolžina $\lambda$ & $488~\si{\nano\metre}$ in $514,5~\si{\nano\metre}$\\ \hline
+Verjetnost za spontani prehod $A$ & $7,8 \times 10^7/\si{\second}$  \\ \hline
+Presek za stimulirano emisijo $\sigma$ & $2,6 \times 10^{-16}~\si{\metre}^2$  \\ \hline
+Spektralna širina črte $\Delta \nu$ & $2,7 \times 10^{9}~\si{\hertz}$  \\ \hline
+Gostota obrnjene zasedenosti $\Delta N/V$ & $2 \times 10^{15}/\si{\metre}^3$ \\ \hline
+\end{tabular}
+\caption{Izbrani podatki za Ar$^+$ laser}
+\label{tab:Ar}
+\end{center}
+\end{table}
+
+
 Argonski laser je zanesljiv in lahko daje zelo kvaliteten izhodni snop, to
 je, brez težav dosežemo, da deluje v osnovnem Gaussovem načinu in pri eni
 sami frekvenci. Zato se dosti uporablja v optični spektroskopiji,
-interferometriji, holografiji in merilni tehniki. Zelo podoben mu je še
-kriptonov laser, ki deluje v rdečem in oranžnem delu spektra.
+interferometriji, holografiji in merilni tehniki. Le 2000-5000 ur delovanja. 
 
 \section{Laser na ogljikov dioksid}
 

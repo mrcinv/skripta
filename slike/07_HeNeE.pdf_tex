@@ -1,0 +1,76 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file '07_HeNeE.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{461.58862978bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.66274876)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{07_HeNeE.pdf}}%
+    \put(0.04963148,0.65292182){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Energija (eV)}}}%
+    \put(-0.07237423,0.16920656){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$17$}}}%
+    \put(-0.07237423,0.2745919){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$18$}}}%
+    \put(-0.07237423,0.37758444){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$19$}}}%
+    \put(-0.07237423,0.4787947){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$20$}}}%
+    \put(-0.07237423,0.57828954){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$21$}}}%
+    \put(0.27253084,0.00963626){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{osnovno stanje}}}%
+    \put(0.18955187,0.25064279){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{trki z elektroni}}}%
+    \put(0.25765561,0.50778442){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{medatomski trki}}}%
+    \put(0.06398939,0.48051478){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$2^3S$}}}%
+    \put(0.06520982,0.57657411){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$2^1S$}}}%
+    \put(0.52556077,0.58000496){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$5s$}}}%
+    \put(0.52556077,0.48222556){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$4s$}}}%
+    \put(0.52557357,0.17001765){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$3s$}}}%
+    \put(0.90685269,0.53372384){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$4p$}}}%
+    \put(0.90685269,0.36198921){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$3p$}}}%
+    \put(0.75923389,0.22316508){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{hitri prehodi}}}%
+    \put(0.73643611,0.55892894){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$3,39~\si{\micro\metre}$}}}%
+    \put(0.78786056,0.44574896){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$632,8~\si{\nano\metre}$}}}%
+    \put(0.63585378,0.37519418){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1,15~\si{\micro\metre}$}}}%
+    \put(0.62503807,0.07853787){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{difuzija v stene}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{07_HeNeE.pdf}}%
+  \end{picture}%
+\endgroup%
