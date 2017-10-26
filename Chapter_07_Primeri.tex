@@ -80,7 +80,7 @@ Spodnji $3p$ nivo se prazni s spontano emisijo v zelo metastabilno stanje $3s$.
 V njem se atomi nabirajo, saj so dipolni sevalni prehodi v osnovno stanje prepovedani,
 in le s trki s steno cevi prehajajo v osnovno stanje. Za dovolj hitre prehode in 
 večje ojačanje je tako treba zmanjšati premer cevi. Zaradi gibanja atomov je 
-spektralna črta seveda Dopplerjevno razširjena. 
+spektralna črta seveda Dopplerjevo razširjena. 
 
 Lasersko delovanje dobimo tudi pri prehodu iz $5s$ v stanje $4p$, pri katerem 
 se izseva svetloba z valovno dolžino $3,39~\si{\micro\metre}$. 
@@ -120,6 +120,13 @@ okni.}
 \label{fig:HeNeShema}
 \end{figure}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=120truemm]{slike/07_HeNe.jpg}
+\caption{Primer starejšega He-Ne laserja, izdelanega v Sloveniji}
+\label{fig:Iskra}
+\end{figure}
+
 \begin{table}
 \begin{center}
 \begin{tabular}{|l|c|}\hline
@@ -151,13 +158,14 @@ so $100~\si{\milli\watt} - 50~\si{\watt}$.
 Kot večino drugih plinskih laserjev tudi tega črpamo z električnim tokom.
 Atome argona vzbudimo s trki z elektroni v ione argona, ti pa z nadaljnjimi
 trki preidejo v vzbujena stanja. Obrnjeno zasedenost
-dosežemo med nivojema $4p$ in $4s$ (slika~\ref{fig:ArE}).
-
-\begin{remark}
- Kadar deluje $Ar^+$ laser v sunkovnem načinu, je vzbujanje atomov drugačno.
- Takrat je vzbujanje enostopenjsko in trki z elektroni argonove atome
- vzbudijo neposredno v vzbujeno ionsko stanje.
-\end{remark}
+dosežemo med nivojema $4p$ in $4s$ (slika~\ref{fig:ArE}). 
+Ta dva nivoja vsebujeta veliko podnivojev, zato je tudi prehodov med
+njima zelo veliko. Argonski laser tako seva pri več kot tridesetih različnih
+valovnih dolžinah, najznačilnejši sta že omenjeni 488~nm in 514,5~nm. 
+Življenjski čas zgornjega nivoja $\sim 10^{-8}~\si{\second}$ je približno 
+desetkrat daljši od življenjskega časa spodnjega nivoja, od koder se ioni
+z rekombinacijo z elektroni vrnejo v osnovno stanje atoma. Tudi pri tem laserju
+je poglavitni vzrok za razširitev črte Dopplerjev pojav. 
 
 \begin{figure}[h]
 \centering
@@ -167,34 +175,35 @@ dosežemo med nivojema $4p$ in $4s$ (slika~\ref{fig:ArE}).
 \label{fig:ArE}
 \end{figure}
 
-Nivoja $4p$ in $4s$ vsebujeta veliko podnivojev, zato je tudi prehodov med
-njima zelo veliko. Argonski laser tako seva pri več kot tridesetih različnih
-valovnih dolžinah, najznačilnejši sta že omenjeni 488~nm in 514,5~nm. Ioni argona
-iz spodnjega nivoja hitro preidejo v osnovno stanje in nato z rekombinacijo z elektroni
-v osnovno stanje atoma.
-
 Argonski laser je v osnovi zgrajen podobno kot He-Ne laser. V razelektritveni cevi
 (tipična dolžina $1~\si{\metre}$ in premer $1-2~\si{\milli\metre}$)
-se nahaja argon pri pritisku okoli $10~\si{\milli\bar}$
-
-Laserji imajo tudi vzdolžno magnetno polje, ki preprečuje elektronom, da bi predčasno
-zapustili ojačevalno območje in trčili v steno. 
-
-Ker gre pri vzbujanju atomov argona za dvostopenjski proces, mora biti električni tok, 
+se nahaja argon pri pritisku okoli $10~\si{\milli\bar}$. Ker gre pri 
+vzbujanju atomov argona za dvostopenjski proces, mora biti električni tok, 
 s katerim dosežemo obrnjeno zasedenost, precej velik, lahko tudi nekaj deset amperov. 
-Pri tipični napetosti nekaj kV to pomeni,
-da so potrebne velike električne moči, pogosto več deset $\si{\kilo\watt}$, in 
-laserji so zato zaradi velike količine odvečne toplote najpogosteje vodno hlajeni.
+Pri tipični napetosti nekaj kV to pomeni, da so potrebne velike električne moči, 
+pogosto več deset $\si{\kilo\watt}$, in močnejši argonovi laserji so zato zaradi 
+velike količine odvečne toplote najpogosteje vodno hlajeni.
 
+Poleg tega ustvarimo v argonovih laserjih vzdolžno magnetno polje, ki preprečuje 
+elektronom, da bi predčasno zapustili ojačevalno območje in trčili v steno. S
+tem se poveča izhodna moč, hkrati pa preprečuje poškodbe na stenah, ki bi jih 
+lahko povzročili visokoenergijski elektroni. Iz istega razloga so pri močnejših
+laserjih zrcala izven plinske cevi. 
 
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/07_ArShema.pdf_tex}
+\caption{Poenostavljena shema Ar laserja s prizmo}
+\label{fig:ArS}
+\end{figure}
 
-
-
-Da izberemo eno od možnih črt, moramo v resonator vgraditi še nek
-frekvenčno selektiven element. Najpogosteje uporabijo kar majhno prizmo
-pred enim od obeh zrcal, kot kaže slika \ref{s6.3a}. Z vrtenjem sklopa
-prizme in zrcala lahko izberemo valovno dolžino svetlobe, ki je pravokotna
-na obe zrcali.
+V resonator argonskega laserja pa moramo vgraditi še en dodaten element, ki omogoči
+izbiro ene same spektralne črte. Najpogosteje za ta frekvenčno selektiven element
+uporabimo kar majhno prizmo pred enim od obeh zrcal (slika~\ref{fig:ArS}). Zaradi disperzije
+v prizmi se snopi različnih valovnih dolžin lomijo pod različnimi koti in le tisti 
+snop, ki vpada pravokotno na zrcalo, bo ojačan. Z vrtenjem prizme ali zrcala lahko 
+tako izberemo valovno dolžino ojačane svetlobe.
 
 \begin{table}
 \begin{center}
@@ -202,7 +211,7 @@ na obe zrcali.
 Valovna dolžina $\lambda$ & $488~\si{\nano\metre}$ in $514,5~\si{\nano\metre}$\\ \hline
 Verjetnost za spontani prehod $A$ & $7,8 \times 10^7/\si{\second}$  \\ \hline
 Presek za stimulirano emisijo $\sigma$ & $2,6 \times 10^{-16}~\si{\metre}^2$  \\ \hline
-Spektralna širina črte $\Delta \nu$ & $2,7 \times 10^{9}~\si{\hertz}$  \\ \hline
+Spektralna širina črte $\Delta \nu$ & $3,5 \times 10^{9}~\si{\hertz}$  \\ \hline
 Gostota obrnjene zasedenosti $\Delta N/V$ & $2 \times 10^{15}/\si{\metre}^3$ \\ \hline
 \end{tabular}
 \caption{Izbrani podatki za Ar$^+$ laser}
@@ -210,11 +219,15 @@ Gostota obrnjene zasedenosti $\Delta N/V$ & $2 \times 10^{15}/\si{\metre}^3$ \\ 
 \end{center}
 \end{table}
 
-
-Argonski laser je zanesljiv in lahko daje zelo kvaliteten izhodni snop, to
-je, brez težav dosežemo, da deluje v osnovnem Gaussovem načinu in pri eni
+Argonski laser je zanesljiv in daje zelo kvaliteten osnovni Gaussov snop pri eni
 sami frekvenci. Zato se dosti uporablja v optični spektroskopiji,
-interferometriji, holografiji in merilni tehniki. Le 2000-5000 ur delovanja. 
+interferometriji, holografiji in merilni tehniki. Deluje lahko v zveznem načinu,
+zaradi razmeroma široke črte ojačanja pa ga uporabljamo tudi za fazno uklenjen
+sunkovni laser z dolžino sunkov okoli $150~\si{\pico\second}$. 
+V kombinaciji s kriptonovim laserjem, ki deluje zelo podobno kot argonski, 
+le v rdečem in oranžnem delu spektra, se uporablja tudi v zabavni industriji.
+V zadnjem času ga vse bolj izrivajo polprevodniški laserji ali pa frekvenčno
+podvojeni Nd:YAG. 
 
 \section{Laser na ogljikov dioksid}
 
