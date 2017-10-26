@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{433.82418895bp}%
+    \setlength{\unitlength}{486.44199642bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,13 +48,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.35639098)%
+  \begin{picture}(1,0.32135)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{07_ArShema.pdf}}%
-    \put(0.06597737,-0.04433441){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$Z$}}}%
-    \put(1.02183325,0.00580881){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$Z$}}}%
-    \put(0.28447941,0.26339316){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$B$}}}%
-    \put(0.90744326,0.25844572){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$B$}}}%
-    \put(0.50077268,0.32336673){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$U \sim \si{\kilo\volt}$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{07_ArShema.pdf}}%
+    \put(0.08952216,0.00518046){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$Z$}}}%
+    \put(0.87474712,0.00868986){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$Z$}}}%
+    \put(0.24092384,0.2376448){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$B$}}}%
+    \put(0.77273055,0.23399935){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$B$}}}%
+    \put(0.410049,0.29189794){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$U \sim \si{\kilo\volt}$}}}%
+    \put(0.07343495,0.18981309){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$P$}}}%
   \end{picture}%
 \endgroup%
