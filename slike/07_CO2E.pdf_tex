@@ -1,0 +1,65 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file '07_CO2E.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{532.7731155bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.59031372)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{07_CO2E.pdf}}%
+    \put(0.03069167,0.56568409){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Energija (eV)}}}%
+    \put(0.22380916,0.00834873){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{osnovno stanje}}}%
+    \put(0.15191712,0.21715407){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{trki z elektroni}}}%
+    \put(0.21092143,0.43993868){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{medatomski trki}}}%
+    \put(0.44303145,0.50250975){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$001$}}}%
+    \put(0.66242356,0.31629671){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$020$}}}%
+    \put(0.86671001,0.33207262){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$100$}}}%
+    \put(0.51069492,0.37246893){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$9,4~\si{\micro\metre}$}}}%
+    \put(0.67462603,0.4241756){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$10,6~\si{\micro\metre}$}}}%
+    \put(0.66242356,0.1661404){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$010$}}}%
+    \put(0.66242356,0.0163758){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$000$}}}%
+  \end{picture}%
+\endgroup%
