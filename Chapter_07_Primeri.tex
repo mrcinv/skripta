@@ -215,7 +215,7 @@ $7,8 \times 10^7/\si{\second}$ & $0,25/\si{\second}$  \\ \hline
 Presek za stimulirano emisijo $\sigma$ & $3 \times 10^{-17}~\si{\metre}^2$&  $2,6 \times 10^{-16}~\si{\metre}^2$ & $3 \times 10^{-22}~\si{\metre}^2$ \\ \hline
 Spektralna širina črte $\Delta \nu$ & $1,5 \times 10^{9}~\si{\hertz}$ & 
 $3,5 \times 10^{9}~\si{\hertz}$ &$7 \times 10^{7}~\si{\hertz}$  \\ \hline
-Gostota obrnjene zasedenosti $\Delta N/V$ & $5 \times 10^{15}/\si{\metre}^3$ & $2 \times 10^{15}/\si{\metre}^3$ & $3 \times 10^{21}/\si{\metre}^3$ \\ \hline
+Obrnjena zasedenost $\Delta N/V$ & $5 \times 10^{15}/\si{\metre}^3$ & $2 \times 10^{15}/\si{\metre}^3$ & $3 \times 10^{21}/\si{\metre}^3$ \\ \hline
 \end{tabular}
 \caption{Izbrani podatki za He-Ne, Ar$^+$ in CO$_2$ laser}
 \label{tab:Ar}
@@ -374,10 +374,16 @@ v industriji mikroprocesorjev, fotolitografiji in medicini, predvsem
 oftalmologiji in kirurgiji.
 
 \section{Neodimov laser}
-\subsection{Nd:YAG}
 Druga skupina laserjev, ki jih bomo obravnavali, so trdninski laserji. Taki laserji
 so osnovani na elektronskih prehodih v ionih nečistoč, ki jih dodamo v kristal ali steklo,
-črpamo pa jih optično. Najpomembnejši je Nd:YAG laser, v katerem je ojačevalno sredstvo
+črpamo pa jih optično. Nečistoče so praviloma ioni redkih zemelj ali prehodnih kovin, 
+kristali pa so navadno oksidi ali fluoridi. Izdelava ojačevalnih sredstev na osnovi stekla
+je bistveno bolj preprosta in poceni, vendar ima steklo precej nižjo toplotno prevodnost
+od kristala in se zato bolj greje. 
+Začeli bomo z opisom dveh primerov neodimovega laserja, Nd:YAG in Nd:steklo.
+
+\subsection{Nd:YAG}
+Najpomembnejši neodimov laser je Nd:YAG laser, v katerem je ojačevalno sredstvo
 itrij-aluminijev granat (Y$_3$Al$_5$O$_{12}$, YAG) s primesmi ionov neodima Nd$^{3+}$. 
 Neodimov laser deluje pri valovni dolžini $1,064~\si{\micro\meter}$, vendar ga pogosto
 frekvenčno podvojimo na $532~\si{\nano\metre}$. Laser lahko deluje v zveznem 
@@ -386,14 +392,17 @@ pri močeh $1-35~\si{\watt}$ v sunkih, dolgih $5-100~\si{\nano\second}$.
 
 \begin{table}[h]
 \begin{center}
-\begin{tabular}{|l|c|}\hline
-Valovna dolžina  & $1064~\si{\nano\metre}$\\ \hline
-Verjetnost za spontani prehod $A$ & $4 \times 10^3/\si{\second}$ \\ \hline
-Presek za stimulirano emisijo $\sigma$ & $3 \times 10^{-23}~\si{\metre}^2$ \\ \hline
-Spektralna širina črte $\Delta \nu$ & $1,4 \times 10^{11}~\si{\hertz}$  \\ \hline
-Gostota obrnjene zasedenosti $\Delta N/V$ & $1,6 \times 10^{23}/\si{\metre}^3$ \\ \hline
+\begin{tabular}{|l|c|c|}\hline
+Valovna dolžina  & $1064~\si{\nano\metre}$ & $1050~\si{\nano\metre}$\\ \hline
+Verjetnost za spontani prehod $A$ & $4 \times 10^3/\si{\second}$ & $3 \times 10^3/\si{\second}$\\ \hline
+Presek za stimulirano emisijo $\sigma$ & $3 \times 10^{-23}~\si{\metre}^2$ &
+$3 \times 10^{-24}~\si{\metre}^2$\\ \hline
+Spektralna širina črte $\Delta \nu$ & $1,3 \times 10^{11}~\si{\hertz}$ &
+$7 \times 10^{12}~\si{\hertz}$\\ \hline
+Gostota obrnjene zasedenosti $\Delta N/V$ & $1,6 \times 10^{23}/\si{\metre}^3$ &
+$8 \times 10^{23}/\si{\metre}^3$\\ \hline
 \end{tabular}
-\caption{Tipični podatki za Nd:YAG laser}
+\caption{Tipični podatki za Nd:YAG laser in Nd:steklo}
 \label{tab:nd}
 \end{center}
 \end{table}
@@ -408,8 +417,8 @@ lahko doseči veliko obrnjeno zasedenost. Spodnje stanje je dovolj visoko nad
 osnovnim, da pri sobni temperaturi v ravnovesju ni znatno zasedeno. Zato je 
 prag neodimovega laserja nizek in je lahko doseči zvezno stacionarno delovanje, 
 prav tako dobro pa deluje tudi v sunkih. Razširitev črte je homogena in je predvsem posledica
-termičnega nihanja kristalne mreže. Ker je razmeroma ozka, laser ni primeren 
-za uklepanje faz, odličen pa je za delovanje s preklopom dobrote. 
+termičnega nihanja kristalne mreže. Laser je odličen za delovanje s preklopom dobrote, 
+zaradi ozke črte pa z oklepanjem faz oddaja zelo kratke sunke (nekaj ps). 
 
 \begin{figure}[h]
 \centering
@@ -421,7 +430,8 @@ za uklepanje faz, odličen pa je za delovanje s preklopom dobrote.
 
 Aktivna snov v laserju je v obliki paličke dolžine od nekaj cm do dobrih $10~\si{\centi\metre}$
 in širine okoli $1~\si{\centi\metre}$. 
-V kristalu ojačevalnega sredstava neodimovi ioni nadomestijo približno $1~\%$ itrijevih. 
+V kristalu YAG neodimovi ioni nadomestijo približno $1~\%$ itrijevih, zato ojačevalno
+sredstvo na videz ni več prozorno, temveč rahlo rožnato. 
 Za črpanje uporabljamo polvodniške laserje ali močne ksenonove svetilke za zvezno delovanje 
 ter podobne bliskovne luči za sunkovno delovanje. Skupaj z aktivno paličko so svetilke vgrajene
 v cilindrično ali eliptično votlino z zrcalnimi ali belimi stenami, tako da se
@@ -444,9 +454,9 @@ gre v gretje, zato je v laserjih z nekoliko večjo povprečno
 močjo potrebno vodno hlajenje. Gretje povzroča tudi toplotne deformacije
 laserske paličke, kar lahko močno spremeni lastnosti resonatorja. Toplotni
 učinki so ena poglavitnih praktičnih težav pri izdelavi neodimovih
-laserjev s klasičnimi svetilkami. V zadnjem času se zato vedno bolj 
-uveljavlja črpanje s polvodniškimi diodnimi laserji, ki svetijo v pasu med 750~nm 
-in 800~nm, to je ravno v območju absorpcije Nd$^{3+}$ (slika~\ref{fig:NdS2}). Zato je izkoristek dosti 
+laserjev s klasičnimi svetilkami. V zadnjem času se je zato 
+uveljavilo črpanje s polvodniškimi diodnimi laserji, ki svetijo v območju 
+absorpcije Nd$^{3+}$ (slika~\ref{fig:NdS2}). Zato je izkoristek dosti 
 boljši in je gretja manj, kar omogoča bolj kompaktno konstrukcijo, boljšo 
 stabilnost izhodne moči in večjo zanesljivost.
 
@@ -466,8 +476,9 @@ da je energija bliska zadostna, to je vsaj nekaj $\si{\joule}$.
 $0,1~\si{\milli\second}$. Tipična energija izhodnega sunka je $\sim 1~\si{\joule}$.
 
 Neodimovi laserji so v osnovni in frekvenčno podvojeni različici zelo razširjeni. 
-Najbolj uporabni so za obdelavo materialov (na primer vrtanje in varjenje) ter
-v medicini (dermatologija in kirurgija). Pomemben proizvajalec Nd:YAG laserjev 
+Najbolj uporabni so za obdelavo materialov (na primer vrtanje in varjenje, 
+litografija) ter v medicini (dermatologija in endoskopska kirurgija). 
+Pomemben proizvajalec Nd:YAG laserjev 
 za medicinske namene je tudi slovensko podjetje Fotona. 
 
 \begin{remark}
@@ -477,41 +488,55 @@ elementi, na primer iterbijem ($1030~\si{\nano\metre}$) ali erbijem
 \end{remark}
 
 \subsection{Nd:steklo}
-Namesto v ustrezen kristal je Nd lahko vgrajen tudi v steklo. Zaradi
-neurejene okolice je laserska črta precej širša, blizu 1 THz in
-življenski čas gornjega nivoja malo krajši, okoli 0.3~ms. Zato je
-ojačenje manjše kot v Nd-YAG in je za prag laserskega delovanja potrebna
-precej večja moč črpanja. Laserji Nd-steklo zato delujejo le v sunkovnem
-načinu, kjer pa so za velike energije celo boljši od Nd-YAG. Zaradi
-manjšega ojačenja pri dani obrnjeni zasedenosti je v laserju s preklopom
-kvalitete možno doseči večjo načrpanost, ne da bi prišlo do praznenja
-zaradi ojačevanja spontanega sevanja v enem preletu paličke. Energija
-izhodnih sunkov laserjev Nd- steklo so tako do nekaj J.
+Namesto v ustrezen kristal so neodimovi ioni Nd$^{3+}$ lahko vgrajeni tudi v steklo. 
+Tak laser deluje pri valovni dolžini $1,054~\si{\micro\meter}$ v sunkovnem načinu 
+s preklopom dobrote ali z uklenjenimi fazami. Z ojačevalniki dosežemo energije 
+sunka nad $100~\si{\kilo\joule}$. 
 
-Večje energije sunkov je mogoče dobiti z ojačevalniki. Med največjimi je
-laserski sistem Nd-steklo v Rochestru v državi New York, ki ga uporabljajo
-za raziskave fuzije. Okoli 1~ns dolg sunek iz osnovnega laserja razdelijo na
-deset ojačevalnih vej, ki so dolge po 180~m. Da preprečijo poškodbe
+Zaradi amorfne strukture stekla in posledično 
+nehomogenega lokalnega polja je laserska črta nehomogeno razširjena in
+življenski čas gornjega nivoja je krajši kot v kristalu, okoli $0,3~\si{\milli\second}$.
+Ojačanje je manjše kot v Nd:YAG in za prag laserskega delovanja je
+potrebna precej večja moč črpanja. Laserji Nd:steklo zato delujejo le v sunkovnem
+načinu, kjer pa so za velike energije celo boljši od Nd:YAG. Zaradi
+manjšega ojačenja pri dani obrnjeni zasedenosti je v laserju s preklopom
+dobrote možno doseči večjo načrpanost, ne da bi prišlo do praznenja
+zaradi ojačevanja spontanega sevanja v enem preletu paličke. Energija
+izhodnih sunkov laserjev Nd:steklo so tako do nekaj J. Problem predstavlja 
+nizka toplotna prevodnost stekla, zaradi česar je repeticija sunkov nizka.
+Velika širina črte je zelo primerna za delovanje v načinu uklepanja faz, s 
+katerim lahko dosegamo ultrakratke sunke ($\sim 100~\si{\femto\second}$. 
+
+
+\begin{remark}
+Še večje energije sunkov je mogoče dobiti z ojačevalniki. Med največjimi je
+laserski sistem Nd:steklo v Rochestru v državi New York, ki ga uporabljajo
+za raziskave fuzije. Okoli $1~\si{\nano\second}$ dolg sunek iz osnovnega laserja razdelijo na
+deset ojačevalnih vej, ki so dolge po $180~\si{\metre}$. Da preprečijo poškodbe
 površin elementov zaradi prevelike gostote svetlobne energije, morajo snope
 razširiti, tako da je premer zadnjih ojačevalnih stopenj pol metra.
-Končna energija sunka je nad 100~kJ. Z njim z vseh strani posvetijo na
+Končna energija sunka je nad $\sim 1~\si{\mega\joule}$. Z njim z vseh strani posvetijo na
 kroglico iz devterija in tritija, ki se dovolj segreje in stisne, da pride
-do zlivanja devterija in tritija. Vršna moč laserskega sunka je $10^{13}$%
-~W. Če jo zberemo na površino 1~mm$^2$, dobimo električno poljsko jakost
-okoli 10$^{11}$~V/m$^2$, kar je približno enako polju v vodikovem atomu.
-
-
-nd steklo je širok zaradi nehomogenosti, zato omogoča mode locked. 
-veliki vzorci, jedrska fuzija. 
+do njunega zlivanja. Vršna moč laserskega sunka je $10^{15}$~W. 
+Če laserksi skop zberemo na površino 1~mm$^2$, dobimo električno poljsko jakost
+okoli 10$^{12}$~V/m$^2$, kar je približno enako polju v vodikovem atomu.
+\end{remark}
 
 \section{Titan-safirni laser}
+Titan-safirni laser je trdninski laser, pri katerem so v kristal safirja
+Al$_2$O$_3$ primešani ioni titana Ti$^{3+}$. Njegova najpomembnejša značilnost je
+zvezna nastavljivost valovne dolžine v zelo širokem frekvenčnem pasu 
+($600-1180~\si{\nano\metre}$). Deluje
+v zveznem načinu z močmi do $50~\si{\watt}$ in v fazno uklenjenem načinu sunkovno 
+z dolžino sunkov $100~\si{\femto\second}$ z vršnimi močmi nad $10^{12}~\si{\watt}$. 
 
-Podobne lastnosti kot barvila imajo nekateri prehodni elementi, vgrajeni v
-primerno kristalno mrežo. Posebej velja omeniti safir, to je kristal Al$_2$O%
-$_3$, s primesjo titana. Prehod Ti v bližnjem infrardečem območju je
-zaradi interakcije s fononi močno razširjen, tako da je možno dobiti
-ojačevanje v območju od 700 do 1000~nm. V tem intervalu je titan-safirnemu
-laserju mogoče nastavljati frekvenco. Črpamo ga navadno z drugim laserjem,
+
+
+
+To je laser z najširšo širino črte. 
+
+Prehod Ti v bližnjem infrardečem območju je
+zaradi interakcije s fononi močno razširjen, Črpamo ga navadno z drugim laserjem,
 največkrat z argonskim.
 
 Titan-safirni laser zelo dobro deluje v sunkih z uklepanjem faz. Zaradi
