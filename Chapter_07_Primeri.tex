@@ -128,8 +128,8 @@ okni.}
 \label{fig:Iskra}
 \end{figure}
 
-
-He-Ne laserji so preprosti, stabilni, zanesljivi, poceni in dolgo služijo (do 50 000 ur).
+He-Ne laserji so preprosti, stabilni, zanesljivi, poceni, imajo visoko kvalilteto žarka
+in dolgo služijo (do 50 000 ur).
 Danes jih sicer izrivajo polprevodniški laserji, vendar so še vedno v uporabi
 v merilnih napravah, v optičnih čitalnih sistemih, v šolah, v raziskovalnih 
 laboratorijih za intereferometrijo, holografijo itd. Na njem je osnovan tudi 
@@ -370,7 +370,7 @@ Gostota obrnjene zasedenosti $\Delta N/V$ & $10^{20}/\si{\metre}^3$ \\ \hline
 \end{table}
 
 Ekscimerni laserji delujejo v sunkih s precej veliko energijo in se uporabljajo 
-v industriji mikroprocesorjev, fotolitografiji in medicini, predvsem 
+v industriji materialov, mikroprocesorjev, fotolitografiji in medicini, predvsem 
 oftalmologiji in kirurgiji.
 
 \section{Neodimov laser}
@@ -392,17 +392,20 @@ pri močeh $1-35~\si{\watt}$ v sunkih, dolgih $5-100~\si{\nano\second}$.
 
 \begin{table}[h]
 \begin{center}
-\begin{tabular}{|l|c|c|}\hline
-Valovna dolžina  & $1064~\si{\nano\metre}$ & $1050~\si{\nano\metre}$\\ \hline
-Verjetnost za spontani prehod $A$ & $4 \times 10^3/\si{\second}$ & $3 \times 10^3/\si{\second}$\\ \hline
+\begin{tabular}{|l|c|c|c|}\hline
+Laser & Nd:YAG & Nd:steklo & Ti:safir \\ \hline
+Valovna dolžina  & $1064~\si{\nano\metre}$ & $1050~\si{\nano\metre}$ & 
+ $660-1180~\si{\nano\metre}$\\ \hline
+Verjetnost za spontani prehod $A$ & $4 \times 10^3/\si{\second}$ & $3 \times 10^3/\si{\second}$
+& $3 \times 10^5/\si{\second}$\\ \hline
 Presek za stimulirano emisijo $\sigma$ & $3 \times 10^{-23}~\si{\metre}^2$ &
-$3 \times 10^{-24}~\si{\metre}^2$\\ \hline
+$3 \times 10^{-24}~\si{\metre}^2$ & $3 \times 10^{-23}~\si{\metre}^2$\\ \hline
 Spektralna širina črte $\Delta \nu$ & $1,3 \times 10^{11}~\si{\hertz}$ &
-$7 \times 10^{12}~\si{\hertz}$\\ \hline
+$7 \times 10^{12}~\si{\hertz}$ & $1 \times 10^{14}~\si{\hertz}$\\ \hline
 Gostota obrnjene zasedenosti $\Delta N/V$ & $1,6 \times 10^{23}/\si{\metre}^3$ &
-$8 \times 10^{23}/\si{\metre}^3$\\ \hline
+$8 \times 10^{23}/\si{\metre}^3$ & $6 \times 10^{23}/\si{\metre}^3$\\ \hline
 \end{tabular}
-\caption{Tipični podatki za Nd:YAG laser in Nd:steklo}
+\caption{Tipični podatki za Nd:YAG, Nd:steklo in titan-safirni laser}
 \label{tab:nd}
 \end{center}
 \end{table}
@@ -423,7 +426,7 @@ zaradi ozke črte pa z oklepanjem faz oddaja zelo kratke sunke (nekaj ps).
 \begin{figure}[h]
 \centering
 \def\svgwidth{80truemm} 
-%\input{slike/07_NdE.pdf_tex}
+\input{slike/07_NdE.pdf_tex}
 \caption{Shema energijskih nivojev v Nd$^{3+}$ laserju}
 \label{fig:NdE}
 \end{figure}
@@ -435,16 +438,7 @@ sredstvo na videz ni več prozorno, temveč rahlo rožnato.
 Za črpanje uporabljamo polvodniške laserje ali močne ksenonove svetilke za zvezno delovanje 
 ter podobne bliskovne luči za sunkovno delovanje. Skupaj z aktivno paličko so svetilke vgrajene
 v cilindrično ali eliptično votlino z zrcalnimi ali belimi stenami, tako da se
-čim večji del črpalne svetlobe absorbira v laserski palički (slika~\ref{fig:NdS}).
-
-\begin{figure}[h]
-\centering
-\def\svgwidth{90truemm} 
-%\input{slike/07_NdShema.pdf_tex}
-\caption{Shema osvetlitve ojačevalnega sredstva v trdninskem laserju
-}
-\label{fig:NdS}
-\end{figure}
+čim večji del črpalne svetlobe absorbira v laserski palički.
 
 Pri črpanju s ksenonovo svetilko je le manjši del izsevane svetlobe v
 absorpcijskih pasovih, zato je izkoristek črpanja razmeroma slab, tipično 
@@ -463,8 +457,10 @@ stabilnost izhodne moči in večjo zanesljivost.
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
-%\input{slike/07_NdShema2.pdf_tex}
-\caption{Shema diodno črpanega Nd:YAG laserja
+\input{slike/07_NdS.pdf_tex}
+\caption{Shema vzdolžno diodnega črpanja Nd:YAG laserja. IZ - izhodno zrcalo, D - dikroično zrcalo, 
+prepustno za črpalno svetlobo in odbojno za lasersko, O - ojačevalno sredstvo, DL - diodni 
+laser za črpanje.
 }
 \label{fig:NdS2}
 \end{figure}
@@ -526,22 +522,35 @@ okoli 10$^{12}$~V/m$^2$, kar je približno enako polju v vodikovem atomu.
 Titan-safirni laser je trdninski laser, pri katerem so v kristal safirja
 Al$_2$O$_3$ primešani ioni titana Ti$^{3+}$. Njegova najpomembnejša značilnost je
 zvezna nastavljivost valovne dolžine v zelo širokem frekvenčnem pasu 
-($600-1180~\si{\nano\metre}$). Deluje
+($600-1180~\si{\nano\metre}$) z največjo učinkovitostjo pri okoli $800~\si{\nano\metre}$. Deluje
 v zveznem načinu z močmi do $50~\si{\watt}$ in v fazno uklenjenem načinu sunkovno 
 z dolžino sunkov $100~\si{\femto\second}$ z vršnimi močmi nad $10^{12}~\si{\watt}$. 
 
+Ojačevalno sredstvo v titan-safirnem laserju je aluminijev oksid, v katerem 
+približno $0,1~wt\%$ aluminijevih ionov nadomestimo s titanovimi. Titanovi ioni imajo 
+v taki konfiguraciji zgolj eno vzbujeno stanje, vendar se zaradi sklopitve s fononi
+vibracijski nivoji posameznega stanja med seboj prekrivajo in prehod je močno razširjen. 
+Z optičnim črpanjem vzbudimo titanov ion iz osnovnega stanja v eno izmed vibracijskih 
+stanj vzbujenega stanja, ki hitro preide v najnižje vzbujeno stanje. 
+Laserski prehod poteka med nižjem vzbujenim stanjem in enim od vibracijskih 
+nivojev osnovnega stanja (slika~\ref{fig:TiE}), od koder se vrne v osnovno stanje. Življenjski čas
+vzbujenega stanja je kratek ($3,2~\si{\micro\second}$), širina črte pa največja med
+vsemi trdninskimi laserji. Ker je vrh absorpijskega pasu blizu $500~\si{\nano\metre}$,
+laser črpamo z zeleno svetlobo (argonski laser za zvezno delovanje oziroma
+frekvenčno podvojen neodimov laser za sunkovno). 
 
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/07_TiE.pdf_tex}
+\caption{Energijski nivoji v titan-safirnem laserju. Dva nivoja sta zaradi vibracij
+razcepljena na veliko število nivojev, ki pa se med seboj deloma prekrivajo.
+}
+\label{fig:TiE}
+\end{figure} 
 
-
-To je laser z najširšo širino črte. 
-
-Prehod Ti v bližnjem infrardečem območju je
-zaradi interakcije s fononi močno razširjen, Črpamo ga navadno z drugim laserjem,
-največkrat z argonskim.
-
-Titan-safirni laser zelo dobro deluje v sunkih z uklepanjem faz. Zaradi
-velike spektralne širine ojačevanja so sunki izredno kratki, okoli 100~ps.
-
+Najpomembnejša uporaba je v raziskovalnih laboratorijih za ustvarjanje zelo kratkih sunkov svetlobe
+z dolžino $\sim 20~\si{\femto\second}$.
 
 \section{Laserji na organska barvila}
 
@@ -611,8 +620,8 @@ dolžina sunka iz fazno uklenjenega laserja obratno sorazmerna s spektralno
 širino ojačevalne črte. Iz barvilnega laserja zato lahko dobimo zelo
 kratke sunke, pod 1~ps.
  
-\section{Vlakovni laserji}
-\section{Polvodniški laserji}
+\section{Vlakenski laserji}
+\section{Polprevodniški laserji}
 % 
 % Za široko uporabo so danes brez dvoma najpomembnejši polvodniški laserji.
 % Njihove glavne značilnosti so majhne dimenzije, neposredno črpanje z
