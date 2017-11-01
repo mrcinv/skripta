@@ -1,3 +1,5 @@
+\chapterimage{slike/Primeri.jpg} 
+% Chapter heading image
 \chapter{Primeri laserjev}
 \label{chap:Primeri}
 V tem poglavju bomo na kratko spoznali nekaj najpomembnejših vrst laserjev.
@@ -553,72 +555,73 @@ Najpomembnejša uporaba je v raziskovalnih laboratorijih za ustvarjanje zelo kra
 z dolžino $\sim 20~\si{\femto\second}$.
 
 \section{Laserji na organska barvila}
+Naslednja skupina laserjev so laserji na organska barvila, v katerih
+je organsko barvilo raztopljeno v tekočini, praviloma vodi ali alkoholu. 
+To so bili prvi laserji z veliko sprektralno širino in nastavljivo valovno dolžino
+delovanja. Delujejo lahko kot zvezni laserji in z izbiro barvila lahko dosežemo
+delovanje v območju $300-1500~\si{\micro\metre}$ pri močeh do $\sim 2~\si{\watt}$, 
+široka spektralna širina pa omogoča sunkovno delovanje z uklepanjem faz 
+z nekaj femtosekundnimi sunki pri energiji sunka nekaj $100~\si{\joule}$.
 
-Posebej zanimivi so sevalni prehodi z veliko spektralno širino. V
-frekvenčnem intervalu takega prehoda je možno spreminjati frekvenco
-laserja, kar je posebej za uporabo v spektroskopiji izrednega pomena. Eno
-možnost nudijo organska barvila.
-
-Približno shemo energijskih nivojev molekule tipičnega organskega barvila,
-znan primer je rodamin 6G, prikazuje slika \ref{6.7}. Vsa elektronska stanja
-so razcepljena v vibracijska in rotacijska podstanja. Rotacijska stanja so
-tako blizu skupaj, da se v raztopini zaradi trkov zlijejo med seboj v zvezen
-pas, ki ima tipično širino do 50~nm. Elektronska stanja so lahko singletna
-(S), ki imajo elektronski spin 0, in tripletna (T) z elektronskim spinom 1.
-Električni dipolni prehodi med tripletnimi in singletnimi stanji so
-prepovedani, zato je najnižje tripletno stanje metastabilno.
-
-V toplotnem ravnovesju je molekula na dnu osnovnega elektronskega stanja S$_0
-$. Z absorpcijo vidne svetlobe primerne frekvence preide v nekam v vzbujeno
-stanje $S_1$. Preko trkov z molekulami topila vzbujena barvilna molekula
-zelo hitro, v času okoli pikosekunde preide na dno vzbujenega stanja, od
-koder s sevanjem preide nekam v osnovno stanje $S_0$, od koder zopet s trki
-hitro preide nazaj na dno osnovnega stanja, kot kaže slika \ref{s6.7}. Ker
+Približna shema energijskih nivojev molekule tipičnega organskega barvila
+je zelo podobna shemi enerijskih nivojev titan-safirnega laserja (slika~\ref{fig:TiE}).
+Vsa elektronska stanja so razcepljena v vibracijska in rotacijska podstanja. 
+V toplotnem ravnovesju je molekula na dnu osnovnega elektronskega stanja S$_0$. 
+Z absorpcijo vidne svetlobe primerne frekvence preide v nekam v vzbujeno
+singletno stanje $S_1$. Preko trkov z molekulami topila vzbujena barvilna molekula
+zelo hitro, v času okoli pikosekunde, preide na dno vzbujenega stanja, od
+koder s sevanjem preide nekam v osnovno stanje $S_0$, od koder s trki
+hitro preide nazaj na dno osnovnega stanja. Ker
 sta obe elektronski stanji razširjeni zaradi vibracijskih in rotacijskih
 stanj, sta absorpcijska in emisijska fluorescenčna črta široki. Tipična
 širina je blizu 50~nm. Energija izsevane svetlobe je zmanjšana za energijo
 prehodov s trki, zato je fluorescenčna črta premaknjena k nižjim
-frekvencam od absorpcijske. Absoprcijski in fluoresecenčni spekter prehoda $%
-S_0-S_1$ kaže slika \ref{s6.8}.
+frekvencam od absorpcijske. Absoprcijski in fluoresecenčni spekter prehoda $S_0-S_1$
+za barvilo rodamin G kaže slika~(\ref{fig:RhG}).
 
-Absorpcijski presek med osnovnim in vzbujenim singletnim stanjem je velik,
-sevalni razpadni čas z dna stanja $S_1$ pa dolg v primeri z nesevalnimi
-prehodi z vibracijsko- rotacijskih nivojev stanja $S_0$ na njegovo dno, zato
-je lahko dobiti ojačenje v fluorescenčni črti. Barvilni laser črpamo s
-svetlobo z nekaj višjo frekvenco, ki ustreza vrhu absorpcijske črte. Pri
-tem večina molekul, ki so se vzbudile z absoprcijo, sodeluje pri
-stimulirani emisiji, zato je izkoristek pri pretvorbi črpalne svetlobe v
-moč laserja lahko zelo velik.
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+%\input{slike/07_RhG.pdf_tex}
+\caption{Absorpcijski in emisijski sprekter barvila rodamin 6G, ki se ga uporablja
+v laserjih
+}
+\label{fig:RhG}
+\end{figure} 
 
-Energija tripletnega stanja $T_1$ se deloma prekriva s stanjem $S_1$, zato
-so možni prehodi s trki iz $S_1$ v $T_1$. Ker je tripletno stanje
-metastabilno, se lahko v njem nabere znatno število molekul barvila. Zaradi
-tega se zmanjša število molekul v singletnem stanju, poleg tega pa je
-možna absorpcija iz stanja $T_1$ v $T_3$, kar lahko prepreči lasersko
-delovanje med stanjema $S_1$ in $S_0$. Tej težavi se izognemo, če laser
-deluje le v sunkih, pri stacionarnem delovanju pa tako, da raztopina barvila
-kroži skozi laser.
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|l|c|}\hline
+Valovna dolžina  & $300 - 1500~\si{\micro\meter}$\\ \hline
+Verjetnost za spontani prehod $A$ & $ 2 \sim 10^8/\si{\second}$ \\ \hline
+Presek za stimulirano emisijo $\sigma$ & $5 \times 10^{-20}~\si{\metre}^2$ \\ \hline
+Spektralna širina črte $\Delta \nu$ & $3 \times 10^{13}~\si{\hertz}$  \\ \hline
+Gostota obrnjene zasedenosti $\Delta N/V$ & $ mM \sim 10^{25}/\si{\metre}^3$ \\ \hline
+\end{tabular}
+\caption{Tipični podatki za ekscimerne laserje}
+\label{tab:ex}
+\end{center}
+\end{table}
 
 Barvilni laser lahko deluje pri vseh frekvencah znotraj široke
 fluorescenčne črte. Zato moramo v resonator vgraditi nek frekvenčno
 selektiven element, s katerim lahko nastavljamo frekvenco laserja. Uporabna
-je prizma kot v primeru Ar laserja ali kombinacije interferometrov. Zanimiva
-možnost je, da eno od zrcal nadomestimo z uklonsko mrežico, ki je
-postavljena pod takim kotom, da se po osi resonatorja odbije svetloba
-željene valovne dolžine (slika \ref{s6.9}. To lahko spremenimo s
-spreminjanjem kota nagiba mrežice.
+je prizma kot v primeru argonskega laserja ali pa eno od zrcal nadomestimo 
+z uklonsko mrežico, ki je postavljena pod takim kotom, da se po osi resonatorja odbije svetloba
+željene valovne dolžine. To lahko spremenimo s spreminjanjem kota nagiba mrežice.
 
-Barvilne lahko laserje črpamo z bliskovno lučjo. Danes pogosteje uporabimo
-drug laserjem primerne valovne dolžine, na primer Ar ali ekscimerni laser.
-Pri tem zaradi dobrega izkoristka barvila ne izgubimo mnogo moči, pridobimo
-pa možnost nastavljanja frekvence. Z menjavo barvil tako zvezno pokrijemo
-ves vidni del spektra.
-
+Barvilne laserje črpamo ali z bliskovno lučjo ali z drugim laserjem primerne 
+valovne dolžine, na primer argonovim ali ekscimernim laserjem. 
 Široko območje ojačevanja barvila nam z uklepanjem faz omogoča dobiti
-tudi zelo kratke svetlobne sunke. V prejšnjem poglavju smo videli, da je
-dolžina sunka iz fazno uklenjenega laserja obratno sorazmerna s spektralno
-širino ojačevalne črte. Iz barvilnega laserja zato lahko dobimo zelo
-kratke sunke, pod 1~ps.
+tudi zelo kratke svetlobne sunke, pod 1~ps.
+
+Laserji na organska barvila so uporabni v spektroskopiji, za ločevanje izotopov, v 
+medicini (npr. za odstanjevanje ledvičnih kamnov), astronomiji (za umetne laserske zvezde) ...
+
+\begin{remark}
+Barvila, raztopljena v vodi ali alkoholu uporabljamo tudi kot saturable absorber
+za laserje s preklopom dobrote. 
+\end{remark}
  
 \section{Vlakenski laserji}
 \section{Polprevodniški laserji}
