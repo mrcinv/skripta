@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{517.4821364bp}%
+    \setlength{\unitlength}{516.43324484bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,12 +48,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.38644202)%
+  \begin{picture}(1,0.37483422)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{07_CO2Shema.pdf}}%
-    \put(0.32524,0.01638932){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Z}}}%
-    \put(0.88226019,0.09253618){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Ge}}}%
-    \put(0.24626092,0.31095981){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{NaCl}}}%
-    \put(0.76554916,0.30433093){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{NaCl}}}%
-    \put(-0.00125824,0.16272919){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{U}}}%
+    \put(0.33006591,0.01022626){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Z}}}%
+    \put(0.88202107,0.08033143){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{IZ}}}%
+    \put(0.26951546,0.29919869){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{B}}}%
+    \put(0.78676026,0.29255634){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{B}}}%
+    \put(-0.00329181,0.15066701){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{U}}}%
+    \put(0.53037985,0.11235517){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R}}}%
   \end{picture}%
 \endgroup%
