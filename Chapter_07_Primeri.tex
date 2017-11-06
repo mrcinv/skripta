@@ -322,6 +322,10 @@ $3,5 \times 10^{9}~\si{\hertz}$ &$7 \times 10^{7}~\si{\hertz}$ & $10^{13}~\si{\h
 Obrnjena zasedenost $\Delta N/V$ & $5 \times 10^{15}/\si{\metre}^3$ & $2 \times 10^{15}/\si{\metre}^3$ & $3 \times 10^{21}/\si{\metre}^3$ & $10^{20}/\si{\metre}^3$\\ \hline
 \end{tabular}
 \caption{Izbrani podatki za He-Ne, Ar$^+$, CO$_2$ in tipičen ekscimerni laser}
+\index{Laser!He-Ne}
+\index{Laser!argon}
+\index{Laser!CO$_2$}
+\index{Laser!ekscimenrni}
 \label{tab:Ar}
 \end{center}
 \end{table}
@@ -406,7 +410,7 @@ prag neodimovega laserja nizek in je lahko doseči zvezno stacionarno delovanje,
 prav tako dobro pa deluje tudi v sunkih. Razširitev črte je homogena in je predvsem posledica
 termičnega nihanja kristalne mreže. Laser je odličen za delovanje s preklopom dobrote, 
 zaradi ozke črte pa z oklepanjem faz oddaja zelo kratke sunke (nekaj ps). 
-
+\index{Energijski nivoji!Nd:YAG}
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
@@ -445,7 +449,7 @@ laserjev s klasičnimi svetilkami . Danes prevladuje
 absorpcije Nd$^{3+}$. Črpanje je lahko prečno ali pa vzdolžno (slika~\ref{fig:NdS}). 
 Pri diodnem črpanju je izkoristek dosti večji in je manj gretja, kar omogoča 
 bolj kompaktno konstrukcijo in boljšo stabilnost izhodne moči.
-
+\index{Laser!zgradba} 
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
@@ -482,11 +486,15 @@ Gostota obrnjene zasedenosti $\Delta N/V$ & $1,6 \times 10^{23}/\si{\metre}^3$ &
 $8 \times 10^{23}/\si{\metre}^3$ & $6 \times 10^{23}/\si{\metre}^3$\\ \hline
 \end{tabular}
 \caption{Tipični podatki za Nd:YAG, Nd:steklo in titan-safirni laser}
+\index{Laser!Nd:YAG}
+\index{Laser!Nd:steklo}
+\index{Laser!titan-safir}
 \label{tab:nd}
 \end{center}
 \end{table}
 
 \subsection{Nd:steklo}
+\index{Laser!Nd:steklo}
 Namesto v ustrezen kristal lahko neodimove ione Nd$^{3+}$ vgradimo tudi v steklo. 
 Tak laser deluje pri valovni dolžini $1,054~\si{\micro\meter}$ v sunkovnem načinu 
 s preklopom dobrote ali z uklepanjem faz z energijami sunkov $~\sim 1~\si{\joule}$.
@@ -516,14 +524,26 @@ okoli $5 \times 10^{11}$~V/m$^2$, kar je približno enako polju v vodikovem atom
 \end{remark}
 
 \section{Titan-safirni laser}
+\index{Laser!titan-safirni}
 Titan-safirni laser je trdninski laser, pri katerem so v kristal safirja
 Al$_2$O$_3$ primešani ioni titana Ti$^{3+}$. Njegova najpomembnejša značilnost je
 zvezna nastavljivost valovne dolžine v zelo širokem frekvenčnem pasu 
 ($600-1180~\si{\nano\metre}$) z največjo učinkovitostjo pri okoli $800~\si{\nano\metre}$. Deluje
 v zveznem načinu z močmi do $50~\si{\watt}$ in v fazno uklenjenem načinu sunkovno 
 z dolžino sunkov $100~\si{\femto\second}$ z vršnimi močmi nad $10^{12}~\si{\watt}$. 
+\index{Energijski nivoji!titan-safir}
+\begin{figure}[h]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/07_TiE.pdf_tex}
+\caption{Energijski nivoji v titan-safirnem laserju. Dva nivoja sta zaradi vibracij
+razcepljena na veliko število podnivojev, ki pa se med seboj deloma prekrivajo.
+}
+\label{fig:TiE}
+\end{figure} 
+
 Ojačevalno sredstvo v titan-safirnem laserju je aluminijev oksid, v katerem 
-približno $0,1~wt\%$ aluminijevih ionov nadomestimo s titanovimi. Titanovi ioni imajo 
+približno $0,2~\%$ aluminijevih ionov nadomestimo s titanovimi. Titanovi ioni imajo 
 v taki konfiguraciji zgolj eno vzbujeno stanje, vendar se zaradi sklopitve s fononi
 vibracijski nivoji posameznega stanja med seboj prekrivajo in prehod je močno razširjen. 
 Z optičnim črpanjem vzbudimo titanov ion iz osnovnega stanja v eno izmed vibracijskih 
@@ -534,19 +554,12 @@ vzbujenega stanja je kratek ($3,2~\si{\micro\second}$), širina črte pa največ
 vsemi trdninskimi laserji. Ker je vrh absorpijskega pasu blizu $500~\si{\nano\metre}$,
 laser črpamo z zeleno svetlobo (argonski laser za zvezno delovanje oziroma
 frekvenčno podvojen neodimov laser za sunkovno). 
-Najpomembnejša uporaba je v raziskovalnih laboratorijih za ustvarjanje zelo kratkih sunkov svetlobe
-z dolžino $\sim 20~\si{\femto\second}$.
-\begin{figure}[h]
-\centering
-\def\svgwidth{30truemm} 
-\input{slike/07_TiE.pdf_tex}
-\caption{Energijski nivoji v titan-safirnem laserju. Dva nivoja sta zaradi vibracij
-razcepljena na veliko število nivojev, ki pa se med seboj deloma prekrivajo.
-}
-\label{fig:TiE}
-\end{figure} 
+Najpomembnejša uporaba je v raziskovalnih laboratorijih za ustvarjanje zelo 
+kratkih sunkov svetlobe z dolžino $\sim 10~\si{\femto\second}$. Prevedeno v dolžino 
+je to le nekaj valovnih dolžin svetlobe. 
 
 \section{Laserji na organska barvila}
+\index{Laser!organska barvila}
 Naslednja skupina laserjev so laserji na organska barvila, v katerih
 je organsko barvilo raztopljeno v tekočini, praviloma vodi ali alkoholu. 
 To so bili prvi laserji z veliko sprektralno širino in nastavljivo valovno dolžino
@@ -556,28 +569,26 @@ delovanje v območju $300-1500~\si{\micro\metre}$ pri močeh do $\sim 2~\si{\wat
 z nekaj femtosekundnimi sunki pri energiji sunka nekaj $100~\si{\joule}$.
 
 Približna shema energijskih nivojev molekule tipičnega organskega barvila
-je zelo podobna shemi enerijskih nivojev titan-safirnega laserja (slika~\ref{fig:TiE}).
+je zelo podobna shemi energijskih nivojev titan-safirnega laserja (slika~\ref{fig:TiE}).
 Vsa elektronska stanja so razcepljena v vibracijska in rotacijska podstanja. 
 V toplotnem ravnovesju je molekula na dnu osnovnega elektronskega stanja S$_0$. 
-Z absorpcijo vidne svetlobe primerne frekvence preide v nekam v vzbujeno
+Z absorpcijo vidne svetlobe primerne frekvence preide v neko vzbujeno
 singletno stanje $S_1$. Preko trkov z molekulami topila vzbujena barvilna molekula
 zelo hitro, v času okoli pikosekunde, preide na dno vzbujenega stanja, od
-koder s sevanjem preide nekam v osnovno stanje $S_0$, od koder s trki
-hitro preide nazaj na dno osnovnega stanja. Ker
-sta obe elektronski stanji razširjeni zaradi vibracijskih in rotacijskih
-stanj, sta absorpcijska in emisijska fluorescenčna črta široki. Tipična
+koder s sevanjem preide nekam v osnovno stanje $S_0$, od tam pa s trki
+hitro nazaj na dno osnovnega stanja. Ker
+sta obe elektronski stanji zaradi vibracij in rotacij razširjeni, sta 
+absorpcijska in emisijska fluorescenčna črta široki. Tipična
 širina je blizu 50~nm. Energija izsevane svetlobe je zmanjšana za energijo
 prehodov s trki, zato je fluorescenčna črta premaknjena k nižjim
-frekvencam od absorpcijske. Absoprcijski in fluoresecenčni spekter prehoda $S_0-S_1$
+frekvencam od absorpcijske. Absorpcijski in fluoresecenčni spekter prehoda $S_0-S_1$
 za barvilo rodamin G kaže slika~(\ref{fig:RhG}).
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{90truemm} 
-%\input{slike/07_RhG.pdf_tex}
-\caption{Absorpcijski in emisijski sprekter barvila rodamin 6G, ki se ga uporablja
-v laserjih
-}
+\def\svgwidth{80truemm} 
+\input{slike/07_RhG.pdf_tex}
+\caption{Absorpcijski in emisijski sprekter barvila rodamin 6G, ki se uporablja v laserjih}
 \label{fig:RhG}
 \end{figure} 
 
@@ -585,35 +596,29 @@ v laserjih
 \begin{center}
 \begin{tabular}{|l|c|}\hline
 Valovna dolžina  & $300 - 1500~\si{\micro\meter}$\\ \hline
-Verjetnost za spontani prehod $A$ & $ 2 \sim 10^8/\si{\second}$ \\ \hline
+Verjetnost za spontani prehod $A$ & $ \sim 10^8/\si{\second}$ \\ \hline
 Presek za stimulirano emisijo $\sigma$ & $5 \times 10^{-20}~\si{\metre}^2$ \\ \hline
 Spektralna širina črte $\Delta \nu$ & $3 \times 10^{13}~\si{\hertz}$  \\ \hline
-Gostota obrnjene zasedenosti $\Delta N/V$ & $ mM \sim 10^{25}/\si{\metre}^3$ \\ \hline
+Gostota obrnjene zasedenosti $\Delta N/V$ & $ \sim 10^{25}/\si{\metre}^3$ \\ \hline
 \end{tabular}
-\caption{Tipični podatki za ekscimerne laserje}
-\label{tab:ex}
+\caption{Tipični podatki za laserje na organska barvila}
+\label{tab:orgb}
 \end{center}
 \end{table}
 
-Barvilni laser lahko deluje pri vseh frekvencah znotraj široke
+Laser na organska barvila lahko deluje pri vseh frekvencah znotraj široke
 fluorescenčne črte. Zato moramo v resonator vgraditi nek frekvenčno
 selektiven element, s katerim lahko nastavljamo frekvenco laserja. Uporabna
-je prizma kot v primeru argonskega laserja ali pa eno od zrcal nadomestimo 
+je prizma, kot v primeru argonskega laserja, ali pa eno od zrcal nadomestimo 
 z uklonsko mrežico, ki je postavljena pod takim kotom, da se po osi resonatorja odbije svetloba
-željene valovne dolžine. To lahko spremenimo s spreminjanjem kota nagiba mrežice.
-
+izbrane valovne dolžine. To lahko spremenimo s spreminjanjem kota nagiba mrežice.
 Barvilne laserje črpamo ali z bliskovno lučjo ali z drugim laserjem primerne 
 valovne dolžine, na primer argonovim ali ekscimernim laserjem. 
 Široko območje ojačevanja barvila nam z uklepanjem faz omogoča dobiti
-tudi zelo kratke svetlobne sunke, pod 1~ps.
+tudi zelo kratke svetlobne sunke, pod $1~\si{\pico\second}$.
 
 Laserji na organska barvila so uporabni v spektroskopiji, za ločevanje izotopov, v 
 medicini (npr. za odstanjevanje ledvičnih kamnov), astronomiji (za umetne laserske zvezde) ...
-
-\begin{remark}
-Barvila, raztopljena v vodi ali alkoholu uporabljamo tudi kot saturable absorber
-za laserje s preklopom dobrote. 
-\end{remark}
  
 \section{Vlakenski laserji}
 \section{Polprevodniški laserji}
