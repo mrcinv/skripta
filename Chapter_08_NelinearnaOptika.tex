@@ -55,14 +55,14 @@ in
 \eeq
 pri čemer smo uporabili Einsteinov zapis seštevanja po indeksih. Značilne vrednosti
 susceptibilnosti v trdnih snoveh so $\chi^{(1)} \sim 1$, 
-$\chi^{(2)} \sim 10^{-12}~\textrm{m/V}$ 
+$\chi^{(2)} \sim 10^{-11}~\textrm{m/V}$ 
 in $\chi^{(3)} \sim 10^{-22}$~m$^2$/V$^2$. Obravnavali bomo samo snovi, v katerih
 ni izgub in so susceptibilnosti realne.
 
 \begin{definition}
 Pokaži, da so gostote svetlobnega toka, pri katerih dosežemo znaten nelinearen 
 prispevek k polarizaciji in velja
- $$\frac{P_{NL}}{P_L} \sim 10^{-6},$$
+ $$\frac{P_{NL}}{P_L} \sim 10^{-5},$$
 velikostnega reda 1~MW/cm$^2$. 
 Ker so take vrednosti z navadnim svetilom povsem nedosegljive, je bilo mogoče nelinearne
 optične pojave opazovati šele po iznajdbi laserjev.
@@ -75,18 +75,19 @@ tenzor invarianten na to zamenjavo
 \chi_{ijk} = \chi_{ikj}.
 \label{eq:chijk}
 \eeq
-Vpeljemo poenostavljen zapis, pri katerem prvi indeks prepišemo $(x = 1, y = 2, z = 3)$,
+Zato lahko vpeljemo poenostavljen zapis, pri katerem prvi indeks prepišemo $(x = 1, y = 2, z = 3)$,
 zadnja dva indeksa pa združimo. Dogovorjene oznake so $xx = 1, yy = 2, zz = 3, yz = zy =4, 
 xz = zx =5, xy = yx = 6$. Tako na primer $\chi_{xxz}$ zapišemo kot $\chi_{15}$. Namesto
-splošnega tenzorja tretjega ranga smo torej uvedli matriko velikosti $3\times6$. 
+splošnega tenzorja tretjega ranga smo tako uvedli matriko velikosti $3\times6$. 
 Vendar koeficienti matrike niso poljubni. Zaradi simetrijskih lastnosti kristala se matrika
 poenostavi in navadno je le nekaj komponent različnih od nič. 
-Kadar je v snovi absorpcija pri vseh treh frekvencah dovolj majhna, lahko matriko poenostavimo
+Kadar je v snovi absorpcija dovolj majhna, lahko matriko poenostavimo
 z dodatnim približkom, tako imenovano  
 \index{Kleinmanova domneva} Kleinmanovo domnevo\footnote{D. A. Kleinman, Phys. Rev. 126, 1977 (1962).}.
 Ta pravi, da je 
 \beq
 \chi_{ijk} = \chi_{ikj} = \chi_{kij} = \chi_{kji} = \chi_{jik} = \chi_{jki}.
+\label{Klein}
 \eeq
 \begin{table}[h!]
  \centering
@@ -108,7 +109,7 @@ Ta pravi, da je
 	    -\chi_{25}$ &  $\chi_{14} \approx 0$ 
 	    \\ \hline
       LiNbO$_3$\index{LiNbO$_3$} & 3m & $\chi_{xxz} = \chi_{yyz} = \chi_{xzx} = \chi_{yzy} = \chi_{15} = \chi_{24}$  &
-	    $\chi_{15} \approx \chi_{31}$ \\
+	     \\
 	     & & $\chi_{zxx} = \chi_{zyy} = \chi_{31} = \chi_{32}$ &  $\chi_{31} = -11,9$ \\
 	      & & $\chi_{zzz} = \chi_{33}$ & $\chi_{33} = 68,8$ \\
 	    & &  $-\chi_{xxy} = - \chi_{xyx} = \chi_{yyy} = -\chi_{yxx}  = $ & \\
@@ -116,11 +117,14 @@ Ta pravi, da je
 	    $\chi_{22}  = 5,52$ \\
 \hline 
 \end{tabular}
-  \caption{Koeficienti nelinearne susceptibilnosti za nekaj izbranih snovi}
+  \caption{Koeficienti nelinearne susceptibilnosti za nekaj izbranih 
+  snovi}
+  \index{Susceptibilnost!nelinearna} 
 \label{table:chi}
 \end{table}
 
-Poglejmo primer. Vzemimo barijev titanat (BaTiO$_3$)\index{BaTiO$_3$} s točkovno grupo 4mm. To pomeni, da
+Poglejmo primer. 
+Vzemimo barijev titanat (BaTiO$_3$)\index{BaTiO$_3$} s točkovno grupo 4mm. To pomeni, da
 ima 4-števno os simetrije in dve zrcalni ravnini, od katerih ena preslika $x \to -x$ ali $y \to -y$, 
 druga pa $x\to y$ in $y\to x$. Od nič različni elementi susceptibilnosti so tako samo:
 \beq
@@ -130,9 +134,9 @@ Z upoštevanjem Kleinmanove domneve se število različnih členov še zmanjša 
 \beq
 \chi_{xxz} = \chi_{xzx} = \chi_{yyz} = \chi_{yzy} =\chi_{zxx} = \chi_{zyy} \quad \mathrm{in} \quad \chi_{zzz}.   
 \eeq
-V tabeli~(\ref{table:chi})\footnote{Izmerjene vrednosti, ki jih najdemo v literaturi, 
-se med seboj pogosto znatno razlikujejo.} so navedene izmerjene vrednosti in vidimo, da Kleinmanova
-domneva ni povsem točna, ampak zgolj dober približek. 
+Primerjajmo zdaj gornjo trditev z vrednostmi, podanimi v tabeli~(\ref{table:chi}). V tabeli
+so navedene eksperimentalno dobljene nelinearne susceptibilnosti\footnote{Izmerjene vrednosti, ki jih najdemo v literaturi, se od vira do vira pogosto znatno razlikujejo.} in vidimo, da Kleinmanova
+domneva ni povsem točna, ampak je razmeroma dober približek. 
 
 \section{Nelinearni optični pojavi drugega reda}
 \index{Nelinearna optika!drugega reda}
@@ -140,16 +144,22 @@ Vzemimo optično nelinearni kristal s $\chi^{(2)} \neq 0$. V smeri pravokotno
 glede na njegovo mejno ploskev naj vpadata dve valovanji s frekvencama
 $\omega_{1}$ in $\omega_{2}$. Zaradi nelinearne sklopitve nastajajo v snovi nova 
 valovanja z različnimi kombinacijami frekvenc (glej sliko~\ref{fig:nl2}).
+Tako dobimo poleg valovanj z osnovnima frekvencama tudi valovanje pri dvakratnikih
+obeh vstopnih frekvenc, pri njuni vsoti, 
+razliki in celo pri frekvenci nič. Oglejmo si te pojave podrobneje.
+\\ 
+
 \begin{figure}[h]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/08_nl3.pdf_tex}
-\caption{Shematski prikaz nastanka valovanj pri nelinearnih optičnih pojavih drugega reda in spekter
-izhodne svetlobe}
+\caption{Shematski prikaz nastanka valovanj pri nelinearnih optičnih pojavih drugega reda 
+in spekter izhodne svetlobe, pri čemer intenzitete izhodnih žarkov niso risane v merilu}
 \label{fig:nl2}
 \end{figure}
 
-Nastanku valovanja pri podvojeni frekvenci pravimo tudi
+\begin{remark}
+Nastanku valovanja pri podvojeni frekvenci oziroma optičnemu podvajanju frekvenc pravimo tudi
 SHG\index{SHG|see {Optično podvajanje frekvenc}} ({\it Second harmonic 
 generation})\index{Optično podvajanje frekvenc}, 
 nastanku valovanja pri vsoti frekvenc SFG\index{SFG|see {Generacija vsote frekvenc}}
@@ -157,9 +167,11 @@ nastanku valovanja pri vsoti frekvenc SFG\index{SFG|see {Generacija vsote frekve
 nastanku valovanja pri razliki frekvenc DFG\index{DFG|see {Generacija razlike frekvenc}} 
 ({\it Difference frequency generation})\index{Generacija razlike frekvenc} in pojavu 
 statičnega polja pri $\omega = 0$ optično usmerjanje\index{Optično usmerjanje}
-({\it Optical rectification}). Oglejmo si nekaj teh pojavov podrobneje. 
+({\it Optical rectification}).  
+\end{remark}
 
-Pri močnih vpadnih valovanjih navadna valovna enačba ne zadošča. Pride do pojava
+Ugotovili smo že, da pri velikih intenzitetah vpadnih valovanj navadna valovna 
+enačba ne velja več. Pride do pojava
 nelinearne polarizacije in valovanje opišemo z nelinearno valovno enačbo\index{Valovna enačba}
 \boxeq{8.3}{
 \nabla^{2}\mathbf{E}-\frac{\epsilon}{c_0^{2}}{\frac{\partial^2\mathbf{E}}{\partial t^2}}=
@@ -169,7 +181,7 @@ nelinearne polarizacije in valovanje opišemo z nelinearno valovno enačbo\index
 \begin{definition}
 Iz Maxwellovih enačb~(\ref{eq:Maxwell1} do \ref{eq:Maxwell4}) izpelji 
 nelinearno valovno enačbo (\ref{8.3}), pri čemer upoštevaj zvezo (\ref{8.1}). 
-Pri tem si pomagaj z identiteto
+Pomagaj si z identiteto
 $$
 \nabla \times (\nabla \times \mathbf{A}) = \nabla (\nabla \cdot \mathbf{A}) 
 - \nabla^2 \mathbf{A}.
@@ -203,7 +215,7 @@ dopušča pojav dodatnega faznega zamika. Za valovna
 števila velja $k_{n}^{2}=\epsilon_{n}\omega_n^{2}/c_0^{2}$,
 pri čemer je $\epsilon_{n}$ dielektrična konstanta pri frekvenci
 $\omega_{n}$ in polarizaciji $\mathbf{e}_{n}$, indeks $n = 1...3$ pa označuje
-valovanje. S tem vsako od treh valovanj
+valovanje. S tem nastavkom vsako od treh valovanj
 pri konstantni amplitudi reši linearni del valovne enačbe. 
 
 Naša naloga
@@ -263,8 +275,12 @@ Pri tem je
 \sum_{ijk} \chi_{ijk} e_{3i} e_{1j} e_{2k}.
 \label{eq:chicomp}
 \eeq
-Ker ni nujno, da so polarizacijski vektorji vzporedni s koordinatnimi osmi, tudi $\chi_{ef}$ 
-niso čiste kartezične komponente tenzorja nelinearne susceptibilnosti. 
+Ker polarizacijski vektorji niso nujno vzporedni s koordinatnimi osmi, tudi $\chi_{ef}$ 
+niso čiste kartezične komponente tenzorja nelinearne susceptibilnosti.
+\begin{definition}
+Pokaži, da iz Kleinmanove domneve (enačba~\ref{Klein}) sledi, da so 
+efektivne susceptibilnosti $\chi_{ef}$ v vseh treh izrazih (\ref{eq:nlAz}-\ref{eq:nlA3}) enake.
+\end{definition}
 
 Z $\Delta k$ smo označili razliko valovnih vektorjev
 \beq
@@ -283,7 +299,8 @@ ustreza enačbam~(\ref{eq:nlAz}-\ref{eq:nlA3}).
 
 \section{Optično podvajanje frekvenc}
 
-Obravnavajmo optično nelinearno sredstvo, na katerega vpadata valovanji $E_1$ in $E_2$.
+Obravnavajmo optično nelinearno sredstvo, na katerega vpadata valovanji ${\mathbf E}_1$ in
+$\mathbf{E}_2$.
 Naj bosta frekvenci vpadnih valovanj enaki $\omega_{1}=\omega_{2}=\omega$, valovanji
 pa razlikujemo zaradi možnosti dveh različnih polarizacij. Takrat je $\omega_{3}=2\omega$
 in govorimo o najpreprostejšem in tudi najpomembnejšem optičnem nelinearnem 
@@ -315,7 +332,7 @@ j_{2\omega}(L) =\frac{1}{2}\epsilon_{0}n_{2\omega}c_0|A_3|^2 =
 \end{equation}
 Gostota energijskega toka frekvenčno podvojene svetlobe torej narašča s kvadratom
 intenzitete vpadne svetlobe. Naj bo $S$ presek snopa. Potem je razmerje med 
-energijskim tokom pri podvojeni in osnovni frekvenci oziroma izkoristek pretvorbe
+energijskim tokom pri podvojeni in osnovni frekvenci oziroma izkoristek pretvorbe enak
 \boxeq{8.11}{
 \frac{P_{2\omega}}{P_{\omega}}=
 \frac{\omega^2 \chi_{ef}^2}{2 S n_{2\omega} n_\omega^2c_0^3\varepsilon_0} P_\omega L^2
@@ -354,8 +371,8 @@ postane stopnja pretvorbe zanemarljivo majhna.
 
 Za visok izkoristek pretvorbe v frekvenčno podvojeno valovanje je torej 
 pomembno, da se faze čim bolj ujemajo in da je $\Delta k = 0$. 
-Takrat je vrednost faktorja $\sin(\Delta kL/2)/(\Delta kL/2)$ največja in izkoristek 
-pretvorbe narašča sorazmerno s kvadratom dolžine
+Takrat je vrednost faktorja $\sin(\Delta kL/2)/(\Delta kL/2)$ največja in neodvisna od 
+dolžine poti, izkoristek pretvorbe pa narašča sorazmerno s kvadratom dolžine
 \beq
 \frac{P_{2\omega}}{P_{\omega}}=
 \frac{\omega^2 \chi_{ef}^2}{2 S n_{2\omega} n_\omega^2c_0^3\varepsilon_0} P_\omega L^2.
@@ -367,7 +384,7 @@ bomo spoznali v prihodnjem razdelku.
 
 \begin{definition}
 \label{deplet}
-Vemo, da intenziteta frekvenčno podvojenega valovanja narašča sorazmerno s
+Pokazali smo, da intenziteta frekvenčno podvojenega valovanja narašča sorazmerno s
 kvadratom dolžine kristala. Takšna odvisnost velja le, če je intenziteta valovanja
 pri podvojeni frekvenci bistveno manjša od intenzitete vpadnega valovanja, 
 oziroma $A_3 \ll A_1, A_2$. Pokaži, da v nasprotnem primeru intenziteta frekvenčno
@@ -397,26 +414,7 @@ $L$ sinusno niha med nič in neko največjo vrednostjo. Tak pojav lahko opazimo,
 uporabimo klinast vzorec, ki se mu debelina spreminja, ali pa če vzorec sučemo 
 in na ta način spreminjamo razliko faz. Ta pojav, imenujemo ga Makerjeve 
 oscilacije\footnote{P. D. Maker et al., Phys. Rev. Lett. 8, 21 (1962).}, 
-uporabljamo za določanje nelinearne susceptibilnosti kristalov.\index{Makerjeve oscilacije}
-
-% \begin{remark}
-%  Odvisnosti stopnje pretvorbe od razlike valovnih vektorjev pri osnovni
-% in podvojeni frekvenci je lahko razumeti s pomočjo slike~(\ref{fig:shg1}). Opazujmo
-% prispevka k frekvenčno podvojenem valu, ki nastaneta eden na začetku kristala
-% in drugi na koncu. Prispevek z začetka kristala zaradi disperzije na izhodni
-% strani ni v fazi s prispevkom s konca. Pri dovolj veliki fazni razliki
-% pride do destruktivne interference, ki zmanjšuje moč podvojene svetlobe.
-% Razmere so podobne kot pri uklonu na široki reži, kjer prav tako seštevamo
-% delna valovanja, ki se jim faza po reži linearno spreminja.
-% \begin{figure}[h]
-% \centering
-% \includegraphics[width=10truecm]{slike/08_shg1.png}
-% \caption{Levo: Neujemanje faz privede do destruktivne interference med valovi, ki nastajajo
-% v različnih delih nelinearnega sredstva. Desno: V primeru, da se faze ujemajo, se valovanje 
-% podvojeni frekvenci ojača.}
-% \label{fig:shg1}
-% \end{figure}
-% \end{remark}
+uporabljamo za merjenje nelinearne susceptibilnosti kristalov.\index{Makerjeve oscilacije}
 
 \subsection*{Ujemanje faz}
 \index{Ujemanje faz}
@@ -460,8 +458,9 @@ ujemanje faz drugega reda za pozitivno (c) in negativno (d) anizotropno snov.}
 \label{fig:dk}
 \end{figure}
 
-Lomni količnik za redno polarizirano valovanje pri podvojeni frekvenci mora biti enak lomnemu 
-količniku za izredno polarizirano valovanje pri osnovni frekvenci. Pri tem je lomni količnik
+V obravnavanem primeru mora biti lomni količnik za redno polarizirano valovanje pri 
+podvojeni frekvenci enak lomnemu količniku za izredno polarizirano valovanje pri 
+osnovni frekvenci. Pri tem je lomni količnik
 za izredno valovanje odvisen od kota
 \begin{equation}
 \frac{1}{(n_o^{2\omega})^2} = \frac{1}{(n^{\omega}(\vartheta))^2}=
