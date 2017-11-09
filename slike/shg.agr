@@ -1,6 +1,6 @@
 # Grace project file
 #
-@version 50123
+@version 50125
 @page size 792, 612
 @page scroll 5%
 @page inout 5%
@@ -91,7 +91,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Mon Mar 21 11:20:45 2016"
+@timestamp def "Thu Nov  9 11:04:14 2017"
 @r0 off
 @link r0 to g0
 @r0 type above
@@ -161,7 +161,7 @@
 @    xaxis  bar color 1
 @    xaxis  bar linestyle 1
 @    xaxis  bar linewidth 2.5
-@    xaxis  label "x"
+@    xaxis  label ""
 @    xaxis  label layout para
 @    xaxis  label place auto
 @    xaxis  label char size 1.600000
@@ -184,7 +184,7 @@
 @    xaxis  tick minor linestyle 1
 @    xaxis  tick minor grid off
 @    xaxis  tick minor size 0.500000
-@    xaxis  ticklabel on
+@    xaxis  ticklabel off
 @    xaxis  ticklabel format general
 @    xaxis  ticklabel prec 5
 @    xaxis  ticklabel formula ""
@@ -235,7 +235,7 @@
 @    yaxis  tick minor linestyle 1
 @    yaxis  tick minor grid off
 @    yaxis  tick minor size 0.500000
-@    yaxis  ticklabel on
+@    yaxis  ticklabel off
 @    yaxis  ticklabel format general
 @    yaxis  ticklabel prec 5
 @    yaxis  ticklabel formula ""
@@ -328,7 +328,7 @@
 @    s0 errorbar riser linestyle 1
 @    s0 errorbar riser clip off
 @    s0 errorbar riser clip length 0.100000
-@    s0 comment ""
+@    s0 comment "/home/mojca/MojGitHub/skripta/slike/shg.agr"
 @    s0 legend  ""
 @target G0.S0
 @type xy

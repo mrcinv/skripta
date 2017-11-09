@@ -355,7 +355,8 @@ faktor $\sin^{2}(\Delta kL/2)/(\Delta kL/2)^{2}$ (slika~\ref{fig:shg2}).
 Zaradi njega je na poti, ki je daljša od $\pi /\Delta k$, stopnja pretvorbe zelo majhna.
 \begin{figure}[h]
 \centering
-\includegraphics[width=7truecm]{slike/08_shg2.png}
+\def\svgwidth{100truemm} 
+\input{slike/08_shg2.pdf_tex}
 \caption{Izkoristek pretvorbe v frekvenčno podvojeno valovanje je 
 sorazmeren s funkcijo $(\sin(x)/x)^2$,
 pri čemer je $x = \Delta k L/2$.}
@@ -390,16 +391,17 @@ pri podvojeni frekvenci bistveno manjša od intenzitete vpadnega valovanja,
 oziroma $A_3 \ll A_1, A_2$. Pokaži, da v nasprotnem primeru intenziteta frekvenčno
 podvojenega valovanja $j_{2\omega}(L)$ narašča kot
 \beq
-j_{2\omega} (L) = j_0 \tanh^2 \left(\chi_{ef}\omega \sqrt{\frac{j_0}
-{2 n_3 n_1^2 c_0^3 \varepsilon_0}} L\right) = j_0 \tanh^2(\kappa L),
+j_{2\omega} (L) = j_\omega \tanh^2 \left(\chi_{ef}\omega L \sqrt{\frac{j_\omega}
+{2 n_{2\omega} n_\omega^2 c_0^3 \varepsilon_0}} \right) = j_\omega \tanh^2(\kappa L),
 \eeq
-pri čemer je $j_0$ vpadna intenziteta valovanja pri osnovni frekvenci. Namig: upoštevaj, 
+pri čemer je $j_\omega$ vpadna intenziteta valovanja pri osnovni frekvenci. Namig: upoštevaj, 
 da se celotna energija ohranja.
 \end{definition}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=8truecm]{slike/08_shg_depletion.png}
+\def\svgwidth{90truemm} 
+\input{slike/08_shg_depletion.pdf_tex}
 \caption{Izkoristek pretvorbe v frekvenčno podvojeno valovanje. Če privzamemo, da se
 intenziteta osnovnega žarka ne zmanjšuje, je odvisnost parabolična (rdeča krivulja), kar 
 je dober približek le za majhne intenzitete. Bolj natančen izračun pokaže, da je izkoristek 
@@ -440,31 +442,36 @@ anizotropni ($n_e>n_o$) enoosni kristal pri enojni in dvojni
 frekvenci v odvisnosti od kota glede na optično os. Rdeča barva nakazuje lomne količnike
 pri vpadni frekvenci, modra pa pri podvojeni. Ekscentričnost elipse za 
 izredni lomni količnik in frekvenčna disperzija sta zaradi večje nazornosti močno 
-pretirani. Opazimo, da je pri nekem kotu $\vartheta$ med smerjo širjenja svetlobe $\mathbf{k}$
+pretirani. 
+
+Opazimo, da je pri nekem kotu $\vartheta$ med smerjo širjenja svetlobe $\mathbf{k}$
 in optično osjo $z$ redni lomni količnik pri dvojni frekvenci enak izrednemu količniku pri osnovni
-frekvenci. Če torej izberemo izredno polarizacijo vpadnega valovanja (tako, ki leži
-v ravnini optične osi in smeri širjenja), bo za podvojeno valovanje z redno
-polarizacijo (to je pravokotno na optično os) pri kotu
-$\vartheta_m$ izpolnjen pogoj ujemanja faz~(enačba~\ref{eq:dk0}). Zapišimo to še z enačbo.
+frekvenci, saj se moder krog in rdeča elipsa sekata. 
+Če torej izberemo izredno polarizacijo vpadnega valovanja, bo za podvojeno valovanje z redno
+polarizacijo pri kotu $\vartheta_m$ izpolnjen pogoj ujemanja faz~(enačba~\ref{eq:dk0}). 
+Takrat leži polarizacija vpadnega valovanja v ravnini optične osi in 
+smeri širjenja, polarizacija izhodnega frekvenčno podvojenega žarka pa je pravokotna na optično os.
+Zapišimo ta razmislek še z enačbo.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{160truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/08_phasematch.pdf_tex}
 \caption{Štirje primeri, pri katerih je izpolnjen pogoj za ujemanje faz. 
-(a) Ujemanje faz prvega reda za pozitivno anizotropno snov, (b)
-ujemanje faz prvega reda za negativno anizotropno snov ter 
+Ujemanje faz prvega reda za pozitivno anizotropno snov (a), 
+ujemanje faz prvega reda za negativno anizotropno snov (b) ter 
 ujemanje faz drugega reda za pozitivno (c) in negativno (d) anizotropno snov.}
 \label{fig:dk}
 \end{figure}
 
 V obravnavanem primeru mora biti lomni količnik za redno polarizirano valovanje pri 
-podvojeni frekvenci enak lomnemu količniku za izredno polarizirano valovanje pri 
-osnovni frekvenci. Pri tem je lomni količnik
-za izredno valovanje odvisen od kota
+podvojeni frekvenci $n_o^{2\omega}$ enak lomnemu količniku za izredno 
+polarizirano valovanje pri osnovni frekvenci $n^\omega$. Pri tem je lomni količnik
+za izredno valovanje odvisen od kota (enačba~\ref{eq:izreden})
 \begin{equation}
-\frac{1}{(n_o^{2\omega})^2} = \frac{1}{(n^{\omega}(\vartheta))^2}=
-\frac{\cos^{2}\vartheta}{(n_{o}^{\omega})^2}+\frac{\sin^{2}\vartheta}{(n_{e}^{\omega})^2}.
+\frac{1}{(n^{\omega}(\vartheta))^2}=
+\frac{\cos^{2}\vartheta}{(n_{o}^{\omega})^2}+\frac{\sin^{2}\vartheta}{(n_{e}^{\omega})^2}
+=\frac{1}{(n_o^{2\omega})^2}.
 \label{8.12}
 \end{equation}
 Tako dobimo izraz
@@ -474,6 +481,8 @@ Tako dobimo izraz
 \label{8.13}
 \end{equation}
 iz katerega lahko izračunamo kot $\vartheta_m$, pri katerem pride do ujemanja faz.
+Pri optično enoosnih kristalih je torej pogoj ujemanja faz določen s kotom širjenja
+svetlobe glede na smer optične osi v kristalu. Tako dobimo cel stožec dovoljenih smeri.
 \begin{definition}
 Pokaži, da v primeru negativne anizotropije pogoj za ujemanje faz zapišemo kot
 \beq
@@ -487,8 +496,9 @@ S slike~(\ref{fig:dk} c in d) lahko razberemo, da obstaja še en primer, pri
 katerem je izpolnjen pogoj za ujemanje faz. Poglejmo primer (c), pri katerem sta v vpadnem
 valovanju prisotni obe polarizaciji, redna in izredna, podvojeno valovanje pa
 je redno polarizirano. Tedaj mora biti za ujemanje faz vsota rednega in izrednega
-lomnega količnika pri osnovni frekvenci enaka dvakratniku rednega lomnega 
-količnika pri dvojni frekvenci. Povedano drugače: lomni količnik pri dvojni
+lomnega količnika pri osnovni frekvenci $n_o^\omega + n^\omega$ enaka dvakratniku 
+rednega lomnega količnika pri dvojni frekvenci $2n_o^{2\omega}$. 
+Povedano drugače: lomni količnik pri dvojni
 frekvenci mora biti enak povprečju rednega in izrednega lomnega količnika
 pri osnovni frekvenci. Za praktično uporabo je ta izbira, kadar obstaja,
 celo ugodnejša, ker je pri njej kot ujemanja faz bliže $\pi/2$. 
@@ -499,23 +509,24 @@ bolj zahteven, saj je treba rešiti enačbo četrte stopnje.
 \subsection*{Efektivna susceptibilnost}
 \index{Susceptibilnost!nelinearna, efektivna}
 Na izhodno moč frekvenčno podvojenega snopa poleg faznega faktorja bistveno vpliva tudi efektivna 
-susceptibilnost $\chi_{ef}$, ki jo moramo izračunati za vsak primer posebej. 
-V optično enoosnem kristalu
-je kriterij ujemanja faz izpolnjen na stožcu okoli optične osi, pri čemer je stožec določen 
+susceptibilnost $\chi_{ef}$, ki jo moramo izračunati za vsak primer posebej, odvisna 
+pa je od polarizacij vhodnega in izhodnega žarka ter seveda simetrije kristala. Ugotovili smo že, 
+da je v optično enoosnem kristalu kriterij ujemanja faz izpolnjen na stožcu okoli 
+optične osi, pri čemer je stožec določen 
 z izračunanim kotom $\vartheta_m$ (enačbi~\ref{8.13} in \ref{8.13a}). 
 Drugi kot, ki določa smer širjenja v ravnini, ki je pravokotna na optično os, pa 
 izberemo tako, da izkoristimo največje komponente nelinearne 
 susceptibilnosti. 
 
-Oglejmo si kot primer spet KH$_{2}$PO$_{4}$\index{KDP}, ki je negativno anizotropen 
+Oglejmo si kot primer KH$_{2}$PO$_{4}$\index{KDP}, ki je negativno anizotropen 
 z vrednostmi $n_o^{\omega} = 1,4942$, 
 $n_e^{\omega} = 1,4603$, $n_o^{2\omega} = 1,5129$ in $n_e^{2\omega} = 1,4709$
 (slika~\ref{fig:dk}\,b). Valovna dolžina osnovnega snopa naj bo 1064~nm. 
-Po podatkih, navedenih zgoraj, izračunamo po enačbi~(\ref{8.13a}) za kot ujemanja faz 
-$\vartheta_m = 41,25^\circ$. Nelinearna susceptibilnost ima v tetragonalni
+Zaradi negativne anizotropije za izračun kota ujemanja faz 
+uporabimo enačbo~(\ref{8.13a}) in dobimo $\vartheta_m = 41,25^\circ$. 
+Poleg tega iz tabele~(\ref{table:chi}) razberemo, da ima nelinearna susceptibilnost v tetragonalni
 simetriji $\bar{4}2m$ od nič različne komponente $\chi_\textrm{xyz}$, $\chi_\textrm{xzy}$
-$\chi_\textrm{zxy}$, $\chi_\textrm{zyx}$, $\chi_\textrm{yzx}$ in $\chi_\textrm{yxz}$
-(glej tabelo~\ref{table:chi}). 
+$\chi_\textrm{zxy}$, $\chi_\textrm{zyx}$, $\chi_\textrm{yzx}$ in $\chi_\textrm{yxz}$.
 Zaradi poenostavitve privzamemo, da so njihove vrednosti enake. 
 
 Naj se osnovno in frekvenčno podvojeno valovanje širita 
@@ -526,8 +537,8 @@ s sliko (\ref{fig:chi})
 \label{8.14}
 \end{equation}
 kjer je $\varphi$ kot med osjo $x$ in projekcijo $\mathbf{s}$ na ravnino
-$xy$. Naša naloga je poiskati vrednost kota $\varphi$, pri kateri je 
-moč frekvenčno podvojenega valovanja največja.
+$xy$. 
+
 \begin{figure}[h]
 \centering
 \def\svgwidth{70truemm} 
@@ -536,26 +547,33 @@ moč frekvenčno podvojenega valovanja največja.
 polarizacijo vhodnega valovanja, moder pa polarizacijo frekvenčno podvojenega valovanja.}
 \label{fig:chi}
 \end{figure}
-Iz pogoja za ujemanje faz vidimo, da mora biti vpadna svetloba redno polarizirana, 
-izhodna frekvenčno podvojena pa izredno polarizirana. Redna polarizacija je pravokotna na 
+
+Naša naloga je poiskati vrednost kota $\varphi$, pri kateri je 
+$\chi_{ef}$ največji in s tem največja tudi moč frekvenčno podvojenega valovanja.
+Iz pogoja za ujemanje faz smo določili, da mora biti vpadna svetloba redno polarizirana, 
+izhodna frekvenčno podvojena pa izredno polarizirana. Pri tem je redna polarizacija pravokotna na 
 os $z$ (optično os) in hkrati pravokotna na smer vektorja $\mathbf{s}$. Zapišemo jo kot
 \begin{equation}
-\mathbf{e}_o=(\sin\varphi,-\cos\varphi,0).
+\mathbf{e}_o=(e_{ox}, e_{oy}, e_{oz}) = (\sin\varphi,-\cos\varphi,0).
 \label{8.15}
 \end{equation}
-Izredna polarizacija leži v ravnini, ki jo tvori vektor $\mathbf{s}$ z osjo $z$,
+To najlažje preverimo, tako da postavimo vektorj $\mathbf{s}$ enkrat v ravnino $xz$ in
+drugič v ravnino $yz$. Izredna polarizacija leži v ravnini, ki jo tvori vektor $\mathbf{s}$ z osjo $z$,
 hkrati pa je pravokotna na vektor $\mathbf{s}$, 
 tako da jo zapišemo kot 
 \begin{equation}
-\mathbf{e}_e=(-\cos \varphi \cos \vartheta_m,-\sin \varphi \cos \vartheta_m ,\sin \vartheta_m).
+\mathbf{e}_e=(e_{ex}, e_{ey}, e_{ez}) 
+=(-\cos \varphi \cos \vartheta_m,-\sin \varphi \cos \vartheta_m ,\sin \vartheta_m).
 \label{8.15a}
 \end{equation}
-Spomnimo se, da efektivno susceptibilnost izračunamo kot (enačba~\ref{eq:chicomp})
+Zdaj lahko izračunamo efektivno susceptibilnost (enačba~\ref{eq:chicomp}), 
+pri čemer upoštevamo, da sta žarka 1 in 2 pri osnovni frekvenci redno polarizirana, 
+žarek z oznako 3 pa opisuje izredno polariziran žarek pri podvojeni frekvenci
 \beq
 \chi_{ef} = \sum_{ijk} \chi_{ijk} e_{3i} e_{1j} e_{2k} = \sum_{ijk} \chi_{ijk} e_{ei} e_{oj} e_{ok}.
 \eeq
 Krajši račun pokaže, da je zaradi oblike tenzorja nelinearne susceptibilnosti v izbranem 
-primeru od nič različna le $z$ komponenta nelinearne polarizacije. Zapišemo
+primeru od nič različna le ena komponenta nelinearne polarizacije, komponenta $z$. Zapišemo
 \beq
 \chi_{ef} = \chi_{\textrm{zxy}} e_{ez} e_{ox} e_{oy} + \chi_{\textrm{zyx}} e_{ez} e_{oy} e_{ox}
 \eeq
@@ -566,9 +584,7 @@ P_{\textrm{z}}^{2\omega}&=&- 2\varepsilon_0\, \chi_{\textrm{zxy}}E_{0}^2\cos\var
 &=& - \varepsilon_0\, \chi_{\textrm{zxy}}E_{0}^2\sin(2\varphi) \sin\vartheta_m.
 \label{8.151}
 \end{eqnarray}
-Nelinearna polarizacija je največja, kadar je $\varphi=\pi/4$.
-Največji efektivni koeficient $\chi_{ef}$, ki nastopa v izrazih za amplitudo in 
-moč podvojene svetlobe (enačbi~\ref{8.10} in \ref{8.11}), je torej v izbranem primeru 
+Nelinearna polarizacija je največja pri $\varphi=\pi/4$, največji $\chi_{ef}$  pa je 
 \begin{equation}
 \chi_{ef}= 
 \sin\vartheta_m \chi_{\textrm{zxy}} \approx 0,66\, \chi_{\textrm{zxy}} \approx 0,74~\mathrm{pm/V}.
@@ -576,10 +592,11 @@ moč podvojene svetlobe (enačbi~\ref{8.10} in \ref{8.11}), je torej v izbranem 
 \end{equation}
 
 \begin{definition}
-Izračunaj največjo možno efektivno nelinearno susceptibilnost za frekvenčno podvajanje svetlobe z valovno
+Izračunaj največjo možno efektivno nelinearno susceptibilnost za
+frekvenčno podvajanje svetlobe z valovno
 dolžino $10~\si{\micro\metre}$ v kristalu telurja s simetrijsko grupo 32 (glej tabelo~\ref{table:chi}). 
 Lomni količniki: $n_o^{\omega} = 4,7969$, 
-$n_e^{\omega} = 6,2455$, $n_o^{2\omega} = 4,8657$ in $n_e^{2\omega} = 6,3152$.
+$n_e^{\omega} = 6,2455$, $n_o^{2\omega} = 4,8657$ in $n_e^{2\omega} = 6,3152$.\index{Telur}
 \end{definition}
 
 \section{Frekvenčno podvajanje Gaussovih snopov}
@@ -590,7 +607,10 @@ ujemanja faz ($\Delta k=0$)
 moč frekvenčno podvojene svetlobe narašča s kvadratom dolžine poti po nelinearnem
 sredstvu. Pretvorba v frekvenčno podvojeno svetlobo je po enačbi~(\ref{8.11}) tem
 učinkovitejša, čim večja je gostota svetlobnega toka pri osnovni frekvenci.
-Zato v praksi vpadno svetlobo vselej fokusiramo in tako povečamo gostoto toka.  
+Zato v praksi vpadno svetlobo vselej fokusiramo in tako povečamo gostoto toka. 
+Pri tem moramo paziti, da je nelinearen kristal odporen proti poškodbam
+zaradi velike gostote svetlobnega toka. To in možnost izpolnitve kriterija ujemanja 
+faz sta poglavitna kriterija pri izbiri snovi za frekvenčno podvajanje. 
 
 Poglejmo, kako se enačbe spremenijo, če je vpadni snop pri osnovni 
 frekvenci Gaussove oblike\index{Gaussov snop!frekvenčno podvajanje}. 
@@ -598,39 +618,35 @@ Rezultat lahko ocenimo, če vzamemo, da je
 efektivna dolžina za pretvorbo $L$ kar dolžina grla; izven grla je 
 gostota toka znatno manjša kot v grlu, s tem pa tudi izkoristek pretvorbe v 
 frekvenčno podvojeni snop.
-Dolžina grla je 
+Dolžina grla je (enačba~\ref{eq:z0})
 \beq
-L=2z_{0}=\frac{2n \pi w_{0}^{2}}{\lambda} = \frac{n w_0^2 \omega}{c_0}.
+L=2z_{0}=2\frac{\pi w_{0}^{2}}{\lambda/n} = \frac{n w_0^2 \omega}{c_0}.
 \label{SHGG}
 \eeq
-Tako je presek vpadnega snopa
+Pri zapisu preseka vpadnega snopa upoštevajmo še faktor ena polovica, do katerega 
+pridemo, če integriramo intenziteto 
+snopa integriramo po celotni površini. Sledi
 \beq
-S=\pi w_{0}^{2} = \frac{\pi c_0 L}{n \omega.}
+S=\frac{1}{2}\pi w_{0}^{2} = \frac{2 \pi c_0 L}{n \omega}.
 \eeq
 Daljše ko je grlo in večja dolžina $L$, na kateri pride do frekvenčnega podvajanja, 
-večji je tudi presek snopa $S$ in zato manjša intenziteta svetlobe, kar zmanjša
+večji je tudi presek snopa $S$ in zato intenziteta svetlobe manjša, kar zmanjša
 učinek pretvorbe v frekvenčno podvojeno valovanje.
 Vstavimo $S$ v enačbo~(\ref{8.11}), upoštevamo ujemanje faz in dobimo 
 \boxeq{8.17}{
 \frac{P_{2\omega}}{P_{\omega}}=
-\frac{\omega^3 \chi_{ef}^2}{2 \pi n_{2\omega} n_\omega c_0^4\varepsilon_0} P_\omega\, L.
+\frac{\omega^3 \chi_{ef}^2}{\pi n_{2\omega} n_\omega c_0^4\varepsilon_0} P_\omega\, L.
 }
-Ob optimalnem fokusiranju je torej izkoristek pretvorbe sorazmeren z 
-dolžino kristala in ne z njenim kvadratom.
-
+Ob optimalnem fokusiranju je torej izkoristek pretvorbe sorazmeren z dolžino kristala.
 \begin{definition}
 Imamo $1~\si{\centi\metre}$ dolg kristal KH$_{2}$PO$_{4}$. Valovna dolžina vpadne svetlobe 
 je $1,06~\si{\micro\metre}$, vhodna moč $P_\omega = 10~\si{\kilo\watt}$, efektivna nelinearna susceptibilnost
 $\chi_{ef}=7\cdot10^{-13}~\si{\metre/\volt}$, $\Delta k=0$ in $n=1,5$. Pokaži, da je
 faktor pretvorbe v frekvenčno podvojeno svetlobo okoli $20~\%$.
-
 Da je dolžina grla $2z_{0}=1$~cm, mora biti polmer
 grla okoli $40~\si{\micro\metre}$. Gostota svetlobnega toka v kristalu je pri
 tem $2\cdot10^{8}~\si{\watt/\centi\metre^{2}}$, kar je že blizu praga za poškodbe,
-predvsem na vstopni ali izstopni površini. Zato je pri podvajanju frekvenc
-zelo pomembna odpornost nelinearnega kristala proti poškodbam
-zaradi velike gostote svetlobnega toka. To in možnost izpolnitve kriterija ujemanja 
-faz sta poglavitna kriterija pri izbiri snovi za frekvenčno podvajanje. 
+predvsem na vstopni ali izstopni površini. 
 \end{definition}
 
 \section{{*}Račun podvajanja Gaussovih snopov}
@@ -729,8 +745,8 @@ A_{3}(L) & = & \frac{i\kappa}{4}A_{1}^{2}\int_{-L/2}^{L/2}\frac{dz}{1+iz/z_1}
 \end{eqnarray}
 Moč Gaussovega snopa je
 \begin{equation}
-P_{i}=\pi w_{i0}^{2} \frac{1}{2}c_0 n_i \epsilon_{0}E_{i0}^{2}=
-\frac{\pi}{2}w_{i0}^{2}\varepsilon_0 c_0 \omega_{i} A_{i}^{2},
+P_{i}=\frac{1}{2}\pi w_{i0}^{2} \frac{1}{2}c_0 n_i \epsilon_{0}E_{i0}^{2}=
+\frac{\pi}{4}w_{i0}^{2}\varepsilon_0 c_0 \omega_{i} A_{i}^{2},
 \label{8.26}
 \end{equation}
 tako da je izkoristek pri frekvenčnem podvajanju Gaussovega snopa 
