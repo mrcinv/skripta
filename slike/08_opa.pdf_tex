@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '08_opa.pdf' (pdf, eps, ps)
 %%
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{1264.6078125bp}%
+    \setlength{\unitlength}{874.20029297bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,12 +48,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.40111126)%
-    \put(0,0){\includegraphics[width=\unitlength]{08_opa.pdf}}%
-    \put(0.01550955,0.06854952){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1$}}}%
-    \put(0.07584448,0.00827449){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_3 > \omega_1$}}}%
-    \put(0.58050136,0.37351694){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1$}}}%
-    \put(0.65334119,0.23476429){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_3 - \omega_1$}}}%
-    \put(0.6904793,0.31784488){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_3$}}}%
+  \begin{picture}(1,0.52323893)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{08_opa.pdf}}%
+    \put(0.02547881,0.09916294){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1$}}}%
+    \put(0.11275861,0.01196979){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_3 > \omega_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{08_opa.pdf}}%
+    \put(0.84278929,0.54032521){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1$}}}%
+    \put(0.94815852,0.33960725){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_3 - \omega_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{08_opa.pdf}}%
+    \put(1.00188208,0.45979067){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_3$}}}%
   \end{picture}%
 \endgroup%

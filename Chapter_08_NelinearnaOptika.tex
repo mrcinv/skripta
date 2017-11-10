@@ -544,7 +544,7 @@ $xy$.
 \def\svgwidth{70truemm} 
 \input{slike/08_chi.pdf_tex}
 \caption{K izračunu efektivne susceptibilnosti. Rdeč vektor označuje
-polarizacijo vhodnega valovanja, moder pa polarizacijo frekvenčno podvojenega valovanja.}
+polarizacijo redno polariziranega valovanja, moder pa polarizacijo izredno polariziranega valovanja.}
 \label{fig:chi}
 \end{figure}
 
@@ -625,7 +625,7 @@ L=2z_{0}=2\frac{\pi w_{0}^{2}}{\lambda/n} = \frac{n w_0^2 \omega}{c_0}.
 \eeq
 Pri zapisu preseka vpadnega snopa upoštevajmo še faktor ena polovica, do katerega 
 pridemo, če integriramo intenziteto 
-snopa integriramo po celotni površini. Sledi
+snopa po celotni površini. Sledi
 \beq
 S=\frac{1}{2}\pi w_{0}^{2} = \frac{2 \pi c_0 L}{n \omega}.
 \eeq
@@ -719,11 +719,13 @@ enačbo~(\ref{eq:obosna-valovna-enacba})\index{Obosna valovna enačba}. Ko izraz
 in $\psi_{3}$ vstavimo v tretjo enačbo sistema sklopljenih enačb (\ref{SHGGauss_3}),
 ostane na levi le člen oblike $2ik_{3}A_{3}^{\prime}(z)\psi_{3H}$. Tako dobimo pogoj
 \begin{equation}
+\begin{aligned}
 A_{3}^{\prime}(z)\frac{1}{1+iz/z_3}\exp\left(-\frac{r^{2}}{w_{3}^{2}(z)}+\frac{ik_{3}r^{2}}
-{2R_{3}(z)}\right)=
+{2R_{3}(z)}\right)=\\
 \frac{i\kappa}{4}A_{1}^{2}\frac{1}{(1+iz/z_{1})^{2}}\exp\left(-\frac{2r^{2}}
 {w_{1}^{2}(z)}+\frac{ik_{1}r^{2}}{R_{1}(z)}\right).
 \label{8.23}
+\end{aligned}
 \end{equation}
 Poiščimo rešitev te enačbe v obliki, za katero velja $w_{30}^{2}=w_{10}^{2}/2$. Tedaj je 
 \beq
@@ -751,12 +753,14 @@ P_{i}=\frac{1}{2}\pi w_{i0}^{2} \frac{1}{2}c_0 n_i \epsilon_{0}E_{i0}^{2}=
 \end{equation}
 tako da je izkoristek pri frekvenčnem podvajanju Gaussovega snopa 
 \begin{equation}
-\frac{P_{2\omega}}{P_{\omega}}=\frac{A_3^2}{A_1^2} = 
-\frac{\chi_{ef}^2 \omega^3 P_\omega z_1}{2 \pi c_0^4 \varepsilon_0 n_1 n_3} 
-\arctan^2 \left( \frac{L}{2z_1}\right)
-= \frac{\chi_{ef}^2 \omega^3 P_\omega}{2 \pi c_0^4 \varepsilon_0 n_1 n_3} \frac{L}{2}
+\begin{aligned}
+\frac{P_{2\omega}}{P_{\omega}}=\frac{A_3^2}{A_1^2}  = &
+\frac{2 \chi_{ef}^2 \omega^3 P_\omega z_1}{\pi c_0^4 \varepsilon_0 n_\omega n_{2\omega}} 
+\arctan^2 \left( \frac{L}{2z_1}\right) \\
+ = &\frac{2\chi_{ef}^2 \omega^3 P_\omega}{\pi c_0^4 \varepsilon_0 n_\omega n_{2\omega}} \frac{L}{2}
 \arctan^2 \left( \frac{L}{2z_1}\right) \frac{1}{L/2z_1}.
 \label{8.27}
+\end{aligned}
 \end{equation}
 Funkcija $(\arctan^{2}x)/x$ zavzame največjo vrednost 0,64 pri $x =L/2z_1=1,39$.
 Pri dani dolžini nelinearnega sredstva $L$ je torej 
@@ -765,7 +769,7 @@ preprosti oceni $z_{1}=0,5\,L$ (enačba~\ref{SHGG}). Največji izkoristek
 frekvenčnega podvajanja Gaussovih snopov je tako
 \begin{equation}
 \frac{P_{2\omega}}{P_{\omega}}
-= 0,32 \frac{\chi_{ef}^2 \omega^3 }{2 \pi c_0^4 \varepsilon_0 n_1 n_3} P_\omega L.
+= 0,64 \frac{\omega^3 \chi_{ef}^2}{\pi n_{2\omega} n_{\omega} c_0^4 \varepsilon_0 } P_\omega L.
 \label{8.28}
 \end{equation}
 To je malo manj od preproste ocene, ki smo jo naredili v prejšnjem razdelku (enačba~\ref{8.17}),
@@ -791,7 +795,7 @@ Parametrično ojačevanje pogosto uporabljamo za ojačevanje šibkih signalov
 v infrardečem območju.
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{80truemm} 
 \input{slike/08_opa.pdf_tex}
 \caption{Shematski prikaz nastanka valovanj pri optičnem parametričnem ojačevanju}
 \label{fig:opa2}
@@ -849,9 +853,20 @@ A_{20} = i \sqrt{\frac{\omega_2 n_1}{\omega_1 n_2}} A_{10}.
 \label{opakapaA}
 \eeq
 Na začetku intenziteti obeh valovanj naraščata približno eksponentno na račun črpalnega
-valovanja. Ko postane njuna intenziteta znatna in se začne $A_3$ zmanjševati, je treba to seveda
+valovanja (slika~\ref{fig:opagraf}). Ko postane njuna intenziteta znatna in se 
+začne $A_3$ zmanjševati, je treba to seveda
 tudi upoštevati pri izračunu. V tem primeru je treba rešiti bolj zahteven sistem treh 
 sklopljenih enačb, podobno~\textendash~a še bolj zapleteno~\textendash~kot v nalogi~(\ref{deplet}).
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/08_opagraf.pdf_tex}
+\caption{Normirani intenziteti ojačanega žarka in dodatnega nedejavnega žarka, ki nastane zaradi ohranitve
+energije. Naraščajoči funkciji sta seveda samo približek, ki velja, dokler je ojačanje majhno in 
+se intenziteta črpalnega žarka ne zmanjšuje znantno.}
+\label{fig:opagraf}
+\end{figure}
 
 \begin{definition}
 Pokaži, da sta izraza za amplitudi polji $A_1$ in $A_2$ (enačbi~\ref{eq:opa} in~\ref{eq:opan})
@@ -873,16 +888,6 @@ podvajanju frekvence. Tedaj mora biti izpolnjen naslednji pogoj
 \frac{\omega_{1}}{\omega_{3}}n_{o}^{\omega_{1}}+\frac{\omega_{2}}{\omega_{3}}n_{o}^{\omega_{2}}.
 \label{8.34}
 \end{equation}
-
-\begin{figure}[h]
-\centering
-\def\svgwidth{90truemm} 
-\input{slike/08_opagraf.pdf_tex}
-\caption{Normirani intenziteti ojačanega žarka in dodatnega žarka, ki nastane zaradi ohranitve
-energije. Naraščajoči funkciji sta seveda samo približek, ki velja, dokler je ojačanje majhno in 
-se intenziteta črpalnega žarka ne zmanjšuje znantno.}
-\label{fig:opagraf}
-\end{figure}
 
 \begin{definition}
 Obravnavali smo optično parametrično ojačevanje, ko je bil izpolnjen kriterij za ujemanje faz. 
@@ -908,7 +913,7 @@ Za konec ocenimo koeficient ojačanja v nelinearnem kristalu
 LiNbO$_{3}$\index{LiNbO$_3$}, v katerem želimo
 ojačati svetlobo z valovno dolžino $\lambda = 1~\si{\micro\metre}$. Črpajmo z laserjem z valovno dolžino 
 okoli 500~nm in gostoto svetlobnega toka 5~MW/cm$^{2}$. Lomni količnik snovi je 
-$n = 2,2$, $\chi_{ef} = 5$~pm/V. Vstavimo podatke v enačbo~(\ref{opakapa}) in dobimo vrednost
+$n = 2,2$, efektivna nelinearna susceptibilnost pa  $\chi_{ef} = 5$~pm/V. Vstavimo podatke v enačbo~(\ref{opakapa}) in izračunamo vrednost
 $\kappa \sim 0,15~$/cm. Faktor ojačanja vpadne intenzitete svetlobe v 1~cm dolgem kristalu je 
 tako le približno $2~\%$. 
 
@@ -922,7 +927,7 @@ resonator\index{Resonator!parametrični oscilator}
 in signal se ob vsakem obhodu ojača. Sestavili smo t.\,i.\,optični parametrični oscilator. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{90truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/08_opo.pdf_tex}
 \caption{Shematski prikaz tipičnega optičnega parametričnega oscilatorja. Ojačevalno sredstvo
 zapremo med resonatorja, da se signalni žarek ($\omega_1$) ob vsakem preletu ojači.}
@@ -946,8 +951,8 @@ P_1 = P_0 \cosh^2 (\kappa L),
 \eeq
 hkrati pa se zaradi izhodnega zrcala z odbojnostjo $R$ in notranjih izgub $\Lambda_0$ 
 intenziteta žarka zmanjšuje. Pri tem je pogoj ujemanja faz izpolnjen le v eni smeri in se svetloba
-ojačuje le enkrat na celoten obhod. Ob preletu v drugo smer je namreč $\Delta k \neq 0$ in žarek se ne ojačuje.
-Moč žarka po obhodu $P_2$ je enaka začetni moči $P_0$, saj je pri pragu ojačanje ravno enako izgubam 
+ojačuje le enkrat na celoten obhod. Ob preletu v drugo smer je namreč $\Delta k \neq 0$ in žarek se ne ojačuje. V staconarnem stanju je moč 
+žarka po obhodu $P_2$ enaka začetni moči $P_0$, saj je pri pragu ojačanje ravno enako izgubam 
 \beq
 P_2 = P_1\,(1-\Lambda_0)R = P_0 \,(1-\Lambda_0) R \,\cosh^2 (\kappa L) = P_0
 \eeq
@@ -991,7 +996,9 @@ Pokaži, da je napetost, ki se pojavi pri optičnem usmerjanju, približno enaka
 U = \frac{\chi P_0}{n^3 \varepsilon_0 c_0 a},
 \eeq
 pri čemer je $P_0$ moč vpadne svetlobe, $n$ lomni količnik snovi in $a$ širina kristala.
-Namig: nelinearen kristal obravnavaj kot ploščati kondenzator. Oceni še napetost, če je
+Namig: nelinearen kristal obravnavaj kot ploščati kondenzator. 
+
+Oceni še napetost, če je
 $\chi = 3$~pV/m, $P_0 = 1$~MW, $n = 2,2$ in $a = 5$~mm. 
 \end{definition}
 
@@ -999,26 +1006,34 @@ Precej bolj uporaben je pojav, ko na nelinearen kristal posvetimo z ultrakratkim
 sunki svetlobe, tipično okoli ps ali krajšimi. Spomnimo se, da je povsem monokromatsko valovanje
 lahko samo tako, ki ima neskončnen koherenčni čas in je časovno neomejeno 
 (\ref{eq:spektralna-sirina-zveza}). 
-Če je valovanje časovno omejeno, je njegov spekter končno širok, pri čemer imajo krajši 
-sunki svetlobe širši spekter valovanja. Ko z ultrakratkim sunkom osvetlimo optično 
-nelinearen kristal, v kristal vstopajo vse frekvence z danega intervala $\omega \pm \Delta \omega$.
+Čim je valovanje časovno omejeno, ima njegov spekter končno širino, pri čemer 
+imajo krajši sunki svetlobe širši spekter valovanja. 
+Ko z ultrakratkim sunkom osvetlimo optično 
+nelinearen kristal, v kristal vstopajo vse frekvence z danega intervala $\omega \pm \Delta \omega/2$.
 Optično usmerjanje ni več popolno, saj se frekvence ne odštejejo povsem, ampak se 
 namesto statičnega polja pojavi valovanje pri frekvencah, ki so podobne širini spektra. Ocenimo jih. 
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{90truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/08_THz.pdf_tex}
 \caption{Shematski prikaz nastanka teraherčnega valovanja v optično nelinearnem sredstvu}
 \label{fig:THz}
 \end{figure}
 
-S sunkom, ki je dolg 1~ps, tako dobimo
+Vzemimo sunek svetlobe, ki je dolg 1~ps. Njegova frekvenčna širina je potem
 \beq
-\Delta \omega = \frac{1}{\tau} = \frac{1}{10^{-12}~\mathrm{Hz}} = 1~\mathrm{THz}.
+\Delta \omega = \frac{2}{\tau}.
+\eeq
+Če je sunek svetlobe dolg $1~\si{\pico\second}$, je razlika v frekvencah 
+spektra 
+\beq
+\Delta \omega = \frac{2}{10^{-12}~\mathrm{Hz}} = 2~\mathrm{THz}.
 \eeq
 Valovanje, ki nastane pri takem kvazi optičnem usmerjanju, ima torej frekvence v teraherčnem
-področju in naredili smo izvor teraherčnega valovanja. Teraherčno valovanje, to je 
+področju in naredili smo izvor teraherčnega valovanja. 
+
+Teraherčno valovanje, to je 
 elektromagnetno valovanje s frekvencami v območju od 0,3 do 3~THz oziroma z valovnimi dolžinami 
 med 0,1 in 1~mm, se uporablja za neinvazivno slikanje in preiskave tkiv in materialov. Kristali, ki 
 se najpogosteje uporabljajo za nastanek teraherčnega valovanja, so ZnTe, GaP, GaSe in GaAs.
@@ -1026,8 +1041,8 @@ se najpogosteje uporabljajo za nastanek teraherčnega valovanja, so ZnTe, GaP, G
 \section{Nelinearni pojavi tretjega reda}
 \index{Nelinearna optika!tretjega reda}
 Doslej smo obravnavali najnižji red nelinearnosti, katerega glavni
-učinek je mešanje treh frekvenc, na primer podvajanje frekvence ali
-parametrično ojačevanje. Ti pojavi so možni le v kristalih brez centra
+učinek je mešanje treh frekvenc, na primer optično podvajanje frekvence ali
+optično parametrično ojačevanje. Ti pojavi so možni le v kristalih brez centra
 inverzije. Naslednji člen razvoja nelinearne polarizacije po električnem
 polju obstaja v vsaki snovi. V njem nastopa polje v tretji potenci
 \boxeq{eq:nl3P}{
@@ -1054,7 +1069,7 @@ $\omega_1 - \omega_2 + \omega_3$, $- \omega_1 + \omega_2 + \omega_3$,
 $2 \omega_1\pm\omega_2$, $2 \omega_1\pm\omega_3$, $2 \omega_2\pm\omega_1$,
 $2 \omega_2\pm\omega_3$, $2 \omega_3\pm\omega_1$, $2 \omega_3\pm\omega_2$.
 Možnosti je torej precej več kot pri nelinearnosti drugega reda in računi so zato 
-v splošnem precej zapletenejši.
+v splošnem precej bolj zapleteni.
 
 Obravnava nastanka valovanja pri
 kombinaciji frekvenc je zelo podobna obravnavi podvajanja frekvence in parametričnemu
@@ -1126,8 +1141,8 @@ Faktor v oklepaju ni nič drugega kot efektivna susceptibilnost, ki je neposredn
 z lomnim količnikom snovi $\chi_{ef} = \varepsilon -1 =n^2 -1$. Gornja enačba torej opisuje pojav, 
 pri katerem vpadna svetloba vpliva na lomni količnik snovi.
 Gre za podoben učinek kot pri Kerrovem pojavu (enačba~\ref{7.1}), 
-pri katerem se lomni količnik spremeni pod vplivom zunanjega električnega polja, 
-zato imenujemo opisan pojav optični Kerrov pojav\footnote{Škotski fizik John Kerr, 1824\textendash1907.}. 
+pri katerem se lomni količnik spremeni pod vplivom zunanjega električnega polja.
+Opisani optični ekvivalent zato imenujemo optični Kerrov pojav\footnote{Škotski fizik John Kerr, 1824\textendash1907.}. 
 
 Poglejmo pojav podrobneje na primeru izotropne snovi. Na snov naj vpada valovanje, ki je polarizirano
 v smeri $x$, tako da ima nelinearna polarizacija le komponento 
@@ -1164,7 +1179,7 @@ velikostnih redov, $n_2$ pa je lahko tudi negativen.
      CS$_2$ & $3,1 \times 10^{-20}$ & $3,2 \times 10^{-18}$ \\ \hline 
      polimer 4BCMU  & $-1,2 \times 10^{-19}$ & $-1,5 \times 10^{-17}$ \\ \hline      
 \end{tabular}
-  \caption{Susceptibilnost tretjega reda in nelinearni lomni količnik za nekaj izbranih snovi}
+  \caption{Nelinearna susceptibilnost tretjega reda in nelinearni lomni količnik za nekaj izbranih snovi}
 \label{table:chi3}
 \end{table}
 
@@ -1183,7 +1198,7 @@ je vedno izpolnjen.
 \index{Samozbiranje}
 Za začetek si oglejmo pojav samozbiranja svetlobe. Osnovni Gaussov snop 
 (enačba~\ref{eq:gaussov-snop}) naj vpada na sredstvo,
-v katerem je lomni količnik odvisen od intenzitete po enačbi~(\ref{eq:nnl}).
+v katerem je lomni količnik odvisen od intenzitete vpadne svetlobe po enačbi~(\ref{eq:nnl}).
 Vzemimo, da je $n_{2}>0$, tako da je lomni količnik v sredini snopa večji 
 od nemotenega lomnega količnika na robu. V osi snopa se optična pot 
 zaradi optično gostejšega sredstva podaljša in valovna fronta začne
@@ -1200,12 +1215,12 @@ poškodbe v snovi.
 \input{slike/08_sf1.pdf_tex}
 \caption{V Gaussovem snopu je intenziteta valovanja odvisna od prečne lege, zato
  je tudi lomni količnik nelinearnega sredstva odvisen od nje. To vodi do 
- samozbiranja svetlobe. Na sliki so fronte Gaussovega snopa narisane kot ravni valovi.}
+ samozbiranja svetlobe. Na sliki so fronte vpadnega Gaussovega snopa narisane kot ravni valovi.}
 \label{fig:sf1}
 \end{figure}
 
 \begin{definition}
-Gaussov snop svetlobe z močjo $P$ in polmerom $w$ naj pravokotno vpada na ploščico
+Gaussov snop svetlobe z močjo $P$ in polmerom $w$ naj vpada pravokotno na ploščico
 kristala debeline $d$. Pokaži, da ploščica deluje na snop kot leča z goriščno razdaljo 
 \beq
 f = \frac{\pi w^4}{8 n_2 d P},
@@ -1225,12 +1240,12 @@ premikamo vzdolž snopa, se skupna efektivna goriščna razdalja leče in neline
 spreminja in žarek na detektorju je enkrat bolj zbran, drugič manj. 
 Za lege vzorca desno od prvotnega gorišča ($z>0$), je skupna goriščna
 razdalja daljša od goriščne razdalje leče, snop je bolj zbran (pikčasta črta) in signal 
-na detektorju ($D$) naraste. Za lege vzorca levo
+na detektorju (D) naraste. Za lege vzorca levo
 od prvotnega gorišča ($z<0$) je ravno obratno, snop se razširi (črtkana črta) in 
 signal na detektorju se zmanjša. Za snovi z negativnim nelinearnim lomnim količnikom
 je odziv ravno nasprotnega predznaka. Pri določanju nelinearnga lomnega količnika je
-ključno uporabiti zaslonko ($Z$), s katero omejimo premer vpadnega snopa pred vpadom
-na detektor. Če zaslonko odstranimo in merimo 
+ključno uporabiti zaslonko (Z), s katero omejimo premer vpadnega snopa pred detektorjem. 
+Če zaslonko odstranimo in merimo 
 odvisnost celotne vpadne intenzitete od lege vzorca, nelinearnega lomnega količnika 
 ne moremo meriti, lahko pa določimo nelinearni absorpcijski koeficient. 
 
@@ -1243,10 +1258,10 @@ ne moremo meriti, lahko pa določimo nelinearni absorpcijski koeficient.
 \end{figure}
 \end{remark}
 
-Zaradi uklona se Gaussov snop navadno širi, pojav samozbiranja pa ima nasprotni
+Zaradi uklona se Gaussov snop navadno širi, pojav samozbiranja pa ima ravno nasprotni
 učinek. Zato je pri določeni moči snopa možno doseči, da se oba pojava po
 velikosti ravno izenačita in snop ima v snovi konstanten polmer, valovne
-fronte pa so ravne. Snop na ta način samemu sebi ustvarja valovni vodnik, kjer
+fronte pa so ravne. Snop na ta način samemu sebi ustvarja valovni vodnik, v katerem 
 je v sredi lomni količnik večji kot na robu, in nastane t.\,i. krajevni soliton.
 \index{Soliton!krajevni}
 
