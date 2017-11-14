@@ -51,7 +51,9 @@
   \begin{picture}(1,0.807437)%
     \put(0.71485392,0.52702789){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{08_phasematch.pdf}}%
-    \put(0.23919192,0.73998697){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0.84106434,0.79259047){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_o^{\omega}$}}}%
+    \put(0.78227438,0.78528232){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_o^{2\omega}$}}}%
+    \put(0.89510545,0.74526787){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\mathbf{k}$}}}}%
     \put(0.49835427,0.5480881){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$y$}}}%
     \put(0.95931829,0.54788169){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$y$}}}%
     \put(0.49737625,0.13144141){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$y$}}}%
@@ -73,28 +75,17 @@
     \put(0.22732189,0.61831914){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta_m$}}}%
     \put(0.77388381,0.67395283){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta_m$}}}%
     \put(0.25207958,0.78627149){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_o^{2\omega}$}}}%
-    \put(0.84106434,0.79259047){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_o^{\omega}$}}}%
     \put(0.9584123,0.27887451){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\mathbf{k}$}}}}%
     \put(0.44552802,0.22545938){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\mathbf{k}$}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{08_phasematch.pdf}}%
-    \put(0.78227438,0.78528232){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_o^{2\omega}$}}}%
-    \put(0.89510545,0.74526787){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{$\mathbf{k}$}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{08_phasematch.pdf}}%
     \put(0.78295291,0.36895391){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_o^{2\omega}$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{08_phasematch.pdf}}%
     \put(0.44046427,0.45489976){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{2\omega}$}}}%
     \put(0.38561745,0.45292141){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{\omega}$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=5]{08_phasematch.pdf}}%
-    \put(0.9500005,0.03696188){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{2\omega}$}}}%
-    \put(0.89515368,0.03498352){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{\omega}$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=6]{08_phasematch.pdf}}%
-    \put(0.9504218,0.45562779){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{2\omega}$}}}%
-    \put(0.89557498,0.45364944){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{\omega}$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=7]{08_phasematch.pdf}}%
+    \put(0.95000052,0.03696188){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{2\omega}$}}}%
+    \put(0.8951537,0.03498353){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{\omega}$}}}%
+    \put(0.95042178,0.45562777){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{2\omega}$}}}%
+    \put(0.89557497,0.45364942){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{\omega}$}}}%
     \put(0.87140663,0.36921335){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_o^{\omega}$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=8]{08_phasematch.pdf}}%
-    \put(0.43958912,0.03597271){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{2\omega}$}}}%
-    \put(0.3847423,0.03399436){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{\omega}$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=9]{08_phasematch.pdf}}%
+    \put(0.4395891,0.03597271){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{2\omega}$}}}%
+    \put(0.38474229,0.03399436){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_e^{\omega}$}}}%
   \end{picture}%
 \endgroup%

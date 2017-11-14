@@ -54,7 +54,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.72693605"
-     inkscape:cx="725.74611"
+     inkscape:cx="515.96149"
      inkscape:cy="413.82577"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -76,7 +76,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -134,34 +134,6 @@
        id="path4418-8"
        style="fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:#d40000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1;marker-end:"
        d="m 101.69927,587.88323 34.79457,-2.99829 -24.56303,24.82557 c 1.72108,-8.66596 -2.4386,-17.46885 -10.23154,-21.82728 z" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.29900742px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="-170.10887"
-       y="661.3761"
-       id="text4444"
-       sodipodi:linespacing="125%"
-       transform="scale(0.97165016,1.029177)"><tspan
-         sodipodi:role="line"
-         id="tspan4446"
-         x="-170.10887"
-         y="661.3761">$\omega_1$<tspan
-   style="font-size:37.89488983px;baseline-shift:sub"
-   id="tspan4448" /></tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.29900742px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="-71.95108"
-       y="753.95526"
-       id="text4444-8"
-       sodipodi:linespacing="125%"
-       transform="scale(0.97165016,1.029177)"
-       inkscape:transform-center-x="116.72666"
-       inkscape:transform-center-y="-178.98087"><tspan
-         sodipodi:role="line"
-         id="tspan4446-8"
-         x="-71.95108"
-         y="753.95526">$\omega_3 &gt; \omega_1$</tspan></text>
     <g
        id="g4412-4"
        style="fill:#ff6400;fill-opacity:1"
@@ -188,34 +160,6 @@
        style="fill:#d40000;fill-opacity:1;fill-rule:evenodd;stroke:#d40000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1;marker-end:"
        d="m 781.42006,217.57637 37.71274,3.3244 -21.1585,28.71647 c 1.72108,-8.66596 -8.7613,-27.68244 -16.55424,-32.04087 z"
        sodipodi:nodetypes="cccc" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.29900742px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="749.06592"
-       y="192.96277"
-       id="text4444-6"
-       sodipodi:linespacing="125%"
-       transform="scale(0.97165016,1.029177)"><tspan
-         sodipodi:role="line"
-         id="tspan4446-2"
-         x="749.06592"
-         y="192.96277">$\omega_1$<tspan
-   style="font-size:37.89488983px;baseline-shift:sub"
-   id="tspan4448-5" /></tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.29900742px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="867.56769"
-       y="406.07928"
-       id="text4444-8-1-7-1"
-       sodipodi:linespacing="125%"
-       transform="scale(0.97165016,1.029177)"
-       inkscape:transform-center-x="116.72666"
-       inkscape:transform-center-y="-178.98087"><tspan
-         sodipodi:role="line"
-         id="tspan4446-8-6-5-0"
-         x="867.56769"
-         y="406.07928">$\omega_3 - \omega_1$</tspan></text>
     <g
        id="g4412-2"
        style="fill:#2c2ca0;fill-opacity:1;stroke:#2c2ca0;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -233,17 +177,76 @@
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccc" />
     </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.29900742px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="927.987"
-       y="278.47202"
-       id="text4444-6-6"
-       sodipodi:linespacing="125%"
-       transform="scale(0.97165016,1.029177)"><tspan
-         sodipodi:role="line"
-         id="tspan4446-2-1"
+    <g
+       id="g4171">
+      <text
+         transform="scale(0.97165016,1.029177)"
+         sodipodi:linespacing="125%"
+         id="text4444"
+         y="661.3761"
+         x="-170.10887"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.29900742px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="661.3761"
+           x="-170.10887"
+           id="tspan4446"
+           sodipodi:role="line">$\omega_1$<tspan
+   id="tspan4448"
+   style="font-size:37.89488983px;baseline-shift:sub" /></tspan></text>
+      <text
+         inkscape:transform-center-y="-178.98087"
+         inkscape:transform-center-x="116.72666"
+         transform="scale(0.97165016,1.029177)"
+         sodipodi:linespacing="125%"
+         id="text4444-8"
+         y="753.95526"
+         x="-71.95108"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.29900742px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="753.95526"
+           x="-71.95108"
+           id="tspan4446-8"
+           sodipodi:role="line">$\omega_3 &gt; \omega_1$</tspan></text>
+      <text
+         transform="scale(0.97165016,1.029177)"
+         sodipodi:linespacing="125%"
+         id="text4444-6"
+         y="192.96277"
+         x="749.06592"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.29900742px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="192.96277"
+           x="749.06592"
+           id="tspan4446-2"
+           sodipodi:role="line">$\omega_1$<tspan
+   id="tspan4448-5"
+   style="font-size:37.89488983px;baseline-shift:sub" /></tspan></text>
+      <text
+         inkscape:transform-center-y="-178.98087"
+         inkscape:transform-center-x="116.72666"
+         transform="scale(0.97165016,1.029177)"
+         sodipodi:linespacing="125%"
+         id="text4444-8-1-7-1"
+         y="406.07928"
+         x="867.56769"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.29900742px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="406.07928"
+           x="867.56769"
+           id="tspan4446-8-6-5-0"
+           sodipodi:role="line">$\omega_3 - \omega_1$</tspan></text>
+      <text
+         transform="scale(0.97165016,1.029177)"
+         sodipodi:linespacing="125%"
+         id="text4444-6-6"
+         y="278.47202"
          x="927.987"
-         y="278.47202">$\omega_3$</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:58.29900742px;line-height:125%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="278.47202"
+           x="927.987"
+           id="tspan4446-2-1"
+           sodipodi:role="line">$\omega_3$</tspan></text>
+    </g>
   </g>
 </svg>

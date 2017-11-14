@@ -599,6 +599,14 @@ Lomni količniki: $n_o^{\omega} = 4,7969$,
 $n_e^{\omega} = 6,2455$, $n_o^{2\omega} = 4,8657$ in $n_e^{2\omega} = 6,3152$.\index{Telur}
 \end{definition}
 
+\begin{remark}
+Namesto zvezne svetlobe za optično podvajanje frekvenc pogosto uporabimo laserske sunke, saj je 
+vršna moč zelo velika in je zato velika tudi pretvorba v frekvenčno podvojen signal. Vendar je treba biti 
+pri tem pazljiv, saj zaradi disperzije osnovni in podvojeni signal ne potujeta z enakima hitrostima.
+Navadno podvojeni signal potuje počasneje in zaostaja za osnovnim, zato ob izhodu dobimo razmeroma
+sploščen in razvlečen frekvenčno podvojen signal.
+\end{remark}
+
 \section{Frekvenčno podvajanje Gaussovih snopov}
 \index{Optično podvajanje frekvenc}
 Doslej smo vpadni in frekvenčno podvojeni snop obravnavali kot ravni valovanji,
@@ -620,29 +628,30 @@ gostota toka znatno manjša kot v grlu, s tem pa tudi izkoristek pretvorbe v
 frekvenčno podvojeni snop.
 Dolžina grla je (enačba~\ref{eq:z0})
 \beq
-L=2z_{0}=2\frac{\pi w_{0}^{2}}{\lambda/n} = \frac{n w_0^2 \omega}{c_0}.
+L=2z_{0}=2\frac{\pi w_{0}^{2}}{\lambda/n} = \frac{n w_0^2 \omega}{c_0}  \quad \mathrm{in} \quad 
+w_{0}^{2} = \frac{c_0 L}{n \omega}.
 \label{SHGG}
 \eeq
 Pri zapisu preseka vpadnega snopa upoštevajmo še faktor ena polovica, do katerega 
 pridemo, če integriramo intenziteto 
 snopa po celotni površini. Sledi
 \beq
-S=\frac{1}{2}\pi w_{0}^{2} = \frac{2 \pi c_0 L}{n \omega}.
+S=\frac{1}{2}\pi w_{0}^{2} = \frac{\pi c_0 L}{2 n \omega}.
 \eeq
 Daljše ko je grlo in večja dolžina $L$, na kateri pride do frekvenčnega podvajanja, 
 večji je tudi presek snopa $S$ in zato intenziteta svetlobe manjša, kar zmanjša
 učinek pretvorbe v frekvenčno podvojeno valovanje.
-Vstavimo $S$ v enačbo~(\ref{8.11}), upoštevamo ujemanje faz in dobimo 
+V enačbi~(\ref{8.10}) upoštevamo ujemanje faz in $S$ pri podvojeni frekvenci. Tako dobimo 
 \boxeq{8.17}{
 \frac{P_{2\omega}}{P_{\omega}}=
-\frac{\omega^3 \chi_{ef}^2}{\pi n_{2\omega} n_\omega c_0^4\varepsilon_0} P_\omega\, L.
+\frac{\omega^3 \chi_{ef}^2}{2\pi n_{2\omega} n_\omega c_0^4\varepsilon_0} P_\omega\, L.
 }
 Ob optimalnem fokusiranju je torej izkoristek pretvorbe sorazmeren z dolžino kristala.
 \begin{definition}
 Imamo $1~\si{\centi\metre}$ dolg kristal KH$_{2}$PO$_{4}$. Valovna dolžina vpadne svetlobe 
-je $1,06~\si{\micro\metre}$, vhodna moč $P_\omega = 10~\si{\kilo\watt}$, efektivna nelinearna susceptibilnost
+je $1,06~\si{\micro\metre}$, vhodna moč $P_\omega = 5~\si{\kilo\watt}$, efektivna nelinearna susceptibilnost
 $\chi_{ef}=7\cdot10^{-13}~\si{\metre/\volt}$, $\Delta k=0$ in $n=1,5$. Pokaži, da je
-faktor pretvorbe v frekvenčno podvojeno svetlobo okoli $20~\%$.
+faktor pretvorbe v frekvenčno podvojeno svetlobo okoli $27~\%$.
 Da je dolžina grla $2z_{0}=1$~cm, mora biti polmer
 grla okoli $40~\si{\micro\metre}$. Gostota svetlobnega toka v kristalu je pri
 tem $2\cdot10^{8}~\si{\watt/\centi\metre^{2}}$, kar je že blizu praga za poškodbe,
@@ -679,11 +688,11 @@ Zaradi počasnega spreminjanja vzdolž smeri $z$ lahko zanemarimo tudi druge odv
 $\psi$ po $z$. Od tod sledi sklopljen sistem obosnih enačb 
 \begin{eqnarray}
 \nabla_{\perp}^{2}\psi_{1}+2ik_{1}\psi_{1}^{\prime} & = & -
-\frac{k_{1}}{2}\kappa\psi_{2}^{\ast}\psi_{3}e^{-i\Delta kz}\\
+\frac{k_{1}}{2}\kappa\psi_{2}^{\ast}\psi_{3}e^{i\Delta kz}\\
 \nabla_{\perp}^{2}\psi_{2}+2ik_{2}\psi_{2}^{\prime} & = & -
-\frac{k_{2}}{2}\kappa\psi_{1}^{\ast}\psi_{3}e^{-i\Delta kz}\\
+\frac{k_{2}}{2}\kappa\psi_{1}^{\ast}\psi_{3}e^{i\Delta kz}\\
 \nabla_{\perp}^{2}\psi_{3}+2ik_{3}\psi_{3}^{\prime} & =
-& - \frac{k_{3}}{2}\kappa\psi_{1}\psi_{2}e^{i\Delta kz}
+& - \frac{k_{3}}{2}\kappa\psi_{1}\psi_{2}e^{-i\Delta kz}
 \label{SHGGauss_3}
 \end{eqnarray}
 s pripadajočim sistemom konjugiranih enačb. Pri tem je 
@@ -755,9 +764,9 @@ tako da je izkoristek pri frekvenčnem podvajanju Gaussovega snopa
 \begin{equation}
 \begin{aligned}
 \frac{P_{2\omega}}{P_{\omega}}=\frac{A_3^2}{A_1^2}  = &
-\frac{2 \chi_{ef}^2 \omega^3 P_\omega z_1}{\pi c_0^4 \varepsilon_0 n_\omega n_{2\omega}} 
+\frac{\chi_{ef}^2 \omega^3 P_\omega z_1}{\pi c_0^4 \varepsilon_0 n_\omega n_{2\omega}} 
 \arctan^2 \left( \frac{L}{2z_1}\right) \\
- = &\frac{2\chi_{ef}^2 \omega^3 P_\omega}{\pi c_0^4 \varepsilon_0 n_\omega n_{2\omega}} \frac{L}{2}
+ = &\frac{\chi_{ef}^2 \omega^3 P_\omega}{\pi c_0^4 \varepsilon_0 n_\omega n_{2\omega}} \frac{L}{2}
 \arctan^2 \left( \frac{L}{2z_1}\right) \frac{1}{L/2z_1}.
 \label{8.27}
 \end{aligned}
@@ -769,7 +778,7 @@ preprosti oceni $z_{1}=0,5\,L$ (enačba~\ref{SHGG}). Največji izkoristek
 frekvenčnega podvajanja Gaussovih snopov je tako
 \begin{equation}
 \frac{P_{2\omega}}{P_{\omega}}
-= 0,64 \frac{\omega^3 \chi_{ef}^2}{\pi n_{2\omega} n_{\omega} c_0^4 \varepsilon_0 } P_\omega L.
+= 0,64 \frac{\omega^3 \chi_{ef}^2}{2\pi n_{2\omega} n_{\omega} c_0^4 \varepsilon_0 } P_\omega L.
 \label{8.28}
 \end{equation}
 To je malo manj od preproste ocene, ki smo jo naredili v prejšnjem razdelku (enačba~\ref{8.17}),
@@ -1140,7 +1149,7 @@ Z $\tilde{n}$ smo označili lomni količnik pri frekvenci $\omega$.
 Faktor v oklepaju ni nič drugega kot efektivna susceptibilnost, ki je neposredno povezana
 z lomnim količnikom snovi $\chi_{ef} = \varepsilon -1 =n^2 -1$. Gornja enačba torej opisuje pojav, 
 pri katerem vpadna svetloba vpliva na lomni količnik snovi.
-Gre za podoben učinek kot pri Kerrovem pojavu (enačba~\ref{7.1}), 
+Gre za podoben učinek kot pri navadnem Kerrovem pojavu (enačba~\ref{7.1}), 
 pri katerem se lomni količnik spremeni pod vplivom zunanjega električnega polja.
 Opisani optični ekvivalent zato imenujemo optični Kerrov pojav\footnote{Škotski fizik John Kerr, 1824\textendash1907.}. 
 
@@ -1194,8 +1203,9 @@ optične pojave. V tem primeru vpada na snov en sam laserski žarek in pogoj uje
 je vedno izpolnjen. 
 \end{remark}
 
-\section{Samozbiranje}
+\section{Samozbiranje in krajevni solitoni}
 \index{Samozbiranje}
+\index{Soliton!krajevni}
 Za začetek si oglejmo pojav samozbiranja svetlobe. Osnovni Gaussov snop 
 (enačba~\ref{eq:gaussov-snop}) naj vpada na sredstvo,
 v katerem je lomni količnik odvisen od intenzitete vpadne svetlobe po enačbi~(\ref{eq:nnl}).
@@ -1228,36 +1238,6 @@ f = \frac{\pi w^4}{8 n_2 d P},
 pri čemer je $n_2$ nelinearni lomni količnik.
 \end{definition}
 
-\begin{remark}
-\index{Metoda vzdolžnega premika}
-\index{Z-scan|see {Metoda vzdolžnega premika}}
-Eksperimentalna metoda, s katero merimo nelinearni lomni količnik, je tako imenovana
-metoda vzdolžnega premika ({\it Z-scan}). Optično nelinearno sredstvo (naj ima $n_2>0$)
-postavimo v zožan laserski snop (slika~\ref{fig:zscan}). 
-Zaradi samozbiranja deluje vzorec kot leča, njena goriščna razdalja
-pa je odvisna od intenzitete snopa in od nelinearnega lomnega količnika. Ko vzorec 
-premikamo vzdolž snopa, se skupna efektivna goriščna razdalja leče in nelinearne snovi 
-spreminja in žarek na detektorju je enkrat bolj zbran, drugič manj. 
-Za lege vzorca desno od prvotnega gorišča ($z>0$), je skupna goriščna
-razdalja daljša od goriščne razdalje leče, snop je bolj zbran (pikčasta črta) in signal 
-na detektorju (D) naraste. Za lege vzorca levo
-od prvotnega gorišča ($z<0$) je ravno obratno, snop se razširi (črtkana črta) in 
-signal na detektorju se zmanjša. Za snovi z negativnim nelinearnim lomnim količnikom
-je odziv ravno nasprotnega predznaka. Pri določanju nelinearnga lomnega količnika je
-ključno uporabiti zaslonko (Z), s katero omejimo premer vpadnega snopa pred detektorjem. 
-Če zaslonko odstranimo in merimo 
-odvisnost celotne vpadne intenzitete od lege vzorca, nelinearnega lomnega količnika 
-ne moremo meriti, lahko pa določimo nelinearni absorpcijski koeficient. 
-
-\begin{figure}[h!]
-\raggedleft 
-\def\svgwidth{130truemm} 
-\input{slike/08_zscan.pdf_tex}
-\caption{Shema metode vzdolžnega premika}
-\label{fig:zscan}
-\end{figure}
-\end{remark}
-
 Zaradi uklona se Gaussov snop navadno širi, pojav samozbiranja pa ima ravno nasprotni
 učinek. Zato je pri določeni moči snopa možno doseči, da se oba pojava po
 velikosti ravno izenačita in snop ima v snovi konstanten polmer, valovne
@@ -1288,13 +1268,14 @@ ukrivi na nek krivinski radij $-R$. Iz preproste geometrije velja zveza
 \Delta nz_{0}=R-R\sqrt{1-\frac{w_{0}^{2}}{R^{2}}}\approx \frac{w_{0}^{2}}{2R}
 \label{8.77}
 \end{equation}
-Da valovna fronta ostale ravna, morata biti krivinska radija v
-enačbah (\ref{8.75}) in (\ref{8.77}) enaka. Od tod sledi 
+Da valovna fronta ostane ravna, se morata krivinska radija zaradi uklona 
+(enačba~\ref{8.75}) in samozbiranja (enačba~\ref{8.77}) ravno izenačiti. 
+Od tod sledi 
 \begin{equation}
 \Delta n=\frac{w_{0}^{2}}{4z_{0}^{2}}.
 \label{8.78}
 \end{equation}
-Moč snopa s stacionarnim polmerom je potem 
+Moč snopa, pri katerem se polmer ne spreminja, je potem 
 \begin{equation}
 P_{s}= \frac{1}{2}\pi w_0^2 \,j_0 = \frac{1}{2}\pi w_0^2 \, \frac{\Delta n}{2 n_2} = 
 \frac{1}{2}\pi w_0^2 \,\frac{w_{0}^{2}}{4z_{0}^{2}}\,\frac{1}{2 n_2} = \frac{\lambda^2}{16 \pi n_2},
@@ -1302,11 +1283,12 @@ P_{s}= \frac{1}{2}\pi w_0^2 \,j_0 = \frac{1}{2}\pi w_0^2 \, \frac{\Delta n}{2 n_
 \end{equation}
 pri čemer smo upoštevali zvezo med $z_0$ in $w_0$ (enačba~\ref{eq:z0}).
 
-Zanimivo je, da kritična moč, pri kateri se pojavijo solitoni, ni odvisna od začetnega polmera snopa.
-Pri moči, ki je manjša od kritične, se vpadli Gaussov snop širi, 
+Pri moči, ki je manjša od kritične $P_s$, se vpadli Gaussov snop širi, 
 čeprav nekoliko počasneje kot v sredstvu s konstantnim lomnim količnikom, 
 če pa je moč znatno večja od kritične moči, pa lahko
 pride do katastrofičnega samozbiranja in porušitve snovi.
+Zanimivo je, da kritična moč, pri kateri se pojavijo solitoni, 
+ni odvisna od začetnega polmera snopa.
 
 \begin{definition}
 Nariši skico k enačbi~(\ref{8.77}) in izpelji izraz za moč, pri kateri pride do pojava
@@ -1317,6 +1299,36 @@ Izračunaj še kritično moč za pojav solitonov v CS$_{2}$,
  $n_{2}=3,2 \cdot 10^{-18}$~m$^{2}$/W. 
 \end{definition}
 
+\begin{remark}
+\index{Metoda vzdolžnega premika}
+\index{Z-scan|see {Metoda vzdolžnega premika}}
+Eksperimentalna metoda, s katero merimo nelinearni lomni količnik, je tako imenovana
+metoda vzdolžnega premika ({\it Z-scan}). Optično nelinearno sredstvo (naj ima $n_2>0$)
+postavimo v zožan laserski snop (slika~\ref{fig:zscan}). 
+Zaradi samozbiranja deluje vzorec kot leča, njena goriščna razdalja
+pa je odvisna od intenzitete snopa in od nelinearnega lomnega količnika. Ko vzorec 
+premikamo vzdolž snopa, se skupna efektivna goriščna razdalja leče in nelinearne snovi 
+spreminja in žarek na detektorju je enkrat bolj zbran, drugič manj. 
+Za lege vzorca desno od prvotnega gorišča ($z>0$), je skupna goriščna
+razdalja daljša od goriščne razdalje leče, snop je bolj zbran (pikčasta črta) in signal 
+na detektorju (D) naraste. Za lege vzorca levo
+od prvotnega gorišča ($z<0$) je ravno obratno, snop se razširi (črtkana črta) in 
+signal na detektorju se zmanjša. Za snovi z negativnim nelinearnim lomnim količnikom
+je odziv ravno nasprotnega predznaka. Pri določanju nelinearnga lomnega količnika je
+ključno uporabiti zaslonko (Z), s katero omejimo premer vpadnega snopa pred detektorjem. 
+Če zaslonko odstranimo in merimo 
+odvisnost celotne vpadne intenzitete od lege vzorca, nelinearnega lomnega količnika 
+ne moremo meriti, lahko pa določimo nelinearni absorpcijski koeficient. 
+
+\begin{figure}[h!]
+\raggedleft 
+\def\svgwidth{130truemm} 
+\input{slike/08_zscan.pdf_tex}
+\caption{Shema metode vzdolžnega premika}
+\label{fig:zscan}
+\end{figure}
+\end{remark}
+
 \section{*Izpeljava krajevnih solitonov}
 \index{Soliton!krajevni}
 \label{chap:ks}
@@ -1324,13 +1336,13 @@ Za podrobnejšo obravnavo krajevnih solitonov moramo rešiti valovno
 enačbo v obosnem približku. Začnimo s krajevnim delom valovne 
 enačbe za monokromatsko valovanje v skalarni obliki (enačba~\ref{eq:Helmholtz})
 \begin{equation}
-\nabla^{2}E+n^{2}\frac{\omega^{2}}{c_0^{2}}E=0
+\nabla^{2}E+n^{2}\frac{\omega^{2}}{c_0^{2}}E=0.
 \label{8.80}
 \end{equation}
 Polje zapišimo v obliki počasi spreminjajoče se amplitude in faznega faktorja, podobno kot 
 smo to naredili pri izpeljavi Gaussovega snopa (enačba~\ref{eq:ravni-val-nastavek})
 \begin{equation}
-E=\psi(\mathrm{r},z)e^{ik_{0}z}
+E=\psi(\mathrm{r},z)e^{ik_{0}z},
 \label{8.81}
 \end{equation}
  kjer je $k_{0}=\tilde{n}\omega/c_0$ valovno število brez upoštevanja nelinearnosti.
@@ -1423,13 +1435,14 @@ j_{s}(x,z)= j_0 \frac{1}{\cosh^2(\eta x)}.
 }
 \begin{figure}[h]
 \centering
-\includegraphics[width=8truecm]{slike/08_soliton.png}
+\def\svgwidth{100truemm} 
+\input{slike/08_soliton.pdf_tex}
 \caption{Prečni profil krajevnega solitona v 2D. Vzdolž koordinate $z$ se profil ohranja.}
 \label{fig:soliton}
 \end{figure}
 
 Če se vrnemo k izrazu za električno poljsko jakost (enačba~\ref{8.89}), vidimo, da
-je parameter $\eta$ nastopa tudi v faznem faktorju. To pomeni, da je od njega odvisna 
+parameter $\eta$ nastopa tudi v faznem faktorju. To pomeni, da je od njega odvisna 
 tudi konstanta širjenja in s tem fazna hitrost
 \index{Soliton!fazna hitrost}
 \begin{equation}
@@ -1442,7 +1455,7 @@ limitno vrednost $c_0/\tilde{n}$.
 Moč dvodimenzionalnega snopa je enaka integralu
 gostote svetlobnega toka (enačba~\ref{8.89a}) po $x$. Integriramo in zapišemo 
 \begin{equation}
-P_S = \int j_s dx \propto \int |E_S|^2 dx  = 
+P_s = \int j_s dx \propto \int |E_s|^2 dx  = 
 \frac{2}{\kappa}\,\eta^{2}\int_{-\infty}^{\infty}\frac{dx}
 {\cosh^{2}\eta x}=\frac{4\eta}{\kappa}.
 \label{eq:solj}
@@ -1454,8 +1467,8 @@ tridimenzionalnim primerom, kjer se snop z nadkritično močjo skrči v singular
 
 \section{Optični solitoni}
 \index{Soliton!optični}
-V prejšnjem razdelku smo ugotovili, da pojav samozbiranja svetlobnega
-snopa lahko izniči širjenje zaradi uklona, tako da ima pri
+V prejšnjem razdelku smo ugotovili, da pojav samozbiranja lahko izniči širjenje 
+svetlobnega snopa zaradi uklona, tako da ima pri
 ustrezni moči snop povsod konstantno širino in obliko. Takim snopom 
 smo rekli krajevni solitoni. Povsem podoben pojav poznamo tudi v časovni 
 domeni, kjer se pojavijo časovni ali optični solitoni. 
@@ -1468,12 +1481,12 @@ odvisnost lomnega količnika od valovne dolžine in sunek
 ohranja obliko. Sunkom svetlobe, ki potujejo po sredstvu brez spremembe
 oblike, pravimo optični solitoni. Posebej so pomembni v optičnih vlaknih, 
 kjer je disperzija izrazita in želimo njen vpliv zaradi učinkovitosti prenosa
-informacije čim bolj zmanjšati. 
+informacije kar se da zmanjšati. 
 
 Pojava optičnih solitonov ni težko pojasniti. Naj na optično nelinearno sredstvo
-vpade sunek svetlobe, ki je Gaussove oblike (slika~\ref{fig:optsoliton})
+vpade sunek svetlobe, ki je Gaussove oblike v času
 \beq
-j(t) = j_0 e^{-t^2/\tau^2}.
+j(t) = j_0 e^{-2t^2/\tau^2}.
 \label{08_pulz}
 \eeq
 Faza takega sunka je 
@@ -1488,7 +1501,7 @@ frekvenca pa
 Če vstavimo časovno obliko sunka svetlobe (enačba~\ref{08_pulz}), vidimo, da se 
 frekvenca takega sunka spreminja s časom
 \beq
-\omega = \omega_0 + \frac{2k_0 n_2 z j_0}{\tau^2} \, t \, e^{-t^2/\tau^2}.
+\omega = \omega_0 + \frac{4k_0 n_2 z j_0}{\tau^2} \, t \, e^{-2t^2/\tau^2}.
 \eeq
 Začetnemu delu sunka (pri $t<0$) se torej frekvenca zmanjša, zadnjemu delu sunka
 (pri $t>0$) pa se mu poveča (slika~\ref{fig:optsoliton}). 
@@ -1509,7 +1522,7 @@ kar pomeni, da veljajo za valovanja z različnimi frekvencami različni lomni ko
 \index{Disperzija} Pojav disperzije je še bolj zapleten pri potovanju sunkov svetlobe,
 kar bomo podrobneje obravnavali pri optičnih vlaknih (poglavje~\ref{chap:Disperzija}).
 Zaenkrat povejmo le, da je pomemben parameter disperzija grupne hitrosti, ki je sorazmerna
-z drugim odvodom lomnega količnika po valovni dolžini 
+z drugim odvodom lomnega količnika po valovni dolžini (enačba~\ref{eq:dmat})
 \beq
 D = -\frac{\lambda}{c_0}\frac{d^2n}{d\lambda^2}.
 \eeq
@@ -1520,10 +1533,10 @@ dohiteva sprednjega in učinek disperzije ravno izniči učinek nelinearnosti.
 Nastane signal, ki ohranja svojo obliko~\textendash~soliton. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/08_Chirp.pdf_tex}
-\caption{Čričkanje sunkov svetlobe zaradi nelinearnega pojava. Z ustrezno disperzijo lahko
-čričkanje izničimo in nastane sunek svetlobe, ki oblike ne spreminja~\textendash~soliton.}
+\caption{Čričkanje sunkov svetlobe zaradi nelinearnega pojava (a). Z ustrezno disperzijo lahko
+čričkanje izničimo (b) in nastane sunek svetlobe, ki oblike ne spreminja~\textendash~soliton.}
 \label{fig:chirp}
 \end{figure}
 
@@ -1599,21 +1612,25 @@ Podobno naredimo še za odvod po času $\tau$, ki pa se ne razlikuje od odvoda p
 \beq
 \frac{\partial A}{\partial t} = \frac{\partial A_S}{\partial z}\frac{\partial z}{\partial \tau}+
 \frac{\partial A_S}{\partial \tau}\frac{\partial \tau}{\partial t} 
-= \frac{\partial A_S}{\partial \tau} \qquad \textrm{in} \qquad 
+= \frac{\partial A_S}{\partial \tau} 
+\eeq
+in
+\beq
 \frac{\partial^2 A}{\partial t^2} = \frac{\partial^2 A_S}{\partial\tau^2}.
 \eeq
-Vstavimo še amplitudo nelinearne polarizacije (enačba~\ref{eq:ptnl})
+Vstavimo še amplitudo nelinearne polarizacije (enačba~\ref{eq:ptnl}), pri čemer izraz popravimo
+za faktor $4$, ker smo drugače vpeljali parameter $A$
 \beq
-B = \frac{3}{4}\varepsilon_0\chi |A|^2 A.
+B = 3\varepsilon_0\chi |A|^2 A.
 \eeq
 in enačba~(\ref{8.93}) dobi obliko 
 \begin{equation}
-i\,\frac{\partial A_S}{\partial z}-\frac{1}{2}\frac{d^{2}k}{d\omega^{2}}\,\frac{\partial^{2}A_S}{\partial\tau^{2}}+\kappa\left|A_S\right|^{2}A_S=0,
+i\,\frac{\partial A_S}{\partial z}-\frac{1}{2}\frac{d^{2}k}{d\omega^{2}}\,\frac{\partial^{2}A_S}{\partial\tau^{2}}+\kappa\left|A_S\right|^{2}A_S=0.
 \label{8.95}
 \end{equation}
-pri čemer je 
+Pri tem je 
 \beq
-\kappa = \frac{3\omega_0\chi}{8c_0 \tilde{n}}
+\kappa = \frac{3\omega_0\chi}{2c_0 \tilde{n}} = 2 \omega_0 \varepsilon_0 n_2 \tilde{n}.
 \eeq
 sorazmeren nelinearnemu lomnemu količniku $n_2$ 
 (enačba~\ref{eq:n2}). Enačba~(\ref{8.95}) ni nič drugega kot nelinearna Schr\"odingerjeva 
@@ -1664,27 +1681,27 @@ mogoče ločiti, s katerim je signalno valovanje interferiralo in katero se
 uklanja.
 \begin{figure}[h]
 \centering
-\def\svgwidth{60truemm} 
+\def\svgwidth{70truemm} 
 \input{slike/08_opc1.pdf_tex}
 \caption{Optična fazna konjugacija. Dva močna črpalna žarka (modra) vpadata 
 na optično nelinearno snov v nasprotnih smereh, vpadni signal (rdeč) pa se odbije v 
 smer, iz katere vpada.}
 \label{08_OPC1}
 \end{figure}
+
 \begin{remark}Pozoren bralec je ugotovil, da je optična fazna konjugacija zelo 
 podobna holografiji, le da pri holografiji najprej zapišemo predmetni snop, 
 ki ga kasneje reproduciramo, pri fazni konjugaciji pa zapis začetnega valovanja in 
 njegova reprodukcija potekata sočasno. 
 \end{remark}
-
 Naj se signalno valovanje razširja v smeri $z$. Potem ga zapišemo kot  
 \begin{equation}
-E_{3}=\mathrm{Re}\left(A_3\left(z\right)\, e^{i\left(kz-\omega t\right)}\right).
+E_{3}=\mathfrak{\Re}\left(A_3\left(z\right)\, e^{i\left(kz-\omega t\right)}\right).
 \label{8.97}
 \end{equation}
 V nadaljevanju bomo pokazali, da je novonastalo valovanje sorazmerno
 \begin{equation}
-E_{4} \propto \mathrm{Re}\left(A_3^{*}\left(z\right)\, e^{i\left(-kz-\omega t\right)}\right).
+E_{4} \propto \mathfrak{\Re}\left(A_3^{*}\left(z\right)\, e^{i\left(-kz-\omega t\right)}\right).
 \label{8.98}
 \end{equation}
 Zaradi nasprotnega predznaka $k$ potuje nastalo valovanje v obratni smeri od signalnega
@@ -1695,18 +1712,19 @@ da krajevni del kompleksno konjugiramo, nastalemu valovanju pravimo fazno
 konjugirano valovanje.
 \begin{figure}[h!]
 \centering
-\def\svgwidth{75truemm} 
+\def\svgwidth{85truemm} 
 \input{slike/08_opc2.pdf_tex}
 \caption{Primerjava odbojev na navadnem zrcalu (levo) in faznem konjugatorju (desno): odboj ravnega
-vala (a), odboj krogelnega valovanja (b) in odboj popačenega vala (c).}
+vala (a), odboj krogelnega valovanja (b) in odboj popačenega vala (c). Valovne fronte 
+vpadnega vala so označene s polno črto, odbitega pa s črtkano.}
 \label{08_OPC2}
 \end{figure}
 
 Uporabna posledica fazne konjugacije je prikazana na sliki~(\ref{08_OPC2}).
-Najpreprostejši primer je vpad ravnega vala (a), ki se ne odbije po lomnem zakonu (slika levo),
+Najpreprostejši primer je vpad ravnega vala (a), ki se ne odbije po odbojnem zakonu (slika levo),
 ampak se odbije v smer, iz katere je vpadel na snov (desno). Drugi primer je krogelni val 
 ali v približku tudi Gaussov snop (b). Ko vpade na navadno zrcalo (levo), se njegova divergenca
-ohranja in se žarek še naprej razširja. Na fazno konjugiranem zrcalu se kroglast val spet
+ohranja in se žarek še naprej razširja. Na fazno konjugiranem zrcalu se krogelni val spet
 zbere v izvoru (desno). Tretji primer je poljubno sredstvo, ki valovanju doda naključno
 fazo, zato po prehodu valovne fronte niso več gladke (c). Ta popačen snop v faznem
 konjugatorju generira fazno konjugiran snop, ki potuje v nasprotni smeri
@@ -1714,12 +1732,24 @@ in ima enako nepravilne valovne fronte kot vpadni val. Po prehodu
 skozi nepravilno sredstvo se neravnosti valovne fronte izničijo
 in nastanejo enake gladke valovne fronte ravnega vala, kot smo jih imeli na začetku. 
 To lastnost popravljanja valovne fronte je mogoče 
-koristni uporabiti, na primer namesto enega zrcala v laserskem resonatorju.
+koristno uporabiti, na primer namesto enega zrcala v laserskem resonatorju.
+
+\begin{remark}
+Omenili smo že, da se fazno konjugirana zrcala lahko uporabljajo v laserjih, da
+izničimo popačenje Gaussovega snopa. Drug primer uporabe je pri optični astronomiji
+ali optičnih komunikacijah skozi atmosfero. Naključne spremembe gostote v atmosferi
+signalu dodajo naključni fazni premik, ki signal popači. Če se signal odbije od zrcala nazaj
+proti izvoru, bo torej dvakratno popačen. Če pa se odbije od fazno konjugiranega zrcala, 
+se bo vpliv nehomogenosti atmosfere ravno izničil in na prenos signala ne bo vplival, poleg
+tega je šibek vpadni signal lahko še dodatno ojačan. 
+\end{remark}
 
 \section{*Izpeljava optične fazne konjugacije}
+\index{Optična fazna konjugacija}
 Poglejmo podrobneje, kako v nelinearnem sredstvu nastane fazno konjugiran
 val. Kot kaže slika~(\ref{08_OPC1}), je celotno polje v nelinearnem
-sredstvu vsota štirih valovanj, dveh močnih črpalnih, signalnega in odbitega
+sredstvu vsota štirih valovanj, dveh močnih črpalnih (oznaki 1 in 2), signalnega 
+(oznaka 3) in odbitega (oznaka 4)
 \begin{equation}
 E=\frac{1}{2}A_{1}e^{i{\bf k}_{1}\cdot{\bf r}-i\omega t}+\frac{1}{2}A_{2}e^{-i{\bf k}_{1}\cdot{\bf r}-
 i\omega t}+\frac{1}{2}A_{3}\left(z\right)e^{ikz-i\omega t}+\frac{1}{2}A_{4}
@@ -1733,8 +1763,7 @@ in $E_{2}$ dosti močnejša od $E_{3}$ in $E_{4}$, tako da sta njuni
 amplitudi konstantni, $E_{3}\left(z\right)$ in $E_{4}\left(z\right)$
 pa se le počasi spreminjata.
 
-Vstavimo $E$ v valovno enačbo z nelinearno polarizacijo (enačba~\ref{8.3}), pri čemer
-smo časovni odvod že izvrednotili
+Vstavimo $E$ v valovno enačbo z nelinearno polarizacijo (enačba~\ref{8.3})
 \begin{equation}
 \nabla^{2}E+\epsilon\frac{\omega^{2}}{c_0^{2}}\, 
 E=\mu_{0}\frac{\partial^2 P_{\mathrm{NL}}}{\partial t^2}.
@@ -1753,10 +1782,10 @@ prispevajo le tisti členi s krajevnim faznim faktorjem $\exp(ikz)$,
 k enačbi za $E_4$ pa tisti z $\exp(-ikz)$. Sledi
 \begin{eqnarray}
 P_{\mathrm{NL}\,3,4} &=& \frac{1}{8}\varepsilon_0\chi 
-\left(6 A_1 A_2 A_4^*+ 6A_1 A_1^*A_3 + 6A_2A_2^*A_3 + 3 A_3A_3^*A_3 + 6 A_4 A_4^* A_3^*\right)
+\left(6 A_1 A_2 A_4^*+ 6A_1 A_1^*A_3 + 6A_2A_2^*A_3 + 3 A_3A_3^*A_3 + 6 A_4 A_4^* A_3\right)
 e^{i k z - i\omega t} \nonumber\\
 &+& 
-\left(6 A_1 A_2 A_3^*+6 A_1 A_1^*A_4 + 6A_2A_2^*A_4 + 6 A_3A_3^*A_4 + 3 A_4 A_4 A_4^*\right)
+\left(6 A_1 A_2 A_3^*+6 A_1 A_1^*A_4 + 6A_2A_2^*A_4 + 6 A_3A_3^*A_4 + 3 A_4 A_4^* A_4\right)
 e^{-i k z - i\omega t}.
 \end{eqnarray}
 Če zanemarimo še člene, v katerih nastopata $A_3$ in $A_4$ v višjih potencah, dobimo
@@ -1807,12 +1836,12 @@ in
 A_{1}A_{2}\tilde{A}_{3}^*.
 \label{8.105}
 \end{equation}
-Z vpeljavo sklopitvene konstante 
+Vpeljemo sklopitveno konstanto
 \begin{equation}
-\kappa=\frac{ 3 \chi \omega}{4 c_0 n}A_1 A_2
+\kappa=\frac{ 3 \chi \omega}{4 c_0 n}A_1 A_2.
 \label{8.106}
 \end{equation}
-se enačbi poenostavita v
+Enačbi se tako poenostavita v 
 \beq
 \frac{d\tilde{A}_{3}}{dz}=i\kappa \tilde{A}_{4}^{*} \qquad
 \textrm{oziroma} \qquad \frac{d\tilde{A}^*_{3}}{dz}=-i\kappa^* \tilde{A}_{4} 
@@ -1854,9 +1883,12 @@ D_1 = -D_2 \tan(|\kappa|L).
 Gornje enačbe združimo in lahko zapišemo amplitudi znotraj nelinearne snovi
 \begin{eqnarray}
 \tilde{A}_{3}\left(z\right) & = & \tilde{A}_3(0)
-\frac{\cos\left(|\kappa|(L-z)\right)}{\cos\left(|\kappa|L\right)}\\
+\frac{\cos\left(|\kappa|(L-z)\right)}{\cos\left(|\kappa|L\right)}
+\end{eqnarray}
+in
+\begin{eqnarray}
 \tilde{A}_{4}\left(z\right) & = & \tilde{A}_3^*(0)\frac{i \kappa}{|\kappa|}
-\frac{\sin\left(|\kappa|(L-z)\right)}{\cos\left(|\kappa|L\right)}
+\frac{\sin\left(|\kappa|(L-z)\right)}{\cos\left(|\kappa|L\right)}.
 \label{8.109}
 \nonumber 
 \end{eqnarray}
@@ -1871,7 +1903,7 @@ amplituda prepuščenega pri $z = L$ pa
 \tilde{A}_{3}(L)  =  \frac{\tilde{A}_3^*(0)}{
 \cos \left(|\kappa|L\right)}.
 }
-Oglejmo si gornja rezultata podrobneje. Vidimo, da je odbiti val sorazmeren 
+Oglejmo si gornja rezultata. Vidimo, da je odbiti val sorazmeren 
 kompleksno konjugirani amplitudi vpadnega vala, kar smo omenili že v prejšnjem
 razdelku. Poleg konjugirane amplitude ima tudi natanko nasproten valovni vektor, 
 zato tudi ime fazno konjugiran val. Zanimiva je tudi njegova velikost. Ker 
@@ -1886,20 +1918,9 @@ Poglejmo še prepuščeni žarek. Ker je $\cos(x)\leq1$, je amplituda prepušče
 dobili prepustnost, ki je vedno večja od $100~\%$, in odbojnost, ki je lahko 
 večja od $100~\%$.
 
-Doslej smo predpostavili, da je vpadni signal ravni val. Če je njegova
+Pri računu smo predpostavili, da je vpadni signal ravni val. Če je njegova
 amplituda odvisna še od prečne koordinate, ga lahko razvijemo po ravnih
 valovih in zgoraj izpeljana enačba~(\ref{8.110}) velja za vsako komponento posebej. 
 Odbite komponente so sorazmerne s konjugiranimi komponentami signalnega valovanja
 z nasprotnim valovnim vektorjem in dajo skupaj valovno fronto enake
-oblike kot pri signalnem valovanju, le giblje se v nasprotni smeri, kot
-smo opisali že na začetku razdelka.
-
-\begin{remark}
-Omenili smo že, da se fazno konjugirana zrcala lahko uporabljajo v laserjih, da
-izničimo popačenje Gaussovega snopa. Drug primer uporabe je pri optični astronomiji
-ali optičnih komunikacijah skozi atmosfero. Naključne spremembe gostote v atmosferi
-signalu dodajo naključni fazni premik, ki signal popači. Če se signal odbije od zrcala nazaj
-proti izvoru, bo torej dvakratno popačen. Če pa se odbije od fazno konjugiranega zrcala, 
-se bo vpliv nehomogenosti atmosfere ravno izničil in na prenos signala ne bo vplival, poleg
-tega pa bo šibek signal še dodatno ojačan. 
-\end{remark}
+oblike kot pri signalnem valovanju, le giblje se v nasprotni smeri.
