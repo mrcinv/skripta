@@ -2,10 +2,12 @@
 
 \chapter{Modulacija svetlobe}
 
-V optičnih napravah pogosto želimo spreminjati lastnosti svetlobnega
-valovanja. Tak primer smo že spoznali pri obravnavi laserja, kjer za 
-preklop dobrote potrebujemo element, ki hitro spreminja prepustnost. 
-Še pomembnejša je modulacija valovanja pri optičnem prenosu informacij.
+Pri obravnavi širjenja svetlobe skozi snov je najpomembnejši parameter lomni količnik
+oziroma tenzor dielektričnosti. V tem poglavju bomo spoznali, kako se pod zunanjim vplivom 
+spremeni lomni količnik in tako vpliva na širjenje svetlobe skozi snov. To nam omogoča,
+da z zunanjim poljem spreminjamo -- moduliramo -- lastnosti svetlobe. En primer uporabe smo že spoznali pri 
+obravnavi laserja, kjer za preklop dobrote potrebujemo element, ki hitro spreminja 
+prepustnost. Še pomembnejša je modulacija valovanja pri optičnem prenosu informacij.
 
 Svetlobno valovanje lahko moduliramo na več načinov. Z ustreznim moduliranjem
 lomnega količnika lahko valovanju spreminjamo amplitudo\index{Elektro-optična modulacija!amplitudna} 
@@ -13,7 +15,7 @@ ali frekvenco oziroma fazo\index{Elektro-optična modulacija!frekvenčna}
 \index{Elektro-optična modulacija!fazna}. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/09_AMFM.pdf_tex}
 \caption{Amplitudno (levo) in fazno oziroma frekvenčno moduliran signal (desno)
 }
@@ -24,7 +26,7 @@ Delovanje optičnih modulatorjev temelji na različnih pojavih. V tem poglavju b
 podrobneje spoznali dva načina, to sta elektro-optični in elasto- oziroma akusto-optični pojav. 
 Pri prvem pride do spremembe lomnega količnika snovi pod vplivom zunanjega električnega polja, 
 pri drugem pa zaradi mehanske deformacije. Kadar mehansko deformacijo povzroči zvočno valovanje, 
-takim modulatorjem pravimo akusto-optični. Na koncu bomo spoznali poseben zelo pomemben 
+takim modulatorjem pravimo akusto-optični. Na koncu bomo spoznali še zelo pomemben 
 primer elektro-optičnih modulatorjev na osnovi tekočih kristalov.
 
 \section{Elektro-optični pojav}
@@ -41,38 +43,37 @@ navadno vpeljemo inverzni dielektrični tenzor
 \beq
 \underline{b}=\underline{\epsilon}^{-1}.
 \eeq
-Izračunajmo zvezo med spremembo inverznega tenzorja $\delta b_{ij}$ 
-in spremembo dielektričnega tenzorja $\delta \varepsilon_{ij}$. 
-Če so spremembe majhne, velja 
-\begin{equation}
-\underline{\varepsilon} = \underline{\tilde{\varepsilon}} + \delta \underline{\varepsilon}=
-(\underline{\tilde{b}}+\delta \underline{b})^{-1}=\left(\underline{\tilde{b}}(1+\underline{\tilde{b}}^{-1}
-\delta \underline{b})\right)^{-1}=(1+\underline{\tilde{b}}^{-1}\delta \underline{b})^{-1}\underline{\tilde{b}}^{-1}
-\approx \underline{\tilde{b}}^{-1}-\underline{\tilde{b}}^{-1}\delta \underline{b}\, \underline{\tilde{b}}^{-1},
-\label{7.2}
-\end{equation}
-pri čemer je $\underline{\tilde{\varepsilon}}$ označuje dielektrični in $\underline{\tilde{b}}$
-inverzni dielektrični tenzor v odsotnosti zunanjega polja (nemoten tenzor).
 
-Sprememba dielektričnega tenzorja je tako
+\begin{definition}
+Pokaži, da je zveza med spremembo inverznega tenzorja $\delta b_{ij}$ 
+in spremembo dielektričnega tenzorja $\delta \varepsilon_{ij}$ 
 \beq
  \delta \underline{\varepsilon}= -\underline{b}^{-1}\delta \underline{b}\, \underline{b}^{-1}
- = -\underline{\tilde{\varepsilon}}\, \delta \underline{b}\, \underline{\tilde{\varepsilon}}.
+ = -\underline{\tilde{\varepsilon}}\, \delta \underline{b}\, \underline{\tilde{\varepsilon}},
 \eeq
-Če je nemoten dielektrični tenzor $\underline{\tilde{\varepsilon}}$ diagonalen, velja
-\begin{equation}
-\delta\epsilon_{ij}=-\tilde{\epsilon}_{ik}\delta b_{kl}\tilde{\epsilon}_{lj}
-=-\tilde{\epsilon}_{ii}\tilde{\epsilon}_{jj}\delta b_{ij}.
-\label{7.3}
-\end{equation}
+pri čemer je $\underline{\tilde{\varepsilon}}$ označuje dielektrični in $\underline{\tilde{b}}$
+inverzni dielektrični tenzor v odsotnosti zunanjega polja (nemoten tenzor).
+\end{definition}
 
-Pri elektro-optičnem pojavu so spremembe tenzorja dielektričnosti zaradi vpliva zunanjega polja razmeroma 
-majhne. Spremembo komponente $\delta b_{ij}$ lahko zato zapišemo kot potenčno vrsto zunanjega polja $E$, 
+Tenzor dielektričnosti $\underline{\tilde{\varepsilon}}$ 
+je v lastnem nemotenem sistemu diagonalen, zato inverzni 
+dielektrični tenzor v lastnem nemotenem sistemu preprosto zapišemo kot
+\begin{equation}
+\underline{\tilde{b}} = 
+\left[\begin{array}{ccc}
+1/n_1^2 & 0& 0\\
+0 & 1/n_2^2& 0\\
+0 & 0&  1/n_3^2
+\end{array}\right],
+\end{equation}
+pri čemer so $n_1$, $n_2$ in $n_3$ lomni količniki snovi. Ko priključimo zunanje polje, se tenzor
+spremeni. Pri elektro-optičnem pojavu so spremembe tenzorja dielektričnosti zaradi vpliva zunanjega polja navadno razmeroma majhne in lahko spremembo komponente $\delta b_{ij}$ zapišemo kot 
+potenčno vrsto zunanjega polja $E$, 
 pri čemer upoštevajmo zgolj prva dva člena v razvoju
 \boxeq{7.1}{
 \delta b_{ij}=r_{ijk}E_{k}+q_{ijkl}E_{k}E_{l}.
 }
-Prvi člen, linearno sorazmeren zunanjem polju, opisuje linearni elektro-optični
+Prvi člen, linearno sorazmeren z zunanjim poljem, opisuje linearni elektro-optični
 ali Pockelsov\index{Pockelsov pojav} pojav\footnote{Nemški fizik Friedrich Carl Alwin Pockels, 1865--1913.}. 
 Tenzor tretjega ranga $r_{ijk}$, ki je lastnost snovi, imenujemo elektro-optični 
 tenzor\index{Elektro-optični tenzor}
@@ -81,7 +82,8 @@ Pockelsov tenzor je različen od nič v snoveh brez centra inverzije, značilne 
 tenzorja pa so okoli $r \sim 10^{-12} - 10^{-10}$~m/V.
 
 Kvadratnemu elektro-optičnemu pojavu pravimo Kerrov\index{Kerrov pojav}
-pojav\footnote{Škotski fizik John Kerr, 1824--1907.}, tenzorju $q_{ijkl}$ pa Kerrov tenzor\index{Kerrov tenzor}. 
+pojav\footnote{Škotski fizik John Kerr, 1824--1907.}, tenzorju $\underline{q}$ 
+pa Kerrov tenzor\index{Kerrov tenzor}. 
 Kerrov pojav je praviloma precej šibkejši od Pockelsovega, vendar je različen od nič v vseh snoveh, ne glede na
 njihove simetrijske lastnosti, torej tudi v tekočinah. 
 Značilna vrednost Kerrovega tenzorja je $q \sim 10^{-24}$~m$^2$/V$^2$. Navadno ločimo dva primera Kerrovega
@@ -91,17 +93,14 @@ ga podrobneje spoznali pri obravnavi nelinearnih optičnih pojavov (poglavje~\re
 Za uporabo trdnih kristalov je pomemben
 predvsem linearni člen, zato se bomo osredotočili le nanj in zapisali
 \boxeq{eq:Pockels}{
-\delta b_{ij}=r_{ijk}E_{k}. 
+\delta b_{ij}=r_{ijk}E_{k}.
 }
 
 \subsection*{Elektro-optični ali Pockelsov tenzor}
 Simetrija snovi pomembno vpliva na obliko tenzorjev, ki opisujejo njene lastnosti.
-Pockelsov tenzor $r$ je tenzor tretjega ranga, zato je lahko različen
+Pockelsov tenzor $\underline{r}$ je tenzor tretjega ranga, zato je lahko različen
 od nič le v kristalih brez centra inverzije. 
-Simetrija kristala tudi v primeru, ko ni centra inverzije, močno
-zmanjša število neodvisnih komponent $r_{ijk}$. 
-
-Ker je inverzni dielektrični tenzor $b$ simetričen, je v prvih dveh indeksih simetričen
+Ker je inverzni dielektrični tenzor $\underline{b}$ simetričen, je v prvih dveh indeksih simetričen
 tudi Pockelsov tenzor
 \beq
 r_{ijk} = r_{jik}.
@@ -117,17 +116,17 @@ $yz=4$, $zx=5$ in $xy=6$. Tako postane $r_{ijk}$ matrika velikosti
 $6\times3$, simetrični tenzor drugega ranga $b_{ij}$ pa šestdimenzionalen
 vektor.
 
-\begin{definition}
-Naj bo $Q$ transformacijska matrika za dano simetrijsko operacijo. Potem za tenzorje
-tretjega ranga velja
-\beq
-r_{ijk} = Q_{ip}Q_{jq}Q_{kr}r_{pqr}.
-\eeq
-Zapiši transformacijsko matriko $Q$ za vrtenje okoli osi $z$ za $\pi/2$ in pokaži, da so
-v primeru štirištevne simetrije od nič različne le komponente $r_{xxz}=r_{yyz}, r_{zzz}, 
-r_{yzx}=-r_{xzy}$ in $r_{xzx}=r_{yzy}$. Razmisli in izračunaj, kakšen bi bil tenzor $r$, če bi 
-štirištevni simetriji dodali še zrcaljenje čez ravnino $xy$.
-\end{definition}
+% \begin{definition}
+% Naj bo $Q$ transformacijska matrika za dano simetrijsko operacijo. Potem za tenzorje
+% tretjega ranga velja
+% \beq
+% r_{ijk} = Q_{ip}Q_{jq}Q_{kr}r_{pqr}.
+% \eeq
+% Zapiši transformacijsko matriko $Q$ za vrtenje okoli osi $z$ za $\pi/2$ in pokaži, da so
+% v primeru štirištevne simetrije od nič različne le komponente $r_{xxz}=r_{yyz}, r_{zzz}, 
+% r_{yzx}=-r_{xzy}$ in $r_{xzx}=r_{yzy}$. Razmisli in izračunaj, kakšen bi bil tenzor $r$, če bi 
+% štirištevni simetriji dodali še zrcaljenje čez ravnino $xy$.
+% \end{definition}
 
 Nekaj primerov Pockelsovih tenzorjev pri različnih kristalnih simetrijah
 je podanih v tabeli~(\ref{table:Pockels}).
