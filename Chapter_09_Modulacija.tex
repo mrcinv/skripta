@@ -3,8 +3,8 @@
 \chapter{Modulacija svetlobe}
 
 Pri obravnavi širjenja svetlobe skozi snov je najpomembnejši parameter lomni količnik
-oziroma tenzor dielektričnosti. V tem poglavju bomo spoznali, kako se pod zunanjim vplivom 
-spremeni lomni količnik in tako vpliva na širjenje svetlobe skozi snov. To nam omogoča,
+oziroma tenzor dielektričnosti. V tem poglavju bomo spoznali, kako zunanje polje vpliva 
+na lomni količnik in tako na širjenje svetlobe skozi snov. To nam omogoča,
 da z zunanjim poljem spreminjamo -- moduliramo -- lastnosti svetlobe. En primer uporabe smo že spoznali pri 
 obravnavi laserja, kjer za preklop dobrote potrebujemo element, ki hitro spreminja 
 prepustnost. Še pomembnejša je modulacija valovanja pri optičnem prenosu informacij.
@@ -39,7 +39,7 @@ Kako je v nasprotnem primeru, ko je frekvenca polja primerljiva z optično frekv
 smo na široko obravnavali v poglavju o nelinearni optiki (poglavje~\ref{chap:NLO}).
 
 Namesto dielektričnega tenzorja\index{Dielektričnost!inverzna} 
-navadno vpeljemo inverzni dielektrični tenzor
+vpeljemo inverzni dielektrični tenzor
 \beq
 \underline{b}=\underline{\epsilon}^{-1}.
 \eeq
@@ -51,13 +51,13 @@ in spremembo dielektričnega tenzorja $\delta \varepsilon_{ij}$
  \delta \underline{\varepsilon}= -\underline{b}^{-1}\delta \underline{b}\, \underline{b}^{-1}
  = -\underline{\tilde{\varepsilon}}\, \delta \underline{b}\, \underline{\tilde{\varepsilon}},
 \eeq
-pri čemer je $\underline{\tilde{\varepsilon}}$ označuje dielektrični in $\underline{\tilde{b}}$
-inverzni dielektrični tenzor v odsotnosti zunanjega polja (nemoten tenzor).
+pri čemer $\underline{\tilde{\varepsilon}}$ označuje dielektrični tenzor v odsotnosti zunanjega polja 
+(nemoten tenzor).
 \end{definition}
 
 Tenzor dielektričnosti $\underline{\tilde{\varepsilon}}$ 
-je v lastnem nemotenem sistemu diagonalen, zato inverzni 
-dielektrični tenzor v lastnem nemotenem sistemu preprosto zapišemo kot
+je v lastnem nemotenem sistemu diagonalen z lastnimi vrednostmi $n_1^2, n_2^2$ in $n_3^2$, 
+zato inverzni dielektrični tenzor v lastnem nemotenem sistemu preprosto zapišemo kot
 \begin{equation}
 \underline{\tilde{b}} = 
 \left[\begin{array}{ccc}
@@ -73,9 +73,9 @@ pri čemer upoštevajmo zgolj prva dva člena v razvoju
 \boxeq{7.1}{
 \delta b_{ij}=r_{ijk}E_{k}+q_{ijkl}E_{k}E_{l}.
 }
-Prvi člen, linearno sorazmeren z zunanjim poljem, opisuje linearni elektro-optični
+Prvi člen je linearno sorazmeren z zunanjim poljem in opisuje linearni elektro-optični
 ali Pockelsov\index{Pockelsov pojav} pojav\footnote{Nemški fizik Friedrich Carl Alwin Pockels, 1865--1913.}. 
-Tenzor tretjega ranga $r_{ijk}$, ki je lastnost snovi, imenujemo elektro-optični 
+Tenzor tretjega ranga $r_{ijk}$ imenujemo elektro-optični 
 tenzor\index{Elektro-optični tenzor}
 ali tudi Pockelsov tenzor\index{Pockelsov tenzor|see {Elektro-optični tenzor}}. 
 Pockelsov tenzor je različen od nič v snoveh brez centra inverzije, značilne vrednosti Pockelsovega
@@ -242,7 +242,7 @@ r_{63}E_z& 1/n_o^2 & 0\\
 \label{7.8a}
 \eeq
 Če želimo izračunati, kako se po kristalu pod napetostjo širi vpadni svetlobni
-snop, moramo gornji dielektrični tenzor diagonalizirati. Lastne vrednosti novega tenzorja
+snop, moramo gornji tenzor diagonalizirati. Lastne vrednosti novega tenzorja
 in pripadajoče nove lastne osi so
 \begin{align}
 \lambda_1 &= \frac{1}{n_o^2}+ r_{63}E_z \quad \mathrm{in} \quad \mathbf{e}_1 = \frac{1}{\sqrt{2}}(1,1,0)\\
@@ -264,22 +264,22 @@ V novem koordinatnem sistemu je inverzni dielektrični tenzor diagonalen in enak
 \def\svgwidth{60truemm} 
 \input{slike/09_AMindikatrisa.pdf_tex}
 \caption{Optično enoosni kristal postane pod napetostjo dvoosen. Indikatrisa, ki je pravokotno
-na optično os brez polja krožnica, se pod vplivom napetosti spremeni v elipso. }
+na optično os brez polja krožnica (polna črta), se pod vplivom napetosti spremeni v elipso (črtkana črta). }
 \label{fig:amn}
 \end{figure}
 
 Spomnimo se, da potuje svetloba skozi kristal vzdolž osi $z$. Brez zunanjega električnega
 polja je kristal enoosen z optično osjo v smeri $z$. Lomni količnik je torej neodvisen od
 polarizacije vpadnega valovanja in je enak $n_o$. Ko priključimo polje, postane kristal
-optično dvoosen, saj so vse tri lastne vrednosti tenzorja dielektričnosti različne. Za žarek, 
+optično dvoosen, saj so vse tri lastne vrednosti tenzorja dielektričnosti različne. 
+
+Za žarek, 
 ki potuje vzdolž osi $z$, torej obstajata dve lastni smeri $x'$ in $y'$ z ustreznima
 novima lastnima količnikoma, ki ju izrazimo kot
 \beq
 \frac{1}{n_{x'}^2} = \frac{1}{n_o^2}+ r_{63}E_z \quad \mathrm{in} \quad 
 \frac{1}{n_{y'}^2} = \frac{1}{n_o^2}- r_{63}E_z. 
 \eeq
-Kadar polarizacija vpadnega valovanja ne sovpada z novimi lastnimi osmi $x'$ ali $y'$, je 
-svetloba po preletu kristala v splošnem eliptično polarizirana.
 
 Za vsa eksperimentalno dosegljiva polja velja, da je $rE\ll1/n_o^2$, 
 zato lahko gornja izraza razvijemo za majhne popravke
@@ -294,23 +294,24 @@ Podobno izpeljemo še za drugo lastno vrednost
 \boxeq{EOny}{
 n_{y'}\approx n_o + \frac{1}{2}n_o^3 r_{63}E_z.
 }
-Različni lastni polarizaciji potujeta vzdolž osi $z$ z različnima hitrostma. Ko 
+Različni lastni polarizaciji torej potujeta vzdolž osi $z$ z različnima hitrostma. Ko 
 prepotujeta dolžino kristala $L$, pride med njima do fazne razlike
 \beq
 \Delta \phi = k_0 n_{y'} L - k_0 n_{x'} L = \frac{\omega}{c_0}L 
 n_o^3 r_{63}E_z.
 \label{phiAM}
-\eeq
-Prelet kristala torej doda vpadnemu valovanju fazni zamik, ki je odvisen od električne poljske
-jakosti $E_z$. 
+\eeq 
+
+Kadar polarizacija vpadnega valovanja ne sovpada z novima lastnima osema $x'$ ali $y'$, je 
+svetloba po preletu kristala v splošnem eliptično polarizirana.
 
 Vpeljemo še karakteristično napetost $U_\pi$, pri kateri je dodatna \index{$\pi$-napetost}
 fazna razlika enaka $\pi$ in kristal deluje kot ploščica $\lambda/2$\index{Ploščica $\lambda/2$}
 \boxeq{UpiL}{
 U_\pi = \frac{\pi c_o}{\omega n_o^3 r_{63}} = \frac{\lambda}{2 n_o^3 r_{63}}.
 }
-Za kristal KDP je $\pi$-vrednost napetosti pri valovni dolžini $633$~nm okoli  $9000$~V. 
-Izračunana napetost je precej velika. Velike delovne napetosti
+Za kristal KDP je $\pi$-vrednost napetosti pri valovni dolžini $633$~nm okoli  $9000$~V, kar 
+je precej velika napetost. Velike delovne napetosti
 so značilne za kristalne elektro-optične modulatorje in so njihova
 glavna pomanjkljivost. 
 
@@ -354,8 +355,8 @@ zanemarimo člene, v katerih $rE$ nastopa v kvadratni obliki, in dobimo nove las
 \end{align}
 kar ustreza lomnim količnikom 
 \begin{align}
-n_{x'} &\approx n_o(1+\frac{1}{2}n_o^2r_{22}E_y)\\
-n_{y'} &\approx n_o(1-\frac{1}{2}n_o^2r_{22}E_y)\\
+n_{x'} &\approx n_o+\frac{1}{2}n_o^3r_{22}E_y\\
+n_{y'} &\approx n_o-\frac{1}{2}n_o^3r_{22}E_y\\
 n_z' &\approx n_e.
 \end{align}
 Kako pa je z novimi lastnimi osmi? Hitro ugotovimo, da se tudi pri 
@@ -378,7 +379,7 @@ Karakteristična $\pi$-napetost \index{$\pi$-napetost}je tako
 U_\pi = \frac{\lambda d}{2 Ln_o^3 r_{22}},
 }
 pri čemer moramo ločiti med $L$, ki je dolžina kristala v smeri $z$, in $d$, ki je  
-širina v prečni smeri v kateri priključimo napetost. 
+širina kristala v smeri, v kateri priključimo napetost. 
 Za izbran kristal ($d=5$~mm, $L=1$~cm) je $\pi$-vrednost 
 napetosti pri valovni dolžini $633$~nm okoli $2000$~V. 
 
@@ -411,7 +412,7 @@ prepuščeno moč svetlobe -- amplitudno moduliramo signal.
 Vrnimo se k longitudinalni\index{Elektro-optična modulacija!longitudinalna}
 modulaciji (slika~\ref{fig:amshema}).
 Naj bo vpadna električna poljska jakost $E_0$ polarizirana v smeri $y$. 
-Ko priključimo napetost, os $y$ ni več lastna os, ampak sta lastni osi zasukani 
+Ko priključimo napetost, sta novi lastni osi zasukani 
 za kot $45~^\circ$ glede na prvotni lastni osi (slika~\ref{fig:amn}). Vpadno 
 valovanje razstavimo na komponenti $x'$ in $y'$
 \beq
@@ -447,12 +448,12 @@ T = \frac{j}{j_0} = \sin\left(\frac{\Delta\phi}{2}\right)^2 =
 }
 \begin{figure}[h]
 \centering
-\def\svgwidth{90truemm} 
+\def\svgwidth{70truemm} 
 \input{slike/09_AMT.pdf_tex}
 \caption{Prepustnost amplitudnega modulatorja v odvisnosti od faznega zamika $\Delta \phi$, 
-ki je sorazmeren priključeni napetosti $U$. Če pred vzorec dodamo ploščico $\lambda/4$, 
-se pojavi stalni fazni zamik $\pi/2$ in odvisnost prepustnosti od priključene napetosti
-je približno  linearna (modra črta).}
+sorazmernega priključeni napetosti $U$ (rdeča črta). Če pred vzorec dodamo ploščico $\lambda/4$, 
+pride do faznega zamika $\pi/2$ in odvisnost prepustnosti od priključene napetosti
+je približno linearna (modra črta).}
 \label{fig:amt}
 \end{figure}
 
@@ -480,7 +481,7 @@ poljem spremenili fazi lastnih valov, zaradi česar je postalo linearno
 polarizirano vpadno valovanje po prehodu kristala eliptično polarizirano.
 Spremembo polarizacije smo z analizatorjem prevedli v spremembo amplitude.
 
-Včasih pa želimo modulirati fazo vpadne svetlobe. Vrnimo se k primeru longitudinalne
+Včasih pa želimo modulirati fazo vpadne svetlobe. Tudi to si oglejmo na primeru longitudinalne
  modulacije. Fazno oziroma frekvenčno modulacijo dosežemo tako,
 da vhodno polarizacijo izberemo vzporedno eni od novih lastnih osi kristala, 
 na primeri osi $x'$, izhodni polarizator pa odstranimo (slika~\ref{fig:fmshema}). 
@@ -499,7 +500,7 @@ Celoten fazni zamik po preletu skozi kristal zapišemo kot
 \frac{1}{2}n_o^3 r_{63}\frac{U}{L}\right)-\omega_0 t,
 \label{fmphi}
 \eeq
-pri čemer smo za lomni količnik zapisali skladno z enačbo~(\ref{EOnx}). Opazimo,
+pri čemer smo lomni količnik zapisali skladno z enačbo~(\ref{EOnx}). Opazimo,
 da je fazni zamik odvisen od priključene zunanje napetosti.
 
 Obravnavajmo dva primera spreminjajoče se napetosti. V prvem primeru naj bo 
@@ -520,7 +521,7 @@ oziroma
 \boxeq{FMc}{
 \omega  = \omega_0 + \Delta \omega.
 }
-Linearno naraščajoča modulacijska napetost da torej konstanten frekvenčni premik, kar v optiki 
+Linearno spreminjajoča se modulacijska napetost da torej konstanten frekvenčni premik, kar v optiki 
 pogosto potrebujemo. Dosegljive spremembe frekvence so seveda dokaj majhne,
 do nekaj sto~MHz, saj so omejene s hitrostjo spreminjanja napetosti.
 Napetost seveda tudi ne more neomejeno naraščati. Kadar se napetost
