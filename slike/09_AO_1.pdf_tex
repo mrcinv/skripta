@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{557.90097656bp}%
+    \setlength{\unitlength}{1280.11943359bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,12 +48,18 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.87823377)%
+  \begin{picture}(1,0.38442988)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{09_AO_1.pdf}}%
-    \put(0.38570662,0.02011371){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
-    \put(0.15418947,0.45329264){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{09_AO_1.pdf}}%
-    \put(0.82677443,0.27482235){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\beta$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{09_AO_1.pdf}}%
+    \put(0.01570695,0.36639659){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0.16809845,0.00794468){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
+    \put(0.06719877,0.19673249){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta$}}}%
+    \put(0.3603244,0.11895167){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\beta$}}}%
+    \put(0.00567134,0.35273271){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a)}}}%
+    \put(0.65462957,0.00455639){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
+    \put(0.59705943,0.18484965){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta$}}}%
+    \put(0.86444813,0.18469738){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta$}}}%
+    \put(0.86429587,0.15177352){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta$}}}%
+    \put(0.49058957,0.35276904){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{b)}}}%
+    \put(-0.05361757,0.43424702){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{1.15813953\unitlength}\raggedright \end{minipage}}}%
   \end{picture}%
 \endgroup%

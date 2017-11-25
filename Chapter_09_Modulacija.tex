@@ -588,7 +588,7 @@ ploskvah. Svetloba se ob prehodu skozi prizmo lomi v odvisnosti od njenega
 lomnega količnika, tega pa lahko spreminjamo 
 z napetostjo na elektrodah. Praktično je bolj uporabna dvojna prizma. Sestavljena je iz dveh enakih 
 prizem, ki skupaj tvorita kvader, pri tem pa optični osi zgornje in spodnje prizme
-kažeta v nasprotnih smereh. S spreminjanjem napetosti, ki jo priključimo prečno na smer
+kažeta v nasprotni smeri. S spreminjanjem napetosti, ki jo priključimo prečno na smer
 razširjanja svetlobe, lahko zelo hitro in zelo natančno spreminjamo smer izhodnega žarka. 
 Vendar ta pristop ni splošno uveljavljen, predvsem zaradi velike napetosti, ki je 
 potrebna za znatno uklanjanje. Veliko bolj razširjen je akusto-optični pojav, ki ga 
@@ -670,12 +670,13 @@ Pri elasto-optičnem pojavu dielektrične lastnosti snovi in njen lomni količni
 spreminjamo z mehansko deformacijo. Podobno kot pri elektro-optičnem pojavu opišemo pojav
 s spremembo inverznega dielektričnega tenzorja\index{Dielektričnost!inverzna}
 \begin{equation}
-\underline{b} = \underline{\tilde{b}}+ \Delta\underline{b},
+\underline{b} = \underline{\tilde{b}}+ \delta\underline{b},
 \end{equation}
 pri čemer je $\underline{\tilde{b}}$ tenzor v odsotnosti mehanske deformacije, 
-$\Delta\underline{b}$ pa sprememba tenzorja zaradi deformacije snovi. Zapišemo jo kot
+$\delta\underline{b}$ pa sprememba tenzorja zaradi deformacije snovi. V prvem približku jo zapišemo
+kot
 \boxeq{7.27}{
- \Delta b_{ij}=p_{ijkl}S_{kl}.
+ \delta b_{ij}=p_{ijkl}S_{kl}.
 }
 Sorazmerna je s tenzorjem deformacije snovi oziroma 
 Greenovim tenzorjem\footnote{Angleški matematični fizik George Green, 1793--1841.} v
@@ -688,7 +689,7 @@ pri čemer je $\mathbf{u}$ vektor deformacije.
 
 Vpeljali smo še sorazmernostni faktor
 $p_{ijkl}$, ki ga imenujemo elasto-optični tenzor\index{Elasto-optični tenzor}. 
-Tenzor $p$ je različen od nič v vsaki snovi, ker povezuje dva simetrična tenzorja 
+Tenzor $p$ je različen od nič v vsaki snovi, saj povezuje dva simetrična tenzorja 
 drugega ranga. Posledično je simetričen v prvem in drugem paru indeksov
 \beq
 p_{ijkl} = p_{jikl} = p_{ijlk} =p_{jilk}.
@@ -718,10 +719,10 @@ p_{41} = -0,15, p_{44} = 0,12$.
 Podobno kot pri elektro-optičnem pojavu lahko iz enačbe~(\ref{7.27}) izrazimo
 spremembo dielektričnega tenzorja 
 \begin{equation}
-\Delta\epsilon_{ij}=-\tilde{\epsilon}_{ii}\tilde{\epsilon}_{jj}p_{ijkl}S_{kl},
+\delta\epsilon_{ij}=-\tilde{\epsilon}_{ii}\tilde{\epsilon}_{jj}p_{ijkl}S_{kl},
 \label{7.29}
 \end{equation}
-kjer smo že predpostavili, da je nemoteni $\epsilon$ diagonalen. 
+kjer smo privzeli, da je nemoteni $\epsilon$ diagonalen. 
 
 Dvojni lom\index{Dvolomnost}, ki se pojavi v deformirani snovi, izkoriščamo za študij
 mehanskih napetosti v modelih, ki so izdelani iz prozorne plastične
@@ -755,7 +756,7 @@ v snovi vzbudimo tudi stoječe valovanje.
 Zaradi zvočnega valovanja se v snovi periodično spreminja gostota in 
 z njo lomni količnik
 \beq
-n = \tilde{n} + \Delta n \sin \left(\frac{2\pi}{\Lambda} x- \Omega t\right).
+n = \tilde{n} + \delta n \sin \left(\frac{2\pi}{\Lambda} x- \Omega t\right).
 \eeq
 V zgoščini je lomni količnik nekoliko večji kot v razredčini, zato je optična pot na takem mestu
 skozi plast daljša. Ravno svetlobno valovanje, ki vpada na plast pravokotno glede
@@ -776,7 +777,7 @@ ultrazvočno valovanje.
 \end{figure}
 
 Oglejmo si dva limitna primera. V prvem primeru je debelina plasti $d$, 
-v kateri vzbujamo zvočno valovanje, zelo majhna (slika~\ref{fig:ao_bragg} levo). 
+v kateri vzbujamo zvočno valovanje, zelo majhna (slika~\ref{fig:ao_bragg}\,a). 
 Takrat modulator deluje kot tanka uklonska mrežica in pojavi se veliko 
 uklonskih vrhov, intenziteta posameznega žarka pa je razmeroma majhna. 
 Kote, pod katerimi se pojavijo ojačitve, izračunamo po preprosti enačbi
@@ -792,19 +793,17 @@ Opazimo ga pri razmeroma nizkih zvočnih frekvencah
 kotu $\vartheta$.
 \begin{figure}[h]
 \centering
-\def\svgwidth{50truemm} 
-\input{slike/09_AO_1.pdf_tex}\qquad
-\def\svgwidth{65truemm} 
-\input{slike/09_AO_2.pdf_tex}
-\caption{Ob vpadu svetlobe na tanko plast zvočnega valovanja se pojavi veliko uklonskih vrhov, 
-na debeli plasti zvočnega valovanja pa je opazen zgolj en uklonjen vrh, 
+\def\svgwidth{120truemm} 
+\input{slike/09_AO_1.pdf_tex}
+\caption{Ob vpadu svetlobe na tanko plast zvočnega valovanja (a) se pojavi veliko uklonskih vrhov, 
+na debeli plasti zvočnega valovanja (b) pa je opazen zgolj en uklonjen vrh, 
 pa še ta le ob izpolnjenem Braggovem pogoju (enačba~\ref{7.29a}).}
 \label{fig:ao_bragg}
 \end{figure}
 
 V nasprotnem limitnem primeru se svetloba uklanja na ravnih zvočnih valovih in modulator deluje 
-kot debela uklonska mrežica. V splošnem je delež uklonjene svetlobe na taki mrežici 
-neuporabno majhen. 
+kot debela uklonska mrežica (slika~\ref{fig:ao_bragg}\,b). 
+V splošnem je delež uklonjene svetlobe na taki mrežici neuporabno majhen. 
 Znaten postane le tedaj, kadar je izpolnjen Braggov\index{Braggov uklon}
 pogoj\footnote{Angleška znanstvenika in nobelovca Sir William Henry Bragg, 1862--1942,
 in Sir William Lawrence Bragg, 1890--1971.}
@@ -851,8 +850,8 @@ Izhajajmo iz pogoja, da je razširitev žarka na debelini plasti zvočnega valov
 d \sim \frac{\Lambda^2}{4 \lambda}.
 \eeq
 Če svetloba z $\lambda = 1~\si{\micro\metre}$ vpade na kristal, v katerem je vzbujeno zvočno
-valovanje z valovno dolžino $\Lambda = 0,2$~mm in frekvenco $\Omega = 150$~MHz, je mejna 
-debelina $d \sim 1$~cm.
+valovanje z valovno dolžino $\Lambda = 0,2~\si{\milli\metre}$ in frekvenco $\Omega = 150~\si{\mega\hertz}$, 
+je mejna debelina $d \sim 1~\si{\centi\meter}$.
 \end{remark}
 
 Če je zvočno valovanje potujoče, kar smo v gornjem razmišljanju že privzeli
@@ -893,7 +892,7 @@ direktnega svetlobnega snopa. To potrebujemo na primer pri preklapljanju
 kvalitete laserskega resonatorja.
 
 Tretji primer uporabe je spreminjanje frekvence svetlobe. Možne so spremembe
-do nekaj 100~MHz, kar je ravno primerno za uporabo v laserskih merilnikih
+do nekaj $100~\si{\mega\hertz}$, kar je ravno primerno za uporabo v laserskih merilnikih
 hitrosti, kjer merimo frekvenco utripanja med referenčno svetlobo in svetlobo, odbito od
 merjenega predmeta. Če ima referenčna svetloba
 isto frekvenco kot merilni snop, ni mogoče določiti predznaka hitrosti
@@ -930,7 +929,8 @@ in se moramo zateči k približkom. Uporabili bomo metodo sklopljenih valov.
 
 Naj vzporeden snop zvočnega valovanja s širino $d$ in valovnim vektorjem $\mathbf{q}$ 
 potuje v smeri $x$.
-Nanj pod kotom $\vartheta$ glede na os $z$ vpada ravno svetlobno valovanje z valovnim vektorjem 
+Nanj pod kotom $\vartheta$ glede na os $z$ (normalo na kristal) 
+vpada ravno svetlobno valovanje z valovnim vektorjem 
 $\mathbf{k}=(k_{x},0,k_{z})= k(\sin\vartheta,0,\cos\vartheta)$.
 Vse valovanje, vpadno na levi od zvočnega snopa in izhodno na njegovi desni,
 obravnavajmo znotraj snovi, da nam ni treba upoštevati še loma, ki
@@ -941,27 +941,27 @@ dielektrične konstante. Ob upoštevanju zveze med spremembo dielektričnosti in
 v zvočnem valu~(enačba~\ref{7.29}) lahko spremembo dielektričnosti
 zapišemo kot  
 \begin{equation}
-\epsilon=\tilde{\epsilon}+\Delta\epsilon = 
+\epsilon=\tilde{\epsilon}+\delta\epsilon = 
 \tilde{\varepsilon} -\tilde{\epsilon}^{2}pS_{0}\sin(qx-\Omega t).
 \label{7.33}
 \end{equation}
 Zaradi spremembe dielektričnosti pride do pojava
-dodatne polarizacije $\Delta P$
+dodatne polarizacije $\delta P$
 \beq
-\Delta P = \varepsilon_0 \Delta \varepsilon E = - \varepsilon_0 
+\delta P = \varepsilon_0 \delta \varepsilon E = - \varepsilon_0 
 \tilde{\varepsilon}^2 p S_0 \sin(qx-\Omega t)E.
 \eeq
-Dodatna polarizacija v valovno enačbo doprinese dodaten nehomogen člen, podobno
+Dodatna polarizacija v valovno enačbo doprinese nehomogen člen, podobno
 kot pri nelinearni optiki (enačba~\ref{8.3}). Zapišemo
 \begin{equation}
 \nabla^{2}E-\frac{\tilde{\epsilon}}{c^{2}}{\frac{\partial E^{2}}
-{\partial t^{2}}}=\mu_{0}{\frac{\partial^2 \Delta P}{\partial t^{2}}},
+{\partial t^{2}}}=\mu_{0}{\frac{\partial^2 \delta P}{\partial t^{2}}},
 \label{7.33a}
 \end{equation}
 pri čemer smo privzeli, da je $\nabla\cdot\mathbf{E}\approx 0$, čeprav je
 $\epsilon$ funkcija kraja. 
 
-Enačbo~(\ref{7.33a}) brez dodane polarizacije $\Delta P$ rešijo ravni valovi 
+Enačbo~(\ref{7.33a}) brez dodane polarizacije $\delta P$ rešijo ravni valovi 
 z valovnim vektorjem $\mathbf{k}$ in frekvenco $\omega$. Tej rešitvi se 
 primešajo valovi z valovnim vektorjem $\mathbf{k}\pm n\mathbf{q}$
 in frekvenco $\omega\pm n\Omega$. Zato iščemo rešitve v obliki vsote
@@ -970,8 +970,8 @@ ravnih valov, torej Fouriereve vrste
 E=\sum_{n}A_{n}(z)e^{in(qx-\Omega t)}e^{i(k_{x}x+k_{z}z-\omega t)}.
 \label{7.34}
 \end{equation}
-Zaradi sklopitve preko $\Delta P$ smo dopustili, da so amplitude
-$A_{n}$ funkcije $z$. Če je $\Delta\epsilon$ dovolj majhen, se $A_{n}(z)$
+Zaradi sklopitve preko $\delta P$ smo dopustili, da so amplitude
+$A_{n}$ funkcije $z$. Če je $\delta\epsilon$ dovolj majhen, se $A_{n}(z)$
 le počasi spreminjajo.
 
 Izračunajmo 
@@ -985,7 +985,7 @@ kadar se $A_{n}$ spreminjajo počasi v primerjavi z exp$(ik_{z}z)$. Drugi odvod
 polarizacije po času da
 \beq
 \begin{split}
-\frac{\partial^2 \Delta P}{\partial t^2} =&-\frac{\varepsilon_0 \tilde{\varepsilon}^2pS_0}{2i} 
+\frac{\partial^2 \delta P}{\partial t^2} =&-\frac{\varepsilon_0 \tilde{\varepsilon}^2pS_0}{2i} 
 \sum_{n} A_n(z) \exp\left(i[(k_x+nq)x+k_{z}z-(\omega+n\Omega)t]\right) \cdot \\ &\left(
 -[n\Omega+\omega+\Omega]^2e^{i(qx-\Omega t)} + [n\Omega+\omega-\Omega]^2e^{i(-qx+\Omega t)} \right),
 \label{7.35a}
@@ -1024,9 +1024,9 @@ pomembnih limitnih primerih. Amplituda vala, ki vpada z leve, naj bo $A_{0}(0)=A
 za ostale pa naj velja $A_{n}(0)=0$.
 
 \subsection*{Braggov uklon ob šibki pretvorbi}
-Najprej privzemimo, da je $L\xi \ll 1$, da je torej velikost $\Delta \epsilon$
-majhna in debelina zvočnega snopa ne prevelika. Tedaj je pri vseh
-$z$ in za pozitivne $m$ $A_{m+1}\ll A_{m}$ in lahko člen $A_{m+1}$
+Najprej privzemimo, da je $\xi d\ll 1$, da je torej velikost $\delta \epsilon$
+majhna in debelina zvočnega snopa ne prevelika. Tedaj pri vseh
+$z$ in za pozitivne $m$ velja $A_{m+1}\ll A_{m}$ in lahko člen $A_{m+1}$
 v enačbi~(\ref{7.37}) izpustimo. S tem zapišemo preprost sistem enačb
 \begin{equation}
 A_{m}'+i\beta_{m}A_{m}=\xi A_{m-1},
@@ -1065,14 +1065,14 @@ Delež moči uklonjenega vala je potem
 \frac{I_{1}}{I_{0}}=\left|\frac{A_{1}}{A_{0}}\right|^{2}=(\xi d)^{2}
 \left(\frac{\sin\beta_{1}d/2}{\beta_{1}d/2}\right)^{2}.
 }
-Če je Braggov pogoj izpolnjen, je $I_{1}/I_{0}=(\xi d)^{2}$,
-kar lahko velja le, dokler je $\xi d\ll1$. Kadar intenziteta uklonjenega žarka
+Če je Braggov pogoj izpolnjen, je $I_{1}/I_{0}=(\xi d)^{2}$ in naraščanje parabolično. To seveda
+lahko velja le, dokler je $\xi d\ll1$. Kadar intenziteta uklonjenega žarka
 tako naraste, da ta pogoj ni več izpolnjen, je treba v računu upoštevati tudi 
 zmanjšanje moči vpadnega snopa.
 
 \subsection*{Braggov uklon ob znatni pretvorbi}
-Drug primer naj bo približek, da sta le $A_{0}$ in $A_{1}$ različni od nič, 
-opustimo pa omejitev $d\xi\ll 1$. Ta približek je smiseln, saj je 
+Drug primer naj bo približek, da sta le $A_{0}$ in $A_{1}$ različna od nič, 
+opustimo pa omejitev $\xi d\ll 1$. Ta približek je smiseln, saj je 
 Braggov pogoj hkrati lahko izpolnjen le za en uklonjen val, na
 primer $m=1$. Tedaj so vse ostale amplitude $A_{m, m\ne0,1}$
 majhne in ne vplivajo na $A_{1}$. Zaradi velike pretvorbe 
@@ -1099,7 +1099,7 @@ Za čim bolj učinkovito delovanje akusto-optičnega modulatorja seveda
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/09_AOcalc.pdf_tex}
-\caption{Intenziteta prepuščenega in uklonjenega valovanja na zvočnem valovanju v
+\caption{Intenziteta prepuščenega (črna) in uklonjenega (rdeča) valovanja na zvočnem valovanju v
 odvisnosti od debeline plasti zvočnega valovanja}
 \label{s7.10}
 \end{figure}
@@ -1135,10 +1135,12 @@ M=\frac{n_{0}^{6}p^{2}}{\varrho v_{z}^{3}}.
 \end{equation}
 Večja kot je njegova vrednost, bolj izrazit je akusto-optični pojav v dani snovi. 
 
-Poglejmo primer. V kremenu z gostoto $\varrho=2,2\cdot10^{3}$ kg/m$^{3}$ je hitrost zvoka $v_{z}=6000$~m/s,
-$\tilde{n}=1,46$ in $p=0,2$. To da $M=8\cdot10^{-16}$~W/m$^{2}$.
-Pri gostoti zvočnega toka 10~W/cm$^{2}$ in valovni dolžini svetlobe 633~nm
-pride do popolnega prenosa moči v uklonjeni snop pri debelini $d=3$~cm. Gornja gostota
+Poglejmo primer. V kremenu z gostoto $\varrho=2,2\cdot10^{3}~\si{\kilo\gram/\metre^3}$ 
+je hitrost zvoka $v_{z}=6000~\si{\metre/\second}$,
+$\tilde{n}=1,46$ in $p=0,2$. To da $M=8\cdot10^{-16}~\si{\watt/\metre^2}$.
+Pri gostoti zvočnega toka $10~\si{\watt/\centi\metre^2}$ in valovni dolžini svetlobe 
+$633~\si{\nano\metre}$ pride do popolnega prenosa moči v uklonjeni snop pri 
+debelini $d=3~\si{\centi\metre}$. Gornja gostota
 zvočnega toka je kar velika in je ni prav lahko doseči, zato so 
 uklonski izkoristki navadno nekaj manjši od 1.
 
@@ -1152,16 +1154,16 @@ Uklonski kot je torej precej majhen.
 \begin{remark}
 Opisani račun izkoristka uklona na zvočnih valovih je uporaben tudi
 pri računu izkoristka holograma. V primeru faznega holograma je račun
-povsem enak in nam kaže tudi razliko med tankim in debelim hologramom,
-kako pa je z izkoristkom amplitudnega holograma, kjer je modulirana
+povsem enak in nam kaže tudi razliko med tankim in debelim hologramom.
+Kako pa je z izkoristkom amplitudnega holograma, kjer je modulirana
 absorpcija v snovi, lahko bralec izračuna sam.\footnote{Glej H. Kogelnik, Bell Syst. Tech. J.
 48, 2909 (1969).}
 \end{remark}
 
 \subsection*{Raman-Nathov uklon}
 Oglejmo si še tretji primer. Izhajamo iz sistema enačb~(\ref{7.37}), ki smo ga 
-zaenkrat rešili za primer Braggovega odboja oziroma v njegovi bližini. 
-Enačbe je preprosto rešiti še v primeru Raman-Nathovega približka. 
+zaenkrat rešili za primer Braggovega uklona oziroma v njegovi bližini. 
+Enačbe je preprosto rešiti še v primeru t. i. Raman-Nathovega približka. 
 \index{Raman-Nathov uklon}Vpeljimo novo neodvisno spremenljivko $\zeta=2\xi z$. 
 Zveza~(\ref{7.37})
 preide v 
@@ -1183,7 +1185,7 @@ v enačbi~(\ref{7.53}) prepoznamo rekurzijsko zvezo za Besslove funkcije
 \end{equation}
 z rešitvijo $A_{m}(z)=A_{0}J_{m}(2\xi z)$. Kadar je $2\xi d$ ničla funkcije
 J$_{0}$, prvič je to pri $2\xi d\approx 2.4$, se vsa energija ukloni iz
-vpadnega snopa, vendar se v tem primeru, ko Braggov pogoj ni izpolnjen,
+vpadnega snopa, vendar se v tem primeru 
 razporedi v mnogo uklonjenih snopov.
 
 \section{Modulacija s tekočimi kristali}
@@ -1220,7 +1222,7 @@ odklon molekul od $\mathbf{n}$ je nekaj deset stopinj, odvisno seveda od tempera
 \def\svgwidth{50truemm} 
 \input{slike/09_nematik.pdf_tex}
 \caption{Molekula enega najbolj razširjenih tekočih kristalov, 4-ciano-4'pentil-bifenila 
-ali 5CB (levo) in shematski prikaz nematične faze (desno)}
+ali 5CB (levo) in shematski prikaz nematične faze z označenim direktorjem (desno)}
 \label{fig:5CB}
 \end{figure}
 
@@ -1245,13 +1247,13 @@ po vzorcu neurejeno spreminja. V optičnih napravah pa potrebujemo urejene vzorc
 moramo ureditev vzorca vsiliti. To naredimo z zunanjim električnim ali magnetnim poljem, 
 ali pa vzorce pripravimo dovolj tanke, da ureditev vsilijo mejne površine. 
 
-Poglejmo najprej, kako nastane urejen vzorec v tankih plasteh. Če površino,
+Poglejmo, kako nastane urejen vzorec v tankih plasteh. Če površino,
 ki je v stiku s tekočim kristalom, ustrezno pripravimo (prevlečemo s posebnimi 
 plastmi ali mehansko obdelamo), se molekule tekočega kristala tik ob površini uredijo
-v dani smeri (slika~\ref{s7.20a}).
+v dani smeri.
 Tako na primer podrgnjena tanka plast najlona uredi $\mathbf{n}$ ob površini v smeri
-drgnjenja vzporedno s površino. Po drugi strani pa tanka plast lecitina ali 
-surfaktanta silana uredi direktor pravokotno na površino. Ti dve snovi imata namreč
+drgnjenja vzporedno s površino (slika~\ref{s7.20a}\,a). Po drugi strani pa tanka plast lecitina ali 
+surfaktanta silana uredi direktor pravokotno na površino (slika~\ref{s7.20a}\,b). Ti dve snovi imata namreč
 polarno glavo, ki se adsorbira na stekleno površino, in alifatsko verigo, 
 ki stoji približno pravokotno na površino. Zato se tudi alifatski repi molekul
 tekočega kristala uredijo pravokotno na steklo. V obeh primerih, 
@@ -1262,18 +1264,16 @@ vzorce debeline do kakih $200~\si{\micro\metre}$. Pri večjih debelinah so elast
 navori prešibki in v vzorcu nastanejo defekti.
 \begin{figure}[h]
 \centering
-\def\svgwidth{50truemm} 
-\input{slike/09_planarno.pdf_tex}\qquad
-\def\svgwidth{54truemm} 
-\input{slike/09_homeo.pdf_tex}
+\def\svgwidth{120truemm} 
+\input{slike/09_planarno.pdf_tex}
 \caption{Ureditev tekočega kristala navadno vsilimo z urejevalno površino. Dva primera
-sta planarna ureditev (levo), kjer je direktor vzporeden z urejevalno površino, in 
-homeotropna ureditev (desno), kjer je direktor pravokoten mejno ploskev.}
+sta planarna ureditev (a), kjer je direktor vzporeden z urejevalno površino, in 
+homeotropna ureditev (b), kjer je direktor pravokoten mejno ploskev.}
 \label{s7.20a}
 \end{figure}
  
 Na ureditev molekul tekočega kristala vpliva zunanje električno ali magnetno polje.
-Zaradi urejenosti molekul električna (in magnetna) susceptibilnost nematičnega tekočega
+Zaradi urejenosti molekul električna (ali magnetna) susceptibilnost nematičnega tekočega
 kristala ni skalar, temveč ima dve različni lastni vrednosti,
 eno za smer vzporedno z $\mathbf{n}$, drugo za pravokotno nanj. Zato je
 elektrostatična energija odvisna od kota med zunanjim poljem $\mathbf{E}$
@@ -1303,7 +1303,7 @@ w_a = -\frac{1}{2}\epsilon_{0}\epsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2},
 Če je $\epsilon_{a}>0$, se molekule tekočega kristala uredijo v smeri 
 zunanjega polja, v nasprotnem primeru pa pravokotno nanj.
 
-Struktura tekočekristalnega vzorca je tako odvisna od orientacijske
+Urejenost tekočekristalnega vzorca je tako odvisna od orientacijske
 elastičnosti, robnih pogojev, ki jih določimo z obdelavo mejne
 površine, in od jakosti ter smeri zunanjega električnega ali magnetnega polja.
 
@@ -1345,7 +1345,7 @@ v plasti zvezno zavrti.
 Pokazali bomo, da polarizacija svetlobe, ki je ob vstopu 
 v plast polarizirana v smeri urejanja, pri prehodu skozi plast približno
 sledi $\mathbf{n}$ in je ob izstopu iz plasti pravokotna
-na vpadno polarizacijo. Ko priključimo električno polje, se optična os 
+na vpadno polarizacijo. Ko priključimo električno polje, se direktor 
 obrne v smer pravokotno na plast tekočega kristala (slika~\ref{LCD1}\,b). V tem primeru 
 se polarizacija ne zasuče in analizator svetlobe ne prepusti. Plast med prekrižanima
 polarizatorjema brez polja torej prepušča svetlobo, s poljem pa ne. Pri tem
@@ -1359,7 +1359,7 @@ od valovne dolžine.
 Polarizacija (P) približno sledi smeri zasukanega direktorja in analizator (A) 
 prepusti svetlobo. b) Ko priključimo električno polje, se tekočekristalne molekule
 zasučejo v smer polja. Polarizacija svetlobe (P) se ohranja in analizator (A) 
-je ne prepusti. }
+sveltobe ne prepušča. }
 \label{LCD1}
 \end{figure}
 
@@ -1524,8 +1524,8 @@ polarizacija.
 \begin{remark}
 Disperzijsko zvezo (enačba~\ref{7.66} oziroma~\ref{7.66a}) 
 lahko rešimo numerično (slika~\ref{gap}). Vidimo, da pri 
-vseh frekvencah, razen v ozkem območju -- recimo mu frekvenčna reža --
-pri danem $\alpha$ obstajajo štiri realne rešitve za $k$, 
+izbranem $\alpha$ pri vseh frekvencah, razen v ozkem območju -- recimo mu frekvenčna reža --
+obstajajo štiri realne rešitve za $k$, 
 po dve za valovanji v pozitivni in v negativni smeri.
 V območju reže je en par rešitev imaginaren. Vsaki vrednosti $k$
 pripada neko razmerje amplitud $A$ in $B$, ki ga izračunamo
@@ -1541,7 +1541,7 @@ Braggovemu odboju na kristalih in daje holesterikom značilen obarvan
 videz.\index{Tekoči kristali!holesterik}
 \begin{figure}[h]
 \centering
-\def\svgwidth{60truemm} 
+\def\svgwidth{80truemm} 
 \input{slike/09_gap.pdf_tex}
 \caption{Rešitve disperzijske zveze (enačba~\ref{7.66}) v zasukanem nematiku
 pri izbrani $\alpha$. Razen na ozkem frekvenčnem območju obstajajo štiri 
@@ -1704,7 +1704,7 @@ zvezno preide iz vrednosti $a=0$ v končno vrednost.
 \centering
 \def\svgwidth{80truemm} 
 \input{slike/09_Fred.pdf_tex}
-\caption{Kvalitativno obnašanje amplitude deformacije ob Frederiksovem prehodu}
+\caption{Kvalitativno obnašanje amplitude deformacije $a$ ob Frederiksovem prehodu}
 \label{Fred}
 \end{figure}
 
