@@ -25,13 +25,17 @@
     <linearGradient
        id="linearGradient3885">
       <stop
-         id="stop3887"
+         style="stop-color:#dcdcdc;stop-opacity:1"
          offset="0"
-         style="stop-color:#828282;stop-opacity:1;" />
+         id="stop3889" />
       <stop
-         id="stop3889"
+         id="stop4341"
+         offset="0.4046129"
+         style="stop-color:#b1b1b1;stop-opacity:1;" />
+      <stop
+         style="stop-color:#828282;stop-opacity:1;"
          offset="1"
-         style="stop-color:#e0e0e0;stop-opacity:1;" />
+         id="stop3887" />
     </linearGradient>
     <linearGradient
        id="linearGradient3875">
@@ -210,7 +214,7 @@
        x1="102.98033"
        y1="497.77164"
        x2="103.55554"
-       y2="539.0899"
+       y2="540.46533"
        gradientUnits="userSpaceOnUse"
        spreadMethod="reflect"
        gradientTransform="matrix(0.94976064,0,0,1.0001509,0.2643895,-0.0836049)" />
@@ -252,8 +256,8 @@
      showgrid="false"
      inkscape:window-width="1178"
      inkscape:window-height="823"
-     inkscape:window-x="429"
-     inkscape:window-y="186"
+     inkscape:window-x="667"
+     inkscape:window-y="189"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -267,7 +271,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>

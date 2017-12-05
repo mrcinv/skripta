@@ -45,8 +45,8 @@ vpeljemo inverzni dielektrični tenzor
 \eeq
 
 \begin{definition}
-Pokaži, da je zveza med spremembo inverznega tenzorja $\delta b_{ij}$ 
-in spremembo dielektričnega tenzorja $\delta \varepsilon_{ij}$ 
+Pokaži, da je zveza med spremembo inverznega tenzorja $\delta \underline{b}$ 
+in spremembo dielektričnega tenzorja $\delta \underline{\varepsilon}$ 
 \beq
  \delta \underline{\varepsilon}= -\underline{b}^{-1}\delta \underline{b}\, \underline{b}^{-1}
  = -\underline{\tilde{\varepsilon}}\, \delta \underline{b}\, \underline{\tilde{\varepsilon}},
@@ -249,7 +249,7 @@ in pripadajoče nove lastne osi so
 \lambda_2 &= \frac{1}{n_o^2}- r_{63}E_z \quad \mathrm{in} \quad \mathbf{e}_2 = \frac{1}{\sqrt{2}}(-1,1,0)\\
 \lambda_3 &= \frac{1}{n_e^2} \quad \mathrm{in} \quad \mathbf{e}_3 = (0,0,1).
 \end{align}
-Vidimo, da so nove lastne osi zasukane za kot $45~^\circ$ glede na prvotne osi sistema.
+Os $z$ se ohranja, drugi dve novi lastni osi pa sta zasukani za kot $45~^\circ$ glede na prvotni osi $x$ in $y$.
 V novem koordinatnem sistemu je inverzni dielektrični tenzor diagonalen in enak
 \beq
 \underline{b} = 
@@ -269,7 +269,7 @@ na optično os brez polja krožnica (polna črta), se pod vplivom napetosti spre
 \end{figure}
 
 Spomnimo se, da potuje svetloba skozi kristal vzdolž osi $z$. Brez zunanjega električnega
-polja je kristal enoosen z optično osjo v smeri $z$. Lomni količnik je torej neodvisen od
+polja je kristal enoosen z optično osjo v smeri $z$. Lomni količnik je neodvisen od
 polarizacije vpadnega valovanja in je enak $n_o$. Ko priključimo polje, postane kristal
 optično dvoosen, saj so vse tri lastne vrednosti tenzorja dielektričnosti različne. \index{Dvolomnost!Dvoosne snovi}
 
@@ -286,12 +286,9 @@ zato lahko gornja izraza razvijemo za majhne popravke
 \beq
 n_{x'} = \sqrt{\frac{n_o^2}{1+ n_o^2 r_{63}E_z}} \approx n_o \sqrt{1- n_o^2 r_{63}E_z}.
 \eeq
-Sledi
+Nova lomna količnika sa tako 
 \boxeq{EOnx}{
-n_{x'}\approx n_o - \frac{1}{2}n_o^3 r_{63}E_z.
-}
-Podobno izpeljemo še za drugo lastno vrednost
-\boxeq{EOny}{
+n_{x'}\approx n_o - \frac{1}{2}n_o^3 r_{63}E_z,\\
 n_{y'}\approx n_o + \frac{1}{2}n_o^3 r_{63}E_z.
 }
 Različni lastni polarizaciji torej potujeta vzdolž osi $z$ z različnima hitrostma. Ko 
@@ -303,7 +300,7 @@ n_o^3 r_{63}E_z.
 \eeq 
 
 Kadar polarizacija vpadnega valovanja ne sovpada z novima lastnima osema $x'$ ali $y'$, je 
-svetloba po preletu kristala v splošnem eliptično polarizirana.
+svetloba po preletu kristala v splošnem eliptično polarizirana. 
 
 Vpeljemo še karakteristično napetost $U_\pi$, pri kateri je dodatna \index{$\pi$-napetost}
 fazna razlika enaka $\pi$ in kristal deluje kot ploščica $\lambda/2$\index{Ploščica $\lambda/2$}
@@ -843,10 +840,8 @@ Izhajajmo iz pogoja, da je razširitev žarka na debelini plasti zvočnega valov
  majhna, da se snop ne širi iz območja zgoščine v območje razredčine, da se torej ne razširi za 
  več kot za $\Lambda/2$. Tako zapišemo
  divergenco kot (enačba~\ref{eq:divergenca-snopa}) $\theta \sim \lambda/w_0 \sim 2\lambda/\Lambda$.
- Podobno velja tudi za vpadno valovanje, ki zaradi modulacije valovnih front dobi divergenco, 
- ki je enaka $\theta \sim \lambda/(\Lambda/2).$ Divergenca valovanja ne sme presegati 
- razširitve $\theta \sim \Lambda/2d$.
-  Sledi kriterij za debelino $d$, pri kateri preidemo iz enega v drug režim
+ Po drugi strani pa zaradi modulacije divergenca valovanja ne sme presegati 
+ razširitve $\theta \sim \Lambda/2d$. Sledi kriterij za debelino $d$, pri kateri preidemo iz enega v drug režim
 \beq
 d \sim \frac{\Lambda^2}{4 \lambda}.
 \eeq
@@ -890,7 +885,7 @@ optičnih litografskih zapisovalnikih.
 Z vklapljanjem in izklapljanjem zvočnega valovanja, ki ga vzbujamo s piezoelektričnim elementom,
 na katerega pritisnemo izmenično napetost, lahko moduliramo intenziteto
 direktnega svetlobnega snopa. To potrebujemo na primer pri preklapljanju
-kvalitete laserskega resonatorja.
+dobrote laserskega resonatorja.
 
 Tretji primer uporabe je spreminjanje frekvence svetlobe. Možne so spremembe
 do nekaj $100~\si{\mega\hertz}$, kar je ravno primerno za uporabo v laserskih merilnikih
@@ -1111,17 +1106,17 @@ Razmerje med močjo uklonjenega in vpadnega snopa je tako
 \frac{I_{1}}{I_{0}}=\sin^{2}\left(\frac{\pi n_{0}^{3}pS_{0}d}{2\lambda\cos\vartheta}\right).
 }
 Poiščimo še amplitudo deformacije $S_0$. Za longitudinalne (zvočne) valove v snovi oblike 
-$s = s_0 \cos(kz - \omega t)$ je deformacija 
+$u = u_0 \cos(qz - \Omega t)$ je deformacija 
 \beq
-S_{zz} = \frac{1}{2}\bigl( \frac{\partial s}{\partial z}+ 
-\frac{\partial s}{\partial z}\bigr) = \frac{\partial s}{\partial z}.
+S_{zz} = \frac{1}{2}\bigl( \frac{\partial u}{\partial z}+ 
+\frac{\partial u}{\partial z}\bigr) = \frac{\partial u}{\partial z} = - u_0 q\, \sin(qz - \Omega t).
 \eeq
 Povprečna gostota energijskega toka je 
 \begin{equation}
-j_{z}=
-\frac{1}{2}v_z \left(\frac{1}{2} \varrho \left(\frac{\partial s}{\partial t}\right)^2
-+ \frac{1}{2} \varrho v_z^2\left(\frac{\partial s}{\partial z}\right)^2
-\right) = \frac{1}{2} \varrho v_z^3 S_0^2,
+j_{z}= \frac{1}{T}\int_0^T 
+v_z \left(\frac{1}{2} \varrho \left(\frac{\partial u}{\partial t}\right)^2
++ \frac{1}{2} \varrho v_z^2\left(\frac{\partial u}{\partial z}\right)^2
+\right) dt = \frac{1}{2} \varrho v_z^3 S_0^2,
 \label{7.49}
 \end{equation}
 kjer je $v_z$ hitrost zvoka v snovi in $\varrho$ gostota snovi. Sledi 
@@ -1185,7 +1180,7 @@ v enačbi~(\ref{7.53}) prepoznamo rekurzijsko zvezo za Besslove funkcije
 \label{7.55}
 \end{equation}
 z rešitvijo $A_{m}(z)=A_{0}J_{m}(2\xi z)$. Kadar je $2\xi d$ ničla funkcije
-J$_{0}$, prvič je to pri $2\xi d\approx 2.4$, se vsa energija ukloni iz
+J$_{0}$, prvič je to pri $2\xi d\approx 2,4$, se vsa energija ukloni iz
 vpadnega snopa, vendar se v tem primeru 
 razporedi v mnogo uklonjenih snopov.
 

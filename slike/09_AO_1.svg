@@ -23,6 +23,36 @@
   <defs
      id="defs4">
     <linearGradient
+       id="linearGradient4458">
+      <stop
+         style="stop-color:#828282;stop-opacity:1;"
+         offset="0"
+         id="stop4460" />
+      <stop
+         id="stop4462"
+         offset="0.5"
+         style="stop-color:#b1b1b1;stop-opacity:1;" />
+      <stop
+         style="stop-color:#dadada;stop-opacity:1"
+         offset="1"
+         id="stop4464" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3490">
+      <stop
+         style="stop-color:#828282;stop-opacity:1;"
+         offset="0"
+         id="stop3492" />
+      <stop
+         id="stop3494"
+         offset="0.5"
+         style="stop-color:#b1b1b1;stop-opacity:1;" />
+      <stop
+         style="stop-color:#dcdcdc;stop-opacity:1"
+         offset="1"
+         id="stop3496" />
+    </linearGradient>
+    <linearGradient
        id="linearGradient4405">
       <stop
          id="stop4409"
@@ -40,7 +70,11 @@
          offset="0"
          id="stop4349" />
       <stop
-         style="stop-color:#e0e0e0;stop-opacity:1;"
+         id="stop4408"
+         offset="0.5"
+         style="stop-color:#b1b1b1;stop-opacity:1" />
+      <stop
+         style="stop-color:#dcdcdc;stop-opacity:1"
          offset="1"
          id="stop4355" />
     </linearGradient>
@@ -51,20 +85,24 @@
          offset="0"
          style="stop-color:#828282;stop-opacity:1;" />
       <stop
+         style="stop-color:#b1b1b1;stop-opacity:1;"
+         offset="0.5"
+         id="stop4410" />
+      <stop
          id="stop3889"
          offset="1"
-         style="stop-color:#e0e0e0;stop-opacity:1;" />
+         style="stop-color:#dcdcdc;stop-opacity:1" />
     </linearGradient>
     <linearGradient
        id="linearGradient3875">
       <stop
-         style="stop-color:#9c9c9c;stop-opacity:1;"
+         id="stop3879"
          offset="0"
-         id="stop3877" />
+         style="stop-color:#e0e0e0;stop-opacity:1;" />
       <stop
-         style="stop-color:#e0e0e0;stop-opacity:1;"
+         id="stop3877"
          offset="1"
-         id="stop3879" />
+         style="stop-color:#9c9c9c;stop-opacity:1;" />
     </linearGradient>
     <inkscape:path-effect
        effect="spiro"
@@ -260,12 +298,12 @@
        is_visible="true" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4405"
+       xlink:href="#linearGradient4458"
        id="linearGradient3883-4"
        x1="102.98033"
-       y1="497.77164"
+       y1="489.17102"
        x2="103.55554"
-       y2="539.0899"
+       y2="532.20941"
        gradientUnits="userSpaceOnUse"
        spreadMethod="reflect"
        gradientTransform="matrix(0.95999093,0,0,1.0076844,780.20809,-8.1866778)" />
@@ -304,15 +342,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.57691975"
-     inkscape:cx="636.3737"
-     inkscape:cy="192.66881"
+     inkscape:cx="894.72022"
+     inkscape:cy="251.88152"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1428"
+     inkscape:window-width="1256"
      inkscape:window-height="1008"
-     inkscape:window-x="477"
-     inkscape:window-y="8"
+     inkscape:window-x="649"
+     inkscape:window-y="26"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -326,7 +364,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -336,7 +374,7 @@
      id="layer1"
      transform="translate(313.47224,-194.77536)">
     <rect
-       style="fill:url(#linearGradient3883);fill-opacity:1;stroke:#000000;stroke-width:3.00209951;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:url(#linearGradient3883);fill-opacity:1.0;stroke:#000000;stroke-width:3.00209951;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect3099-2"
        width="26.192919"
        height="529.38965"
@@ -677,7 +715,7 @@
          x="-288.33878"
          y="223.63132" /></text>
     <rect
-       style="fill:url(#linearGradient3883-4);fill-opacity:1.0;stroke:#000000;stroke-width:3.01968694;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:url(#linearGradient3883-4);fill-opacity:1;stroke:#000000;stroke-width:3.01968694;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect3099-2-7"
        width="182.47685"
        height="530.22272"
@@ -781,7 +819,7 @@
       </g>
     </g>
     <g
-       id="g4495">
+       id="g4454">
       <text
          sodipodi:linespacing="125%"
          id="text3015"
@@ -844,7 +882,7 @@
            id="tspan3017-9"
            sodipodi:role="line">$x$</tspan></text>
       <text
-         transform="scale(0.9934955,1.0065471)"
+         transform="scale(0.99349549,1.0065471)"
          sodipodi:linespacing="125%"
          id="text4073-2-7"
          y="510.78934"
