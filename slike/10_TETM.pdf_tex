@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '10_TETM.pdf' (pdf, eps, ps)
 %%
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{945.26298828bp}%
+    \setlength{\unitlength}{1073.74824219bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,11 +48,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.24396505)%
-    \put(0,0){\includegraphics[width=\unitlength]{10_TETM.pdf}}%
-    \put(0.17713499,0.09307223){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{E}$}}}%
-    \put(0.61665023,0.13102086){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{E}$}}}%
-    \put(0.22415195,0.00349274){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{TE}$}}}%
-    \put(0.71108922,0.00220259){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{TM}$}}}%
+  \begin{picture}(1,0.18242754)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{10_TETM.pdf}}%
+    \put(0.24380921,0.0888414){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{E}$}}}%
+    \put(0.63073184,0.12224908){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{E}$}}}%
+    \put(0.2852001,0.00998104){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{TE}$}}}%
+    \put(0.71387021,0.00884527){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{TM}$}}}%
+    \put(0.08145465,0.04871583){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z$}}}%
+    \put(0.02324254,0.12881841){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
+    \put(0.02505435,0.0563454){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$y$}}}%
   \end{picture}%
 \endgroup%
