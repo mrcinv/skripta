@@ -264,14 +264,10 @@ jakost v vodniku in izven njega. Za primer s slike~(\ref{fig:TEsec}) so osnovni 
 narisani na sliki~(\ref{fig:TESodi}).
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/10_TESodi.pdf_tex} 
-\quad
-\def\svgwidth{70truemm} 
-\input{slike/10_TELihi.pdf_tex} 
 \caption{Osnovni načini za širjenje svetlobe po valovnem vodniku, kjer 
-modro obarvan del pomeni plast dielektrika (vodnik), belo pa plašč. Levo so 
-prikazane prve tri sode rešitve, desno pa prvi dve lihi.
+modro obarvan del pomeni plast dielektrika (vodnik), belo pa plašč. a) sode in b) lihe rešitve. 
 }
 \label{fig:TESodi}
 \end{figure}
@@ -287,8 +283,12 @@ Ponovi izračun za TM valovanje in pokaži, da sta sekularni enačbi enaki
 Namig: Zapiši enačbe za magnetno poljsko jakost $H$ in upoštevaj ustrezne robne pogoje.
 \end{definition}
 
-Za konec lahko izračunamo še moč, ki se širi po sredici, tako da integriramo gostoto svetlobnega
-toka po sredici in plašču. Delež valovanja, ki se širi po plašču, narašča z naraščajočim rodom.
+Podoben račun lahko naredimo tudi za TM valovanje (glej nalogo~\ref{naloga:TM}). Zaradi drugačnih
+robnih pogojev se sekularni enačbi razlikujeta od tistih za TE polarizacij, vendar se 
+rešitve $k_x$ se le malo razlikujejo. Število rodov TM polarizacije pa je enako 
+številu rodovom TE polarizacije, saj je največji $k_x$ določen v obeh primerih z istim pogojem 
+($\kappa = 0$). Celotno število lastnih rodov, ki se širi v danem vodniku, je torej sestavljeno 
+iz TE sodih in lihih in TM sodih in lihih rodov.
 
 \begin{remark}
 Če ne prej, je bralec ob slikah~(\ref{fig:TESodi}) zagotovo opazil podobnost s kvantnim delcem, ujetim
@@ -343,15 +343,23 @@ pri čemer je $\nu$ celo število zaradi zahteve po enoličnosti rešitve pri sp
 kota za $2\pi$. Za $R(r)$ dobimo v sredici vlakna enačbo
 \beq
 r^2 R(r)'' + r R(r)' + (k_s^2r^2 - \nu^2)R(r) = 0,
+\label{10BS}
 \eeq
-kjer je $k_s^2=k_0^2n_1^2- \beta^2$,
+kjer je 
+\beq
+k_s^2=k_0^2n_1^2- \beta^2,
+\eeq
 in v plašču
 \beq
 r^2 R(r)'' + r R(r)' + (-\kappa^2r^2 - \nu^2)R(r) = 0,
+\label{10BP}
 \eeq
-kjer je $\kappa^2=\beta^2-k_0^2n_2^2$. 
-V gornjih enačbah prepoznamo Besslovo differencialno enačbo. 
-Upoštevajoč le končne funkcije zapišemo rešitev v sredici kot
+kjer je 
+\beq
+\kappa^2=\beta^2-k_0^2n_2^2.
+\eeq
+V enačbah (\ref{10BS}) in (\ref{10BP}) prepoznamo Besslovo differencialno enačbo. 
+Upoštevajoč le funkcije, ki na izbranem območju ne divergirajo, zapišemo rešitev v sredici kot
 \beq
 E_z (r, \varphi, z) = A J_\nu(k_sr)\sin(\nu \varphi)e^{i \beta z} \quad  \mathrm{in} \quad 
 H_z (r, \varphi, z) = B J_\nu(k_sr)\cos(\nu \varphi)e^{i \beta z} 
@@ -365,13 +373,12 @@ kjer so $A,B,C$ in $D$ konstante, $J_\nu(x)$ je Besslova funkcija prve vrste red
 $\nu$, $K_\nu(x)$ pa je modificirana Besslova funkcija druge vrste reda $\nu$. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/10_Bessel1.pdf_tex} 
-\quad
-\def\svgwidth{70truemm} 
-\input{slike/10_Bessel2.pdf_tex} 
-\caption{Levo: Besslove funkcije prve vrste $J_0(x)$ (črna), $J_1(x)$ (rdeča) in $J_2(x)$ (modra). Desno:
-modificirane Besslove funkcije druge vrste $K_0(x)$ (črna), $K_1(x)$ (rdeča) in $K_2(x)$ (modra).}
+\caption{a) Besslove funkcije prve vrste $J_0(x)$ (črna), $J_1(x)$ (rdeča) in $J_2(x)$ (modra), 
+ki predstavljajo rešitev v sredici vlakna. b)
+modificirane Besslove funkcije druge vrste $K_0(x)$ (črna), $K_1(x)$ (rdeča) in $K_2(x)$ (modra), 
+ki prestavljajo rešitev v plašču vlakna.}
 \label{fig:J01}
 \end{figure}
 
@@ -391,29 +398,34 @@ so to transverzalni TE rodovi, za katere velja $E_z=0$, $E_r=0$ in $E_\varphi \p
 Podobno lahko prepoznamo tudi TM rodove, pri katerih je $H_z=0$, $H_r=0$ in $H_\varphi \propto J_1(k_sr)$.
 Električna poljska jakost za TE in TM rodove je potem
 \beq
-\mathbf{E} \propto { \mathbf{e}_\varphi \brace \mathbf{e}_r} \, J_1(k_s r).
+\mathbf{E} \propto \mathbf{e}_\varphi \, J_1(k_s r) \qquad \textrm{in} \qquad 
+\mathbf{E} \propto \mathbf{e}_r \, J_1(k_s r).
 \eeq
-Gostota svetlobnega toka v osi vlakna je za TE in TM valove enaka nič (glej sliko~\ref{fig:TE01}), 
-zato sklepamo, da to niso osnovni načini širjenja svetlobe po cilindričnem vlaknu.
+Amplitudi električne poljske jakosti sta torej za TE in TM rodove enaki, razlikuje se le smer, zato
+sta enaki tudi sliki gostote svetlobnega toka (slika~\ref{fig:TE01}). Opazimo, da je v osi
+vlakna gostota svetlobnega toka enaka nič, zato sklepamo, da to niso osnovni načini 
+širjenja svetlobe po cilindričnem vlaknu. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/10_TE01.pdf_tex}
 \caption{Gostota svetlobnega toka (levo) in smeri električne poljske jakosti 
-za TE$_{01}$ in TM$_{01}$ rod}
+za TE$_{01}$ in TM$_{01}$ rod v cilindričnem vlaknu (desno)}
 \label{fig:TE01}
 \end{figure}
 
 Podobno kot smo zapisali sekularno enačbo v valovnem vodniku (enačba~\ref{sekular1}) tudi tukaj
-zapišemo enačbo, s katero lahko določimo $k_s$. 
+zapišemo enačbo, s katero lahko določimo dovoljene $k_s$. 
 Ob približku, da se lomna količnika 
 sredice in plašča le malo razlikujeta, je ustrezna enačba za TE valovanje
 \beq
-\frac{J_1(k_sr)}{k_srJ_0(k_sr)}+\frac{K_1(\kappa r)}{\kappa r K_0(\kappa r)}=0,
+\frac{J_1(k_sa)}{k_saJ_0(k_sa)}=-\frac{K_1(\kappa a)}{\kappa a K_0(\kappa a)},
 \label{sekFiber}
 \eeq
 pri čemer velja zveza $\kappa^2+k_s^2=(NA)^2k_0^2$. Zaporedne rešitve enačbe, ki jih označimo 
-z indeksom $m$, ustrezajo rodovom TE$_{0m}$. V enačbi za TM rodove moramo
+z indeksom $m$, ustrezajo rodovom TE$_{0m}$. 
+
+V enačbi za TM rodove moramo
 členu na levi dodati še faktor $(n_1/n_2)^2$ in dobimo rešitve za rodove TM$_{0m}$. Ker se 
 v praksi lomna količnika sredice in plašča le malo razlikujeta, so rešitve za TM rodove skoraj
 enake kot za TE.
@@ -422,37 +434,41 @@ enake kot za TE.
 \def\svgwidth{90truemm} 
 \input{slike/10_SekFiber.pdf_tex}
 \caption{K izračunu prečnih komponent valovnega vektorja za TE polarizacijo v cilindričnem vlaknu.
-Leva stran sekularne enačbe (enačba~\ref{sekFiber}) je narisana s črno, desna pa z rdečo in modro
-za dve različno debeli vlakni.}
+Leva stran sekularne enačbe (enačba~\ref{sekFiber}) je narisana s črno, desna pa z rdečo.}
 \label{fig:TEsecFib}
 \end{figure} 
 
-Zapisano enačbo je treba rešiti numerično. Lahko pa narišemo levo in desno stran enačbe in poiščemo
-presečišča (slika~\ref{fig:TEsecFib}). S črno je narisana leva stran enačbe, z rdečo in modro črto
-pa sta narisani desni strani enačbe za dve vlakni različnih debelin. Če izrazimo parametre vlakna z
-normirano frekvenco
-\beq
-V = NA \, 2\pi r/\lambda,
-\eeq
-je rdeča črta narisana pri $V=8$ in modra pri $V=2$. Vidimo, da obstaja nek najmanjši polmer vlakna,
-pri katerem se TE (ali TM) valovanje sploh širi po vlaknu. Meja je določena s prvo ničlo
-Besslove funkcije $J_0$: valovanje se širi po vlaknu, le če je $V > 2,405$. Iz
-tega (in tudi oblike rešitve) lahko sklepamo, da TE in TM nista osnovna načina za širjenje 
-svetlobe po vlaknu.
+Zapisano sekularno enačbo je treba rešiti numerično. Lahko pa, podobno kot pri valovnem
+vodniku, narišemo levo in desno stran enačbe in poiščemo
+presečišča (slika~\ref{fig:TEsecFib}). Primer na sliki ima dve možni rešitvi. S slike lahko 
+tudi uvidimo, da pri dovolj majhnem polmeru vlakna $a$ enačba nima rešitev. Takrat se namreč
+črne krivulje 'raztegnejo' in rdeča krivulja divergira preden doseže drugo vejo črne krivulje.
+
+Zapišimo to ugotovitev še matematično. Prvi pol leve strani sekularne enačbe nastopi pri 
+$J_0 (k_s a)  = 0$, to je pri $k_s a= 2,405$. 
+Po drugi strani pa ima desna stran enačbe realne rešitve le za $k_s a \le NA k_0 a = V$.
+Polmer vlakna, pri katerem se TE (ali TM) valovanje z dano valovno dolžino sploh širi po 
+vlaknu, je torej 
+\boxeq{10_cutoff}{
+a \geq \frac{2,405}{k_0 NA}.
+}
 
 \subsection*{Hibridni HE in EH rodovi}
 Poglejmo zdaj še rešitve, pri katerih $\nu \neq 0$. Iz robnih pogojev sledi, da je 
-vseh šest komponent električnega in magnetnega polja valovanja različnih od nič in imajo vsi rodovi
-tudi komponento v smeri $z$. Take rodove imenujemo hibridni rodovi in jih 
+vseh šest komponent električnega in magnetnega polja valovanja različnih od nič in vsi rodovi
+imajo tudi komponento v smeri $z$. Take rodove imenujemo hibridni rodovi in jih 
 označimo s HE, če je $E_z$ razmeroma velik ali vsaj primerljiv z $E_r$ in $E_\varphi$, 
 oziroma z EH, če je $H_z$ po velikosti primerljiv s $H_r$ in $H_\varphi$ ali večji od njiju. 
 
 Sekularna enačba za hibridne rodove je precej bolj zapletena in je ne bomo zapisali. 
-Oglejmo si le njihovo obliko. Najpomembnejši hibridni rod je HE$_{11}$ (slika~\ref{fig:HE11}), 
-ki je sorazmeren z $J_0(k_sa)$ in zato v središču različen od nič. 
+Oglejmo si le njihovo obliko (slika~\ref{fig:HE11}). Najpomembnejši hibridni rod je HE$_{11}$, 
+ki je sorazmeren z $J_0(k_sr)$ in zato v središču različen od nič. 
 To je osnovni rod, za katerega rešitev sekularne enačbe vedno obstaja in se
-zato širi po še tako tankem vlaknu. Po obliki je zelo podoben Gaussovi funkciji $\exp(-r^2/w^2)$,
-zato ga lahko razmeroma dobro opišemo s takim približkom, pri čemer efektivni polmer snopa
+zato širi po še tako tankem vlaknu. 
+
+Po obliki je osnovni HE$_{11}$ rod zelo podoben Gaussovi funkciji $\exp(-r^2/w^2)$,
+zato ga lahko razmeroma dobro opišemo z Gaussovim približkom. 
+Pri tem efektivni polmer snopa
 $w$ izračunamo po Marcusejevi formuli\footnote{D. Marcuse, Bell Syst. Tech. J. 56, 703 (1977).}
 \beq 
 w = (0,65 + \frac{1,619}{V^{3/2}}+\frac{2,879}{V^{6}})\,a.
@@ -461,11 +477,11 @@ Njegova podobnost z Gaussovo funkcijo omogoča zelo dobro sklopitev med Gaussovi
 snopi, ki izhajajo iz laserja, in cilindričnimi vlakni.
 
 Na sliki~(\ref{fig:HE11}) je poleg osnovnega HE$_{11}$ roda še nekaj primerov višjih rodov. Opazimo, 
-da imajo vsi rodovi, razen osnovnega, v izhodišču ničlo. Poleg tega opazimo tudi podobnost med 
+da imajo vsi rodovi, razen osnovnega, v izhodišču minimum. Poleg tega opazimo tudi podobnost med 
 oblikami posameznih rodov, do katere pride zaradi majhne razlike med lomnima količnikoma sredice in plašča
 ($n_1 \approx n_2$). V takem primeru se sekularne enačbe poenostavijo, nekateri rodovi so 
-med seboj degenerirani in dajo enako rešitev. Poleg rodov enake oblike in različne polarizacije so med 
-seboj degenerirani HE$_{\nu+1,m}$ in EH$_{\nu-1,m}$ rodovi. Degenerirane 
+med seboj degenerirani in dajo enako rešitev. Poleg rodov enake oblike in različne polarizacije so tako 
+med seboj degenerirani še HE$_{\nu+1,m}$ in EH$_{\nu-1,m}$ rodovi. Degenerirane 
 rodove lahko združimo v linearne kombinacije teh valov in dobimo pretežno linearno polarizirane 
 rodove. 
 \begin{figure}[h]
@@ -478,8 +494,8 @@ rodove.
 \input{slike/10_HE31.pdf_tex} \\
 \def\svgwidth{90truemm} 
 \input{slike/10_EH11.pdf_tex}
-\caption{Gostota svetlobnega toka in smeri električne poljske jakosti za hibridne rodove:
-HE$_{11}$, HE$_{21}$, HE$_{31}$ in EH$_{11}$.}
+\caption{Gostota svetlobnega toka in smeri električne poljske jakosti za hibridne rodove
+HE$_{11}$, HE$_{21}$, HE$_{31}$ in EH$_{11}$ v cilindričnem vlaknu.}
 \label{fig:HE11}
 \end{figure}
 
@@ -487,44 +503,51 @@ HE$_{11}$, HE$_{21}$, HE$_{31}$ in EH$_{11}$.}
 Za praktično uporabo so najpomembnejši linearno polarizirani rodovi. Taki rodovi niso
 točne rešitve valovne enačbe v cilindričnih vlaknih, ampak jih zapišemo kot linearno 
 kombinacijo lastnih rodov, ki so zaradi majhne razlike med lomnima količnikoma sredice
-in plašča degenerirani. 
+in plašča degenerirani. Tudi te rodove označimo z dvema indkesoma: prvi pove število azimutalnih
+vozlov, drugi pa število radialnih vrhov. Poglejmo nekaj najpreprostejših primerov (slika~\ref{fig:LP}).
 
 Osnovni LP$_{01}$ je kar približno enak osnovnemu HE$_{11}$ rodu. 
 Električna poljska jakost v njem je 
 sorazmerna
 \beq
-\mathbf{E}_{(LP01)} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_0(k_s a),
+\mathbf{E}_\mathrm{LP01} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_0(k_s a).
 \eeq
-odvisno od polarizacije.
-Podobno so LP$_{0m}$ približno enaki rodovom HE$_{1m}$ z $m-1$ ničlami v radialni smeri. 
-Dodatne višje rodove, na primer LP$_{11}$ sestavimo kot linearno kombinacijo 
+Dobimo dve možni obliki, ki sta odvisni od smeri polarizacije.
+V splošnem so LP$_{0m}$ podobni rodovom HE$_{1m}$. 
+
+Višje rodove, na primer LP$_{11}$ sestavimo kot linearno kombinacijo 
 TE$_{01}$ oziroma TM$_{01}$ in HE$_{21}$.
-Električna poljska jakost v LP$_{11}$  je tako 
+Električna poljska jakost v LP$_{11}$ je tako 
 \beq
-\mathbf{E}_{(LP11)} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_1(k_s a)
+\mathbf{E}_\mathrm{LP11} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_1(k_s a)
 { \cos\varphi \brace \sin\varphi},
 \eeq
-v 
-LP$_{21}$ pa
+kar opisuje štiri različne oblike rodov $LP_{11}$.
+
+Naslednji so LP$_{21}$ rodovi, ki jih dobimo kot linearno kombinacijo HE$_{31}$
+in EH$_{11}$ rodov
 \beq
-\mathbf{E}_{(LP21)} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_2(k_s a)
+\mathbf{E}_\mathrm{LP21} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_2(k_s a)
 { \cos 2\varphi \brace \sin 2\varphi}.
 \eeq
+Tudi v tem primeru so možne štiri oblike rodov. 
 
 \begin{figure}[h!]
 \centering
-\def\svgwidth{90truemm} 
+\def\svgwidth{93truemm} 
 \input{slike/10_LP01.pdf_tex} \\
-\def\svgwidth{90truemm} 
+\def\svgwidth{93truemm} 
+\input{slike/10_LP02.pdf_tex} \\
+\def\svgwidth{93truemm} 
 \input{slike/10_LP11a.pdf_tex} \\
-\def\svgwidth{90truemm} 
+\def\svgwidth{93truemm} 
 \input{slike/10_LP11b.pdf_tex} \\
-\def\svgwidth{90truemm} 
+\def\svgwidth{93truemm} 
 \input{slike/10_LP21a.pdf_tex} \\
-\def\svgwidth{90truemm} 
+\def\svgwidth{93truemm} 
 \input{slike/10_LP21b.pdf_tex} \\
 \caption{Gostota svetlobnega toka in smeri električne poljske jakosti za približno linearne rodove:
-LP$_{01}$, LP$_{11}$ in LP$_{21}$.}
+LP$_{01}$, LP$_{02}$, LP$_{11}$ in LP$_{21}$.}
 \label{fig:LP}
 \end{figure}
 
@@ -532,11 +555,11 @@ Linearno polarizirani LP rodovi imajo precejšno uporabno vrednost. To so
 namreč rodovi, ki jih v vlaknu vzbudimo, ko nanj posvetimo s polarizirano 
 lasersko svetlobo. Zavedati pa se moramo, da to niso lastni rodovi vlakna, 
 ampak njihove linearne kombinacije, ki po vlaknu potujejo z malenkost različnimi
-hitrostmi. Polarizacija svetlobe se bo zato vzdolž vlakna rahlo spreminjala.
+hitrostmi. Polarizacija svetlobe se zato vzdolž vlakna rahlo spreminja.
 
 \begin{definition}
 Pokaži, da je približno število dovoljenih rodov v cilindričnem vlaknu pri 
-izbrani normalizirani frekvenci $V$ enako
+izbrani normalizirani frekvenci $V = k_0 NA a$ enako
 \beq 
 N = \frac{4 V^2}{\pi^2}.
 \eeq
@@ -546,18 +569,24 @@ J_\nu (x) \approx \sqrt{\frac{2}{\pi x}}\cos \left(x - \frac{\nu \pi}{2}
 -\frac{\pi}{4}\right).
 \eeq
 \end{definition}
-
+\newpage
 \subsection*{Cilindrično vlakno s paraboličnim profilom lomnega količnika}
 Čeprav je račun lastnih načinov v cilindričnem vlaknu zapleten, lahko 
 razmeroma enostavno poiščemo rešitve za vlakno, v katerem je dielektrična 
-konstanta kvadratna funkcija radialne koordinate $r$
+konstanta kvadratna funkcija radialne koordinate $r$. 
 \begin{equation}
-n^2\left(r\right)=n_{0}^{2}-n_{2}^{2}\frac{r^{2}}{a^2}.
+\varepsilon (r) = \varepsilon_1 - C r^2,
+\end{equation}
+pri čemer je sprememba navadno majhna. Če zapišemo enačbo z lomnimi količniki, dobimo
+\begin{equation}
+n^2\left(r\right)=n_{1}^{2}- n_2^2 \frac{r^2}{a^2},
 \label{9.15}
 \end{equation}
-Parameter $n_{2}$ je v praksi vselej majhen, zato ima za vse smiselne
-vrednosti $r$ tudi lomni količnik paraboličen profil. Parabolična
-sredica je seveda biti omejena, okoli nje je plašč s konstantnim
+pri čemer smo vpeljali priročnejšo konstanto $n_2$, $a$ pa označuje polmer vlakna.
+Enačbo lahko tudi razvijemo za majhen $n_2$ in za vse smiselne vrednosti $r$
+ima tudi lomni količnik parabolični profil.
+Parabolična
+sredica je seveda omejena, okoli nje pa je plašč s konstantnim
 lomnim količnikom $n_1 \approx n_0-n_2^2/2n_0$ (slika~\ref{fig:GRIN}). 
 Tipičen polmer sredice $a$ je nekaj deset mikrometrov.
 \begin{figure}[h]

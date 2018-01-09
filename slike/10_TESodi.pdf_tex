@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{631.62254333bp}%
+    \setlength{\unitlength}{1272.23904419bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,13 +48,18 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.70663726)%
+  \begin{picture}(1,0.35390835)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{10_TESodi.pdf}}%
-    \put(0.00905051,-0.00277168){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$-a$}}}%
-    \put(0.24130855,-0.00277168){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$-a/2$}}}%
-    \put(0.49057035,-0.00239172){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
-    \put(0.71665386,-0.00277168){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$a/2$}}}%
-    \put(0.95546622,-0.00277168){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$a$}}}%
-    \put(-0.00116064,0.3660956){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
+    \put(0.11268146,0.00113926){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$-a/2$}}}%
+    \put(0.24774991,0.0013279){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
+    \put(0.35747728,0.00113926){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$a/2$}}}%
+    \put(0.0011073,0.18301142){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{10_TESodi.pdf}}%
+    \put(0.6231711,0.00113924){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$-a/2$}}}%
+    \put(0.75823968,0.00132787){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
+    \put(0.86796703,0.00113924){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$a/2$}}}%
+    \put(0.51159703,0.18301139){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
+    \put(-0.00681598,0.33845213){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a)}}}%
+    \put(0.50663239,0.33845213){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{b)}}}%
   \end{picture}%
 \endgroup%
