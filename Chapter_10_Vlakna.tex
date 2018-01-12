@@ -348,6 +348,7 @@ r^2 R(r)'' + r R(r)' + (k_s^2r^2 - \nu^2)R(r) = 0,
 kjer je 
 \beq
 k_s^2=k_0^2n_1^2- \beta^2,
+\label{eq:ks}
 \eeq
 in v plašču
 \beq
@@ -471,9 +472,10 @@ zato ga lahko razmeroma dobro opišemo z Gaussovim približkom.
 Pri tem efektivni polmer snopa
 $w$ izračunamo po Marcusejevi formuli\footnote{D. Marcuse, Bell Syst. Tech. J. 56, 703 (1977).}
 \beq 
-w = (0,65 + \frac{1,619}{V^{3/2}}+\frac{2,879}{V^{6}})\,a.
+w = (0,65 + \frac{1,619}{V^{3/2}}+\frac{2,879}{V^{6}})\,a,
 \eeq
-Njegova podobnost z Gaussovo funkcijo omogoča zelo dobro sklopitev med Gaussovimi
+pri čemer je $V$ normirana frekvenca $V = NA k_0 a$. Podobnost profila osnovnega
+HE$_{11}$ z Gaussovo funkcijo omogoča zelo dobro sklopitev med Gaussovimi
 snopi, ki izhajajo iz laserja, in cilindričnimi vlakni.
 
 Na sliki~(\ref{fig:HE11}) je poleg osnovnega HE$_{11}$ roda še nekaj primerov višjih rodov. Opazimo, 
@@ -577,18 +579,18 @@ konstanta kvadratna funkcija radialne koordinate $r$.
 \begin{equation}
 \varepsilon (r) = \varepsilon_1 - C r^2,
 \end{equation}
-pri čemer je sprememba navadno majhna. Če zapišemo enačbo z lomnimi količniki, dobimo
+pri čemer je sprememba navadno majhna. Če zapišemo enačbo z lomnimi količniki
+in vpeljemo smiselne parametre, dobimo
 \begin{equation}
-n^2\left(r\right)=n_{1}^{2}- n_2^2 \frac{r^2}{a^2},
+n^2\left(r\right)=n_{1}^{2}- \Delta^2 \frac{r^2}{a^2},
 \label{9.15}
 \end{equation}
-pri čemer smo vpeljali priročnejšo konstanto $n_2$, $a$ pa označuje polmer vlakna.
-Enačbo lahko tudi razvijemo za majhen $n_2$ in za vse smiselne vrednosti $r$
-ima tudi lomni količnik parabolični profil.
-Parabolična
+pri čemer $a$ označuje polmer vlakna.
+Enačbo lahko tudi razvijemo za majhen $\Delta$ in za vse smiselne vrednosti $r$
+ima tudi lomni količnik parabolični profil. Parabolična
 sredica je seveda omejena, okoli nje pa je plašč s konstantnim
-lomnim količnikom $n_1 \approx n_0-n_2^2/2n_0$ (slika~\ref{fig:GRIN}). 
-Tipičen polmer sredice $a$ je nekaj deset mikrometrov.
+lomnim količnikom $n_2 \approx n_1-\Delta^2/2n_1$ (slika~\ref{fig:GRIN}). 
+Tipičen polmer sredice $a$ je nekaj deset mikrometrov, plašča pa približno petkrat toliko.
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
@@ -597,18 +599,18 @@ Tipičen polmer sredice $a$ je nekaj deset mikrometrov.
 \label{fig:GRIN}
 \end{figure}
 
-Komponento polja za izbrano polarizacijo napišimo v obliki 
+Komponento polja za izbrano polarizacijo zapišimo v obliki 
 \begin{equation}
 E=E_{0}\psi(x,y)\, e^{i\beta z} e^{-i\omega t}
 \label{9.16}
 \end{equation}
-Zanemarili smo, da zaradi odvisnosti od prečnih koordinat in pogoja $\nabla\cdot{\bf D}=0$
-polje ne more imeti povsod iste smeri; če hočemo biti natančni, moramo
-v gornji obliki zapisati vektorski potencial. Vstavimo približni
-nastavek~(enačba~\ref{9.16}) in krajevno odvistnost lomnega količnika~(enačba~\ref{9.15})
+Pri tem smo zanemarili, da zaradi odvisnosti od prečnih koordinat in pogoja $\nabla\cdot{\bf D}=0$
+polje ne more imeti povsod iste smeri; za bolj natančen račun bi morali v gornji obliki 
+zapisati vektorski potencial. Vstavimo približni
+nastavek~(enačba~\ref{9.16}) in krajevno odvisnost lomnega količnika~(enačba~\ref{9.15})
 v valovno enačbo~(\ref{eq:valovna-skalarna}) in dobimo 
 \begin{equation}
-\nabla_{\perp}^{2}\psi+\left[k_{0}^{2}\left(n_{0}^{2}-n_{2}^{2}\frac{r^{2}}{a^2}\right)-
+\nabla_{\perp}^{2}\psi+\left[k_{0}^{2}\left(n_{1}^{2}-\Delta^{2}\frac{r^{2}}{a^2}\right)-
 \beta^{2}\right]\,\psi=0,
 \label{9.17}
 \end{equation}
@@ -618,8 +620,8 @@ Rešitve lahko zapišemo v obliki
 \eeq
 in dobimo dve neodvisni enačbi
 \beq
-X'' - \frac{k_0^2 n_2^2}{a^2}\,X\,x^2 - \lambda_1 X = 0 \qquad \mathrm{in} \qquad
-Y'' - \frac{k_0^2 n_2^2}{a^2}\,Y\,y^2 - \lambda_2 Y = 0,
+X'' - \frac{k_0^2 \Delta^2}{a^2}\,X\,x^2 - \lambda_1 X = 0 \qquad \mathrm{in} \qquad
+Y'' - \frac{k_0^2 \Delta^2}{a^2}\,Y\,y^2 - \lambda_2 Y = 0,
 \label{eq:XY}
 \eeq
 pri čemer sta $\lambda_1$ in $\lambda_2$ konstanti. 
@@ -630,7 +632,7 @@ produkt Gaussove in Hermitove funkcije
 X_n(x) = e^{-\xi^2 x^2/2} H_n(\xi x),
 \label{eq:GH}
 \eeq
-pri čemer je $\xi = \sqrt{k_0n_2/a}$.
+pri čemer je $\xi = \sqrt{k_0 \Delta/a}$.
 \begin{definition}
 Uporabi nastavek~(\ref{eq:GH}) in pokaži, da reši enačbo~(\ref{eq:XY}). Pri tem si pomagaj z 
 diferencialno enačbo za Hermitove polinome
@@ -640,20 +642,20 @@ diferencialno enačbo za Hermitove polinome
 \end{definition}
 Lastne vrednosti enačbe so oblike
 \begin{equation}
-\beta_{mn}^{2}=n_{0}^{2}k_{0}^{2}\left(1-\frac{2n_{2}}{k_{0}n_{0}^2a}\left(m+n+1\right)\right).
+\beta_{mn}^{2}=n_{1}^{2}k_{0}^{2}\left(1-\frac{2\Delta}{k_{0}n_{1}^2a}\left(m+n+1\right)\right).
 \label{9.19}
 \end{equation}
 Drugi člen v oklepaju je navadno zelo majhen, zato lahko izraz razvijemo in 
 \beq
-\beta_{mn}=n_{0}k_{0}\left(1-\frac{n_{2}}{k_{0}n_{0}^2 a}\left(m+n+1\right)\right)
-= n_{0}k_{0} - \frac{n_{2} \left(m+n+1\right)}{n_{0} a}.
+\beta_{mn}=n_{1}k_{0}\left(1-\frac{\Delta}{k_{0}n_{1}^2 a}\left(m+n+1\right)\right)
+= n_{1}k_{0} - \frac{\Delta \left(m+n+1\right)}{n_{1} a}.
 \eeq
-Ob privzetku, da je $n_{2}$ neodvisen od frekvence, je grupna hitrost 
+Ob privzetku, da je $\Delta$ neodvisna od frekvence, je grupna hitrost 
 \begin{equation}
-v_{g}=\left(\frac{d\beta_{mn}}{d\omega}\right)^{-1}=\frac{c_{0}}{n_{0}}
+v_{g}=\left(\frac{d\beta_{mn}}{d\omega}\right)^{-1}=\frac{c_{0}}{n_{1}}
 \label{9.21}
 \end{equation}
-enaka za vse rodove. To je pomembna značilnost vlakna s kvadratnim profilom
+in torej enaka za vse rodove. To je pomembna značilnost vlakna s paraboličnim profilom
 lomnega količnika. V dejanskem vlaknu je seveda taka odvisnost možna
 le v omejenem območju sredice, zato je tudi gornja analiza le približna
 in velja dobro za tiste rodove, ki se ne raztezajo dosti izven sredice.
@@ -752,8 +754,7 @@ približno paraboličnim profilom lomnega količnika.
 % \begin{equation}
 % E_{r}=\frac{E_{0}}{2\,\beta}\,\int\frac{d\beta}{dz}\, e^{2i\beta z}dz\label{9.29}
 % \end{equation}
-% 
-% 
+% % 
 % \textit{Primer:} Naj se valovno število linearno spermeni za $\Delta\beta_{0}$
 % na razdalji $L$. Tedaj je po gornji formuli 
 % \begin{equation}
@@ -770,7 +771,7 @@ približno paraboličnim profilom lomnega količnika.
 Pri prenosu velike količine podatkov na daljavo je zelo pomembno, da
 se oblika svetlobnih sunkov, ki prenašajo informacijo, čim manj spremeni.
 Na obliko sunka močno vpliva disperzija, to je odvisnost fazne in grupne (skupinske) hitrosti
-valovanja od frekvence. Zaradi disperzije se kratki sunki podaljšujejo in količino 
+valovanja od frekvence. Zaradi disperzije se kratki sunki podaljšujejo in količina 
 informacije, ki jo lahko prenašamo po vlaknu dane dolžine, se zmanjšuje.
 \begin{figure}[h]
 \centering
@@ -781,11 +782,13 @@ močno poveča, zato jih na izhodu iz vlakna ne moremo več ločiti.}
 \label{fig:disp}
 \end{figure}
 
-V splošnem ločimo tri vrste disperzije: rodovno, materialno in valovodno. Rodovna
-disperzija se pojavi, ker različni rodovi v vlaknu potujejo z različno hitrostjo.
-Do materialne pride zaradi odvisnosti lomnega količnika vlakna od valovne dolžine svetlobe, 
-do valovodne pa zaradi nelinearne zveze med valovnim vektorjem $\beta$ in frekvenco valovanja.
-Poglejmo si vse tri vrste disperzije podrobneje. 
+V splošnem ločimo tri vrste disperzije: materialno, valovodno in rodovno. 
+Do materialne disperzije pride zaradi odvisnosti lomnega količnika vlakna od 
+valovne dolžine svetlobe. Valovodna disperzija se pojavi zaradi nelinearne zveze 
+med valovnim vektorjem $\beta$ in frekvenco valovanja. Do rodovne
+disperzije pa pride zaradi različnih hitrosti različnih rodov. Govorimo lahko še o 
+polarizacijski disperziji, saj smo že spoznali, da je hitrost valovanja svetlobe 
+v vodniku odvisna tudi od polarizacije valovanja. Poglejmo si disperzije podrobneje. 
 
 \subsection*{Materialna disperzija}
 Vzemimo najprej enorodovno vlakno in naj bo svetloba v vlaknu modulirana
@@ -796,25 +799,25 @@ v_{g}=\frac{d\omega}{d\beta}=\left(\frac{d\beta}{d\omega}\right)^{-1} = \frac{c_
 \label{9.51}
 \end{equation}
 pri čemer smo vpeljali grupni lomni količnik $n_g$. Ker je sunek končno dolg, 
-ima tudi neko končno spektralno širino $\lambda_{\mathrm{max}}-\lambda_{\mathrm{min}}=
-\Delta \lambda$. Zaradi materialne disperzije je lomni količnik vlakna odvisen od
-valovne dolžine svetlobe, zato različne spektralne komponente potujejo po vlaknu z različnimi
+ima končno spektralno širino $\Delta \lambda=\lambda_{\mathrm{max}}-\lambda_{\mathrm{min}}
+$. Zaradi materialne disperzije je lomni količnik vlakna odvisen od
+valovne dolžine svetlobe in različne spektralne komponente potujejo po vlaknu z različnimi
 hitrostmi. Dolžino sunka $\tau$ po prehodu skozi vlakno dolžine $L$ zapišemo kot
 \beq
 \tau_m = \frac{L}{v_g(\lambda_{\mathrm{max}})} - \frac{L}{v_g(\lambda_{\mathrm{min}})} = 
-\frac{L}{c_0}\left(n_g(\lambda_{\mathrm{max}}) - n_g(\lambda_{\mathrm{max}}) \right) 
-= \frac{L}{c_0}\frac{\Delta n_g}{\Delta \lambda}\Delta \lambda.
+\frac{L}{c_0}\left(n_g(\lambda_{\mathrm{max}}) - n_g(\lambda_{\mathrm{min}}) \right) 
+= \frac{L}{c_0}\frac{d n_g}{d \lambda}\Delta \lambda.
 \label{MatD}
 \eeq
 Za enorodovno vlakno približno velja $k_x \approx 0$ in $\beta \approx n_1 \omega/c_0$. 
 Sledi
 \beq
 n_g = c_0 \frac{d\beta}{d\omega} = n_1 + \omega \frac{d n_1}{d\omega} = n_1 - \lambda 
-\frac{dn_1}{\lambda}
+\frac{dn_1}{d\lambda}
 \eeq
 in
 \beq
-\frac{dn_g}{d\lambda} = -\lambda\frac{d^2n_1}{d\lambda}.
+\frac{dn_g}{d\lambda} = -\lambda\frac{d^2n_1}{d\lambda^2}.
 \eeq
 To vstavimo v izraz za dolžino sunka~(enačba~\ref{MatD}) in dobimo
 \beq
@@ -826,25 +829,28 @@ pri čemer je $D_m$ koeficient materialne disperzije
 D_m = - \frac{\lambda}{c_0}\frac{d^2n_1}{d\lambda^2}.
 \label{eq:dmat}
 \eeq
-Navadno ga izrazimo v enotah ps/(nm km), njegova vrednost pa je lahko pozitivna ali negativna. 
-V snoveh, ki jih uporabljamo za optična vlakna, je $D_m$ reda 10 ps/nm km, lahko pa seže
-tudi do več 100 ps/nm km, odvisno seveda od valovne dolžine. 
+Navadno ga izrazimo v enotah $\si{\pico\second/\nano\meter\, \kilo\meter}$, 
+njegova vrednost pa je lahko pozitivna ali negativna. 
+V snoveh, ki jih uporabljamo za optična vlakna, je $D_m$ reda 
+$10~\si{\pico\second/\nano\meter\, \kilo\meter}$, lahko pa seže
+tudi do več $100~\si{\pico\second/\nano\meter\, \kilo\meter}$, odvisno seveda od valovne dolžine
+in izbrane snovi. 
 
 Materialno disperzijo lahko zmanjšamo na več načinov. Lahko uporabimo čim bolj enobarven
 vir svetlobe, da zmanjšamo $\Delta \lambda$. Za snovi, ki so v uporabi, 
 lahko celo izberemo tako valovno dolžino, pri kateri je koeficient materialne disperzije enak nič.
-Pri SiO$_2$ je to okoli $1300-1500$~nm, odvisno od dopiranja stekla. Še najbolj uporabna
-pa je rešitev, pri kateri z materialno disperzijo izničimo vplive drugih disperzij in 
+Pri SiO$_2$ je to pri okoli $1300-1500~\si{\nano\meter}$, odvisno od dopiranja stekla. Še najbolj uporabna
+pa je rešitev, pri kateri z materialno disperzijo izničimo vpliv drugih disperzij in 
 na ta način zmanjšamo skupno disperzijo v vlaknu.
 
 \subsection*{Valovodna disperzija}
 Spomnimo se, da v vlaknu velja zveza med prečno $k_s$ in vzdolžno komponento $\beta$ 
-valovnega vektorja
+valovnega vektorja (enačba~\ref{eq:ks})
 \beq
 \beta^2 + k_s^2 = k_0^2 n_1^2 = \left( \frac{\omega}{c_0}\right)^2n_1^2.
 \eeq
-Pri tem moramo $k_s$ izračunati numerično iz sekularne enačbe rešitev je odvisna od valovne dolžine
-svetlobe. Valovno število  
+Pri tem moramo $k_s$ izračunati numerično iz sekularne enačbe (ki je podobna enačbi~\ref{sekFiber}). 
+Rešitev, ki jo dobimo, je odvisna od valovne dolžine svetlobe. Valovno število  
 \beq
 \beta = \sqrt{\left( \frac{\omega}{c_0}\right)^2n_1^2 - k_s(\omega)^2}.
 \eeq
@@ -853,53 +859,58 @@ račun kot pri materialni disperziji, je razširitev začetnega kratkega sunka e
 \beq
 \tau_v = \frac{L}{v_g(\omega_{\mathrm{max}})} - \frac{L}{v_g(\omega_{\mathrm{min}})} = 
 L\frac{d \beta}{d\omega}(\omega_{\mathrm{max}}) - L\frac{d \beta}{d\omega}(\omega_{\mathrm{min}})=
-L \frac{d^2\beta}{d\omega^2}\Delta \omega = - 
-\frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}L \Delta \lambda.
+L \frac{d^2\beta}{d\omega^2}\Delta \omega.
 \label{ValD}
 \eeq
-Zapišemo
+Upoštevamo zvezo med valovno dolžino in frekvenco in dobimo 
 \beq
-\tau_v= D_v\,L\, \Delta \lambda,
+\tau_v=-\frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}L \Delta \lambda= D_v\,L\, \Delta \lambda,
 \eeq
 pri čemer je  $D_v$ koeficient valovodne disperzije
 \beq
 D_v = - \frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}.
 \eeq
-Prispevek valovodne disperzije je praviloma najmanjši, reda $1-10$~ps/nm km. 
+Prispevek valovodne disperzije je praviloma najmanjši, reda $1-10~\si{\pico\second/\nano\meter\,\kilo\meter}$. 
 Znaten postane v enorodovnih vlaknih v območju, kjer je materialna disperzija 
-zelo majhna ali celo enaka nič. V vlaknih s homogeno sredico se valovodni disperziji ne moremo
-izogniti, lahko pa jo izničimo z materialno~(slika~\ref{fig:MatVal}). 
+zelo majhna ali celo enaka nič. 
+V vlaknih s homogeno sredico se valovodni disperziji ne moremo
+izogniti, lahko pa jo pri dani valovni dolžini izničimo z materialno~(slika~\ref{fig:MatVal}). 
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/10_Zero.pdf_tex} 
-\caption{Disperzija v enorodovnem vlaknu}
+\caption{Odvisnost disperzije od valovne dolžine v SiO$_2$ vlaknu. $D_m$ je materialna
+disperzija, $D_v$ valovodna, $D$ pa je vsota obeh. Pri valovni dolžini
+okoli $1450~\si{\nano\meter}$ je materialna in valovodna disperzija odštejeta.}
 \label{fig:MatVal}
 \end{figure}
 
-Na valovodno disperzijo je mogoče vplivati tudi s konstrucijo vlakna. V
-idealnem primeru je profil parabolični in takrat smo že pokazali, da disperzije ni. V praksi
-je sredica sestavljena iz več plasti z različnimi lomnimi količniki in različnimi
+Na valovodno disperzijo je mogoče vplivati tudi s konstrukcijo vlakna. Pokazali smo že, da
+v idealnem primeru v vlaknu s paraboličnim profilom lomnega količnika disperzije ni. 
+V praksi je sredica sestavljena iz več plasti z različnimi lomnimi količniki in različnimi
 debelinami, s čimer se prispevek valovodne disperzije spremeni in 
-položaj ničle celotne disperzije se premakne k valovni dolžini izvora oziroma k 
-valovni dolžini, pri kateri je najmanj izgub.
+položaj ničle celotne disperzije lahko premaknemo k valovni dolžini izvora oziroma k 
+valovni dolžini, pri kateri je najmanj absoprcije in izgub.
 
-Količina podakov, ki jih lahko prenašamo po takem vlaknu je kar približno obratno 
-sorazmerna s širino izhodnih sunkov svetlobe. Pri celotni disperziji $5$~ps/nm km in 
-spektralni širini $1$~nm je tako v $100$~km dolgem vlaknu najvišja frekvenca modulacije
-okoli $2$~GHz. Videli bomo, da je omejitev disperzije v vlaknih precej hujša kot
-omejitev prenosa zaradi izgub. Največja možna razdalja
-in najvišje frekvenca modulacije sta danes nekaj sto kilometrov in
-nekaj deset GHz.
+Količina podakov, ki jih lahko prenašamo po enorodovnem vlaknu je kar približno obratno 
+sorazmerna s širino izhodnih sunkov svetlobe. Pri celotni disperziji 
+$5~\si{\pico\second/\nano\meter\,\kilo\meter}$ in 
+spektralni širini $1~\si{\nano\meter}$ je tako v $100~\si{\kilo\meter}$ 
+dolgem vlaknu najvišja frekvenca modulacije
+okoli $2~\si{\giga\hertz}$. V nadaljevanju bomo videli, da je pri prenosu podatkov
+v vlaknih poglavitni omejujoči faktor disperzija in ne absorpcija. 
 
 \subsection*{Rodovna disperzija}
-Do zdaj smo obravnavali samo disperzijo v enodorovnih vlaknih. V večrodovnih vlaknih
+Do zdaj smo obravnavali disperzijo v enodorovnih vlaknih, v katerih
+lahko disperzijo močno zmanjšamo. V večrodovnih vlaknih pa
 je poglavitni vzrok širjenja sunkov rodovna disperzija. Do nje pride zaradi razlike 
 v hitrostih posameznih rodov. 
+
 Obravnavajmo vlakno, v katerem se širi več rodov. Osnovni rod ima najmanjšo
-vrednost $k_s \approx 0$ in $\beta \approx k_0 n_1$. Zadnji še dovoljeni rod ima
+vrednost in uporabimo kar približek $k_s \approx 0$ in $\beta \approx k_0 n_1$. 
+Zadnji še dovoljeni rod ima
 največjo vrednost $k_s \approx NA\, k_0$ in $\beta \approx k_0 n_2$. Grupna
-lomna količnika sta tako
+lomna količnika za prvi in zadnji rod sta tako
 \beq
 n_{g0} = c_0 \left(\frac{d\beta}{d\omega}\right)_0 = c_0 \frac{d(k_0n_1)}{d\omega} = 
 n_1 + \omega \frac{dn_1}{d\omega}
@@ -907,7 +918,7 @@ n_1 + \omega \frac{dn_1}{d\omega}
 in
 \beq
 n_{gN} = c_0 \left(\frac{d\beta}{d\omega}\right)_0 = c_0 \frac{d(k_0n_2)}{d\omega} = 
-n_1 + \omega \frac{dn_2}{d\omega}.
+n_2 + \omega \frac{dn_2}{d\omega}.
 \eeq
 Razširitev sunka je 
 \beq
@@ -916,12 +927,12 @@ Razširitev sunka je
 \label{DispRod}
 \eeq
 Za 1~km dolgo vlakno z razliko lomnih količnikov $\Delta n = 0,05$ dobimo 
-največjo frekvenco modulacije okoli 10~MHz, kar je znatno nižje od enorodovnih vlaken.
+največjo frekvenco modulacije okoli $10~\si{\mega\hertz}$, kar je znatno manj od enorodovnih vlaken.
 Čeprav lahko disperzijo zmanjšamo s paraboličnim profilom lomnega količnika, so
 večrodovna vlakna za prenos informacije na dolge razdalje praktično neuporabna. 
 
 V večrodovnem vlaknu je treba upoštevati prispevke vseh treh disperzij. Materialna
-in valovodna sta obe odvisni od valovni dolžini in zato korelirani, rodovna pa 
+in valovodna sta obe odvisni od valovne dolžine in zato medsebojno korelirani, rodovna pa 
 je predvsem odvisna od zgradbe vlakna in je od prvih dveh praktično neodvisna. Ko na 
 tako vlakno posvetimo s sunkom, katerega spekter je Gaussove oblike, bo dolžina 
 sunka po prehodu skozi vlakno
@@ -929,9 +940,17 @@ sunka po prehodu skozi vlakno
 \tau = \sqrt{(\tau_m +\tau_v)^2 + \tau_r^2}.
 }
 
+\begin{remark}
+ Omenili smo tudi polarizacijsko disperzijo, do katere pride zaradi različnih hitrosti valovanj
+ z različnima polarizacijama. V idealnem cilindričnem vlaknu potujeta obe polarizaciji
+ z enako hitrostjo. V realnem vlaknu pa 
+ pride na nečistočah in nesimetrijah v vlaknu do različnih hitrosti za različni polarizaciji.  
+ Ker so nečistoče slučajno in neodvisno razporejene, tako disperzijo zelo težko odpravimo.
+\end{remark}
+
 \section{Izgube v optičnih vlaknih}
-Pri prenosu informacij z optičnimi vlakni je zelo pomembno, da so 
-izgube čim manjše. Izgube so predvsem posledica absorpcije svetlobe v snovi,
+Pri prenosu informacij z optičnimi vlakni je poleg disperzije treba upoštevati tudi izgube. 
+Do izgub pride predvsem zaradi absorpcije svetlobe v snovi,
 Rayleighovega sipanja na termičnih fluktuacijah gostote, sipanja na nečistočah, 
 izgub na stiku med vlakni in izgub zaradi upognjenosti vlakna. 
 Po drugi strani pa vhodni signal ne sme biti premočan,

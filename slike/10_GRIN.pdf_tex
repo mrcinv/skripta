@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '10_GRIN.pdf' (pdf, eps, ps)
 %%
@@ -49,10 +49,12 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.37375785)%
-    \put(0,0){\includegraphics[width=\unitlength]{10_GRIN.pdf}}%
-    \put(0.05196543,0.19952929){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_0$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{10_GRIN.pdf}}%
+    \put(0.05196543,0.19952929){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{10_GRIN.pdf}}%
     \put(0.22751924,0.36841976){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$r$}}}%
     \put(-0.01757923,0.19369208){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n$}}}%
-    \put(0.159665,0.00622204){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{10_GRIN.pdf}}%
+    \put(0.159665,0.00622204){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_2$}}}%
   \end{picture}%
 \endgroup%
