@@ -1021,32 +1021,10 @@ na posamezne kanale, ki jih zaznamo z ločenimi detektorji (D).
 \end{figure}
 \end{remark}
 
-\subsection*{Mehanske izgube}
-Do zdaj smo opisali izgube, do katerih pride v vlaknu zaradi absorpcije
-ali sipanja. Pri optičnih zvezah pa se pojavijo izgube tudi na spojih vlaken.
-Tako naprimer izgubljamo pri prenosu med vlaknoma, katerih sredici nista povsem
-enako veliki. Signal izgubljamo, kadar sta vlakni nagnjeni pod nekim kotom 
-eno glede na drugo, ali pa je med njima prečen ali vzdolžen premik. Na tipičnem
-spoju vlaken je okoli $0,2-0,5$~dB izgub. 
-
-\begin{definition}
-Imamo dve vlakni z efektivnima polmeroma snopov $w_1$ in $w_2$, katerih 
-osi sta poravnani, vlakni pa se stikata. Pokaži, da je faktor sklopitve (prepustnost)
-\beq
-\eta = \left( \frac{2 w_1 w_2}{w_1^2+w_2^2}\right)^2.
-\eeq
-\end{definition}
-
-\begin{definition}
-Imamo dve vlakni z enakima efektivnima polmeroma snopov $w$. Osi vlaken 
-sta vzporedni, vendar izmaknjeni za $\Delta$. Pokaži, da je faktor sklopitve (prepustnost)
-\beq
-\eta = \exp \left( - \frac{\Delta^2}{w^2}\right).
-\eeq
-\end{definition}
-
-V optičnem vlaknu nastanejo izgube tudi, kadar je vlakno ukrivljeno, 
-saj takrat valovanje uhaja v plašč. Te izgube tipično postanejo znantne, 
+\subsection*{Izgube v ukrivljenem vlaknu}
+Pri vseh primerih do zdaj smo upoštevali, da je vlakno oziroma valovni 
+vodnik raven. Kadar je vodnik ukrivljen, pride do dodatnih izgub, saj 
+del valovanja uhaja v plašč. Te izgube tipično postanejo znantne, 
 kadar je krivinski radij vlakna centimeter ali manj. Poglejmo si pojav podrobneje na
 planparalelnem vodniku.
 
@@ -1097,9 +1075,37 @@ polja
 \frac{d^{2}\psi}{dx^{2}}+\left[k_{0}^{2}\, n^{2}\left(r\right)-\beta^{2}\right]\,\psi+\frac{1}{R}\,\left(\frac{d\psi}{dr}-2\,\beta^{2}x\,\psi\right)=0\label{9.35}
 \end{equation}
 
-\section{Sklopitev v optična vlakna}
+\subsection*{Izgube na spoju dveh vlaken}
+Pri optičnih zvezah se pojavijo izgube tudi na spojih vlaken.
+Tako naprimer izgubljamo pri prenosu med vlaknoma, katerih sredici nista povsem
+enako veliki. Signal izgubljamo tudi, kadar sta vlakni nagnjeni pod nekim kotom 
+eno glede na drugo, ali pa je med njima prečen ali vzdolžen premik. Na tipičnem
+spoju vlaken je okoli $0,2-0,5$~dB izgub. 
 
-amplification in fibers.
+\begin{definition}
+Imamo dve vlakni z efektivnima polmeroma snopov $w_1$ in $w_2$, katerih 
+osi sta poravnani, vlakni pa se stikata. Pokaži, da je faktor sklopitve (prepustnost)
+\beq
+\eta = \left( \frac{2 w_1 w_2}{w_1^2+w_2^2}\right)^2.
+\eeq
+\end{definition}
+
+\begin{definition}
+Imamo dve vlakni z enakima efektivnima polmeroma snopov $w$. Osi vlaken 
+sta vzporedni, vendar izmaknjeni za $\Delta$. Pokaži, da je faktor sklopitve (prepustnost)
+\beq
+\eta = \exp \left( - \frac{\Delta^2}{w^2}\right).
+\eeq
+\end{definition}
+
+\section{Sklopitev v optična vlakna}
+razmisli strukturo \\
+- sklopitev svetobe v vlakno, prism, butt ...\\
+- skolpitev med dvema vzporednima vlaknoma, prehod iz enega v drugo...
+
+
+\section{Amplification in fibers?}
+ojačanje v vlaknih? Er doped? 
 
 \section{*Potovanje sunka po enorodovnem vlaknu}
 \label{chap:sunvl}
