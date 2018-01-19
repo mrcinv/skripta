@@ -473,6 +473,7 @@ Pri tem efektivni polmer snopa
 $w$ izračunamo po Marcusejevi formuli\footnote{D. Marcuse, Bell Syst. Tech. J. 56, 703 (1977).}
 \beq 
 w = (0,65 + \frac{1,619}{V^{3/2}}+\frac{2,879}{V^{6}})\,a,
+\label{Marcuse}
 \eeq
 pri čemer je $V$ normirana frekvenca $V = NA k_0 a$. Podobnost profila osnovnega
 HE$_{11}$ z Gaussovo funkcijo omogoča zelo dobro sklopitev med Gaussovimi
@@ -967,6 +968,7 @@ zmanjšanje disperzije.
 Za merilo izgub v vlaknu vpeljemo atenuacijski koeficient 
 \beq
 A [dB] = -10 \log_{10}\frac{j(z)}{j(0)},
+\label{dB}
 \eeq
 pri čemer je $j(z)$ intenziteta svetlobe po prepotovani razdalji $z$. Če se po prepotovanem
 kilometru signal zmanjša na polovico, so izgube $3~\si{\decibel/\kilo\meter}$.
@@ -1090,47 +1092,95 @@ polja
 Omenili smo že, da pride do izgub tudi na spoju dveh vlaken. 
 V idealnem primeru sta dve stikajoči vlakni povsem enaki in se sredici povsem ujemata. 
 Čim pa pride do majhnih odstopanj v velikosti ali poravnavi sredice, pa na stiku pride 
-do izgub. Na tipičnem spoju vlaken pride tako do okoli $0,2-0,5$~dB izgub.
+do izgub, na tipičnem spoju vlaken do okoli $0,2-0,5$~dB.
 
-Omejimo se na primer dveh planarnih valovodov, ki sta tako tanki, da se po njima
-širi le osnovni rod. Za primer obravnavajmo valovoda z različnima debelinama sredice,
-ostali parametri pa naj bodo enaki. Zapišimo vpadno električno poljsko jakost 
-kot (enačba~\ref{9.2})
+Omejimo se na spoj enorodovnih vlaken, v katerih krajevni del 
+električne poljske jakosti osnovnega roda zapišemo kot
 \beq
-{\mathbf E}_v(x,z)=\mathbf{e}\psi_v\left(x\right)\, e^{i\beta_v z},
-\eeq
-pri čemer prečno odvisnost zapišemo v $\psi$. Podobno lahko zapišemo tudi odbiti
-in prepuščeni val. Privzemimo, da sta si vodnika razmeroma podobna in da se le majhen
-delež moči izgublja preko plašča v okolico. Potem lahko za električno magnetno jakost
-zapišemo 
+E(r, \varphi, z)=\psi(r, \varphi) e^{i\beta z}.
+\eeq 
+
+Za izračun sklopitve na stiku dveh vlaken vpeljemo prekrivalni integral, 
+ki nam pove, kolikšen delež vpadne moči iz prvega vlakna 
+se sklopi v osnovni rod v drugem vlaknu. Sklopitveni faktor je
+\boxeq{10:overlap}{
+\eta = \frac{|\int \psi_1(r, \varphi) \psi_2(r, \varphi) r\, dr\, d\phi|^2}
+{\left(\int \psi_1^2 r\, dr\, d\varphi \right) \left(\int \psi_2^2 r\, dr\, d\varphi \right)},
+}
+pri čemer z indeksom $1$ označimo osnovni rod v prvem vlaknu, z indeksom $2$ pa 
+v drugem. Točen izračun sklopitve je v splošnem precej zapleten, saj vsebuje integrale
+Besslovih funkcij. Zato račun pogosto poenostavimo, tako 
+da prečno odvisnost osnovnega roda v cilindričnem vlaknu nadomestimo z 
+Gaussovo funkcijo in uporabimo efektivni polmer snopa (enačba~\ref{Marcuse}). 
+
+Izračunajmo sklopitveni faktor in izgube na stiku dveh vlaken z rahlo 
+različnima polmeroma. Po Marcusejevi formuli najprej določimo efektivna polmera Gaussovih snopov
+v obeh vlaknih $w_1$ in $w_2$. Prečni profil v prvem vlaknu je tako
 \beq
-\psi_v + r\psi_o = t \psi_p,
+\psi_1 = A_1 e^{-r^2/w_1^2},
 \eeq
-pri čemer je $r$ koeficient odbojnosti, $t$ koeficient prepustnosti, $\psi_o$ in $\psi_p$
-pa opisujeta odbiti in prepuščeni žarek. 
-
-
+v drugem pa 
+\beq
+\psi_2 = A_2 e^{-r^2/w_1^2}.
+\eeq
+Ko gornja nastavka vstavimo v enačbo~(\ref{10:overlap}), dobimo
+\beq
+\eta = \frac{|\int A_1 e^{-r^2/w_1^2} A_2 e^{-r^2/w_1^2} r\, dr|^2}
+{\left(\int A_1^2 e^{-2r^2/w_1^2} r\, dr \right) \left( A_2^2 e^{-2r^2/w_1^2} r\, dr \right)},
+\eeq
+od koder sledi
+\beq
+\eta = \frac{4 w_1^2 w_2^2}{(w_1^2+w_2^2)^2}.
+\eeq
+Kadar sta polmera vlaken enaka, je $\eta = 1$, z naraščajočo razliko pa pojema. Pri tem
+ni pomembno, ali ima večji polmer prvo ali drugo vlakno, v obeh primerih pride do izgube 
+signala. Intuitivno razumemo, da se signal izgubi pri prehodu iz večjega v manjše vlakno, 
+obratno pa je tudi res, saj se v širšem končnem vlaknu poleg osnovnega lahko vzbudijo
+tudi višji rodovi. Pri prehodu iz vlakna z $w = 10~\si{\micro\meter}$ v vlakno
+s polmerom $w = 8~\si{\micro\meter}$ (ali obratno), je sklopitveni faktor enak 0,95, kar 
+po enačbi~(\ref{dB}) ustreza izgubam $0,21~\si{\decibel}$. 
 
 \begin{definition}
-Imamo dve vlakni z efektivnima polmeroma snopov $w_1$ in $w_2$, katerih 
-osi sta poravnani, vlakni pa se stikata. Pokaži, da je faktor sklopitve (prepustnost)
-\beq
-\eta = \left( \frac{2 w_1 w_2}{w_1^2+w_2^2}\right)^2.
-\eeq
-\end{definition}
-
-\begin{definition}
-Imamo dve vlakni z enakima efektivnima polmeroma snopov $w$. Osi vlaken 
-sta vzporedni, vendar izmaknjeni za $\Delta$. Pokaži, da je faktor sklopitve (prepustnost)
+Pokaži, da je sklopitveni faktor za dve enaki vzporedni vlakni, ki sta iz osi izmaknjeni
+za $\Delta$, enak
 \beq
 \eta = \exp \left( - \frac{\Delta^2}{w^2}\right).
 \eeq
+Na primeru pokaži, da prečni premik osi vlaken bistveno bolj vpliva na izgube kot
+razlika v velikostih vlaken. 
 \end{definition}
 
 \section{Sklopitev svetlobe v vlakna}
-razmisli strukturo \\
-- sklopitev svetobe v vlakno, prism, butt ...\\
-- skolpitev med dvema vzporednima vlaknoma, prehod iz enega v drugo...
+Do zdaj smo govorili o svetlobi, ki potuje po valovnem vodniku ali vlaknu. Oglejmo si, kako
+svetlobo sploh sklopimo v optični vodnik. Sklopitev je možna na več načinov, omenimo 
+čelno sklopitev, pri kateri sklapljamo svetlobo v vlakno vzdolžno, sklopitev s prizmo, 
+sklopitev preko uklonskih rež ali sklopitev med dvema vzporednima vlaknoma. Prvi način 
+navadno uporabljamo pri cilindričnih vlaknih, ostale pa pri planarnih valovodnih strukturah.
+
+\subsection*{Čelna sklopitev}
+Pri izgubah na spoju dveh vlaken smo vpeljali prekrivalni integral, ki pove, kolikšen
+del osnovnega roda, ki izhaja iz prvega vlakna, se sklopi v osnovni rod drugega. Povsem 
+podobno pristopamo tudi pri izračunu sklopitve svetlobe v optično vlakno. Izračunati 
+moramo, koliko vpadne svetlobe $E(r, \varphi)$ se sklopi z izbranim rodom vlakna $n,m$
+\beq
+\eta = \frac{|\int E(r, \varphi) E^*_{m,n}(r, \varphi) r\, dr\, d\phi|^2}
+{\left(\int |E(r, \varphi)|^2 r\, dr\, d\varphi \right) \left(\int |E_{m,n}(r, \varphi)|^2 
+r\, dr\, d\varphi \right)},
+\eeq
+oziroma v kartezičnih koordinatah
+\beq
+\eta = \frac{|\int E(x,y) E^*_{m,n}(x,y) dx\, dy|^2}
+{\left(\int |E(x, y)|^2 dx\,dy \right) \left(\int |E_{m,n}(x, y)|^2 
+dx\, dy \right)}.
+\eeq
+
+
+Če računamo sklopitev v osnovi rod vlakna, da tudi tokrat iz praktičnih razlogov 
+nadomestimo z Gaussovim profilom z efektivnim lomnim količnikom. 
+
+
+
+
 
 
 \section{Amplification in fibers?}
