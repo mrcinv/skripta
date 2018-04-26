@@ -949,6 +949,189 @@ sunka po prehodu skozi vlakno
  Ker so nečistoče slučajno in neodvisno razporejene, tako disperzijo zelo težko odpravimo.
 \end{remark}
 
+\section{*Potovanje kratkega sunka po enorodovnem vlaknu}
+\label{chap:sunvl}
+Poglejmo si podrobneje, kako po enorodovnem vlaknu ali drugem
+sredstvu z disperzijo potuje kratek sunek valovanja z dano začetno obliko.
+Sunek zapišimo kot  
+\begin{equation}
+E\left(x, y, z, t\right)=a\left(z,t\right)\,\psi\left(x,y\right),
+\label{9.61}
+\end{equation}
+kjer je $\psi\left(x,y\right)$ lastna rešitev prečnega dela valovne
+enačbe, ki določa tudi zvezo $\beta\left(\omega\right)$. 
+Funkcijo $a\left(z,t\right)$, ki opisuje obliko sunka v smeri $z$ in tudi njegovo
+širjenje, zapišemo s Fourierevim integralom po frekvencah 
+\begin{equation}
+a\left(z,t\right)=\int \tilde{a}(z, \omega)\, e^{i\omega t}d\omega.
+\label{9.62}
+\end{equation}
+Sunek naj bo približno monokromatičen s frekvenco $\omega_{0}$,
+to pomeni, da je mnogo daljši od optične periode. Pri določeni $\omega$
+ima Fouriereva amplituda $\tilde{a}$ krajevno odvisnost $\exp(i\beta(\omega)z)$,
+zato zadošča enačbi 
+\begin{equation}
+\frac{\partial \tilde{a}\left(z,\omega\right)}{\partial z}=i\,\beta(\omega) \,\tilde{a}(z,
+\omega).
+\label{9.63}
+\end{equation}
+Privzeli smo, da je spekter sunka ozek, zato lahko $\beta(\omega)$
+razvijemo okoli $\omega_{0}$ in dobimo
+\begin{equation}
+\frac{\partial \tilde{a}\left(z,\omega\right)}{\partial z}=i\,\left(\beta(\omega_{0})
++\frac{d\beta}{d\omega}\,(\omega-\omega_{0})+\frac{1}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,(\omega-\omega_{0})^{2}\right)\, \tilde{a}.
+\label{9.64}
+\end{equation}
+Vpeljimo novo amplitudno funkcijo $\tilde{A}$, ki ne vsebuje osnovne odvisnosti
+$\exp(i\beta(\omega_{0})z)$ 
+\begin{equation}
+\tilde{a}\left(z,\omega\right)=\tilde{A}\left(z,\omega-\omega_{0}\right)\, e^{i\,\beta\left(\omega_{0}\right)\, z}.
+\label{9.65}
+\end{equation}
+Ker je spekter različen od nič le okoli $\omega_{0}$, je prikladno
+$\tilde{A}$ pisati kot funkcijo razlike $\omega-\omega_{0}$. Napravimo obratno Fourierevo
+transformacijo zadnjega izraza (enačba~\ref{9.62})
+\begin{eqnarray}
+a\left(z,t\right) & = & \int_{-\infty}^{\infty}\tilde{A}\left(z,\omega-\omega_{0}\right)\,
+e^{i(\beta(\omega_{0})\, z+\omega t)}\, d\omega
+\label{9.66}\\
+ & = & \int_{-\infty}^{\infty}\tilde{A}\left(z,\omega-\omega_{0}\right)\, 
+ e^{i(\omega-\omega_{0})\, t} e^{i(\beta(\omega_{0})
+ z+\omega_{0}t)} d(\omega-\omega_{0})\nonumber \\
+ & = & A\left(z,t\right)\, e^{i (\beta(\omega_{0})\, z+\omega_{0}\, t)}.\nonumber 
+\end{eqnarray}
+Funkcija $A\left(z,t\right)$ očitno predstavlja prostorsko in časovno
+odvisnost ovojnice sunka. Vstavimo definicijo (enačba~\ref{9.65}) v enačbo
+(\ref{9.64}) 
+\begin{equation}
+\frac{\partial \tilde{A}(z,\omega-\omega_{0})}{\partial z}=i\left(\frac{d\beta}{d\omega}\,\left(\omega-\omega_{0}\right)+\frac{1}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\left(\omega-\omega_{0}\right)^{2}\right)\, \tilde{A}\left(z,\omega-\omega_{0}\right).
+\label{9.67}
+\end{equation}
+Z obratno Fourierevo transformacijo dobimo 
+\begin{equation}
+\left(\frac{\partial}{\partial z}+\frac{1}{v_{g}}\,\frac{\partial}{\partial t}\right)\, A\left(z,t\right)=-\frac{i}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A\left(z,t\right)}{\partial t^{2}}\label{9.68}
+\end{equation}
+Pri tem smo upoštevali, da je 
+\begin{equation}
+\int\left(i\omega\right)^{n}A\left(z,\omega\right)\, e^{-i\omega t}\, d\omega=\frac{\partial^{n}}{\partial t^{n}}A\left(z,t\right)\label{9.69}
+\end{equation}
+ in vpeljali grupno hitrost kot $v_g = d\omega/d\beta$.
+
+Enačba \ref{9.68} opisuje razvoj oblike sunka pri širjenju po vlaknu.
+Če ni disperzije grupne hitrosti, to je, če je desna stran enačbe
+nič, je rešitev poljubna funkcija $f\left(z-v_{g}t\right)$. Sunek
+poljubne začetne oblike potuje po vlaknu nepopačen z grupno hitrostjo.
+Disperzija pa povzroči, da se spreminja tudi oblika. Enačbo lahko
+še nekoliko poenostavimo z vpeljavo novih neodvisnih spremenljivk
+\begin{eqnarray}
+\tau & = & t-\frac{z}{v_{g}}\nonumber \\
+\zeta & = & z\label{9.70}
+\end{eqnarray}
+ Za vrh sunka, ki naj ima pri $t=0$ koordinato $z=0$ in se giblje
+z grupno hitrostjo, je vselej $\tau=0$. Spremenljivka predstavlja
+$\tau$ torej čas v točki $z=\zeta$ , merjen od trenutka, ko tja
+prispe center sunka. Z novima spremenljivkama se enačba \ref{9.68}
+zapiše 
+\begin{equation}
+\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A}{\partial\tau^{2}}+2\, i\,\frac{\partial A}{\partial\zeta}=0\label{9.71}
+\end{equation}
+ Ta enačba ima isto obliko kot obosna valovna enačba, ki smo jo v
+drugem poglavju uporabili za obravnavo koherentnih snopov. Podobnost
+seže dlje od formalne oblike. Pri snopih, ki so omejeni v prečni smeri,
+disperzija fazne in grupne hitrosti po prečnih komponentah valovnega
+vektorja povzroča spreminjanje prečnega preseka snopa, pri časovno
+omejenih sunkih v sredstvu s frekvenčno disperzijo pa se spreminja
+vzdolžna oblika sunka. Kot se morda bralec spominja, je tudi v praznem
+prostoru pri širjenju snopa v okolici grla fazna hitrost funkcija
+frekvence. Zato se kratek sunek, ki je omejen v prečni smeri, tudi
+v praznem prostoru razširi tako v prečni kot v vzdolžni smeri. (Naloga)
+
+Obosno valovno enačbo rešijo Gaussovi snopi. V en. \ref{9.71} ima
+vlogo prečne koordinate $\tau.$ Po analogiji s snopi se bo zaradi
+disperzije najmanj širil sunek z Gaussovo časovno odvisnostjo. Računa
+nam ni treba ponavljati, kar v izrazu za Gaussove snope napravimo
+ustrezno zamenjavo črk. Valovnemu številu $k$ pri snopih na primer
+ustreza parameter $\mu=(d^{2}\beta/d\omega^{2})^{-1}$. Tako dobimo
+\begin{equation}
+A\left(\tau,\zeta\right)=\frac{A_{0}}{\sigma_{0}\sqrt{1+\frac{\zeta^{2}}{\zeta_{0}^{2}}}}\exp\left(-\frac{\tau^{2}}{\sigma^{2}}\right)\exp\left(-i\frac{\mu\tau^{2}}{2b}\right)e^{i\phi\left(\zeta\right)}\label{9.72}
+\end{equation}
+ kjer je $\sigma$ trajanje sunka, za katerega velja enaka zveza kot
+za polmer Gaussovega snopa: 
+\begin{equation}
+\sigma^{2}=\sigma_{0}^{2}\left(1+\frac{\zeta^{2}}{\zeta_{0}^{2}}\right)\label{9.73}
+\end{equation}
+ Tu je $\sigma_{0}$ trajanje sunka pri $\zeta=0$, to je na mestu,
+kjer je sunek najkrajši. Dodatna skupna faza $\phi\left(\zeta\right)$
+ni posebno pomembna, pač pa je zanimiv drugi eksponentni faktor v
+enačbi \ref{9.72}. V njem smo z $b=\zeta\left(1+\zeta_{0}^{2}/\zeta^{2}\right)$
+označili količino, ki je analogna krivinskemu radiju valovnih front
+v primeru Gaussovih snopov. Odvod faze po $\tau$ predstavlja spremembo
+frekvence glede na centralno frekvenco sunka $\omega_{0}$: 
+\begin{equation}
+\omega-\omega_{0}=\frac{\mu\tau}{b}\label{9.74}
+\end{equation}
+ Za pozitivno disperzijo $\mu$ je frekvenca na prednji strani sunka,
+to je pri $\tau<0$, večja in se linearno zmanjšuje proti koncu sunka.
+Pri $\zeta=0$ je sunek toliko kratek, kolikor je možno pri dani spektralni
+širini. Pri potovanju po vlaknu se zaradi disperzije sunek razširi,
+spektralna širina pa ostaja enaka, zato se je del pojavi kot spreminjanje
+frekvence znotraj sunka. Lahko si mislimo tudi, da je sunek najkrajši,
+to je omejen z Fourierovo transformacijo spektra, tedaj, kadar se
+vse frekvenčne komponente seštejejo z isto fazo, to je pri $\zeta=0$.
+Da dobimo najkrajše sunke, kadar je faza vseh delnih valov enaka,
+smo srečali že pri fazno uklenjenih sunkih iz mnogofrekvenčnih laserjev.
+Pri potovanju sunka se zaradi disperzije faze frekvenčnih komponent
+različno spreminjajo in sunek se podaljša. Zanimivo je, da je pri
+tem pomemben šele drugi odvod fazne hitrosti po frekvenci, ki je sorazmeren
+z $\mu$, linearno spreminjanje faze pa ne povzroči razširitve.
+
+Naloga: Pokaži, da je spekter sunka nespremenjen.
+
+Naloga: Pokaži, da je za sunek poljubne začetne oblike razširitev
+mogoče zapisati z uklonskim integralom.
+
+Naloga: Pokaži, da iz en. \ref{9.73} sledi podobna ocena za maksimalno
+frekvenco modulacije (minimalno razširitev sunka) pri dani dolžini
+vlakna, kot jo da en. \ref{9.57}.
+
+Razširitev sunka zaradi disperzije je pri $\mu>0$ mogoče kompenzirati
+s parom paralelnih uklonskih mrežic, kot kaže slika \ref{sl9.8}.
+Prva mrežica različne frekvenčna komponente razkloni, druga pa zopet
+zbere, vendar dolžine optičnih poti za različne komponente niso enake.
+celoten učinek je enak kot pri razširjanju sunka po sredstvu z negativno
+disperzijo. Račun je nekoliko preglednejši, rezultat pa povsem enak,
+če namesto refleksijskih mrežic vzamemo transmisijski, kot kaže slika
+\ref{sl9.9}. Naj na par vpada raven val pod kotom $\alpha.$ Pred
+prvo mrežico je fazni faktor $\exp\left(ik_{1}x\right),$
+kjer je $k_{1}=\omega/c\,\sin\alpha$. Pri prehodu skozi mrežico se
+polje pomnoži s kompleksno prepustnostjo mrežice, ki povzroči razcep
+vala na uklonjene valove. Pri tem se faza za prvi uklonski red poveča
+za $qx$, kje je $q=2\pi/\Lambda$ in je $\Lambda\,$perioda mrežice.
+Premik do druge mrežice poveča fazo za $k_{3}L$. Za komponento valovnega
+vektorja v smeri $z$ velja seveda $k_{3}=\sqrt{\left(\omega/c\right)^{2}-\left(k_{1}+q\right)^{2}}$.
+Po prehodu skozi drugo mrežico nas zanima prvi negativni uklonski
+red, ki da val v smeri prvotnega vala. Za ta red se faza spremeni
+za $-qx$, tako da je celotna sprememba faze 
+\begin{equation}
+\Phi=L\sqrt{\left(\omega/c\right)^{2}-\left(k_{1}+q\right)^{2}}=
+\frac{L}{c}\sqrt{\omega^{2}-\left(\omega\,\sin\alpha+qc\right)^{2}}\label{9.75}
+\end{equation}
+ Disperzija, ki jo povzroči par mrežic, je določena zdrugim odvodom
+faze po frekvenci: 
+\begin{equation}
+\frac{d^{2}\Phi}{d\omega^{2}}=-\frac{L\, q}{\left[\omega^{2}-\left(\omega\,\sin\alpha+q\, c\right)^{2}\right]^{3/2}}\label{9.76}
+\end{equation}
+ Drugi odvod je vselej negativen. Par mrežic torej deluje kot sredstvo
+z negativno disperzijo. Sunek, ki se je razširil zaradi potovanja
+po sredstvu s pozitivno disperzijo, lahko ponovno skrajšamo do meje,
+določene s širino spektra. Postopek se uporablja za pridobivanje zelo
+kratkih sunkov. Sunku iz fazno uklenjenega barvilnega ali Ti:safirnega
+laserja najprej v nelinearnem sredstvu razširijo spekter, pri čemer
+se sunek tudi časovno podaljša. O tem najde bralec nekaj več v poglavju
+o nelinearni optiki. Razširjen sunek nato s parom mrežic skrajšajo
+za faktor 10-100 glede na prvotno dolžino sunka. Tako dobijo sunke
+dolge le okoli 10 fs, kar je le še nekaj optičnih period.
+
 \section{Izgube v optičnih vlaknih}
 Pri prenosu informacij z optičnimi vlakni je poleg disperzije, ki signal popači,
 treba upoštevati tudi izgube, ki signal oslabijo. 
@@ -1104,7 +1287,7 @@ Za izračun sklopitve na stiku dveh vlaken vpeljemo prekrivalni integral,
 ki nam pove, kolikšen delež vpadne moči iz prvega vlakna 
 se sklopi v osnovni rod v drugem vlaknu. Sklopitveni faktor je
 \boxeq{10:overlap}{
-\eta = \frac{|\int \psi_1(r, \varphi) \psi_2(r, \varphi) r\, dr\, d\phi|^2}
+\eta = \frac{|\int \psi_1(r, \varphi) \psi_2(r, \varphi) r\, dr\, d\varphi|^2}
 {\left(\int \psi_1^2 r\, dr\, d\varphi \right) \left(\int \psi_2^2 r\, dr\, d\varphi \right)},
 }
 pri čemer z indeksom $1$ označimo osnovni rod v prvem vlaknu, z indeksom $2$ pa 
@@ -1151,214 +1334,36 @@ razlika v velikostih vlaken.
 \end{definition}
 
 \section{Sklopitev svetlobe v vlakna}
-Do zdaj smo govorili o svetlobi, ki potuje po valovnem vodniku ali vlaknu. Oglejmo si, kako
-svetlobo sploh sklopimo v optični vodnik. Sklopitev je možna na več načinov, omenimo 
-čelno sklopitev, pri kateri sklapljamo svetlobo v vlakno vzdolžno, sklopitev s prizmo, 
-sklopitev preko uklonskih rež ali sklopitev med dvema vzporednima vlaknoma. Prvi način 
+Do zdaj smo govorili o svetlobi, ki potuje po valovnem vodniku ali vlaknu. Kako pa 
+svetlobo sploh sklopimo v optični vodnik? Sklopitev je možna na več načinov, obravnavali bomo 
+omenimo čelno sklopitev, sklopitev s prizmo, sklopitev preko uklonskih rež ali 
+sklopitev med dvema vzporednima vlaknoma. Prvi način 
 navadno uporabljamo pri cilindričnih vlaknih, ostale pa pri planarnih valovodnih strukturah.
 
 \subsection*{Čelna sklopitev}
-Pri izgubah na spoju dveh vlaken smo vpeljali prekrivalni integral, ki pove, kolikšen
-del osnovnega roda, ki izhaja iz prvega vlakna, se sklopi v osnovni rod drugega. Povsem 
-podobno pristopamo tudi pri izračunu sklopitve svetlobe v optično vlakno. Izračunati 
-moramo, koliko vpadne svetlobe $E(r, \varphi)$ se sklopi z izbranim rodom vlakna $n,m$
+Pri izgubah na spoju dveh vlaken smo vpeljali prekrivalni integral (enačba~\ref{10:overlap}), 
+ki pove, kolikšen del osnovnega roda, ki izhaja iz prvega vlakna, se sklopi v osnovni 
+rod drugega. Povsem podobno pristopamo tudi pri izračunu sklopitve svetlobe v optično vlakno. Izračunati moramo, koliko vpadne svetlobe $E(r, \varphi)$ se sklopi z izbranim rodom vlakna $n,m$
 \beq
-\eta = \frac{|\int E(r, \varphi) E^*_{m,n}(r, \varphi) r\, dr\, d\phi|^2}
-{\left(\int |E(r, \varphi)|^2 r\, dr\, d\varphi \right) \left(\int |E_{m,n}(r, \varphi)|^2 
+\eta = \frac{|\int E(r, \varphi) E^*_{n,m}(r, \varphi) r\, dr\, d\varphi|^2}
+{\left(\int |E(r, \varphi)|^2 r\, dr\, d\varphi \right) \left(\int |E_{n,m}(r, \varphi)|^2 
 r\, dr\, d\varphi \right)},
 \eeq
 oziroma v kartezičnih koordinatah
 \beq
-\eta = \frac{|\int E(x,y) E^*_{m,n}(x,y) dx\, dy|^2}
-{\left(\int |E(x, y)|^2 dx\,dy \right) \left(\int |E_{m,n}(x, y)|^2 
+\eta = \frac{|\int E(x,y) E^*_{n,m}(x,y) dx\, dy|^2}
+{\left(\int |E(x, y)|^2 dx\,dy \right) \left(\int |E_{n,m}(x, y)|^2 
 dx\, dy \right)}.
 \eeq
-
-
-Če računamo sklopitev v osnovi rod vlakna, da tudi tokrat iz praktičnih razlogov 
-nadomestimo z Gaussovim profilom z efektivnim lomnim količnikom. 
-
+Če računamo sklopitev v osnovi rod vlakna, ga tudi tukaj iz praktičnih razlogov nadomestimo 
+z Gaussovim profilom z efektivnim polmerom. 
 
 
 
+% \section{Amplification in fibers?}
+% \label{FibAmp}
+% ojačanje v vlaknih? Er doped? 
 
 
-\section{Amplification in fibers?}
-\label{FibAmp}
-ojačanje v vlaknih? Er doped? 
-
-\section{*Potovanje sunka po enorodovnem vlaknu}
-\label{chap:sunvl}
-Poglejmo si nekoliko podrobneje, kako po enorodovnem vlaknu ali drugem
-sredstvu z disperzijo potuje sunek valovanja z dano začetno obliko.
-Denimo, da smo poiskali lastna valovanja in da torej poznamo zvezo
-med valovnim številom $\beta$ in frekvenco $\omega$. Zapišimo sunek
-v obliki 
-\begin{equation}
-E\left(z,t\right)=a\left(z,t\right)\,\psi\left(x,y\right)\label{9.61}
-\end{equation}
-kjer je $\psi\left(x,y\right)$ lastna rešitev prečenega dela valovne
-enačbe, ki določa tudi $\beta\left(\omega\right)$. Funkcijo $a\left(z,t\right)$,
-ki opisuje širjenje sunka in njegovo obliko v $z$ smeri, lahko zapišemo
-s Fourierovim integralom po frekvencah 
-\begin{equation}
-a\left(z,t\right)=\int a(\omega,z)\, e^{-i\omega t}d\omega\label{9.62}
-\end{equation}
-Sunek naj bo približno monokromatičen s frekvenco $\omega_{0}$,
-to pomeni, da je mnogo daljši od optične periode. Pri določeni $\omega$
-ima Fourierova amplituda krajevno odvisnost $\exp[i\,\beta\left(\omega\right)\, z]$,
-zato zadošča enačbi 
-\begin{equation}
-\frac{\partial a\left(z,\omega\right)}{\partial z}=i\,\beta\left(\omega\right)\, a\left(z,\omega\right)\label{9.63}
-\end{equation}
- Privzeli smo, da je spekter sunka ozek, zato lahko $\beta\left(\omega\right)$
-razvijemo okoli $\omega_{0}$: 
-\begin{equation}
-\frac{\partial a\left(z,\omega\right)}{\partial z}=i\,\left[\beta\left(\omega_{0}\right)+\frac{d\beta}{d\omega}\,\left(\omega-\omega_{0}\right)+\frac{1}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\left(\omega-\omega_{0}\right)^{2}\right]\, a\label{9.64}
-\end{equation}
- Vpeljimo novo amplitudno funkcijo, ki ne bo vsebovala osnovne odvisnosti
-$\exp[i\beta\left(\omega_{0}\right)z]$ 
-\begin{equation}
-a\left(z,\omega\right)=A\left(z,\omega-\omega_{0}\right)\, e^{i\,\beta\left(\omega_{0}\right)\, z}\label{9.65}
-\end{equation}
- Ker je spkter različen od nič le okoli $\omega_{0}$, je prikladno
-$A$ pisati kot funkcijo $\omega-\omega_{0}$. Napravimo obratno Fourierovo
-transformacijo zadnjega izraza: 
-\begin{eqnarray}
-a\left(z,t\right) & = & \int_{-\infty}^{\infty}A\left(z,\omega-\omega_{0}\right)\, e^{i\,[\beta\left(\omega_{0}\right)\, z-\omega\,\, t]}\, d\omega\label{9.66}\\
- & = & \int_{-\infty}^{\infty}A\left(z,\omega-\omega_{0}\right)\, e^{-i\left(\omega-\omega_{0}\right)\, t}d\left(\omega-\omega_{0}\right)\,\, e^{i\,[\beta\left(\omega_{0}\right)\, z-\omega\,_{0}\, t]}\nonumber \\
- & = & A\left(z,t\right)\,\, e^{i\,[\beta\left(\omega_{0}\right)\, z-\omega\,_{0}\, t]}\nonumber 
-\end{eqnarray}
- Funkcija $A\left(z,t\right)$, katere Fourierova transformacija je
-$A\left(z,\omega\right)$, očitno predstavlja prostorsko in časovno
-odvisnost ovojnice sunka. Postavimo definicijo \ref{9.65} v enačbo
-\ref{9.64}: 
-\begin{equation}
-\frac{\partial A\left(z,\omega-\omega_{0}\right)}{\partial z}=i\,\left[\frac{d\beta}{d\omega}\,\left(\omega-\omega_{0}\right)+\frac{1}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\left(\omega-\omega_{0}\right)^{2}\right]\, A\left(z,\omega-\omega_{0}\right)\label{9.67}
-\end{equation}
- Z obratno Fourierovo transformacijo dobimo 
-\begin{equation}
-\left(\frac{\partial}{\partial z}+\frac{1}{v_{g}}\,\frac{\partial}{\partial t}\right)\, A\left(z,t\right)=-\frac{i}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A\left(z,t\right)}{\partial t^{2}}\label{9.68}
-\end{equation}
- Upoštevali smo, da je 
-\begin{equation}
-\int\left(i\omega\right)^{n}A\left(z,\omega\right)\, e^{-i\omega t}\, d\omega=\frac{\partial^{n}}{\partial t^{n}}A\left(z,t\right)\label{9.69}
-\end{equation}
- in da je $d\beta/d\omega=1/v_{g}$.
-
-Enačba \ref{9.68} opisuje razvoj oblike sunka pri širjenju po vlaknu.
-Če ni disperzije grupne hitrosti, to je, če je desna stran enačbe
-nič, je rešitev poljubna funkcija $f\left(z-v_{g}t\right)$. Sunek
-poljubne začetne oblike potuje po vlaknu nepopačen z grupno hitrostjo.
-Disperzija pa povzroči, da se spreminja tudi oblika. Enačbo lahko
-še nekoliko poenostavimo z vpeljavo novih neodvisnih spremenljivk
-\begin{eqnarray}
-\tau & = & t-\frac{z}{v_{g}}\nonumber \\
-\zeta & = & z\label{9.70}
-\end{eqnarray}
- Za vrh sunka, ki naj ima pri $t=0$ koordinato $z=0$ in se giblje
-z grupno hitrostjo, je vselej $\tau=0$. Spremenljivka predstavlja
-$\tau$ torej čas v točki $z=\zeta$ , merjen od trenutka, ko tja
-prispe center sunka. Z novima spremenljivkama se enačba \ref{9.68}
-zapiše 
-\begin{equation}
-\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A}{\partial\tau^{2}}+2\, i\,\frac{\partial A}{\partial\zeta}=0\label{9.71}
-\end{equation}
- Ta enačba ima isto obliko kot obosna valovna enačba, ki smo jo v
-drugem poglavju uporabili za obravnavo koherentnih snopov. Podobnost
-seže dlje od formalne oblike. Pri snopih, ki so omejeni v prečni smeri,
-disperzija fazne in grupne hitrosti po prečnih komponentah valovnega
-vektorja povzroča spreminjanje prečnega preseka snopa, pri časovno
-omejenih sunkih v sredstvu s frekvenčno disperzijo pa se spreminja
-vzdolžna oblika sunka. Kot se morda bralec spominja, je tudi v praznem
-prostoru pri širjenju snopa v okolici grla fazna hitrost funkcija
-frekvence. Zato se kratek sunek, ki je omejen v prečni smeri, tudi
-v praznem prostoru razširi tako v prečni kot v vzdolžni smeri. (Naloga)
-
-Obosno valovno enačbo rešijo Gaussovi snopi. V en. \ref{9.71} ima
-vlogo prečne koordinate $\tau.$ Po analogiji s snopi se bo zaradi
-disperzije najmanj širil sunek z Gaussovo časovno odvisnostjo. Računa
-nam ni treba ponavljati, kar v izrazu za Gaussove snope napravimo
-ustrezno zamenjavo črk. Valovnemu številu $k$ pri snopih na primer
-ustreza parameter $\mu=(d^{2}\beta/d\omega^{2})^{-1}$. Tako dobimo
-\begin{equation}
-A\left(\tau,\zeta\right)=\frac{A_{0}}{\sigma_{0}\sqrt{1+\frac{\zeta^{2}}{\zeta_{0}^{2}}}}\exp\left(-\frac{\tau^{2}}{\sigma^{2}}\right)\exp\left(-i\frac{\mu\tau^{2}}{2b}\right)e^{i\phi\left(\zeta\right)}\label{9.72}
-\end{equation}
- kjer je $\sigma$ trajanje sunka, za katerega velja enaka zveza kot
-za polmer Gaussovega snopa: 
-\begin{equation}
-\sigma^{2}=\sigma_{0}^{2}\left(1+\frac{\zeta^{2}}{\zeta_{0}^{2}}\right)\label{9.73}
-\end{equation}
- Tu je $\sigma_{0}$ trajanje sunka pri $\zeta=0$, to je na mestu,
-kjer je sunek najkrajši. Dodatna skupna faza $\phi\left(\zeta\right)$
-ni posebno pomembna, pač pa je zanimiv drugi eksponentni faktor v
-enačbi \ref{9.72}. V njem smo z $b=\zeta\left(1+\zeta_{0}^{2}/\zeta^{2}\right)$
-označili količino, ki je analogna krivinskemu radiju valovnih front
-v primeru Gaussovih snopov. Odvod faze po $\tau$ predstavlja spremembo
-frekvence glede na centralno frekvenco sunka $\omega_{0}$: 
-\begin{equation}
-\omega-\omega_{0}=\frac{\mu\tau}{b}\label{9.74}
-\end{equation}
- Za pozitivno disperzijo $\mu$ je frekvenca na prednji strani sunka,
-to je pri $\tau<0$, večja in se linearno zmanjšuje proti koncu sunka.
-Pri $\zeta=0$ je sunek toliko kratek, kolikor je možno pri dani spektralni
-širini. Pri potovanju po vlaknu se zaradi disperzije sunek razširi,
-spektralna širina pa ostaja enaka, zato se je del pojavi kot spreminjanje
-frekvence znotraj sunka. Lahko si mislimo tudi, da je sunek najkrajši,
-to je omejen z Fourierovo transformacijo spektra, tedaj, kadar se
-vse frekvenčne komponente seštejejo z isto fazo, to je pri $\zeta=0$.
-Da dobimo najkrajše sunke, kadar je faza vseh delnih valov enaka,
-smo srečali že pri fazno uklenjenih sunkih iz mnogofrekvenčnih laserjev.
-Pri potovanju sunka se zaradi disperzije faze frekvenčnih komponent
-različno spreminjajo in sunek se podaljša. Zanimivo je, da je pri
-tem pomemben šele drugi odvod fazne hitrosti po frekvenci, ki je sorazmeren
-z $\mu$, linearno spreminjanje faze pa ne povzroči razširitve.
-
-Naloga: Pokaži, da je spekter sunka nespremenjen.
-
-Naloga: Pokaži, da je za sunek poljubne začetne oblike razširitev
-mogoče zapisati z uklonskim integralom.
-
-Naloga: Pokaži, da iz en. \ref{9.73} sledi podobna ocena za maksimalno
-frekvenco modulacije (minimalno razširitev sunka) pri dani dolžini
-vlakna, kot jo da en. \ref{9.57}.
-
-Razširitev sunka zaradi disperzije je pri $\mu>0$ mogoče kompenzirati
-s parom paralelnih uklonskih mrežic, kot kaže slika \ref{sl9.8}.
-Prva mrežica različne frekvenčna komponente razkloni, druga pa zopet
-zbere, vendar dolžine optičnih poti za različne komponente niso enake.
-celoten učinek je enak kot pri razširjanju sunka po sredstvu z negativno
-disperzijo. Račun je nekoliko preglednejši, rezultat pa povsem enak,
-če namesto refleksijskih mrežic vzamemo transmisijski, kot kaže slika
-\ref{sl9.9}. Naj na par vpada raven val pod kotom $\alpha.$ Pred
-prvo mrežico je fazni faktor $\exp\left(ik_{1}x\right),$
-kjer je $k_{1}=\omega/c\,\sin\alpha$. Pri prehodu skozi mrežico se
-polje pomnoži s kompleksno prepustnostjo mrežice, ki povzroči razcep
-vala na uklonjene valove. Pri tem se faza za prvi uklonski red poveča
-za $qx$, kje je $q=2\pi/\Lambda$ in je $\Lambda\,$perioda mrežice.
-Premik do druge mrežice poveča fazo za $k_{3}L$. Za komponento valovnega
-vektorja v smeri $z$ velja seveda $k_{3}=\sqrt{\left(\omega/c\right)^{2}-\left(k_{1}+q\right)^{2}}$.
-Po prehodu skozi drugo mrežico nas zanima prvi negativni uklonski
-red, ki da val v smeri prvotnega vala. Za ta red se faza spremeni
-za $-qx$, tako da je celotna sprememba faze 
-\begin{equation}
-\Phi=L\sqrt{\left(\omega/c\right)^{2}-\left(k_{1}+q\right)^{2}}=
-\frac{L}{c}\sqrt{\omega^{2}-\left(\omega\,\sin\alpha+qc\right)^{2}}\label{9.75}
-\end{equation}
- Disperzija, ki jo povzroči par mrežic, je določena zdrugim odvodom
-faze po frekvenci: 
-\begin{equation}
-\frac{d^{2}\Phi}{d\omega^{2}}=-\frac{L\, q}{\left[\omega^{2}-\left(\omega\,\sin\alpha+q\, c\right)^{2}\right]^{3/2}}\label{9.76}
-\end{equation}
- Drugi odvod je vselej negativen. Par mrežic torej deluje kot sredstvo
-z negativno disperzijo. Sunek, ki se je razširil zaradi potovanja
-po sredstvu s pozitivno disperzijo, lahko ponovno skrajšamo do meje,
-določene s širino spektra. Postopek se uporablja za pridobivanje zelo
-kratkih sunkov. Sunku iz fazno uklenjenega barvilnega ali Ti:safirnega
-laserja najprej v nelinearnem sredstvu razširijo spekter, pri čemer
-se sunek tudi časovno podaljša. O tem najde bralec nekaj več v poglavju
-o nelinearni optiki. Razširjen sunek nato s parom mrežic skrajšajo
-za faktor 10-100 glede na prvotno dolžino sunka. Tako dobijo sunke
-dolge le okoli 10 fs, kar je le še nekaj optičnih period.
 
 
