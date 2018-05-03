@@ -951,121 +951,144 @@ sunka po prehodu skozi vlakno
 
 \section{*Potovanje kratkega sunka po enorodovnem vlaknu}
 \label{chap:sunvl}
+\subsection*{Vpliv disperzije}
 Poglejmo si podrobneje, kako po enorodovnem vlaknu ali drugem
 sredstvu z disperzijo potuje kratek sunek valovanja z dano začetno obliko.
 Sunek zapišimo kot  
 \begin{equation}
-E\left(x, y, z, t\right)=a\left(z,t\right)\,\psi\left(x,y\right),
+E\left(x, y, z, t\right)=\psi\left(x,y\right)\, a\left(z,t\right),
 \label{9.61}
 \end{equation}
 kjer je $\psi\left(x,y\right)$ lastna rešitev prečnega dela valovne
 enačbe, ki določa tudi zvezo $\beta\left(\omega\right)$. 
-Funkcijo $a\left(z,t\right)$, ki opisuje obliko sunka v smeri $z$ in tudi njegovo
-širjenje, zapišemo s Fourierevim integralom po frekvencah 
+Funkcija $a\left(z,t\right)$ opisuje obliko sunka v smeri $z$ in tudi njegovo
+širjenje. Razvijmo jo po ravnih valovih z ustreznimi amplitudnimi faktorji 
+pri $z=0$ 
 \begin{equation}
-a\left(z,t\right)=\int \tilde{a}(z, \omega)\, e^{i\omega t}d\omega.
+a\left(0,t\right)=\int \tilde{A}(\omega)\, e^{- i\omega t}d\omega.
 \label{9.62}
 \end{equation}
-Sunek naj bo približno monokromatičen s frekvenco $\omega_{0}$,
-to pomeni, da je mnogo daljši od optične periode. Pri določeni $\omega$
-ima Fouriereva amplituda $\tilde{a}$ krajevno odvisnost $\exp(i\beta(\omega)z)$,
-zato zadošča enačbi 
+Ko sunek potuje vzdolž osi $z$, moramo vsaki frekvenčni komponenti pripisati
+ustrezen fazni faktor $i \beta (\omega) z$. Tako dobimo 
 \begin{equation}
-\frac{\partial \tilde{a}\left(z,\omega\right)}{\partial z}=i\,\beta(\omega) \,\tilde{a}(z,
-\omega).
-\label{9.63}
+a\left(z,t\right)=\int \tilde{A}(\omega)\, e^{i \beta (\omega) z - i\omega t}d\omega.
+\label{9.62f}
 \end{equation}
-Privzeli smo, da je spekter sunka ozek, zato lahko $\beta(\omega)$
-razvijemo okoli $\omega_{0}$ in dobimo
+Osnovni sunek naj bo približno monokromatičen s frekvenco $\omega_{0}$,
+kar pomeni, da je mnogo daljši od optične periode. Potem lahko lahko $\beta(\omega)$
+razvijemo okoli $\omega_{0}$, pri čemer vpeljemo razliko frekvenc $\Omega = \omega - \omega_0$
 \begin{equation}
-\frac{\partial \tilde{a}\left(z,\omega\right)}{\partial z}=i\,\left(\beta(\omega_{0})
-+\frac{d\beta}{d\omega}\,(\omega-\omega_{0})+\frac{1}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,(\omega-\omega_{0})^{2}\right)\, \tilde{a}.
-\label{9.64}
+\beta(\omega_0 + \Omega) \approx \beta(\omega_{0})
++\frac{d\beta}{d\omega}\,\Omega+\frac{1}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\Omega^{2}.
+\label{9.62c}
 \end{equation}
-Vpeljimo novo amplitudno funkcijo $\tilde{A}$, ki ne vsebuje osnovne odvisnosti
-$\exp(i\beta(\omega_{0})z)$ 
-\begin{equation}
-\tilde{a}\left(z,\omega\right)=\tilde{A}\left(z,\omega-\omega_{0}\right)\, e^{i\,\beta\left(\omega_{0}\right)\, z}.
-\label{9.65}
-\end{equation}
-Ker je spekter različen od nič le okoli $\omega_{0}$, je prikladno
-$\tilde{A}$ pisati kot funkcijo razlike $\omega-\omega_{0}$. Napravimo obratno Fourierevo
-transformacijo zadnjega izraza (enačba~\ref{9.62})
+Enačbo~(\ref{9.62f}) tako prepišemo v 
 \begin{eqnarray}
-a\left(z,t\right) & = & \int_{-\infty}^{\infty}\tilde{A}\left(z,\omega-\omega_{0}\right)\,
-e^{i(\beta(\omega_{0})\, z+\omega t)}\, d\omega
-\label{9.66}\\
- & = & \int_{-\infty}^{\infty}\tilde{A}\left(z,\omega-\omega_{0}\right)\, 
- e^{i(\omega-\omega_{0})\, t} e^{i(\beta(\omega_{0})
- z+\omega_{0}t)} d(\omega-\omega_{0})\nonumber \\
- & = & A\left(z,t\right)\, e^{i (\beta(\omega_{0})\, z+\omega_{0}\, t)}.\nonumber 
+a\left(z,t\right)&=&\int \tilde{A}(\Omega)\, e^{i \beta (\omega_0 + \Omega)z - 
+i(\omega_0 + \Omega) t}d\Omega\\
+& = & e^{i \beta (\omega_0)z - i\omega_0 t} A(z,t).
+\label{9.62b}
 \end{eqnarray}
-Funkcija $A\left(z,t\right)$ očitno predstavlja prostorsko in časovno
-odvisnost ovojnice sunka. Vstavimo definicijo (enačba~\ref{9.65}) v enačbo
-(\ref{9.64}) 
+Funkcija $A(z, t)$ očitno predstavlja prostorsko in časovno odvisnost ovojnice sunka. Z upoštevanjem
+razvoja (enačba~\ref{9.62c}) jo zapišemo kot 
 \begin{equation}
-\frac{\partial \tilde{A}(z,\omega-\omega_{0})}{\partial z}=i\left(\frac{d\beta}{d\omega}\,\left(\omega-\omega_{0}\right)+\frac{1}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\left(\omega-\omega_{0}\right)^{2}\right)\, \tilde{A}\left(z,\omega-\omega_{0}\right).
+ A(z,t) = \int \tilde{A}(\Omega)\, \exp \left(i \frac{d\beta}{d\omega}\, 
+ \Omega\,z + \frac{i}{2}\frac{d^2 \beta}{d\omega^2}
+ \,\Omega^2\, z - i\, \Omega\, t\right) d\Omega.
+\end{equation}
+Vpeljemo še grupno hitrost $v_g = d\omega/d\beta$ in ovojnico zapišemo kot
+\begin{equation}
+ A(z,t) = \int \tilde{A}(\Omega)\, \exp \left(i \Omega \left(\frac{z}{v_g}-t\right)+ 
+ \frac{i}{2}\frac{d}{d\omega}
+ \left(\frac{1}{v_g}\right)\Omega^2 z\right) d\Omega.
+ \label{9.ovoj}
+\end{equation}
+V primeru, da je grupna hitrost neodvisna od frekvence, da torej ni disperzije grupne hitrosti, 
+je drugi člen v eksponentu enak nič. Takrat je ovojnica enaka 
+\begin{equation}
+  A(z,t) = \int \tilde{A}(\Omega)\, e^{i \Omega \left(\frac{z}{v_g}-t\right)} d\Omega =
+  A\left(0,t-\frac{z}{v_g}\right),
+\end{equation}
+kar je ravno enako obliki signala pri $z = 0$. Oblika sunka se ob odsotnosti 
+disperzije ohranja in sunek 
+poljubne začetne oblike nepopačen potuje po vlaknu z grupno hitrostjo. 
+
+Vrnimo se k enačbi~(\ref{9.ovoj}). Odvajajmo jo po $z$ 
+\begin{equation}
+ \frac{\partial A(z,t)}{\partial z} = \left( i\Omega \frac{1}{v_g}+ \frac{i}{2}
+\frac{d}{d\omega} \left(\frac{1}{v_g}\right) \Omega^2 \right) A(z,t).
 \label{9.67}
 \end{equation}
-Z obratno Fourierevo transformacijo dobimo 
+Desno stran izraza lahko zapišemo s časovnimi odvodi ovojnice in dobimo 
 \begin{equation}
-\left(\frac{\partial}{\partial z}+\frac{1}{v_{g}}\,\frac{\partial}{\partial t}\right)\, A\left(z,t\right)=-\frac{i}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A\left(z,t\right)}{\partial t^{2}}\label{9.68}
+\frac{\partial A(z,t)}{\partial z} = -\frac{1}{v_{g}}\,\frac{\partial A (z,t)}{\partial t}
+-\frac{i}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A\left(z,t\right)}{\partial t^{2}}
+\label{9.68} 
 \end{equation}
-Pri tem smo upoštevali, da je 
+oziroma
 \begin{equation}
-\int\left(i\omega\right)^{n}A\left(z,\omega\right)\, e^{-i\omega t}\, d\omega=\frac{\partial^{n}}{\partial t^{n}}A\left(z,t\right)\label{9.69}
+\left(\frac{\partial}{\partial z} + \frac{1}{v_{g}}\,\frac{\partial }{\partial t}\right)A (z,t) = 
+-\frac{i}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A\left(z,t\right)}{\partial t^{2}}.
+\label{9.68b} 
 \end{equation}
- in vpeljali grupno hitrost kot $v_g = d\omega/d\beta$.
-
-Enačba \ref{9.68} opisuje razvoj oblike sunka pri širjenju po vlaknu.
-Če ni disperzije grupne hitrosti, to je, če je desna stran enačbe
-nič, je rešitev poljubna funkcija $f\left(z-v_{g}t\right)$. Sunek
-poljubne začetne oblike potuje po vlaknu nepopačen z grupno hitrostjo.
-Disperzija pa povzroči, da se spreminja tudi oblika. Enačbo lahko
-še nekoliko poenostavimo z vpeljavo novih neodvisnih spremenljivk
+Enačbo lahko nekoliko poenostavimo z vpeljavo novih neodvisnih spremenljivk
 \begin{eqnarray}
 \tau & = & t-\frac{z}{v_{g}}\nonumber \\
-\zeta & = & z\label{9.70}
+\zeta & = & z.
+\label{9.70}
 \end{eqnarray}
- Za vrh sunka, ki naj ima pri $t=0$ koordinato $z=0$ in se giblje
-z grupno hitrostjo, je vselej $\tau=0$. Spremenljivka predstavlja
-$\tau$ torej čas v točki $z=\zeta$ , merjen od trenutka, ko tja
-prispe center sunka. Z novima spremenljivkama se enačba \ref{9.68}
-zapiše 
+Za vrh sunka, ki naj ima pri $t=0$ koordinato $z=0$ in se giblje
+z grupno hitrostjo, je vselej $\tau=0$. Spremenljivka $\tau$ torej predstavlja
+čas v točki $z=\zeta$ , merjen od trenutka, ko tja
+prispe center sunka. Z novima spremenljivkama se enačba~(\ref{9.68b})
+prepiše v 
 \begin{equation}
-\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A}{\partial\tau^{2}}+2\, i\,\frac{\partial A}{\partial\zeta}=0\label{9.71}
+\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A}{\partial\tau^{2}}-
+2\, i\,\frac{\partial A}{\partial\zeta}=0
+\label{9.71}
 \end{equation}
- Ta enačba ima isto obliko kot obosna valovna enačba, ki smo jo v
-drugem poglavju uporabili za obravnavo koherentnih snopov. Podobnost
-seže dlje od formalne oblike. Pri snopih, ki so omejeni v prečni smeri,
-disperzija fazne in grupne hitrosti po prečnih komponentah valovnega
+Ta enačba ima isto obliko kot obosna valovna enačba, ki smo jo v
+drugem poglavju uporabili za obravnavo koherentnih 
+snopov (enačba~\ref{eq:obosna-valovna-enacba}). Spomnimo se, da 
+obosno valovno enačbo rešijo Gaussovi snopi (enačba~\ref{eq:gaussov-snop}). 
+
+Podobnost med pojavoma seže dlje od formalne oblike. Pri snopih, ki so omejeni 
+v prečni smeri, disperzija fazne in grupne hitrosti po prečnih komponentah valovnega
 vektorja povzroča spreminjanje prečnega preseka snopa, pri časovno
 omejenih sunkih v sredstvu s frekvenčno disperzijo pa se spreminja
-vzdolžna oblika sunka. Kot se morda bralec spominja, je tudi v praznem
-prostoru pri širjenju snopa v okolici grla fazna hitrost funkcija
-frekvence. Zato se kratek sunek, ki je omejen v prečni smeri, tudi
-v praznem prostoru razširi tako v prečni kot v vzdolžni smeri. (Naloga)
+vzdolžna oblika sunka. Poglejmo, kako.
 
-Obosno valovno enačbo rešijo Gaussovi snopi. V en. \ref{9.71} ima
-vlogo prečne koordinate $\tau.$ Po analogiji s snopi se bo zaradi
-disperzije najmanj širil sunek z Gaussovo časovno odvisnostjo. Računa
-nam ni treba ponavljati, kar v izrazu za Gaussove snope napravimo
-ustrezno zamenjavo črk. Valovnemu številu $k$ pri snopih na primer
-ustreza parameter $\mu=(d^{2}\beta/d\omega^{2})^{-1}$. Tako dobimo
+Enačba~(\ref{9.71}) je zelo podobna obosni valovni enačbi, le da ima tukaj vlogo 
+prečne koordinate čas $\tau$. Po analogiji s snopi lahko sklepamo, da se zaradi
+disperzije najmanj širi sunek z Gaussovo časovno odvisnostjo. Celotnega računa
+nam ni treba ponavljati, namesto tega kar v izrazu za Gaussove snope 
+(enačba~\ref{eq:gaussov-snop}) napravimo ustrezno zamenjavo črk. 
+Iz enačbe~(\ref{9.71}) razberemo, da valovnemu številu $k$ pri snopih  
+ustreza parameter $\mu=(d^{2}\beta/d\omega^{2})^{-1}$. Poleg tega vpeljemo
+trajanje sunka $\sigma$ (ki ustreza polmeru Gaussovega snopa $w$) in parameter
+$b$, ki ustreza krivinskemu radiju $R$. Oba parametra sta seveda odvisna od $\zeta$, 
+tako kot sta parametra $w$ in $R$ odvisna od $z$. 
+
+Za obliko raztegnjenega Gaussovega sunka tako dobimo 
 \begin{equation}
-A\left(\tau,\zeta\right)=\frac{A_{0}}{\sigma_{0}\sqrt{1+\frac{\zeta^{2}}{\zeta_{0}^{2}}}}\exp\left(-\frac{\tau^{2}}{\sigma^{2}}\right)\exp\left(-i\frac{\mu\tau^{2}}{2b}\right)e^{i\phi\left(\zeta\right)}\label{9.72}
+A\left(\zeta,\tau\right)=\frac{A_{0}}{\sqrt{1+\frac{\zeta^{2}
+}{\zeta_{0}^{2}}}}\exp\left(-\frac{\tau^{2}}{\sigma^{2}}\right)\exp
+\left(-i\frac{\mu\tau^{2}}{2b}\right)e^{i\phi\left(\zeta\right)}.
+\label{9.72}
 \end{equation}
- kjer je $\sigma$ trajanje sunka, za katerega velja enaka zveza kot
-za polmer Gaussovega snopa: 
+Pri tem za trajanje sunka $\sigma$ velja enaka zveza kot za polmer Gaussovega snopa
 \begin{equation}
-\sigma^{2}=\sigma_{0}^{2}\left(1+\frac{\zeta^{2}}{\zeta_{0}^{2}}\right)\label{9.73}
+\sigma^{2}=\sigma_{0}^{2}\left(1+\frac{\zeta^{2}}{\zeta_{0}^{2}}\right).
+\label{9.73}
 \end{equation}
- Tu je $\sigma_{0}$ trajanje sunka pri $\zeta=0$, to je na mestu,
+Tu je $\sigma_{0}$ trajanje sunka pri $\zeta=0$, to je na začetku,
 kjer je sunek najkrajši. Dodatna skupna faza $\phi\left(\zeta\right)$
 ni posebno pomembna, pač pa je zanimiv drugi eksponentni faktor v
-enačbi \ref{9.72}. V njem smo z $b=\zeta\left(1+\zeta_{0}^{2}/\zeta^{2}\right)$
+enačbi~(\ref{9.72}). V njem smo z $b=\zeta\left(1+\zeta_{0}^{2}/\zeta^{2}\right)$
 označili količino, ki je analogna krivinskemu radiju valovnih front
-v primeru Gaussovih snopov. Odvod faze po $\tau$ predstavlja spremembo
+v primeru Gaussovih snopov. 
+
+Odvod faze po $\tau$ predstavlja spremembo
 frekvence glede na centralno frekvenco sunka $\omega_{0}$: 
 \begin{equation}
 \omega-\omega_{0}=\frac{\mu\tau}{b}\label{9.74}
