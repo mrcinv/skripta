@@ -870,6 +870,7 @@ Upoštevamo zvezo med valovno dolžino in frekvenco in dobimo
 pri čemer je  $D_v$ koeficient valovodne disperzije
 \beq
 D_v = - \frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}.
+\label{Dvalkoef}
 \eeq
 Prispevek valovodne disperzije je praviloma najmanjši, reda $1-10~\si{\pico\second/\nano\meter\,\kilo\meter}$. 
 Znaten postane v enorodovnih vlaknih v območju, kjer je materialna disperzija 
@@ -1069,7 +1070,7 @@ trajanje sunka $\sigma$ (ki ustreza polmeru Gaussovega snopa $w$) in parameter
 $b$, ki ustreza krivinskemu radiju $R$. Oba parametra sta seveda odvisna od $\zeta$, 
 tako kot sta parametra $w$ in $R$ odvisna od $z$. 
 
-Za obliko raztegnjenega Gaussovega sunka tako dobimo 
+Za obliko raztegnjenega Gaussovega sunka dobimo 
 \begin{equation}
 A\left(\zeta,\tau\right)=\frac{A_{0}}{\sqrt{1+\frac{\zeta^{2}
 }{\zeta_{0}^{2}}}}\exp\left(-\frac{\tau^{2}}{\sigma^{2}}\right)\exp
@@ -1087,36 +1088,67 @@ ni posebno pomembna, pač pa je zanimiv drugi eksponentni faktor v
 enačbi~(\ref{9.72}). V njem smo z $b=\zeta\left(1+\zeta_{0}^{2}/\zeta^{2}\right)$
 označili količino, ki je analogna krivinskemu radiju valovnih front
 v primeru Gaussovih snopov. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/10_Gausstau.pdf_tex}
+\caption{Primerjava krajevne širitve Gaussovega snopa in časovne širitve Gaussovega sunka}
+\label{fig:Gausstau}
+\end{figure}
 
 Odvod faze po $\tau$ predstavlja spremembo
-frekvence glede na centralno frekvenco sunka $\omega_{0}$: 
+frekvence glede na centralno frekvenco sunka $\omega_{0}$
 \begin{equation}
-\omega-\omega_{0}=\frac{\mu\tau}{b}\label{9.74}
+\omega-\omega_{0}=\frac{\mu\tau}{b}.
+\label{9.74}
 \end{equation}
- Za pozitivno disperzijo $\mu$ je frekvenca na prednji strani sunka,
-to je pri $\tau<0$, večja in se linearno zmanjšuje proti koncu sunka.
+Za pozitivne vrednosti $\mu$ je frekvenca na prednji strani sunka,
+to je pri $\tau<0$, manjša od $\omega_0$, z naraščajočim časom pa se 
+linearno povečuje proti koncu sunka.
+Dobimo torej podobno obnašanje, kot ga poznamo iz nelinearne optike
+(glej sliko~\ref{fig:chirp}a). Zanimivo pri tem je, da se sam spekter
+sunka ne spremeni, ampak se pojavi kot spreminjanje frekvence znotraj sunka.
+
+\begin{remark}
 Pri $\zeta=0$ je sunek toliko kratek, kolikor je možno pri dani spektralni
-širini. Pri potovanju po vlaknu se zaradi disperzije sunek razširi,
-spektralna širina pa ostaja enaka, zato se je del pojavi kot spreminjanje
-frekvence znotraj sunka. Lahko si mislimo tudi, da je sunek najkrajši,
-to je omejen z Fourierovo transformacijo spektra, tedaj, kadar se
+širini. Lahko si mislimo tudi, da je sunek najkrajši,
+to je omejen z Fourierovo transformacijo spektra, kadar se
 vse frekvenčne komponente seštejejo z isto fazo, to je pri $\zeta=0$.
 Da dobimo najkrajše sunke, kadar je faza vseh delnih valov enaka,
-smo srečali že pri fazno uklenjenih sunkih iz mnogofrekvenčnih laserjev.
+smo srečali že pri fazno uklenjenih sunkih iz mnogofrekvenčnih laserjev
+(poglavje~\ref{chap:Uklepanje}).
 Pri potovanju sunka se zaradi disperzije faze frekvenčnih komponent
-različno spreminjajo in sunek se podaljša. Zanimivo je, da je pri
-tem pomemben šele drugi odvod fazne hitrosti po frekvenci, ki je sorazmeren
-z $\mu$, linearno spreminjanje faze pa ne povzroči razširitve.
+različno spreminjajo in sunek se podaljša. Pri tem je pomemben šele 
+drugi odvod fazne hitrosti po frekvenci. Linearno spreminjanje faze 
+namreč ne povzroči razširitve, temveč le razliko med grupno in fazno hitrostjo.
+\end{remark}
 
-Naloga: Pokaži, da je spekter sunka nespremenjen.
+\begin{definition}
+\label{naloga:pulzdisperzija}
+Naj bo vpadni sunek svetlobe Gaussove oblike $E(x,y, z=0, t) = 
+\psi(x,y) e^{-at^2-i \omega_0 t}$. Pokaži, da je ustrezna funkcija $\tilde{A}(\Omega)$ oblike
+\beq
+\tilde{A}(\Omega) = \frac{1}{\sqrt{4 \pi a}}e^{-\Omega^2/4a},
+\eeq
+nato pa z neposredno integracijo (enačba~\ref{9.ovoj}) pokaži, 
+da je rezultat enak ovojnici, zapisani z enačbo~(\ref{9.72}), pri čemer je
+\beq
+\zeta_0 = \frac{\mu}{2 a}.
+\eeq
+\end{definition}
 
-Naloga: Pokaži, da je za sunek poljubne začetne oblike razširitev
-mogoče zapisati z uklonskim integralom.
+\begin{definition}
+Uporabi enačbo~(\ref{9.73}) in pokaži, da je najmanjše podaljšanje sunka svetlobe
+pri dani dolžini vlakna enako
+\beq
+\tau_v (L) = \sqrt{\frac{2 \ln 2}{a}}\sqrt{1 + \frac{4 a^2 L^2}{\mu^2}}
+= \tau_v(0)\sqrt{1 + \left(\frac{4 \ln 2}{\tau_v(0)^2 \mu}L\right)^2}
+\eeq
+in za velike dolžine enako izrazu, ki smo ga izračunali pri 
+valovodni disperziji (enačba~\ref{ValD}).
+\end{definition}
 
-Naloga: Pokaži, da iz en. \ref{9.73} sledi podobna ocena za maksimalno
-frekvenco modulacije (minimalno razširitev sunka) pri dani dolžini
-vlakna, kot jo da en. \ref{9.57}.
-
+\subsection*{Kompenzacija disperzije}
 Razširitev sunka zaradi disperzije je pri $\mu>0$ mogoče kompenzirati
 s parom paralelnih uklonskih mrežic, kot kaže slika \ref{sl9.8}.
 Prva mrežica različne frekvenčna komponente razkloni, druga pa zopet
