@@ -298,6 +298,15 @@ obstaja samo ena rešitev za vezano stanje, pri globlji jami je rešitev več. P
 tudi v tem primeru ena rešitev za vezano stanje vedno obstaja. 
 \end{remark}
 
+Čeprav se velika večina energijskega toka pretaka po sredici, pa delež, ki se 
+pretaka po plašču, ni vedno zanemarljiv. To posebej velja za višje rodove. 
+Delež energijskega toka, ki se pretaka po sredici oziroma po plašču, izračunamo
+z integralom
+\boxeq{confinement}{
+\eta = \frac{\int_{-a/2}^{a/2}j\, dS}{\int_{-\infty}^{\infty}j\, dS}.
+}
+
+
 \section{Cilindrično vlakno}
 \label{chap:Cilinder}
 Do zdaj smo obravnavali ravninski valovni vodnik. V praksi svetlobo
@@ -1149,43 +1158,66 @@ valovodni disperziji (enačba~\ref{ValD}).
 \end{definition}
 
 \subsection*{Kompenzacija disperzije}
-Razširitev sunka zaradi disperzije je pri $\mu>0$ mogoče kompenzirati
-s parom paralelnih uklonskih mrežic, kot kaže slika \ref{sl9.8}.
-Prva mrežica različne frekvenčna komponente razkloni, druga pa zopet
-zbere, vendar dolžine optičnih poti za različne komponente niso enake.
-celoten učinek je enak kot pri razširjanju sunka po sredstvu z negativno
-disperzijo. Račun je nekoliko preglednejši, rezultat pa povsem enak,
-če namesto refleksijskih mrežic vzamemo transmisijski, kot kaže slika
-\ref{sl9.9}. Naj na par vpada raven val pod kotom $\alpha.$ Pred
-prvo mrežico je fazni faktor $\exp\left(ik_{1}x\right),$
-kjer je $k_{1}=\omega/c\,\sin\alpha$. Pri prehodu skozi mrežico se
-polje pomnoži s kompleksno prepustnostjo mrežice, ki povzroči razcep
-vala na uklonjene valove. Pri tem se faza za prvi uklonski red poveča
-za $qx$, kje je $q=2\pi/\Lambda$ in je $\Lambda\,$perioda mrežice.
-Premik do druge mrežice poveča fazo za $k_{3}L$. Za komponento valovnega
-vektorja v smeri $z$ velja seveda $k_{3}=\sqrt{\left(\omega/c\right)^{2}-\left(k_{1}+q\right)^{2}}$.
-Po prehodu skozi drugo mrežico nas zanima prvi negativni uklonski
-red, ki da val v smeri prvotnega vala. Za ta red se faza spremeni
-za $-qx$, tako da je celotna sprememba faze 
-\begin{equation}
-\Phi=L\sqrt{\left(\omega/c\right)^{2}-\left(k_{1}+q\right)^{2}}=
-\frac{L}{c}\sqrt{\omega^{2}-\left(\omega\,\sin\alpha+qc\right)^{2}}\label{9.75}
-\end{equation}
- Disperzija, ki jo povzroči par mrežic, je določena zdrugim odvodom
-faze po frekvenci: 
-\begin{equation}
-\frac{d^{2}\Phi}{d\omega^{2}}=-\frac{L\, q}{\left[\omega^{2}-\left(\omega\,\sin\alpha+q\, c\right)^{2}\right]^{3/2}}\label{9.76}
-\end{equation}
- Drugi odvod je vselej negativen. Par mrežic torej deluje kot sredstvo
+Razširitev sunka zaradi pozitivne disperzije je pri $\mu > 0$ mogoče kompenzirati
+s parom vzporednih uklonskih mrežic, kot kaže slika~(\ref{fig:comp}).
+Prva mrežica različne frekvenčne komponente razkloni, druga pa ponovno
+zbere, vendar so pri tem dolžine optičnih poti za različne komponente različno dolge.
+Celoten učinek je enak kot pri razširjanju sunka po sredstvu z negativno
+disperzijo. Vzporednost uklonskih mrežic zagotavlja vzporednost izhodnih žarkov,
+vendar pride pri prikazani postavitvi do krajevnega premika različnih komponent
+vpadne svetlobe. V praksi zato uporabimo ali dva para uklonskih mrežic ali pa 
+zrcalo, ki svetlobo usmeri po isti poti nazaj. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/10_comp.pdf_tex}
+\caption{Kompenzacija disperzije z uklonskima mrežicama (a) in shema z
+oznakami (b).}
+\label{fig:comp}
+\end{figure}
+
+Naj na par vzporednih uklonskih mrežic vpada ravni val pod kotom $\alpha$, odbije
+pa naj se pod kotom $\beta(\omega)$. Pot, ki jo prepotuje žarek od vpada na mrežico 
+do izhoda iz sistema, je enaka 
+\beq
+P = \frac{L}{\cos\beta} \left(1+\cos(\alpha + \beta)\right),
+\eeq
+pri čemer zaradi uklona velja zveza $\sin\,\beta - \sin\,\alpha = \lambda/\Lambda$.
+Z $\Lambda$ smo označili periodo uklonske mrežice. 
+Pri zapisu faze moramo upoštevati še fazni premik na drugi mrežici, ki je enak
+\beq
+\Phi_m=\frac{2\pi}{\Lambda} \, L \, \tan\,\beta.
+\eeq
+Celotna sprememba faze je tako $\Phi = \omega P/c + \Phi_m$.
+
+\begin{definition}
+Pokaži, da je drugi odvod faze po kotni frekvenci enak
+\beq
+\frac{d^2 \Phi}{d \omega^2} = - \frac{L\, c\, q^2}
+{\sqrt{\omega^2 - (\omega\, \sin\alpha + cq)^2}^{3/2}},
+\label{eq:10faza}
+\eeq
+pri čemer je $q = 2 \pi/\Lambda$.
+\end{definition}
+Disperzija, ki je določena z drugim odvodom faze (enačba~\ref{eq:10faza}),
+je vedno negativna. Par vzporednih uklonskih mrežic torej deluje kot sredstvo
 z negativno disperzijo. Sunek, ki se je razširil zaradi potovanja
 po sredstvu s pozitivno disperzijo, lahko ponovno skrajšamo do meje,
-določene s širino spektra. Postopek se uporablja za pridobivanje zelo
+določene s širino spektra. 
+
+\begin{remark}
+Postopek kompenzacije disperzije se uporablja za pridobivanje zelo 
 kratkih sunkov. Sunku iz fazno uklenjenega barvilnega ali Ti:safirnega
-laserja najprej v nelinearnem sredstvu razširijo spekter, pri čemer
-se sunek tudi časovno podaljša. O tem najde bralec nekaj več v poglavju
-o nelinearni optiki. Razširjen sunek nato s parom mrežic skrajšajo
-za faktor 10-100 glede na prvotno dolžino sunka. Tako dobijo sunke
-dolge le okoli 10 fs, kar je le še nekaj optičnih period.
+laserja se najprej v nelinearnem sredstvu razširi spekter, pri čemer
+se sunek tudi časovno podaljša. Razširjen sunek se nato s parom mrežic skrajša
+za faktor 10-100 glede na prvotno dolžino sunka. Tako nastanejo sunki,
+dolgi le okoli $10~\si{\femto\second}$, kar je le še nekaj optičnih period. 
+V vmesni stopnji, ko je sunek podaljšan, ga lahko tudi dodatno ojačamo, česar
+s prvotnim kratkim in že tako razmeroma močnim sunkom ne bi mogli narediti. ojačan
+sunek nato s parom uklonskih mrežic ponovno zberemo in nastane zelo kratek
+zelo močen sunek svetlobe.
+\end{remark}
+
 
 \section{Izgube v optičnih vlaknih}
 Pri prenosu informacij z optičnimi vlakni je poleg disperzije, ki signal popači,
