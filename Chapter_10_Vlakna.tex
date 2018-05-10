@@ -37,6 +37,7 @@ Z njim povezana je numerična odprtina vlakna, ki jo izračunamo kot
 NA = \sin \alpha_{\rm max} = n_1 \sin \beta_{\rm max} = 
 n_1 \sin(\pi/2-\vartheta_c) =
 n_1 \cos\vartheta_c = n_1 \sqrt{1-\sin^2\vartheta_c}.
+\label{10NAa}
 \eeq
 Upoštevajoč enačbo~(\ref{10totalni}) numerično odprtino zapišemo kot 
 \boxeq{10NA}{
@@ -305,7 +306,6 @@ z integralom
 \boxeq{confinement}{
 \eta = \frac{\int_{-a/2}^{a/2}j\, dS}{\int_{-\infty}^{\infty}j\, dS}.
 }
-
 
 \section{Cilindrično vlakno}
 \label{chap:Cilinder}
@@ -1423,14 +1423,17 @@ razlika v velikostih vlaken.
 \section{Sklopitev svetlobe v vlakna}
 Do zdaj smo govorili o svetlobi, ki potuje po valovnem vodniku ali vlaknu. Kako pa 
 svetlobo sploh sklopimo v optični vodnik? Sklopitev je možna na več načinov, obravnavali bomo 
-omenimo čelno sklopitev, sklopitev s prizmo, sklopitev preko uklonskih rež ali 
+čelno sklopitev, bočni sklopitvi s prizmo ali z uklonskimi režami ter  
 sklopitev med dvema vzporednima vlaknoma. Prvi način 
 navadno uporabljamo pri cilindričnih vlaknih, ostale pa pri planarnih valovodnih strukturah.
 
 \subsection*{Čelna sklopitev}
 Pri izgubah na spoju dveh vlaken smo vpeljali prekrivalni integral (enačba~\ref{10:overlap}), 
 ki pove, kolikšen del osnovnega roda, ki izhaja iz prvega vlakna, se sklopi v osnovni 
-rod drugega. Povsem podobno pristopamo tudi pri izračunu sklopitve svetlobe v optično vlakno. Izračunati moramo, koliko vpadne svetlobe $E(r, \varphi)$ se sklopi z izbranim rodom vlakna $n,m$
+rod drugega. Povsem podobno pristopamo tudi pri izračunu sklopitve svetlobe v optično vlakno. 
+Izračunati moramo, kolikšen delež vpadne svetlobe $E(r, \varphi)$ se sklopi z izbranim rodom 
+vlakna $n,m$. To naredimo tako, da vpadni val razvijemo po lastnih rodovih vlakna, iz ortogonalnosti
+rodov pa sledi prekrivalni integral, ki ga moramo seveda ustrezno normirati. Zapišemo ga kot
 \beq
 \eta = \frac{|\int E(r, \varphi) E^*_{n,m}(r, \varphi) r\, dr\, d\varphi|^2}
 {\left(\int |E(r, \varphi)|^2 r\, dr\, d\varphi \right) \left(\int |E_{n,m}(r, \varphi)|^2 
@@ -1443,7 +1446,50 @@ oziroma v kartezičnih koordinatah
 dx\, dy \right)}.
 \eeq
 Če računamo sklopitev v osnovi rod vlakna, ga tudi tukaj iz praktičnih razlogov nadomestimo 
-z Gaussovim profilom z efektivnim polmerom. 
+z Gaussovim profilom.
+
+\begin{remark}
+Sklopitev svetlobe v večrodovno vlakno lahko obravnavamo povsem geometrijsko, kot smo to naredili
+na začetku poglavja. Izračunali smo (enačba~\ref{10NAa}), da je največji vpadni kot določen
+z numerično odprtino vlakna $\sin \alpha_{\mathrm{max}}= NA$.
+\end{remark}
+
+\subsection*{Bočna sklopitev}
+Neposredna sklopitev svetlobe v vodnik preko plašča ni mogoča. Ker je namreč lomni količnik
+plašča večji od lomnega količnika sredice, ni mogoče doseči dovolj velikega vstopnega kota. 
+Zato je za sklopitev preko stranice treba uporabiti drugačen pristop. Navadno uporabimo prizmo 
+ali pa periodično strukturo na vlaknu. 
+
+V prvem primeru uporabimo prizmo, kot kaže slika~(\ref{fig:coupler}a). Lomni količnik prizme
+je pri tem večji od lomnega količnika plašča $n_p > n_2$.
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/10_Zero.pdf_tex} 
+\caption{Dva primera bočne sklopitve svetlobe v valovni vodnik}
+\label{fig:coupler}
+\end{figure}
+Vhodni žarek vpada na prizmo, se na prehodu vanjo lomi, nato pa se na stranici, ki je vzporedna
+z vodnikom, totalno odbije. V vmesnem območju med prizmo in sredico vodnika se pojavi evanescentni
+val z valovnim vektorjem $\beta  = k_0 n_p \sin \alpha$ v smeri vzporedno z vodnikom. Pogoj za uspešno 
+sklopitev je ujemanje valovnega vektorja vpadne svetlobe z valovnim vektorjem rodu v vodniku,
+ki ga želimo vzbuditi. S spreminjanjem vpadnega kota lahko torej v vodniku vzbujamo različne rodove. 
+Če je razdalja med prizmo in vodnikom dovolj majhna (tipično pod valovno dolžino svetlobe), se v 
+valovod ob izpolnjenem pogoju ujemanja faze sklopi znaten delež vpadne svetlobe.
+
+Tudi periodična struktura na valovnem vodniku (slika~\ref{fig:copuler}b) deluje na 
+ujemanju valovnega vektorja vpadnega vala z valovnim vektorjem ustreznega rodu.
+Ko vpade val pod kotom $\alpha$ glede na valovni vodnik, periodična struktura na vodniku 
+spremeni njegovo fazo za večkratnik $2 \pi z/\Lambda$, pri čemer je $\Lambda$ perioda strukture.
+Če dosežemo, da se nov valovni vektor $k_0 n_2 \sin \alpha+ 2 \pi/\Lambda$ izenači z valovnim 
+vektorjem za izbrani rod v vlaknu, se vpadna svetloba sklopi v vlakno.
+
+\begin{remark}
+ Oba opisana načina za sklopitev svetlobe v vlakno lahko uporabimo tudi za sklopitev svetlobe 
+ iz vlakna. Pri tem mora biti za uspešno sklopitev iz vlakna prav tako izpolnjen pogoj ujemanja faz.
+ Dodatna uporaba sklopitve s prizmo je tudi določanje lastnosti neznane plasti, njene debeline
+ ali njenega lomnega količnika.
+\end{remark}
 
 
 
