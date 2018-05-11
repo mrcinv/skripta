@@ -1169,7 +1169,7 @@ vpadne svetlobe. V praksi zato uporabimo ali dva para uklonskih mrežic ali pa
 zrcalo, ki svetlobo usmeri po isti poti nazaj. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{130truemm} 
+\def\svgwidth{120truemm} 
 \input{slike/10_comp.pdf_tex}
 \caption{Kompenzacija disperzije z uklonskima mrežicama (a) in shema z
 oznakami (b).}
@@ -1450,38 +1450,40 @@ z Gaussovim profilom.
 
 \begin{remark}
 Sklopitev svetlobe v večrodovno vlakno lahko obravnavamo povsem geometrijsko, kot smo to naredili
-na začetku poglavja. Izračunali smo (enačba~\ref{10NAa}), da je največji vpadni kot določen
-z numerično odprtino vlakna $\sin \alpha_{\mathrm{max}}= NA$.
+na začetku poglavja (slika~\ref{fig:vodnik}). Izračunali smo (enačba~\ref{10NAa}), da je največji 
+vpadni kot, pod katerim se svetloba še sklopi v vlakno, določen z numerično odprtino 
+vlakna $\sin \alpha_{\mathrm{max}}= NA$.
 \end{remark}
 
 \subsection*{Bočna sklopitev}
 Neposredna sklopitev svetlobe v vodnik preko plašča ni mogoča. Ker je namreč lomni količnik
-plašča večji od lomnega količnika sredice, ni mogoče doseči dovolj velikega vstopnega kota. 
-Zato je za sklopitev preko stranice treba uporabiti drugačen pristop. Navadno uporabimo prizmo 
-ali pa periodično strukturo na vlaknu. 
+plašča večji od lomnega količnika sredice, dovolj velikega vstopnega kota, pod katerim bi 
+se svetloba sklopila v sredico, ni mogoče doseči. Zato je za sklopitev preko stranice treba 
+uporabiti drugačen pristop. Navadno uporabimo prizmo ali pa periodično strukturo na vlaknu. 
 
-V prvem primeru uporabimo prizmo, kot kaže slika~(\ref{fig:coupler}a). Lomni količnik prizme
-je pri tem večji od lomnega količnika plašča $n_p > n_2$.
 \begin{figure}[h]
 \centering
-\def\svgwidth{90truemm} 
-\input{slike/10_Zero.pdf_tex} 
+\def\svgwidth{120truemm} 
+\input{slike/10_coupler.pdf_tex} 
 \caption{Dva primera bočne sklopitve svetlobe v valovni vodnik}
 \label{fig:coupler}
 \end{figure}
-Vhodni žarek vpada na prizmo, se na prehodu vanjo lomi, nato pa se na stranici, ki je vzporedna
+V prvem primeru uporabimo prizmo, kot kaže slika~(\ref{fig:coupler}a). Lomni količnik prizme
+je pri tem večji od lomnega količnika plašča $n_p > n_2$.
+Vhodni žarek vpada na prizmo, se ob prehodu vanjo lomi, nato pa se na stranici, ki je vzporedna
 z vodnikom, totalno odbije. V vmesnem območju med prizmo in sredico vodnika se pojavi evanescentni
 val z valovnim vektorjem $\beta  = k_0 n_p \sin \alpha$ v smeri vzporedno z vodnikom. Pogoj za uspešno 
-sklopitev je ujemanje valovnega vektorja vpadne svetlobe z valovnim vektorjem rodu v vodniku,
-ki ga želimo vzbuditi. S spreminjanjem vpadnega kota lahko torej v vodniku vzbujamo različne rodove. 
+sklopitev je ujemanje vzdolžne komponente valovnega vektorja vpadne svetlobe z valovnim 
+vektorjem rodu v vodniku, ki ga želimo vzbuditi. 
+S spreminjanjem vpadnega kota lahko torej v vodniku vzbujamo različne rodove. 
 Če je razdalja med prizmo in vodnikom dovolj majhna (tipično pod valovno dolžino svetlobe), se v 
 valovod ob izpolnjenem pogoju ujemanja faze sklopi znaten delež vpadne svetlobe.
 
-Tudi periodična struktura na valovnem vodniku (slika~\ref{fig:copuler}b) deluje na 
+Tudi periodična struktura na valovnem vodniku (slika~\ref{fig:coupler}b) deluje na 
 ujemanju valovnega vektorja vpadnega vala z valovnim vektorjem ustreznega rodu.
 Ko vpade val pod kotom $\alpha$ glede na valovni vodnik, periodična struktura na vodniku 
 spremeni njegovo fazo za večkratnik $2 \pi z/\Lambda$, pri čemer je $\Lambda$ perioda strukture.
-Če dosežemo, da se nov valovni vektor $k_0 n_2 \sin \alpha+ 2 \pi/\Lambda$ izenači z valovnim 
+Če dosežemo, da se nov valovni vektor $\beta = k_0 n_2 \sin \alpha+ 2 \pi/\Lambda$ izenači z valovnim 
 vektorjem za izbrani rod v vlaknu, se vpadna svetloba sklopi v vlakno.
 
 \begin{remark}
@@ -1491,6 +1493,81 @@ vektorjem za izbrani rod v vlaknu, se vpadna svetloba sklopi v vlakno.
  ali njenega lomnega količnika.
 \end{remark}
 
+\subsection*{Sklopitev med valovodi}
+Ob prenosu signala po optičnem valovodu večina energijskega toka potuje po sredici,
+energijski tok pa seže tudi izven nje, v plašč. Če sta dva vzporedna valovoda dovolj blizu, da
+se evanescentni električni polji enega in drugega vodnika v plašču prekrivata, pride do 
+sklopitve vodnikov in prenosa energijskega toka iz enega vodnika v drugega. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/10_fcoupler.pdf_tex} 
+\caption{Sklopitev med dvema vzporednima vodnikoma}
+\label{fig:fcoupler}
+\end{figure}
+
+Za podrobnejšo obravnavo bi morali zapisati Maxwellove enačbe z ustreznimi robnimi pogoji 
+in jih rešiti za sklopljen primer dveh vzporednih vodnikov. Tak račun je izredno zapleten, 
+zato se bomo poslužili pibližka šibke sklopitve in privzeli, da so rodovi v vodnikih taki, 
+kot če bi vodniki ne bili sklopljeni.
+Sklopitev torej ne bo spremenila oblike lastnih rodov, bo pa spremenila njihovo amplitudo, ki 
+bo tako postala odvisna od vzdolžne koordinate $z$.
+
+Imejmo dva enorodovna vodnika z lomnima količnikoma sredice $n_1$ in $n_2$ in enako 
+debelino $a$, med njima in okoli njiju pa naj bo reža širine $2d$ z lomnim količnikom $n_0$. 
+Potem zapišemo električni poljski jakosti v prvem in drugem vodniku kot
+\begin{eqnarray}
+E_1(x,z) &=& A(z) \psi_1(x) e^{i \beta_1 z} \quad \mathrm{in}\\
+E_2(x,z) &=& B(z) \psi_2(x) e^{i \beta_2 z},
+\label{eq:10_ampl}
+\end{eqnarray}
+pri čemer se $A(z)$ in $B(z)$ le počasi spreminjata s koordinato $z$. Skupna električna poljska
+jakost, ki je v našem približku kar vsota obeh prispevkov, mora zadoščati Helmholtzevi enačbi
+(enačba~\ref{eq:Helmholtz})
+\beq
+\nabla^{2}E(x,z)+k_0^{2}n(x)^2 E(x,z) =0.
+\eeq
+Pri tem smo z $n(x)$ označili prečno odvisnost lomnega količnika.
+Vstavimo nastavek za električno poljsko jakost v gornjo enačbo in dobimo
+\begin{multline}
+A e^{i \beta_1 z}\left(\frac{\partial^2}{\partial x^2}\psi_1(x) - \beta_1^2\psi_1 + k_0^2
+n(x)^2 \psi_1 \right)
++ 
+B e^{i \beta_2 z}\left(\frac{\partial^2}{\partial x^2}\psi_2(x) - \beta_2^2\psi_2 + k_0^2
+n(x)^2 \psi_2 \right)+ \\2 i \beta_1 A' \psi_1 e^{i \beta_1 z}+
+2 i \beta_2 B' \psi_2 e^{i \beta_2 z} = 0.
+\end{multline}
+Pri tem smo člena z drugim odvodom $\partial^2 A/\partial z^2$ in $\partial^2 B/\partial z^2$
+zanemarili. Upoštevamo enačbi za $\psi$
+\begin{eqnarray}
+\frac{\partial^2}{\partial x^2}\psi_1(x) + \left(k_0^2n_1(x)^2-\beta_1^2\right) \psi_1 &=&0 \quad \mathrm{in} \\
+\frac{\partial^2}{\partial x^2}\psi_2(x) + \left(k_0^2n_2(x)^2-\beta_2^2\right) \psi_2 &=&0.
+\end{eqnarray}
+Lomna količnika $n_1(x)$ in $n_2(x)$ sta tukaj tudi funkciji prečne koordinate. $n_1(x)$ naj bo 
+povsod enak $n_0$ razen v sredici prvega vodnika, kjer je $n_1$ in podobno naj bo 
+$n_2(x)$ enak $n_0$ razen v sredici drugega vlakna, kjer je enak $n_2$. Sledi
+\begin{multline}
+A e^{i \beta_1 z}k_0^2\left(n(x)^2 -n_1(x)^2\right)\psi_1 
++ 
+B e^{i \beta_2 z}k_0^2\left(n(x)^2 -n_2(x)^2\right)\psi_2 + \\2 i \beta_1 A' \psi_1 e^{i \beta_1 z}+
+2 i \beta_2 B' \psi_2 e^{i \beta_2 z} = 0.
+\end{multline}
+Enačbo pomnožimo s kompleksno konjugirano vrednostjo $\psi_1*$ in integriramo po $x$.
+Upoštevamo ortonormalnost funkcij $\psi$ in dobimo 
+\beq
+\frac{dA}{dz} = 
+\eeq
+
+
+
+
+
+DN račun za neenaki vlakni.
+
+
+
+
+3 db = 50 procentov.
 
 
 % \section{Amplification in fibers?}
