@@ -1219,7 +1219,7 @@ zelo močen sunek svetlobe.
 \end{remark}
 
 
-\section{Izgube v optičnih vlaknih}
+\section{Izgube in ojačanje v optičnih vlaknih}
 Pri prenosu informacij z optičnimi vlakni je poleg disperzije, ki signal popači,
 treba upoštevati tudi izgube, ki signal oslabijo. 
 Do izgub pride predvsem zaradi absorpcije svetlobe v snovi,
@@ -1420,6 +1420,33 @@ Na primeru pokaži, da prečni premik osi vlaken bistveno bolj vpliva na izgube 
 razlika v velikostih vlaken. 
 \end{definition}
 
+\subsection*{Ojačanje v vlaknih}
+Zaradi znatnih izgub pri prenosu signalov na več tisoč kilometrov dolge razdalje 
+je treba signal ojačevati. To lahko naredimo elektronsko, kjer optični signal 
+pretvorimo v električnega, tega ojačamo in ga nato pretvorimo nazaj v optičnega. 
+Precej bolj priročna rešitev je optično ojačevanje v vlaknu samem. 
+
+V ta namen se najpogosteje uporablja vlakno, dopirano z erbijevimi 
+ioni\footnote{EDFA - {\it Erbium-doped fiber amplifier}, ojačevalnik na vlakno, dopirano z erbijem}. 
+Na določenih razdaljah (na okoli $100~\si{\kilo\meter}$) svetlobo iz navadnega vlakna 
+sklopimo v vlakno, v katerem so erbijevi ioni.
+S črpalnim laserjem erbijeve ione vzbudimo, da dosežemo obrnjeno zasedenost. 
+Ko na dopirani del vlakna vpade svetlobni sunek z valovno dolžino okoli 
+$1550~\si{\nano\meter}$, pride do stimulirane emisije in 
+sunek se ojači. Gre za povsem enak princip ojačanja svetlobe, kot ga poznamo iz 
+delovanja laserja, le da tukaj svetloba ni ujeta v resonator, ampak se postopoma 
+ojačuje vzdolž vlakna. Pri tem se intenziteta črpalnega laserja postopoma zmanjšuje,
+kar omejuje dolžino dopiranega vlakna.
+Spektralna širina ojačanja je zaradi sklopitev z ioni v steklu 
+razmeroma široka, tudi $40~\si{\nano\meter}$. To pomeni, da se hkrati ojačujejo signali različnih 
+valovnih dolžin, kar je še posebej uporabno pri prenosu več signalov naenkrat.
+
+V praksi se uporabljajo vlakna, v katerih je delež erbijevih ionov okoli $\sim 10^{-4}$. 
+Črpalni laser je polprevodniški laser, ki 
+deluje pri valovni dolžini $900~\si{\nano\meter}$ ali $1,48~\si{\nano\meter}$ 
+z močjo okoli $20-100~\si{\milli\watt}$. Na ta način lahko v $10-30~\si{meter}$
+dolgih odsekih dosežemo več 1000-kratno ojačanje ($30-40~\si{\decibel}$).
+
 \section{Sklopitev svetlobe v vlakna}
 Do zdaj smo govorili o svetlobi, ki potuje po valovnem vodniku ali vlaknu. Kako pa 
 svetlobo sploh sklopimo v optični vodnik? Sklopitev je možna na več načinov, obravnavali bomo 
@@ -1543,31 +1570,109 @@ zanemarili. Upoštevamo enačbi za $\psi$
 \frac{\partial^2}{\partial x^2}\psi_1(x) + \left(k_0^2n_1(x)^2-\beta_1^2\right) \psi_1 &=&0 \quad \mathrm{in} \\
 \frac{\partial^2}{\partial x^2}\psi_2(x) + \left(k_0^2n_2(x)^2-\beta_2^2\right) \psi_2 &=&0.
 \end{eqnarray}
-Lomna količnika $n_1(x)$ in $n_2(x)$ sta tukaj tudi funkciji prečne koordinate. $n_1(x)$ naj bo 
-povsod enak $n_0$ razen v sredici prvega vodnika, kjer je $n_1$ in podobno naj bo 
-$n_2(x)$ enak $n_0$ razen v sredici drugega vlakna, kjer je enak $n_2$. Sledi
+Lomna količnika $n_1(x)$ in $n_2(x)$ sta tukaj tudi funkciji prečne koordinate. Naj bo $n_1(x)$  
+povsod enak $n_0$ razen v sredici prvega vodnika, kjer je $n_1$, in podobno, naj bo 
+$n_2(x)$ povsod enak $n_0$, razen v sredici drugega vlakna, kjer je enak $n_2$. Sledi
 \begin{multline}
 A e^{i \beta_1 z}k_0^2\left(n(x)^2 -n_1(x)^2\right)\psi_1 
 + 
 B e^{i \beta_2 z}k_0^2\left(n(x)^2 -n_2(x)^2\right)\psi_2 + \\2 i \beta_1 A' \psi_1 e^{i \beta_1 z}+
 2 i \beta_2 B' \psi_2 e^{i \beta_2 z} = 0.
 \end{multline}
-Enačbo pomnožimo s kompleksno konjugirano vrednostjo $\psi_1*$ in integriramo po $x$.
+Enačbo pomnožimo s kompleksno konjugirano vrednostjo $\psi_1^*$ in integriramo po $x$.
 Upoštevamo ortonormalnost funkcij $\psi$ in dobimo 
 \beq
-\frac{dA}{dz} = 
+\frac{dA}{dz} = i A K_{11}+i B e^(\beta_2-\beta_1)z K_{12},
 \eeq
+pri čemer sta
+\beq
+K_{11}= \frac{k_0^2}{2 \beta_1}\int\psi_1^*\psi_1 (n^2-n_1^2)dx
+\eeq
+in 
+\beq
+K_{12}= \frac{k_0^2}{2 \beta_1}\int\psi_1^*\psi_2 (n^2-n_2^2)dx.
+\eeq
+Koeficient $K_{11}$ določa spremembo amplitude v vlaknu zaradi prisotnosti 
+drugega vlakna, kar lahko zanemarimo. Tako ostane samo sklopitveni člen
+\beq
+\frac{dA}{dz} = i B e^{(\beta_2-\beta_1)z} K_{12}
+\label{10_B}
+\eeq
+in podobno za $B$
+\beq
+\frac{dB}{dz} = i A e^{(-\beta_2+\beta_1)z} K_{21}.
+\eeq
+Prvo enačbo odvajamo in dobimo
+\beq
+\frac{\partial^2 A}{\partial z^2}-i \Delta \beta \frac{\partial A}{\partial z} + K_{12}K_{21}A = 0.
+\label{10_part}
+\eeq
+Enačbo rešujemo z nastavkom 
+\beq
+A = e^{i \Delta \beta z/2}\left( a_1 e^{i \gamma z} + a_2 e^{-i \gamma z}\right).
+\label{10_nastavek}
+\eeq
+\begin{definition}
+ Pokaži, da gornji nastavek (enačba~\ref{10_nastavek}) reši enačbo~(\ref{10_part}) in pokaži,
+ da med parametri enačb velja sledeča zveza
+ \beq
+ \gamma^2 = K^2 + \frac{\Delta \beta ^2}{4},
+ \eeq
+ pri čemer je $K = \sqrt{K_{12}K_{21}}$. Nato uporabi enačbo~(\ref{10_B}) in pokaži, da je rešitev
+ enaka izrazu v enačbi~(\ref{10_BB}).
+\end{definition}
+Ko poznamo $A$, lahko z uporabo enačbe~(\ref{10_B}) izračunamo še $B$
+\beq
+B = \frac{1}{K_{21}}
+e^{-i \Delta \beta z/2}\left(\left(\frac{\Delta \beta}{2} +\gamma \right) a_1 e^{i \gamma z} + 
+\left(\frac{\Delta \beta}{2} -\gamma \right)a_2 e^{-i \gamma z}\right).
+\label{10_BB}
+\eeq
+Naj bo $A(z=0) = A_0$ in $B(z=0)=0$. To pomeni, da potuje svetloba na začetku
+le po prvem vlaknu, potem pa se sklopi v drugega. S tema začetnima pogojema zapišemo izraza 
+za $A$ in $B$
+\begin{eqnarray}
+A &=& A_0 e^{i \Delta \beta z/2} \left( \cos(\gamma z) - \frac{i \Delta \beta}{2 \gamma}\sin(\gamma z) \right)\\
+B &= & A_0 e^{-i \Delta \beta z/2} \frac{i K_{21}}{\gamma}\sin(\gamma z).
+\end{eqnarray}
+Moč, ki se pretaka po posameznem vlaknu je tako
+\begin{eqnarray}
+P_1 &=& P_0 \left( \cos^2(\gamma z) + \frac{\Delta \beta^2}{4 \gamma^2}\sin^2(\gamma z) \right)
+= P_0 \left( 1 - \frac{K^2}{\gamma^2}\sin^2(\gamma z) \right)\\
+P_2 &= & P_0\, \frac{K^2}{\gamma^2}\sin^2(\gamma z),
+\end{eqnarray}
+pri čemer smo privzeli, da velja $K_{12} \sim K_{21}$. Vidimo, da sta obe funkciji oscilirajoči, 
+svetloba se torej periodično pretaka iz enega vlakno v drugo in nazaj s periodo $\pi/\gamma$. 
+Amplituda prenosa je 
+odvisna od sklopitvenega faktorja $K$ in ujemanja valovnih vektorjev v obeh vlaknih. Večji koeficient $K$
+in manjše odstopanje $\Delta \beta$ vodita v večji prenos svetlobnega toka v drugo vlakno. Če sta vlakni 
+enaki, je $\Delta \beta = 0$ in $\gamma = K$, tako da pride do popolnega prenosa
+svetlobnega toka iz enega vlakna v drugo in seveda tudi obratno.
+Takrat veljata enačbi
+\boxeq{10_couplfib}{
+P_1 &= P_0 \cos^2 (\gamma z) \quad \mathrm{in}\\
+P_2 &= P_0 \sin^2 (\gamma z).
+}
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/10_Coupler.pdf_tex} 
+\caption{Prenos svetlobnega toka med dvema sklopljenima vodnikoma. V prvem primeru (a) sta
+vodnika različna, v drugem primeru (b) pa sta vodnika enaka in pride do popolnega prenosa.}
+\label{fig:foscil}
+\end{figure}
+Na ta način smo dosegli, da lahko v drugo vlakno sklopimo poljuben delež vpadne svetlobe. 
+Pri dolžini sklopitve $L = \pi/2 \gamma$ pride do celotnega prenosa svetlobnega toka v drugo vlakno.
+Pogosto sklopimo eno polovico intenzitete vpadne svetlobe. To se zgodi pri dolžini $L = \pi/4 \gamma$
+in takrat dobimo tako imenovano 3-dB sklopitev. 
 
-
-
-
-
-DN račun za neenaki vlakni.
-
-
-
-
-3 db = 50 procentov.
+\begin{remark}
+ Pri dani dolžini sklopitve med vlaknoma $L$ je intenziteta svetlobe v drugem vlaknu močno odvisna od
+ parametra $\gamma$, to je od sklopitve med vlaknoma in od razlike med valovnima vektorjema 
+ v obeh vlaknihi. Zgolj z rahlim spreminjanjem parametrov, na primer lomnega količnika enega od vlaken,
+ lahko močno vplivamo na delež sklopljenega svetlobnega toka. S priključeno napetostjo in elektro-optičnim
+ pojavom v enem izmed vlaken lahko tako zelo natančno spreminjamo delež sklopljene svetlobe. 
+\end{remark}
 
 
 % \section{Amplification in fibers?}
