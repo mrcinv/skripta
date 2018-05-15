@@ -6,33 +6,40 @@ vedno večje količine informacij. Navadne kovinske vodnike
 so zato v računalniških in telefonskih povezavah nadomestila optična 
 vlakna, ki jih odlikujejo majhne izgube, neobčutljivost na elektromagnetne
 in medsebojne motnje ter zmožnost prenosa izjemno velike količine podatkov. 
+V tem poglavju bomo opisali načine prenosa podatkov po optičnih vodnikih
+in spoznali omejitve pri prenosu,
+predvsem disperzijo in izgube, ter načine, kako se z njimi spopadamo.
 
 \section{Planparalelni vodnik}
 \subsection*{Geometrijska razlaga}
-Klasično lahko razložimo delovanje optičnih vlaken s totalnim odbojem
+\index{Optični vodnik}
+\index{Optično vlakno}
+Klasično lahko pojasnimo delovanje optičnih vlaken s totalnim odbojem~\index{Totalni odboj}
 na meji med dvema dielektrikoma. Kadar prehaja svetloba iz snovi 
-z večjim lomnim količnikom v sredstvo z manjšim lomnim količnikom,
+z večjim lomnim količnikom\index{Lomni količnik} v sredstvo z manjšim lomnim količnikom,
 se pri vpadnih kotih, ki so večji od kritičnega kota, totalno odbije. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{110truemm} 
 \input{slike/10_Vodnik.pdf_tex}
 \caption{Klasična razlaga valovnega vodnika}
 \label{fig:vodnik}
 \end{figure}
 
-Najpreprostejši model optičnega vodnika je tanka planparalelna plast prozornega
+Najpreprostejši model optičnega vodnika je planparalelna plast prozornega
 dielektrika z lomnim količnikom $n_{1}$, ki je večji od lomnega količnika
-okolice $n_2$ (slika~\ref{fig:vodnik}). 
-Plasti z večjim lomnim količnikom rečemo sredica, okolici
-pa plašč vodnika. Žarek je ujet v sredici, če je vpadni kot 
+snovi, ki ga obdaja, $n_2$ (slika~\ref{fig:vodnik}). 
+Plasti z večjim lomnim količnikom rečemo sredica\index{Optični vodnik!sredica}, okoliški snovi 
+pa plašč vodnika\index{Optični vodnik!plašč}. Žarek je ujet v sredici, če je vpadni kot 
 na mejno plast $\vartheta$ večji od kota totalnega odboja $\vartheta_c$, 
 za katerega velja 
 \boxeq{10totalni}{
 \sin\vartheta_{c}=\frac{n_{2}}{n_{1}}.
 }
-Obstoja torej največji vpadni kot $\alpha_{\rm max}$, pod katerim lahko svetloba vpada v vodnik, da ostane v njem ujeta.
-Z njim povezana je numerična odprtina vlakna, ki jo izračunamo kot 
+Obstaja torej največji vpadni kot $\alpha_{\rm max}$, pod katerim 
+lahko svetloba vpada v vodnik, da ostane v njem ujeta.
+Z njim povezana je numerična odprtina (apertura) vlakna\index{Numerična odprtina}, 
+ki jo izračunamo kot 
 \beq
 NA = \sin \alpha_{\rm max} = n_1 \sin \beta_{\rm max} = 
 n_1 \sin(\pi/2-\vartheta_c) =
@@ -44,10 +51,10 @@ Upoštevajoč enačbo~(\ref{10totalni}) numerično odprtino zapišemo kot
 NA = \sqrt{n_1^2-n_2^2}.
 }
 Ker je razlika lomnih količnikov v vodnikih razmeroma majhna,
-tipično le nekaj stotink, je tudi numerična apertura optičnih 
+tipično le nekaj stotink, je tudi numerična odprtina optičnih 
 vodnikov navadno
 $NA \lesssim 0,1 $. Kot, pod katerim lahko vpada svetloba
-v vlakno, da se v njega ujame, je zato zelo majhen. 
+v vlakno, da se vanj ujame, je zato zelo majhen, tipično le nekaj stopinj.
 
 \subsection*{Valovni opis}
 Za podroben opis širjenja svetlobe po vodnikih ali vlaknih, 
@@ -55,17 +62,17 @@ ki imajo navadno polmer
 sredice od nekaj do nekaj deset mikrometrov, geometrijska optika ne
 zadošča. Rešiti moramo Maxwellove enačbe (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
 z ustreznimi robnimi pogoji (enačbe~\ref{eq:robni-pogoji}--\ref{eq:robni-pogoji5}),
-kar je za praktična vlakna dokaj dolg in zapleten račun. Zato ugotovimo najprej, kakšne
+kar je za cilindrična vlakna dokaj dolg in zapleten račun. Zato ugotovimo najprej, kakšne
 so osnovne značilnosti valovanja, ki se širi po planparalelnem vodniku.
 
 Glede na smer polarizacije električne poljske jakosti 
 ločimo dva primera (slika~\ref{fig:TETM}). Če leži električna poljska
 jakost vzporedno z mejnima ploskvama (smer $y$), 
-govorimo o transverzalnem električnem (TE) valovanju. 
+govorimo o transverzalnem električnem (TE) valovanju\index{Polarizacija!TE}. 
 V nasprotnem primeru, ko je 
 z mejnima ploskvama vzporedna magnetna poljska jakost in 
 leži električna poljska jakost v ravnini $xz$, 
-govorimo o transverzalnem magnetnem (TM) valovanju (slika~\ref{fig:TETM}).
+govorimo o transverzalnem magnetnem (TM) valovanju\index{Polarizacija!TM}.
 \begin{figure}[h]
 \centering
 \def\svgwidth{140truemm} 
@@ -76,22 +83,23 @@ govorimo o transverzalnem magnetnem (TM) valovanju (slika~\ref{fig:TETM}).
 
 Geometrijskemu žarku, ki pod kotom potuje po sredici in se na njeni meji
 odbija, ustreza v valovni sliki val, ki ima prečno komponento valovnega
-vektorja $k_{x}$ različno od nič. Ker je valovanje v prečni smeri 
-omejeno na sredico končne dimenzije (naj bo debelina plasti enaka $a$), ima lahko
-$k_{x}$ le diskretne vrednosti. Te so približno enake $N\pi/a$, pri čemer je $N$
+vektorja\index{Valovni vektor} $k_{x}$ različno od nič. Ker je valovanje v prečni smeri 
+omejeno na sredico končne debeline (naj bo debelina plasti enaka $a$), lahko
+$k_{x}$ zavzame le diskretne vrednosti. Te so v grobem približno enake $N\pi/a$, pri čemer je $N$
 celo število. Pravimo, da vsak $N$ določa en rod valovanj v vlaknu. Po drugi strani 
-pa obstaja v vodniku največji $k_x$, za katerega velja
+pa obstaja v vodniku največji $k_x$, za katerega približno velja
 \beq
-k_{x \mathrm{max}} \approx k_0 \sin\alpha = k_0 n_1 \cos\vartheta_c = k_0 \sqrt{n_1^2 -n_2^2}.
+k_{x \mathrm{max}} \approx k_0 \sin\alpha_{\rm max} = 
+k_0 n_1 \cos\vartheta_c = k_0 \sqrt{n_1^2 -n_2^2}.
 \eeq
-Število možnih rešitev za $k_x$ je torej omejeno in točno določeno, odvisno
-pa je od razlike lomnih količnikov in od debeline vodnika oziroma vlakna. 
+Število rešitev za $k_x$ je torej omejeno in točno določeno, odvisno
+pa je od razlike lomnih količnikov in od debeline vodnika oziroma polmera vlakna. 
 V nadaljevanju bomo spoznali, da v optičnih vlaknih en rod vselej obstaja,
 za razliko od dielektričnih in kovinskih vodnikov, kakršne
 poznamo iz mikrovalovne tehnike, po katerih se pod določeno frekvenco
-valovanje ne more širiti. Optični vodniki, po katerih se širi
-en sam rod, imajo posebej lepe lastnosti za uporabo v komunikacijskih
-sistemih.
+valovanje ne more širiti. Enorodovni optični vodniki, torej taki, po katerih se širi
+en sam rod, imajo še posebej lepe lastnosti za uporabo v komunikacijskih
+sistemih\index{Optični vodnik!enorodovni}.
 
 Povejmo še nekaj o hitrosti valovanja v vodniku.
 Naj bo $\beta$ komponenta valovnega vektorja vzdolž smeri $z$. Odvisnost polja
@@ -102,8 +110,10 @@ k_1 = n_{1}\frac{\omega}{c_0}=\sqrt{\beta^{2}+k_{x}^{2}}
 \label{9.0}.
 \end{equation}
 Za dano vrednost $k_{x}$ torej zveza med valovnim številom $\beta$
-in frekvenco $\omega$ ni linearna. Fazna hitrost valovanja $v_{f}=\omega/\beta$ je
-odvisna od frekvence in pride do pojava disperzije. Grupna hitrost $v_{g}=d\omega/d\beta$ 
+in frekvenco $\omega$ ni linearna. Fazna hitrost\index{Hitrost valovanja!fazna} 
+valovanja $v_{f}=\omega/\beta$ je
+odvisna od frekvence in pride do pojava disperzije\index{Disperzija}. Grupna 
+hitrost\index{Hitrost valovanja!grupna} $v_{g}=d\omega/d\beta$ 
 se zaradi nelinearne zveze razlikuje od fazne hitrosti in je odvisna od 
 frekvence, kar ima za uporabo vlaken pomembne posledice. Več o tem bomo spoznali 
 proti koncu poglavja. 
@@ -200,7 +210,7 @@ Pri $x = a/2$ tako velja
 -A \kappa \exp(-\kappa a/2) = -C k_x \sin(k_x a/2).
 \eeq
 Enačbo, ki določa rešitev $k_x$, dobimo iz zahteve, da sta gornja robna 
-pogoja hkrati izpoljnjena. Za sode načine tako velja
+pogoja hkrati izpolnjena. Za sode načine tako velja
 \boxeq{sekular1}{
 \frac{\kappa}{k_x} = \tan \frac{k_x a}{2}.
 }
@@ -238,7 +248,7 @@ označujejo rešitve za $k_x$. Število presečišč da število rodov, ki se la
 V predstavljenem primeru je rodov za izbrano TE polarizacijo pet: trije sodi in dva liha. Z grafa razberemo 
 še eno pomembno lastnost. Ne glede na to, kako tanek je vodnik, vedno obstaja vsaj ena rešitev za $k_x$, 
 saj rdeča krivulja vedno v vsaj eni točki seka črno. Vlaknu, v katerem se širi samo eno valovanje, 
-pravimo enorodnovno vlakno, sicer so vlakna večrodovna. Za tipično enorodovno vlakno velja 
+pravimo enorodovno vlakno, sicer so vlakna večrodovna. Za tipično enorodovno vlakno velja 
 $a\lesssim 5~\mu$m, za večrodovno z okoli 20 rodovi pa $a\sim 50~\mu$m.
 \begin{figure}[h]
 \centering
@@ -249,7 +259,7 @@ za TE polarizacijo. V skiciranem primeru je vodnik petrodoven.}
 \label{fig:TEsec}
 \end{figure}
 
-Ocenimo število možnih rodov še z izračunom. S slike~(\ref{fig:TEsec}) vidimo, da je največja možna 
+Ocenimo število dovoljenih rodov še z izračunom. S slike~(\ref{fig:TEsec}) vidimo, da je največja mogoča 
 vrednost valovnega vektorja $k_x$, pri kateri valovanje še potuje po vlaknu, omejena z vrednostjo, 
 pri kateri $\kappa$ pade na nič. Do te vrednosti je po ena rešitev na vsakih $\pi/a$, izmenično
 soda in liha. Celotno število rodov za eno polarizacijo je tako
@@ -294,7 +304,7 @@ iz TE sodih in lihih in TM sodih in lihih rodov.
 \begin{remark}
 Če ne prej, je bralec ob slikah~(\ref{fig:TESodi}) zagotovo opazil podobnost s kvantnim delcem, ujetim
 v končni enodimenzionalni potencialni jami. Svetloba, ujeta v vlakno, ustreza vezanim stanjem delca,
-numerična apertura pa je tisti parameter, ki določa globino potencialne jame. Pri majhnih vrednostih 
+numerična odprtina pa je tisti parameter, ki določa globino potencialne jame. Pri majhnih vrednostih 
 obstaja samo ena rešitev za vezano stanje, pri globlji jami je rešitev več. Podobno kot v kvantni mehaniki
 tudi v tem primeru ena rešitev za vezano stanje vedno obstaja. 
 \end{remark}
@@ -311,19 +321,19 @@ z integralom
 \label{chap:Cilinder}
 Do zdaj smo obravnavali ravninski valovni vodnik. V praksi svetlobo
 navadno usmerjamo po optičnih vlaknih, ki imajo cilindrično geometrijo.
-Najpreprostejša struktura, ki je analogna primeru planparalene
+Najpreprostejša struktura, ki je analogna primeru planparalelne
 plasti, je cilindrično vlakno, pri katerem je lomni količnik cilindrične
 sredice konstanten in nekoliko večji od lomnega količnika plašča. Navadno je 
 $n_1 - n_2 \sim 0,001$. Pogosto se uporablja
 tudi bolj zapletene konstrukcije, pri katerih se lomni količnik sredice spreminja z
-oddaljenostjo od osi. Z zapletenejšo geometrijo nameč zmanjšamo disperzijo v vlaknu in lahko 
+oddaljenostjo od osi. Z zapletenejšo geometrijo namreč zmanjšamo disperzijo v vlaknu in lahko 
 po vlaknu prenašamo veliko količino informacij na dolge razdalje - najzmogljivejša komercialna vlakna
 zmorejo prenos več deset terabitov na sekundo. 
 
 Račun za širjenje svetlobe po cilindričnem vlaknu s homogeno sredico
 je podoben kot za planparalelni vodnik, vendar je precej bolj
 zapleten. V cilindrični geometriji namreč ni delitve na čiste električne in 
-magnente transverzalne valove in robni pogoji so sklopljeni. V splošnem se rešitve izražajo 
+magnetne transverzalne valove in robni pogoji so sklopljeni. V splošnem se rešitve izražajo 
 v obliki kombinacij Besslovih funkcij. 
 
 Izkaže se, da je osnovni rod, ki se širi po cilindričnem vlaknu, po obliki zelo podoben
@@ -368,7 +378,7 @@ kjer je
 \beq
 \kappa^2=\beta^2-k_0^2n_2^2.
 \eeq
-V enačbah (\ref{10BS}) in (\ref{10BP}) prepoznamo Besslovo differencialno enačbo. 
+V enačbah (\ref{10BS}) in (\ref{10BP}) prepoznamo Besslovo diferencialno enačbo. 
 Upoštevajoč le funkcije, ki na izbranem območju ne divergirajo, zapišemo rešitev v sredici kot
 \beq
 E_z (r, \varphi, z) = A J_\nu(k_sr)\sin(\nu \varphi)e^{i \beta z} \quad  \mathrm{in} \quad 
@@ -450,7 +460,7 @@ Leva stran sekularne enačbe (enačba~\ref{sekFiber}) je narisana s črno, desna
 
 Zapisano sekularno enačbo je treba rešiti numerično. Lahko pa, podobno kot pri valovnem
 vodniku, narišemo levo in desno stran enačbe in poiščemo
-presečišča (slika~\ref{fig:TEsecFib}). Primer na sliki ima dve možni rešitvi. S slike lahko 
+presečišča (slika~\ref{fig:TEsecFib}). Primer na sliki ima dve rešitvi. S slike lahko 
 tudi uvidimo, da pri dovolj majhnem polmeru vlakna $a$ enačba nima rešitev. Takrat se namreč
 črne krivulje 'raztegnejo' in rdeča krivulja divergira preden doseže drugo vejo črne krivulje.
 
@@ -515,7 +525,7 @@ HE$_{11}$, HE$_{21}$, HE$_{31}$ in EH$_{11}$ v cilindričnem vlaknu.}
 Za praktično uporabo so najpomembnejši linearno polarizirani rodovi. Taki rodovi niso
 točne rešitve valovne enačbe v cilindričnih vlaknih, ampak jih zapišemo kot linearno 
 kombinacijo lastnih rodov, ki so zaradi majhne razlike med lomnima količnikoma sredice
-in plašča degenerirani. Tudi te rodove označimo z dvema indkesoma: prvi pove število azimutalnih
+in plašča degenerirani. Tudi te rodove označimo z dvema indeksoma: prvi pove število azimutalnih
 vozlov, drugi pa število radialnih vrhov. Poglejmo nekaj najpreprostejših primerov (slika~\ref{fig:LP}).
 
 Osnovni LP$_{01}$ je kar približno enak osnovnemu HE$_{11}$ rodu. 
@@ -524,7 +534,7 @@ sorazmerna
 \beq
 \mathbf{E}_\mathrm{LP01} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_0(k_s a).
 \eeq
-Dobimo dve možni obliki, ki sta odvisni od smeri polarizacije.
+Dobimo dve  obliki, ki sta odvisni od smeri polarizacije.
 V splošnem so LP$_{0m}$ podobni rodovom HE$_{1m}$. 
 
 Višje rodove, na primer LP$_{11}$ sestavimo kot linearno kombinacijo 
@@ -542,7 +552,7 @@ in EH$_{11}$ rodov
 \mathbf{E}_\mathrm{LP21} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_2(k_s a)
 { \cos 2\varphi \brace \sin 2\varphi}.
 \eeq
-Tudi v tem primeru so možne štiri oblike rodov. 
+Tudi v tem primeru so dovoljene štiri oblike rodov. 
 
 \begin{figure}[h!]
 \centering
@@ -666,7 +676,7 @@ v_{g}=\left(\frac{d\beta_{mn}}{d\omega}\right)^{-1}=\frac{c_{0}}{n_{1}}
 \label{9.21}
 \end{equation}
 in torej enaka za vse rodove. To je pomembna značilnost vlakna s paraboličnim profilom
-lomnega količnika. V dejanskem vlaknu je seveda taka odvisnost možna
+lomnega količnika. V dejanskem vlaknu je seveda taka odvisnost mogoča
 le v omejenem območju sredice, zato je tudi gornja analiza le približna
 in velja dobro za tiste rodove, ki se ne raztezajo dosti izven sredice.
 
@@ -678,7 +688,7 @@ vlakno razširi, kar -- kot bomo podrobneje videli v naslednjem razdelku -- omej
 uporabno dolžino vlakna. Temu se sicer lahko izognemo z uporabo enorodovnih vlaken,
 ki pa so dražja, poleg tega morata divergenca in polmer svetlobnega snopa 
 natančno ustrezati značilnostim enorodovnega vlakna, da se izognemo izgubam. 
-Zato se za krajše zveze uporabljajo mnogorodovna vlakna, ki imajo sredico s 
+Zato se za krajše zveze uporabljajo večrodovna vlakna, ki imajo sredico s 
 približno paraboličnim profilom lomnega količnika.
 
 % \section{Sprememba lomnega količnika vlakna}
@@ -901,9 +911,9 @@ v idealnem primeru v vlaknu s paraboličnim profilom lomnega količnika disperzi
 V praksi je sredica sestavljena iz več plasti z različnimi lomnimi količniki in različnimi
 debelinami, s čimer se prispevek valovodne disperzije spremeni in 
 položaj ničle celotne disperzije lahko premaknemo k valovni dolžini izvora oziroma k 
-valovni dolžini, pri kateri je najmanj absoprcije in izgub.
+valovni dolžini, pri kateri je najmanj absorpcije in izgub.
 
-Količina podakov, ki jih lahko prenašamo po enorodovnem vlaknu je kar približno obratno 
+Količina podatkov, ki jih lahko prenašamo po enorodovnem vlaknu je kar približno obratno 
 sorazmerna s širino izhodnih sunkov svetlobe. Pri celotni disperziji 
 $5~\si{\pico\second/\nano\meter\,\kilo\meter}$ in 
 spektralni širini $1~\si{\nano\meter}$ je tako v $100~\si{\kilo\meter}$ 
@@ -912,7 +922,7 @@ okoli $2~\si{\giga\hertz}$. V nadaljevanju bomo videli, da je pri prenosu podatk
 v vlaknih poglavitni omejujoči faktor disperzija in ne absorpcija. 
 
 \subsection*{Rodovna disperzija}
-Do zdaj smo obravnavali disperzijo v enodorovnih vlaknih, v katerih
+Do zdaj smo obravnavali disperzijo v enorodovnih vlaknih, v katerih
 lahko disperzijo močno zmanjšamo. V večrodovnih vlaknih pa
 je poglavitni vzrok širjenja sunkov rodovna disperzija. Do nje pride zaradi razlike 
 v hitrostih posameznih rodov. 
@@ -955,7 +965,7 @@ sunka po prehodu skozi vlakno
  Omenili smo tudi polarizacijsko disperzijo, do katere pride zaradi različnih hitrosti valovanj
  z različnima polarizacijama. V idealnem cilindričnem vlaknu potujeta obe polarizaciji
  z enako hitrostjo. V realnem vlaknu pa 
- pride na nečistočah in nesimetrijah v vlaknu do različnih hitrosti za različni polarizaciji. 
+ pride na nečistočah in asimetrijah v vlaknu do različnih hitrosti za različni polarizaciji. 
  Ker so nečistoče slučajno in neodvisno razporejene, tako disperzijo zelo težko odpravimo.
 \end{remark}
 
@@ -1115,19 +1125,19 @@ Za pozitivne vrednosti $\mu$ je frekvenca na prednji strani sunka,
 to je pri $\tau<0$, manjša od $\omega_0$, z naraščajočim časom pa se 
 linearno povečuje proti koncu sunka.
 Dobimo torej podobno obnašanje, kot ga poznamo iz nelinearne optike
-(glej sliko~\ref{fig:chirp}a). Zanimivo pri tem je, da se sam spekter
+(glej sliko~\ref{fig:chirp}\,a). Zanimivo pri tem je, da se sam spekter
 sunka ne spremeni, ampak se pojavi kot spreminjanje frekvence znotraj sunka.
 
 \begin{remark}
-Pri $\zeta=0$ je sunek toliko kratek, kolikor je možno pri dani spektralni
+Pri $\zeta=0$ je sunek toliko kratek, kolikor je mogoče pri dani spektralni
 širini. Lahko si mislimo tudi, da je sunek najkrajši,
-to je omejen z Fourierovo transformacijo spektra, kadar se
+to je omejen z Fourierevo transformacijo spektra, kadar se
 vse frekvenčne komponente seštejejo z isto fazo, to je pri $\zeta=0$.
 Da dobimo najkrajše sunke, kadar je faza vseh delnih valov enaka,
 smo srečali že pri fazno uklenjenih sunkih iz mnogofrekvenčnih laserjev
 (poglavje~\ref{chap:Uklepanje}).
 Pri potovanju sunka se zaradi disperzije faze frekvenčnih komponent
-različno spreminjajo in sunek se podaljša. Pri tem je pomemben šele 
+različno spreminjajo in sunek se podaljša. Pri tem je pomemben  
 drugi odvod fazne hitrosti po frekvenci. Linearno spreminjanje faze 
 namreč ne povzroči razširitve, temveč le razliko med grupno in fazno hitrostjo.
 \end{remark}
@@ -1228,18 +1238,17 @@ izgub na stiku med vlakni in izgub zaradi upognjenosti vlakna. Za prenos na dolg
 razdalje je tako potreben razmeroma močen signal, ki pa ne sme biti premočen,
 saj bi lahko v vlaknu prišlo do nelinearnih optičnih pojavov. V praksi moramo zato 
 optični signal, ki potuje po dolgih, na primer čezoceanskih, vlaknih, ojačevati. 
-Kako to naredimo optično, bomo spoznali v razdelku~\ref{FibAmp}.
+Kako to naredimo optično, bomo spoznali na koncu razdelka.
 
 Pri izdelavi optičnih vlaken se najpogosteje uporablja kremenovo steklo, ki 
-ima najmanjšo absorpcijo svetlobe v bližnjem infrardečem območju (od 1300~do~1500~nm).
+ima najmanjšo absorpcijo svetlobe v bližnjem infrardečem območju (od 1300~do~1500~\si{\nano\meter}).
 Navadno mu dodamo primesi, s čemer dosežemo želen lomni količnik in 
 zmanjšanje disperzije. 
 
 Za merilo izgub v vlaknu vpeljemo atenuacijski koeficient 
-\beq
+\boxeq{dB}{
 A [dB] = -10 \log_{10}\frac{j(z)}{j(0)},
-\label{dB}
-\eeq
+}
 pri čemer je $j(z)$ intenziteta svetlobe po prepotovani razdalji $z$. Če se po prepotovanem
 kilometru signal zmanjša na polovico, so izgube $3~\si{\decibel/\kilo\meter}$.
 Dobra vlakna dosegajo pri valovni dolžini $1,55~\si{\micro\meter}$ izgube okoli 
@@ -1258,19 +1267,19 @@ IR - IR absorpcija, OH - absorpcija na OH ionih in R - izgube zaradi Rayleighove
 Slika~(\ref{FibAbs}) prikazuje značilno odvisnost izgub od valovne dolžine 
 za dobro enorodovno vlakno iz kremenovega stekla. Celotne izgube (rdeča črta)
 so sestavljene iz vrste različnih prispevkov. 
-Pri kratkih valovnih dolžinah (UV) je absorbcija velika zaradi elektronskih prehodov
+Pri kratkih valovnih dolžinah (UV) je absorpcija velika zaradi elektronskih prehodov
 v steklu (vijolična črta). Širina reže za SiO$_2$ je namreč okoli 8,9~eV, kar ustreza valovni dolžini
-okoli 140~nm. Pri velikih valovnih dolžinah (IR) pride do absorpcije zaradi
+okoli $140~\si{\nano\meter}$. Pri velikih valovnih dolžinah (IR) pride do absorpcije zaradi
 vibracijskih prehodov (črna črta). Čeprav so ti prehodi pri nižjih frekvencah, 
-so vrhovi zelo široki in sežejo do okoli 1500~nm. Absorpcijo na nečistočah lahko s pazljivo 
+so vrhovi zelo široki in sežejo do okoli $1500~\si{\nano\meter}$. Absorpcijo na nečistočah lahko s pazljivo 
 izdelavo tako zmanjšajo, da postane skoraj v celotnem območju praktično zanemarljiva. 
 Najbolj problematična nečistoča je voda oziroma OH$^{-}$ ioni, ki imajo velik dipolni
-moment in izrazito absorpcijo pri 1380~nm (zelena črta). Zelo pomemben prispevek k 
+moment in izrazito absorpcijo pri $1380~\si{\nano\meter}$ (zelena črta). Zelo pomemben prispevek k 
 absorpciji, posebej pri krajših valovnih dolžinah, je sipanje na fluktuacijah 
 gostote (Rayleighovo sipanje), saj je sorazmerno z $\lambda^{-4}$ (modra črta). 
 
 S slike je razvidno, da so izgube najmanjše
-okoli 1,55~$\mu$m, zato se to območje največ uporablja za prenos signalov
+okoli $1,55~\si{\micro\meter}$, zato se to območje največ uporablja za prenos signalov
 na velike razdalje. Izgube so tako majhne, da omogočajo prenos signala 
 do nekaj sto kilometrov brez vmesnega ojačevanja. Teh izgub na vlaknih se tudi v prihodnosti 
 ne bo dalo več kaj dosti izboljšati, saj so že zdaj izgube na spodnji meji,
@@ -1279,11 +1288,11 @@ omejitev, ampak je to popačitev signala zaradi disperzije.
 
 \begin{remark}
 Pri prenosu signalov z optičnimi vlakni vpeljemo različne pasove, ki ustrezajo 
-različnim valovnim dolžinam. Pri valovnih dolžinah $1260-1360$~nm je tako imenovani
+različnim valovnim dolžinam. Pri valovnih dolžinah $1260-1360~\si{\nano\meter}$ je tako imenovani
 pas O (O - {\it original}), ki so ga sprva uporabljali zaradi razpoložljivih virov svetlobe
-in nizke disperzije. Sledita pas E ($1360-1460$~nm) in pas S ($1460-1530$~nm). 
-Najširše uporabljan je pas C (C - {\it conventional}) pri valovnih dolžinah $1530-1565$~nm,
-sledita mu še pas L ($1565-1625$~nm) in pas U ($1625-1675$~nm).
+in nizke disperzije. Sledita pas E ($1360-1460~\si{\nano\meter}$) in pas S ($1460-1530~\si{\nano\meter}$). 
+Najširše uporabljan je pas C (C - {\it conventional}) pri valovnih dolžinah $1530-1565~\si{\nano\meter}$,
+sledita mu še pas L ($1565-1625~\si{\nano\meter}$) in pas U ($1625-1675~\si{\nano\meter}$).
 
 Po optičnem vlaknu lahko prenašamo več informacij, če za vsako posebej uporabimo
 drugo valovno dolžino. Temu procesu pravimo multipleksiranje po valovni dolžini
@@ -1307,7 +1316,7 @@ zaznamo z ločenimi detektorji (D).
 \subsection*{Izgube v ukrivljenem vlaknu}
 Pri vseh primerih do zdaj smo upoštevali, da je vlakno oziroma valovni 
 vodnik raven. Kadar je vodnik ukrivljen, pride do dodatnih izgub, saj 
-del valovanja uhaja v plašč. Te izgube tipično postanejo znantne, 
+del valovanja uhaja v plašč. Te izgube tipično postanejo znatne, 
 kadar je krivinski radij vlakna centimeter ali manj. Poglejmo si pojav podrobneje na
 planparalelnem vodniku.
 
@@ -1347,8 +1356,8 @@ $\beta=m/R$. $\psi$ zadošča enačbi
 pa zaradi velikosti $m$ ni posebno zanimivo. Dosti več bomo izvedeli,
 če primerno preoblikujemo valovno enačbo \ref{9.31}. Namesto $r$
 in $\phi$ vpeljimo koordinati $x=r-R$ in $z=R\phi$. S tem smo prešli
-nazaj na koordinate planparelelne plasti in iščemo popravke valovne
-enacbe \ref{9.3} reda $1/R.$ Tako je $1/r\simeq1/R$ in 
+nazaj na koordinate planparalelne plasti in iščemo popravke valovne
+enačbe \ref{9.3} reda $1/R.$ Tako je $1/r\simeq1/R$ in 
 \begin{equation}
 \frac{m^{2}}{r^{2}}=\frac{m^{2}}{\left(R+x\right)^{2}}\simeq\frac{m^{2}}{R^{2}}\,\left(1-2\,\frac{x}{R}\right)=\beta^{2}\left(1-2\,\frac{x}{R}\right)\label{9.34}
 \end{equation}
@@ -1449,7 +1458,7 @@ dolgih odsekih dosežemo več 1000-kratno ojačanje ($30-40~\si{\decibel}$).
 
 \section{Sklopitev svetlobe v vlakna}
 Do zdaj smo govorili o svetlobi, ki potuje po valovnem vodniku ali vlaknu. Kako pa 
-svetlobo sploh sklopimo v optični vodnik? Sklopitev je možna na več načinov, obravnavali bomo 
+svetlobo sploh sklopimo v optični vodnik? Poznamo več načinov sklopitve, obravnavali bomo 
 čelno sklopitev, bočni sklopitvi s prizmo ali z uklonskimi režami ter  
 sklopitev med dvema vzporednima vlaknoma. Prvi način 
 navadno uporabljamo pri cilindričnih vlaknih, ostale pa pri planarnih valovodnih strukturah.
@@ -1495,7 +1504,7 @@ uporabiti drugačen pristop. Navadno uporabimo prizmo ali pa periodično struktu
 \caption{Dva primera bočne sklopitve svetlobe v valovni vodnik}
 \label{fig:coupler}
 \end{figure}
-V prvem primeru uporabimo prizmo, kot kaže slika~(\ref{fig:coupler}a). Lomni količnik prizme
+V prvem primeru uporabimo prizmo, kot kaže slika~(\ref{fig:coupler}\,a). Lomni količnik prizme
 je pri tem večji od lomnega količnika plašča $n_p > n_2$.
 Vhodni žarek vpada na prizmo, se ob prehodu vanjo lomi, nato pa se na stranici, ki je vzporedna
 z vodnikom, totalno odbije. V vmesnem območju med prizmo in sredico vodnika se pojavi evanescentni
@@ -1506,7 +1515,7 @@ S spreminjanjem vpadnega kota lahko torej v vodniku vzbujamo različne rodove.
 Če je razdalja med prizmo in vodnikom dovolj majhna (tipično pod valovno dolžino svetlobe), se v 
 valovod ob izpolnjenem pogoju ujemanja faze sklopi znaten delež vpadne svetlobe.
 
-Tudi periodična struktura na valovnem vodniku (slika~\ref{fig:coupler}b) deluje na 
+Tudi periodična struktura na valovnem vodniku (slika~\ref{fig:coupler}\,b) deluje na 
 ujemanju valovnega vektorja vpadnega vala z valovnim vektorjem ustreznega rodu.
 Ko vpade val pod kotom $\alpha$ glede na valovni vodnik, periodična struktura na vodniku 
 spremeni njegovo fazo za večkratnik $2 \pi z/\Lambda$, pri čemer je $\Lambda$ perioda strukture.
@@ -1535,7 +1544,7 @@ sklopitve vodnikov in prenosa energijskega toka iz enega vodnika v drugega.
 
 Za podrobnejšo obravnavo bi morali zapisati Maxwellove enačbe z ustreznimi robnimi pogoji 
 in jih rešiti za sklopljen primer dveh vzporednih vodnikov. Tak račun je izredno zapleten, 
-zato se bomo poslužili pibližka šibke sklopitve in privzeli, da so rodovi v vodnikih taki, 
+zato se bomo poslužili približka šibke sklopitve in privzeli, da so rodovi v vodnikih taki, 
 kot če bi vodniki ne bili sklopljeni.
 Sklopitev torej ne bo spremenila oblike lastnih rodov, bo pa spremenila njihovo amplitudo, ki 
 bo tako postala odvisna od vzdolžne koordinate $z$.
@@ -1669,7 +1678,7 @@ in takrat dobimo tako imenovano 3-dB sklopitev.
 \begin{remark}
  Pri dani dolžini sklopitve med vlaknoma $L$ je intenziteta svetlobe v drugem vlaknu močno odvisna od
  parametra $\gamma$, to je od sklopitve med vlaknoma in od razlike med valovnima vektorjema 
- v obeh vlaknihi. Zgolj z rahlim spreminjanjem parametrov, na primer lomnega količnika enega od vlaken,
+ v obeh vlaknih. Zgolj z rahlim spreminjanjem parametrov, na primer lomnega količnika enega od vlaken,
  lahko močno vplivamo na delež sklopljenega svetlobnega toka. S priključeno napetostjo in elektro-optičnim
  pojavom v enem izmed vlaken lahko tako zelo natančno spreminjamo delež sklopljene svetlobe. 
 \end{remark}
