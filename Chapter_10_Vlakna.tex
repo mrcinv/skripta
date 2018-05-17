@@ -1239,7 +1239,8 @@ določene s širino spektra.
 
 \begin{remark}
 Postopek kompenzacije disperzije se uporablja za pridobivanje zelo 
-kratkih sunkov. Sunku iz fazno uklenjenega barvilnega\index{Laser!organska barvila} ali Ti:safirnega\index{Laser!Ti:safir}
+kratkih sunkov. Sunku iz fazno uklenjenega barvilnega\index{Laser!organska barvila} 
+ali Ti:safirnega\index{Laser!Ti:safir}
 laserja se najprej v nelinearnem sredstvu razširi spekter, pri čemer
 se sunek tudi časovno podaljša. Razširjen sunek se nato s parom mrežic skrajša
 za faktor 10-100 glede na prvotno dolžino sunka. Tako nastanejo sunki,
@@ -1251,6 +1252,7 @@ zelo močen sunek svetlobe.
 \end{remark}
 
 \section{Izgube in ojačanje v optičnih vlaknih}
+\index{Izgube v optičnih vlaknih}
 Pri prenosu informacij z optičnimi vlakni je poleg disperzije, ki signal popači,
 treba upoštevati tudi izgube, ki signal oslabijo. 
 Do izgub pride predvsem zaradi absorpcije svetlobe v snovi,
@@ -1258,19 +1260,21 @@ Rayleighovega sipanja na termičnih fluktuacijah gostote, sipanja na nečistoča
 izgub na stiku med vlakni in izgub zaradi upognjenosti vlakna. Za prenos na dolge
 razdalje je tako potreben razmeroma močen signal, ki pa ne sme biti premočen,
 saj bi lahko v vlaknu prišlo do nelinearnih optičnih pojavov. V praksi moramo zato 
-optični signal, ki potuje po dolgih, na primer čezoceanskih, vlaknih, ojačevati. 
+optični signal, ki potuje po dolgih čezoceanskih vlaknih, ojačevati. 
 Kako to naredimo optično, bomo spoznali na koncu razdelka.
 
 Pri izdelavi optičnih vlaken se najpogosteje uporablja kremenovo steklo, ki 
-ima najmanjšo absorpcijo svetlobe v bližnjem infrardečem območju (od 1300~do~1500~\si{\nano\meter}).
+ima najmanjšo absorpcijo svetlobe v bližnjem infrardečem območju 
+($1300-1500~\si{\nano\meter}$).
 Navadno mu dodamo primesi, s čemer dosežemo želen lomni količnik in 
 zmanjšanje disperzije. 
 
-Za merilo izgub v vlaknu vpeljemo atenuacijski koeficient 
+Za merilo izgub v vlaknu vpeljemo atenuacijski 
+koeficient\index{Atenuacijski koeficient}
 \boxeq{dB}{
 A [dB] = -10 \log_{10}\frac{j(z)}{j(0)},
 }
-pri čemer je $j(z)$ intenziteta svetlobe po prepotovani razdalji $z$. Če se po prepotovanem
+pri čemer je $j(z)$ intenziteta svetlobe po prepotovani razdalji $z$. Če se po 
 kilometru signal zmanjša na polovico, so izgube $3~\si{\decibel/\kilo\meter}$.
 Dobra vlakna dosegajo pri valovni dolžini $1,55~\si{\micro\meter}$ izgube okoli 
 $0,2~\si{\decibel/\kilo\meter}$. 
@@ -1281,19 +1285,21 @@ $1000~\si{\decibel/\kilo\meter}$.
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/10_FibAbs.pdf_tex} 
-\caption{Izgube v vlaknu v odvisnosti od valovne dolžine: UV - UV absorpcija, 
-IR - IR absorpcija, OH - absorpcija na OH ionih in R - izgube zaradi Rayleighovega sipanja.}
+\caption{Izgube v vlaknu v odvisnosti od valovne dolžine: vijolična črta - UV absorpcija, 
+črna črta - IR absorpcija, zelena črta - absorpcija na OH ionih in modra črta - izgube zaradi Rayleighovega sipanja. Z rdečo črto je označena skupna absorpcija.}
 \label{FibAbs}
 \end{figure}
 Slika~(\ref{FibAbs}) prikazuje značilno odvisnost izgub od valovne dolžine 
 za dobro enorodovno vlakno iz kremenovega stekla. Celotne izgube (rdeča črta)
 so sestavljene iz vrste različnih prispevkov. 
-Pri kratkih valovnih dolžinah (UV) je absorpcija velika zaradi elektronskih prehodov
-v steklu (vijolična črta). Širina reže za SiO$_2$ je namreč okoli 8,9~eV, kar ustreza valovni dolžini
-okoli $140~\si{\nano\meter}$. Pri velikih valovnih dolžinah (IR) pride do absorpcije zaradi
+Pri kratkih valovnih dolžinah je absorpcija velika zaradi elektronskih prehodov
+v steklu (vijolična črta). Širina reže za SiO$_2$ je namreč okoli 8,9~eV, 
+kar ustreza valovni dolžini
+okoli $140~\si{\nano\meter}$. Pri velikih valovnih dolžinah pride do absorpcije zaradi
 vibracijskih prehodov (črna črta). Čeprav so ti prehodi pri nižjih frekvencah, 
-so vrhovi zelo široki in sežejo do okoli $1500~\si{\nano\meter}$. Absorpcijo na nečistočah lahko s pazljivo 
-izdelavo tako zmanjšajo, da postane skoraj v celotnem območju praktično zanemarljiva. 
+so vrhovi zelo široki in sežejo do okoli $1500~\si{\nano\meter}$. 
+Absorpcija na nečistočah lahko ob pazljivi izdelavi postane skoraj v celotnem 
+območju praktično zanemarljiva. 
 Najbolj problematična nečistoča je voda oziroma OH$^{-}$ ioni, ki imajo velik dipolni
 moment in izrazito absorpcijo pri $1380~\si{\nano\meter}$ (zelena črta). Zelo pomemben prispevek k 
 absorpciji, posebej pri krajših valovnih dolžinah, je sipanje na fluktuacijah 
@@ -1302,8 +1308,8 @@ gostote (Rayleighovo sipanje), saj je sorazmerno z $\lambda^{-4}$ (modra črta).
 S slike je razvidno, da so izgube najmanjše
 okoli $1,55~\si{\micro\meter}$, zato se to območje največ uporablja za prenos signalov
 na velike razdalje. Izgube so tako majhne, da omogočajo prenos signala 
-do nekaj sto kilometrov brez vmesnega ojačevanja. Teh izgub na vlaknih se tudi v prihodnosti 
-ne bo dalo več kaj dosti izboljšati, saj so že zdaj izgube na spodnji meji,
+do nekaj sto kilometrov brez vmesnega ojačevanja. Teh izgub na vlaknih se  
+ne bo dalo več kaj dosti izboljšati, saj so že zdaj na meji,
 določeni s termičnimi fluktuacijami. Pri dolžini optičnih zvez tako izgube niso več glavna
 omejitev, ampak je to popačitev signala zaradi disperzije.
 
@@ -1317,7 +1323,7 @@ sledita mu še pas L ($1565-1625~\si{\nano\meter}$) in pas U ($1625-1675~\si{\na
 
 Po optičnem vlaknu lahko prenašamo več informacij, če za vsako posebej uporabimo
 drugo valovno dolžino. Temu procesu pravimo multipleksiranje po valovni dolžini
-({\it wavelength-division multiplexing, WDM}).
+({\it wavelength-division multiplexing, WDM}).\index{Multipleksiranje}
 Na ta način dosežemo vzporeden prenos podatkov in hitrosti do 100~Tb/s.
 Shematsko je tak način prenosa podatkov prikazan na sliki~(\ref{WDM}).
 Oddajniki (O) oddajo sunke svetlobe, ki se rahlo razlikujejo v valovni dolžini. 
@@ -1335,37 +1341,43 @@ zaznamo z ločenimi detektorji (D).
 \end{remark}
 
 \subsection*{Izgube v ukrivljenem vlaknu}
+\index{Izgube v optičnih vlaknih!ukrivljeno vlakno}
 Pri vseh primerih do zdaj smo upoštevali, da je vlakno oziroma valovni 
 vodnik raven. Kadar je vodnik ukrivljen, pride do dodatnih izgub, saj 
 del valovanja uhaja v plašč. Te izgube tipično postanejo znatne, 
-kadar je krivinski radij vlakna centimeter ali manj. Poglejmo si pojav podrobneje na
+kadar je krivinski radij ukrivljenega vlakna centimeter ali manj. 
+Poglejmo si pojav podrobneje na
 planparalelnem vodniku.
 
 Naj bo vodnik dvodimenzionalna plast debeline $2a$ z lomnim količnikom
 $n_{1}$, ki je obdana s snovjo z lomnim količnikom $n_{2}$. Vodnik naj
 zdaj ne bo raven, temveč ukrivljen s krivinskim radijem $R$, tako da tvori 
 del kolobarja z notranjim radijem $R-a$ in zunanjim radijem $R+a$, pri 
-čemer je $\dot{R}\gg a$ (slika~\ref{sl9.6}). 
+čemer je $R\gg a$ (slika~\ref{fig:bend}). 
 \begin{figure}[h]
 \centering
 \def\svgwidth{60truemm} 
-%\input{slike/10_bend.pdf_tex} 
+\input{slike/10_Krivina.pdf_tex} 
 \caption{K izračunu izgub v ukrivljenem vodniku}
 \label{fig:bend}
 \end{figure}
 
-Zapišimo valovno enačbo za dve dimenziji v cilindrični
+Zapišimo Helmholtzevo enačbo v cilindrični\index{Helmholtzeva enačba}
 geometriji. Pri tem ne pozabimo, da $r$ ni več radialna koordinata vlakna, ampak
+označuje oddaljenost od središča krivine.
+\begin{equation}
+\frac{1}{r}\,\frac{\partial}{\partial r}\, r\,\frac{\partial E}{\partial r}+\frac{1}{r^{2}}\,\frac{\partial^{2}E}{\partial\varphi^{2}}+k_{0}^{2}n^{2}\left(r\right)\, E=0,
+\label{9.31}
+\end{equation}
+pri čemer ima $n\left(r\right)$ vrednost $n_{1}$ v sredici in $n_{2}$ v plašču. 
+Zanimajo nas rešitve oblike 
+\begin{equation}
+E=\psi\left(r\right)\, e^{im\varphi}
+\label{9.32}
+\end{equation}
+kjer je $\psi\left(r\right)$ znatna le v sredici. 
 
-\begin{equation}
-\frac{1}{r}\,\frac{\partial}{\partial r}\, r\,\frac{\partial E}{\partial r}+\frac{1}{r^{2}}\,\frac{\partial^{2}E}{\partial\phi^{2}}+k_{0}^{2}n^{2}\left(r\right)\, E=0\label{9.31}
-\end{equation}
- kjer ima $n\left(r\right)$ vrednost $n_{1}$ v sredici in $n_{0}$
-drugje. Zanimajo nas rešitve oblike 
-\begin{equation}
-E=\psi\left(r\right)\, e^{im\phi}\label{9.32}
-\end{equation}
- kjer je $\psi\left(r\right)$ znatna le v sredici. Ker je valovna
+Ker je valovna
 dolžina svetlobe dosti manjša od $R$, je $m$ veliko število, ki
 je povezano z valovnim številom $\beta$: naj bo $z=R\phi$ dolžina
 loka vzdolž sredine sredice. Tedaj je $m\phi=(m/R)\, z$ in je torej
