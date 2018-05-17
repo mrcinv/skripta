@@ -990,7 +990,7 @@ sunka po prehodu skozi vlakno
 \label{chap:sunvl}
 \subsection*{Vpliv disperzije}
 \index{Optični vodnik!enorodovni}
-\index{Disperzija}
+\index{Disperzija!podaljšanje sunka}
 Poglejmo si podrobneje, kako po enorodovnem vlaknu ali drugem
 sredstvu z disperzijo potuje kratek sunek valovanja z dano začetno obliko.
 Sunek zapišimo kot  
@@ -1108,16 +1108,17 @@ trajanje sunka $\sigma$, ki ustreza polmeru Gaussovega snopa $w$, in parameter
 $b$, ki ustreza krivinskemu radiju $R$. Oba parametra sta seveda odvisna od $\zeta$, 
 tako kot sta parametra $w$ in $R$ odvisna od $z$. 
 
-Za obliko podaljšanega Gaussovega sunka dobimo 
+Za obliko podaljšanega Gaussovega sunka dobimo\index{Gaussov sunek}
 \begin{equation}
 A\left(\zeta,\tau\right)=\frac{A_{0}}{\sqrt{1+\frac{\zeta^{2}
 }{\zeta_{0}^{2}}}}\exp\left(-\frac{\tau^{2}}{\sigma^{2}}\right)\exp
 \left(-i\frac{\mu\tau^{2}}{2b}\right)e^{i\phi\left(\zeta\right)}.
 \label{9.72}
 \end{equation}
-Pri tem za dolžino sunka $\sigma$ velja enaka zveza kot za polmer Gaussovega snopa
+Pri tem za dolžino sunka $\sigma$ velja enaka zveza kot za polmer 
+Gaussovega snopa (enačba~\ref{eq:w})
 \begin{equation}
-\sigma^{2}=\sigma_{0}^{2}\left(1+\frac{\zeta^{2}}{\zeta_{0}^{2}}\right).
+\sigma^{2}=\sigma_{0}^{2}\left[1+\left(\frac{\zeta}{\zeta_{0}}\right)^{2}\right].
 \label{9.73}
 \end{equation}
 Tu je $\sigma_{0}$ trajanje sunka pri $\zeta=0$, to je na začetku,
@@ -1125,10 +1126,10 @@ kjer je sunek najkrajši. Dodatna skupna faza $\phi\left(\zeta\right)$
 ni posebno pomembna, pač pa je zanimiv drugi eksponentni faktor v
 enačbi~(\ref{9.72}). V njem smo z $b=\zeta\left(1+\zeta_{0}^{2}/\zeta^{2}\right)$
 označili količino, ki je analogna krivinskemu radiju valovnih front
-v primeru Gaussovih snopov. 
+v primeru Gaussovih snopov (enačba~\ref{eq:R}).
 \begin{figure}[h]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{110truemm} 
 \input{slike/10_Gausstau.pdf_tex}
 \caption{Primerjava krajevne širitve Gaussovega snopa in časovne širitve Gaussovega sunka}
 \label{fig:Gausstau}
@@ -1148,9 +1149,9 @@ Dobimo torej podobno obnašanje, kot ga poznamo iz nelinearne optike
 sunka ne spremeni, ampak se pojavi kot spreminjanje frekvence znotraj sunka.
 
 \begin{remark}
-Pri $\zeta=0$ je sunek toliko kratek, kolikor je mogoče pri dani spektralni
-širini. Lahko si mislimo tudi, da je sunek najkrajši,
-to je omejen z Fourierevo transformacijo spektra, kadar se
+Pri $\zeta=0$ je sunek najkrajši možen pri dani spektralni
+širini. Lahko si mislimo, da je sunek najkrajši,
+to je omejen s Fourierevo transformacijo spektra, kadar se
 vse frekvenčne komponente seštejejo z isto fazo, to je pri $\zeta=0$.
 Da dobimo najkrajše sunke, kadar je faza vseh delnih valov enaka,
 smo srečali že pri fazno uklenjenih sunkih iz mnogofrekvenčnih laserjev
@@ -1187,14 +1188,15 @@ valovodni disperziji (enačba~\ref{ValD}).
 \end{definition}
 
 \subsection*{Kompenzacija disperzije}
+\index{Disperzija!kompenzacija}
 Razširitev sunka zaradi pozitivne disperzije je pri $\mu > 0$ mogoče kompenzirati
 s parom vzporednih uklonskih mrežic, kot kaže slika~(\ref{fig:comp}).
 Prva mrežica različne frekvenčne komponente razkloni, druga pa ponovno
 zbere, vendar so pri tem dolžine optičnih poti za različne komponente različno dolge.
 Celoten učinek je enak kot pri razširjanju sunka po sredstvu z negativno
 disperzijo. Vzporednost uklonskih mrežic zagotavlja vzporednost izhodnih žarkov,
-vendar pride pri prikazani postavitvi do krajevnega premika različnih komponent
-vpadne svetlobe. V praksi zato uporabimo ali dva para uklonskih mrežic ali pa 
+vendar so različne komponente vpadne svetlobe med razmaknjene (slika~\ref{fig:comp}\,a).
+V praksi zato uporabimo ali dva para uklonskih mrežic ali pa 
 zrcalo, ki svetlobo usmeri po isti poti nazaj. 
 \begin{figure}[h]
 \centering
@@ -1206,13 +1208,14 @@ oznakami (b).}
 \end{figure}
 
 Naj na par vzporednih uklonskih mrežic vpada ravni val pod kotom $\alpha$, odbije
-pa naj se pod kotom $\beta(\omega)$. Pot, ki jo prepotuje žarek od vpada na mrežico 
-do izhoda iz sistema, je enaka 
+pa naj se pod kotom $\beta = \beta(\omega)$ (slika~\ref{fig:comp}\,b). 
+Pot, ki jo prepotuje žarek od vpada na mrežico 
+do izhoda iz sistema (med točkama $A$ in $B$), je enaka 
 \beq
-P = \frac{L}{\cos\beta} \left(1+\cos(\alpha + \beta)\right),
+P = \overline{AB} = \frac{L}{\cos\beta} \left(1+\cos(\alpha + \beta)\right).
 \eeq
-pri čemer zaradi uklona velja zveza $\sin\,\beta - \sin\,\alpha = \lambda/\Lambda$.
-Z $\Lambda$ smo označili periodo uklonske mrežice. 
+Zaradi uklona velja zveza $\sin\,\beta - \sin\,\alpha = \lambda/\Lambda$,
+pri čemer smo z $\Lambda$ označili periodo uklonske mrežice. 
 Pri zapisu faze moramo upoštevati še fazni premik na drugi mrežici, ki je enak
 \beq
 \Phi_m=\frac{2\pi}{\Lambda} \, L \, \tan\,\beta.
@@ -1228,25 +1231,24 @@ Pokaži, da je drugi odvod faze po kotni frekvenci enak
 \eeq
 pri čemer je $q = 2 \pi/\Lambda$.
 \end{definition}
-Disperzija, ki je določena z drugim odvodom faze (enačba~\ref{eq:10faza}),
-je vedno negativna. Par vzporednih uklonskih mrežic torej deluje kot sredstvo
+Vidimo, da je disperzija, ki je določena z drugim odvodom faze (enačba~\ref{eq:10faza})
+po kotni hitrosti, vedno negativna. Par vzporednih uklonskih mrežic torej deluje kot sredstvo
 z negativno disperzijo. Sunek, ki se je razširil zaradi potovanja
 po sredstvu s pozitivno disperzijo, lahko ponovno skrajšamo do meje,
 določene s širino spektra. 
 
 \begin{remark}
 Postopek kompenzacije disperzije se uporablja za pridobivanje zelo 
-kratkih sunkov. Sunku iz fazno uklenjenega barvilnega ali Ti:safirnega
+kratkih sunkov. Sunku iz fazno uklenjenega barvilnega\index{Laser!organska barvila} ali Ti:safirnega\index{Laser!Ti:safir}
 laserja se najprej v nelinearnem sredstvu razširi spekter, pri čemer
 se sunek tudi časovno podaljša. Razširjen sunek se nato s parom mrežic skrajša
 za faktor 10-100 glede na prvotno dolžino sunka. Tako nastanejo sunki,
 dolgi le okoli $10~\si{\femto\second}$, kar je le še nekaj optičnih period. 
 V vmesni stopnji, ko je sunek podaljšan, ga lahko tudi dodatno ojačamo, česar
-s prvotnim kratkim in že tako razmeroma močnim sunkom ne bi mogli narediti. ojačan
+s prvotnim kratkim in že tako razmeroma močnim sunkom ne bi mogli narediti. Ojačan
 sunek nato s parom uklonskih mrežic ponovno zberemo in nastane zelo kratek
 zelo močen sunek svetlobe.
 \end{remark}
-
 
 \section{Izgube in ojačanje v optičnih vlaknih}
 Pri prenosu informacij z optičnimi vlakni je poleg disperzije, ki signal popači,
