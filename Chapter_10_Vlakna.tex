@@ -153,13 +153,13 @@ valovanja glej nalogo~\ref{naloga:TM}). Vstavimo nastavek (enačba~\ref{9.2}) v 
 \begin{equation}
 \frac{d^{2}{\bf \psi}}{dx^{2}}+\left(k_{0}^{2}n_1^{2}-\beta^{2}\right){\bf \psi}=0
 \qquad \textrm{v sredici oziroma obmo\v cju II} 
-\label{9.3}
+\label{9.3a}
 \end{equation}
 in 
 \begin{equation}
 \frac{d^{2}{\bf \psi}}{dx^{2}}+\left(k_{0}^{2}n_2^{2}-\beta^{2}\right){\bf \psi}=0
 \qquad \textrm{v plašču oziroma obmo\v cjih I in III.} 
-\label{9.3}
+\label{9.3b}
 \end{equation}
 Iz zveze~(enačba~\ref{9.0}) sledi $k_0^2n_1^2-\beta^2=k_x^2$, zato lahko rešitve prve enačbe
 zapišemo v obliki
@@ -539,7 +539,6 @@ med seboj degenerirani in dajo enako rešitev. Poleg rodov enake oblike in razli
 med seboj degenerirani še HE$_{\nu+1,m}$ in EH$_{\nu-1,m}$ rodovi. Degenerirane 
 rodove lahko združimo v linearne kombinacije teh valov in dobimo pretežno linearno polarizirane 
 rodove. 
-
 
 \subsection*{LP rodovi}
 \index{Optično vlakno!LP rodovi}
@@ -1245,14 +1244,14 @@ zaznamo z ločenimi detektorji (D).
 \end{figure}
 \end{remark}
 
-\subsection*{Izgube v ukrivljenem vlaknu}
+\subsection*{*Izgube v ukrivljenem vlaknu}
 \index{Izgube v optičnih vlaknih!ukrivljeno vlakno}
-Pri vseh primerih do zdaj smo upoštevali, da je vlakno oziroma valovni 
-vodnik raven. Kadar je vodnik ukrivljen, pride do dodatnih izgub, saj 
-del valovanja uhaja v plašč. Te izgube tipično postanejo znatne, 
+Pri vseh primerih do zdaj smo upoštevali, da je vlakno ravno 
+oziroma da so mejne ploskve valovnega vodnika vzporedne. 
+Kadar je vodnik ukrivljen, del valovanja uhaja v plašč in 
+izgube pri prenosu se povečajo. Te izgube tipično postanejo znatne, 
 kadar je krivinski radij ukrivljenega vlakna centimeter ali manj. 
-Poglejmo si pojav podrobneje na
-planparalelnem vodniku.
+Poglejmo si pojav podrobneje na planparalelnem vodniku.
 
 Naj bo vodnik dvodimenzionalna plast debeline $2a$ z lomnim količnikom
 $n_{1}$, ki je obdana s snovjo z lomnim količnikom $n_{2}$. Vodnik naj
@@ -1271,47 +1270,57 @@ Zapišimo Helmholtzevo enačbo v cilindrični\index{Helmholtzeva enačba}
 geometriji. Pri tem ne pozabimo, da $r$ ni več radialna koordinata vlakna, ampak
 označuje oddaljenost od središča krivine.
 \begin{equation}
-\frac{1}{r}\,\frac{\partial}{\partial r}\, r\,\frac{\partial E}{\partial r}+\frac{1}{r^{2}}\,\frac{\partial^{2}E}{\partial\varphi^{2}}+k_{0}^{2}n^{2}\left(r\right)\, E=0,
+\frac{1}{r}\,\frac{\partial}{\partial r}\, r\,\frac{\partial E}{\partial r}
++\frac{1}{r^{2}}\,\frac{\partial^{2}E}{\partial\varphi^{2}}+k_{0}^{2}n^{2}\left(r\right)\, E=0,
 \label{9.31}
 \end{equation}
 pri čemer ima $n\left(r\right)$ vrednost $n_{1}$ v sredici in $n_{2}$ v plašču. 
 Zanimajo nas rešitve oblike 
 \begin{equation}
-E=\psi\left(r\right)\, e^{im\varphi}
+E(r, \varphi) =\psi\left(r\right)\, e^{im\varphi}
 \label{9.32}
 \end{equation}
-kjer je $\psi\left(r\right)$ znatna le v sredici. 
+kjer bomo privzeli, da je $\psi\left(r\right)$ znatna le v sredici. 
 
-Ker je valovna
-dolžina svetlobe dosti manjša od $R$, je $m$ veliko število, ki
-je povezano z valovnim številom $\beta$: naj bo $z=R\phi$ dolžina
-loka vzdolž sredine sredice. Tedaj je $m\phi=(m/R)\, z$ in je torej
-$\beta=m/R$. $\psi$ zadošča enačbi 
+Naj bo $z=R\phi$ dolžina loka vzdolž sredine sredice. Tedaj je faza nastavka
+(enačba~\ref{9.32}) enaka $m\varphi = m z/R$ in valovno število $\beta = m/R$.
+Ker je valovna dolžina svetlobe dosti manjša od $R$, je $m$ zelo veliko število. 
+Funkcija $\psi$ zadošča enačbi 
 \begin{equation}
-\frac{d^{2}\psi}{dr^{2}}+\frac{1}{r}\,\frac{d\psi}{dr}+\left[k_{0}^{2}\, 
-n^{2}\left(r\right)-\frac{m^{2}}{r^{2}}\right]\psi=0\label{9.33}
+\frac{d^{2}\psi}{dr^{2}}+\frac{1}{r}\,\frac{d\psi}{dr}+\left(k_{0}^{2}\, 
+n^{2}\left(r\right)-\frac{m^{2}}{r^{2}}\right)\psi=0.
+\label{9.33}
 \end{equation}
- Rešitve za $\psi$ so kombinacije Besslovih funkcij reda $m$, kar
-pa zaradi velikosti $m$ ni posebno zanimivo. Dosti več bomo izvedeli,
-če primerno preoblikujemo valovno enačbo \ref{9.31}. Namesto $r$
-in $\phi$ vpeljimo koordinati $x=r-R$ in $z=R\phi$. S tem smo prešli
-nazaj na koordinate planparalelne plasti in iščemo popravke valovne
-enačbe \ref{9.3} reda $1/R.$ Tako je $1/r\simeq1/R$ in 
+Rešitve za $\psi$ so kombinacije Besslovih funkcij reda $m$, kar
+pa zaradi velikosti $m$ ni posebno zanimivo. 
+
+Dosti več bomo izvedeli, če se problema lotimo malo drugače. Namesto $r$
+in $\varphi$ vpeljemo koordinati $x=r-R$ in $z=R\varphi$.
+S tem preidemo nazaj na koordinate planparalelne plasti in iščemo popravke valovne
+enačbe v sredici (\ref{9.3a}), ki so reda $1/R.$ Privzamimo, da je $1/r\approx1/R$ in 
 \begin{equation}
-\frac{m^{2}}{r^{2}}=\frac{m^{2}}{\left(R+x\right)^{2}}\simeq\frac{m^{2}}
-{R^{2}}\,\left(1-2\,\frac{x}{R}\right)=\beta^{2}\left(1-2\,\frac{x}{R}\right)\label{9.34}
+\frac{m^{2}}{r^{2}}=\frac{m^{2}}{\left(R+x\right)^{2}}\approx\frac{m^{2}}
+{R^{2}}\,\left(1-2\,\frac{x}{R}\right)=\beta^{2}\left(1-2\,\frac{x}{R}\right).
+\label{9.34}
 \end{equation}
- S tem dobimo iz enačbe \ref{9.33} približno enačbo za prečno obliko
+Z upoštevanjem gornjih zvez enačbo (\ref{9.33}) nadomestimo s približno enačbo za prečno obliko
 polja 
 \begin{equation}
-\frac{d^{2}\psi}{dx^{2}}+\left[k_{0}^{2}\, n^{2}\left(r\right)-\beta^{2}\right]\,\psi+\frac{1}{R}\,
-\left(\frac{d\psi}{dx}-2\,\beta^{2}x\,\psi\right)=0
+\frac{d^{2}\psi}{dx^{2}}+\left(k_{0}^{2}\, n^{2}\left(r\right)-\beta^{2}\right)\,\psi+\frac{1}{R}\,
+\left(\frac{d\psi}{dx}-2\,\beta^{2}x\,\psi\right)=0.
 \label{9.35}
 \end{equation}
-Člena, ki vsebuje prvi odvod $d \psi/s x$, če lahko znebimo z nastavkom 
+Člen, ki vsebuje prvi odvod $d \psi/d x$, lahko odpravimo z nastavkom 
 \begin{equation}
-\psi = e^{-x/2R} \varphi(x),
+\psi(x) = e^{-x/2R} \zeta(x)
 \end{equation}
+in dobimo 
+\begin{equation}
+\frac{d^{2}\zeta}{dx^{2}}+\left(k_{0}^{2}\, n^{2}\left(r\right)-\beta^{2}-\frac{1}{4R^2}\right)\,\psi+\frac{1}{R}\,
+\left(\frac{d\psi}{dx}-2\,\beta^{2}x\,\psi\right)=0.
+\label{9.35}
+\end{equation}
+
 kar le za $2/4R^2$ spremeni $\beta^2$. Zadnji člen v gornjem izrazu
 $2 \beta^2x/R \varphi$ ima enako obliko kot potencialna energija delca
 v konstantnem električnem polju. Ker je preostali del enačbe za delec

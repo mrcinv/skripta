@@ -271,7 +271,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -413,7 +413,7 @@
          sodipodi:role="line"
          id="tspan4531"
          x="836.70007"
-         y="-235.77753">$n_2$</tspan></text>
+         y="-235.77753">$n_1$</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;line-height:125%;font-family:'Nimbus Sans L';-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -424,6 +424,6 @@
          sodipodi:role="line"
          id="tspan4531-0"
          x="895.13757"
-         y="-279.11246">$n_1$</tspan></text>
+         y="-279.11246">$n_2$</tspan></text>
   </g>
 </svg>
