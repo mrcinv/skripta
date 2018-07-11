@@ -1316,18 +1316,32 @@ polja
 \end{equation}
 in dobimo 
 \begin{equation}
-\frac{d^{2}\zeta}{dx^{2}}+\left(k_{0}^{2}\, n^{2}\left(r\right)-\beta^{2}-\frac{1}{4R^2}\right)\,\psi+\frac{1}{R}\,
-\left(\frac{d\psi}{dx}-2\,\beta^{2}x\,\psi\right)=0.
+\frac{d^{2}\zeta}{dx^{2}}+\left(k_{0}^{2}\, n^{2}\left(r\right)-\beta^{2}-\frac{1}{4R^2}\right)\,\zeta
++ \frac{2\beta^{2}}{R}\,x\,\zeta=0.
 \label{9.35}
 \end{equation}
-
-kar le za $2/4R^2$ spremeni $\beta^2$. Zadnji člen v gornjem izrazu
-$2 \beta^2x/R \varphi$ ima enako obliko kot potencialna energija delca
-v konstantnem električnem polju. Ker je preostali del enačbe za delec
-v končni potencialni jami, ima rešitev enake lastnosti kot stanje delca
-v končni potencialni jami z zunanjim električnim poljem. Tako potencialno 
-energijo kaže slika ... Očitno je, da bo delec, ujet v jamo, lahko tuneliral preko
-potencialne batiere. 
+Dobljena enačba je zelo podobna enačbi za izračun lastnih rodov v planparalelnem
+vodniku (\ref{9.3a}), pri čemer se $\beta^2$ poveča za $1/4R^2$. Poleg tega je prisoten
+dodatni člen, ki je linearno sorazmeren z $x$. Če ponovno naredimo analogijo
+med lastnimi načini v valovnem vodniku in stanji delca, ki je ujet v končno potencialno jamo, 
+je ta člen enake oblike kot potencialna energija delca v konstantnem zunanjem električnem 
+polju (slika~\ref{fig:tunel}). Podobno kot v tem primeru delci uhajajo iz potencialne jame
+(tunelirajo) uhaja tudi svetloba iz ukrivljenega vlakna. Izgube (oziroma delež prepuščene 
+svetlobe) so tako eksponentno odvisne od krivinskega radija vlakna 
+\beq
+A \propto e^{-CR},
+\eeq
+pri čemer je $C$ konstanta, odvisna od lomnih količnikov in polmera vlakna ter od 
+valovne dolžine potujoče svetlobe.
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+\input{slike/10_Tunel.pdf_tex} 
+\caption{Lastni načini širjenja svetlobe po ravnem vodniku so analogni stanjem 
+delca v končni potencialni jami (levo), načini širjenja po ukrivljenem vodniku pa 
+so podobni stanjem delca v konstantnem zunanjem električnem polju (desno).}
+\label{fig:tunel}
+\end{figure}
 
 \subsection*{Izgube na spoju dveh vlaken}
 Omenili smo že, da pride do izgub tudi na spoju dveh vlaken. 
@@ -1395,7 +1409,7 @@ razlika v velikostih vlaken.
 Zaradi znatnih izgub pri prenosu signalov na več tisoč kilometrov dolge razdalje 
 je treba signal ojačevati. To lahko naredimo elektronsko, kjer optični signal 
 pretvorimo v električnega, tega ojačamo in ga nato pretvorimo nazaj v optičnega. 
-Precej bolj priročna rešitev je optično ojačevanje v vlaknu samem. 
+Precej bolj priročna rešitev je optično ojačanje v vlaknu samem. 
 
 V ta namen se najpogosteje uporablja vlakno, dopirano z erbijevimi 
 ioni\footnote{EDFA - {\it Erbium-doped fiber amplifier}, ojačevalnik na vlakno, dopirano z erbijem}. 
@@ -1415,7 +1429,7 @@ valovnih dolžin, kar je še posebej uporabno pri prenosu več signalov naenkrat
 V praksi se uporabljajo vlakna, v katerih je delež erbijevih ionov okoli $\sim 10^{-4}$. 
 Črpalni laser je polprevodniški laser, ki 
 deluje pri valovni dolžini $900~\si{\nano\meter}$ ali $1,48~\si{\nano\meter}$ 
-z močjo okoli $20-100~\si{\milli\watt}$. Na ta način lahko v $10-30~\si{meter}$
+z močjo okoli $20-100~\si{\milli\watt}$. Na ta način lahko v $10-30~\si{\meter}$
 dolgih odsekih dosežemo več 1000-kratno ojačanje ($30-40~\si{\decibel}$).
 
 \section{Sklopitev svetlobe v vlakna}
@@ -1645,8 +1659,7 @@ in takrat dobimo tako imenovano 3-dB sklopitev.
  pojavom v enem izmed vlaken lahko tako zelo natančno spreminjamo delež sklopljene svetlobe. 
 \end{remark}
 
-
-\section{Sprememba lomnega količnika vlakna}
+\section{*Vpliv spremembe lomnega količnika vlakna na potovanje svetlobe}
 
 Sprememba lomnega količnika sredice ali plašča vlakna povzroči spremembo
 valovnega števila $\beta$ danega roda. V enorodovnih vlaknih je to
@@ -1655,88 +1668,111 @@ tlaka. Zaradi zunanjih vplivov, ki jih želimo zaznati, se spremeni
 lomni količnik vlakna in s tem propagacijska konstanta, kar lahko
 izmerimo preko spremembe faze valovanja na izhodu iz vlakna, to je,
 z ustrezno sestavljenim interferometrom. Ker je dolžina vlakna lahko
-velika, v nekaj centimetrov velik tulec lahko brez težav navijemo
-kilometre vlakna, je celotna sprememba faze velika že pri majhnih
+velika (v nekaj centimetrov velik tulec lahko brez težav navijemo
+kilometre vlakna), je celotna sprememba faze velika že pri majhnih
 spremembah merjene količine. Sprememba valovnega števila povzroča
-tudi nezaželjene spremembe faze in odboje pri prenosu informacij.
+tudi neželene spremembe faze in odboje pri prenosu informacij.
 V tem razdelku zato poglejmo, kako se spremeni valovno število pri
-dani spremembi lomenga količnika.
+dani spremembi lomnega količnika.
 
-Vzemimo rod vlakna s propagacijsko konstanto $\beta_{lm}$ in prečnim
-profilom $\psi_{lm}\left(r,\phi\right).$ Ta mora zadoščati valovni
-enačbi 
+Obravnavajmo rod vlakna s propagacijsko konstanto $\beta_{lm}$ in prečnim
+profilom $\psi_{lm}\left(r,\varphi\right).$ Ta mora zadoščati Helmholtzevi enačbi 
 \begin{equation}
-\nabla_{\bot}^{2}\psi_{lm}+\left(\epsilon(r)k_{0}^{2}-\beta_{lm}^{2}\right)\psi_{lm}=0\label{9.22}
+\nabla_{\bot}^{2}\psi_{lm}+\left(\epsilon(r)k_{0}^{2}-\beta_{lm}^{2}\right)\psi_{lm}=0.
+\label{9.22}
 \end{equation}
- Naj se dielektrična konstanta vlakna spremeni za $\delta\epsilon.$
-Zato se spremenita tudi propagacijska konstanta $\beta=\beta_{lm}+\delta\beta$
-in prečna oblika $\psi=\psi_{lm}+\delta\psi.$ Tudi motena funckija
-$\psi$ mora zadoščati enačbi \ref{9.22}, zato za perturbacijo velja
+Naj se dielektrična konstanta na delu vlakna spremeni za $\delta\epsilon.$
+Posledično se spremenita tudi propagacijska konstanta $\beta=\beta_{lm}+\delta\beta$
+in prečna oblika $\psi=\psi_{lm}+\delta\psi.$ Tudi popravljena funckija
+$\psi$ mora zadoščati enačbi (\ref{9.22}), zato za perturbacijo velja
 \begin{equation}
-\nabla_{\bot}^{2}\delta\psi+\left(\epsilon(r)k_{0}^{2}-\beta_{lm}^{2}\right)\delta\psi+\delta\epsilon\, k_{0}^{2}\psi_{lm}=2\beta_{lm}\delta\beta\,\psi_{lm}\label{9.23}
+\nabla_{\bot}^{2}\delta\psi+\left(\epsilon(r)k_{0}^{2}-\beta_{lm}^{2}\right)\delta\psi+
+\delta\epsilon\, k_{0}^{2}\psi_{lm}=2\beta_{lm}\delta\beta\,\psi_{lm},
+\label{9.23}
 \end{equation}
- kjer smo zanemarili produkte majhnih količin. Množimo obe strani
-enačbe s $\psi_{lm}^{*}$ in integrirajmo po preseku vlakna, pri čemer
-upoštevajmo, da je $\delta\psi$ ortogonalna na $\psi_{lm}$: 
+pri čemer smo zanemarili produkte majhnih količin. Množimo obe strani
+enačbe s $\psi_{lm}^{*}$, integrirajmo po preseku vlakna in 
+upoštevajmo, da je $\delta\psi$ ortogonalna na $\psi_{lm}$. Dobimo
 \begin{eqnarray}
- &  & \int\psi_{lm}^{*}\nabla_{\bot}^{2}\delta\psi\, dS+\int\left(\epsilon(r)k_{0}^{2}-\beta_{lm}^{2}\right)\delta\psi\,\psi_{lm}^{*}+k_{0}^{2}\int\delta\epsilon\,\left|\psi_{lm}\right|^{2}dS\label{9.24}\\
+ &  & \int\psi_{lm}^{*}\nabla_{\bot}^{2}\delta\psi\,
+ dS+\int\left(\epsilon(r)k_{0}^{2}-\beta_{lm}^{2}\right)
+ \delta\psi\,\psi_{lm}^{*}+k_{0}^{2}\int\delta\epsilon\,\left|\psi_{lm}\right|^{2}dS\label{9.24}\\
  & = & 2\beta_{lm}\,\delta\beta\int\left|\psi_{lm}\right|^{2}dS
 \end{eqnarray}
- Prvi člen na levi preoblikujmo z uporabo zvez $\int(u\,\nabla_{\bot}^{2}v-v\nabla_{\bot}^{2}u)\, dS=\int\nabla_{\bot}\cdot(u\nabla_{\bot}v-v\nabla_{\bot}u)\, dS=\oint{\bf ds\times(}u\,\nabla_{\bot}v-v\,\nabla_{\bot}u)$.
+Prvi člen na levi preoblikujmo z uporabo zvez $\int(u\,\nabla_{\bot}^{2}v-v\nabla_{\bot}^{2}u)\,
+dS=\int\nabla_{\bot}\cdot(u\nabla_{\bot}v-v\nabla_{\bot}u)\, 
+dS=\oint (u\,\nabla_{\bot}v-v\,\nabla_{\bot}u)\cdot \mathbf{ds}$.
 Ker fuknciji $\psi_{lm}$ in $\delta\psi$ opisujeta vodene valove,
 morata iti za velike $r$ proti nič, zato je integral po krivulji
-v gornji zvezi nič in velja $\int\psi_{lm}^{*}\nabla_{\bot}^{2}\delta\psi\, dS=\int\delta\psi\nabla_{\bot}^{2}\psi_{lm}^{*}\, dS$.
-Ker $\psi_{lm}^{*}$ zadošča enačbi \ref{9.22}, se v enačbi \ref{9.24}
-prvi in drugi člen uničita in dobimo željeno zvezo 
+v gornji zvezi nič in velja $\int\psi_{lm}^{*}\nabla_{\bot}^{2}\delta\psi\,
+dS=\int\delta\psi\nabla_{\bot}^{2}\psi_{lm}^{*}\, dS$.
+Funkcija $\psi_{lm}^{*}$ zadošča enačbi (\ref{9.22}), zato se v enačbi (\ref{9.24})
+prvi in drugi člen odštejeta. Iskan popravek k valovnem številu je tako 
 \begin{equation}
-\delta\beta=\frac{k_{0}^{2}\int\delta\epsilon\,\left|\psi_{lm}\right|^{2}dS}{2\,\beta\int\left|\psi_{lm}\right|^{2}dS}\label{9.25}
+\delta\beta=\frac{k_{0}^{2}\int\delta\epsilon\,\left|\psi_{lm}\right|^{2}dS}{2\,
+\beta\int\left|\psi_{lm}\right|^{2}dS}.
+\label{9.25}
 \end{equation}
- ki je seveda analogna kvantnomehanskemu rezultatu s teorijo motenj
-prvega reda za spremembo energije lastnega stanja pri majhni sprmembi
-Hamiltonovega operatorja. Rezultat je tudi intuitivno razumljiv: v
+Ta rezultat je seveda analogen kvantno-mehanskemu rezultatu, ki ga dobimo 
+z uporabo teorije motenj za spremembo energije lastnega stanja delca pri majhni 
+spremembi Hamiltonovega operatorja. Rezultat je tudi intuitivno razumljiv: v
 najnižjem redu je $\delta\beta$ sorazmerna s uteženim povprečjem
-$\delta\epsilon$, kjer je utež $\psi_{lm}$.
+$\delta\epsilon$, pri čemer je utež $\psi_{lm}$.
 
-Sprememba valovnega števila $\beta$ v delu vlakna, po katerem potuje
-svetloba, ne povzroči le spremembe faze, ampak tudi odboj dela valovanja.
-Ta pojav je le nekoliko druga oblika odboja na meji (zvezni ali ostri)
-dveh dielektrikov, ali splošneje, odboja vsakega valovanja na območju,
+Sprememba valovnega števila $\beta$ v delu vlakna ne povzroči le spremembe faze, 
+ampak tudi delni odboj.
+To je le nekoliko druga oblika odboja na (zvezni ali ostri) meji 
+dveh dielektrikov ali, splošneje, odboja valovanja na območju,
 kjer se spremeni fazna hitrost valovanja.
-
-Odboj na območju vlakna, kjer se spreminja $\beta$, bomo najlažje
-dobili preko formule za odboj na meji dveh dielektrikov pri pravokotnem
-vpadu. Odbita amplituda je tedaj 
+Odboj na območju vlakna, kjer se spreminja $\beta$, najpreprosteje opišemo 
+z enačbo za odboj na meji dveh dielektrikov pri pravokotnem
+vpadu. Odbita amplituda je tedaj (enačba~\ref{eq:Fresnel1})
 \begin{equation}
-E_{r}=\frac{n_{2}-n_{1}}{n_{2}+n_{1}}E_{0}\label{9.26}
+E_{r}=\frac{n_{2}-n_{1}}{n_{2}+n_{1}}E_{0}.
+\label{9.26}
 \end{equation}
- Mislimo si, da je sprememba $\beta$ na delu vlakna sestavljena iz
-majhnih stopničastih sprememb $\Delta\beta_{i}$ na intervalih $\Delta\dot{z}$.
-Za ravno valovanje, za katerega velja enačba \ref{9.26}, je sprememba
-lomnega količnika sorazmerna s spremembo fazne hitrosti. Ker tudi
-$\beta$ določa fazno hitrost valovanja po vlaknu, je delež odbitega
-valovanja na stopničasti spremembi $\Delta\beta_{i}$
+Mislimo si, da je sprememba $\beta$ na delu vlakna sestavljena iz
+majhnih stopničastih sprememb $\Delta\beta_{i}$ na intervalih $\Delta z$.
+Za ravno valovanje je sprememba fazne hitrosti sorazmerna s spremembo
+lomnega količnika, zato iz enačbe~(\ref{9.26}) sledi, da je delež odbitega
+valovanja na stopničasti spremembi $\Delta\beta_{i}$ enak
 \begin{equation}
-\Delta E_{i}=\frac{\Delta\beta_{i}}{2\,\beta}\, E_{0}\label{9.27}
+\Delta E_{i}=\frac{\Delta\beta_{i}}{2\,\beta}\, E_{0}.
+\label{9.27}
 \end{equation}
- Predpostavili smo, da je celotni del odbitega valovanja tako majhen,
-da ni treba upoštevati spremembe amplitude vpadnega vala $E_{0}$.
-Vse odbito valovanje je vsota prispevkov na posameznih stopnicah $\Delta\beta_{i}$,
-pri čemer moramo upoštevati še različne faze delnih odbitih valovanj:
+Privzeli smo, da je delež odbitega valovanja tako majhen, da ni treba upoštevati 
+spremembe amplitude vpadnega vala $E_{0}$. Celtono odbito valovanje je vsota 
+prispevkov na posameznih stopnicah $\Delta\beta_{i}$,
+pri čemer moramo upoštevati še različne faze delnih odbitih valovanj
 \begin{equation}
-E_{r}=\sum\frac{\Delta\beta_{i}}{2\,\beta}\, e^{2i\beta z_{i}}\, E_{0}=\frac{1}{2\,\beta}\sum\frac{d\beta}{dz}\, e^{2i\beta z_{i}}\Delta z\, E_{0}\label{9.28}
+E_{r}=\sum\frac{\Delta\beta_{i}}{2\,\beta}\, e^{2i\beta z_{i}}\, 
+E_{0}=\frac{1}{2\,\beta}\sum\frac{d\beta}{dz}\, e^{2i\beta z_{i}}\Delta z\, E_{0}.
+\label{9.28}
 \end{equation}
- Preidimo z vsote na integral, pa dobimo, da je odbita amplituda 
+Preidemo z vsote na integral in zapišemo amplitudo odbitega valovanja
 \begin{equation}
-E_{r}=\frac{E_{0}}{2\,\beta}\,\int\frac{d\beta}{dz}\, e^{2i\beta z}dz\label{9.29}
+E_{r}=\frac{E_{0}}{2\,\beta}\,\int\frac{d\beta}{dz}\, e^{2i\beta z}dz.
+\label{9.29}
 \end{equation}
-% 
-\textit{Primer:} Naj se valovno število linearno spermeni za $\Delta\beta_{0}$
-na razdalji $L$. Tedaj je po gornji formuli 
+Za primer poglejmo linearno spremembo lomnega količnika in linearno spremembo 
+valovnega števila za $\Delta\beta_{0}$ na razdalji $L$. Krajši račun pokaže, da je 
+delež intenzitete odbitega valovanja 
 \begin{equation}
-\frac{E_{r}}{E_{0}}=2\,\frac{\Delta\beta_{0}}{L}\,\frac{\sin\beta L/2}{\beta}\label{9.30}
+\frac{I_{r}}{I_{0}}=\left( \frac{\Delta\beta_{0}}{2 \beta}\,\frac{\sin\beta L}{\beta L}\right)^2.
+\label{9.30}
 \end{equation}
- Odbojnost je največja, kadar je $L$ majhen v primeri z $1/\beta$,
+Odbojnost je največja, kadar je $L$ majhen v primeri z $1/\beta$,
 torej kadar je sprememba $\beta$ ostra stopnica. Čim počasnejša je
-sprememba, tem manj je odboja, poleg tega pa odboja ni vsakič, ko
-je $\sin\beta L/2=0$, to je, pride do destruktivne interference vseh
-delnih odbojev.(Naloga: Odboj na erf stopnici).
+sprememba, tem manj je odboja. Kadar je $\sin\beta L=0$, pride do destruktivne 
+interference vseh delnih odbojev in odbojnost je enaka nič.
+
+\begin{definition}
+Naj se valovno število ob prehodu spreminja kot funkcija erf
+\beq
+\beta (z)= \frac{2\Delta \beta_0}{\sqrt{\pi}} \int_0^z e^{-t^2}dt.
+\eeq
+Pokaži, da je amplitda odbitega valovanja v tem primeru enaka
+\beq
+\frac{E_r}{E_0} = \frac{\Delta \beta_0}{\beta}e^{-\beta^2}.
+\eeq
+\end{definition}
