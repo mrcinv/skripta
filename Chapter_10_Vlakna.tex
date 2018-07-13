@@ -1012,15 +1012,15 @@ obosno valovno enačbo rešijo Gaussovi snopi (enačba~\ref{eq:gaussov-snop}).
 
 Podobnost med pojavoma seže dlje od formalne oblike. Pri snopih, ki so omejeni 
 v prečni smeri, disperzija fazne in grupne hitrosti po prečnih komponentah valovnega
-vektorja povzroča spreminjanje prečnega preseka snopa, pri časovno
-omejenih sunkih v sredstvu s frekvenčno disperzijo pa se spreminja
-vzdolžna oblika sunka. Poglejmo, kako.
+vektorja povzroča spreminjanje prečnega preseka snopa. Pri časovno
+omejenih sunkih v sredstvu s frekvenčno disperzijo se namesto preseka sunka
+spreminja njegova vzdolžna oblika. Poglejmo, kako.
 
 Enačba~(\ref{9.71}) je zelo podobna obosni valovni enačbi, le da ima tukaj vlogo 
-prečne koordinate čas $\tau$. Po analogiji s snopi lahko sklepamo, da se zaradi
-disperzije najmanj širi sunek z Gaussovo časovno odvisnostjo. Celotnega računa
+prečne koordinate čas $\tau$. Po analogiji s snopi lahko sklepamo, da se najmanj 
+širi ravno sunek z Gaussovo časovno odvisnostjo. Celotnega računa
 nam ni treba ponavljati, namesto tega kar v izrazu za Gaussove snope 
-(enačba~\ref{eq:gaussov-snop}) napravimo ustrezno zamenjavo črk. 
+(enačba~\ref{eq:gaussov-snop}) napravimo ustrezno zamenjavo spremenljivk. 
 Iz enačbe~(\ref{9.71}) razberemo, da valovnemu številu $k$ pri snopih  
 ustreza parameter $\mu=(d^{2}\beta/d\omega^{2})^{-1}$. Poleg tega vpeljemo
 trajanje sunka $\sigma$, ki ustreza polmeru Gaussovega snopa $w$, in parameter
@@ -1060,7 +1060,7 @@ frekvence glede na centralno frekvenco sunka $\omega_{0}$
 \omega-\omega_{0}=\frac{\mu\tau}{b}.
 \label{9.74}
 \end{equation}
-Za pozitivne vrednosti $\mu$ je frekvenca na prednji strani sunka,
+Za pozitivne vrednosti $\mu$ je frekvenca na začetku sunka,
 to je pri $\tau<0$, manjša od $\omega_0$, z naraščajočim časom pa se 
 linearno povečuje proti koncu sunka.
 Dobimo torej podobno obnašanje, kot ga poznamo iz nelinearne optike
@@ -1133,8 +1133,8 @@ do izhoda iz sistema (med točkama $A$ in $B$), je enaka
 P = \frac{L}{\cos\beta} \left(1+\cos(\alpha + \beta)\right).
 \end{equation}
 Zaradi uklona velja zveza $\sin\,\alpha - \sin\,\beta = \lambda/\Lambda$,
-pri čemer smo z $\Lambda$ označili periodo uklonske mrežice. 
-Pri zapisu faze moramo upoštevati še fazni premik na drugi mrežici, ki je enak
+pri čemer je $\lambda$ valovna dolžina svetlobe, $\Lambda$ pa perioda uklonske mrežice. 
+Pri fazi moramo upoštevati še fazni premik na drugi mrežici
 \begin{equation}
 \Phi_m=\frac{2\pi}{\Lambda} \, L \, \tan\,\beta.
 \end{equation}
@@ -1149,8 +1149,8 @@ Pokaži, da je drugi odvod faze po kotni frekvenci enak
 \end{equation}
 pri čemer je $q = 2 \pi/\Lambda$.
 \end{definition}
-Vidimo, da je disperzija, ki je določena z drugim odvodom faze (enačba~\ref{eq:10faza})
-po kotni hitrosti, vedno negativna. Par vzporednih uklonskih mrežic torej deluje kot sredstvo
+Račun v gornji nalogi pokaže, da je disperzija, določena z drugim odvodom faze po kotni hitrosti 
+(enačba~\ref{eq:10faza}), vedno negativna. Par vzporednih uklonskih mrežic torej deluje kot sredstvo
 z negativno disperzijo in sunek, ki se je razširil zaradi potovanja
 po sredstvu s pozitivno disperzijo, lahko skrajša do meje,
 določene s širino spektra. 
@@ -1262,15 +1262,15 @@ zaznamo z ločenimi detektorji (D).
 \index{Izgube v optičnih vlaknih!ukrivljeno vlakno}
 Pri vseh primerih do zdaj smo upoštevali, da je vlakno ravno 
 oziroma da so mejne ploskve valovnega vodnika vzporedne. 
-Kadar je vodnik ukrivljen, del valovanja uhaja v plašč in 
+Kadar je vlakno ukrivljeno, del valovanja uhaja v plašč in 
 izgube pri prenosu se povečajo. Te izgube tipično postanejo znatne, 
 kadar je krivinski radij ukrivljenega vlakna centimeter ali manj. 
 Poglejmo si pojav podrobneje na planparalelnem vodniku.
 
-Naj bo vodnik dvodimenzionalna plast debeline $2a$ z lomnim količnikom
+Naj bo vodnik dvodimenzionalna plast debeline $a$ z lomnim količnikom
 $n_{1}$, ki je obdana s snovjo z lomnim količnikom $n_{2}$. Vodnik naj
 zdaj ne bo raven, temveč ukrivljen s krivinskim radijem $R$, tako da tvori 
-del kolobarja z notranjim radijem $R-a$ in zunanjim radijem $R+a$, pri 
+del kolobarja z notranjim radijem $R-a/2$ in zunanjim radijem $R+a/2$, pri 
 čemer je $R\gg a$ (slika~\ref{fig:bend}). 
 \begin{figure}[h]
 \centering
@@ -1280,23 +1280,23 @@ del kolobarja z notranjim radijem $R-a$ in zunanjim radijem $R+a$, pri
 \label{fig:bend}
 \end{figure}
 
-Zapišimo Helmholtzevo enačbo v cilindrični\index{Helmholtzeva enačba}
-geometriji. Pri tem ne pozabimo, da $r$ ni več radialna koordinata vlakna, ampak
-označuje oddaljenost od središča krivine.
+Zapišimo Helmholtzevo enačbo (enačba~\ref{eq:Helmholtz}) v cilindrični \index{Helmholtzeva enačba}
+geometriji
 \begin{equation}
 \frac{1}{r}\,\frac{\partial}{\partial r}\, r\,\frac{\partial E}{\partial r}
 +\frac{1}{r^{2}}\,\frac{\partial^{2}E}{\partial\varphi^{2}}+k_{0}^{2}n^{2}\left(r\right)\, E=0,
 \label{9.31}
 \end{equation}
 pri čemer ima $n\left(r\right)$ vrednost $n_{1}$ v sredici in $n_{2}$ v plašču. 
-Zanimajo nas rešitve oblike 
+Pri tem ne pozabimo, da $r$ ni več radialna koordinata vlakna, ampak
+označuje oddaljenost od središča krivine. Zanimajo nas rešitve oblike 
 \begin{equation}
 E(r, \varphi) =\psi\left(r\right)\, e^{im\varphi}
 \label{9.32}
 \end{equation}
 kjer bomo privzeli, da je $\psi\left(r\right)$ znatna le v sredici. 
 
-Naj bo $z=R\phi$ dolžina loka vzdolž sredine sredice. Tedaj je faza nastavka
+Naj bo $z=R\varphi$ dolžina loka vzdolž sredine sredice. Tedaj je faza nastavka
 (enačba~\ref{9.32}) enaka $m\varphi = m z/R$ in valovno število $\beta = m/R$.
 Ker je valovna dolžina svetlobe dosti manjša od $R$, je $m$ zelo veliko število. 
 Funkcija $\psi$ zadošča enačbi 
@@ -1321,7 +1321,7 @@ Z upoštevanjem gornjih zvez enačbo (\ref{9.33}) nadomestimo s približno enač
 polja 
 \begin{equation}
 \frac{d^{2}\psi}{dx^{2}}+\left(k_{0}^{2}\, n^{2}\left(r\right)-\beta^{2}\right)\,\psi+\frac{1}{R}\,
-\left(\frac{d\psi}{dx}-2\,\beta^{2}x\,\psi\right)=0.
+\left(\frac{d\psi}{dx}+2\,\beta^{2}x\,\psi\right)=0.
 \label{9.35}
 \end{equation}
 Člen, ki vsebuje prvi odvod $d \psi/d x$, lahko odpravimo z nastavkom 
@@ -1334,34 +1334,36 @@ in dobimo
 + \frac{2\beta^{2}}{R}\,x\,\zeta=0.
 \label{9.35}
 \end{equation}
-Dobljena enačba je zelo podobna enačbi za izračun lastnih rodov v planparalelnem
+Gornja enačba je zelo podobna enačbi za izračun lastnih rodov v planparalelnem
 vodniku (\ref{9.3a}), pri čemer se $\beta^2$ poveča za $1/4R^2$. Poleg tega je prisoten
 dodatni člen, ki je linearno sorazmeren z $x$. Če ponovno naredimo analogijo
-med lastnimi načini v valovnem vodniku in stanji delca, ki je ujet v končno potencialno jamo, 
+med lastnimi načini v valovnem vodniku in stanji delca, ujetega v končno potencialno jamo, 
 je ta člen enake oblike kot potencialna energija delca v konstantnem zunanjem električnem 
-polju (slika~\ref{fig:tunel}). Podobno kot v tem primeru delci uhajajo iz potencialne jame
+polju (slika~\ref{fig:tunel}). Podobno kot lahko ujeti delci uhajajo iz potencialne jame
 (tunelirajo) uhaja tudi svetloba iz ukrivljenega vlakna. Izgube (oziroma delež prepuščene 
 svetlobe) so tako eksponentno odvisne od krivinskega radija vlakna 
 \begin{equation}
 A \propto e^{-CR},
 \end{equation}
-pri čemer je $C$ konstanta, odvisna od lomnih količnikov in polmera vlakna ter od 
-valovne dolžine potujoče svetlobe.
+pri čemer je $C$ konstanta, odvisna od lomnih količnikov sredice in plašča, od polmera vlakna 
+ter od valovne dolžine potujoče svetlobe.
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/10_Tunel.pdf_tex} 
 \caption{Lastni načini širjenja svetlobe po ravnem vodniku so analogni stanjem 
 delca v končni potencialni jami (levo), načini širjenja po ukrivljenem vodniku pa 
-so podobni stanjem delca v konstantnem zunanjem električnem polju (desno).}
+so podobni stanjem delca v konstantnem zunanjem električnem polju (desno). Zaradi
+spremenjenega potenicala delci tunelirajo, svetloba pa uhaja iz vlakna.}
 \label{fig:tunel}
 \end{figure}
 
 \subsection*{Izgube na spoju dveh vlaken}
+\index{Izgube v optičnih vlaknih!spoj dveh vlaken}
 Omenili smo že, da pride do izgub tudi na spoju dveh vlaken. 
 V idealnem primeru sta dve stikajoči vlakni povsem enaki in se sredici povsem ujemata. 
 Čim pa pride do majhnih odstopanj v velikosti ali poravnavi sredice, pa na stiku pride 
-do izgub, na tipičnem spoju vlaken do okoli $0,2-0,5$~dB.
+do izgub, na tipičnem spoju vlaken do okoli $0,2$--$0,5$~dB.
 
 Omejimo se na spoj enorodovnih vlaken, v katerih krajevni del 
 električne poljske jakosti osnovnega roda zapišemo kot
@@ -1369,12 +1371,12 @@ električne poljske jakosti osnovnega roda zapišemo kot
 E(r, \varphi, z)=\psi(r, \varphi) e^{i\beta z}.
 \end{equation} 
 
-Za izračun sklopitve na stiku dveh vlaken vpeljemo prekrivalni integral, 
-ki nam pove, kolikšen delež vpadne moči iz prvega vlakna 
+Za izračun sklopitve med dvema vlaknoma vpeljemo prekrivalni integral,\index{Prekrivalni integral}
+ki pove, kolikšen delež vpadne moči iz prvega vlakna 
 se sklopi v osnovni rod v drugem vlaknu. Sklopitveni faktor je
 \boxeq{10:overlap}{
-\eta = \frac{|\int \psi_1(r, \varphi) \psi_2(r, \varphi) r\, dr\, d\varphi|^2}
-{\left(\int \psi_1^2 r\, dr\, d\varphi \right) \left(\int \psi_2^2 r\, dr\, d\varphi \right)},
+\eta = \frac{|\int \psi_1(r, \varphi) \psi_2^*(r, \varphi) r\, dr\, d\varphi|^2}
+{\left(\int |\psi_1|^2 r\, dr\, d\varphi \right) \left(\int |\psi_2|^2 r\, dr\, d\varphi \right)},
 }
 pri čemer z indeksom $1$ označimo osnovni rod v prvem vlaknu, z indeksom $2$ pa 
 v drugem. Točen izračun sklopitve je v splošnem precej zapleten, saj vsebuje integrale
@@ -1382,32 +1384,37 @@ Besslovih funkcij. Zato račun pogosto poenostavimo, tako
 da prečno odvisnost osnovnega roda v cilindričnem vlaknu nadomestimo z 
 Gaussovo funkcijo in uporabimo efektivni polmer snopa (enačba~\ref{Marcuse}). 
 
-Izračunajmo sklopitveni faktor in izgube na stiku dveh vlaken z rahlo 
+Izračunajmo za primer sklopitveni faktor in izgube na stiku dveh vlaken z rahlo 
 različnima polmeroma. Po Marcusejevi formuli najprej določimo efektivna polmera Gaussovih snopov
-v obeh vlaknih $w_1$ in $w_2$. Prečni profil v prvem vlaknu je tako
+v obeh vlaknih $w_1$ in $w_2$. Prečni profil v prvem vlaknu je tako\index{Marcusejeva formula}
 \begin{equation}
 \psi_1 = A_1 e^{-r^2/w_1^2},
 \end{equation}
 v drugem pa 
 \begin{equation}
-\psi_2 = A_2 e^{-r^2/w_1^2}.
+\psi_2 = A_2 e^{-r^2/w_2^2}.
 \end{equation}
 Ko gornja nastavka vstavimo v enačbo~(\ref{10:overlap}), dobimo
 \begin{equation}
-\eta = \frac{|\int A_1 e^{-r^2/w_1^2} A_2 e^{-r^2/w_1^2} r\, dr|^2}
-{\left(\int A_1^2 e^{-2r^2/w_1^2} r\, dr \right) \left( A_2^2 e^{-2r^2/w_1^2} r\, dr \right)},
+\eta = \frac{|\int A_1 \, e^{-r^2/w_1^2}\, A_2\, e^{-r^2/w_2^2}\, 2 \pi\, r\, dr|^2}
+{\left(\int A_1^2 \,e^{-2r^2/w_1^2} \, 2 \pi \, r\, dr \right) \left( A_2^2\, 
+e^{-2r^2/w_2^2}\, 2 \pi \, r\, dr \right)},
 \end{equation}
 od koder sledi
 \begin{equation}
 \eta = \frac{4 w_1^2 w_2^2}{(w_1^2+w_2^2)^2}.
 \end{equation}
-Kadar sta polmera vlaken enaka, je $\eta = 1$, z naraščajočo razliko pa pojema. Pri tem
+Kadar sta polmera vlaken enaka, je prekrivanje popolno in $\eta = 1$. Z naraščajočo razliko
+med polmeroma pa vrednost $\eta$ pojema. Pri tem
 ni pomembno, ali ima večji polmer prvo ali drugo vlakno, v obeh primerih pride do izgube 
 signala. Intuitivno razumemo, da se signal izgubi pri prehodu iz večjega v manjše vlakno, 
 obratno pa je tudi res, saj se v širšem končnem vlaknu poleg osnovnega lahko vzbudijo
-tudi višji rodovi. Pri prehodu iz vlakna z $w = 10~\si{\micro\meter}$ v vlakno
-s polmerom $w = 8~\si{\micro\meter}$ (ali obratno), je sklopitveni faktor enak $0,95$, kar 
-po enačbi~(\ref{dB}) ustreza izgubam $0,21~\si{\decibel}$. 
+tudi višji rodovi. 
+
+Pri prehodu iz vlakna z $w = 10~\si{\micro\meter}$ v vlakno
+s polmerom $w = 8~\si{\micro\meter}$ (ali obratno), je sklopitveni faktor enak $0,95$. 
+To je enako razmerju prepuščene intenzitete svetlobe, zato lahko izračunamo izgube kar z
+enačbo~(\ref{dB}). Izračunana sklopitev ustreza izgubam $0,21~\si{\decibel}$. 
 
 \begin{definition}
 Pokaži, da je sklopitveni faktor za dve enaki vzporedni vlakni, ki sta iz osi izmaknjeni
@@ -1415,23 +1422,25 @@ za $\Delta$, enak
 \begin{equation}
 \eta = \exp \left( - \frac{\Delta^2}{w^2}\right).
 \end{equation}
-Na primeru pokaži, da prečni premik osi vlaken bistveno bolj vpliva na izgube kot
-razlika v velikostih vlaken. 
+
 \end{definition}
 
 \subsection*{Ojačanje v vlaknih}
+\index{Ojačanje v optičnih vlaknih}
 Zaradi znatnih izgub pri prenosu signalov na več tisoč kilometrov dolge razdalje 
-je treba signal ojačevati. To lahko naredimo elektronsko, kjer optični signal 
+je treba signal med prenosom ojačevati. To lahko naredimo elektronsko, kjer optični signal 
 pretvorimo v električnega, tega ojačamo in ga nato pretvorimo nazaj v optičnega. 
 Precej bolj priročna rešitev je optično ojačanje v vlaknu samem. 
 
 V ta namen se najpogosteje uporablja vlakno, dopirano z erbijevimi 
-ioni\footnote{EDFA - {\it Erbium-doped fiber amplifier}, ojačevalnik na vlakno, dopirano z erbijem}. 
+ioni\footnote{EDFA - {\it Erbium-doped fiber amplifier}, \index{Optično vlakno!dopirano z erbijem}
+\index{Erbij}
+ojačevalnik na vlakno, dopirano z erbijem}. 
 Na določenih razdaljah (na okoli $100~\si{\kilo\meter}$) svetlobo iz navadnega vlakna 
 sklopimo v vlakno, v katerem so erbijevi ioni.
-S črpalnim laserjem erbijeve ione vzbudimo, da dosežemo obrnjeno zasedenost. 
+S črpalnim laserjem erbijeve ione vzbudimo, da dosežemo obrnjeno zasedenost. \index{Obrnjena zasedenost}
 Ko na dopirani del vlakna vpade svetlobni sunek z valovno dolžino okoli 
-$1550~\si{\nano\meter}$, pride do stimulirane emisije in 
+$1550~\si{\nano\meter}$, pride do stimulirane emisije in \index{Stimulirano sevanje}
 sunek se ojači. Gre za povsem enak princip ojačanja svetlobe, kot ga poznamo iz 
 delovanja laserja, le da tukaj svetloba ni ujeta v resonator, ampak se postopoma 
 ojačuje vzdolž vlakna. Pri tem se intenziteta črpalnega laserja postopoma zmanjšuje,
@@ -1447,16 +1456,19 @@ z močjo okoli $20$--$100~\si{\milli\watt}$. Na ta način lahko v $10$--$30~\si{
 dolgih odsekih dosežemo več 1000-kratno ojačanje ($30$--$40~\si{\decibel}$).
 
 \section{Sklopitev svetlobe v vlakna}
-Do zdaj smo govorili o svetlobi, ki potuje po valovnem vodniku ali vlaknu. Kako pa 
-svetlobo sploh sklopimo v optični vodnik? Poznamo več načinov sklopitve, obravnavali bomo 
-čelno sklopitev, bočni sklopitvi s prizmo ali z uklonskimi režami ter  
-sklopitev med dvema vzporednima vlaknoma. Prvi način 
-navadno uporabljamo pri cilindričnih vlaknih, ostale pa pri planarnih valovodnih strukturah.
+\index{Sklopitev v optično vlakno}
+Do zdaj smo govorili o svetlobi, ki potuje po valovnem vodniku ali optičnem vlaknu. Kako pa 
+svetlobo sploh sklopimo v vodnik? Poznamo več načinov sklopitve, obravnavali bomo 
+čelno sklopitev, bočni sklopitvi s prizmo in s periodično strukturo ter  
+sklopitev med dvema vzporednima vodnikoma. Prvi način 
+navadno uporabljamo pri cilindričnih vlaknih, ostale pa najpogosteje pri planarnih valovodnih strukturah.
 
 \subsection*{Čelna sklopitev}
-Pri izgubah na spoju dveh vlaken smo vpeljali prekrivalni integral (enačba~\ref{10:overlap}), 
+\index{Sklopitev v optično vlakno!čelna sklopitev}
+Pri izračunu izgub na spoju dveh vlaken smo vpeljali prekrivalni integral (enačba~\ref{10:overlap}), 
 ki pove, kolikšen del osnovnega roda, ki izhaja iz prvega vlakna, se sklopi v osnovni 
-rod drugega. Povsem podobno pristopamo tudi pri izračunu sklopitve svetlobe v optično vlakno. 
+rod drugega. Povsem podobno pristopamo tudi pri izračunu izkoristka sklopitve svetlobe v optično vlakno.
+\index{Prekrivalni integral}
 Izračunati moramo, kolikšen delež vpadne svetlobe $E(r, \varphi)$ se sklopi z izbranim rodom 
 vlakna $n,m$. To naredimo tako, da vpadni val razvijemo po lastnih rodovih vlakna, iz ortogonalnosti
 rodov pa sledi prekrivalni integral, ki ga moramo seveda ustrezno normirati. Zapišemo ga kot
@@ -1475,23 +1487,25 @@ dx\, dy \right)}.
 z Gaussovim profilom.
 
 \begin{remark}
-Sklopitev svetlobe v večrodovno vlakno lahko obravnavamo povsem geometrijsko, kot smo to naredili
+Sklopitev svetlobe v večrodovno vlakno lahko obravnavamo geometrijsko, kot smo to naredili
 na začetku poglavja (slika~\ref{fig:vodnik}). Izračunali smo (enačba~\ref{10NAa}), da je največji 
 vpadni kot, pod katerim se svetloba še sklopi v vlakno, določen z numerično odprtino 
 vlakna $\sin \alpha_{\mathrm{max}}= NA$.
 \end{remark}
 
 \subsection*{Bočna sklopitev}
+\index{Sklopitev v optično vlakno!bočna sklopitev}
 Neposredna sklopitev svetlobe v vodnik preko plašča ni mogoča. Ker je namreč lomni količnik
-plašča večji od lomnega količnika sredice, dovolj velikega vstopnega kota, pod katerim bi 
-se svetloba sklopila v sredico, ni mogoče doseči. Zato je za sklopitev preko stranice treba 
+sredice večji od lomnega količnika plašča, dovolj velikega vstopnega kota, pod katerim bi 
+se svetloba ujela v sredico, ni mogoče doseči. Zato je za sklopitev preko stranice treba 
 uporabiti drugačen pristop. Navadno uporabimo prizmo ali pa periodično strukturo na vlaknu. 
 
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/10_coupler.pdf_tex} 
-\caption{Dva primera bočne sklopitve svetlobe v valovni vodnik}
+\caption{Dva primera bočne sklopitve svetlobe v valovni vodnik: sklopitev s prizmo (a) in sklopitev
+s periodično strukturo (b)}
 \label{fig:coupler}
 \end{figure}
 V prvem primeru uporabimo prizmo, kot kaže slika~(\ref{fig:coupler}\,a). Lomni količnik prizme
@@ -1514,14 +1528,16 @@ vektorjem za izbrani rod v vlaknu, se vpadna svetloba sklopi v vlakno.
 
 \begin{remark}
  Oba opisana načina za sklopitev svetlobe v vlakno lahko uporabimo tudi za sklopitev svetlobe 
- iz vlakna. Pri tem mora biti za uspešno sklopitev iz vlakna prav tako izpolnjen pogoj ujemanja faz.
- Dodatna uporaba sklopitve s prizmo je tudi določanje lastnosti neznane plasti, njene debeline
- ali njenega lomnega količnika.
+ iz vlakna, pri čemer mora biti ravno tako izpolnjen pogoj ujemanja faz. 
+ Sklapljanje svetlobe skozi prizmo je uporabno tudi za raziskave tankih plasti snovi. 
+ Iz pogoja za ujemanje faz lahko določimo lastnosti tanke plasti, njeno debelino ali njen lomni količnik. 
 \end{remark}
 
 \subsection*{Sklopitev med valovodi}
+\index{Sklopitev med valovodi}
 Ob prenosu signala po optičnem valovodu večina energijskega toka potuje po sredici,
-energijski tok pa seže tudi izven nje, v plašč. Če sta dva vzporedna valovoda dovolj blizu, da
+energijski tok pa seže tudi izven nje, v plašč (enačba~\ref{confinement}). 
+Če sta dva vzporedna valovoda dovolj blizu, da
 se evanescentni električni polji enega in drugega vodnika v plašču prekrivata, pride do 
 sklopitve vodnikov in prenosa energijskega toka iz enega vodnika v drugega. 
 \begin{figure}[h]
@@ -1540,7 +1556,8 @@ Sklopitev torej ne bo spremenila oblike lastnih rodov, bo pa spremenila njihovo 
 bo tako postala odvisna od vzdolžne koordinate $z$.
 
 Imejmo dva enorodovna vodnika z lomnima količnikoma sredice $n_1$ in $n_2$ in enako 
-debelino $a$, med njima in okoli njiju pa naj bo reža širine $2d$ z lomnim količnikom $n_0$. 
+debelino $a$, med njima in okoli njiju pa naj bo snov z lomnim količnikom $n_0$. Širina 
+reže med vodnikoma naj bo $2d$.
 Potem zapišemo električni poljski jakosti v prvem in drugem vodniku kot
 \begin{eqnarray}
 E_1(x,z) &=& A(z) \psi_1(x) e^{i \beta_1 z} \quad \mathrm{in}\\
@@ -1564,7 +1581,7 @@ n(x)^2 \psi_2 \right)+ \\2 i \beta_1 A' \psi_1 e^{i \beta_1 z}+
 2 i \beta_2 B' \psi_2 e^{i \beta_2 z} = 0.
 \end{multline}
 Pri tem smo člena z drugim odvodom $\partial^2 A/\partial z^2$ in $\partial^2 B/\partial z^2$
-zanemarili. Upoštevamo enačbi za $\psi$
+zanemarili. Zapišimo enačbi za $\psi$
 \begin{eqnarray}
 \frac{\partial^2}{\partial x^2}\psi_1(x) + \left(k_0^2n_1(x)^2-\beta_1^2\right) \psi_1 &=&0 \quad \mathrm{in} \\
 \frac{\partial^2}{\partial x^2}\psi_2(x) + \left(k_0^2n_2(x)^2-\beta_2^2\right) \psi_2 &=&0.
@@ -1581,7 +1598,7 @@ B e^{i \beta_2 z}k_0^2\left(n(x)^2 -n_2(x)^2\right)\psi_2 + \\2 i \beta_1 A' \ps
 Enačbo pomnožimo s kompleksno konjugirano vrednostjo $\psi_1^*$ in integriramo po $x$.
 Upoštevamo ortonormalnost funkcij $\psi$ in dobimo 
 \begin{equation}
-\frac{dA}{dz} = i A K_{11}+i B e^(\beta_2-\beta_1)z K_{12},
+\frac{dA}{dz} = i A K_{11}+i B e^{i(\beta_2-\beta_1)z} K_{12},
 \end{equation}
 pri čemer sta
 \begin{equation}
@@ -1594,14 +1611,14 @@ K_{12}= \frac{k_0^2}{2 \beta_1}\int\psi_1^*\psi_2 (n^2-n_2^2)dx.
 Koeficient $K_{11}$ določa spremembo amplitude v vlaknu zaradi prisotnosti 
 drugega vlakna, kar lahko zanemarimo. Tako ostane samo sklopitveni člen
 \begin{equation}
-\frac{dA}{dz} = i B e^{(\beta_2-\beta_1)z} K_{12}
+\frac{dA}{dz} = i B e^{i(\beta_2-\beta_1)z} K_{12}
 \label{10_B}
 \end{equation}
 in podobno za $B$
 \begin{equation}
-\frac{dB}{dz} = i A e^{(-\beta_2+\beta_1)z} K_{21}.
+\frac{dB}{dz} = i A e^{i(-\beta_2+\beta_1)z} K_{21}.
 \end{equation}
-Prvo enačbo odvajamo in dobimo
+Prvo enačbo odvajamo, upoštevamo drugo in dobimo
 \begin{equation}
 \frac{\partial^2 A}{\partial z^2}-i \Delta \beta \frac{\partial A}{\partial z} + K_{12}K_{21}A = 0.
 \label{10_part}
@@ -1612,12 +1629,13 @@ A = e^{i \Delta \beta z/2}\left( a_1 e^{i \gamma z} + a_2 e^{-i \gamma z}\right)
 \label{10_nastavek}
 \end{equation}
 \begin{definition}
- Pokaži, da gornji nastavek (enačba~\ref{10_nastavek}) reši enačbo~(\ref{10_part}) in pokaži,
+ Pokaži, da  nastavek (enačba~\ref{10_nastavek}) reši enačbo~(\ref{10_part}) in pokaži,
  da med parametri enačb velja sledeča zveza
  \begin{equation}
  \gamma^2 = K^2 + \frac{\Delta \beta ^2}{4},
  \end{equation}
- pri čemer je $K = \sqrt{K_{12}K_{21}}$. Nato uporabi enačbo~(\ref{10_B}) in pokaži, da je rešitev
+ pri čemer je $K = \sqrt{K_{12}K_{21}}$ in $\Delta \beta = \beta_2 - \beta_1$. 
+ Nato uporabi enačbo~(\ref{10_B}) in pokaži, da je rešitev za amplitudo $B$
  enaka izrazu v enačbi~(\ref{10_BB}).
 \end{definition}
 Ko poznamo $A$, lahko z uporabo enačbe~(\ref{10_B}) izračunamo še $B$
@@ -1640,7 +1658,7 @@ P_1 &=& P_0 \left( \cos^2(\gamma z) + \frac{\Delta \beta^2}{4 \gamma^2}\sin^2(\g
 = P_0 \left( 1 - \frac{K^2}{\gamma^2}\sin^2(\gamma z) \right)\\
 P_2 &= & P_0\, \frac{K^2}{\gamma^2}\sin^2(\gamma z),
 \end{eqnarray}
-pri čemer smo privzeli, da velja $K_{12} \sim K_{21}$. Vidimo, da sta obe funkciji oscilirajoči, 
+pri čemer smo privzeli, da velja $K_{12} \sim K_{21} \sim K$. Vidimo, da sta obe funkciji oscilirajoči, 
 svetloba se torej periodično pretaka iz enega vlakno v drugo in nazaj s periodo $\pi/\gamma$. 
 Amplituda prenosa je 
 odvisna od sklopitvenega faktorja $K$ in ujemanja valovnih vektorjev v obeh vlaknih. Večji koeficient $K$
@@ -1660,10 +1678,10 @@ P_2 &= P_0 \sin^2 (\gamma z).
 vodnika različna, v drugem primeru (b) pa sta vodnika enaka in pride do popolnega prenosa.}
 \label{fig:foscil}
 \end{figure}
-Na ta način smo dosegli, da lahko v drugo vlakno sklopimo poljuben delež vpadne svetlobe. 
+Na ta način lahko v drugo vlakno sklopimo poljuben delež vpadne svetlobe. 
 Pri dolžini sklopitve $L = \pi/2 \gamma$ pride do celotnega prenosa svetlobnega toka v drugo vlakno.
-Pogosto sklopimo eno polovico intenzitete vpadne svetlobe. To se zgodi pri dolžini $L = \pi/4 \gamma$
-in takrat dobimo tako imenovano 3-dB sklopitev. 
+Pogosto sklopimo le eno polovico intenzitete vpadne svetlobe. To se zgodi pri dolžini $L = \pi/4 \gamma$
+in takrat dobimo tako imenovano 3-dB sklopitev. \index{Sklopitev med valovodi!3-dB sklopitev}
 
 \begin{remark}
  Pri dani dolžini sklopitve med vlaknoma $L$ je intenziteta svetlobe v drugem vlaknu močno odvisna od
@@ -1676,10 +1694,9 @@ in takrat dobimo tako imenovano 3-dB sklopitev.
 \section{*Vpliv spremembe lomnega količnika vlakna na potovanje svetlobe}
 
 Sprememba lomnega količnika sredice ali plašča vlakna povzroči spremembo
-valovnega števila $\beta$ danega roda. V enorodovnih vlaknih je to
+valovnega števila $\beta$ za izbran rod. V enorodovnih vlaknih je to
 mogoče izkoristiti za izdelavo senzorjev, na primer temperature ali
-tlaka. Zaradi zunanjih vplivov, ki jih želimo zaznati, se spremeni
-lomni količnik vlakna in s tem propagacijska konstanta, kar lahko
+tlaka. Spremembo valovnega števila, do katere pride zaradi zunanjih vplivov,
 izmerimo preko spremembe faze valovanja na izhodu iz vlakna, to je,
 z ustrezno sestavljenim interferometrom. Ker je dolžina vlakna lahko
 velika (v nekaj centimetrov velik tulec lahko brez težav navijemo
@@ -1687,10 +1704,11 @@ kilometre vlakna), je celotna sprememba faze velika že pri majhnih
 spremembah merjene količine. Sprememba valovnega števila povzroča
 tudi neželene spremembe faze in odboje pri prenosu informacij.
 V tem razdelku zato poglejmo, kako se spremeni valovno število pri
-dani spremembi lomnega količnika.
+dani spremembi lomnega količnika in koliko svetlobe se odbije.
 
 Obravnavajmo rod vlakna s propagacijsko konstanto $\beta_{lm}$ in prečnim
 profilom $\psi_{lm}\left(r,\varphi\right).$ Ta mora zadoščati Helmholtzevi enačbi 
+(enačba~\ref{eq:Helmholtz})
 \begin{equation}
 \nabla_{\bot}^{2}\psi_{lm}+\left(\epsilon(r)k_{0}^{2}-\beta_{lm}^{2}\right)\psi_{lm}=0.
 \label{9.22}
@@ -1705,8 +1723,7 @@ $\psi$ mora zadoščati enačbi (\ref{9.22}), zato za perturbacijo velja
 \label{9.23}
 \end{equation}
 pri čemer smo zanemarili produkte majhnih količin. Množimo obe strani
-enačbe s $\psi_{lm}^{*}$, integrirajmo po preseku vlakna in 
-upoštevajmo, da je $\delta\psi$ ortogonalna na $\psi_{lm}$. Dobimo
+enačbe s $\psi_{lm}^{*}$, integrirajmo po preseku vlakna in dobimo
 \begin{eqnarray}
  &  & \int\psi_{lm}^{*}\nabla_{\bot}^{2}\delta\psi\,
  dS+\int\left(\epsilon(r)k_{0}^{2}-\beta_{lm}^{2}\right)
@@ -1727,13 +1744,15 @@ prvi in drugi člen odštejeta. Iskan popravek k valovnem številu je tako
 \beta\int\left|\psi_{lm}\right|^{2}dS}.
 \label{9.25}
 \end{equation}
+\begin{remark}
 Ta rezultat je seveda analogen kvantno-mehanskemu rezultatu, ki ga dobimo 
 z uporabo teorije motenj za spremembo energije lastnega stanja delca pri majhni 
 spremembi Hamiltonovega operatorja. Rezultat je tudi intuitivno razumljiv: v
 najnižjem redu je $\delta\beta$ sorazmerna s uteženim povprečjem
 $\delta\epsilon$, pri čemer je utež $\psi_{lm}$.
+\end{remark}
 
-Sprememba valovnega števila $\beta$ v delu vlakna ne povzroči le spremembe faze, 
+Sprememba valovnega števila $\beta$ v delu vlakna pa ne povzroči le spremembe faze, 
 ampak tudi delni odboj.
 To je le nekoliko druga oblika odboja na (zvezni ali ostri) meji 
 dveh dielektrikov ali, splošneje, odboja valovanja na območju,
@@ -1757,7 +1776,7 @@ valovanja na stopničasti spremembi $\Delta\beta_{i}$ enak
 Privzeli smo, da je delež odbitega valovanja tako majhen, da ni treba upoštevati 
 spremembe amplitude vpadnega vala $E_{0}$. Celotno odbito valovanje je vsota 
 prispevkov na posameznih stopnicah $\Delta\beta_{i}$,
-pri čemer moramo upoštevati še različne faze delnih odbitih valovanj
+pri čemer moramo upoštevati še različne faze delno odbitih valovanj
 \begin{equation}
 E_{r}=\sum\frac{\Delta\beta_{i}}{2\,\beta}\, e^{2i\beta z_{i}}\, 
 E_{0}=\frac{1}{2\,\beta}\sum\frac{d\beta}{dz}\, e^{2i\beta z_{i}}\Delta z\, E_{0}.
