@@ -2,17 +2,18 @@
 
 \chapter{Detektorji svetlobe}
 
-Za konec bomo spoznali še detektorje svetlobe, ki so nepogrešljivi
+V tem poglavju bomo spoznali detektorje svetlobe, ki so nepogrešljivi
 pri kvantitativni obravnavi optičnih pojavov. Detektorji se med seboj razlikujejo
-po svojih specifikacijah, ki jih bomo opisali v nadaljevanju, in po načinu delovanja. 
-Nazadnje bomo spoznali šum, ki omejuje uporabnost naprav.
+po načinu delovanja in po svojih specifikacijah, ki jih bomo opisali v nadaljevanju. Največ
+pozornosti bomo posvetili polprevodniškim detektorjem, ki so danes najbolj razširjeni.
+Na koncu bomo spoznali še šum pri detekciji, ki omejuje uporabnost naprav.
 
 \section{Osnovne karakteristike detektorjev}
 
 Osnovna naloga optičnih detektorjev je pretvoriti vpadni svetlobni signal 
 v nek drug signal, ki ga lahko natančno merimo. Navadno sta to električni tok 
 ali električna napetost, ki sta sorazmerna z močjo vpadne svetlobe 
-(in ne z amplitudo električne poljske jakosti). V grobem delimo detektorje v dve skupini, 
+in ne z amplitudo električne poljske jakosti. V grobem delimo detektorje v dve skupini, 
 na termične in kvantne. Prvi pretvorijo energijo vpadne svetlobe 
 v toploto, drugi pa temeljijo na fotoefektu, kjer vpadli foton izbije elektron ali 
 ustvari par elektron-vrzel.
@@ -30,8 +31,9 @@ Primeri termičnih detektorjev so bolometer, termočlen in piroelektrični detek
 
 Druga skupina so kvantni detektorji, v katerih se
 fotoni absorbirajo in povzročijo pojav prostih nosilcev naboja. Taki detektorji
-torej zaznavajo število vpadlih fotonov. Odlikuje jih zelo hiter odziv (tipično pod $\si{\micro\second}$)
-in velika občutljivost. Njihova slabost je omejen obseg valovnih dolžin,
+zaznavajo število vpadlih fotonov. Odlikuje jih zelo hiter odziv 
+(tipično pod $\si{\micro\second}$)
+in velika občutljivost. Njihova poglavitna slabost je omejen obseg valovnih dolžin,
 pri katerih zaznavajo svetlobo, poleg tega jih je za optimalno delovanje treba 
 hladiti. Primeri so vakuumske, polprevodniške in plazovne fotodiode.
 \begin{figure}[h]
@@ -46,8 +48,8 @@ Osnovne karakteristike, ki omogočajo primerjavo med detektorji in določajo nji
 so občutljivost, spektralni odziv, odzivni čas in prag detekcije. 
 
 \begin{enumerate}
-\item Občutljivost detektorja $R$ pove, koliko signala dobimo na enoto vpadnega svetlobnega toka. 
-Enota za občutljivost je tako A/W ali V/W. 
+\item Občutljivost detektorja $R$ pove, koliko je izhodnega signala 
+na enoto vpadnega svetlobnega toka. Enota za občutljivost je tako A/W ali V/W. 
 \item Spektralni odziv pove, kako se občutljivost spreminja z valovno dolžino $R(\lambda)$.
 Pri termičnih detektorjih je $R(\lambda)$ konstanta, medtem ko kvantni detektorji 
 delujejo le v določenem območju valovnih dolžin, ki je odvisen od snovi, 
@@ -91,7 +93,7 @@ T - T_0 = \frac{P}{\Lambda}.
 \label{temp_sens}
 \eeq
 Občutljivost detektorja, ki je sorazmerna z razliko temperatur, 
-je torej obratno sorazmerna z močjo, s katero se tipalo hladi. Za večjo občutljivost moramo
+je torej obratno sorazmerna s toplotnimi izgubami. Za večjo občutljivost moramo
 torej toplotne izgube detektorja kar se da zmanjšati. 
 
 Po enačbi~(\ref{TD1}) se temperatura približuje stacionarni vrednosti s časovno konstanto 
@@ -156,12 +158,12 @@ tako da postane sistem neobčutljiv na morebitne spremembe temperature okolice.
 \label{fig:Bolometer-shema}
 \end{figure}
 
-Prednost bolometrov bolometrih s termistorjem je približno linearna zveza med upornostjo in 
+Prednost bolometrov s termistorjem je približno linearna zveza med upornostjo in 
 temperaturo. Uporabljamo jih predvsem za merjenje večjih vpadnih moči, saj taki 
 detektorji niso zelo občutljivi ($R\sim 100~\si{\volt/\watt}$). 
 So pa robustni, stabilni in delujejo pri sobni 
-temperaturi. Odzivni časi so okoli $\tau \sim 1-20~\si{\milli\second}$. 
-Pri polprevodniških bolometrih upornost narašča eksponentno s temperaturo. 
+temperaturi. Odzivni časi so okoli $\tau \sim 1$--$20~\si{\milli\second}$. 
+Pri polprevodniških bolometrih upornost pojema eksponentno s temperaturo. 
 Primerni so za detekcijo teraherčnih valovanj, vendar mora biti za ta namen 
 bolometer (npr. germanijev) hlajen s tekočim helijem. Tako lahko dosežemo
 občutljivosti večje od $R \sim 10^8~\si{\volt/\watt}$. Zelo občutljivi so tudi 
@@ -182,16 +184,17 @@ referenčnega, pa zaščitimo pred svetlobo. Zaradi vpadne svetlobe se počrnjen
 segreje, med obema spojema nastane temperaturna razlika in zaradi termoelektričnega 
 pojava tudi električna napetost, ki jo lahko merimo. Pri tem pazimo, da je prevodnost
 vodnikov čim večja, toplotna prevodnost pa čim manjša. Odzivni čas termočlenov je 
-okoli $\tau \sim 10-20~\si{\milli\second}$, občutljivost pa okoli $R \sim 10~\si{\volt/\watt}$.
+okoli $\tau \sim 10$--$20~\si{\milli\second}$, občutljivost pa okoli $R \sim 10~\si{\volt/\watt}$.
 Ker so napetosti, ki se pojavijo med stikoma, razmeroma majhne (le okoli 
-$\sim 10~\si{\micro\volt/K}$) pogosto vežemo več termočlenov zaporedno v termobaterijo, navadno
-nekaj deset. Občutljivost s tem naraste na $R \sim 200~\si{\volt/\watt}$, podaljša 
-pa se časovna konstanta $\tau \sim 10-2000~\si{\milli\second}$.
+$\sim 10~\si{\micro\volt/K}$) pogosto vežemo več (nekaj deset) termočlenov zaporedno v
+termobaterijo. Občutljivost s tem naraste na $R \sim 200~\si{\volt/\watt}$, podaljša 
+pa se časovna konstanta $\tau \sim 10$--$2000~\si{\milli\second}$. Prednost termočlenov je,
+da za svoje delovanje ne potrebujejo zunanjega napajanja. 
 
 \subsection*{Piroelektrični detektor}
 Piroelektriki so snovi brez centra inverzije, v katerih je lastna električna 
-polarizacija odvisna od temperature (npr. LiTaO$_3$, triglicin sulfat TGS,
-polivinilidenfluorid PVDF in vsi feroelektriki). Piroelektrični detektor je narejen iz 
+polarizacija odvisna od temperature (npr. LiTaO$_3$, triglicin sulfat TGS 
+in vsi feroelektriki). Piroelektrični detektor je narejen iz 
 ploščice piroelektrične snovi med dvema elektrodama oziroma ploščama kondenzatorja.
 Ko se ploščica zaradi absorbirane svetlobe segreje, se ji spremeni polarizacija in 
 med elektrodama se pojavi premikalni tok, ki ga merimo na merilnem uporniku.
@@ -255,57 +258,69 @@ Dimenzija detektorja je $S = 1~\si{\centi\metre^2}$ in debelina $d = 1~\si{\mill
 
 \section{Fotoefekt}
 Delovanje kvantnih detektorjev temelji na fotoefektu, pri katerem vpadli
-foton iz kovine izbije elektrone (fotoelektrone). Pri fotoefektu s svetlobo
-dane valovne dožine osvetlimo kovinsko katodo, nato pa merimo tok, ki teče med katodo
-in anodo pri dani napetosti. S spreminjanjem napetosti lahko izmerimo kinetično 
-energijo fotoelektronov, ki izstopajo iz kovine. Izkaže se, da pri določenih 
-valovnih dolžinah svetlobe tok fotoelektronov povsem izgine, ne glede na moč vpadne svetlobe.
-Fotoelektroni nastanejo le, če je energija vpadnih fotonov večja od izstopnega
-dela kovine. Fotoefekt je prvič opazil Hertz\footnote{Nemški fizik Heinrich Hertz, 1857--1894.} 
+foton iz snovi izbije elektrone (fotoelektrone). S svetlobo
+osvetlimo katodo, iz katere fotoni izbijajo elektrone, nato pa merimo tok, 
+ki teče med negativno katodo in pozitivno anodo. 
+Do fotoefekta pride le, če je energija vpadlih fotonov večja od neke določene energije.
+Pod to vrednostjo fotoefekta ni, ne glede na moč vpadne svetlobe.
+Fotoefekt je prvič opazil Hertz\footnote{Nemški fizik Heinrich Hertz, 1857--1894.} 
 leta 1887, za njegovo razlago leta
 1905 pa je Einstein\footnote{Nemški fizik in nobelovec Albert Einstein, 1879--1955.} 
 dobil nobelovo nagrado. 
+
 \begin{figure}[h]
 \centering
 \def\svgwidth{60truemm} 
 \input{slike/11_Fotoefekt.pdf_tex}
 \caption{Shema fotocelice, v kateri poteka fotoefekt. 
-Vpadna svetloba iz katode izbije elektrone, da med katodo in anodo steče tok.}
+Vpadna svetloba iz kovinske katode izbije elektrone, zaradi česar med katodo 
+in anodo steče tok.}
 \label{fig:Fotoefekt}
 \end{figure}
 
-Poglejmo uporabnost fotoefekta za optično detekcijo. Glavno merilo je 
-izstopno delo snovi, na katero vpada svetloba. Za kovine je izstopno delo $\Phi$
-od okoli 2~eV za cezij pa do okoli 6~eV za platino. 
+Ključni parameter za uporabnost fotoefekta za optično detekcijo v kovinah je izstopno delo.
+Izstopno delo za kovine $\Phi$ je od okoli 2~eV za cezij pa do okoli 6~eV za platino. 
 Ustrezna valovna dolžina svetlobe, ki še povzroči fotoefekt, je tako 
 \beq
 \lambda \leq \frac{hc}{\Phi},
 \eeq
 kar je 580~nm za primer cezija in samo okoli 200~nm za platino. Če želimo fotoefekt
-izkostisti za detektorje, območje občutljivosti povečamo z uporabo drugih snovi,
-na primer Cs-Te, Cs-Sb, Na-K-Sb-Cs ali GaAs:Cs.
-Potrebno energijo s tem zmanjšamo na $\Phi \sim 0,7$~eV, tako da lahko zaznavamo 
-fotone z valovnimi dolžinami od ultravijolične svetlobe pa vse do infrardeče. 
+izkostisti za detektorje vidne svetlobe, uporabimo druge snovi,
+na primer Cs-Te, Cs-Sb, Na-K-Sb-Cs ali GaAs:Cs z manjšim izstopnim delom. Tako lahko zaznavamo 
+fotone z valovnimi dolžinami od ultravijolične svetlobe pa vse do bližnje infrardeče. 
+
+Poleg že opisanega t.i. zunanjega fotoefekta, pri katerem foton izbije elektron iz snovi,
+poznamo tudi notranji fotoefekt (slika\ref{fig:Nivoji}). V tem primeru elektron snovi ne zapusti, ampak 
+zgolj preide iz enega energijskega pasu v drugega. Tipično to poteka v polprevodnikih,
+kjer absorpcija fotona povzroči nastanek para elektron-vrzel. Pri notranjem fotoefektu
+je prag za nastanek para določen s širino reže med energijskima nivojema. 
+Primeri detektorjev, ki temeljijo na zunanjem fotoefektu, so 
+fotocelice in fotopomnoževalke, detektorjev, ki temeljijo na notranjem fotoefektu, pa
+fotoprevodniki, polprevodniške in plazovne fotodiode.
+
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{80truemm} 
 \input{slike/11_Nivoji.pdf_tex}
-\caption{Shema energijskih nivojev v kovini (levo) in polprevodniku (desno). $\Phi$ označuje
-izstopno delo pri kovini, $E_g$ energijo med valenčnim in prevodnim pasom poprevodnika,
+\caption{Shema energijskih pasov in fotoefekta v kovini (a), 
+zunanjega fotoefekta v polprevodniku (b) in notranjega fotoefekta v polprevodniku (c). 
+$\Phi$ označuje izstopno delo, $E_g$ širino reže med valenčnim in prevodnim pasom poprevodnika,
 $E_a$ pa elektronsko afiniteto. }
 \label{fig:Nivoji}
 \end{figure}
 
-Ključen parameter pri detekciji svetlobe je kvantni izkoristek $\eta$.
-Ta nam pove verjetnost, da vpadli foton z valovno dolžino $\lambda$ iz 
-snovi izbije elektron. Električni tok, ki steče pri vpadni svetlobni moči $P$, je tako
+Pri kvantni detekciji svetlobe vpeljemo še kvantni izkoristek $\eta$,
+ki pove verjetnost, da vpadli foton z valovno dolžino $\lambda$ oziroma frekvenco $\nu$ iz 
+snovi izbije elektron. Električni tok, ki steče pri vpadni svetlobni moči $P$, je
 \boxeq{11:eta}{
-I = \eta e N = \eta \frac{e P}{h \nu}.
+I = \eta e_0 N_F = \eta \frac{e_0 P}{h \nu},
 }
+kje je $N_F$ število vpadnih fotonov na časovno enoto.
 Kvantni izkoristek je močno odvisen od valovne dolžine vpadne svetlobe in seveda
 od snovi, na katero svetloba vpada. Za fotone z energijo, ki je manjša od izstopnega 
-dela oziroma energijske reže, je kvatni izkoristek enak nič, nato pa strmo naraste in za
-dane valovne dolžine lahko doseže vrednosti, večje od $90~\%$. Podrobneje ga bomo 
+dela oziroma od širine energijske reže, 
+je kvatni izkoristek enak nič, nato pa strmo naraste in za
+lahko doseže vrednosti, večje od $90~\%$. Podrobneje ga bomo 
 obravnavali pri posameznih primerih detektorjev.
 
 \begin{remark}
@@ -316,22 +331,19 @@ izkoristek kot razmerje števila elektronov in fotonov, ki se dejansko absorbira
 Zunanji izkoristek je vedno manjši od notranjega in je neke vrste efektivni izkoristek.
 \end{remark}
 
-Beseda fotoefekt je prvotno označevala izbijanje elektronov iz snovi. 
-Pojem pa lahko razširimo na pojav, pri katerem izbiti elektron ne zapusti snovi, 
-ampak zgolj preide iz enega energijskega pasu v drugega. Pri tem zaradi
-absorpcije fotona nastane par elektron-vrzel, prag za nastanek para pa je določen
-z režo med energijskima nivojema. Prvemu pojavu zato pravimo zunanji fotoefekt, 
-drugemu pa notranji fotoefekt. Primeri detektorjev, ki temeljijo na zunanjem fotoefektu, so 
-fotocelice in fotopomnoževalke, detektorjev, ki temeljijo na notranjem fotoefektu, pa
-fotoprevodniki, polprevodniške in plazovne fotodiode.
+Iz enačbe(\ref{11:eta}) hitro izračunamo občutljivost detektorja 
+\boxeq{11:R}{
+R = \frac{I}{P} = \frac{\eta e_0 }{h \nu}.
+}
 
-\section{Vakuumska fotodioda in fotopomnoževalka}
+\section{Vakuumska fotodioda (fotocelica) in fotopomnoževalka}
 
 Najpreprostejši kvantni detektor na zunanji fotoefekt je fotocelica ali vakuumska fotodioda
 (slika~\ref{fig:Fotoefekt}). 
 Svetloba vpada na fotokatodo, ki je zaprta v vakuumirani stekleni bučki, in tam povzroči
 fotoefekt. Fotoelektrone, ki zapustijo katodo, z zunanjo napetostjo pospešimo do anode 
 in merimo električni tok, ki je sorazmeren s številom vpadlih fotonov. 
+
 
 Območje detekcije je določeno s snovjo, iz katere izbijamo elektrone, in z njenim izstopnim delom
 oziroma širino reže v primeru polprevodnika.
@@ -340,9 +352,9 @@ Potrebno energijo fotona lahko precej zmanjšamo,
 ali pa polprevodnike, na katere nanesemo tanko plast Cs ali Cs$_2$O. Na ta način ustvarimo 
 negativno elektronsko afiniteto in izstopno delo je kar enako energijski
 reži polprevodnika. Z GaAs:Cs$_2$O ali InGaAs:Cs 
-katodami lahko tako zaznavamo svetlobo do valovnih dolžin okoli $900-1000~\si{\nano\metre}$,
-z InP/InGaAs pa celo do okoli 1600~nm. Na ultravijoličnem območju je delovanje
-omejeno na okoli 160~nm zaradi neprepustnosti stekla, iz katerega je narejena bučka.
+katodami lahko tako zaznavamo svetlobo do valovnih dolžin okoli $900$--$1000~\si{\nano\metre}$,
+z InP/InGaAs pa celo do okoli $1600~\si{\nano\metre}$. Na ultravijoličnem območju je delovanje
+omejeno na okoli $160~\si{\nano\metre}$ zaradi neprepustnosti stekla, iz katerega je narejena bučka.
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
@@ -369,8 +381,8 @@ vrednosti okoli $10^{-15}~\si{\ampere}$, lahko pa tudi do več nA, odvisno seved
 detektorja in temperature. Za občutljive meritve je treba vakuumsko fotodiodo hladiti. 
 
 Fotopomnoževalke so fotocelice z vgrajenim ojačevanjem. Ojačevanje dosežemo tako, da 
-izbit fotoelektron najprej pospešimo z napetostjo $100-150~\si{\volt}$ na vmesno elektrodo, 
-tako imenovano dinodo, iz katere izbije več ($\sim 5 - 10$, redkeje tudi do 40) 
+izbit fotoelektron najprej pospešimo z napetostjo $100$--$150~\si{\volt}$ na vmesno elektrodo, 
+tako imenovano dinodo, iz katere izbije več ($\sim 5$--$10$, redkeje tudi do 40) 
 sekundarnih elektronov. Ti elektroni
 potujejo do naslednje dinode, ki je pod višjo pozitivno napetostjo (tipično okoli $100~\si{\volt}$
 višjo), kjer ponovno izbijejo elektrone, ki vpadejo na naslednjo dinodo ... 
@@ -391,12 +403,11 @@ iz dinod izbijajo dodatne elektrone in izhodni signal se močno ojača.}
 
 Fotopomnoževalke imajo zelo kratek odzivni čas, ki je odvisen od postavitve dinod. Posamezni 
 elektroni do anode potujejo različno dolgo, zato je sunek na izhodu 
-razširjen, tipično okoli $\sim 0,1-20~\si{\nano\second}$.  
+razširjen, tipično okoli $\sim 0,1$--$20~\si{\nano\second}$.  
 Za manj zahtevne aplikacije pogosto merimo kar povprečni tok z anode. Kadar pa opazujemo
 posamezne fotone, zaznamo na izhodu zaporedje sunkov. Takrat lahko 
 amplituda izhodnega signala močno niha, saj je koeficient ojačanja 
 odvisen od števila izbitih elektronov, kar pa je statistični proces. 
-
 
 \section{Fotoprevodni detektorji}
 Fotoprevodni detektorji\footnote{Fotoprevodne detektorje včasih imenujejo tudi fotouporniki.} 
@@ -404,7 +415,7 @@ so detektorji, katerih delovanje temelji na notranjem fotoefektu.
 Vpadli foton z dovolj veliko energijo se absorbira, pri tem pa ne izbije elektronov v prostor, 
 ampak povzroči nastanek para elektron-vrzel. Ob priključeni napetosti se nosilci naboja
 začnejo premikati in steče tok, ki ga merimo. Z naraščajočim številom fotonov 
-se prevodnost fotoprevodnika manjša, zato lahko z merjenjem upornosti določimo 
+se prevodnost fotoprevodnika veča, zato lahko z merjenjem upornosti določimo 
 intenziteto vpadle svetlobe. Tipično so fotoprevodniki iz polprevodnikov, 
 lahko pa so tudi iz izolatorjev. 
 
@@ -412,9 +423,9 @@ Da foton lahko vzbudi elektron iz valenčnega v prevodni pas, mora biti njegova 
 V čistih (nedopiranih) polprevodnikih to pomeni, da mora biti energija fotona večja od 
 širine reže. Za silicij, na primer, je širina reže 1,1~eV, kar ustreza valovni dolžini do okoli 
 $1,1~\si{\micro\meter}$, za germanij 0,67~eV ($1,8~\si{\micro\meter}$) in za PbS 0,37~eV
-($3,4~\si{\micro\meter}$). Za detekcijo daljših valovnih dolžin pa ne uporabljamo polprevodnikov
+($3,4~\si{\micro\meter}$). Za detekcijo daljših valovnih dolžin ne uporabljamo polprevodnikov
 z manjšo energijsko režo, ampak dopirane polprevodnike (slika~\ref{fig:FPrevodnik}), s
-čimer občutno zmanjšamo potrebno vpadlo energijo fotonov. Vendar je tem primeru prispevek termično 
+čimer občutno zmanjšamo potrebno vpadlo energijo fotonov. Vendar je takrat prispevek termično 
 vzbujenih elektronov že tako velik, da je treba detektorje hladiti, navadno s tekočim
 dušikom ali celo tekočim helijem. Tak primer je germanij, dopiran s cinkom, 
 s katerim lahko zaznavamo svetlobo do okoli $40~\si{\micro\meter}$. Pri tem ga hladimo
@@ -425,7 +436,7 @@ na $4~\si{\kelvin}$, da zmanjšamo pojav termično vzbujenih nosilcev naboja.
 \input{slike/11_FPrevodnik.pdf_tex}
 \caption{Shema prehoda elektrona v fotoprevodniku. Levo je čisti polprevodik, v sredini n-dopiran
 polprevodnik in desno p-dopiran polprevodnik. Z dopiranjem povečamo območje delovanja
-detektorja v infra-rdeče območje. }
+detektorja v infrardeče območje. }
 \label{fig:FPrevodnik}
 \end{figure}
 
@@ -437,11 +448,7 @@ j = e_0 n_v v_v + e_0 n_e v_e,
 pri čemer $n_v$ in $n_e$ pomenita gostoto vrzeli in elektronov v snovi, $v_v$ in $v_e$ pa 
 hitrost vrzeli in elektronov. Ta je sorazmerna z električno poljsko jakostjo $E$, ki je priključena
  na vzorec, sorazmernostni faktor pa je gibljivost $\beta$. Ko posvetimo na vzorec, 
- se $n_v$ in $n_e$ povečata
- \beq
- n_v = \tilde{n}_v + \Delta n_v \quad \mathrm{in} \quad 
- n_e = \tilde{n}_e + \Delta n_e,
- \eeq
+ se $n_v$ in $n_e$ povečata za $\Delta n_v$ in $\Delta n_e$,
 gostota električnega toka pa naraste za
 \beq
 \Delta j = e_0 \Delta n_v v_v + e_0 \Delta n_e v_e.
@@ -452,7 +459,7 @@ V stacionarnem primeru se število nosilcev naboja ne spreminja in velja
 0 = \frac{dn_v}{dt} = \frac{\eta_v P}{h \nu (Sl)} - \frac{\Delta n_v}{\tau_v}
 \eeq
 in podobno za elektrone. Pri tem je $\eta$ kvatni izkoristek, $P$ moč vpadne svetlobe,
-$Sl$ prostornina detektorja in $\tau$ življenjski čas vrzeli. 
+$Sl$ prostornina detektorja in $\tau$ življenjski čas vrzeli oziroma elektrona. 
 Ko stacionarno vrednost $\Delta n_v$ in $\Delta n_e$ vstavimo v enačbo~(\ref{FP_j}), dobimo
 \beq
 \Delta j = e_0 \frac{\eta_v P \tau_v}{h \nu (Sl)} \beta_v  E + 
@@ -477,13 +484,13 @@ G = \frac{\beta_e \tau_e U}{l^2} = \frac{\tau_e}{\tau}.
 Vpeljali smo še čas preleta $\tau = v_e/l = \beta_e E/l = \beta_e U/l^2$.
 
 Koeficient $G$ opiše ojačanje signala. Njegova vrednost je odvisna od 
-vrste snovi (in gibljivosti nosilcev naboja v njej), velikosti
+vrste snovi in gibljivosti nosilcev naboja v njej, velikosti
 detektorja in tudi priključene napetosti, zato lahko $G$ zavzane vrednosti od manj kot ena pa
 vse do $10^6$. 
 
 \begin{definition}
 Izračunali smo spremembo toka, če fotoprevodnik osvetlimo s konstantno vpadno močjo. Pokaži, da
- je v primeru spremenljive konstante moči odziv enak
+ je v primeru periodično spremenljive moči odziv enak
  \beq
 \Delta I_\omega = G \left( \frac{e_0 \eta_e}{h\nu}\right) \frac{P_\omega}{1+i \omega \tau_e}.
  \eeq
@@ -497,22 +504,22 @@ pa za valovne dolžine do $1,8~\si{\micro\meter}$. Za zaznavanje valovnih dolži
 $2~\si{\micro\meter}$ in $7~\si{\micro\meter}$ so najprimernejši InAs, InSb in PbS detektorji, 
 pri še daljših valovnih dolžinah pa se uporablja germanij, dopiran z zlatom, bakrom, cinkom, borom ...
 Kvatni izkoristek takih detektorjev je razmeroma velik ($\eta = 0,5$ za Ge:Cu), vendar
-je lahko faktor $G \ll 1$ (npr. $G = 0,03$ za Ge:Hg). 
+je lahko faktor ojačanja $G \ll 1$ (npr. $G = 0,03$ za Ge:Hg). 
 
 Hitrost odziva fotoprevodnika je odvisna od časa preleta nosilcev naboja,
 ki je določen z geometrijo detektorja, in od karakterističnega časa elektronskega vezja. 
-Tipični odzivni časi, ki jih dosegajo detektorji, so okoli mikrosekunde, vendar lahko sežejo
+Tipični odzivni časi so okoli mikrosekunde, vendar lahko sežejo
 tudi do desetin milisekund, ali pa v izjemnih primerih do nanosekund za zelo majhne detektorje.
 S skrajšanjem rekombinacijskega časa lahko sicer skrajšamo odzivni čas detektorja, 
-vendar hkrati zmanjšamo njegovo občutljivost.
+vendar hkrati zmanjšamo tudi njegovo občutljivost.
 
 \begin{remark}
 Fotoprevodni detektorji so narejeni iz zelo tankih plasti fotoprevodnika, saj močno absorbira
-svetlobo. Tako za absorpcijo $70-90\%$ svetlobe zadošča le $1-2~\si{\micro\meter}$ debela plast.
+svetlobo. Tako za absorpcijo $70-90\%$ svetlobe zadošča le $1$--$2~\si{\micro\meter}$ debela plast.
 Elektrode se pogosto prepletajo, da se zmanjša dolžina preleta $l$ in poveča ojačanje $G$. 
 \end{remark}
 
-\section{PN in PIN fotodiode}
+\section{Polprevodniške PN in PIN fotodiode}
 Drugi primer detektorjev, ki temeljijo na notranjem fotoefektu, so polprevodniške diode.
 Te so danes najpogostejši in najbolj razširjen detektor svetlobe, uporabljamo jih med
 drugim v fotoaparatih in sončnih celicah. Fotodiode so sestavljene iz p- in n-dopiranega 
