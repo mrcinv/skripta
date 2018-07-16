@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '11_PN1.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,6 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
-  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
-  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
     \setlength{\unitlength}{789.5324707bp}%
     \ifx\svgscale\undefined%
@@ -51,30 +49,29 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.25354306)%
-    \lineheight{1}%
-    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{11_PN1.pdf}}%
-    \put(-0.00065975,0.07923123){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_a$\end{tabular}}}}%
-    \put(0.07906378,0.21844658){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$p - \textrm{tip}$\end{tabular}}}}%
+    \put(-0.00065975,0.07923123){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_a$}}}%
+    \put(0.07906378,0.21844657){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p - \textrm{tip}$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{11_PN1.pdf}}%
-    \put(0.39916108,0.15883675){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_d$\end{tabular}}}}%
-    \put(0.28366842,0.21842443){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n - \textrm{tip}$\end{tabular}}}}%
+    \put(0.39916106,0.15883675){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_d$}}}%
+    \put(0.2836684,0.21842442){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n - \textrm{tip}$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{11_PN1.pdf}}%
-    \put(0.39870739,0.13460611){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_F$\end{tabular}}}}%
-    \put(-0.00065975,0.10623488){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_F$\end{tabular}}}}%
+    \put(0.39870737,0.13460611){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_F$}}}%
+    \put(-0.00065975,0.10623488){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_F$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{11_PN1.pdf}}%
-    \put(0.94147047,0.1366715){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_d$\end{tabular}}}}%
-    \put(0.82597774,0.19625918){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n - \textrm{tip}$\end{tabular}}}}%
-    \put(0.51315173,0.10164933){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_a$\end{tabular}}}}%
-    \put(0.59287523,0.24086468){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$p - \textrm{tip}$\end{tabular}}}}%
+    \put(0.94147042,0.1366715){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_d$}}}%
+    \put(0.81584512,0.21840014){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n - \textrm{tip}$}}}%
+    \put(0.5131517,0.10164933){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_a$}}}%
+    \put(0.57868959,0.21840014){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p - \textrm{tip}$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{11_PN1.pdf}}%
-    \put(0.94101678,0.11244087){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_F$\end{tabular}}}}%
-    \put(0.51315173,0.12865298){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_F$\end{tabular}}}}%
+    \put(0.94101673,0.11244087){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_F$}}}%
+    \put(0.5131517,0.12865298){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_F$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{11_PN1.pdf}}%
-    \put(0.73776889,0.22804383){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{E}$\end{tabular}}}}%
-    \put(0.40011639,0.02501503){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}valenčni pas\end{tabular}}}}%
-    \put(0.39773928,0.19530787){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}prevodni pas\end{tabular}}}}%
+    \put(0.73776885,0.22804382){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{E}$}}}%
+    \put(0.40011637,0.02501504){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{valenčni pas}}}%
+    \put(0.39773926,0.19530787){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{prevodni pas}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{11_PN1.pdf}}%
-    \put(0.94151624,0.06887596){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\Delta E$\end{tabular}}}}%
+    \put(0.94151618,0.06887596){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Delta E$}}}%
+    \put(0.98068394,0.02720391){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
   \end{picture}%
 \endgroup%
