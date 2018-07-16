@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '11_FPrevodnik.pdf' (pdf, eps, ps)
 %%
@@ -35,6 +35,8 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
     \setlength{\unitlength}{571.75351601bp}%
     \ifx\svgscale\undefined%
@@ -49,17 +51,22 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.27115035)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{11_FPrevodnik.pdf}}%
-    \put(0.07281953,0.02765877){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\textrm{valenčni pas}$}}}%
-    \put(0.21906362,0.1299626){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_g$}}}%
-    \put(0.0707738,0.22623906){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\textrm{prevodni pas}$}}}%
-    \put(0.40863662,0.0277852){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\textrm{valenčni pas}$}}}%
-    \put(0.55488071,0.17486359){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_d$}}}%
-    \put(0.40659089,0.22636551){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\textrm{prevodni pas}$}}}%
-    \put(0.39553727,0.1370433){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\textrm{donorski nivo}$}}}%
-    \put(0.7408666,0.0278158){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\textrm{valenčni pas}$}}}%
-    \put(0.8871107,0.08534509){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_a$}}}%
-    \put(0.73882083,0.2263961){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\textrm{prevodni pas}$}}}%
-    \put(0.72776725,0.13147708){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\textrm{akceptorski nivo}$}}}%
+    \put(0.07281953,0.01151546){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\textrm{valenčni pas}$\end{tabular}}}}%
+    \put(0.21906362,0.1299626){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_g$\end{tabular}}}}%
+    \put(0.0707738,0.24107242){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\textrm{prevodni pas}$\end{tabular}}}}%
+    \put(0.40863662,0.01151546){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\textrm{valenčni pas}$\end{tabular}}}}%
+    \put(0.55488071,0.17486359){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_d$\end{tabular}}}}%
+    \put(0.40659089,0.24107242){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\textrm{prevodni pas}$\end{tabular}}}}%
+    \put(0.39553727,0.1370433){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\textrm{donorski nivo}$\end{tabular}}}}%
+    \put(0.7408666,0.01151546){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\textrm{valenčni pas}$\end{tabular}}}}%
+    \put(0.8871107,0.08534509){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_a$\end{tabular}}}}%
+    \put(0.73882083,0.24107242){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\textrm{prevodni pas}$\end{tabular}}}}%
+    \put(0.72776725,0.13147708){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\textrm{akceptorski nivo}$\end{tabular}}}}%
+    \put(0.01836015,0.25050757){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
+    \put(0.35282951,0.25050757){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
+    \put(0.68709169,0.25050757){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}c)\end{tabular}}}}%
   \end{picture}%
 \endgroup%
