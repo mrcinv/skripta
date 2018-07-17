@@ -260,7 +260,7 @@ Dimenzija detektorja je $S = 1~\si{\centi\metre^2}$ in debelina $d = 1~\si{\mill
 \section{Fotoefekt}
 Delovanje kvantnih detektorjev temelji na fotoefektu. To je pojav, pri katerem vpadli
 fotoni iz snovi izbijajo elektrone. Izbiti elektroni lahko ubežijo kot prosti elektroni
-(to je tako imenovani zunanji fotoefekt), ali pa ostanejo ujeti v snovi in povečajo 
+(t. i. zunanji fotoefekt), ali pa ostanejo ujeti v snovi -- a mobilni -- in tako povečajo 
 njeno prevodnost (notranji fotoefekt). V obeh primerih pride do fotoefekta le, 
 če je energija vpadlih fotonov večja od neke določene energije.
 Pod to vrednostjo fotoefekta ni, ne glede na moč vpadne svetlobe.
@@ -368,7 +368,7 @@ omejeno na okoli $160~\si{\nano\metre}$ zaradi neprepustnosti stekla, iz katereg
 \centering
 \def\svgwidth{130truemm} 
 \input{slike/11_SpekterKatode.pdf_tex}
-\caption{Kvantni izkoristek fotodiod za različne snovi. Povzeto po Hamamatsu Photonics.}
+\caption{Kvantni izkoristek fotocelic za različne snovi. Povzeto po Hamamatsu Photonics.}
 \label{fig:Fotodioda}
 \end{figure}
 
@@ -540,7 +540,8 @@ Elektrode se pogosto prepletajo, da se zmanjša dolžina preleta $l$ in poveča 
 Drugi primer detektorjev, ki temeljijo na notranjem fotoefektu, so polprevodniške fotodiode.
 Te so danes najpogostejša in najbolj razširjena vrsta detektorjev svetlobe, uporabljamo jih med
 drugim tudi v fotoaparatih in sončnih celicah. Fotodiode so sestavljene iz $p$- in $n$-dopiranega 
-polprevodnika ($p$-$n$ fotodiode) ali pa je med njima še plast nedopiranega (intrinzičnega) polprevodnika ($p$-$i$-$n$ fotodioda). Ko svetloba vpade na $p$-$n$ (ali $p$-$i$-$n$) 
+polprevodnika ($p$-$n$ fotodiode) ali pa je med njima še plast nedopiranega (intrinzičnega) 
+polprevodnika ($p$-$i$-$n$ fotodioda). Ko svetloba vpade na $p$-$n$ (ali $p$-$i$-$n$) 
 stik, se fotoni absorbirajo in nastajajo 
 pari elektron-vrzel. Nosilci naboji potujejo v različnih smereh, elektroni stečejo v eno smer,
 vrzeli pa v nasprotno. Odvisno od načina delovanja lahko izmerimo tok, ki steče skozi 
@@ -551,7 +552,9 @@ iz katerega je fotodioda narejena.
 Silicijeve fotodiode so tako uporabne za zaznavanje valovnih dolžin do okoli
 $1,1~\si{\micro\meter}$, za
 večje valovne dolžine (do $1,6~\si{\micro\meter}$) uporabljamo InGaAs. Izkoristek fotodiod
-je navadno zelo velik in presega $50~\%$. Za razliko od fotoprevodnikov fotodiode signala
+je navadno zelo velik in presega $50~\%$, pri energiji fotonov blizu energijske reže 
+je vrednost izkoristka kar blizu 1.
+Za razliko od fotoprevodnikov fotodiode signala
 ne ojačujejo, imajo pa praviloma hitrejši odziv, tipično okoli nanosekunde.
 
 Dioda lahko deluje v različnih načinih (slika~\ref{11_PD}). 
@@ -563,8 +566,8 @@ načinu. V nadaljevanju bomo vse primere podrobneje spoznali.
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/11_diode.pdf_tex}
-\caption{Različne vezave fotodiode: v prevodni smeri, v zaporni smeri, kratko sklenjena in 
-v fotovoltaičnem načinu}
+\caption{Različne vezave fotodiode: v prevodni smeri (a), v zaporni smeri (b), kratko sklenjena (c) in 
+v fotovoltaičnem načinu (d)}
 \label{11_PD}
 \end{figure}
 
@@ -644,16 +647,15 @@ vrednosti dosegamo le ob močnem hlajenju.
 \input{slike/11_IU.pdf_tex}
 \caption{$I(U)$ karakteristika neosvetljene fotodiode (modra črta)
 in osvetljene fotodiode (rdeče črte). Naraščajoča intenziteta vpadne svetlobe
-krivuljo premakne navzdol. 
+krivuljo premakne navzdol. S simboli so označene točke delovanja za različne načine.
 }
 \label{11_IU}
 \end{figure}
  
-\subsection*{Osvetlitev stika $pn$}
+\subsection*{Delovanje fotodiode}
 Ko na polprevodnik vpade foton, ki ima energijo večjo od širine reže, 
 lahko vzbudi elektron iz valenčnega v prevodni pas in nastane par elektron-vrzel. 
-Če se to zgodi v izpraznjenem sloju $p$-$n$ stika oziroma v njegovi bližini, 
-steče elektron pod vplivom 
+Če se to zgodi v izpraznjenem sloju $p$-$n$ stika, steče elektron pod vplivom 
 električnega polja na stran $n$, vrzel pa na stran $p$ (slika~\ref{11_PNU}\,c). 
 Premik nosilcev naboja, do katerega je prišlo zaradi absorpcije fotona, 
 torej vedno steče v zaporni smeri. 
@@ -673,125 +675,126 @@ kar na sliki~(\ref{11_IU}) predstavlja premik karakteristike diode v vertikalni
 smeri (rdeče črte). Naraščajoča intenziteta svetlobe premika krivuljo proti 
 bolj negativnim vrednostim tokov. 
 
-Poglejmo zdaj različne načine delovanja fotodiode. 
-
-
-
-
-
-Kadar je priključena napetost v negativni smeri,
-je odvisnost toka skozi diodo od moči vpadne svetlobe linearna, zato fotodiodo 
-za detekcijo svetlobe navadno uporabljamo v zaporni smeri. 
-
-
-
-
-
-
-
-
-
-konstrukcija fotodiode, tanka, da prodre v bliyino stika.
-fotoobčutljiv del komercialnih fotodiod je nekaj 100 kva dratnih mikronov do več 100 mm2. 
-dva kontakta fotodiode tvorita kondenzatorj, ki omejuje visokofrekvenčni odziv. Zato imajo
-hitre diode majhno občutljivo območje in minimizirajo. Kapaciteta se zmanjša, če delaš v
-reverse biased, tako da povečaš depletion zone, ki deluje kot dilektrik v kondenzatorju. 
-
-
-\subsection*{Dioda v zaporni smeri reverse-biased}
-Običajni način delovanja fotodiode je v zaporni smeri. Ta
-premik po grafu navzdol pri konstantni negativni napetosti. 
-Če dodamo upor v ezje, potem se ne premikamo več navzdol, ampak pod kotom proti desni. Enačba, ki opisuje
-premico, ki seka karakteriscične krivulje, je $U = -|U_0|-RI.$
-
-Odzivnost je 
-
-\subsection*{Fotovoltaični način}
-Pri fotovoltaičnem načinu delovanja fotodiode tokokrog ni sklenjen in ob absorpciji fotona in nastanku
+Prvi način delovanja fotodiode, ki ga bomo obravnavali, je {\bf fotovoltaični način}.
+To je način, pri katerem električni tokokrog ni sklenjen (slika~\ref{11_PD}\,d), 
+zato ob absorpciji fotona in nastanku
 para elektron-vrzel tok ne more steči. Še vedno pa se izbiti elektron pod vplivom električnega polja
-na stiku premakne proti $n$ delu, vrzel pa proti $p$. Zato se na diodi pojavi napetost, 
+na stiku premakne proti $n$ delu, vrzel pa proti $p$. Na diodi se tako pojavi napetost, 
 katere vrednost lahko izračunamo iz karakteristične enačbe diode, če upoštevamo, da je $I=0$. Sledi
 \beq
-U_p = \frac{kT}{e_0}\left(1+ \ln\frac{I_f}{I_0}\right).
+U_p = \frac{kT}{e_0}\ln \left(1+ \frac{I_f}{I_0}\right).
 \eeq
 Pri večji intenziteti vpadle svetlobe, ko se krivulja na grafu (\ref{11_IU}) pomika navzdol, se rešitev
 gornje enačbe po abscisi premika proti desni. Večja intenziteta vpadne svetlobe torej pomeni večjo 
-pozitivno napetost na diodi. Pri dovolj velikih vpadnih močeh je zveza med vpadno močno in fotonapetostjo
-logaritemska. Taka vezava fotodiode tako omogoča zaznavanje vpadne moči v zelo širokem intervalu.
+pozitivno napetost na diodi, zato tudi odzivnost v tem primeru merimo v $\si{\volt}/\si{\watt}$.
+Pri dovolj velikih vpadnih močeh je zveza med vpadno močno in fotonapetostjo
+logaritemska. Taka vezava fotodiode tako omogoča zaznavanje vpadne moči v zelo širokem intervalu,
+najpogosteje pa se ta način delovanja uporablja v sončnih celicah. 
 
+Drugi način delovanja je {\bf kratko sklenjena} fotodioda (slika~\ref{11_PD}\,c). V tem primeru je 
+napetost na diodi enaka nič in je tok skozi tokokrog kar enak toku zaradi vpadle svetlobe $I_f$
+(slika~\ref{11_IU}).
 
-Uporaba fotovoltaikov:
+Najbolj splošno uporabljen način za detekcijo svetlobe je način, v katerem napetost na diodo 
+priključimo {\bf v zaporni smeri} (slika~\ref{11_PD}\,b).
+Takrat se tok skozi diodo spreminja linearno z močjo vpadne svetlobe, odziv pa je hitrejši
+kot pri kratko sklenjeni diodi. Če dodamo v tokokrog zaporedno vezan še nek upornik, se odziv
+spremeni. Po grafu (slika~\ref{11_IU}) se ne premikamo več navzdol, ampak pod kotom proti desni.
+Enačbo, ki opisuje premico, ki seka karakteristične krivulje, lahko preprosto zapišemo
+z Ohmovim zakonom $U = -|U_0|-RI$. 
 
-\subsection*{Kratko sklenjena fotodioda}
-Fotodiodo lahko tudi kratko sklenemo. Takrat je napetost na diodi enaka nič in prav tako 
-prvi člen v enačbi~(\ref{}). Ob vpadu fotonov na fotodiodo steče tok v negativni smeri.  
+Prednosti tega načina merjenja je več. Zaradi priključene napetosti se zmanjša čas preleta
+nosilcev naboja in posledično se zmanjša odzivni čas detektorja. Dodatno se poveča
+širina izpraznjenega pasu, kar zmanjša kapaciteto stika (stik $p$-$n$ namreč deluje kot neke vrste 
+kondenzator in časovni odziv je odvisen od njegove kapacitete) in s tem odzivni čas. Povečana
+izpraznjena plast pa vodi do večjega območja, v katerem lahko pride do absoprcije fotonov. 
 
-
-\subsection*{pin fotodioda} 
-Med $p$- in $n$-plast vključimo še plast nedopiranega polprevodnika. Depletion layer sega globoko v intr.
-velik depletion layer je velik odziv, večji delež svetlobe in večkja učinkovitost. 
-V navadnih pn diodah je izpraznjeno območje debelo je 1-2 mikrona. zaoto je kapaciteta velika (?) in vmes
-vrinemo i polje. kapaciteta in odzivni cas se zmanjsa. shema p i in 
-večji volumen občutljivsti, hitrejši odzivm širina depletion layer je neodvisna od priključene napetosti. 
-
-zmanjša kapaciteto, debelina kritično optimizirana, ker povečaš čas preleta, ki je ključen za hiter 
-odziv detektorja. 
-
-PIN larger sensitive volume, faster response time. 
-
-Spektralna občutljivost
-obojih je odvisna od velikosti energijske reže emd valenčnim in prevodnim pasom. Silicij
-z energijsko režo 1~eV je uporaben do valovne dolžine 1,2 mikron, germanij pa do 1,6 mikron.
-V vidnem in bližnjem infrardečem področju deluje še GaAs, CdS in PbS, zadnja dva le kot
-fotoprevodnika. Pri energiji fotonov blizu energijske reže 
-imajo polvodniški detektorji zelo velik kvantni izkoriste, kar blizu 1.
-
-Fotodiode zaznajo le pare elektron-vrzel v območju izpraznjenega sloja p-n spoja. Električno 
-polje v tem sloju povzroči, da elektron odteče na eno stran, vrzel pa na drugo. Fotodopda tako
-generira tok, ki je sorazmeren z vpadlo svetlobno močjo. Zaradi nelinearne zveze med tokom in napetostjo
-na diodi je treba skrbeti, da je napetost na diodi vselej 0 ali celo v zaporni smeri, kar lahko
-dosežemo z zunanjo napetostjo v zaporni smeri. S tem tudi dosežemo hitrejši odziv, ker 
-se zmajša kapacitivnost p-n spoja. 
-
-Da se bo svetloba absorbirala ravno v p-n spoju, mora biti seveda spoj pri površini dopde, obenem
-pa mora biti spoj čim debelejši, kar dosežejo s tem, da je med  p in n stranjo še plast
-čistega polvodnika. Takim diodam pravimo pin diode. 
-
-V pn spoju je mooče doseči tudi pomnoževanje nastalih elektronov in vrzeli, če je zaporna napetost dovolj 
-velika, da lahko fotoelektron dobi toliko energije, preden zapusti izpraznjeni sloj, da tvori nove pare.
-Taka pomnoževalna dioda je zelo občutljiva, vendar ima tudi večji šum.
-
-\section{Plazovne fotodiode}
-Ko smo risali karakteristiko fotodiode, nismo narisali popolne slike. Pri velikih negativnih napetostih
-se namreč karakteristika znatno spremeni (slika~\ref{11:plaz}), česar ne moremo popisati z preprosto enačbo. 
-Pri napetostih, ki za nekajkrat presegajo širino reže namreč tok v zaporni smeri močno naraste. 
-Do tega pojava pride, ker ob prečkanju izpraznjenega sloja nosilci naboja dobijo toliko energije, 
-da s trki ustvarijo nove pare elektron-vrzel. Ti novonastali pari ponovno ustvarjajo pare in pride
-do ``plazu'', podobno kot v fotopomnoževalki. 
-
-
-
-
-Nosilci, ki pri tem nastanejo, naprej ioniirajo ione in pride do t. i. plazu. 
-Če prevelik tok, je destructive. 
-
-obrni ta odstavek
-Plazovne fotodiode torej delujejo pri zelo velikih zapornih napetostih , da izkoristijo notranje ojačanje, do 
-katerega pride zaradi plazu. Napetost držimo tik pred plazom, tako da se apd še vedno obnaša linearno
-na intenziteto vpadne svetlobe. Breakdown voltage je tipično - 50V. notranja polja 10 na 7 V/m ali več v spoju. 
-slabost: podaljša se odzivni čas in poslabša sn glede na običajno pin diodo. 
-
-Nekatere imajo ako veliko ojačanje, da postanejo single phton detector. neke vrste trdna fotopomnoževalka,
-ampak so napetosti za red velikosti manjše. Poblem, ker je gain odvisen od temperature in staranja materiala. 
-
-APD so zelo hitre, nekaj 10 GHz.
-
-light absorbing zon eis spatialluy separated from the drift zone. so that all the photelectonsk experience
-the same gain and amplifier noise in kept low. $10^7$ counts per second. 
+Povejmo še nekaj o zgradbi fotodiode. Shema preproste fotodiode je prikazana na sliki~(\ref{11_shema}\,a).
+Na dnu je elektroda, sledi plast $n$, nad njo je tanka plast $p$, na katero vpada svetloba.
+Bistveno je, da je osvetljena plast tanka, da svetloba lahko prodre v bližino stika. Zato so 
+debeline zgornje plasti tipično submikronske. Dodatno na fotodiode pogosto nanesemo
+še dodatno antirefleksijsko plast (SiO$_2$). Fotoobčutljiv del komercialnih fotodiod
+je tipično od nekaj $100~\si{\micro\meter}^2$ pa do več $100~\si{\milli\metre}^2$. Pri 
+tem imajo večje diode seveda počasnejši odziv. 
 
 \begin{remark}
- Schottky fotodiode. UV odziv lahko izboljšamo
+Poleg do zdaj obravnavanih fotodiod, poznamo tudi heterostrukturne fotodiode, kjer sta $p$ in $n$ del
+narejena iz druge snovi. Poseben primer so Schottkyjeve fotodiode, kjer eno plast polprevodnika
+nadomestimo z zelo tanko plastjo kovine (slika~\ref{11_shema}\,c). Te so uporabne predvsem pri 
+visokih energijah (v UV območju), 
+saj je v navadnih fotodiodah absorpcija za te valovne dolžine prevelika, na površini pride do 
+rekombinacije in zmanjšanja kvantnega izkoristka. Poleg tega je odziv Schottkyjevih fotodiod zelo hiter, 
+ker nizka upornost kovine občutno zmanjša $RC$ konstanto stika. Odzivni časi dosegajo pikosekundne vrednosti. 
 \end{remark}
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/11_shema.pdf_tex}
+\caption{Shema $p$-$n$ fotodiode (a), $p$-$i$-$n$ fotodiode, ki se od navadne 
+$p$-$n$ razlikuje po vmesni plasti intrinzičnega
+polprevodnika (b) in shema Schottkyjeve fotodiode (c)}
+\label{11_shema}
+\end{figure}
+
+\subsection*{Fotodioda $pin$}
+Fotodiode $p$-$i$-$n$ se od navadnih $p$-$n$ razlikujejo po tem, da med $p$- in $n$-plast 
+vključimo še plast nedopiranega polprevodnika (slika~\ref{11_shema}\,b). S tem se efektivno bistveno poveča območje
+izpraznjene plasti in njegova širina postane praktično neodvisna od priključene napetosti.
+Povečanje izpraznjene plasti omogoča zaznavanje bistveno večjega deleža vpadne svetlobe, 
+poleg tega pa zmanjša kapaciteto stika in s tem njegovo $RC$ konstanto. Slabost dodatnega
+sloja je povečanje časa preleta čez izpraznjeno plast, vendar lahko
+z ustrezno optimizacijo konstrukcije dosežemo odzivne čase nekaj deset ps.
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/11_SpekterFD.pdf_tex}
+\caption{Kvantni izkoristek nekaterih $p$-$i$-$n$ in Schottkyjevih fotodiod.}
+\label{11_odziv}
+\end{figure}
+
+\section{Plazovne fotodiode}
+Ko smo risali karakteristiko fotodiode, nismo narisali popolne slike. 
+Pri velikih negativnih napetostih se namreč karakteristika znatno spremeni (slika~\ref{11_plaz}), 
+česar ne moremo popisati s preprosto enačbo. Pri zapornih napetostih, ki za nekajkrat presegajo 
+širino energijske reže (tipično okoli $10^7~\si{\volt}/\si{\meter}$), 
+pride do naglega povečanja električnega toka. Ob absopciji fotona nastali
+mobilni nosilci naboja se namreč v električnem polju tako pospešijo, da s trki ustvarjajo nove pare 
+elektron-vrzel. Ti novonastali pari ponovno ustvarjajo pare in pride do ``plazu'', podobno kot v 
+fotopomnoževalki. En foton torej sproži cel plaz elektronov, zato pravimo, da je plazovna dioda
+fotodioda z notranjim ojačanjem. Pri tem je faktor ojačanja tipično $30$-$300$ in jih lahko 
+uporabimo za detekcijo posameznih fotonov. Slabost je, da je faktor ojačanja odvisen od
+temperature in je zato za natančne meritve potrebna temperaturna stabilizacija.
+
+Napetost, pri kateri deluje plazovna fotodioda, je priključena v zaporni smeri jih jo 
+držimo tik pod prebojno napetostjo. Ker že  majhna odstopanja v napetosti povzročijo veliko
+spremembo v toku, moramo tudi napetost držati kar se da stabilno. Le to nam omogoča
+linearen odziv fotodiode od moči vpadne svetlobe. Take fotodiode so praviloma zelo hitre 
+($50~\si{\pico\second})$ in zelo občutljive. Z ojačanjem signala se ojača tudi šum, a je ta 
+porast pogosto manjša kot bi bil prispevek k šumu na zunanjih elektonskih ojačevalcih. 
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/11_plaz.pdf_tex}
+\caption{Karakteristika plazovne fotodiode}
+\label{11_plaz}
+\end{figure}
+
+\section{CCD in CMOS detektorji}
+Do zdaj smo obravnavali detektorje, ki zaznavajo pretok vpadnih fotonov in spreminjanje
+tega pretoka s časom. Dodatno informacijo pa dobimo, če več detektorjev sestavimo v matriko, 
+saj lahko ti detektorji zaznavajo vpadno svetlobo iz različnih delov prostora in dobljene
+podatke sestavimo v sliko. Sestavljeni detektorji so nepogrešljivi na primer v 
+fotoaparatih, video-kamerah, mikroskopiji in astronomiji.
+
+Podrobneje bomo obravnavali dva primera matričnih detektorjev, to so CCD (\it{charge-coupled-device})
+in CMOS (\it{complementary metal-oxide-semicoductor}). V njih so posamezni detektorji
+razporejeni, to so piksli, slikovni elementi. 
+Pri obeh je enak enosovni elekmen, si MOS kondenzator
+razlika vnačinu dostopa do informacije v pikslih.
+ 
 
  kazalo UV IR.
  hetero homodinska detekcija
@@ -799,7 +802,8 @@ the same gain and amplifier noise in kept low. $10^7$ counts per second.
  q dots
  delčkarji detekcija.
  
-\section{CCD in CMOS detektorji}
+ 
+ 
  
 \section{Šum pri optični detekciji}
 Sama občutljivost nekega detektorja, to je količina A/W za neko fotodiodo, nam ne pove, kolikšen 
