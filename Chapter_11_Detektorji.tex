@@ -784,24 +784,58 @@ porast pogosto manjša kot bi bil prispevek k šumu na zunanjih elektonskih oja�
 
 \section{CCD in CMOS detektorji}
 Do zdaj smo obravnavali detektorje, ki zaznavajo pretok vpadnih fotonov in spreminjanje
-tega pretoka s časom. Dodatno informacijo pa dobimo, če več detektorjev sestavimo v matriko, 
-saj lahko ti detektorji zaznavajo vpadno svetlobo iz različnih delov prostora in dobljene
-podatke sestavimo v sliko. Sestavljeni detektorji so nepogrešljivi na primer v 
-fotoaparatih, video-kamerah, mikroskopiji in astronomiji.
+tega pretoka s časom. Dodatno informacijo dobimo, če več fotodetektorjev sestavimo v 
+dvodimenzionalno matriko, saj lahko ti detektorji hkrati zaznavajo vpadno svetlobo 
+iz različnih delov prostora in dobljene podatke sestavimo v sliko. Pri tem en detektor
+podaja informacijo o vpadli svetlobi za en slikovni element (piksel). Slikovni
+detektorji z veliko ločljivostjo so tako sestavljeni iz več milijonov ali celo 
+milijarde posameznih polprevodniških detektorjev. Sestavljeni detektorji so 
+nepogrešljivi v fotoaparatih, video-kamerah, mikroskopiji in astronomiji.
 
-Podrobneje bomo obravnavali dva primera matričnih detektorjev, to so CCD (\it{charge-coupled-device})
-in CMOS (\it{complementary metal-oxide-semicoductor}). V njih so posamezni detektorji
-razporejeni, to so piksli, slikovni elementi. 
-Pri obeh je enak enosovni elekmen, si MOS kondenzator
-razlika vnačinu dostopa do informacije v pikslih.
+Podrobneje bomo obravnavali dva primera matričnih detektorjev, to so CCD 
+({\it charge-coupled-device})\footnote{Za izum CCD detektorjev sta Willard 
+S. Boyle in George E. Smith  leta 2009 prejela Nobelovo nagrado.} 
+in CMOS ({\it complementary metal-oxide-semicoductor})
+\footnote{Teh dveh oznak za detektorje praviloma ne prevajamo.}. Obe vrsti
+detektorjev sta si glede zaznavanja svetlobe zelo pododbni, razlika
+je predvsem v načinu, kako iz posameznega detektorja dobimo podatek o številu 
+vpadlih fotonov oziroma številu vzbujenih elektronov.
+
+\subsection*{CCD}
+Osnovni sestavni del CCD detektorjev je tako imenovani MOS ({\it metal-oxide-semiconductor}
+-- kovina-oksid-polprevonik) kodenzator. Osnova detektorja je dopiran silicij, vmesna 
+plast med polprevodnikom in kovinsko elektrodo pa je navadno SiO$_2$ (slika~\ref{11_CCD})
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+%\input{slike/11_CCD.pdf_tex}
+\caption{Shema MOS strukture, ki je temelj za vse CCD in CMOS slikovne detektorje.}
+\label{11_CCD}
+\end{figure}
+
+
+Pozitivna napetost med kovino in silicijem ujame fotogenerirane elktrone na površino
+silicija. Število ujetih elektronov je sorazmerno integralu optične moči na dan 
+časovni interval. Naboj se ojača in shrani. Tipično 1000x1000px. pixel size order
+of 10 mikronov. to je 10x10. 5-40mikronov.
+Barvne slike, tako da dodamo filtre in zaznavajo intenzitete treh osnovnih barv.
+
+
+silicij. 
+
+Ojačevalnik ob robu detektorja, prenos elektronov do tja. CCD doda manj šuma. 
+
+
+
  
 
- kazalo UV IR.
- hetero homodinska detekcija
- yariv, demtrodeseder
- q dots
- delčkarji detekcija.
  
+Svetlobni senzorji so praviloma majhne fotodiode, ki vpadlo svetlobo pretvorijo v električni naboj. Fotodiode zaznavajo samo svetlost, za določanje barve so potrebni še filtri, ki prepuščajo samo določeno barvo svetlobe, in sicer rdečo, zeleno in modro. Posamezen svetlobni senzor je pokrit samo s filtrom za eno barvo (za zeleno barvo jih je dvakrat več kot za rdečo in modro).  Ko se svetloba pretvori v električni naboj, se podatki o tem pošjejo procesorju. Procesor tako dobi podatke o količini ene barve v posameznem pixlu. Nato se s pomočjo primerjanja vsaj osmih sosednjih pixlov določi manjkajoče barvne informacije (vrednosti drugih dveh barv), nato pa na podlagi vseh podatkov skupaj pixel dobi svojo barvo. Torej slikovni senzor in procesor skupaj opravljata nalogo, ki jo je pri klasičnih fotoaparatih izvajal film [1].
+ 
+ Zaradi neposrednega odčitavanja so senzorji CMOS veliko hitrejši kot CCD in posledično je tudi fotografiranje z njimi hitrejše [1, 2].     Zaradi zgoraj omenjenega načina prenosa podatkov morajo biti CCD senzorji visoko kvalitetni, medtem ko se za izdelavo CMOS senzorjev uporablja enak proces kot za izdelavo mikročipov. Posledično so CMOS senzorji cenejši.
+    Senzorji CCD ustvarijo kvalitetno sliko z malo šuma. CMOS senzorji so bolj dovzetni za šum. Ta razlika se sicer z razvojem CMOS senzorjev zmanjšuje.
+    Zaradi uporabe ojačevalnika za vsak svetlobni senzor posebej, je pri senzorjih CMOS uporabljen manjši delež pixla za svetlobni senzor in s tem za zajem svetlobe, kot pri senzorjih CCD, ki so zato bolj občutljivi na svetlobo in posledično boljši v temnejših pogojih.
+    Senzor CCD porabi veliko več (do 100 x več) energije kot CMOS [3].
  
  
  
@@ -844,3 +878,11 @@ I_N = \sqrt{eI_0\Delta \nu} \approx 10^{-15}~A/\sqrt{Hz} \sqrt{\Delta \nu}.
 Svetlobni tok, označen pogosto z NEP (noise equivalent power), ki da enak signal, je $10^4 $
 fotonov na sekundo ali $10^{-14}$~W. Še beseda o enoti za NEP. Navadno je podan na enoto 
 frekvenčnega intervala, to je po enačbi .. na $\sqrt{Hz}$. 
+
+
+
+ kazalo UV IR.
+ hetero homodinska detekcija
+ yariv, demtrodeseder
+ q dots
+ delčkarji detekcija.
