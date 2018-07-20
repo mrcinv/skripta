@@ -785,11 +785,12 @@ porast pogosto manjša kot bi bil prispevek k šumu na zunanjih elektonskih oja�
 \section{CCD in CMOS detektorji}
 Do zdaj smo obravnavali detektorje, ki zaznavajo pretok vpadnih fotonov in spreminjanje
 tega pretoka s časom. Dodatno informacijo dobimo, če več fotodetektorjev sestavimo v 
-dvodimenzionalno matriko, saj lahko ti detektorji hkrati zaznavajo vpadno svetlobo 
+dvodimenzionalno matriko, saj lahko ti detektorji hkrati zaznavajo količino vpadne svetlobe 
 iz različnih delov prostora in dobljene podatke sestavimo v sliko. Pri tem en detektor
-podaja informacijo o vpadli svetlobi za en slikovni element (piksel). Slikovni
-detektorji z veliko ločljivostjo so tako sestavljeni iz več milijonov ali celo 
-milijarde posameznih polprevodniških detektorjev. Sestavljeni detektorji so 
+podaja informacijo o številu vpadnih fotonov v dani časovni enoti (integracijski čas
+oziroma čas osvetlitve) en slikovni 
+element -- piksel. Slikovni detektorji z veliko ločljivostjo so tako sestavljeni iz 
+več milijonov ali celo milijarde posameznih polprevodniških detektorjev in so 
 nepogrešljivi v fotoaparatih, video-kamerah, mikroskopiji in astronomiji.
 
 Podrobneje bomo obravnavali dva primera matričnih detektorjev, to so CCD 
@@ -801,45 +802,124 @@ detektorjev sta si glede zaznavanja svetlobe zelo pododbni, razlika
 je predvsem v načinu, kako iz posameznega detektorja dobimo podatek o številu 
 vpadlih fotonov oziroma številu vzbujenih elektronov.
 
+\begin{remark}
+Slikovni detektorji so seveda lahko sestavljeni tudi iz drugih svetlobnih detektorjev, 
+ki smo jih obravnavali v prejšnjih razdelkih. Lahko so iz mikrobolometrov
+ali fotoprevodnikov (za IR svetlobo), Schottkyjevih fotodiod (npr. PtSi, ki seže od UV do
+okoli $6~\si{\micro\meter}$) ali plazovnih fotodiod.
+\end{remark}
+
 \subsection*{CCD}
-Osnovni sestavni del CCD detektorjev je tako imenovani MOS ({\it metal-oxide-semiconductor}
--- kovina-oksid-polprevonik) kodenzator. Osnova detektorja je dopiran silicij, vmesna 
-plast med polprevodnikom in kovinsko elektrodo pa je navadno SiO$_2$ (slika~\ref{11_CCD})
+Detektorjev CCD so sestavljeni iz posameznih tako imenovanih MOS ({\it metal-oxide-semiconductor}
+-- kovina-oksid-polprevodnik) kodenzatorjev. Njihova osnova je dopiran silicij, vmesna 
+plast med polprevodnikom in prevodno elektrodo pa je navadno zelo tanka plast (pod 100 nm)
+SiO$_2$ (slika~\ref{11_MOS}).
+Prevodna elektroda je bila prvotno iz kovine (npr. aluminija) in je elementu detektorja dala tudi ime.
+Danes je kovino večinoma nadomestil polikristalni silicij (polisilicij), ime pa je ostalo.
+Tipična dolžina stranice posameznega elementa znaša okoli $5$-$40~\si{\micro\meter}$. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{80truemm} 
-%\input{slike/11_CCD.pdf_tex}
+%\input{slike/11_MOS.pdf_tex}
 \caption{Shema MOS strukture, ki je temelj za vse CCD in CMOS slikovne detektorje.}
+\label{11_MOS}
+\end{figure}
+
+Ko foton vpade na element MOS skozi tako prozorno elektrodo, v polprevodniku ustvari
+par elektron-vrzel. Pozitivna napetost na elektrodi elektrone privlači, vendar jih 
+vmesna plast izolatorja tik pod površino ustavi in elektroni tako ostanejo ujeti v potencialni jami. 
+Pri tem je število ujetih elektronov sorazmerno številu vpadlih fotonov v času zajemanja slike, 
+pomnoženih s kvantnim izkoristkom pri dani valovni dolžini. 
+
+S spreminjanjem napetosti na posameznih elektrodah lahko naboj, ki se lokalno nabere 
+v plasti pod izolatorjem v danem času, postopoma prenesemo od posameznega 
+piksla do izhodne stopnje. Najprej poteka prenos iz enega elementa na drugega v eni vrstici, 
+nato pa še po celotnem stolpcu (slika~\ref{11_CCD}\,a). Na koncu signal sproti ojačujemo, 
+pretvorimo v napetost, to pa v digitalni zapis. Pri tem posameznim slikovnim elementom
+določimo digitalno vrednost glede na bit-depth globino, 12-bitna recimo vrednosti od 0 do 4095.
+
+full frame ima skoraj cel zaslon ptoobčutljiv, ni mrtvega prostora med piksli. med prenašanjem
+podatkov mora biti dostop onemogočen, da ne popači podatkov. Čas zajemanja omejen s prenosom naboja.
+
+manjši pa je del zajema, del pa pretaka in lahko poteka hkrati. Pol pikslov je pokritih, nabira
+se v drugih, potem pa pretaka, ko drugi že nabirajo. cs 1 ms je prenos, potem pa lhako počasi 
+v miru bere. Je hitra, ampak samo 25procentov svetlobe. No, izmenično eni in drugi. Dodajo leče, 
+ki pokrijejo par sensitivie in read out pixlov. Mikroleče, pride do 95 procentov vse sveltobe.
+Mikroleče slabost, odziv odvisen od kota vpadnga.
+12-bit megapixel, 20 megahertz rate. 
+
+binnig: zmanjša ločljivost, poveča hitrost in zmajša šum. Ali pa krajši čas za isto svetlost
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/11_CCD.pdf_tex}
+\caption{Shema CCD (a) in shema CMOS (b) slikovnega detektorja. Puščice označujejo premikanje
+fotoelektronov.}
 \label{11_CCD}
 \end{figure}
 
+Delovanje detektorjev CCD torej temelji na zaporednem odčitavanju števila fotoelektronov v posameznem 
+slikovnem elementu. Ta način je razmeroma počasen in omejuje hitost zajemanja slike. Odlikuje 
+pa jih velika občutljivost na svetlobo in razmeroma nizek šum, ki se ga da s hlajenjem še dodatno 
+zmanjšati. počasne.
 
-Pozitivna napetost med kovino in silicijem ujame fotogenerirane elktrone na površino
-silicija. Število ujetih elektronov je sorazmerno integralu optične moči na dan 
-časovni interval. Naboj se ojača in shrani. Tipično 1000x1000px. pixel size order
-of 10 mikronov. to je 10x10. 5-40mikronov.
-Barvne slike, tako da dodamo filtre in zaznavajo intenzitete treh osnovnih barv.
+Ko to število preseže določeno 
+vrednost (in se potencialna jama napolni), smo dosegli zgornjo mejo občutljivosti detektorja. 
+Več fotonov kot toliko ne moremo zaznati.
+
+piksli lahko uhajajo v sosedno, če preveč polno (presvetlo).
+
+\subsection*{CMOS}
+Osnovni element detektorjev CMOS je enak kot za detektorje CCD (slika~\ref{11_MOS}\,b). Bistvena 
+razlika je v načinu zajemanja fotoelektronov. Pri detektorjih CCD je bilo branje fotoelektronov
+zaporedno, pri detektorjih CMOS pa poteka branje vseh slikovnih elementov hkrati, pri čemer
+ima vsak piskel tudi svoj ojačevalnik. Zaradi sprotnega odčitavanja vseh pikslov naenrkat, so
+CMOS bistveno hitrejši od CCD. CMOS je ista tehnologija kot mikročipi, cenejši. Bolj dovzetni za 
+šum. Cenejši, porabi manj moči
+CMOS je uporabljen majši delež piksla, ker ojačevalnik na vsakem posebej. zato manj svetlobe zajema. 
+manj očutljivi na svetlobo. 
+
+Večji čum, ker ojačanje poveča šum. Manj občutljine, ne moreš uporabljati leč, ker več plasti. 
+ni prelivanja vsaj ne toliko. 
+
+napetost odčitamo na pikslu samem. Hitrejše.manj energije.  šum slabost. manj pretakanja nabojev,
+manj potrebne moči. 
+
+cmos, rolling shutter? 
 
 
-silicij. 
+a number of photons hhitting a pixel in exposure time cvreates a number of elekcrons forming a charge
+that is converted by capacitor in to volatage amplified digitized resulting in a digital gray value. 
 
-Ojačevalnik ob robu detektorja, prenos elektronov do tja. CCD doda manj šuma. 
+cd high image fidelity , slow; cmos high speed, lower image quality. 
 
+\subsection*{Barvno zajemanje slik}
+Detektorji zaznavajo samo število vpadlih fotonov oziroma bolj natančno število fotoelektronov.
+Za nastanek barvne slike moramo vpadle fotone ločiti še po valovni dolžini, kar naredimo
+z barvnimi filtri. Namesto enega elementa, ki bi podal informacijo o intenziteti vpadne 
+svetlobe, imamo štiri senzorje v kvadratni mreži, rdečega, modrega in dva zelena. 
+Večji delež zelenih elementov je zaradi večje občutljivosti človeškega očesa na zeleno barvo. 
 
-
- 
-
- 
-Svetlobni senzorji so praviloma majhne fotodiode, ki vpadlo svetlobo pretvorijo v električni naboj. Fotodiode zaznavajo samo svetlost, za določanje barve so potrebni še filtri, ki prepuščajo samo določeno barvo svetlobe, in sicer rdečo, zeleno in modro. Posamezen svetlobni senzor je pokrit samo s filtrom za eno barvo (za zeleno barvo jih je dvakrat več kot za rdečo in modro).  Ko se svetloba pretvori v električni naboj, se podatki o tem pošjejo procesorju. Procesor tako dobi podatke o količini ene barve v posameznem pixlu. Nato se s pomočjo primerjanja vsaj osmih sosednjih pixlov določi manjkajoče barvne informacije (vrednosti drugih dveh barv), nato pa na podlagi vseh podatkov skupaj pixel dobi svojo barvo. Torej slikovni senzor in procesor skupaj opravljata nalogo, ki jo je pri klasičnih fotoaparatih izvajal film [1].
- 
- Zaradi neposrednega odčitavanja so senzorji CMOS veliko hitrejši kot CCD in posledično je tudi fotografiranje z njimi hitrejše [1, 2].     Zaradi zgoraj omenjenega načina prenosa podatkov morajo biti CCD senzorji visoko kvalitetni, medtem ko se za izdelavo CMOS senzorjev uporablja enak proces kot za izdelavo mikročipov. Posledično so CMOS senzorji cenejši.
-    Senzorji CCD ustvarijo kvalitetno sliko z malo šuma. CMOS senzorji so bolj dovzetni za šum. Ta razlika se sicer z razvojem CMOS senzorjev zmanjšuje.
-    Zaradi uporabe ojačevalnika za vsak svetlobni senzor posebej, je pri senzorjih CMOS uporabljen manjši delež pixla za svetlobni senzor in s tem za zajem svetlobe, kot pri senzorjih CCD, ki so zato bolj občutljivi na svetlobo in posledično boljši v temnejših pogojih.
-    Senzor CCD porabi veliko več (do 100 x več) energije kot CMOS [3].
- 
  
  
 \section{Šum pri optični detekciji}
+
+Shot Noise / Photon Noise: 
+Due to random fluctuations in the light.
+[Brighter/Better Light = less shot noise]
+
+Dark Current Noise: 
+The rate at which electrons are produced due to 
+thermal effects. Every 8
+C = Dark noise doubles.
+[cooler camera = less dark noise]
+
+Quantization Noise: 
+Errors coming from the A/D conversion process
+[Use a better ADC = less quantization nois
+
+
 Sama občutljivost nekega detektorja, to je količina A/W za neko fotodiodo, nam ne pove, kolikšen 
 je najmanjši signal, ki ga je mogoče meriti. Ta je določen s šumom detektorja in pa s časom 
 meritve, to je s frekvenčno širino modulacije svetlobe, ki jo želimo meriti. Največja 
@@ -880,6 +960,9 @@ fotonov na sekundo ali $10^{-14}$~W. Še beseda o enoti za NEP. Navadno je podan
 frekvenčnega intervala, to je po enačbi .. na $\sqrt{Hz}$. 
 
 
+
+
+\section{Heterodinska in homodinska detekcija}
 
  kazalo UV IR.
  hetero homodinska detekcija
