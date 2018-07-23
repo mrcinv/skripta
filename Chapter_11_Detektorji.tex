@@ -776,7 +776,7 @@ porast pogosto manjša kot bi bil prispevek k šumu na zunanjih elektonskih oja�
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{80truemm} 
+\def\svgwidth{60truemm} 
 \input{slike/11_plaz.pdf_tex}
 \caption{Karakteristika plazovne fotodiode}
 \label{11_plaz}
@@ -797,7 +797,8 @@ Podrobneje bomo obravnavali dva primera matričnih detektorjev, to so CCD
 ({\it charge-coupled-device})\footnote{Za izum CCD detektorjev sta Willard 
 S. Boyle in George E. Smith  leta 2009 prejela Nobelovo nagrado.} 
 in CMOS ({\it complementary metal-oxide-semicoductor})
-\footnote{Teh dveh oznak za detektorje praviloma ne prevajamo.}. Obe vrsti
+\footnote{Teh dveh oznak za detektorje praviloma ne prevajamo. Opisujeta 
+strukturo in delovanje naprave in nista vezani zgolj na detekcijo svetlobe.}. Obe vrsti
 detektorjev sta si glede zaznavanja svetlobe zelo pododbni, razlika
 je predvsem v načinu, kako iz posameznega detektorja dobimo podatek o številu 
 vpadlih fotonov oziroma številu vzbujenih elektronov.
@@ -819,9 +820,12 @@ Danes je kovino večinoma nadomestil polikristalni silicij (polisilicij), ime pa
 Tipična dolžina stranice posameznega elementa znaša okoli $5$-$40~\si{\micro\meter}$. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{80truemm} 
-%\input{slike/11_MOS.pdf_tex}
-\caption{Shema MOS strukture, ki je temelj za vse CCD in CMOS slikovne detektorje.}
+\def\svgwidth{140truemm} 
+\input{slike/11_MOS.pdf_tex}
+\caption{Shema MOS strukture (a), ki je osnova za vse CCD in CMOS slikovne detektorje. Osnova je 
+polprevodnik ($p$), na katerem je plast dielektrika (SiO$_2$), na njej pa elektroda (siva). 
+Ob absorpciji svetlobe se pojavijo fotoelektroni, katere pozitivna napetost
+na elektrodi drži ujete v potencialno jamo (vijolična). Prenos elektronov v CCD detektorju (b).}
 \label{11_MOS}
 \end{figure}
 
@@ -835,20 +839,26 @@ S spreminjanjem napetosti na posameznih elektrodah lahko naboj, ki se lokalno na
 v plasti pod izolatorjem v danem času, postopoma prenesemo od posameznega 
 piksla do izhodne stopnje. Najprej poteka prenos iz enega elementa na drugega v eni vrstici, 
 nato pa še po celotnem stolpcu (slika~\ref{11_CCD}\,a). Na koncu signal sproti ojačujemo, 
-pretvorimo v napetost, to pa v digitalni zapis. Pri tem posameznim slikovnim elementom
-določimo digitalno vrednost glede na bit-depth globino, 12-bitna recimo vrednosti od 0 do 4095.
+pretvorimo v napetost, to pa v digitalni zapis. Pri tem številu elektronov iz posameznega
+slikovnega elementa določimo digitalno vrednost glede na barvno globino. 8-bitni zapis slike
+tako vsakemu elementu priredi vrednost od 0 do 255, 16-bitni pa od 0 do 65535.
 
-full frame ima skoraj cel zaslon ptoobčutljiv, ni mrtvega prostora med piksli. med prenašanjem
-podatkov mora biti dostop onemogočen, da ne popači podatkov. Čas zajemanja omejen s prenosom naboja.
+Delovanje detektorjev CCD torej temelji na zaporednem odčitavanju števila fotoelektronov v posameznem 
+slikovnem elementu. Ta način je razmeroma počasen in omejuje hitost zajemanja slike. Med 
+prenašanjem nabojev do izhoda namreč slike ne moremo zajemati, saj bi prišlo do popačenja signala. 
+Ta problem se večinoma rešuje tako, da le del celotnega zaslona zajema svetlobo, drug del
+pa je namenjen pretakanju elektronov in omogoča nemoteno praktično neprestano zajemanje slike.
+Ker se s tem količina zajete svetlobe zmanjša, se na vsak element doda lečo, ki svetlobo zbere
+na detektor. S tem postanejo slikovni detektorji CCD hitrejši in bolj občutljivi. Poleg
+tega jih odlikuje tudi razmeroma nizek šum, ki se ga da s hlajenjem še dodatno 
+zmanjšati. 
 
-manjši pa je del zajema, del pa pretaka in lahko poteka hkrati. Pol pikslov je pokritih, nabira
-se v drugih, potem pa pretaka, ko drugi že nabirajo. cs 1 ms je prenos, potem pa lhako počasi 
-v miru bere. Je hitra, ampak samo 25procentov svetlobe. No, izmenično eni in drugi. Dodajo leče, 
-ki pokrijejo par sensitivie in read out pixlov. Mikroleče, pride do 95 procentov vse sveltobe.
-Mikroleče slabost, odziv odvisen od kota vpadnga.
-12-bit megapixel, 20 megahertz rate. 
-
-binnig: zmanjša ločljivost, poveča hitrost in zmajša šum. Ali pa krajši čas za isto svetlost
+\begin{remark}
+Pogosto pri eksperimentu ne potrebujemo največje možne ločljivosti, ki jo nudi detektor. 
+Takrat se pogosto poslužujemo združevanja sosednjih elementov, t. i. bininga, na primer $2\times2$
+ali $4\times4$, in s tem sicer zmanjšamo ločljivost, ampak hkrati skrajšamo čas
+zajemanja slike in zmanjšamo razmerje signal proti šumu. 
+\end{remark}
 
 \begin{figure}[h]
 \centering
@@ -859,40 +869,15 @@ fotoelektronov.}
 \label{11_CCD}
 \end{figure}
 
-Delovanje detektorjev CCD torej temelji na zaporednem odčitavanju števila fotoelektronov v posameznem 
-slikovnem elementu. Ta način je razmeroma počasen in omejuje hitost zajemanja slike. Odlikuje 
-pa jih velika občutljivost na svetlobo in razmeroma nizek šum, ki se ga da s hlajenjem še dodatno 
-zmanjšati. počasne.
-
-Ko to število preseže določeno 
-vrednost (in se potencialna jama napolni), smo dosegli zgornjo mejo občutljivosti detektorja. 
-Več fotonov kot toliko ne moremo zaznati.
-
-piksli lahko uhajajo v sosedno, če preveč polno (presvetlo).
-
 \subsection*{CMOS}
-Osnovni element detektorjev CMOS je enak kot za detektorje CCD (slika~\ref{11_MOS}\,b). Bistvena 
-razlika je v načinu zajemanja fotoelektronov. Pri detektorjih CCD je bilo branje fotoelektronov
-zaporedno, pri detektorjih CMOS pa poteka branje vseh slikovnih elementov hkrati, pri čemer
-ima vsak piskel tudi svoj ojačevalnik. Zaradi sprotnega odčitavanja vseh pikslov naenrkat, so
-CMOS bistveno hitrejši od CCD. CMOS je ista tehnologija kot mikročipi, cenejši. Bolj dovzetni za 
-šum. Cenejši, porabi manj moči
-CMOS je uporabljen majši delež piksla, ker ojačevalnik na vsakem posebej. zato manj svetlobe zajema. 
-manj očutljivi na svetlobo. 
-
-Večji čum, ker ojačanje poveča šum. Manj občutljine, ne moreš uporabljati leč, ker več plasti. 
-ni prelivanja vsaj ne toliko. 
-
-napetost odčitamo na pikslu samem. Hitrejše.manj energije.  šum slabost. manj pretakanja nabojev,
-manj potrebne moči. 
-
-cmos, rolling shutter? 
-
-
-a number of photons hhitting a pixel in exposure time cvreates a number of elekcrons forming a charge
-that is converted by capacitor in to volatage amplified digitized resulting in a digital gray value. 
-
-cd high image fidelity , slow; cmos high speed, lower image quality. 
+Osnovni element detektorjev CMOS je enak kot za detektorje CCD (slika~\ref{11_MOS}\,a). 
+Bistvena razlika je v načinu zajemanja fotoelektronov. Pri detektorjih CCD je bilo branje 
+fotoelektronov zaporedno, pri detektorjih CMOS pa poteka branje vseh slikovnih elementov 
+hkrati, pri čemer ima vsak piskel tudi svoj ojačevalnik (slika~\ref{11_CCD}\,b).
+Zaradi sprotnega odčitavanja vseh pikslov naenkrat so detektorji CMOS bistveno hitrejši 
+od CCD. Odlikuje jih tudi nizka poraba energije in nizka cena. Njihova poglavitna slabost
+je večji šum in manjša občutljivost, saj del zaslona, kjer so ojačevalniki, slike ne more
+zajemati. 
 
 \subsection*{Barvno zajemanje slik}
 Detektorji zaznavajo samo število vpadlih fotonov oziroma bolj natančno število fotoelektronov.
@@ -900,10 +885,46 @@ Za nastanek barvne slike moramo vpadle fotone ločiti še po valovni dolžini, k
 z barvnimi filtri. Namesto enega elementa, ki bi podal informacijo o intenziteti vpadne 
 svetlobe, imamo štiri senzorje v kvadratni mreži, rdečega, modrega in dva zelena. 
 Večji delež zelenih elementov je zaradi večje občutljivosti človeškega očesa na zeleno barvo. 
-
- 
+Intenziteto svetlobe na posameznem slikovnem elementu dane barve nato odčitamo kot je
+opisano zgoraj.
  
 \section{Šum pri optični detekciji}
+Pri detekciji šibkih signalov svetlobe nas ovira šum. Beseda šum označuje naključne 
+fluktuacije na izhodu iz detektorja, ki jih ne moremo ločiti od signala, ne glede na njihov izvor. 
+Z različnimi pristopi lahko šum zmanjšamo, povsem ga pa ne moremo nikoli odpraviti.
+Tako pri vsaki meritvi obstoja nekaj minimalna vpadna moč svetlobe, ki 
+jo še lahko ločimo od šuma, pod to vrednostjo pa se signal izgubi
+(slika~\ref{11_sum}).
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+%\input{slike/11_sum.pdf_tex}
+\caption{Šum.}
+\label{11_sum}
+\end{figure}
+
+Do šuma prihaja v vseh korakih detekcije. Najprej zaradi diskretne narave fotonov, 
+ki na detektor ne vpadajo povsem enakomerno (šum štetja), nato zaradi konč
+Na podlagi izvora ločimo več vrst šuma:
+\begin{enumerate}
+\item šum štetja, do katerega pride zaradi kvantne narave fotonov,
+\item termični šum, do katererega pride zaradi kvantne narave elektronov v snovi
+\item šum temnega toka, ki predstavlja spontani nastanek para elektron-vrzel, oziroma spontano
+emisijo elektronov,
+\item šum zaradi sevanja ozadja (pri končni temperaturi okolica detektorja vedno seva, Wienov zakon) 
+in 
+\item šum $1/f$ oziroma roza šum *** (nepojasnjen izvor, kaotični pojavi).
+\end{enumerate}
+
+\subsection*{Šum štetja} 
+Prvi šum, ki ga bomo podrobneje obravnavali, je šum štetja. Ko posamezen foton vpade
+na detektor, izbije elektron oziroma vzbudi par elektron-vrzel. Ker so fotoni diskretne narave, 
+se diskretno pojavljajo tudi fotoelektroni. Ker gre za diskretne in neodvisne procese (ZAKAJ?), 
+lahko šum štetja opišemo s Poissonovo porazdelitvijo. 
+
+
+Pmin = pnep sqrt delta nu b.
 
 Shot Noise / Photon Noise: 
 Due to random fluctuations in the light.
@@ -965,7 +986,6 @@ frekvenčnega intervala, to je po enačbi .. na $\sqrt{Hz}$.
 \section{Heterodinska in homodinska detekcija}
 
  kazalo UV IR.
- hetero homodinska detekcija
  yariv, demtrodeseder
  q dots
  delčkarji detekcija.
