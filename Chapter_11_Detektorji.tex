@@ -316,9 +316,9 @@ uspešen prav vsak foton, zato vpeljemo še en parameter, ki ga imenujemo kvantn
 Ta parameter pove verjetnost, da vpadli foton z valovno dolžino $\lambda$ oziroma frekvenco $\nu$ iz 
 snovi izbije elektron. Električni tok, ki steče pri vpadni svetlobni moči $P$, je tako
 \boxeq{11:eta}{
-I = \eta e_0 N_F = \eta \frac{e_0 P}{h \nu},
+I = \eta e_0 n_F = \eta \frac{e_0 P}{h \nu},
 }
-kje je $N_F$ število vpadnih fotonov na časovno enoto.
+kje je $n_F$ število vpadnih fotonov na časovno enoto.
 Kvantni izkoristek je močno odvisen od valovne dolžine vpadne svetlobe in seveda
 od snovi, na katero svetloba vpada. Za fotone z energijo, ki je manjša od izstopnega 
 dela oziroma od širine energijske reže, je kvatni izkoristek praktično enak nič, 
@@ -661,9 +661,9 @@ Premik nosilcev naboja, do katerega je prišlo zaradi absorpcije fotona,
 torej vedno steče v zaporni smeri. 
 Njegova velikost je odvisna od moči vpadne svetlobe in jo lahko zapišemo kot  
 \boxeq{11:if}{
-I_f = e_0 \eta N_F = e_0 \frac{\eta P}{h \nu},
+I_f = e_0 \eta n_F = e_0 \frac{\eta P}{h \nu},
 }
-pri čemer smo z $N_F$ onačili število vpadnih fotonov na časovno enoto, 
+pri čemer smo z $n_F$ onačili število vpadnih fotonov na časovno enoto, 
 $\eta$ je kvantni izkoristek,
 $P$ pa označuje moč vpadne svetlobe. Celoten tok skozi fotodiodo je kombinacija diodnega 
 in svetlobnega toka, zato karakteristiko fotodiode zapišemo kot 
@@ -889,11 +889,12 @@ Intenziteto svetlobe na posameznem slikovnem elementu dane barve nato odčitamo 
 opisano zgoraj.
  
 \section{Šum pri optični detekciji}
-Pri detekciji šibkih signalov svetlobe nas ovira šum. Beseda šum označuje naključne 
-fluktuacije na izhodu iz detektorja, ki jih ne moremo ločiti od signala, ne glede na njihov izvor. 
+Pri detekciji svetlobe je vedno prisoten šum. Beseda šum označuje naključne 
+fluktuacije na izhodu iz detektorja, ki jih ne moremo ločiti od signala, in 
+pridejo do izraza predvsem pri zaznavanju šibkih signalov svetlobe. 
 Z različnimi pristopi lahko šum zmanjšamo, povsem ga pa ne moremo nikoli odpraviti.
-Tako pri vsaki meritvi obstoja nekaj minimalna vpadna moč svetlobe, ki 
-jo še lahko ločimo od šuma, pod to vrednostjo pa se signal izgubi
+Tako pri vsaki meritvi obstaja neka najmanjša vpadna moč svetlobe, ki 
+jo še lahko ločimo od šuma, pod to vrednostjo pa se signal v šumu izgubi
 (slika~\ref{11_sum}).
 
 \begin{figure}[h]
@@ -904,31 +905,84 @@ jo še lahko ločimo od šuma, pod to vrednostjo pa se signal izgubi
 \label{11_sum}
 \end{figure}
 
-Do šuma prihaja v vseh korakih detekcije. Najprej zaradi diskretne narave fotonov, 
-ki na detektor ne vpadajo povsem enakomerno (šum štetja), nato zaradi konč
 Na podlagi izvora ločimo več vrst šuma:
 \begin{enumerate}
-\item šum štetja, do katerega pride zaradi kvantne narave fotonov,
-\item termični šum, do katererega pride zaradi kvantne narave elektronov v snovi
-\item šum temnega toka, ki predstavlja spontani nastanek para elektron-vrzel, oziroma spontano
+\item šum štetja, do katerega pride zaradi diskretne (kvantne) narave fotonov,
+\item termični šum, do katererega pride zaradi termičnih fluktuacij,
+\item šum temnega toka, ki predstavlja spontani nastanek para elektron-vrzel oziroma spontano
 emisijo elektronov,
-\item šum zaradi sevanja ozadja (pri končni temperaturi okolica detektorja vedno seva, Wienov zakon) 
+\item šum zaradi sevanja ozadja (okolica detektorja pri končni temperaturi vedno seva) 
 in 
 \item šum $1/f$ oziroma roza šum *** (nepojasnjen izvor, kaotični pojavi).
 \end{enumerate}
 
 \subsection*{Šum štetja} 
-Prvi šum, ki ga bomo podrobneje obravnavali, je šum štetja. Ko posamezen foton vpade
-na detektor, izbije elektron oziroma vzbudi par elektron-vrzel. Ker so fotoni diskretne narave, 
-se diskretno pojavljajo tudi fotoelektroni. Ker gre za diskretne in neodvisne procese (ZAKAJ?), 
-lahko šum štetja opišemo s Poissonovo porazdelitvijo. 
+Ko govorimo o gostoti svetlobnega toka oziroma vpadni moči svetlobe na danem detektorju, 
+ne smemo pozabiti, da je svetloba sestavljena iz posameznih fotonov: enkrat vpade več
+fotonov, drugič manj. Moč, o kateri govorimo, je dejansko povprečna moč $\overline{P}$ in število 
+vpadlih fotonov na časovno enoto je povprečna vrednost števila vpadlih fotonov na časovno enoto
+$\overline{n}_F = \overline{P}/h\nu$. 
+Povprečno število fotoelektronov, ki se pojavijo v časovnem intervalu $\tau$, je tako
+\beq
+\overline{n} = \frac{\overline{N}}{\tau} = \frac{\overline{P}}{h \nu},
+\eeq
+pri čemer smo privzeli, da ima detektor popoln kvantni izkoristek. Ker gre pri vpadu fotonov 
+za diskretne in neodvisne procese, verjetnost, da v intervalu dolžine $\tau$ vpade
+$N$ fotonov, opišemo s Poissonovo porazdelitvijo (slika~\ref{11_Poiss}).
+Verjetnost, da bomo v času $\tau$ zaznali $N$ fotoelektronov, je tako
+\beq
+p(N) = \frac{\overline{N}^N e^{-\overline{N}}}{N!},
+\label{Poisson}
+\eeq
+pri čemer je $\overline{N} = \overline{n}\tau$.
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+%\input{slike/11_Poiss.pdf_tex}
+\caption{Poissonova porazdelitev verjetnosti za tri različne vrednosti $\overline{N}$.}
+\label{11_Poiss}
+\end{figure}
+\begin{definition}
+Pokaži, da je vrh Poissonove porazdelitve (enačba~\ref{Poisson}) pri $N \approx \overline{N}$
+in varianca $\overline{(N-\overline{N})^2} = \overline{N^2}-\overline{N}^2 = \overline{N}$.
+\label{nal:Poiss}
+\end{definition}
+Odstopanje števila fotonov v danem časovnem intervalu od povprečne vrednosti $\Delta N = N-\overline{N}$ 
+je v povprečju seveda enako nič, zato sta bolj merodajna varianca, ki je enaka (glej nalogo~\ref{nal:Poiss})
+\beq
+\sigma^2 = \overline{(N-\overline{N})^2} = \overline{\Delta N^2} = \overline{N},
+\eeq
+in standardni odklon
+\beq
+\sigma = \sqrt{\overline{(N-\overline{N})^2}} = \sqrt{\overline{\Delta N^2}} = \sqrt{\overline{N}}.
+\eeq
+Vidimo, da šum (standardni odklon) narašča z naraščajočim $\overline{N}$. Vendar nas absolutni 
+šum večinoma ne zanima, saj je pri detekciji svetlobe ključno razmerje signal proti šumu \footnote{Za to 
+razmerje se navadno uporablja oznako $S/N$. Tukaj smo jo zaradi jasnosti zamenjali s 
+$S/\check{S}$, saj $N$ označuje število fotonov oziroma
+elektronov.}
+\beq
+\frac{S}{\check{S}} = \frac{\overline{N}}{\sigma} = \sqrt{\overline{N}}.
+\eeq
+Relativni šum torej z naraščajočim svetlobnim tokom pojema. Za primer poglejmo dva primera detekcije. 
+V prvem je povprečno število vpadlih fotonov na dan časovni interval $10^6$, v drugem pa le $100$. 
+Pri vpadu močnejšega signala na detektorju zaznavamo $10^6 \pm 1000$ fotonov, pri vpadu šibkejšega
+pa $100 \pm 10$. Čeprav je absolutni šum v prvem primeru znatno večji, je relativni šum stokrat manjši.
+Za zmanjšanje šuma štetja mora biti torej signal kar se da velik. 
+
+\begin{remark}
+Razmerje signal proti šumu lahko vpeljemo na dva načina. Lahko ga vpeljemo, kot 
+smo ga vpeljali mi ($\overline{N}/\sigma$), pri čemer gre za razmerje signala električnega toka (ali 
+električne napetosti) proti šumu. Drug način je kot $\overline{N}^2/\sigma^2$, pri čemer gre za razmerje
+moči signala proti šumu. 
+\end{remark}
+
+Zapišimo zdaj izhodni električni tok iz detektorja. 
+
+
 
 
 Pmin = pnep sqrt delta nu b.
-
-Shot Noise / Photon Noise: 
-Due to random fluctuations in the light.
-[Brighter/Better Light = less shot noise]
 
 Dark Current Noise: 
 The rate at which electrons are produced due to 
@@ -941,20 +995,15 @@ Errors coming from the A/D conversion process
 [Use a better ADC = less quantization nois
 
 
+
+Do šuma prihaja v vseh korakih detekcije: zaradi diskretne narave fotonov, končnega kvatnega 
+izkoristka fotodetektorja, ojačanja signala in elektronskih komponent v vezju.
+
 Sama občutljivost nekega detektorja, to je količina A/W za neko fotodiodo, nam ne pove, kolikšen 
 je najmanjši signal, ki ga je mogoče meriti. Ta je določen s šumom detektorja in pa s časom 
 meritve, to je s frekvenčno širino modulacije svetlobe, ki jo želimo meriti. Največja 
 možna frekvencčna širina je seveda določena s hitrostjo odziva detektorja.
 
-Ocenimo fluktuacije, torej šum, toka nekega detektorja, na primer fotodiode. V času
-meritve $\tau$ steče $n$ elektronov. Tok je torej
-\beq
-I = ne/\tau.
-\eeq
-Povprečni tok je seveda
-\beq
-\overline{I} = \overline{n}e/\tau.
-\eeq
 Napravimo mnogo meritev, vse dolge $\tau$. Ker so posamezni foto dogodki med seboj neodvisni, 
 lahko predpostavimo, da je porazdelitev pretečenih elektronov Poissonova: pa lahko izračunamo
 povprečni kvadrat fluktuacij toka
