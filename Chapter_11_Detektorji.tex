@@ -890,8 +890,8 @@ opisano zgoraj.
  
 \section{Šum pri optični detekciji}
 Pri detekciji svetlobe je vedno prisoten šum. Beseda šum označuje naključne 
-fluktuacije na izhodu iz detektorja, ki jih ne moremo ločiti od signala, in 
-pridejo do izraza predvsem pri zaznavanju šibkih signalov svetlobe. 
+fluktuacije na izhodu iz detektorja, ki jih ne moremo ločiti od signala. Do izraza 
+pridejo predvsem pri zaznavanju šibkih signalov svetlobe. 
 Z različnimi pristopi lahko šum zmanjšamo, povsem ga pa ne moremo nikoli odpraviti.
 Tako pri vsaki meritvi obstaja neka najmanjša vpadna moč svetlobe, ki 
 jo še lahko ločimo od šuma, pod to vrednostjo pa se signal v šumu izgubi
@@ -918,16 +918,18 @@ in
 
 \subsection*{Šum štetja} 
 Ko govorimo o gostoti svetlobnega toka oziroma vpadni moči svetlobe na danem detektorju, 
-ne smemo pozabiti, da je svetloba sestavljena iz posameznih fotonov: enkrat vpade več
-fotonov, drugič manj. Moč, o kateri govorimo, je dejansko povprečna moč $\overline{P}$ in število 
+ne smemo pozabiti, da je svetloba sestavljena iz posameznih fotonov: enkrat jih vpade malo
+več, drugič malo manj. Moč, o kateri govorimo, je dejansko povprečna moč $\overline{P}$ in število 
 vpadlih fotonov na časovno enoto je povprečna vrednost števila vpadlih fotonov na časovno enoto
 $\overline{n}_F = \overline{P}/h\nu$. 
 Povprečno število fotoelektronov, ki se pojavijo v časovnem intervalu $\tau$, je tako
 \beq
 \overline{n} = \frac{\overline{N}}{\tau} = \frac{\overline{P}}{h \nu},
 \eeq
-pri čemer smo privzeli, da ima detektor popoln kvantni izkoristek. Ker gre pri vpadu fotonov 
-za diskretne in neodvisne procese, verjetnost, da v intervalu dolžine $\tau$ vpade
+pri čemer smo privzeli, da ima detektor popoln kvantni izkoristek, sicer bi morali izraz 
+pomnožiti še z $\eta$. Ker gre pri vpadu fotonov 
+za diskretne in neodvisne procese, verjetnost, da v intervalu dolžine (času merjenja) 
+$\tau$ vpade
 $N$ fotonov, opišemo s Poissonovo porazdelitvijo (slika~\ref{11_Poiss}).
 Verjetnost, da bomo v času $\tau$ zaznali $N$ fotoelektronov, je tako
 \beq
@@ -947,40 +949,62 @@ Pokaži, da je vrh Poissonove porazdelitve (enačba~\ref{Poisson}) pri $N \appro
 in varianca $\overline{(N-\overline{N})^2} = \overline{N^2}-\overline{N}^2 = \overline{N}$.
 \label{nal:Poiss}
 \end{definition}
-Odstopanje števila fotonov v danem časovnem intervalu od povprečne vrednosti $\Delta N = N-\overline{N}$ 
-je v povprečju seveda enako nič, zato sta bolj merodajna varianca, ki je enaka (glej nalogo~\ref{nal:Poiss})
+Število fotonov, ki vpadejo na detektor v danem časovnem intervalu, označimo z $\Delta N = N-\overline{N}$.
+V povprečju je ta vrednost seveda enaka nič, zato sta bolj merodajni količini varianca, 
+ki je enaka (glej nalogo~\ref{nal:Poiss})
 \beq
-\sigma^2 = \overline{(N-\overline{N})^2} = \overline{\Delta N^2} = \overline{N},
+\sigma^2 = \overline{\Delta N^2}= \overline{(N-\overline{N})^2} = \overline{N},
+\label{varianca}
 \eeq
 in standardni odklon
 \beq
-\sigma = \sqrt{\overline{(N-\overline{N})^2}} = \sqrt{\overline{\Delta N^2}} = \sqrt{\overline{N}}.
+\sigma = \sqrt{\overline{\Delta N^2}} = \sqrt{\overline{N}}.
+\label{sigma}
 \eeq
-Vidimo, da šum (standardni odklon) narašča z naraščajočim $\overline{N}$. Vendar nas absolutni 
-šum večinoma ne zanima, saj je pri detekciji svetlobe ključno razmerje signal proti šumu \footnote{Za to 
-razmerje se navadno uporablja oznako $S/N$. Tukaj smo jo zaradi jasnosti zamenjali s 
-$S/\check{S}$, saj $N$ označuje število fotonov oziroma
-elektronov.}
+Standardni odklon, ki predstavlja šum, torej narašča z naraščajočim $\overline{N}$. 
+Vendar nas absolutni šum večinoma ne zanima, saj je pri detekciji svetlobe ključno razmerje 
+signal proti šumu, ki ga označimo s $SNR$ ({\it Signal to Noise Ratio}-- razmerje med signalom in šumom)
+\footnote{Pogosto se uporablja tudi oznako $S/N$. Tukaj smo jo 
+zaradi jasnosti zamenjali, saj $N$ označuje število fotonov oziroma elektronov.}.
 \beq
-\frac{S}{\check{S}} = \frac{\overline{N}}{\sigma} = \sqrt{\overline{N}}.
+SNR = \frac{\overline{N}}{\sigma} = \sqrt{\overline{N}}.
 \eeq
-Relativni šum torej z naraščajočim svetlobnim tokom pojema. Za primer poglejmo dva primera detekcije. 
-V prvem je povprečno število vpadlih fotonov na dan časovni interval $10^6$, v drugem pa le $100$. 
+Vidimo, da razmerje signal proti šumu narašča z naraščajočim svetlobnim tokom, torej relativni šum
+pojema. Za primer poglejmo dva primera detekcije. 
+V prvem je povprečno število vpadlih fotonov v danem časovnem intervalu $10^6$, v drugem pa le $100$. 
 Pri vpadu močnejšega signala na detektorju zaznavamo $10^6 \pm 1000$ fotonov, pri vpadu šibkejšega
 pa $100 \pm 10$. Čeprav je absolutni šum v prvem primeru znatno večji, je relativni šum stokrat manjši.
 Za zmanjšanje šuma štetja mora biti torej signal kar se da velik. 
 
 \begin{remark}
-Razmerje signal proti šumu lahko vpeljemo na dva načina. Lahko ga vpeljemo, kot 
-smo ga vpeljali mi ($\overline{N}/\sigma$), pri čemer gre za razmerje signala električnega toka (ali 
-električne napetosti) proti šumu. Drug način je kot $\overline{N}^2/\sigma^2$, pri čemer gre za razmerje
-moči signala proti šumu. 
+Razmerje signal proti šumu $SNR$ lahko vpeljemo na dva načina. Prvi je ta, ki smo ga uporabili mi, pri 
+katerem velja $SNR = \overline{N}/\sigma = \sqrt{\overline{N}}$. V tem primeru gre za $SNR$ 
+optične moči oziroma števila fotonov ali elektronov in s tem povezanega električnega toka. 
+Lahko pa vpeljemo tudi $SNR_e$ električne moči, ki je, zaradi kvadratne zveze med električno močjo in 
+električnim tokom, enak $SNR_e=SNR^2=\overline{N}$.
 \end{remark}
 
-Zapišimo zdaj izhodni električni tok iz detektorja. 
-
-
-
+Zapišimo zdaj fluktuacije izhodnega električnega toka iz detektorja, pri čemer upoštevajmo 
+enačbo~(\ref{varianca})
+\beq
+\overline{\Delta I^2}=\overline{(I-\overline{I})^2} = \overline{(N-\overline{N})^2}\,\frac{e_0^2}{\tau^2} = 
+\overline{N}\,\frac{e_0^2}{\tau^2}= \overline{I}\,\frac{e_0}{\tau}.
+\eeq
+Vpeljemo še pasovno širino detekcije $\Delta\nu_B = 1/(2\tau)$ in dobimo
+\boxeq{11:sum}{
+\overline{\Delta I^2} = 2 \overline{I}\,e_0\, \Delta\nu_B.
+}
+Razmerje signala proti šumu potem zapišemo kot
+\beq
+SNR = \frac{\overline{I}}{\sqrt{\overline{\Delta I^2}}}= \frac{\overline{I}}{\sqrt{2 \overline{I}\,e_0\, \Delta\nu_B}} 
+\eeq
+Zanima nas vrednost vpadne moči svetlobe, pri kateri je šum enako velik signalu
+To se zgodi pri vpadni moči $P_{\mathrm NEP}$, pri čemer NEP pomeni {\it noise-equivalent-power} 
+-- moč, ki ustreza šumu.
+Zapišemo jo kot
+\beq
+P_{\mathrm NEP} = 
+\eeq
 
 Pmin = pnep sqrt delta nu b.
 
