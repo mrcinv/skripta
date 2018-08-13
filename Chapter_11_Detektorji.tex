@@ -929,12 +929,15 @@ Poissonova porazdelitev (slika~\ref{11_Poiss}). Verjetnost, da v času $\tau$, k
 p(N) = \frac{\overline{N}^N e^{-\overline{N}}}{N!},
 \label{Poisson}
 \eeq
-pri čemer je povprečno število vpadlih fotonov v tem časovnem intervalu enako $\overline{N} = \overline{n}\tau$.
+pri čemer je povprečno število vpadlih fotonov v tem časovnem intervalu 
+enako $\overline{N} = \overline{n}\tau$.
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/11_poisson.pdf_tex}
-\caption{Poissonova porazdelitev verjetnosti za tri različne vrednosti $\overline{N}$.}
+\caption{Poissonova porazdelitev verjetnosti za $\overline{N}=2$ (modra), 
+$\overline{N}=5$ (rdeča) in $\overline{N}=10$ (zelena). Porazdelitev je 
+diskretna, črta je zgolj vodilo.}
 \label{11_Poiss}
 \end{figure}
 
@@ -1017,15 +1020,16 @@ tem povezanega električnega toka. Lahko pa vpeljemo tudi $SNR_e$ električne mo
 zaradi kvadratne zveze med električno močjo in električnim tokom, enak $SNR_e=SNR^2=\overline{N}$.
 \end{remark}
 
-
 \subsection*{Termični šum} 
-Termični šum imenujemo tudi Johnsonov ali Nykvistov ali Johnson-Nyquistov šum. 
-Ta šum je najpogosteje omejujoči šum pri detekciji. Do njega pride zaradi 
+Termični šum imenujemo tudi Johnsonov\footnote{Švedsko-ameriški elektroinženir in fizik 
+John Bertrand Johnson, 1887--1970.} ali Nykvistov\footnote{Švedsko-ameriški elektroinženir
+Harry Nyquist, 1889--1976.} ali Johnson-Nyquistov šum. 
+Do njega pride zaradi 
 termično vzbujenega naključnega gibanja elektronov v uporniku z upornostjo $R$, 
 ki neposredno spremenijo električni tok oziroma električno napetost. 
 Termični šum nastaja samo v uporniških elementih sistema, saj le ti lahko
 sprejemajo in oddajajo energijo, kapacitivni in induktivni elementi
-ne ustvarjajo termičnega šuma.
+ne ustvarjajo termičnega šuma. Termični šum je najpogosteje omejujoči šum pri detekciji.
 
 steče tok, tudi če ni napetosti. V povprečju je nič, varianca pa ni.
 je pravzaprav šum štetja. 
