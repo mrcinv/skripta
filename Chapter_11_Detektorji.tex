@@ -892,15 +892,16 @@ opisano zgoraj.
 Pri vsakršni detekciji svetlobe je vedno prisoten tudi šum. Beseda šum označuje naključne 
 fluktuacije na izhodu iz detektorja, ki jih ne moremo ločiti od signala. Z različnimi 
 pristopi lahko šum zmanjšamo, povsem ga pa ne moremo nikoli odpraviti. Obravnava 
-šuma je zato najbolj pomembna pri zaznavanju šibkih signalov svetlobe. Pri tem je pomemben
+šuma je zato najbolj pomembna pri zaznavanju šibkih signalov svetlobe. Pri tem je ključen
 parameter najmanjša moč vpadne svetlobe, ki jo še lahko ločimo od šuma, pod to vrednostjo 
 pa se signal v šumu izgubi (slika~\ref{11_sum}).
-
 \begin{figure}[h]
 \centering
-\def\svgwidth{80truemm} 
-%\input{slike/11_sum.pdf_tex}
-\caption{Šum.}
+\def\svgwidth{140truemm} 
+\input{slike/11_sum.pdf_tex}
+\caption{Če je signal velik v primerjavi s šumom, ga na detektorju lahko zaznamo (zgoraj). 
+Pod določeno vrednostjo postane velikost signala primerljiva s šumom in signala ne zaznamo več
+(spodaj).}
 \label{11_sum}
 \end{figure}
 
@@ -914,8 +915,8 @@ emisijo elektronov in
 \end{enumerate}
 
 \subsection*{Šum štetja} 
-Ko govorimo o vpadni moči svetlobe na danem detektorju, ne smemo pozabiti, da 
-je svetloba sestavljena iz fotonov. Fotoni vpadajo na detektor posamezno in enkrat jih vpade malo več, 
+Ko govorimo o svetlobi, ne smemo pozabiti, da je svetloba sestavljena iz diskretnih fotonov. 
+Fotoni vpadajo na detektor posamezno in enkrat jih vpade malo več, 
 drugič malo manj. Vpadna moč je zato dejansko povprečna moč $\overline{P}$ in število 
 vpadlih fotonov na časovno enoto je povprečna vrednost števila vpadlih fotonov na časovno enoto
 \beq
@@ -931,8 +932,8 @@ p(N) = \frac{\overline{N}^N e^{-\overline{N}}}{N!},
 pri čemer je povprečno število vpadlih fotonov v tem časovnem intervalu enako $\overline{N} = \overline{n}\tau$.
 \begin{figure}[h]
 \centering
-\def\svgwidth{80truemm} 
-%\input{slike/11_Poiss.pdf_tex}
+\def\svgwidth{90truemm} 
+\input{slike/11_poisson.pdf_tex}
 \caption{Poissonova porazdelitev verjetnosti za tri različne vrednosti $\overline{N}$.}
 \label{11_Poiss}
 \end{figure}
