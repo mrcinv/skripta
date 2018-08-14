@@ -5,6 +5,23 @@ Za začetek osvežimo osnove teorije elektromagnetnega polja in elektromagnetneg
 Obnovili bomo zapis Maxwellovih enačb, opisali osnovne pojave valovanja (lom, odboj in uklon)
 in si ogledali razširjanje svetlobe v anizotropnih snoveh. 
 
+
+% Skozi celotno obravnavno svetlobe se bomo posluževali 
+% takih in drugačnih približkov. Tako bomo na primer pri obravnavi elektro-optičnih
+% pojavov pogosto uporabili približek ravnega vala. Za pojave, kjer vektorska narava 
+% elektromagnetnega valovanja ni ključnega pomena, bomo uporabili skalarno valovno teorijo. 
+% Kjer ne bo posebej omenjeno, bomo najpogosteje obravnavali homogeno izotropno snov, ki 
+% se linearno odziva na zunanje motnje. Sledila pa bodo cela poglavja, posvečena nelinearnim 
+% optičnim pojavom v snovi. \\
+% 
+% Svetlobo bomo torej opisali z elektromagnetnim valovanjem,
+% pri tem pa se moramo zavedati, da svetlobo lahko opišemo tudi s tokom
+% delcev - fotonov. Za pojave, kjer je kvantna narava svetlobe pomembna,
+% kot je recimo v fiziki laserjev, se moramo zateči h kvantni optiki.
+% Nekaj osnov kvantne optike bomo vpeljali kasneje, začnimo pa s
+% klasično obravnavo svetlobe - valovno enačbo za elektromagnetno polje.
+
+
 \section{Maxwellove enačbe}
 Elektromagnetno polje v praznem prostoru opišemo z dvema vektorskima
 poljema, električnim in magnetnim, ki sta v splošnem funkciji prostora
@@ -129,8 +146,8 @@ Poyntingovega vektorja \index{Gostota energijskega toka}
 \beq
 j=\left\langle \mathbf{\mathbf{S}}\cdot\mathbf{\hat{n}}\right\rangle.
 \eeq
-Gostoti energijskega toka, predvsem gostoti svetlobnega toka, pravimo tudi intenziteta
-\index{Intenziteta|see {Gostota energijskega toka}}.
+Gostoti energijskega toka, predvsem gostoti svetlobnega toka, pravimo tudi 
+intenziteta\index{Intenziteta|see {Gostota energijskega toka}}.
 
 \begin{definition}[Poyntingov teorem]
 Iz Maxwellovih enačb izpelji kontinuitetno enačbo v odsotnosti električnih tokov
@@ -234,22 +251,21 @@ Vektorja jakosti električnega in magnetnega polja zadostujeta
 Maxwellovim enačbam (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}), iz česar sledi,
 da sta polji vedno medsebojno pravokotni, 
 hkrati pa pravokotni na valovni vektor $\mathbf{k}$. Elektromagnetno valovanje je torej
-transverzalno valovanje.
+transverzalno valovanje. 
+Zaradi enolične zveze med električnim in magnetnim poljem zadošča
+za opis ravnega vala le eno polje, navadno se odločimo za električno.
 
 \begin{definition}
 \label{naloga-TEM-ortogonalnost}
 Pokaži, da za ravni val vedno velja $\mathbf{D} \perp \mathbf{k}$ in 
-$\mathbf{B} \perp \mathbf{k}$. Izpelji še pravokotnost polj in valovnega vektorja
-v izotropni snovi 
+$\mathbf{B} \perp \mathbf{k}$. Izpelji še zvezi
 \begin{align}
 \mathbf{k}\times\mathbf{H}_{0} & =-\omega\epsilon\epsilon_{0}\mathbf{E}_{0}\label{eq:TEM-pogoj1}\
 \quad \mathrm{in}\\
-\mathbf{k}\times\mathbf{E}_{0} & =\omega\mu\mu_{0}\mathbf{H}_{0}.\label{eq:TEM-pogoj2}
+\mathbf{k}\times\mathbf{E}_{0} & =\omega\mu\mu_{0}\mathbf{H}_{0}\label{eq:TEM-pogoj2},
 \end{align}
+iz katerih izhaja pravokotnost polj in valovnega vektorja v izotropni snovi.
 \end{definition}
-
-Zaradi enolične zveze med električnim in magnetnim poljem zadošča
-za opis ravnega vala le eno polje, navadno se odločimo za električno.
 
 Energijski tok je pri ravnem valu v izotropni snovi vedno v smeri valovnega vektorja, pravokotno
 na valovne fronte. Iz definicije za gostoto svetlobnega toka (enačbi \ref{eq:jReS}) 
@@ -901,7 +917,7 @@ zato lahko uporabimo kot polarizacijski delilnik žarkov.
 \def\svgwidth{140truemm} 
 \input{slike/01_FotoDvolom.pdf_tex}
 \caption{Dvojni lom v kristalu kalcita (islandski dvolomec). \index{Kalcit}
-Z linearnimi polarizatorji pokažemo, da sta lomljena žarka različnih
+Z linearnim polarizatorjem pokažemo, da sta lomljena žarka različnih
 polarizacij.}
 \label{foto:dvolom}
 \end{figure}

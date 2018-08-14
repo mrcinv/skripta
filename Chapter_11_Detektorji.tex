@@ -1023,110 +1023,101 @@ zaradi kvadratne zveze med električno močjo in električnim tokom, enak $SNR_e
 \subsection*{Termični šum} 
 Termični šum imenujemo tudi Johnsonov\footnote{Švedsko-ameriški elektroinženir in fizik 
 John Bertrand Johnson, 1887--1970.} ali Nykvistov\footnote{Švedsko-ameriški elektroinženir
-Harry Nyquist, 1889--1976.} ali Johnson-Nyquistov šum. 
-Do njega pride zaradi 
-termično vzbujenega naključnega gibanja elektronov v uporniku z upornostjo $R$, 
-ki neposredno spremenijo električni tok oziroma električno napetost. 
+Harry Nyquist, 1889--1976.} ali Johnson-Nyquistov\footnote{Johnson je bil leta 1928 prvi, 
+ki je pojav opazoval, Nyquist pa kmalu za eksperimentom podal teoretično razlago.} šum. 
+Do njega pride zaradi termično vzbujenega naključnega gibanja elektronov. Ti premiki
+na danem uporniku povzročijo majhne kratkotrajne fluktuacije v napetosti, napetost
+v povprečju pa seveda ostaja enaka nič.  
 Termični šum nastaja samo v uporniških elementih sistema, saj le ti lahko
-sprejemajo in oddajajo energijo, kapacitivni in induktivni elementi
-ne ustvarjajo termičnega šuma. Termični šum je najpogosteje omejujoči šum pri detekciji.
+sprejemajo in oddajajo energijo, v kapacitivnih in induktivnih elementih pa ne.
+Izkaže se, da je termični šum najpogosteje omejujoči šum pri detekciji.
 
-steče tok, tudi če ni napetosti. V povprečju je nič, varianca pa ni.
-je pravzaprav šum štetja. 
+Načinov izpeljave termičnega šuma na uporniku je več. Najpogostejša 
+je izpeljava na tokokrogu z dvema enakima upornikoma, ki sta v ravnovesju
+pri temperaturi $T$\footnote{H. Nyquist, Phys. Rev. {\bf 32}, 110 (1928).}. 
+Ko se na uporniku pojavi termična napetost, steče skozi drugi upornik električni 
+tok in na njem se porabi elektična moč. Prenos energije z enega upornika
+na drug lahko razumemo kot elektromagnetno valovanje, prenešena moč pa
+je v ravnovesju enaka porabljeni moči. Naj bo karakterstična impedanca
+žic enaka $R$, tako da ne pride do odboja, ampak se val v celoti absorbira.
 
-Energija termičnega šuma je določena s sevanjem črnega telesa. Pri temperaturi T, 
-termični šum na frekvenčnem indtervalu $d\nu$ okoli frekvence $\nu$,
-je
+Zaradi periodičnosti velja za potujoče valove zveza $L = m \lambda$
+oziroma $k = m 2\pi/L$. Število elektromagnetnih valov $N$ v frekvenčnem intervalu 
+$\Delta\nu_B$ je potem 
 \beq
-P(\nu)d\nu = \frac{4 h \nu}{e^{h\nu/kT}-1}d\nu.
+\frac{N}{\Delta\nu_B} = \frac{L}{c},
 \eeq
-Običajno je pri fotodetektorjih $\nu\ll kT/h$ in je frekvenčna odvisnost zanemarljiva. 
-Ostane 
+pri čemer je $c$ hitrost valovanja. Posamezne potujoče valove lahko obravnavamo
+tudi kot veliko število vzbujenih fotonov z energijo $Nh\nu$. Za njih velja Boltzmannova
+porazdelitev, povprečna energija enega vala pa je 
 \beq
-P(\nu)d\nu \approx 4 kT\, d\nu.
+\overline{E}(\nu) = \frac{h \nu}{e^{h\nu/kT}-1}.
 \eeq
-Upoštevajoč pasovno širino detekcije je
+Povprečna moč, ki jo prejema drug upornik, je
 \beq
-P = 4 kT\, \Delta\nu_B.
+\overline{P} = N \frac{\overline{E}}{L/c}= \frac{h \nu \Delta \nu_B}{e^{h\nu/kT}-1}
+\approx kT \Delta \nu_B.
 \eeq
-Zapisali smo moč, ki se porablja na uporniku. Če želimo rezultat primerjati z
-dosedanjimi, ga prevedemo na tok in dobimo
+Moč je po drugi strani enaka
 \beq
-\sqrt{\overline{\Delta I^2}} = \sqrt{\frac{4 kT \Delta \nu_B}{R}}.
+P = \overline{\Delta I}^2\,R = \frac{\overline{\Delta U^2}}{4R},
 \eeq
-
-To je tok, ki teče, tudi, če ni napetosti. 
-Je fundamentale in se ga ne moremo nikoli povsem znebiti. Lahko ga zmanjšamo 
-s hlajenjem upornika. 
-Upor je upornost detektorja in vezja, preko katerega zaznavamo signal. 
-
-tipično hitri detektorji 50 ohm. 
-
-Šum zmanjšamo, če povečamo upor, ampak na ta način zmanjšamo hitrost odziva detektorja. 
-
-Lahko pa povečujemo upor, da zmanjšamo $i^2$, ampak s tem upočasnimo RC vezja. 
-DOločimo spektralno širino oziroma tau, potem pa iz tega vzamemo največju možni  upor. 
-Če odčitavamo napetost, naj bo upor čim manjši. Ampak signal se zmanjša. 
+saj je $I=U/2R$. Od tod sledi
+\boxeq{11:termicni}{
+\overline{\Delta U^2}  = 4 kTR \Delta \nu_B.
+}
+Šum lahko zapišemo tudi za tok, če namesto zaporedno vezanega virtualnega 
+izvira napetosti vzporedno vežemo virtualni izvor. Dobimo
+\boxeq{11:termicni}{
+\sqrt{\overline{\Delta I^2}}  = \sqrt{\frac{4 kT\Delta \nu_B}{R}}.
+}
+Termični šum je torej odvisen od temperature in od upornosti detektorja oziroma
+vezja, preko katerega zaznavamo signal. Zmanjšamo ga lahko s hlajenjem upornika
+ali s povečanjem upornosti, vendar na ta način zmanjšamo hitrost odziva detektorja. 
+Tipične upornosti hitrih detektorjev so tako $R \sim 50~\si{\ohm}$. Termičnega
+šuma povsem ne moremo nikoli odpraviti. 
 
 \subsection*{Šum temnega toka} 
-Večina detektorjev ima nek majhen DC tok tudi v odsotnosti svetlobe. 
-To je temni tok, zaradi spontanega nastanka elektron-vrzel ali spontane emisije elektonov.
-(termični vpliv)
-Podobno kot so bili vpadli fotoni disketni in smo dobili šum štetja fotonov, gre tukaj
-za šum štetja elektronov. Ker nakjlučno prihajajo, je temni tok naključno zašumljen. Silicij 
-ima najnižji temni tok, germanij ima večjega, zato tudi več šuma. Tok odvisen od napetosti
-reverse bias in temperature.
-
-Je pravzaprav šum štetja
-
-KO random nastane fotoelektron, tega signala ne moremo ločiti of signala, ki ga povzroča
-vpadna svetloba. Ta signal vidimo, tudi ko je detektor v popolni temi, zato mu rečemo
-temni tok. 
-
-Temni tok prispeva k DC premiku signalnega toka. Razen za DC meritve, ga lahko odfiltriramo.
-Problem ostane v šumu, ki ga ustvarja. Ker je varianca šuma povprečno število nosilcev
- naboja, se varianci tih dveh prispevkov seštejeta. 
+Natančna opazovanja pokažejo, da na večini detektorjev zaznamo nek majhen izhodni 
+signal tudi v odsotnosti svetlobe. To je temni tok, do katerega pride zaradi
+spontanega nastanka para elektron-vrzel ali spontane emisije elektronov 
+(glej enačbo~\ref{11:dioda}). Izraza za temni tok tukaj ne bomo izpeljevali,
+povejmo le, da je sorazmeren s površino diode in 
+eksponentno odvisen od temperature in energijske reže polprevodnika 
 \beq
-\sqrt{\overline{\Delta I^2}} = \sqrt{2\overline{I}_t\, e_0\, \Delta \nu_B}.
+I_0 = j_0\, S\, e^{-E_g/kT}.
 \eeq
-
-GLEJ Pollock, šum zaradi nastanka para in šum zaradi difuzije. pri končnih temperaturah
-grejo lahko čez bariero. Brez bias napetosti, je v povprečju to enako nič. Ko napetost,
-se spremeni bariera višina njena  in zato jih gre več v eno smer kot v drugo. Dobimo enačbo diode.
-Tudi če ni toka, je pa šum. TOtal shot notise je vstoa 
+Zaradi diskretne narave elektronov se -- podobno
+kot v primeru diskretnih vpadnih fotonov -- tudi tukaj pojavi šum štetja, le da tukaj 
+namesto povprečne vrednosti signala zaradi vpadle svetlobe nastopa temni tok. 
+Enačbo (11:sum) zato zapišemo kot 
+\boxeq{11:dark}{
+\sqrt{\overline{\Delta I^2}} = \sqrt{2 I_0\,e_0\, \Delta\nu_B}.
+}
+Manjši šum je torej pri detektorjih, ki imajo manjši temni tok, na primer pri silicju. 
+Germanij ima v splošnem večji temni tok in zato tudi več šuma temnega toka. Pomembno
+vlogo pa ima tudi temperatura, saj v temnem toku nastopa v eksponentu, in lahko 
+s hlajenjem šum temnega toka znatno zmanjšamo. 
 
 \subsection*{Šum zaradi sevanja ozadja}
-Do tega šuma pride zaradi sevanja črnega telesa pri končni temperaturi. Spekter sevanja
-opisuje Planckov zakon (enačba~\ref{}). Z naraščajočo temperaturo telesa se 
-spektralni vrh pomika k nižjim valovnim dolžinam in s tem v infrardeče ali celo vidno območje.
-Največji problem predstavlja pri meritvah v območju okoli $10$--$30~\si{\micro\meter}$, 
-kjer še telesa pri sobni temperaturi oddajajo znatno sevanje. Zato takim 
-detektorjem zmanjšamo aperturo na najmanjšo možno, poleg tega jih pogosto
-izoliramo od okolice in hladimo. 
+Kot že ime pove, pride do tega šuma zaradi sevanja ozadja pri končni temperaturi. 
+Okolico obravnavamo kot črna telesa in spekter njihovega sevanja opisuje Planckov 
+zakon (enačba~\ref{eq:Planck}). Z naraščajočo temperaturo telesa se 
+spektralni vrh pomika k nižjim valovnim dolžinam in s tem v infrardeče ali celo 
+vidno območje. Največji problem predstavlja sevanje ozadja zato pri meritvah v
+območju okoli $10$--$30~\si{\micro\meter}$, kjer še telesa pri sobni temperaturi 
+znatno sevajo. Detektorjem za infrardečo svetlobo zato pogosto zmanjšamo aperturo 
+na najmanjšo možno, poleg tega jih izoliramo od okolice in hladimo. 
 
 Sevanje ozadja je neodvisno od vpadnega signala. Ker detektor ne loči fotonov, ki 
-vpadejo od signala in ozadja, se prispevek ozadja prišteje signalu. Šum štetja se tako
-poveča na
+vpadejo nanj kot signal in tistih, ki vpadejo nanj iz ozadja, se prispevek ozadja 
+kar prišteje signalu. Šum štetja (enačba~\ref{11:sum}) se tako poveča na
 \beq
 \sqrt{\overline{\Delta I^2}} = \sqrt{\frac{2 \eta e_0^2\, \Delta\nu_B}{h\nu}\,
 \overline{\left( P + P_o \right)}},
+\label{11:ozadje}
 \eeq
 pri čemer $P_o$ označuje moč vpadne svetlobe iz ozadja.
-
-Pravzaprav so trije šumi štetja: fotonov, ozadja in temni tok. Ti se seštejejo s kvadrati
-oziroma povprečje tokov linearno. Dodamo še termični. 
-
-
-Kombinacija šumov. Seštejemo kvadrate vseh prispevkov in dobimo
-$\overline{\Delta I^2} = \overline{\Delta I^2}_{stetja} + \overline{\Delta I^2}_{termicni}
-+ \overline{\Delta I^2}_{temni tok} + \overline{\Delta I^2}_{sevanje}$.
-Izpiši jih in 2ei + 2ei + 2ei + 4kt/R faktor in B. Shot smo zanemarili, ker majhen. 
-Ozadje nad 3 mikrone. ponavadi je največji termični. 
-
-Signal to noise. vsi prispevki so konstantni, razen shot noise, ki vključuje tudi ozadje. 
-Pri majhnih intenzitetah je shot majhen in skupen šum konstanten, zato SNR narašča
-linearno z intenziteto, ko doseže mejo šuma štetja, pa postane korenska odvisnost, ker 
-so ostali prispevki majhni. 
 
 \begin{remark}
  V detektorjih, kjer pride do notranjega ojačevanja (npr. fotopomnoževalka ali plazovna fotodioda), 
@@ -1137,6 +1128,37 @@ so ostali prispevki majhni.
  Tipična vrednost je okoli 1,5-2, lahko pa doseže vrednosti tudi nad 10.
 \end{remark}
 
+\subsection*{Seštevanje šumov}
+Spoznali smo, da je več vrst šuma, ki so pri različnih pogojih različno pomembni. 
+V splošnem lahko vse prispevke združimo v skupni šum, pri čemer seštevamo kvadrate
+odstopanj
+\beq
+\overline{\Delta I^2} = \overline{\Delta I^2}_{\check{s}tetja} + \overline{\Delta I^2}_{termi\check{c}ni}
++ \overline{\Delta I^2}_{temni} + \overline{\Delta I^2}_{ozadje}.
+\eeq
+Če vstavimo izraze za tokove (enačbe~\ref{11:sum}, \ref{11:termicni}, \ref{11:dark}
+in \ref{11:ozadje}), sledi
+\boxeq{skupensum}{
+\overline{\Delta I^2} = \left( 2 \overline{I}\,e_0 + 2 I_0\,e_0
++ 2 I_o\,e_0 + \frac{4 kT}{R} \right) \Delta\nu_B.
+}
+Kot že omenjeno, navadno prevlada termični šum nad ostalimi. Izjema je detekcija v
+infrardečem območju, kjer pomembno vpliva šum ozadja, in pri zelo nizkih intenzitetah 
+vpadne svetlobe, ko pride do izraza šum štejta. 
+
+Če pogledamo izraz za razmerje signala proti šumu
+\beq
+SNR = \frac{\overline{I}}{\left( 2 \overline{I}\,e_0 + 2 I_0\,e_0
++ 2 I_o\,e_0 + \frac{4 kT}{R} \right) \Delta\nu_B},
+\eeq
+vidimo, da so vsi prispevki v imenovalcu neodvisni od intenzitete vpadne svetlobe
+razen šuma štetja. Le-ta je pri majhnih intenzitetah majhen in celoten šum 
+zato praktično konstanten. V tem primeru $SNR$ narašča kar linearno z intenziteto
+vpadne svetlobe. Pri velikih intenzitah šum štetja prevlada nad ostalimi prispevki
+in odvisnost $SNR$ od intenzitete postane korenska. 
+
+
+
 Primer: silicijeva fotodioda je upor 50 ohmov in reverce voltage -5V. širina je 150 MHz. 
 temni tok je 10 nA pri 300 K. vpada svetloba 1 mW pri 850 nm. Fotocurrent je 411 mikroamperov. 
 
@@ -1144,25 +1166,7 @@ temni tok je 10 nA pri 300 K. vpada svetloba 1 mW pri 850 nm. Fotocurrent je 411
 
 Pmin = pnep sqrt delta nu b.
 
-Every 8
-C = Dark noise doubles.
-[cooler camera = less dark noise]
 
-Do šuma prihaja v vseh korakih detekcije: zaradi diskretne narave fotonov, končnega kvatnega 
-izkoristka fotodetektorja, ojačanja signala in elektronskih komponent v vezju.
-
-Najmanjši povprečni tok diode je tok zaradi
-termičnega vzbujanja, s tem je seveda po enačbi določen tudi osnovni termični šum diode.
-Temni tok diode je sorazmeren s površino diode in eksponentno odvisen od temperature in 
-energijske reže polvodnika;
-\beq
-I_0 = Sj_0 e^{-E_g/kT}
-\eeq
-Tipičen temni tok silicijeve fotodiode s površino 1~mm$^2$ je pri sobni temperaturi 1~nA. 
-Tokovni šum je torej po gornji enačbi
-\beq
-I_N = \sqrt{eI_0\Delta \nu} \approx 10^{-15}~A/\sqrt{Hz} \sqrt{\Delta \nu}.
-\eeq
 
 Svetlobni tok, označen pogosto z NEP (noise equivalent power), ki da enak signal, je $10^4 $
 fotonov na sekundo ali $10^{-14}$~W. Še beseda o enoti za NEP. Navadno je podan na enoto 
