@@ -1,4 +1,4 @@
-\chapterimage{Mavrica.jpg} % Chapter heading image
+\chapterimage{CCD.jpg} % Chapter heading image
 
 \chapter{Detektorji svetlobe}
 
@@ -1133,8 +1133,9 @@ Spoznali smo, da je več vrst šuma, ki so pri različnih pogojih različno pome
 V splošnem lahko vse prispevke združimo v skupni šum, pri čemer seštevamo kvadrate
 odstopanj
 \beq
-\overline{\Delta I^2} = \overline{\Delta I^2}_{\check{s}tetja} + \overline{\Delta I^2}_{termi\check{c}ni}
-+ \overline{\Delta I^2}_{temni} + \overline{\Delta I^2}_{ozadje}.
+\overline{\Delta I^2} = \overline{\Delta I^2}_{\check{s}tetja} + 
+\overline{\Delta I^2}_{termi\check{c}ni} + \overline{\Delta I^2}_{temni} + 
+\overline{\Delta I^2}_{ozadje}.
 \eeq
 Če vstavimo izraze za tokove (enačbe~\ref{11:sum}, \ref{11:termicni}, \ref{11:dark}
 in \ref{11:ozadje}), sledi
@@ -1148,8 +1149,8 @@ vpadne svetlobe, ko pride do izraza šum štejta.
 
 Če pogledamo izraz za razmerje signala proti šumu
 \beq
-SNR = \frac{\overline{I}}{\left( 2 \overline{I}\,e_0 + 2 I_0\,e_0
-+ 2 I_o\,e_0 + \frac{4 kT}{R} \right) \Delta\nu_B},
+SNR = \frac{\overline{I}}{\sqrt{\left( 2 \overline{I}\,e_0 + 2 I_0\,e_0
++ 2 I_o\,e_0 + \frac{4 kT}{R} \right) \Delta\nu_B}},
 \eeq
 vidimo, da so vsi prispevki v imenovalcu neodvisni od intenzitete vpadne svetlobe
 razen šuma štetja. Le-ta je pri majhnih intenzitetah majhen in celoten šum 
@@ -1157,65 +1158,118 @@ zato praktično konstanten. V tem primeru $SNR$ narašča kar linearno z intenzi
 vpadne svetlobe. Pri velikih intenzitah šum štetja prevlada nad ostalimi prispevki
 in odvisnost $SNR$ od intenzitete postane korenska. 
 
-
-
-Primer: silicijeva fotodioda je upor 50 ohmov in reverce voltage -5V. širina je 150 MHz. 
-temni tok je 10 nA pri 300 K. vpada svetloba 1 mW pri 850 nm. Fotocurrent je 411 mikroamperov. 
-
-Šum štetja je 4,4 nA. Termični šum je 223 nA. SNR = 1840. 
-
-Pmin = pnep sqrt delta nu b.
-
-
-
-Svetlobni tok, označen pogosto z NEP (noise equivalent power), ki da enak signal, je $10^4 $
-fotonov na sekundo ali $10^{-14}$~W. Še beseda o enoti za NEP. Navadno je podan na enoto 
-frekvenčnega intervala, to je po enačbi .. na $\sqrt{Hz}$. 
-
+\begin{definition}
+Oceni šum štetja, termični šum in šum temnega toka na silicijevi fotodiodi, če 
+nanjo vpada svetloba z valovno dolžino $\lambda=850~\si{\nano\meter}$
+in vpadno močjo $P=0,1~\si{\milli\watt}$. Kvantni izkoristek diode je $85~\%$,
+spektralna širina $\Delta\nu_B=150~\si{\mega\hertz}$, temni tok $10~\si{\nano\ampere}$,
+skupna upornost $50~\si{\ohm}$ in temperatura $300~\si{\kelvin}$. Pokaži, 
+da je razmerje signala proti šumu $SNR\sim250$. 
+\end{definition}
 
 Pomemben parameter, ki ga pogosto vpeljemo, je $NEP$ ({\it Noise Equivalent Power} -- 
 moč, ki ustreza šumu). Gre za vpadno moč svetlobe, ki je po velikosti primerljiva 
-s šumom, in zato predstavlja spodnjo mejo detekcije. Takrat je tok, ki ga povzroči 
-vpadla svetloba (enačba~\ref{11:eta}) enak velikosti šuma (enačba~\ref{11:sum})
+s šumom, in zato predstavlja spodnjo mejo še možne detekcije. To se navadno zgodi 
+pri zelo nizkih močeh vpadne svetlobe, pri katerih je šum štetja zanemarljiv.
+Zapišimo pogoj, pri katerem je $SNR=1$
 \beq
-NEP\, \frac{e_0}{h \nu} \eta = \sqrt{2 \overline{I}\,e_0\, \Delta\nu_B}.
+NEP\, \frac{e_0}{h \nu} \eta \approx \sqrt{\left(2 I_0\,e_0
++ \frac{4 kT}{R} \right) \Delta\nu_B}.
 \eeq
 Sledi
 \beq
-NEP = \frac{h \nu}{\eta e_0}\sqrt{2 \overline{I}\,e_0\, \Delta\nu_B}.
+NEP = \frac{h \nu}{\eta e_0}\sqrt{\left(2 I_0\,e_0
++ \frac{4 kT}{R} \right) \Delta\nu_B}.
+\label{NEP}
 \eeq
 \begin{definition}
-Izračunaj NEP za primer vpadne svetlobe z valovno dolžino $900~\si{\nano\meter}$, kvantnim
-izkoristkom detektorja $\eta = 0,9$, KAJ PA JE I povprečen?, in spektralni širini 
-$\Delta \nu_B=10^9~\si{\hertz}$.
+Izračunaj $NEP$ za primer germanijeve diode pri vpadni svetlobi z valovno dolžino
+$\lambda = 1,5~\si{\micro\meter}$ in kvantnim izkoristkom $\eta=0,5$. Temperatura detektorja
+je $T=300~\si{\kelvin}$ in temni tok $I_0=15~\si{\micro\ampere}$. Skupna upornost
+je $R=2~\si{\kilo\ohm}$, pasovna širina zajemanja svetlobe pa 
+$\Delta\nu_B=150~\si{\mega\hertz}$.
 \end{definition}
-Zaradi priročnosti je pogosto podan NEP na koren spektralne širine, ker je ta 
-količina neodvisna od časa zajemanja. (ALI RES?). Podatek je potem v 
-$\si{\watt}/\sqrt{\si{\hertz}}$. Tipične vrednosti so ...
-Šum je zelo zelo majhen in v večini primerov, razen pri detekciji zelo 
-šibkih signalov, zanemarljiv ali pa vsaj zelo majhen. Je pa to edini obravnavani,
-ki je odvisen od intenzitete vpadne svetlobe. 
 
-Če se znebiš termičnega in temnega toka šuma, ti ostane samo še šum štetja, potem 
-je najmanjša moč 
- NEP = h nu B / eta. To je kvantna limita detekcije. Je praktično nedosegljiva,
- razen če delaš heterodinski način detekcije. 
+\begin{remark}
+Zaradi priročnosti je pogosto podan $NEP$ na koren spektralne širine, saj ta ni 
+karakteristična za detektor, ampak je odvisna od časa zajemanja. Podatek, ki 
+ga podajo proizvajalci detektorjev, je potem $NEP$, ki je v enotah 
+$\si{\watt}/\sqrt{\si{\hertz}}$. Tipične vrednosti so 
+$10^{-11}$--$10^{-15}~\si{\watt}/\sqrt{\si{\hertz}}$, pri čemer je najmanjši
+za silicijeve fotodiode. 
+\end{remark}
+
+Pri zapisu $NEP$ (enačba~\ref{NEP}) smo privzeli, da termični šum in šum temnega
+toka prevladata nad šumom štetja signala. Če uspemo ta dva prispevka znatno 
+zmanjšati, tako da postane šum štetja signala vodilni člen, 
+dosežemo kvanto limito optične detekcije. Takrat je 
+\beq
+NEP = \frac{2 h\nu \Delta \nu_B}{\eta},
+\eeq
+kar znaša za zgoraj opisane primere $NEP \sim 10^{-10}\si{\watt}$. Kvantna limita
+je z navadnim merjenjem praktično nedosegljiva, saj je treba odpraviti vse ostale izvore 
+šuma. En način, kako jo kljub vsemu lahko dosežemo, je s heterodinskim načinom
+detekcije, ki ga bomo spoznali v naslednjem razdelku.
+
+\section{Heterodinska detekcija}
+Heterodinska detekcija (pogosto imenovana tudi koherentna detekcija) je poseben način
+detekcije svetlobe, ki omogoča zaznavanje zelo šibkih signalov. Pri takem 
+pristopu detektor svetlobe osvetlimo hkrati s signalom in z močno referenčno svetlobo, 
+katere frekvenca se le malo razlikuje od frekvence signala.
+Vpadni signal zapišemo z
+\beq
+E_s = E_{s0} \cos(\omega_st+\phi),
+\eeq
+referenčnega pa z
+\beq
+E_r = E_{r0} \cos(\omega_rt),
+\eeq
+pri čemer je $E_{r0}$ konstanta. Če sta oba vpadna snopa vzporedna\footnote{Dodaten pogoj je,
+da imata isto polarizacijo in čim bolj podobna polmer in ukrivljenost valovnih front.} je intenziteta, 
+ki vpada na detektor, enaka
+\beq
+I \propto |E|^2 = |E_s+E_r|^2 = |E_{s0}|^2 \, \cos^2(\omega_st+\phi)+
+|E_{r0}|^2 \, \cos^2(\omega_rt) + 2E_{s0}E_{r0}\, \cos(\omega_st+\phi)\, \cos(\omega_rt).
+\eeq
+Prva dva člena v izrazu se zelo hitro spreminjata in zato predstavljata zgolj 
+izpovprečen konstanten prispevek. Zanimiv je tretji člen, ki ga lahko zapišemo
+kot
+\beq
+E_{s0}E_{r0}\left( \cos(\omega_st+\omega_rt+\phi)+\cos(\omega_st-\omega_rt+\phi)\right).
+\eeq
+Člen z vsoto obeh frekvenc se izpovpreči, drug člen pa ostane in ga lahko zaznavamo. 
+Pri tem smo privzeli, da je razlika frekvenc dovolj majhna, da seže v odzivno območje
+detektorja. Poseben primer, ko sta frekvenci povsem enaki, imenujemo homodinski režim 
+detekcije. 
+
+Ker je referenčni žarek navadno bistveno močnejši od signalnega, je celotna intenziteta
+na detektorju enaka
+\beq
+|E|^2 \approx \frac{1}{2}|E_{r0}|^2 + E_{s0}E_{r0}\,\cos(\omega_st-\omega_rt+\phi).
+\eeq
+S tem znatno pridobimo na občutljivosti, saj na detektorju ne zaznavamo več 
+kvadrata majhnega signala, ampak majhen signal, pomnožen z velikim referenčnim. 
+
+Poglejmo še razmerje signala proti šumu za tak primer detekcije. Pri tem 
+je največji prispevek zaradi šuma štetja referenčne svetlobe, saj je le ta 
+praviloma bistveno močnejša od signala
+\beq
+\sqrt{\Delta I^2} = \sqrt{2I_re_0 \Delta\nu_B},
+\eeq
+pri čemer smo z $I_r$ označili tok, ki steče zaradi referenčne svetlobe.
+Signal proti šumu je tako
+\beq
+
+\eeq
 
 
-Pogosto je podan NEP/sqrtB. 
-
-primer germanijeva fotodioda s temnim tokom 15 mikroamprevo in zanemarljivim ozadjem
- pri 300 k. Celoten upor je 2 kohma, spektralna širina 5 kHz. in odzivnost 0.8 A/W pri 1.55 mikrometrov.
- Shot noise bre ozadja je 2eBid = 2.2pA. termični je 2.9 pA. Skupni je 3.6 pA. 
- NEP je 320 pW. 
- 
-NEP je tipično $10^{-11}$--$10^{-16}~\si{\watt}\sqrt{\si{\hertz}}$, večji za fotoprevodnike, najmanjši
-za silicijeve pin fotodiode. 
 
 
-\section{Heterodinska in homodinska detekcija}
+
+
+
+
 
  kazalo UV IR.
- yariv, demtrodeseder
  q dots
  delčkarji detekcija.
