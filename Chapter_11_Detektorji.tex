@@ -1009,6 +1009,7 @@ merjenja. Zapišemo še razmerje signala proti šumu
 \beq
 SNR = \frac{\overline{I}}{\sqrt{\overline{\Delta I^2}}}= \frac{\sqrt{\overline{I}}}
 {\sqrt{2 e_0\, \Delta\nu_B}}.
+\label{SNRs}
 \eeq
 Po pričakovanjih je to razmerje večje pri večjem povprečnem signalu in pri daljši meritvi.
 
@@ -1213,7 +1214,9 @@ detekcije, ki ga bomo spoznali v naslednjem razdelku.
 
 \section{Heterodinska detekcija}
 Heterodinska detekcija (pogosto imenovana tudi koherentna detekcija) je poseben način
-detekcije svetlobe, ki omogoča zaznavanje zelo šibkih signalov. Pri takem 
+detekcije svetlobe, ki omogoča zaznavanje zelo šibkih signalov. Za razliko od direktne detekcije,
+ki smo jo obravnavali do zdaj in pri kateri pride do neposredne zaznave vpadlega fotona, 
+gre pri heterodinski detekciji za zaznavanje valovanja z amplitudo in fazo. Pri takem 
 pristopu detektor svetlobe osvetlimo hkrati s signalom in z močno referenčno svetlobo, 
 katere frekvenca se le malo razlikuje od frekvence signala.
 Vpadni signal zapišemo z
@@ -1250,26 +1253,23 @@ na detektorju enaka
 S tem znatno pridobimo na občutljivosti, saj na detektorju ne zaznavamo več 
 kvadrata majhnega signala, ampak majhen signal, pomnožen z velikim referenčnim. 
 
-Poglejmo še razmerje signala proti šumu za tak primer detekcije. Pri tem 
-je največji prispevek zaradi šuma štetja referenčne svetlobe, saj je le ta 
-praviloma bistveno močnejša od signala
+Poglejmo še razmerje $SNR$ za tak primer detekcije. Največji prispevek k šumu je 
+zaradi šuma štetja referenčne svetlobe, saj je le ta praviloma bistveno močnejša od signala
 \beq
-\sqrt{\Delta I^2} = \sqrt{2I_re_0 \Delta\nu_B},
+\sqrt{\overline{\Delta I^2}} = \sqrt{2I_re_0 \Delta\nu_B}=\sqrt{
+ e_0^2\Delta\nu_B\frac{\eta E_{r0}^2}{h\nu}},
 \eeq
-pri čemer smo z $I_r$ označili tok, ki steče zaradi referenčne svetlobe.
-Signal proti šumu je tako
+pri čemer smo z $I_r$ označili tok, ki steče zaradi referenčne svetlobe. Singal v tem 
+primeru ni več vpadni signal, ampak kombinirani izhod iz detektorja, ki ga zaznavamo
+le pri razliki frekvenc $\omega_s-\omega_r$. Sledi
 \beq
-a
+SNR = \frac{\frac{e_0 \eta}{h \nu} E_{s0}E_{r0}}{\sqrt{
+ e_0^2\Delta\nu_B\frac{\eta E_{r0}^2}{h\nu}}} = \sqrt{\frac{\eta}{h \nu \Delta\nu_B}}E_{s0}.
 \eeq
-
-
-
-
-
-
-
-
-
- kazalo UV IR.
- q dots
- delčkarji detekcija.
+Če to primerjamo z vrednostjo $SNR$ pri navadni detekciji (enačba~\ref{SNRs}), vidimo, 
+da se razmerje signala proti šumu pri isti pasovni širini izboljša za faktor $\sqrt{2}$
+(oziroma še več, če je prisoten še kakšen drug šum).
+Ker je pri navadni detekciji težko meriti pri tako majhni pasovni širini, je razmerje
+signala proti šumu v primeru heterodinske detekcije zato praviloma znatno večje. Poleg tega
+je heterodinski način detekcije neobčutljiv za svetlobo iz ozadja, zato se pogosto 
+uporablja za detekcijo svetlobe in infrardečem območju. 
