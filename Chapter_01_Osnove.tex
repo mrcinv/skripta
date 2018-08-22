@@ -108,7 +108,7 @@ Pri tem je hitrost valovanja\index{Hitrost valovanja} v snovi enaka
 c=\frac{1}{\sqrt{\epsilon\epsilon_{0}\mu\mu_{0}}}=\frac{c_{0}}{n}.
 }
 Magnetne in dielektrične lastnosti snovi smo pospravili
-v lomni količnik\index{Lomni količnik}, ki pove, kolikokrat je hitrost svetlobe v snovi manjša
+v lomni količnik $n$\index{Lomni količnik}, ki pove, kolikokrat je hitrost svetlobe v snovi manjša
 od hitrosti svetlobe v praznem prostoru.
 \begin{equation}
 n=\frac{c_{0}}{c}=\sqrt{\epsilon\mu}.
@@ -121,9 +121,9 @@ fizik John Henry Poynting, 1852--1914.}
 \boxeq{eq:Poyntingov-vektor}{
 \mathbf{S} = \mathbf{E} \times \mathbf{H}.
 }
-Kot vidimo, je smer energijskega toka vedno pravokotna na smeri $\mathbf{E}$
-in $\mathbf{H}$. Gostoto energijskega toka $j$, to je količino
-energije, ki v danem časovnem intervalu preteče skozi dano ploskev
+Iz lastnosti vektorskega produkta sledi, da je smer energijskega toka vedno pravokotna na 
+smeri $\mathbf{E}$ in $\mathbf{H}$. Gostoto energijskega toka $j$, to je količino
+energije, ki v danem času preteče skozi dano ploskev
 z normalo $\mathbf{\hat{n}}$, izračunamo kot časovno povprečje projekcije
 Poyntingovega vektorja \index{Gostota energijskega toka}
 \begin{equation}
@@ -133,7 +133,8 @@ Gostoti energijskega toka, predvsem gostoti svetlobnega toka, pravimo tudi
 intenziteta\index{Intenziteta|see {Gostota energijskega toka}}.
 
 \begin{definition}[Poyntingov teorem]
-Iz Maxwellovih enačb izpelji kontinuitetno enačbo v odsotnosti električnih tokov
+Iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
+izpelji kontinuitetno enačbo v odsotnosti električnih tokov
 \begin{equation}
 -\nabla\cdot\mathbf{\mathbf{S}}=\frac{\partial}{\partial t}\left(\frac{1}{2}\epsilon_{0}\mathbf{E}^{2}+
 \frac{1}{2}\mu_{0}\mathbf{H}^{2}\right)+\mathbf{E}\cdot\frac{\partial\mathbf{P}}{\partial t}+
@@ -144,19 +145,19 @@ Pomagaj si z zvezo $\nabla\cdot(\mathbf{E}\times\mathbf{H})=(\nabla\times\mathbf
 (\nabla\times\mathbf{H})\cdot\mathbf{E}$.
 \end{definition}
 
-\index{Poyntingov teorem}Opazimo, da predstavlja Poyntingov teorem
+\index{Poyntingov teorem}Poyntingov teorem (enačba~\ref{eq:PoyntingTh}) predstavlja
 izrek o ohranitvi energije. Prvi in drugi člen na desni strani Poyntingovega 
-teorema (enačba~\ref{eq:PoyntingTh}) opišeta gostoto energije, shranjene v električnem in magnetnem
+teorema namreč opišeta gostoto energije, shranjene v električnem in magnetnem
 polju, medtem ko tretji in četrti člen opišeta energijo,
-ki je shranjena v snovi (električnih in magnetnih dipolih). Za valovanje
+shranjeno v snovi (električnih in magnetnih dipolih). Za valovanje
 v homogeni izotropni snovi tako velja
 \begin{equation}
-\nabla\cdot\mathbf{S}=-\frac{\partial w}{\partial t},
+-\nabla\cdot\mathbf{S}=\frac{\partial w}{\partial t},
 \end{equation}
 kjer je $w$\index{Gostota energije} celotna
 gostota energije elektromagnetnega polja. Zapišemo jo kot 
 \boxeq{eq:gostota-energije}{
-w=\frac{1}{2}\epsilon_{0}\epsilon\mathbf{E}^{2}+\frac{1}{2}\mu_{0}\mu\mathbf{H}^{2}.
+w=\frac{1}{2}\epsilon\epsilon_{0}\mathbf{E}^{2}+\frac{1}{2}\mu\mu_{0}\mathbf{H}^{2}.
 }
 
 Valovno enačbo in ohranitvene zakone lahko zapišemo tudi za anizotropne,
@@ -164,14 +165,14 @@ nehomogene ali nelinearne snovi. Nekaj teh primerov bomo srečali v nadaljevanju
 in jih bomo obravnavali sproti.
 
 \section{Monokromatski elektromagnetni val}
-
-Reševanje valovne enačbe si navadno poenostavimo z vpeljavo kompleksnega
-zapisa jakosti električnega in magnetnega polja. Račun si
+Reševanje valovne enačbe si navadno poenostavimo s kompleksnim
+zapisom jakosti električnega in magnetnega polja. Račun si
 oglejmo na primeru monokromatskega elektromagnetnega vala. Nastavek
 za monokromatski val s krožno frekvenco $\omega$ naj bo\index{Elektromagnetno valovanje}
 \begin{equation}
 \mathbf{E}(\mathbf{r},t)  =\mathfrak{\Re}(\mathbf{E}(\mathbf{r})e^{-i\omega t})\qquad \textrm{in} \qquad
 \mathbf{H}(\mathbf{r},t)  =\mathfrak{\Re}(\mathbf{H}(\mathbf{r})e^{-i\omega t}),
+\label{eq:rval}
 \end{equation}
 kjer sta $\mathbf E(\mathbf{r})$ in $\mathbf H(\mathbf{r})$ časovno
 neodvisna vektorja jakosti električnega\index{Električno polje!jakost} in 
@@ -184,24 +185,24 @@ V nadaljevanju bomo večinoma pisali polja v kompleksni obliki, pri
 je uporaba kompleksnega zapisa zgolj računski pripomoček, na koncu
 je treba rezultate vedno izraziti z realnimi količinami. 
 
-Če vstavimo gornji nastavek za monokromatski val v valovno enačbo
+Če vstavimo nastavek za monokromatski val (enačba~\ref{eq:rval}) v valovno enačbo
 (enačba~\ref{eq:valovna-skalarna}), dobimo \index{Helmholtzeva enačba}Helmholtzevi
 enačbi\footnote{Nemški zdravnik in fizik Hermann Ludwig Ferdinand von Helmholtz, 1821--1894.} 
 za kompleksna vektorja jakosti električnega in magnetnega polja.
 V homogenem in izotropnem sredstvu ju zapišemo kot
-\begin{align}
-\nabla^{2}\mathbf{E}(\mathbf{r})+k^{2}\mathbf{E}(\mathbf{r}) &=0\label{eq:Helmholtz}\\
+\boxeq{eq:Helmholtz}{
+\nabla^{2}\mathbf{E}(\mathbf{r})+k^{2}\mathbf{E}(\mathbf{r}) &=0\\
 \nabla^{2}\mathbf{H}(\mathbf{r})+k^{2}\mathbf{H}(\mathbf{r}) &=0,
-\end{align}
-kjer je $k=nk_{0}=n\omega/c_{0}$ valovno število\index{Valovno število}. 
-
-Vpeljimo še kompleksni Poyntingov vektor\index{Poyntingov vektor}
+}
+kjer je $k=nk_{0}=n\omega/c_{0}$ valovno število\index{Valovno število}. Vpeljemo lahko
+tudi kompleksni Poyntingov vektor\index{Poyntingov vektor}
 \begin{equation}
-\mathbf{S}(\mathbf{r})=\frac{1}{2}\mathbf{E}\times\mathbf{H}^{*}.\label{eq:Poyntingov-vektor-c}
+\mathbf{S}(\mathbf{r})=\frac{1}{2}\mathbf{E}(\mathbf{r})\times\mathbf{H}^{*}(\mathbf{r}).
+\label{eq:Poyntingov-vektor-c}
 \end{equation}
 \begin{definition}
 Upoštevajoč izraz za Poyntingov vektor $\mathbf{S}$
-(enačba \ref{eq:Poyntingov-vektor}) pokaži, da lahko intenziteto valovanja $j$
+(enačba \ref{eq:Poyntingov-vektor}) pokaži, da lahko gostoto svetlobnega toka $j$
 (oziroma povprečje projekcije Poyntingovega vektorja)
 \index{Gostota energijskega toka} izrazimo
 s kompleksnim Poyntingovim vektorjem $\mathbf{S}(\mathbf{r})$
@@ -214,8 +215,8 @@ j=\left\langle \mathbf{\mathbf{S}}\cdot\mathbf{\hat{n}}\right\rangle =
 \end{definition}
 
 \section{Ravni val}
-
-Osnovna rešitev valovne enačbe je ravni val\index{Ravni val}. Nastavek, ki predstavlja
+Osnovna rešitev valovne enačbe (enačba~\ref{eq:valovna-skalarna}) je ravni 
+val\index{Ravni val}. Nastavek, ki predstavlja
 ravni val in hkrati reši Helmholtzevo enačbo (enačba~\ref{eq:Helmholtz}), je oblike
 \begin{equation}
 \mathbf{E}(\mathbf{r},t)  =\mathbf{E}(\mathbf{r})e^{-i\omega t}=
@@ -231,7 +232,7 @@ Velikost valovnega vektorja\index{Valovni vektor} $\mathbf{k}$ je valovno števi
 čemer je $n$ lomni količnik izotropne in homogene snovi. 
 
 Vektorja jakosti električnega in magnetnega polja zadostujeta
-Maxwellovim enačbam (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}), iz česar sledi,
+Maxwellovim enačbam (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}), iz katerih sledi,
 da sta polji vedno medsebojno pravokotni, 
 hkrati pa pravokotni na valovni vektor $\mathbf{k}$. Elektromagnetno valovanje je torej
 transverzalno valovanje. 
@@ -247,11 +248,12 @@ $\mathbf{B} \perp \mathbf{k}$. Izpelji še zvezi
 \quad \mathrm{in}\\
 \mathbf{k}\times\mathbf{E}_{0} & =\omega\mu\mu_{0}\mathbf{H}_{0}\label{eq:TEM-pogoj2},
 \end{align}
-iz katerih izhaja pravokotnost polj in valovnega vektorja v izotropni snovi.
+iz katerih izhaja, da sta v izotropni snovi $\mathbf{E}_0\perp \mathbf{k}$ in 
+$\mathbf{H}_0\perp \mathbf{k}$ ter da je $\mathbf{E}_0\perp \mathbf{H}_0$.
 \end{definition}
 
 Energijski tok je pri ravnem valu v izotropni snovi vedno v smeri valovnega vektorja, pravokotno
-na valovne fronte. Iz definicije za gostoto svetlobnega toka (enačbi \ref{eq:jReS}) 
+na valovne fronte. Iz definicije za gostoto svetlobnega toka (enačba \ref{eq:jReS}) 
 ter Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
 sledi\index{Gostota energijskega toka}
 \begin{equation}
@@ -260,11 +262,11 @@ j=\Re\left(\frac{1}{4}E_{0}H_{0}^{*}+\frac{1}{4}E_{0}^*H_{0}\right)=
 \left|E_{0}\right|^{2}.
 \label{eq:j}
 \end{equation}
-Gostota svetlobnega toka (intenziteta svetlobe) je torej sorazmerna
+Gostota svetlobnega toka je torej sorazmerna
 s kvadratom amplitude jakosti električnega polja. Poglejmo nekaj primerov.
 Gostoti toka $j=1~\si{kW/m^{2}}$
 (približna gostota svetlobnega toka s Sonca na Zemljinem površju) tako v praznem prostoru ustreza 
-jakost električnega polja $E_{0}=868~\si{V/m}$, gostoti $j=1~\si{W/\micro m^{2}}$ 
+jakost električnega polja $E_{0}=868~\si{\volt/\meter}$, gostoti $j=1~\si{W/\micro m^{2}}$ 
 (intenziteta močno fokusiranega laserskega žarka) pa $E_{0}=27~\si{MV/m}$. 
 
 Zapišimo še povprečno gostoto energije valovanja\index{Gostota energije}. 
@@ -293,27 +295,28 @@ le idealiziran, a nazoren in praktičen približek elektromagnetnega
 vala.
 
 \section{Polarizacija EM valovanja}
-
 Jakost električnega polja elektromagnetnega valovanja je v izotropnem
-sredstvu pravokotna na smer valovnega vektorja\footnote{V splošnem velja $\mathbf{E}\perp\mathbf{S}$ 
+sredstvu vedno pravokotna na smer valovnega vektorja\footnote{V splošnem velja $\mathbf{E}\perp\mathbf{S}$ 
 (enačba~\ref{eq:Poyntingov-vektor}) in $\mathbf{D}\perp\mathbf{k}$ (naloga~\ref{naloga-TEM-ortogonalnost}). 
 To velja tudi v anizotropnih sredstvih, vendar je tam $\mathbf{E} \nparallel \mathbf{D}$ in 
 $\mathbf k\nparallel\mathbf S$.}. Vektor $\mathbf{E}$
-torej leži v ravnini, pravokotni na smer valovnega vektorja, njegovo
+tako leži v ravnini, ki je pravokotna na smer valovnega vektorja, njegovo
 smer pa opiše polarizacija\index{Polarizacija}. 
 
-V splošnem je ravni val eliptično polariziran\index{Polarizacija!eliptična}. Takrat vektor $\mathbf E$
-v ravnini, pravokotni na valovni vektor, oriše elipso. Obe komponenti vektorja 
-$\mathbf{E}(\mathbf{r})$ nihata sinusno z enako frekvenco, lahko pa se razlikujeta
-v amplitudi in fazi. Kadar je elipsa izrojena v daljico, govorimo o linearno polariziranem 
+Električno polje ravnega vala lahko razstavimo na dve medsebojno 
+pravokotni komponenti vektorja $\mathbf{E}(\mathbf{r})$. Ti dve komponenti
+nihata sinusno z enako frekvenco, lahko pa se razlikujeta v amplitudi in fazi. 
+V splošnem je tak val eliptično polariziran\index{Polarizacija!eliptična} in
+vrh vektorja električne poljske jakosti $\mathbf E$ v ravnini, ki je pravokotna na smer
+širjenja, orisuje elipso. Kadar je elipsa izrojena v daljico, govorimo o linearno polariziranem 
 valovanju\index{Polarizacija!linearna},
 kadar pa je krog, govorimo o cirkularno polariziranem valu\index{Polarizacija!cirkularna}. 
 Poljubno polarizacijo lahko vedno zapišemo kot vsoto dveh linearno ali dveh cirkularno polariziranih
 valovanj. 
 
-Polarizacijo valovanja lahko zapišemo s kompleksnim \index{Jonesov vektor}Jonesovim 
+Priročen zapis polarizacije je s kompleksnim \index{Jonesov vektor}Jonesovim 
 vektorjem\footnote{Ameriški fizik Robert Clark Jones, 1916--2004.}
-$\mathbf{J}$. Za monokromatski ravni val, ki se širi v smeri $z$ in ima komponenti $E_x$ in $E_y$ je
+$\mathbf{J}$. Za monokromatski ravni val, ki se širi v smeri $z$ in ima komponenti $E_x$ in $E_y$, je
 Jonesov vektor
 \begin{equation}
 \mathbf{J}=\frac{1}{|E_{0}|}\left[\begin{array}{c}
@@ -342,12 +345,9 @@ E_{2x} & =A_{11}E_{1x}+A_{12}E_{1y}\\
 E_{2y} & =A_{21}E_{1x}+A_{22}E_{1y},
 \end{align}
 pri čemer so komponente $A_{ij}$ odvisne od lastnosti sredstva. Enačbi zapišemo 
-v matrični obliki
-\begin{equation}
-\mathbf{E}_{2}=A\cdot\mathbf{E}_{1},
-\end{equation}
-kjer sta $\mathbf{E}_{1}$ in $\mathbf{E}_{2}$
-vstopni in izstopni val, $A$ pa je \index{Jonesova matrika}Jonesova
+v matrični obliki $\mathbf{E}_{2}=A\cdot\mathbf{E}_{1}$ oziroma z Jonesovimi
+vektorji $\mathbf{J}_{2}=A\cdot\mathbf{J}_{1}$, kjer $\mathbf{J}_{1}$ in $\mathbf{J}_{2}$
+opisujeta polarizaciji vstopnega in izstopnega vala, $A$ pa je \index{Jonesova matrika}Jonesova
 matrika. Jonesova matrika za prehod skozi linearni polarizator, ki
 polarizira v smeri $x$, je
 \begin{equation}
@@ -356,44 +356,44 @@ A=\left[\begin{array}{cc}
 0 & 0
 \end{array}\right].
 \end{equation}
-Oglejmo si še dva zanimiva primera optičnih komponent.
-Jonesova matrika za  ploščico $\lambda/2$\index{Ploščica $\lambda/2$},
-ki spremeni desno cirkularno polariziran val v levo polariziran in obratno,
-je
+Oglejmo si še dva zanimiva primera.
+Jonesova matrika za optični element, ki eni komponenti doda fazni zamik $\pi$ (tak element 
+imenujemo ploščica $\lambda/2$\index{Ploščica $\lambda/2$}), je
 \begin{equation}
 A=\left[\begin{array}{cc}
 1 & 0\\
 0 & -1
 \end{array}\right].
 \end{equation}
-Jonesova matrika za  ploščico $\lambda/4$\index{Ploščica $\lambda/4$} pa je 
+Ploščica $\lambda/2$ tako spremeni desno cirkularno polariziran val v levo polariziran in obratno,
+linearno polariziran val pa prezrcali čez koordinatno os. Podobno je 
+Jonesova matrika za element, ki eni komponenti doda fazni zamik $\pi/2$ (imenujemo ga 
+ploščica $\lambda/4$\index{Ploščica $\lambda/4$}), enaka
 \begin{equation}
 A=\left[\begin{array}{cc}
 1 & 0\\
 0 & i
 \end{array}\right].
 \end{equation}
-Ta optični element linearno polarizirano valovanje z Jonesovim vektorjem $(1,1)/\sqrt{2}$
+Ploščica $\lambda/4$ linearno polarizirano valovanje z Jonesovim vektorjem $(1,1)/\sqrt{2}$
 spremeni v levo cirkularno polarizirano valovanje, cirkularno polarizirano
 valovanje pa nazaj v linearno. 
 
 \begin{definition}
 Pokaži, da je Jonesova matrika za polarizator,
-ki prepušča polarizacijo pod kotom $\vartheta$ glede na os $x$, podana s spodnjo matriko. 
-Namig: matriko $A'$, ki predstavlja polarizator v smeri $x$, zapiši v zavrtenem
-koordinatnem sistemu $A=R(\vartheta) \cdot {A'}\cdot R(\vartheta)^\textrm{A}$, 
-kjer je $R(\vartheta)$ rotacijska matrika.
+ki prepušča polarizacijo pod kotom $\vartheta$ glede na os $x$, podana z matriko
 \begin{equation}
 A=\left[\begin{array}{cc}
 \cos^{2}\vartheta & \sin\vartheta\cos\vartheta\\
 \sin\vartheta\cos\vartheta & \sin^{2}\vartheta
 \end{array}\right].
 \end{equation}
-
+Namig: matriko $A'$, ki opisuje polarizator v smeri $x$, zapiši v zasukanem
+koordinatnem sistemu $A=R(\vartheta) \cdot {A'}\cdot R(\vartheta)^\textrm{T}$, 
+kjer je $R(\vartheta)$ rotacijska matrika.
 \end{definition}
 
 \section{Lom in odboj EM valovanja}
-
 Na ravni meji med dvema izotropnima dielektrikoma se del svetlobe
 odbije po odbojnem zakonu, ki pravi, da je odbojni kot enak vpadnemu, 
 del pa lomi po lomnem zakonu\index{Lomni zakon} \boxeq{eq:lomni_zakon}{
@@ -409,32 +409,40 @@ jakost magnetnega polja, govorimo o transverzalnem magnetnem valovanju
 (TM)\index{Polarizacija!TM}.\\
 
 \begin{figure}[h]
-\centering \def\svgwidth{120truemm} 
+\centering \def\svgwidth{140truemm} 
   \input{slike/01_lom.pdf_tex}
 \caption{Lom elektromagnetnega valovanja na meji dveh izotropnih dielektrikov. 
 Levo: transverzalno električno (TE) valovanje. Desno: transverzalno magnetno (TM) valovanje.}
 \label{fig:Lom}
 \end{figure}
 
-Z $E_1$ označimo amplitudo jakosti električnega polja vpadnega valovanja, z $E_2$ prepuščenega in z $E_3$ odbitega.
-Nato vpeljemo prepustnost $t$ in odbojnost $r$, ki pa sta odvisni od vpadne polarizacije. Zapišemo
+Z $E_1$ označimo amplitudo jakosti električnega polja vpadnega valovanja, 
+z $E_2$ prepuščenega in z $E_3$ odbitega.
+Nato vpeljemo amplitudno prepustnost $t$ in amplitudno odbojnost $r$, 
+ki pa sta odvisni od vpadne polarizacije. Zapišemo
 \begin{align}
-E_{2\mathrm{TE}} & =t_{\mathrm{TE}}E_{1\mathrm{TE}} \qquad \qquad E_{3\mathrm{TE}} =r_{\mathrm{TE}}E_{1\mathrm{TE}}\\
-E_{2\mathrm{TM}} & =t_{\mathrm{TM}}E_{1\mathrm{TM}} \qquad \quad E_{3\mathrm{TM}}=r_{\mathrm{TM}}E_{1\mathrm{TM}}.
+E_{2\mathrm{TE}} & =t_{\mathrm{TE}}E_{1\mathrm{TE}} & E_{3\mathrm{TE}} &=r_{\mathrm{TE}}E_{1\mathrm{TE}}\\
+E_{2\mathrm{TM}} & =t_{\mathrm{TM}}E_{1\mathrm{TM}} & E_{3\mathrm{TM}}&=r_{\mathrm{TM}}E_{1\mathrm{TM}}.
 \end{align}
 
 Iz robnih pogojev (enačbe \ref{eq:robni-pogoji}--\ref{eq:robni-pogoji5}) 
-izračunamo koeficiente $r$ in $t$ s \index{Fresnelove enačbe}Fresnelovimi 
-enačbami\footnote{Francoski fizik Augustin-Jean Fresnel, 1788--1827.}
+izračunamo koeficiente $r$ in $t$. Enačbe, ki opisujejo odvisnost odbojnosti
+in prepustnosti od vpadnega kota za različni vpadni polarizaciji, imenujemo
+\index{Fresnelove enačbe}Fresnelove enačbe\footnote{Francoski fizik in inženir Augustin Jean Fresnel, 1788--1827.}.
+Za TE polarizacijo jih zapišemo 
 \begin{equation}
 r_{\mathrm{TE}}=\frac{n_{1}\cos\vartheta_{1}-n_{2}\cos\vartheta_{2}}{n_{1}\cos\vartheta_{1}+n_{2}\cos\vartheta_{2}},
-\qquad t_{\mathrm{TE}}=1+r_{\mathrm{TE}}=\frac{2n_{1}\cos\vartheta_{1}}{n_{1}\cos\vartheta_{1}+n_{2}\cos\vartheta_{2}}
 \label{eq:Fresnel1}
 \end{equation}
-in
 \begin{equation}
-r_{\mathrm{TM}}=\frac{n_{1}\cos\vartheta_{2}-n_{2}\cos\vartheta_{1}}{n_{2}\cos\vartheta_{1}+n_{1}\cos\vartheta_{2}},
-\qquad t_{\mathrm{TM}}=(1+r_{\mathrm{TM}})\frac{\cos\vartheta_{1}}{\cos\vartheta_{2}}=\frac{2n_{1}\cos\vartheta_{1}}
+t_{\mathrm{TE}}=1+r_{\mathrm{TE}}=\frac{2n_{1}\cos\vartheta_{1}}{n_{1}\cos\vartheta_{1}+n_{2}\cos\vartheta_{2}}
+\end{equation}
+in za TM polarizacijo
+\begin{equation}
+r_{\mathrm{TM}}=\frac{n_{1}\cos\vartheta_{2}-n_{2}\cos\vartheta_{1}}{n_{1}\cos\vartheta_{2}+n_{2}\cos\vartheta_{1}},
+\end{equation}
+\begin{equation}
+t_{\mathrm{TM}}=(1+r_{\mathrm{TM}})\frac{\cos\vartheta_{1}}{\cos\vartheta_{2}}=\frac{2n_{1}\cos\vartheta_{1}}
 {n_{1}\cos\vartheta_{2}+n_{2}\cos\vartheta_{1}}.
 \label{eq:Fresnel2}
 \end{equation}
@@ -446,9 +454,10 @@ lahko kompleksen. Velikost števila $\left|r\right|$ tako predstavlja
 odbojnost, argument $\arg\{r\}$ pa spremembo faze
 pri odboju.
 
-Prepustnost $r$ in odbojnost $t$ povesta, kako se spremeni kompleksna
-amplituda jakosti električnega polja. Razmerje med intenziteto odbite
-in vpadne svetlobe $\mathcal{R}$ oziroma razmerje med intenziteto prepuščene in vpadne svetlobe
+Amplitudna odbojnost $r$ in amplitudna prepustnost $t$ povesta, kako se spremeni 
+kompleksna amplituda jakosti električnega polja pri odboju oziroma lomu.
+Razmerje med intenziteto odbite in vpadne svetlobe $\mathcal{R}$ oziroma 
+razmerje med intenziteto prepuščene in vpadne svetlobe
 $\mathcal{T}$ izračunamo kot 
 \begin{equation}
 \mathcal{R}=\left|r\right|^{2} \qquad \mathrm{in} \qquad \mathcal{T}=1-\mathcal{R}.
@@ -459,31 +468,71 @@ snoveh in v različnih smereh. Velja zveza
 \begin{equation}
 \mathcal{T}=\frac{n_{2}\cos\vartheta_{2}}{n_{1}\cos\vartheta_{1}}\left|t\right|^{2}.
 \end{equation}
-Zanimiva je odvisnost odbojnosti od vpadnega kota. Pri nekem kotu, 
-imenujemo ga \index{Brewsterjev kot}Brewsterjev kot\footnote{Škotski fizik in znanstvenik Sir David Brewster, 1781--1868.}, 
-odbojnost za TM polarizirano valovanje enaka nič. Brewsterjeva
-okna (steklene ploščice, postavljene pod Brewsterjevim kotom) uporabljamo
-v resonatorjih laserjev za povečanje izgub TE in zmanjšanje izgub
-TM polariziranega valovanja.
+Najpreprostejši primer je pravokotni vpad na mejo dveh sredstev. Zaradi simetrije 
+morata biti odbojnost in prepustnost neodvisni od polarizacije in 
+\begin{equation}
+r_{\mathrm{TE}} = r_{\mathrm{TM}} = \frac{n_1-n_2}{n_1+n_2}
+\end{equation}
+in
+\begin{equation}
+t_{\mathrm{TE}} = t_{\mathrm{TM}} = \frac{4n_1n_2}{n_1+n_2}. 
+\end{equation}
+Ob pravokotnem vpadu iz zraka na steklo ($n_2 \approx 1,5$) je tako odbojnost 
+\begin{equation}
+\mathcal{R} = \left(\frac{1-n_2}{1+n_2}\right) \approx 0,04.
+\end{equation}
+
+Poglejmo še odvisnost odbojnosti in prepustnosti od vpadnega kota (slika~\ref{fig:Brewster}). 
+Pri tem je pomembno, ali se svetloba lomi v optično gostejše ($n_1<n_2$) ali v optično
+redkejše sredstvo ($n_1>n_2$). Najprej obravnavajmo primer loma v optično gostejšo snov (sliki a in c).
+Vidimo, da je pri nekem kotu, imenujemo ga \index{Brewsterjev kot}Brewsterjev 
+kot\footnote{Škotski fizik in znanstvenik Sir David Brewster, 1781--1868.}, odbojnost 
+za TM polarizirano valovanje enaka nič. Ob vpadu svetlobe na mejo dveh sredstev pod 
+Brewstrovim kotom je tako odbito valovanje vedno TE polarizirano. Po drugi strani to pomeni,
+da je prepustnost za TM komponento enaka $\mathcal{T}=1$, za TE komponento pa $\mathcal{T}<1$. 
+
+Negativni predznak odbojnosti $r_{\mathrm{TE}}$ pomeni, da ima odbiti TE polarizirani val pri vpadu
+na optično gostejše sredstvo ravno nasprotno 
+fazo od vpadnega. Za TM val pa je faza za vpadne kote, ki so manjši od Brewsterjevega, nasprotna, 
+za večje vpadne kote pa ima odbita svetloba enako fazo kot vpadna. 
+
 \begin{figure}[h]
 \centering
   \def\svgwidth{140truemm} 
   \input{slike/01_BrewsterNew.pdf_tex}
-\caption{Odbojnost $r$ za obe vpadni polarizaciji (zgoraj) in razmerje med intenziteto odbite
-in vpadne svetlobe $\mathcal{R}$ (spodaj) v odvisnosti od vpadnega kota. Za primer na levi velja
-$n_1<n_2$, za primer na desni pa $n_1>n_2$. Pri Brewsterjevem vpadnem 
-kotu $\vartheta_B$ je odbojnost TM polariziranega valovanja enaka nič, pri kotih nad 
-$\vartheta_T = \arcsin(n_2/n_1)$ pa pride do totalnega odboja\index{Totalni odboj}.}
+\caption{Amplitudna odbojnost $r$ za obe vpadni polarizaciji (a, b) in razmerje med intenziteto odbite
+in vpadne svetlobe $\mathcal{R}$ v odvisnosti od vpadnega kota (c, d). Za primer na slikah (a) in (c) velja
+$n_1<n_2$, za primer na slikah (b) in (d) pa $n_1>n_2$. Z zeleno je označen Brewsterjev kot $\vartheta_B$, 
+z vijolično pa kot mejni totalnega odboja $\vartheta_T$.}
 \label{fig:Brewster}
 \end{figure}
 
-\begin{definition}[Brewsterjev kot]
+\begin{definition}
 Pokaži, da Brewsterjev kot izračunamo kot 
 \begin{equation}
 \vartheta_{B}=\arctan\left(\frac{n_2}{n_1}\right).
 \label{eq:Brew}
 \end{equation}
 \end{definition}
+
+\begin{remark}
+Prozorne ploščice, ki so postavljene pod Brewsterjevim kotom glede na vpadno svetlobo, imenujemo
+Brewsterjeva okna. Njihova značilnost je, da eno polarizacijo (TM) prepustijo v celoti, druge 
+polarizacije (TE) pa se del odbije, del pa prepusti. Brewsterjeva okna so zelo uporabna 
+pri izdelavi resonatorjev plinskih laserjev, saj so izgube za izbrano polarizacijo zelo majhne, 
+za drugo pa razmeroma velike.  
+\end{remark}
+
+Pri vpadu na optično redkejše (sliki~\ref{fig:Brewster}\,b in d) je pomemben še en kot, to je mejni kot
+totalnega odboja $\vartheta_T = \arcsin\left(n_2/n_1\right)$. Pri vpadnih kotih, ki so večji od 
+$\vartheta_T$, se svetloba v celoti odbije in govorimo o totalnem ali popolnem odboju\index{Totalni odboj}. 
+Kljub temu električna poljska jakost v optično redkejšem sredstvu
+ni enaka nič. Tam se pojavi tako imenovano evanescentno polje. To je polje, ki se širi v smeri mejne 
+ravnine, njegova amplituda pa pojema eksponentno z oddaljenostjo od mejne plasti. Pri tem je 
+vdorna globina odvisna od valovne dolžine valovanja, lomnega količnika snovi in tudi od vpadnega kota.
+Čeprav je v optično redkejši snovi električno polje različno od nič, pa račun pokaže, da je Poyntingov
+vektor v smeri pravokotno na mejno ploskev v povprečju enak nič in zato ne pride do prenosa energije
+v drugo snov. 
 
 \begin{remark}
 Pri prehodu skozi optične elemente se --
@@ -500,8 +549,7 @@ elemente (leče, kristale, akusto-optične modulatorje ... ) z ustrezno
 antirefleksno plastjo.
 \end{remark}
 
-\section{Uklon svetlobe}
-\index{Uklon}
+\section{Uklon svetlobe}\index{Uklon}
 Kadar svetloba vpade na oviro, za oviro nastane senca. Nastala senca ni ostra, ampak
 ima zaradi uklona zabrisane robove. Obravnave 
 uklona svetlobe na odprtinah ali zaslonkah se lotimo z uporabo
@@ -699,8 +747,7 @@ I_P = I_0\frac{4 J_1(\pi a \rho/ \lambda z)}{\pi a \rho/ \lambda z},
 kjer je $\rho = \sqrt{x^2+y^2}$.
 \end{definition}
 
-\section{EM valovanje v anizotropnih snoveh}
-\label{chap:anizotropni}
+\section{EM valovanje v anizotropnih snoveh}\label{chap:anizotropni}
 Do zdaj smo obravnavali elektromagnetno valovanje
 v izotropnih snoveh, v katerih je dielektričnost skalar in hitrost širjenja
 valovanja neodvisna od njegove smeri. V splošnem so snovi anizotropne,
