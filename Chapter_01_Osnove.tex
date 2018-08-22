@@ -325,9 +325,9 @@ E_{y}
 \end{array}\right].
 \end{equation}
 Dodali smo normalizacijski faktor $|E_{0}|=\sqrt{|E_{x}|^{2}+|E_{y}|^{2}}$,
-da je Jonesov vektor normaliziran in $\mathbf{J}\cdot\mathbf{J}^{*}=1$.
+da je Jonesov vektor normiran in $\mathbf{J}\cdot\mathbf{J}^{*}=1$.
 Ravni val, linearno polariziran v smeri $x$, tako zapišemo kot $\mathbf{J}=\left(1,0\right)$,
-val, ki je linearno polariziran pod kotom $45^{\circ}$ glede na osi
+val, ki je linearno polariziran pod kotom $\ang{45}$ glede na osi
 $x$ in $y$, pa je $\mathbf{J}=\left(1,1\right)/\sqrt{2}$.
 Za zapis cirkularno polariziranega valovanja ni enotnega dogovora, tukaj zapišimo
 desno cirkularno polarizirano valovanje kot 
@@ -425,8 +425,8 @@ E_{2\mathrm{TE}} & =t_{\mathrm{TE}}E_{1\mathrm{TE}} & E_{3\mathrm{TE}} &=r_{\mat
 E_{2\mathrm{TM}} & =t_{\mathrm{TM}}E_{1\mathrm{TM}} & E_{3\mathrm{TM}}&=r_{\mathrm{TM}}E_{1\mathrm{TM}}.
 \end{align}
 
-Iz robnih pogojev (enačbe \ref{eq:robni-pogoji}--\ref{eq:robni-pogoji5}) 
-izračunamo koeficiente $r$ in $t$. Enačbe, ki opisujejo odvisnost odbojnosti
+Koeficiente $r$ in $t$ izračunamo iz robnih pogojev (enačbe 
+\ref{eq:robni-pogoji}--\ref{eq:robni-pogoji5}). Enačbe, ki opisujejo odvisnost odbojnosti
 in prepustnosti od vpadnega kota za različni vpadni polarizaciji, imenujemo
 \index{Fresnelove enačbe}Fresnelove enačbe\footnote{Francoski fizik in inženir Augustin Jean Fresnel, 1788--1827.}.
 Za TE polarizacijo jih zapišemo 
@@ -488,8 +488,8 @@ redkejše sredstvo ($n_1>n_2$). Najprej obravnavajmo primer loma v optično gost
 Vidimo, da je pri nekem kotu, imenujemo ga \index{Brewsterjev kot}Brewsterjev 
 kot\footnote{Škotski fizik in znanstvenik Sir David Brewster, 1781--1868.}, odbojnost 
 za TM polarizirano valovanje enaka nič. Ob vpadu svetlobe na mejo dveh sredstev pod 
-Brewstrovim kotom je tako odbito valovanje vedno TE polarizirano. Po drugi strani to pomeni,
-da je prepustnost za TM komponento enaka $\mathcal{T}=1$, za TE komponento pa $\mathcal{T}<1$. 
+Brewsterjevim kotom je tako odbito valovanje vedno TE polarizirano. Po drugi strani to pomeni,
+da je pri tem vpadnem kotu prepustnost za TM komponento enaka $\mathcal{T}=1$, za TE komponento pa $\mathcal{T}<1$. 
 
 Negativni predznak odbojnosti $r_{\mathrm{TE}}$ pomeni, da ima odbiti TE polarizirani val pri vpadu
 na optično gostejše sredstvo ravno nasprotno 
@@ -517,20 +517,21 @@ Pokaži, da Brewsterjev kot izračunamo kot
 
 \begin{remark}
 Prozorne ploščice, ki so postavljene pod Brewsterjevim kotom glede na vpadno svetlobo, imenujemo
-Brewsterjeva okna. Njihova značilnost je, da eno polarizacijo (TM) prepustijo v celoti, druge 
+Brewsterjeva okna\index{Brewsterjevo okno}. Njihova značilnost je, da eno polarizacijo (TM) prepustijo v celoti, druge 
 polarizacije (TE) pa se del odbije, del pa prepusti. Brewsterjeva okna so zelo uporabna 
 pri izdelavi resonatorjev plinskih laserjev, saj so izgube za izbrano polarizacijo zelo majhne, 
 za drugo pa razmeroma velike.  
 \end{remark}
 
-Pri vpadu na optično redkejše (sliki~\ref{fig:Brewster}\,b in d) je pomemben še en kot, to je mejni kot
+Pri vpadu na optično redkejše sredstvo (sliki~\ref{fig:Brewster}\,b in d) je pomemben še en kot, to je mejni kot
 totalnega odboja $\vartheta_T = \arcsin\left(n_2/n_1\right)$. Pri vpadnih kotih, ki so večji od 
 $\vartheta_T$, se svetloba v celoti odbije in govorimo o totalnem ali popolnem odboju\index{Totalni odboj}. 
 Kljub temu električna poljska jakost v optično redkejšem sredstvu
-ni enaka nič. Tam se pojavi tako imenovano evanescentno polje. To je polje, ki se širi v smeri mejne 
+ni enaka nič, saj se tam pojavi evanescentno polje\index{Evanescentno polje}.
+To je polje, ki se širi v smeri mejne 
 ravnine, njegova amplituda pa pojema eksponentno z oddaljenostjo od mejne plasti. Pri tem je 
 vdorna globina odvisna od valovne dolžine valovanja, lomnega količnika snovi in tudi od vpadnega kota.
-Čeprav je v optično redkejši snovi električno polje različno od nič, pa račun pokaže, da je Poyntingov
+Čeprav se v optično redkejši snovi pojavi električno polje, je Poyntingov
 vektor v smeri pravokotno na mejno ploskev v povprečju enak nič in zato ne pride do prenosa energije
 v drugo snov. 
 
@@ -542,9 +543,9 @@ svetlobe odbije. Da zmanjšamo te izgube, optične elemente navadno
 prekrijemo z antirefleksno plastjo, to je nanosom ene ali več primerno
 izbranih debelin plasti dielektrikov z ustreznimi lomnimi količniki.
 Zaradi destruktivne interference se količina odbite svetlobe z izbrano
-valovno dolžino občutno zmanjša. Ker imamo v fiziki laserjev opraviti
-s koherentnimi izvori s točno določeno valovno dolžino, za zmanjšanje
-izgub, na primer v resonatorju laserja, vedno uporabljamo optične
+valovno dolžino občutno zmanjša. Ker so laserji
+koherentni izvori svetlobe s točno določeno valovno dolžino, za zmanjšanje
+izgub, na primer v resonatorju laserja, uporabljamo optične
 elemente (leče, kristale, akusto-optične modulatorje ... ) z ustrezno
 antirefleksno plastjo.
 \end{remark}
@@ -557,9 +558,9 @@ skalarnega približka teorije elektromagnetnega polja. To pomeni, da vpliva
 polarizacije ne upoštevamo. Ta je pomemben zgolj pri zelo majhnih odprtinah, 
 kjer je velikost odprtine po velikosti podobna valovni dolžini svetlobe $a \sim \lambda$. 
 Vendar so tudi v tem primeru uklonske slike za različne polarizacije podobne, 
-razlikujejo pa se po intenziteti prepuščene svetlobe.
+razlikujejo pa se po intenziteti uklonjene svetlobe.
 
-\begin{remark}{{\bf Žičnati polarizatorji}}\\ \\
+\begin{remark}
 Primer, kjer skalarni približek ne da pravih rezultatov, je uklon na mrežici, narejeni 
 iz zelo tankih prevodnih žic. Takšna mrežica deluje kot polarizator za vpadno elektromagnetno valovanje.
 Elektromagnetni val s polarizacijo, ki je vzporedna žicam, pri prečkanju v žicah inducira tok
