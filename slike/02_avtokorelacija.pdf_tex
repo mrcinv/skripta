@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '02_avtokorelacija.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{293.71679688bp}%
+    \setlength{\unitlength}{293.7168045bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,10 +50,12 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.7058745)%
-    \put(0,0){\includegraphics[width=\unitlength]{02_avtokorelacija.pdf}}%
-    \put(0.95097322,0.0319761){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$t$}}}%
-    \put(0.03491824,0.61630165){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$|G(t)|$}}}%
-    \put(0.23228218,0.01054624){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$t_c$}}}%
+  \begin{picture}(1,0.70587445)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{02_avtokorelacija.pdf}}%
+    \put(0.95097317,0.03197608){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$t$}\end{tabular}}}}%
+    \put(0.03491824,0.6163016){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$|\textit{G}(\textit{t})|$\end{tabular}}}}%
+    \put(0.23228217,0.01054622){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$t_c$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '02_fluktuacije02.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{584.2059082bp}%
+    \setlength{\unitlength}{584.20591736bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -49,8 +51,13 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.10555109)%
-    \put(0,0){\includegraphics[width=\unitlength]{02_fluktuacije02.pdf}}%
-    \put(0.97946323,0.03678809){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$t$}}}%
-    \put(-0.00080365,0.1009428){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Re(E)$}}}%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0.02907822,0.23073903){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{02_fluktuacije02.pdf}}%
+    \put(0.97946323,0.03678809){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$t$}\end{tabular}}}}%
+    \put(-0.00080365,0.1009428){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\Re(E)$\end{tabular}}}}%
+    \put(-0.01862716,0.25554583){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{1.05028153\unitlength}\raggedright  \end{minipage}}}%
+    \put(-0.09113933,0.13342007){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{1.15485169\unitlength}\raggedright  \end{minipage}}}%
   \end{picture}%
 \endgroup%

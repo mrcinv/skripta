@@ -4,7 +4,7 @@
 Za začetek bomo osvežili osnove teorije elektromagnetnega polja in 
 elektromagnetnega valovanja. Obnovili bomo zapis Maxwellovih enačb in 
 valovne enačbe, opisali osnovne pojave valovanja (lom, odboj in uklon)
-in si ogledali razširjanje svetlobe v anizotropnih snoveh. 
+in si na kratko ogledali razširjanje svetlobe v anizotropnih snoveh. 
 
 \section{Maxwellove enačbe}
 Elektromagnetno polje v praznem prostoru opišemo z dvema vektorskima
@@ -578,11 +578,11 @@ Pri velikostih odprtin $a\gg\lambda$ torej uporabimo skalarno obliko valovne ena
 \nabla^2 E - \frac{1}{c^2}\frac{\partial^2 E}{\partial t^2} = 0.
 \label{eq:skalarna-valovna-enačba}
 \end{equation}
-Zapisana valovna enačba velja za vse komponente električne $E$ in tudi 
-magnetne poljske jakosti $H$. Časovna odvisnost polja $E$ je harmonična funkcija in 
+Časovna odvisnost polja $E$ je harmonična funkcija in 
 je sorazmerna z $e^{-i \omega t}$. Z uporabo Greenovega teorema lahko 
-jakost polja $E_P$ v točki $P$ izrazimo s poljem na poljubni ploskvi, ki obkroža točko $P$ (slika \ref{fig:UklonFK}). 
-Zvezo opisuje Kirchhoffov integral\footnote{Nemški fizik Gustav Kirchhoff, 1824--1887.} 
+jakost polja $E_P$ v točki prostora $P$ izrazimo s poljem na 
+poljubni ploskvi, ki to točko obkroža. 
+Zvezo opisuje Kirchhoffov integral\footnote{Nemški fizik Gustav Robert Kirchhoff, 1824--1887.} 
 \index{Kirchhoffov integral}
 \begin{equation}
 E_P = -\frac{1}{4\pi}\oint \left(E\,\mathbf{n}\cdot \nabla \frac{e^{ikr}}{r}-
@@ -594,7 +594,7 @@ do ploskve $dS$. Kirchhoffov integral velja splošno za katerokoli harmonično
 funkcijo, ki reši valovno enačbo (enačba~\ref{eq:skalarna-valovna-enačba}), ne samo $E$, in torej
 ni vezan na obravnavo uklona svetlobe. 
 
-Vzemimo točkast izvor v točki $S$. Svetloba iz njega vpada na zaslon, 
+Naj svetloba iz točkastega izvora v točki $S$ (slika \ref{fig:UklonFK}) vpada na zaslon
 z odprtino poljubne oblike. Izračunajmo skalarno polje v točki $P$ na drugi 
 strani zaslona. Vpadno svetlobo zapišemo kot
 \begin{equation}
@@ -614,7 +614,7 @@ dobro ujemata z eksperimentalno določeno uklonsko sliko, s čimer
 upravičimo njuno uporabo.
 
 \begin{figure}[]
-\centering \def\svgwidth{85truemm} 
+\centering \def\svgwidth{65truemm} 
   \input{slike/01_uklonFK.pdf_tex}
 \caption{Integracijska ploskev v Kirchhoffovem integralu zajema odprtino in objema točko $P$.}
 \label{fig:UklonFK}
@@ -636,8 +636,8 @@ Uporabi Kirchhoffov integral (enačba~\ref{eq:Kirchhoffov-integral}) in pokaži,
 $r \gg \lambda$.
 \end{definition}
 
-Oglejmo si poseben primer, ko leži točkast izvor svetlobe na osi okrogle odprtine. Razdalja
-$r'$ je potem konstantna in polje v točki $P$ izračunamo kot 
+Oglejmo si poseben primer, ko leži točkast izvor svetlobe na osi okrogle odprtine. Polje 
+v točki $P$ izračunamo kot 
 \begin{equation}
 \label{eq:Fresnelov-uklon}
 E_P =  -\frac{ik}{4\pi} \int E_S\frac{ e^{ikr-i\omega t}}{r}\left[\cos(\mathbf{n},\mathbf{r})+1\right] dS,
@@ -652,7 +652,7 @@ matematičen zapis \index{Huygensovo načelo}Huygensovega
 načela\footnote{Nizozemski znanstvenik Christiaan Huygens, 1629--1695.}. 
 Spomnimo se, da Huygensovo načelo pravi, da lahko vsako točko valovne fronte obravnavamo 
 kot izvor novega krogelnega vala. Točno to je zapisano tudi v gornjem integralu. Vpadni val
-$E_S$ v vsakem od elementov $dS$ odprtine vzbudi krogelno valovanje s
+$E_S$ v vsakem od elementov odprtine $dS$ vzbudi krogelno valovanje s
 kompleksno amplitudo
 \begin{equation}
 E = A_0 \frac{e^{ikr}}{r},
@@ -660,34 +660,36 @@ E = A_0 \frac{e^{ikr}}{r},
 polje v izbrani točki $P$ pa je vsota prispevkov posameznih krogelnih valovanj.
 
 Za razliko od osnovnega Huygensovega načela, v Fresnel-Kirchhoffovem integralu 
-(enačba~\ref{eq:Fresnel-Kirchoffov-integral})
+(enačba~\ref{eq:Fresnelov-uklon})
 nastopa še faktor $\left[\cos(\mathbf{n},\mathbf{r})+1\right]$, ki poskrbi, da ni valovanja 
 v smeri nazaj proti izvoru. Tudi faktor $-i$ manjka v osnovnem Huygensovem načelu,
 pomeni pa, da je uklonjeno valovanje fazno zakasnjeno za $\pi/2$ glede na osnovno
 valovanje $E_S$.
 
 Uporabna razširitev Fresnel-Kirchhoffovega uklona je z uporabo prepustnostne funkcije odprtine $T$.
-Z njo v splošnem popišemo amplitudne in fazne spremembe, do katerih lahko pride na raznih 
+Z njo v splošnem popišemo amplitudne in fazne spremembe, do katerih pride na raznih 
 odprtinah, lečah, uklonskih mrežicah ... Razširjen uklonski integral zapišemo kot
 \boxeq{eq:Fresnelov-uklon2}{
-E_P =  -\frac{ik}{4\pi} \int T(r) E_S(r) \frac{ e^{ikr-i\omega t}}{r}
+E_P =  -\frac{ik}{4\pi} \int T(r') E_S(r') \frac{ e^{ikr-i\omega t}}{r}
 \left[\cos(\mathbf{n},\mathbf{r})+1\right] dS,
 }
-pri čemer smo upoštevali tudi splošno obliko vpadnega vala $E_S(r)$.
+pri čemer smo upoštevali tudi splošno obliko vpadnega vala $E_S(r')$.
 
 \subsection*{Fraunhoferjev in Fresnelov približek}
 \label{FFuklon}
-Izračun Fresnel-Kirchhoffovega integrala je v splošnem zelo zapleten, zato se 
+Izračun Fresnel-Kirchhoffovega integrala (enačba~\ref{eq:Kirchhoffov-integral}) 
+je v splošnem zelo zapleten, zato se 
 pogosto poslužujemo dveh približkov: Fraunhoferjevega\footnote{Nemški fizik 
 Joseph von Fraunhofer, 1787--1826.} in Fresnelovega\index{Fresnelov uklon}. 
 Fraunhoferjeva uklonska slika\index{Fraunhoferjev uklon} velja za daljno polje, kadar lahko 
-vpadni in uklonjeni val zapišemo kot ravna valova. Bolj zapleteno Fresnelovo uklonsko sliko pa moramo
-uporabiti, kadar obravnavamo primer bližnjega polja in ukrivljene valovne fronte.
+vpadni in uklonjeni val dovolj dobro popišemo z ravnim valom. 
+Bolj zapleteno Fresnelovo uklonsko sliko moramo uporabiti, kadar obravnavamo 
+primer bližnjega polja in ukrivljene valovne fronte.
 \begin{figure}[h]
-\centering \def\svgwidth{90truemm} 
+\centering \def\svgwidth{110truemm} 
   \input{slike/01_uklonFF2.pdf_tex}
-\caption{V Fraunhoferjevem približku valovanji obravnavamo kot ravna valova 
-in dobimo znano uklonsko sliko (levo). Fresnelov približek moramo uporabiti za obravnavno uklona v 
+\caption{V Fraunhoferjevem približku vpadno in uklonjeno valovanje obravnavamo kot ravna valova 
+in na zaslonu nastane znana uklonska slika (levo). Fresnelov približek moramo uporabiti za obravnavno uklona v 
 primeru bližnjega polja (desno).}
 \label{fig:UklonFF}
 \end{figure}
@@ -698,14 +700,16 @@ Mejo med daljnim in bližnjim poljem kvalitativno določa Fresnelovo
 F= \frac{a^2}{L\lambda}.
 \end{equation} 
 Pri tem je $a$ karakteristična dimenzija odprtine, $L$ tipična oddaljenost od odprtine ter
-$\lambda$ valovna dolžina. V grobem velja, da lahko Fraunhoferjev približek uporabimo, kadar je $F<1$ in je odstopanje
+$\lambda$ valovna dolžina. V grobem velja, da lahko Fraunhoferjev približek uporabimo,
+kadar je $F<1$ in je odstopanje
 faze od ravnega vala znotraj odprtine majhno. Sicer moramo uklon obravnavati v Fresnelovem 
 približku ali celo v polni obliki. 
 
 Zapišimo uklonske integrale za oba približka. Izhajajmo iz Fresnel-Kirchhoffovega integrala
 za točkast izvor
-(enačba~\ref{eq:Fresnel-Kirchoffov-integral}) in zapišimo razdaljo $r$ s koordinatama na zaslonu $x', y'$ ter
-lego točke $P$ s koordinatami $x,y,z$ (slika \ref{fig:Uklon-koordinate}). Privzamemo,
+(enačba~\ref{eq:Fresnel-Kirchoffov-integral}) in zapišimo razdaljo $r$ s koordinatama na 
+zaslonu $x'$ in $y'$ ter
+lego točke $P$ s koordinatami $x,y$ in $z$ (slika \ref{fig:Uklon-koordinate}). Privzamemo,
 da je oddaljenost do zaslona bistveno večja od prečnih dimenzij. 
 
 \begin{figure}[h]
@@ -725,15 +729,15 @@ in razvijemo
 r \approx z + \frac{(x-x')^2}{2z} +\frac{(y-y')^2}{2z}.
 \end{equation}
 
-V Fraunhoferjevem približku zadošča uporaba le linearnih členov v gornjem izrazu in za Fraunhoferjev
-uklonski integral dobimo
+V Fraunhoferjevem približku zadošča uporaba le linearnih členov v gornjem
+izrazu in Fraunhoferjev uklonski integral zapišemo kot
 \begin{equation}
 \label{eq:FraunhoferApprox}
 E_P =  \frac{1}{i\lambda z} e^{i k (z + (x^2+y^2) /2z)}\int \int E_S e^{-ik (xx'+yy')/z} dx' dy',
 \end{equation}
 kar ni nič drugega kot Fouriereva transformacija polja $E_S$.
 
-V Fresnelovem približku upoštevamo tudi kvadratne člene v razvoju in dobimo
+V Fresnelovem približku upoštevamo tudi kvadratne člene v razvoju in ga zapišemo kot
 \begin{equation}
 \label{eq:FresnelApprox}
 E_P =  \frac{1}{i \lambda z } e^{i k z}\int \int E_S e^{-ik ((x-x')^2+(y-y')^2)/2z} dx' dy'.
@@ -745,7 +749,7 @@ Pokaži, da je v Fraunhoferjevi uklonski sliki uklon na okrogli odprtini s preme
 \begin{equation}
 I_P = I_0\frac{4 J_1(\pi a \rho/ \lambda z)}{\pi a \rho/ \lambda z},
 \end{equation}
-kjer je $\rho = \sqrt{x^2+y^2}$.
+kjer sta $J_1(x)$ Besslova funkcija in $\rho = \sqrt{x^2+y^2}$.
 \end{definition}
 
 \section{EM valovanje v anizotropnih snoveh}\label{chap:anizotropni}
@@ -753,7 +757,7 @@ Do zdaj smo obravnavali elektromagnetno valovanje
 v izotropnih snoveh, v katerih je dielektričnost skalar in hitrost širjenja
 valovanja neodvisna od njegove smeri. V splošnem so snovi anizotropne,
 dielektričnost\index{Dielektričnost} je tenzor, hitrost potovanja svetlobe \index{Hitrost valovanja}
-skozi snov pa je odvisna od smeri razširjanja in od polarizacije valovanja. 
+skozi snov pa je odvisna od smeri širjenja in od polarizacije valovanja. 
 
 Gostoto električnega polja~\index{Električno polje!gostota} v anizotropni snovi zapišemo kot 
 \begin{equation}
@@ -781,15 +785,15 @@ diagonalen. V takem koordinatnem sistemu velja
 \end{equation}
 in 
 \begin{align}
-D_{1}&=\epsilon_{0}\epsilon_{1}E_{1}\nonumber \\
-D_{2}&=\epsilon_{0}\epsilon_{2}E_{2}\nonumber \\
+D_{1}&=\epsilon_{0}\epsilon_{1}E_{1},\nonumber \\
+D_{2}&=\epsilon_{0}\epsilon_{2}E_{2},\nonumber \\
 D_{3}&=\epsilon_{0}\epsilon_{3}E_{3}.\label{eq:gostota-elektricnega-polja-lastni}
 \end{align}
 Glavne osi sistema določajo smeri, vzdolž katerih sta jakost
 in gostota električnega polja vzporedni, lastne vrednosti 
 pa ustrezajo trem lomnim količnikom\index{Lomni količnik} $\epsilon_{i}=\sqrt{n_{i}}$. Snovi,
-za katere so vse tri vrednosti $n_i$ različne, imenujemo optično dvoosne snovi\index{Dvoosne snovi}, 
-medtem ko sta v optično enoosnih snoveh\index{Enoosne snovi} dve lastni vrednosti enaki $n_{1}=n_{2}$. 
+za katere so vse tri vrednosti $n_i$ različne, imenujemo optično dvoosne snovi\index{dvoosne snovi}, 
+medtem ko sta v optično enoosnih snoveh\index{enoosne snovi} dve lastni vrednosti enaki $n_{1}=n_{2}$. 
 Če so enake vse tri lastne vrednosti, je snov izotropna.
 
 \subsection*{Elipsoid lomnega količnika}
@@ -807,7 +811,7 @@ hitrostma, zato pride med njima do faznega zamika.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{40truemm} 
+\def\svgwidth{50truemm} 
 \input{slike/01_indikatrisa.pdf_tex}
 \caption{Elipsoid lomnega količnika oziroma optična indikatrisa. Glavne osi
 elipsoida sovpadajo z glavnimi osmi tenzorja $\varepsilon$, polosi elipsoida pa so enake
@@ -821,19 +825,33 @@ bolj zapleten in je treba lomne količnike še izračunati. Pri tem si pomagamo
 z grafično upodobitvijo, s tako imenovanim elipsoidom lomnega količnika oziroma
 \index{Optična indikatrisa|see {Elipsoid lomnega količnika}}optično indikatriso. 
 
-Optična indikatrisa je elipsoid, podan z enačbo
+Optična indikatrisa je v splošnem elipsoid, podan z enačbo
 \begin{equation}
 \frac{x^{2}}{n_{1}^{2}}+\frac{y^{2}}{n_{2}^{2}}+\frac{z^{2}}{n_{3}^{2}}=1.
 \end{equation}
 Glavne osi elipsoida sovpadajo z glavnimi osmi tenzorja $\epsilon$, 
 polosi elipsoida pa so $n_{1}$, $n_{2}$ in $n_{3}$. 
-Lomne količnike za val, ki se širi z valovnim vektorjem $\mathbf{k}$, skozi izhodišče
-narišemo ravnino, pravokotno na smer valovnega vektorja (slika~\ref{fig:Indikatrisa}).
-Presečišče ravnine in elipsoida je elipsa, katere glavni osi podata
+Lomne količnike za val, ki se širi z valovnim vektorjem $\mathbf{k}$, določimo tako, da
+skozi izhodišče narišemo ravnino, pravokotno na smer valovnega vektorja (slika~\ref{fig:Indikatrisa}).
+Presečišče ravnine in elipsoida je elipsa, katere glavni osi podajata
 vrednosti lomnih količnikov $n_{a}$ in $n_{b}$ za obe lastni polarizaciji,
 njuni smeri pa predstavljata lastni smeri gostote električnega polja. Ker
 sta to lastni osi, smer jakosti električnega polja izračunamo z
 enačbo (\ref{eq:gostota-elektricnega-polja-lastni}).
+
+\begin{remark}
+ Formalen pristop k iskanju lomnih količnikov za izbrano polarizacijo izhaja iz valovne enačbe
+(enačba~\ref{eq:valovna-skalarna}), kjer moramo upoštevati tudi električno polarizacijo $\mathbf{P} = 
+\epsilon_{0}(\underline{\epsilon}-I)\mathbf{E}$. Iz tega lahko izpeljemo sistem enačb za
+komponente valovnega vektorja in električne poljske jakosti. Rešitev sistema nazorno predstavimo 
+s ploskvijo valovnega vektorja, ki je zapletena sklenjena dvolistna ploskev. Dvolistnost ploskve
+vodi pri vsakem valovnem vektorju do dveh možnih rešitev in dveh različnih lomnih
+ količnikov, od katerih vsak ustreza eni od ortogonalnih polarizacij. V štirih točkah, vse ležijo v eni ravnini, 
+ se ploskev dotika sama sebe in te točke določajo smeri valovnega vektorja, vzdolž katere sta 
+ lomna količnika za obe polarizaciji enaka. Dve osi, ki ju te štiri točke določajo, imenujemo 
+ optični osi in tak kristal je optično dvoosen.
+\end{remark}
+
 
 \subsection*{Optično enoosni kristali}
 \index{Enoosne snovi}
@@ -842,9 +860,100 @@ elipsoid. Po dogovoru izberemo lastne vrednosti tako, da velja $n_{1}=n_{2}\neq 
 Za valovanje, ki se razširja v smeri $z$, sta lomna količnika za obe polarizaciji 
 enaka in os $z$ imenujemo \index{Optična os}optična os. Hitrost valovanja, ki
 se širi vzdolž optične osi, je torej neodvisna od njegove polarizacije.
-Navadno vpeljemo tudi nove oznake: $n_{1}=n_{2}=n_{o}=n_{\perp}$, ki označuje redni (\textit{ordinary})
+Pri obravnavi enoosnih kristalov navadno vpeljemo tudi nove 
+oznake: $n_{1}=n_{2}=n_{o}=n_{\perp}$, ki označuje redni (\textit{ordinary})
 lomni količnik\index{Lomni količnik!redni}, $n_{3}=n_{e}=n_\parallel$ pa izredni 
-(\textit{extraordinary}) lomni količnik\index{Lomni količnik!izredni}. 
+(\textit{extraordinary}) lomni količnik\index{Lomni količnik!izredni}. Oznaki 
+$\perp$ in $\parallel$ se nanašata na smer polarizacije valovanja glede na optično os.
+
+Za lažjo predstavo skiciramo ploskev valovnega vektorja. Pravzaprav ni treba risati celotne ploskve, 
+ampak zadošča, če narišemo presek ploskve valovnega vektorja z ravnino, ki jo določata 
+optična os in valovni vektor $\mathbf{k}$ (vpadno ravnino). 
+Zaradi simetrije je pomemben le kot $\vartheta$ med valovnim vektorjem $\mathbf{k}$ 
+in optično osjo $z$, zato si lahko drugo koordinatno os poljubno izberemo. Tukaj smo izbrali 
+os $y$ (slika~\ref{fig:Elipsa}). 
+
+Za vsako smer valovnega vektorja, torej za vsak kot $\vartheta$, sta možni dve rešitvi, 
+ki pripadata dvema lastnima polarizacijama z ustreznima lomnima količnikoma. 
+Lomni količnik za žarek, ki je polariziran pravokotno na vpadno ravnino, 
+je neodvisen od $\vartheta$. To je torej redni žarek, njegov lomni količnik 
+pa je vedno $n_o$, ne glede na vpadni kot. Na skici temu žarku ustreza krožnica.
+
+Žarek, ki je polariziran v vpadni ravnini, je izredni žarek. Pripadajoč
+lomni količnik\index{Lomni količnik} je odvisen od kota $\vartheta$ in 
+ga izračunamo iz sledeče enačbe elipse s polosema $n_o$ in $n_e$: 
+\boxeq{eq:izreden}{
+\frac{1}{n^{2}(\vartheta)}=\frac{\cos^{2}\vartheta}{n_{o}^{2}}+\frac{\sin^{2}\vartheta}{n_{e}^{2}}.
+}
+Opazimo, da se krožnica in elipsa dotikata ravno na osi $z$. Takrat se 
+valovanje širi vzdolž optične osi in lomna količnika sta za obe polarizaciji enaka $n_o$. 
+
+\begin{figure}[t]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/01_elipsa.pdf_tex}
+\caption{V optično enoosnih kristalih je lomni količnik odvisen
+od smeri valovnega vektorja in polarizacije. Poznamo pozitivno anizotropne snovi, pri katerih
+je $n_e>n_o$ (a) in negativno anizotropne snovi, kjer velja $n_e< n_o$ (b). V obeh primerih je redni 
+žarek polariziran pravokotno na vpadno ravnino. Zanj velja, 
+da je $\mathbf{D} \parallel \mathbf{E}$ in $\mathbf{S} \parallel \mathbf{k}$ (c, zgoraj). Izredni žarek
+je polariziran v vpadni ravnini. Smer širjenja žarka $\mathbf{S}$ ni vzporedna z valovnim vektorjem
+$\mathbf{k}$, prav tako valovne fronte niso pravokotne nanjo (c, spodaj). Primer je narisan za pozitivno 
+anizotropno snov.}
+\label{fig:Elipsa}
+\end{figure}
+
+Navadno sta pri ravnem valu vektorja $\mathbf{E}$ in $\mathbf{D}$ vzporedna, 
+prav tako $\mathbf{k}$ in $\mathbf{S}$. Žarek se širi v smeri valovnega vektorja, 
+valovne fronte pa so pravokotne nanj. To velja tudi za redni žarek v anizotropnih
+snoveh. Izredni žarek pa ima, kot že ime nakazuje, ``izredne'' lastnosti. Vektorja
+$\mathbf{E}$ in $\mathbf{D}$ nista vzporedna, zato tudi valovni vektor $\mathbf{k}$ ni vzporeden
+toku energije oziroma Poyntingovemu vektorju $\mathbf{S}$ (slika \ref{fig:Elipsa}\,c). 
+Žarek, ki ga vidimo, tako potuje v smeri, ki ni enaka smeri valovnega vektorja. Smer
+Poyntingovega vektorja določimo kot normalo na elipso pri kotu $\vartheta$. 
+
+\subsection*{Dvojni lom}
+Ko vpade žarek na anizotropno snov, se lomi. Vemo, da je hitrost valovanja v 
+snovi -- in s tem tudi kot, pod katerim se lomi -- odvisna od polarizacije valovanja. V splošnem
+se v anizotropnih snoveh pojavita dva lomljena žarka z različnima polarizacijama, kar
+da ime pojavu: \index{Dvolomnost}dvolomnost (slika~\ref{fig:dvolomnost}). Da zadostimo ohranitvi faze
+pri prehodu, moramo popraviti tudi zapis \index{Lomni zakon}lomnega zakona (enačba \ref{eq:lomni_zakon}).
+
+Za redni val s TE polarizacijo (pravokotno na vpadno ravnino) velja navadni lomni zakon, pri čemer
+je lomni količnik snovi enak rednemu lomnemu količniku $n_o$
+\begin{equation}
+\sin\vartheta_{1}=n_{o}\sin\vartheta_{o}.
+\end{equation}
+Pri zapisu smo privzeli, da je lomni količnik snovi, iz katere valovanje prehaja v anizotropen 
+kristal, enak 1. Za izredni val s TM polarizacijo (električna poljska jakost leži v vpadni ravnini) prav tako 
+velja lomni zakon
+\begin{equation}
+\sin\vartheta_{1}=n(\vartheta_e)\sin\vartheta_{e},
+\end{equation}
+le da je lomni količnik $n(\vartheta_e)$ odvisen od smeri širjenja valovanja in je določen z enačbo elipse
+(enačba~\ref{eq:izreden}). Na 
+
+Kadar vpada valovanje pravokotno na izotropno snov, se žarek ne lomi. V 
+dvolomnih snoveh pa lahko tudi pri pravokotnem vpadu pride do razklona žarkov (slika
+\ref{fig:dvolomnost}\,b). Kadar je optična os nagnjena glede na vpadnico, sta valovna vektorja
+obeh prepuščenih žarkov sicer vzporedna valovnemu vektorju vpadnega žarka ($\mathbf{k}_1 \parallel
+\mathbf{k}_o \parallel \mathbf{k}_e$), razlikujejo pa se smeri Poyntingovih vektorjev
+($\mathbf{S}_1 \parallel \mathbf{S}_o \nparallel \mathbf{S}_e$). Ob prehodu skozi 
+plast anizotropne snovi tako nastaneta dva vzporedna, a razmaknjena žarka z medsebojno
+pravokotnimi polarizacijami. Enoosne kristale, odrezane pod primernim kotom in prave dolžine,
+zato lahko uporabimo kot polarizacijski delilnik žarkov.
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/01_dvolom.pdf_tex}
+\caption{Dvojni lom. Pri poševnem vpadu na anizotropno snov se
+valovanje loči na dva različno polarizirana žarka (a). Tudi pri pravokotnem vpadu se žarka 
+ločita, če je optična os usmerjena pod poljubnim kotom glede na normalo mejne ravnine. Valovni vektorji
+so v tem primeru kolinearni, Poyntingovi vektorji pa imajo različne smeri (b).}
+\label{fig:dvolomnost}
+\end{figure}
+
 
 \begin{table}[h]
  \centering
@@ -862,86 +971,6 @@ lomni količnik\index{Lomni količnik!redni}, $n_{3}=n_{e}=n_\parallel$ pa izred
    veljajo vrednosti za svetlobo z valovno dolžino 633~\si{\nano\metre}.}
 \label{table:none}
 \end{table}
-
-Za lažjo predstavo skiciramo ploskev valovnega vektorja, ki jo zaradi simetrije v tem 
-primeru lahko upodobimo kar ravninsko (slika~\ref{fig:Elipsa}). 
-Smer valovnega vektorja določa le kot 
-$\vartheta$ med valovnim vektorjem $\mathbf{k}$ in optično osjo $z$. Dvema 
-lastnima polarizacijama pa pripadata dva različna lomna količnika. 
-Lomni količnik za žarek, ki je polariziran pravokotno na vpadno ravnino, 
-je enak $n_o$ in neodvisen od $\vartheta$, zato narišemo krožnico. Takemu žarku pravimo redni žarek. 
-Žarek, ki je polariziran v vpadni ravnini, je izredni žarek. Pripadajoč
-lomni količnik\index{Lomni količnik} je odvisen od kota $\vartheta$ in ga izračunamo iz sledeče enačbe elipse
-s polosema $n_o$ in $n_e$: 
-\boxeq{eq:izreden}{
-\frac{1}{n^{2}(\vartheta)}=\frac{\cos^{2}\vartheta}{n_{o}^{2}}+\frac{\sin^{2}\vartheta}{n_{e}^{2}}.
-}
-Opazimo, da se krožnica in elipsa dotikata ravno na osi $z$. Takrat se 
-valovanje širi vzdolž optične osi in lomna količnika sta za obe polarizaciji enaka $n_o$. 
-
-\begin{figure}[h]
-\centering
-\def\svgwidth{140truemm} 
-\input{slike/01_elipsa.pdf_tex}
-\caption{V optično enoosnih kristalih je lomni količnik odvisen
-od smeri valovnega vektorja in njegove polarizacije. a) primer pozitivno anizotropne
-snovi ($n_e>n_o$). b) Redni žarek je polariziran pravokotno na vpadno ravnino. Zanj velja, 
-da je $\mathbf{D} \parallel \mathbf{E}$ in $\mathbf{S} \parallel \mathbf{k}$. Izredni žarek
-je polariziran v vpadni ravnini. Smer širjenja žarka $\mathbf{S}$ ni vzporedna z valovnim vektorjem
-$\mathbf{k}$,
-prav tako valovne fronte niso pravokotne nanjo. c) Primer negativno anizotropne snovi ($n_e< n_o$).}
-\label{fig:Elipsa}
-\end{figure}
-
-Navadno sta pri ravnem valu vektorja $\mathbf{E}$ in $\mathbf{D}$ vzporedna, 
-prav tako $\mathbf{k}$ in $\mathbf{S}$. Žarek se širi v smeri valovnega vektorja, 
-valovne fronte pa so pravokotne nanj. To velja tudi za redni žarek v anizotropnih
-snoveh. Izredni žarek pa ima, kot že ime nakazuje, ``izredne'' lastnosti. Vektorja
-$\mathbf{E}$ in $\mathbf{D}$ nista vzporedna, zato tudi valovni vektor $\mathbf{k}$ ni vzporeden
-toku energije oziroma Poyntingovemu vektorju $\mathbf{S}$ (slika \ref{fig:Elipsa}\,b). 
-Žarek, ki ga vidimo, tako potuje v smeri, ki ni enaka smeri valovnega vektorja. Smer
-Poyntingovega vektorja določimo kot normalo na elipso pri kotu $\vartheta$. 
-
-\subsection*{Dvojni lom}
-Ko vpade žarek na anizotropno snov, se lomi. Privzemimo, da je lomni količnik snovi,
-iz katere valovanje prehaja v anizotropen kristal, enak 1. Vemo, da je hitrost valovanja v 
-snovi -- in s tem tudi kot, pod katerim se lomi -- odvisna od polarizacije valovanja. V splošnem
-se v anizotropnih snoveh pojavita dva lomljena žarka z različnima polarizacijama, kar
-da ime pojavu: \index{Dvolomnost}dvolomnost (slika~\ref{fig:dvolomnost}). 
-Da zadostimo ohranitvi faze
-pri prehodu, moramo popraviti tudi \index{Lomni zakon}lomni zakon (enačba \ref{eq:lomni_zakon}).
-
-Za redni val s TE polarizacijo (pravokotno na vpadno ravnino) velja navadni lomni zakon, pri čemer
-je lomni količnik snovi enak rednemu lomnemu količniku $n_o$
-\begin{equation}
-\sin\vartheta_{1}=n_{o}\sin\vartheta_{o}.
-\end{equation}
-Za izredni val s TM polarizacijo (električna poljska jakost leži v vpadni ravnini) pa velja
-\begin{equation}
-\sin\vartheta_{1}=n(\vartheta_e)\sin\vartheta_{e},
-\end{equation}
-pri čemer $n(\vartheta_e)$ izračunamo iz enačbe (\ref{eq:izreden}).
-
-\begin{figure}
-\centering
-\def\svgwidth{140truemm} 
-\input{slike/01_dvolom.pdf_tex}
-\caption{Dvojni lom. a) Pri poševnem vpadu na anizotropno snov se
-valovanje loči na dva različno polarizirana žarka. b) Tudi pri pravokotnem vpadu se žarka 
-ločita, če je optična os pod poljubnim kotom glede na normalo mejne ravnine. Valovni vektorji
-so v tem primeru kolinearni, Poyntingovi vektorji pa imajo različne smeri.}
-\label{fig:dvolomnost}
-\end{figure}
-
-Kadar vpada valovanje pravokotno na izotropno snov, se žarek ne lomi. V 
-dvolomnih snoveh pa lahko tudi pri pravokotnem vpadu pride do razklona žarkov (slika
-\ref{fig:dvolomnost}\,b). Kadar je optična os nagnjena glede na vpadnico, sta valovna vektorja
-obeh prepuščenih žarkov sicer vzporedna valovnemu vektorju vpadnega žarka ($\mathbf{k}_1 \parallel
-\mathbf{k}_o \parallel \mathbf{k}_e$), razlikujejo pa se smeri Poyntingovih vektorjev
-($\mathbf{S}_1 \parallel \mathbf{S}_o \nparallel \mathbf{S}_e$). Ob prehodu skozi 
-plast anizotropne snovi tako nastaneta dva vzporedna, a razmaknjena žarka z medsebojno
-pravokotnimi polarizacijami. Enoosne kristale, odrezane pod primernim kotom in prave dolžine,
-zato lahko uporabimo kot polarizacijski delilnik žarkov.
 
 \begin{figure}[h]
 \centering
