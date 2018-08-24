@@ -1,4 +1,4 @@
-\chapterimage{slike/Nebo.jpg} % Chapter heading image
+\chapterimage{Predgovor.jpg} % Chapter heading image
 
 \chapter{Elektromagnetno valovanje}
 Za začetek bomo osvežili osnove teorije elektromagnetnega polja in 
@@ -306,10 +306,10 @@ smer pa opiše polarizacija\index{Polarizacija}.
 Električno polje ravnega vala lahko razstavimo na dve medsebojno 
 pravokotni komponenti vektorja $\mathbf{E}(\mathbf{r})$. Ti dve komponenti
 nihata sinusno z enako frekvenco, lahko pa se razlikujeta v amplitudi in fazi. 
-V splošnem je tak val eliptično polariziran\index{Polarizacija!eliptična} in
+V splošnem je ravni val eliptično polariziran\index{Polarizacija!eliptična} in
 vrh vektorja električne poljske jakosti $\mathbf E$ v ravnini, ki je pravokotna na smer
-širjenja, orisuje elipso. Kadar je elipsa izrojena v daljico, govorimo o linearno polariziranem 
-valovanju\index{Polarizacija!linearna},
+širjenja, orisuje elipso. Kadar je elipsa izrojena v daljico,
+govorimo o linearno polariziranem valu\index{Polarizacija!linearna},
 kadar pa je krog, govorimo o cirkularno polariziranem valu\index{Polarizacija!cirkularna}. 
 Poljubno polarizacijo lahko vedno zapišemo kot vsoto dveh linearno ali dveh cirkularno polariziranih
 valovanj. 
@@ -338,7 +338,7 @@ poljska jakost na danem mestu vrti v desno, če gledamo proti izvoru valovanja.
 
 Zapis z Jonesovim vektorjem je prikladen, saj omogoča preprost izračun
 prehoda ravnega vala skozi optične elemente, ki spreminjajo polarizacijo,
-a ohranjajo obliko ravnega vala. V splošnem se pri prehodu skozi
+a ohranjajo njegovo obliko. V splošnem se pri prehodu skozi
 sredstvo spremeni kompleksna amplituda $\mathbf{E}_1 = (E_{1x}, E_{1y})$
 \begin{align}
 E_{2x} & =A_{11}E_{1x}+A_{12}E_{1y}\\
@@ -468,8 +468,8 @@ snoveh in v različnih smereh. Velja zveza
 \begin{equation}
 \mathcal{T}=\frac{n_{2}\cos\vartheta_{2}}{n_{1}\cos\vartheta_{1}}\left|t\right|^{2}.
 \end{equation}
-Najpreprostejši primer je pravokotni vpad na mejo dveh sredstev. Zaradi simetrije 
-morata biti odbojnost in prepustnost neodvisni od polarizacije in 
+Najpreprostejši primer je pravokotni vpad svetlobe na mejo dveh sredstev. Zaradi simetrije 
+morata biti odbojnost in prepustnost neodvisni od polarizacije. Sledi 
 \begin{equation}
 r_{\mathrm{TE}} = r_{\mathrm{TM}} = \frac{n_1-n_2}{n_1+n_2}
 \end{equation}
@@ -566,7 +566,8 @@ iz zelo tankih prevodnih žic. Takšna mrežica deluje kot polarizator za vpadno
 Elektromagnetni val s polarizacijo, ki je vzporedna žicam, pri prečkanju v žicah inducira tok
 in val se delno odbije in delno absorbira. Za valovanje, ki je polarizirano pravokotno 
 na žice, je ta inducirani tok bistveno manjši, saj je smer toka omejena
-vzdolž žice. Posledično je prepustnost velika le za eno polarizacijo. 
+vzdolž žice. Posledično je val, ki je polariziran pravokotno na žice, prepuščen, 
+val, ki je polariziran vzporedno z žicami, pa ne. 
 Takšni polarizatorji se večinoma uporabljajo v mikrovalovni tehniki, 
 vendar se v zadnjih letih z razvojem in izboljšavo litografskih postopkov
 vse pogosteje uporabljajo tudi v bližnjem infrardečem področju svetlobe.
@@ -682,7 +683,7 @@ je v splošnem zelo zapleten, zato se
 pogosto poslužujemo dveh približkov: Fraunhoferjevega\footnote{Nemški fizik 
 Joseph von Fraunhofer, 1787--1826.} in Fresnelovega\index{Fresnelov uklon}. 
 Fraunhoferjeva uklonska slika\index{Fraunhoferjev uklon} velja za daljno polje, kadar lahko 
-vpadni in uklonjeni val dovolj dobro popišemo z ravnim valom. 
+vpadni in uklonjeni val dovolj dobro opišemo z ravnim valom. 
 Bolj zapleteno Fresnelovo uklonsko sliko moramo uporabiti, kadar obravnavamo 
 primer bližnjega polja in ukrivljene valovne fronte.
 \begin{figure}[h]
@@ -733,14 +734,14 @@ V Fraunhoferjevem približku zadošča uporaba le linearnih členov v gornjem
 izrazu in Fraunhoferjev uklonski integral zapišemo kot
 \begin{equation}
 \label{eq:FraunhoferApprox}
-E_P =  \frac{1}{i\lambda z} e^{i k (z + (x^2+y^2) /2z)}\int \int E_S e^{-ik (xx'+yy')/z} dx' dy',
+E_P(x,y,z) =  \frac{1}{i\lambda z} e^{i k (z + (x^2+y^2) /2z)}\int \int E_S e^{-ik (xx'+yy')/z} dx' dy',
 \end{equation}
 kar ni nič drugega kot Fouriereva transformacija polja $E_S$.
 
 V Fresnelovem približku upoštevamo tudi kvadratne člene v razvoju in ga zapišemo kot
 \begin{equation}
 \label{eq:FresnelApprox}
-E_P =  \frac{1}{i \lambda z } e^{i k z}\int \int E_S e^{-ik ((x-x')^2+(y-y')^2)/2z} dx' dy'.
+E_P(x,y,z) =  \frac{1}{i \lambda z } e^{i k z}\int \int E_S e^{-ik ((x-x')^2+(y-y')^2)/2z} dx' dy'.
 \end{equation}
 
 \begin{definition}
@@ -806,8 +807,8 @@ tak val pa je $n_{1}$. Podobno velja za val, polariziran v smeri
 $y$, za katerega je lomni količnik enak $n_{2}$. Če se valovanje širi vzdolž lastne
 osi $z$, vendar njegova polarizacija ne sovpada z lastnima osema
 $x$ ali $y$, nastane po prehodu skozi kristal iz vpadnega linearno polariziranega valovanja
-v splošnem eliptično valovanje\index{Polarizacija!eliptična}. Lastni komponenti namreč potujeta z različnima
-hitrostma, zato pride med njima do faznega zamika.
+v splošnem eliptično valovanje\index{Polarizacija!eliptična}. Lastni komponenti namreč potujeta različno
+hitro, zato pride med njima do faznega zamika.
 
 \begin{figure}[h]
 \centering
@@ -845,11 +846,11 @@ enačbo (\ref{eq:gostota-elektricnega-polja-lastni}).
 \epsilon_{0}(\underline{\epsilon}-I)\mathbf{E}$. Iz tega lahko izpeljemo sistem enačb za
 komponente valovnega vektorja in električne poljske jakosti. Rešitev sistema nazorno predstavimo 
 s ploskvijo valovnega vektorja, ki je zapletena sklenjena dvolistna ploskev. Dvolistnost ploskve
-vodi pri vsakem valovnem vektorju do dveh možnih rešitev in dveh različnih lomnih
+vodi pri vsakem valovnem vektorju do dveh  rešitev in dveh različnih lomnih
  količnikov, od katerih vsak ustreza eni od ortogonalnih polarizacij. V štirih točkah, vse ležijo v eni ravnini, 
  se ploskev dotika sama sebe in te točke določajo smeri valovnega vektorja, vzdolž katere sta 
  lomna količnika za obe polarizaciji enaka. Dve osi, ki ju te štiri točke določajo, imenujemo 
- optični osi in tak kristal je optično dvoosen.
+ optični osi in tak kristal imenujemo optično dvoosen.
 \end{remark}
 
 
@@ -859,7 +860,8 @@ V optično enoosnih kristalih sta dve lastni vrednosti enaki in indikatrisa je r
 elipsoid. Po dogovoru izberemo lastne vrednosti tako, da velja $n_{1}=n_{2}\neq n_{3}$. 
 Za valovanje, ki se razširja v smeri $z$, sta lomna količnika za obe polarizaciji 
 enaka in os $z$ imenujemo \index{Optična os}optična os. Hitrost valovanja, ki
-se širi vzdolž optične osi, je torej neodvisna od njegove polarizacije.
+se širi vzdolž optične osi, je tako neodvisna od njegove polarizacije.
+Ker je optična os samo ena, imenujemo kristal optično enoosen. 
 Pri obravnavi enoosnih kristalov navadno vpeljemo tudi nove 
 oznake: $n_{1}=n_{2}=n_{o}=n_{\perp}$, ki označuje redni (\textit{ordinary})
 lomni količnik\index{Lomni količnik!redni}, $n_{3}=n_{e}=n_\parallel$ pa izredni 
@@ -873,7 +875,7 @@ Zaradi simetrije je pomemben le kot $\vartheta$ med valovnim vektorjem $\mathbf{
 in optično osjo $z$, zato si lahko drugo koordinatno os poljubno izberemo. Tukaj smo izbrali 
 os $y$ (slika~\ref{fig:Elipsa}). 
 
-Za vsako smer valovnega vektorja, torej za vsak kot $\vartheta$, sta možni dve rešitvi, 
+Za vsako smer valovnega vektorja, torej za vsak kot $\vartheta$, obstajata dve rešitvi, 
 ki pripadata dvema lastnima polarizacijama z ustreznima lomnima količnikoma. 
 Lomni količnik za žarek, ki je polariziran pravokotno na vpadno ravnino, 
 je neodvisen od $\vartheta$. To je torej redni žarek, njegov lomni količnik 
@@ -896,8 +898,8 @@ valovanje širi vzdolž optične osi in lomna količnika sta za obe polarizaciji
 od smeri valovnega vektorja in polarizacije. Poznamo pozitivno anizotropne snovi, pri katerih
 je $n_e>n_o$ (a) in negativno anizotropne snovi, kjer velja $n_e< n_o$ (b). V obeh primerih je redni 
 žarek polariziran pravokotno na vpadno ravnino. Zanj velja, 
-da je $\mathbf{D} \parallel \mathbf{E}$ in $\mathbf{S} \parallel \mathbf{k}$ (c, zgoraj). Izredni žarek
-je polariziran v vpadni ravnini. Smer širjenja žarka $\mathbf{S}$ ni vzporedna z valovnim vektorjem
+da je $\mathbf{D} \parallel \mathbf{E}$ in $\mathbf{S} \parallel \mathbf{k}$ (c, zgoraj). Polarizacija 
+izrednega žarka leži v vpadni ravnini. Smer širjenja žarka $\mathbf{S}$ ni vzporedna z valovnim vektorjem
 $\mathbf{k}$, prav tako valovne fronte niso pravokotne nanjo (c, spodaj). Primer je narisan za pozitivno 
 anizotropno snov.}
 \label{fig:Elipsa}
@@ -931,7 +933,7 @@ velja lomni zakon
 \sin\vartheta_{1}=n(\vartheta_e)\sin\vartheta_{e},
 \end{equation}
 le da je lomni količnik $n(\vartheta_e)$ odvisen od smeri širjenja valovanja in je določen z enačbo elipse
-(enačba~\ref{eq:izreden}). Na 
+(enačba~\ref{eq:izreden}).
 
 Kadar vpada valovanje pravokotno na izotropno snov, se žarek ne lomi. V 
 dvolomnih snoveh pa lahko tudi pri pravokotnem vpadu pride do razklona žarkov (slika
@@ -959,12 +961,12 @@ so v tem primeru kolinearni, Poyntingovi vektorji pa imajo različne smeri (b).}
  \centering
 \begin{tabular}{|l|c|c|} \hline  
       Snov & $n_o$ & $n_e$ \\ \hline
-      CaCO$_3$ (kalcit) & 1,6557 & 1,4849 \\ \hline
-      BaTiO$_3$ & 2,4042 & 2,3605 \\ \hline
-      LiNbO$_3$ & 2,2864 & 2,2022 \\ \hline
-      KH$_2$PO$_4$ & 1,5074 & 1,4669 \\ \hline
-      tekoči kristal 5CB ($25~\si{\degreeCelsius}$) & 1,5319 & 1,7060 \\ \hline
-      telur ($\lambda = 10~\si{\micro\metre}$) & 4,7969 & 6,2455 \\
+      CaCO$_3$ (kalcit) & 1,6557 & 1,4849 \\ \hline\index{CaCO$_3$}
+      BaTiO$_3$ & 2,4042 & 2,3605 \\ \hline \index{BaTiO$_3$}
+      LiNbO$_3$ & 2,2864 & 2,2022 \\ \hline \index{LiNbO$_3$}
+      KH$_2$PO$_4$ & 1,5074 & 1,4669 \\ \hline \index{KH$_2$PO$_4$}
+      tekoči kristal 5CB ($25~\si{\degreeCelsius}$) & 1,5319 & 1,7060 \\ \hline \index{Tekoči kristali} \index{Telur}
+      telur ($\lambda = 10~\si{\micro\metre}$) & 4,7969 & 6,2455 \\ 
 \hline 
 \end{tabular}
   \caption{Redni in izredni lomni količnik za nekaj izbranih kristalov. Razen v primeru telurja
