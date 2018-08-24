@@ -3,7 +3,7 @@
 \chapter{Koherentni snopi svetlobe}
 V tem poglavju bomo zapisali obosni približek valovne enačbe in spoznali 
 njeno osnovno rešitev: Gaussov snop. Obravnavali bomo snope osnovnega in višjega reda ter
-se naučili računati prehode Gaussovih snopov prek optičnih elementov. 
+se naučili računati prehode Gaussovih snopov skozi optične elemente. 
 
 \section{Omejen snop svetlobe}
 Pri obravnavi elektromagnetnega valovanja pogosto uporabljamo
@@ -20,17 +20,17 @@ ravna in meje snopa niso vzporedne, ampak se snop zaradi uklona širi\index{Uklo
 \label{fig:Uklon-na-rezi}
 \end{figure}
 
-V veliki oddaljenosti od zaslona lahko za izračun polja uporabimo
+V veliki oddaljenosti od zaslona polje lahko izračunamo s
 \index{Fraunhoferjev uklon}Fraunhoferjevo uklonsko teorijo (glej poglavje~\ref{FFuklon}). 
-Vendar za oceno kota širjenja podrobnega računa niti ne potrebujemo. Velja približno 
+Vendar za oceno kota širjenja računa niti ne potrebujemo. Velja približno 
 \begin{equation}
 \vartheta\sim\frac{\lambda}{a},
 \label{eq:kot_ocena}
 \end{equation}
 kjer je $a$ polmer odprtine v zaslonu.
 Opis polja v bližini zaslona je zahtevnejši, saj je treba uporabiti 
-Fresnelov približek\index{Fresnelov uklon}. S slike (\ref{fig:Uklon-na-rezi})
-ocenimo, da velja
+Fresnelov približek\index{Fresnelov uklon} (enačba~\ref{eq:FresnelApprox}).
+Območje bližnjega polja seže do $b$, ki ga lahko ocenimo s slike (\ref{fig:Uklon-na-rezi})
 \begin{equation}
 \frac{a}{b}\sim{\vartheta}\sim \frac{\lambda}{a} \qquad \mathrm{in~tako} \qquad b\sim\frac{a^2}{\lambda}.
 \label{eq:z_ocena}
@@ -38,7 +38,7 @@ ocenimo, da velja
 
 Včasih taki približni oceni zadoščata. Bolj kvantitativen opis omejenih
 snopov bi lahko dobili s Fraunhoferjevo in Fresnelovo uklonsko teorijo,
-kar pa ni najudobnejša pot. Lotimo se naloge raje preko približka
+kar pa ni najudobnejša pot. Lotimo se naloge raje z uporabo približka
 obosne valovne enačbe.
 
 \begin{definition}
@@ -191,7 +191,8 @@ Dolžina $z_{0}$ je razdalja, pri kateri preide snop v asimptotično enakomerno 
 dolžino grla. Celotna dolžina grla je $2z_0$, območju grla pa pravimo tudi območje bližnjega polja
 \index{Območje bližnjega polja} ali Rayleighovo območje\index{Rayleighovo 
 območje|see{Območje bližnjega polja}} in dolžini $z_0$ \index{Rayleighova dolžina}Rayleighova 
-dolžina\footnote{Angleški fizik in nobelovec John William Strutt, 3. baron Rayleighški, 1842--1919.}.
+dolžina\footnote{Angleški fizik in nobelovec John William Strutt, 3. baron Rayleighški; lord
+Rayleigh, 1842--1919.}.
 Pri $z_{0}$ tudi preidemo v območje veljavnosti Fraunhoferjevega uklonskega približka. 
 \begin{figure}[h]
 \centering
@@ -264,7 +265,7 @@ kadar je omejeno v prečni smeri. Podoben pojav srečamo tudi pri valovanju, ki 
 omejeno v valovode.
 
 S tem lahko končno zapišemo izraz za električno poljsko jakost osnovnega \index{Gaussov snop}Gaussovega 
-snopa\footnote{Nemški matematik Carl Friedrich Gauss, 1777--1855.}
+snopa\footnote{Nemški matematik, fizik in astronom Carl Friedrich Gauss, 1777--1855.}
 \boxeq{eq:gaussov-snop}{
 E=E_{0}\,\frac{w_{0}}{w(z)}\,e^{ikz-i\omega t}\,e^{-r^{2}/w^{2}(z)}\,e^{ikr^{2}/2R(z)}
 e^{-i\eta(z)}.
