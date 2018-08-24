@@ -79,7 +79,7 @@ le povprečno sliko in interferenčne proge izginejo.
 
 Obravnavajmo plinsko razelektritveno cev in z
 ustreznim filtrom izberimo eno samo spektralno črto. Ta črta naj ima
-osrednjo frekvenco $\nu_{0}$ in končno frekvenčno širino $\delta\nu$,
+osrednjo frekvenco $\nu_{0}$ in končno frekvenčno širino $\Delta\nu$,
 ki je kombinacija naravne širine in razširitve zaradi trkov med atomi
 ter Dopplerjevega pojava (glej poglavje~\ref{Razsiritev}). Privzemimo,
 da je glavni prispevek k razširitvi spektralne črte zaradi med\-atomskih
@@ -87,8 +87,8 @@ trkov, razširitev, povezano z Dopplerjevim pojavom, pa zanemarimo.
 
 Celotna izsevana svetloba je vsota delnih valov, ki izhajajo iz posameznih
 atomov in so med seboj neodvisni. Vsak delni val ohranja med trkoma
-konstantno fazo, to je v časovnem intervalu $t_{c}$. Valovni
-paket dolžine $t_{c}$ mora tako vsebovati frekvence v pasu $\Delta\omega$,
+konstantno fazo, to je v intervalu $t_{c}$. Valovni paket dolžine 
+$t_{c}$ mora tako vsebovati frekvence v pasu $\Delta\omega = 2 \pi \Delta \nu$,
 za katerega velja $t_{c}\Delta\omega\sim1$. Koherenčni čas je torej
 kar reda velikosti obratne vrednosti spektralne širine svetlobe. Povsem
 monokromatsko valovanje bil imelo neskončen koherenčni čas in bi bilo
@@ -99,7 +99,7 @@ Jakost električnega polja v izbrani točki prostora je vsota delnih
 valov, ki izvirajo iz raznih delov izvora. Vsak atom v izvoru, naj
 jih bo $N$, seva neodvisno, zato so tudi delna valovanja med seboj
 neodvisna. Posamična valovanja ohranjajo konstantno fazo v času med
-dvema trkoma atoma, $t_{c}$. Zaradi enostavnosti privzemimo,
+dvema trkoma atoma $t_{c}$. Zaradi enostavnosti privzemimo,
 da so amplitude $E_{1}$ in polarizacije izsevanih polj posameznih atomov enake. 
 Električno poljsko jakost $E$ v izbrani točki prostora lahko 
 zapišemo kot vsoto posameznih prispevkov
@@ -168,8 +168,10 @@ Valovanje iz točke $P$ na polprepustnem
 zrcalu razdelimo na dva delna snopa, nato enega s premikanjem zrcala zakasnimo za $\tau=2x/c$.
 S kolimacijsko lečo dosežemo, da je čim več žarkov, ki izhajajo iz
 $P$, vzporednih z osjo interferometra. Dokler je zakasnitev
-$\tau$ manjša od koherenčnega časa $t_{c}$,
-so na detektorju interferenčni vrhovi in doline. Pri zakasnitvah,
+$\tau$ manjša od koherenčnega časa $t_{c}$, bosta snopa med seboj interferirala.
+S spreminjanjem lege zrcala se tako na detektorju izmenično pojavijo ojačitve in oslabitve.
+V primeru, da snop svetlobe ni povsem vzporeden, žarki med seboj interferirajo 
+in na detektorju so vidni osvetljeni interferenčni krogi. Pri zakasnitvah,
 ki so večje od koherenčnega časa, ni stalne fazne povezave, interferenčna
 slika se spreminja in v daljših časih izpovpreči. Zapišimo to ugotovitev
 še matematično.
@@ -180,11 +182,11 @@ poljske jakosti obeh delnih valovanj
 |E_{d}(t)|^{2}=|E(t)+E(t+\tau)|^{2}=|E(t)|^{2}+|E(t+\tau)|^{2}+2\Re E(t)E^{*}(t+\tau).
 \label{eq:Michelson-intenziteta}
 \end{equation}
-Zakasnitev $\tau$ je določena s premikom pomičnega zrcala, $\tau=2x/c$.
+Zakasnitev $\tau$ je določena s premikom pomičnega zrcala $\tau=2x/c$.
 Navadno opazujemo v času $T$, ki je dolg v primerjavi s koherenčnim
 časom, zato povprečimo po času
 \begin{eqnarray}
-\langle|E_{d}|^{2}\rangle & = & \frac{1}{T}\int_{-T/2}^{T/2}|E{}_{d}(t)|^{2}\, dt\nonumber \\
+\langle|E_{d}(t)|^{2}\rangle & = & \frac{1}{T}\int_{-T/2}^{T/2}|E{}_{d}(t)|^{2}\, dt\nonumber \\
  & = & 2\langle|E|^{2}\rangle+2\Re\langle E(0)E^{*}(\tau)\rangle = 2\langle|E|^{2}\rangle+2\Re G(\tau).
 \end{eqnarray}
 Prvi člen je vsota povprečnih svetlobnih tokov obeh delnih snopov. Privzeli
@@ -215,17 +217,17 @@ Praviloma se vrednost $|g(\tau)|$ z naraščajočim $\tau$ zmanjšuje,
 saj postaja valovanje za velike časovne zamike vedno manj korelirano.
 Ohlapno povedano je koherenčni čas zakasnitev, pri kateri postane
 vrednost avtokorelacijske funkcije majhna.
-Koherenčni čas\index{Koherenčni čas} $t_{c}$ pa lahko tudi bolj natančno definiramo 
+Koherenčni čas\index{Koherenčni čas} $t_{c}$ lahko tudi bolj natančno definiramo 
 z normirano avtokorelacijsko funkcijo
 \boxeq{eq:koherencni-cas}{
 t_{c}=\int_{-\infty}^{\infty}\left|g(\tau)\right|^{2}\, d\tau.
 }
 Zakasnitev delnih valov je pogosto posledica
-različno dolgih optičnih poti, zato namesto koherenčnega časa velikokrat 
-uporabljamo koherenčno dolžino\index{Koherenčna dolžina} $l_{c}=ct_{c}$. 
+različno dolgih optičnih poti, zato namesto koherenčnega časa 
+uporabljamo tudi koherenčno dolžino\index{Koherenčna dolžina} $l_{c}=ct_{c}$. 
 Pri tem moramo paziti, da koherenčne dolžine, ki jo izpeljemo iz časovne 
-koherence, ne zamešamo s prečno koherenčno
-razdaljo, o kateri bomo govorili kasneje.
+koherence, ne zamenjamo s prečno koherenčno
+razdaljo, o kateri bomo govorili v nadaljevanju.
 
 \begin{definition}
 Pokaži, da v navedenih avtokorelacijskih
@@ -239,23 +241,25 @@ g(\tau)=\begin{cases}
 \label{eq:gauss-eksponent}
 \end{equation}
 
-V razdelku~(\ref{Razsiritev}) bomo spoznali, da sta to avtokorelacijski
+Ob nalogi (\ref{naloga-spekter}) in v razdelku~(\ref{Razsiritev}) 
+bomo spoznali, da sta to avtokorelacijski
 funkciji za svetlobo z \index{Spekter!Lorentzov}Lorentzovim spektrom
 (razširitev spektralne črte zaradi trkov) in Gaussovim spektrom\index{Spekter!Gaussov}
-(Dopplerjeva razširitev).
+(Dopplerjeva razširitev)\index{Dopplerjeva razširitev}.
 \end{definition}
 
 Poglejmo še nekaj značilnih koherenčnih dolžin. 
 Koherenčna dolžina svetlobe, izsevane iz črnega telesa, je $l_{c}=ct_{c}\approx 
-\hbar c/k_{B}T$ (glej nalogo~\ref{naloga-Planck}). Svetloba s Sonca ($T \approx 6000$~K)
+\hbar c/k_{B}T$ (glej nalogo~\ref{naloga-Planck})\index{Sevanje črnega telesa}. 
+Svetloba s Sonca ($T \approx 6000$~K)
 ima tako koherenčno dolžino zgolj $\sim 0,4~\si{\micro\metre}$. Svetloba,
-izsevana iz LED sijalk, ima koherenčno dolžino $\sim20$--$100~\si{\micro\metre}$.
+izsevana iz LED sijalk\index{LED}, ima koherenčno dolžino $\sim20$--$100~\si{\micro\metre}$.
 Če želimo povečati koherenčno dolžino taki svetlobi, jo moramo usmeriti
 na ustrezne filtre in ji s tem zmanjšati spektralno območje.
 Ožje spektralno območje ima na primer živosrebrna svetilka, zato je koherenčna
 dolžina svetlobe za izbrano spektralno črto do okoli $50~\si{\centi\metre}$.
 Koherenčna dolžina laserjev z ozko spektralno črto je tipično okoli
-$100~\si{\metre}$, v nekaterih vlakenskih laserjih s širino spektralne
+$100~\si{\metre}$, v nekaterih vlakenskih laserjih\index{Laser!vlakenski} s širino spektralne
 črte nekaj $\si{\kilo\hertz}$ pa koherenčna dolžina presega $100~\si{\kilo\metre}$.
 
 \section{Zveza med avtokorelacijsko funkcijo in spektrom}
@@ -277,19 +281,18 @@ A_{n}=\frac{1}{T}\int_{-T/2}^{T/2}E(t)\, e^{in\Delta\omega t}\, dt.\label{eq:amp
 \end{equation}
 Kvadrat $|A_{n}|^{2}$ je sorazmeren gostoti svetlobnega toka pri frekvenci
 $\omega=n\Delta\omega$. 
-Zdaj lahko vpeljemo \index{Spekter}spekter, to
-je intenziteto svetlobnega toka pri frekvencah med $\omega$ in $\omega+\Delta\omega$.
-Spekter $S(\omega)$ torej izračunamo tako, da jakost svetlobnega
-toka pri $\omega$ delimo s frekvenčnim intervalom 
-$\Delta\omega$.
-Spekter je potem\footnote{Gostota svetlobnega toka\index{Gostota energijskega toka} 
+Zdaj lahko vpeljemo \index{Spekter}spekter $S(\omega)$, to
+je gostoto svetlobnega toka pri frekvencah med $\omega$ in $\omega+\Delta\omega$.
+Izračunamo ga tako, da intenziteto svetlobe pri $\omega$ delimo s 
+frekvenčnim intervalom $\Delta\omega$ in ga zapišemo 
+kot\footnote{Gostota svetlobnega toka\index{Gostota energijskega toka} 
 je $j = \varepsilon \varepsilon_0 c |E|^2/2$
 z enotami W/m$^2$. Zaradi poenostavitve bomo namesto $j$ pogosto pisali intenziteto 
 $I = |E|^2$, konstantne člene pa dodali le, če bomo rabili točno numerično vrednost.} 
 \begin{equation}
 S(\omega)=\frac{|A_{n}|^{2}}{\Delta\omega}=\frac{T}{2\pi}|A_{n}|^{2}.
 \end{equation}
-Vstavimo zdaj še amplitudo $A_{n}$ (enačba \ref{eq:amplituda-An}) in dobimo 
+Vstavimo še amplitudo $A_{n}$ (enačba \ref{eq:amplituda-An}) in dobimo 
 \begin{align}
 S(\omega) & =\frac{1}{2\pi T}\int\int_{-T/2}^{T/2}E(t)E^{*}(t^{\prime})\, 
 e^{-i\omega(t^{\prime}-t)}\, dt\, dt^{\prime}\\
@@ -307,7 +310,7 @@ ruski matematik Aleksander Jakovljevič Hinčin, 1894--1959.}
 S(\omega)=\frac{1}{2\pi}\int_{-\infty}^{\infty}G(\tau)e^{-i\omega\tau}\, d\tau\;\Longleftrightarrow\; G(\tau)=\int_{-\infty}^{\infty}S(\omega)e^{i\omega\tau}\, 
 d\omega.
 }
-Spekter svetlobe je torej Fouriereva transformacija avtokorelacijske
+Spekter svetlobe je torej Fouriereva transformiranka avtokorelacijske
 funkcije svetlobnega polja. 
 
 Vpeljemo lahko tudi normirani spekter 
@@ -337,7 +340,7 @@ d\omega\right|^{2}}{\int_{-\infty}^{\infty}\left|S(\omega)\right|^{2}\, d\omega}
 Iz gornje definicije za spektralno širino in definicije za
 koherenčni čas (enačba \ref{eq:koherencni-cas}) sledi, da je spektralna
 širina ne glede na obliko spektra obratno sorazmerna s koherenčnim časom
-(glej nalogo~\ref{naloga:gammatc})
+(glej nalogo~\ref{naloga:gammatc})\index{Koherenčni čas}
 \boxeq{eq:spektralna-sirina-zveza}{
 \gamma=\frac{1}{t_{c}}.
 }
@@ -367,19 +370,20 @@ Na sliki~(\ref{fig:SpekterAc}) sta prikazana pripadajoč
 spekter in ustrezna avtokorelacijska funkcija. Ker so trki med atomi naključni,
 je avtokorelacijska funkcija eksponentno pojemajoča
 \beq
-G(t)=G_{0} e^{-i\omega_{0}t} e^{-t/t_{c}} ,
+G(t)=G_{0} e^{-i\omega_{0}t} e^{-t/t_{c}},
+\label{eq:g-primer}
 \eeq
 spekter take svetlobe pa je Lorentzove oblike\index{Spekter!Lorentzov} (glej nalogo~\ref{naloga-spekter})
 \begin{equation}
- S(\omega)=G_{0}\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}},
+ S(\omega)=G_{0}\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}}.
 \label{eq:spekter-primer}
 \end{equation}
-kjer je $\gamma=1/t_{c}$ spektralna širina in $G_{0}$ do konstante natančno intenziteta
+Pri tem je $\gamma=1/t_{c}$ spektralna širina in $G_{0}$ do konstante natančno intenziteta
 svetlobe. Točke na grafih predstavljajo spekter in izračunano avtokorelacijsko funkcijo 
 za integracijski čas $T=100\,t_{c}$. Za primerjavo sta z rdečo 
-krivuljo prikazana tudi pričakovan spekter in avtokorelacijska
-funkcija (enačba~\ref{eq:spekter-primer}). Zaradi končnega
-časa $T$ pri izračunu povprečja se izmerjeni spekter nekoliko razlikuje
+krivuljo prikazana tudi pričakovan spekter (enačba~\ref{eq:spekter-primer}) in avtokorelacijska
+funkcija (enačba~\ref{eq:g-primer}). Zaradi končnega
+časa $T$ pri izračunu povprečja se spekter iz simulacije nekoliko razlikuje
 od pričakovane vrednosti. 
 \begin{figure}[h]
 \centering
@@ -408,15 +412,16 @@ kjer je $\gamma=1/t_{c}$ spektralna širina.
 Spektralne črte atomov so pogosto Lorentzove oblike, kar je posledica
 eksponentnega razpada stanj (naravna širina). Dodatno se spektralne
 črte razširijo zaradi trkov med atomi, vendar tudi to vodi do Lorentzove
-oblike spektra. V plinih pa je pogosto prevladujoča razširitev črt
+oblike spektra. V plinih je pogosto prevladujoča razširitev črt
 zaradi Dopplerjevega pojava (glej razdelek~\ref{Razsiritev}). Spekter Dopplerjevo razširjene svetlobe
 je, kot bomo videli v nadaljevanju, Gaussove oblike. V tem primeru iz enačbe~(\ref{eq:spekter-zveza})
 sledi, da je tudi avtokorelacijska funkcija Gaussove oblike.
 \vskip1truecm
 
 \begin{definition}\label{naloga-Planck}
-Numerično pokaži, da je koherenčni čas svetlobe, ki jo oddaja črno telo s temperaturo $T$, približno enak
-$t_{c}\approx{\hbar}/{k_{B}T}$. Normaliziran spekter sevanja črnega telesa zapišemo 
+Numerično pokaži, da je koherenčni čas svetlobe, ki jo oddaja črno telo s 
+temperaturo $T$, približno enak $t_{c}\approx{\hbar}/{k_{B}T}$.\index{Sevanje črnega telesa}
+Normiran spekter sevanja črnega telesa zapišemo 
 kot \index{Spekter!Planckov}Planckov spekter 
 \begin{equation}
 s(\omega)=\frac{15}{\pi^{4}} \frac{\hbar^4\omega^3}{(kT)^4}/\left(e^{\hbar\omega/kT}-1\right)
@@ -425,12 +430,12 @@ s(\omega)=\frac{15}{\pi^{4}} \frac{\hbar^4\omega^3}{(kT)^4}/\left(e^{\hbar\omega
 \end{equation}
 \end{definition}
 
-\begin{remark}{{\bf Fouriereva spektroskopija}}\\ \\
+\begin{remark}{{\bf Fouriereva spektroskopija}}\\ \\ \index{Fouriereva spektroskopija}
 V prejšnjem razdelku smo videli, da časovno avtokorelacijsko funkcijo
-merimo z Michelsonovim interferometrom. Dobljena povezava med
-avtokorelacijo in spektrom je osnova za Fourierevo spektroskopijo,
+merimo z Michelsonovim interferometrom. Dobljena povezava med merjeno
+avtokorelacijo in izračunanim spektrom je osnova za Fourierevo spektroskopijo,
 ki ima nekatere pomembne prednosti pred drugimi metodami in se danes
-precej uporablja, posebej v infrardečem področju.
+precej uporablja, posebej v infrardečem področju.\index{Infrardeče valovanje}
 \end{remark}
 
 \section{Prostorska koherenca}
