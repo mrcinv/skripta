@@ -445,20 +445,6 @@ Vrnimo se k Youngovem poskusu\index{Youngov poskus} in obravnavi interference
 \index{Interferenca} na dveh ozkih režah. 
 Osvetljujmo zdaj reži s svetilom končnih razsežnosti. Svetilo naj sveti skoraj enobarvno
 svetlobo in naj bo na simetrali med režama, kot kaže slika~(\ref{fig:shema-interferenca}).
-\begin{figure}[h]
-\centering
-\def\svgwidth{140truemm} 
-\input{slike/02_precnaKoherenca.pdf_tex}
-\caption{Shema interferenčnega eksperimenta z razsežnim svetilom.
-Svetilo velikosti $R$ postavimo v izhodišče koordinatnega sistema,
-na zaslonu $B$ pa opazujemo sliko, ki nastane zaradi interference na dveh režah v
-ravnini $A$. Zaradi končne dimenzije svetila so interferenčne proge,
-ki jih tvorita robna žarka (označena s prekinjeno črto), premaknjene glede na proge centralnih
-žarkov (označena s polno črto). Če je razlika v poteh žarkov reda velikosti valovne
-dolžine $\lambda$, se celotna interferenčna slika na zaslonu
-$B$ izpovpreči.}
-\label{fig:shema-interferenca}
-\end{figure}
 
 Žarka, ki izhajata iz sredine svetila (polna črta), 
 opravita do rež v ravnini A enako dolgo pot in povzročita na zaslonu B 
@@ -469,8 +455,16 @@ robna žarka, so premaknjene glede na proge centralnih žarkov. Ker so žarki z 
 pri našem svetilu statistično neodvisni od žarkov iz sredine, z njimi
 ne interferirajo. Celoten interferenčni vzorec je zato kar vsota interferenčnih
 vzorcev žarkov iz različnih delov svetila. Če je razlika poti za žarke
-z roba reda velikosti valovne dolžine $\lambda$, se celotna
+iz različnih delov velikosti valovne dolžine $\lambda$, se celotna
 interferenčna slika na zaslonu B izpovpreči.
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/02_precnaKoherenca.pdf_tex}
+\caption{Shema interferenčnega eksperimenta z razsežnim svetilom.}
+\label{fig:shema-interferenca}
+\end{figure}
 
 S slike razberemo, da
 velja za razdaljo med režama $d$, pri kateri interferenčne proge
@@ -530,7 +524,7 @@ Tako je
 J(P_{1},P_{2})=\frac{1}{\lambda^{2}}\int\int\langle E(\xi,\eta)E^{*}(\xi^{\prime},\eta^{\prime})\rangle\frac{e^{ik(s_{1}-s_{2}^{\prime})}}{s_{1}s_{2}^{\prime}}\, d\xi\, d\eta\, d\xi^{\prime}d\eta^{\prime}.\label{eq:field-correlation}
 \end{equation}
 V našem svetilu sevajo atomi neodvisno. Valovanji iz dveh točk svetila,
-ki sta razmaknjeni za več kot $\lambda$, sta tako neodvisni in povprečje
+ki sta razmaknjeni za več kot $\lambda$, sta neodvisni in povprečje
 njunega produkta je enako nič. Tako približno velja 
 \begin{equation}
 \langle E(\xi,\eta)E^{*}(\xi^{\prime},\eta^{\prime})\rangle=\frac{\lambda^{2}}{\pi} \cdot \delta(\xi-\xi^{\prime},\eta-\eta^{\prime})\langle|E(\xi,\eta)|^{2}\rangle.
@@ -538,26 +532,26 @@ njunega produkta je enako nič. Tako približno velja
 \end{equation}
 Faktor $\lambda^{2}/\pi$ poskrbi za ustrezno normalizacijo. 
 Naj bo oddaljenost svetila od zaslona $A$
-mnogo večja od dimenzije svetila ($z\gg R$), tako da lahko imenovalec pod integralom
+veliko večja od dimenzije svetila ($z\gg R$), tako da lahko imenovalec pod integralom
 v izrazu~(\ref{eq:field-correlation}) nadomestimo z $z^{2}$ in postavimo
-pred integral. Dobimo 
+pred integral. Sledi
 \begin{equation}
 J(P_{1},P_{2})=\frac{1}{\pi z^{2}}\int\langle|E(\xi,\eta)|^{2}\rangle e^{ik(s_{1}-s_{2})}\, d\xi\, d\eta.\label{eq:Zernike1}
 \end{equation}
 Dobljeni izraz lahko še nekoliko poenostavimo, če razvijemo $s_{1}$
 in $s_{2}$ do drugega reda
 \begin{equation}
-s_{j}=\sqrt{z^{2}+(x_{j}-\xi)^{2}+(y_{j}-\eta)^{2}}\approx z+\frac{(x_{j}-\xi)^{2}+(y_{j}-\eta)^{2}}{2z},
+s_{j}=\sqrt{z^{2}+(x_{j}-\xi)^{2}+(y_{j}-\eta)^{2}}\approx z+\frac{(x_{j}-\xi)^{2}+(y_{j}-\eta)^{2}}{2z}.
 \end{equation}
-kjer sta $(x_{j},y_{j})$ koordinati točke $P_{j}$. Pišimo 
+Pri tem sta $(x_{j},y_{j})$ koordinati točke $P_{j}$. Pišimo 
 še $\langle|E(\xi,\eta)|^{2}\rangle=I(\xi,\eta)$, ki je do konstante natančno
 enak intenziteti valovanja, ter $x_{2}-x_{1}=\Delta x$
 in $y_{2}-y_{1}=\Delta y$. S tem dobimo znani rezultat, tako imenovani \index{van Cittert-Zernikov teorem}
 van Cittert-Zernikov teorem\footnote{Nizozemski fizik Pieter Hendrik van Cittert, 1889--1959, in 
 nizozemski fizik in nobelovec Frits Zernike, 1888--1966.}
 \boxeq{eq:Zernike2}{
-J(\Delta x,\Delta y)=\frac{e^{-i\phi}}{\pi z^{2}}\int I(\xi,\eta)e^{ik\frac{\Delta 
-x\xi+\Delta y\eta}{z}}\, d\xi\, d\eta.
+J(\Delta x,\Delta y)=\frac{e^{-i\phi}}{\pi z^{2}}\int I(\xi,\eta)e^{ik(\Delta 
+x\xi+\Delta y\eta)/z}\, d\xi\, d\eta.
 }
 
 Faza 
@@ -568,7 +562,7 @@ meri skupni premik interferenčnih prog, do katerega pride, kadar svetilo
 ni na isti osi kot odprtini v zaslonu. Kadar ležijo svetilo in odprtini
 v zaslonu $A$ simetrično na isti osi, je faza $\phi$ enaka nič.
 
-Smiselno je vpeljati še normalizirano prečno prostorsko korelacijsko
+Smiselno je vpeljati še normirano prečno prostorsko korelacijsko
 funkcijo\index{Navzkrižna korelacijska funkcija} 
 \begin{equation}
 j(\Delta x,\Delta y)=\frac{J(\Delta x,\Delta y)}{J(0,0)}=\frac{e^{-i\phi}\int 
@@ -579,15 +573,16 @@ I(\xi,\eta)\exp\left[ik(\Delta x\xi+\Delta y\eta)/z\right]\, d\xi\, d\eta}
 
 Dobljeni rezultat si je vredno nekoliko ogledati. Prečno prostorsko
 korelacijsko funkcijo $J(P_{1},P_{2})$, ki določa kontrast interferenčnih
-prog, smo izrazili kot 2-D  Fourierevo transformacijo intenzitete svetlobe
+prog, smo izrazili kot 2-D  Fourierevo transformiranko intenzitete svetlobe
 na samem svetilu (enačba \ref{eq:Zernike2}). Ob tem se spomnimo,
 da velja podobna zveza med električno poljsko jakostjo v osvetljeni odprtini 
 in njeno Fraunhoferjevo uklonsko sliko (enačba~\ref{eq:FraunhoferApprox}), 
 pri čemer so količine, ki nastopajo v obeh zvezah,
 povsem različne. Različna je tudi veljavnost obeh: medtem ko je Fraunhoferjeva
-uklonska formula veljavna le v veliki oddaljenosti, za bližje odprtine
+uklonska formula veljavna le v veliki oddaljenosti, za opis v bližnjem polju
 pa je treba uporabiti Fresnelov izraz (enačba~\ref{eq:FresnelApprox}), 
-je rezultat za $J(P_{1},P_{2})$ veljaven v obeh območjih.
+je rezultat za $J(P_{1},P_{2})$ veljaven v obeh območjih.\index{Fraunhoferjev uklon}
+\index{Fresnelov uklon}
 
 Ker je velikost svetila končna, $J(P_{1},P_{2})$ pri dovolj veliki
 razdalji med točkama $P_{1}$ in $P_{2}$ gotovo pade na nič. Največja
@@ -640,13 +635,13 @@ vendar so slabše izražene in z nasprotno fazo, kar nam da v sredini temno prog
 
 \begin{figure}[h]
 \begin{center}
-\def\svgwidth{0.40\textwidth} 
+\def\svgwidth{0.45\textwidth} 
 \input{slike/02_interferenca01.pdf_tex}
-\def\svgwidth{0.40\textwidth} 
+\def\svgwidth{0.45\textwidth} 
 \input{slike/02_interferenca02.pdf_tex}
-\def\svgwidth{0.40\textwidth} 
+\def\svgwidth{0.45\textwidth} 
 \input{slike/02_interferenca03.pdf_tex}
-\def\svgwidth{0.40\textwidth} 
+\def\svgwidth{0.45\textwidth} 
 \input{slike/02_interferenca04.pdf_tex}
 \caption{Interferenčna slika na zaslonu
 $B$ za različne vrednosti razmikov med odprtinama: a) $d = z/kR$, b) $d=2z/kR$, 
@@ -664,7 +659,7 @@ proge zopet pojavijo, vendar z manjšim kontrastom in nasprotno fazo.}
 Merjenje prečne koherenčne razdalje svetlobe
 zvezd je osnova za Michelsonovo metodo določanja zvezdnih premerov.
 Svetlobo izbrane zvezde zberejo v teleskop preko dveh manjših parov
-zrcal, kjer sta zunanji zrcali na pomičnih rokah, tako da jih je mogoče
+zrcal, kjer sta zunanji zrcali na pomičnih rokah, tako da ju je mogoče
 razmikati. Glavno zrcalo teleskopa zbere svetlobna snopa v goriščni
 ravnini, kjer nastanejo interferenčne proge, če le pomični zrcali
 nista preveč razmaknjeni. Iz razmika, pri katerem interferenčne proge
@@ -675,15 +670,3 @@ zvezdnim interferometrom mogoče izmeriti. Pri zvezdah, ki so dlje
 od nekaj deset svetlobnih let, metoda odpove.
 \end{remark}
 
-
-\begin{definition}
-\label{naloga-cittert}
-Svetloba s frekvenco $\omega$ in koherentnim časom $t_{c}$ izhaja
-iz svetila s polmerom $R$ in vpada na zaslon, ki je $z$ oddaljen od svetila. 
-V zaslonu sta dve zelo ozki reži na razmiku $d$. 
-Pokaži, da je uklonska slika za zaslonom enaka
-\begin{equation}
-I/I_{0}=(1+2\,\frac{J_{1}(kRd/z)}{kRd/z}\cos(\omega\tau)e^{-\tau/t_{c}}),
-\end{equation}
-kjer je $\tau=d\sin\vartheta/c$ zakasnitev žarkov iz rež na zaslonu.
-\end{definition}

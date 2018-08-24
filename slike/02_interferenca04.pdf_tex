@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '02_interferenca04.pdf' (pdf, eps, ps)
 %%
@@ -35,6 +35,8 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
     \setlength{\unitlength}{288bp}%
     \ifx\svgscale\undefined%
@@ -49,7 +51,9 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,1)%
-    \put(0,0){\includegraphics[width=\unitlength]{02_interferenca04.pdf}}%
-    \put(0.03131667,0.04073333){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$\mathrm{d)}$}}}%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{02_interferenca04.pdf}}%
+    \put(0.03186464,0.92441389){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathrm{d)}$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
