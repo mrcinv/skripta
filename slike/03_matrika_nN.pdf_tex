@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '03_matrika_nN.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{182.9708374bp}%
+    \setlength{\unitlength}{182.97084045bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,15 +50,21 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.69956503)%
-    \put(0,0){\includegraphics[width=\unitlength]{03_matrika_nN.pdf}}%
-    \put(0.0243033,0.55062928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1$}}}%
-    \put(0.14357792,0.5506433){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_1$}}}%
-    \put(0.30790062,0.5506433){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_2$}}}%
-    \put(0.86610997,0.55057201){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1$}}}%
-    \put(0.63441119,0.55192292){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_N$}}}%
-    \put(0.15104037,0.10632173){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d_1$}}}%
-    \put(0.30661849,0.10632173){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d_2$}}}%
-    \put(0.63312906,0.10760135){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d_N$}}}%
+  \begin{picture}(1,0.69956504)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{03_matrika_nN.pdf}}%
+    \put(0.02680654,0.54689904){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{03_matrika_nN.pdf}}%
+    \put(0.10946425,0.1907824){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.76629236\unitlength}\raggedright  \end{minipage}}}%
+    \put(0.0243033,0.55062929){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$1$}\end{tabular}}}}%
+    \put(0.14357792,0.55064331){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$n_1$}\end{tabular}}}}%
+    \put(0.30790062,0.55064331){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$n_2$}\end{tabular}}}}%
+    \put(0.86610997,0.55057202){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$1$}\end{tabular}}}}%
+    \put(0.63441119,0.55192293){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$n_N$}\end{tabular}}}}%
+    \put(0.15104036,0.10632174){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$d_1$}\end{tabular}}}}%
+    \put(0.30661849,0.10632174){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$d_2$}\end{tabular}}}}%
+    \put(0.63312906,0.10760136){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$d_N$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{03_matrika_nN.pdf}}%
   \end{picture}%
 \endgroup%

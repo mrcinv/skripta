@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '02_precnaKoherenca.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{577.05673828bp}%
+    \setlength{\unitlength}{577.05674744bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,23 +50,27 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.33563317)%
-    \put(0,0){\includegraphics[width=\unitlength]{02_precnaKoherenca.pdf}}%
-    \put(-0.00131703,0.00468425){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
-    \put(0.45307302,0.00652253){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z$}}}%
-    \put(0.84539483,0.00831922){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z+a$}}}%
-    \put(0.4618088,0.04161097){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$A$}}}%
-    \put(0.86905824,0.03840848){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$B$}}}%
-    \put(0.0135661,0.09787863){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R$}}}%
-    \put(0.06800444,0.17856163){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\xi$}}}%
-    \put(0.05258216,0.23848629){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\eta$}}}%
-    \put(0.25508791,0.13247228){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\varphi$}}}%
-    \put(0.22111832,0.07677828){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s$}}}%
-    \put(0.50127996,0.23871877){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$y$}}}%
-    \put(0.53679106,0.16348643){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
-    \put(0.48086517,0.1845421){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\varphi$}}}%
-    \put(0.49812286,0.16286531){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d$}}}%
-    \put(0.6320221,0.12924601){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta$}}}%
-    \put(0.46635039,0.21363632){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\delta s$}}}%
+  \begin{picture}(1,0.33563315)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{02_precnaKoherenca.pdf}}%
+    \put(0.48320948,0.18107847){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{02_precnaKoherenca.pdf}}%
+    \put(-0.00131703,0.00468424){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$0$}\end{tabular}}}}%
+    \put(0.45307301,0.00652252){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$z$}\end{tabular}}}}%
+    \put(0.84539481,0.00831921){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$z+a$}\end{tabular}}}}%
+    \put(0.46440819,0.04421036){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$A$\end{tabular}}}}%
+    \put(0.87165761,0.04100787){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$B$\end{tabular}}}}%
+    \put(0.0135661,0.09787862){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$R$}\end{tabular}}}}%
+    \put(0.06280564,0.17856161){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$\xi$}\end{tabular}}}}%
+    \put(0.05258216,0.23848627){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$\eta$}\end{tabular}}}}%
+    \put(0.2550879,0.13247227){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$\varphi$}\end{tabular}}}}%
+    \put(0.22111831,0.07677827){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$s$}\end{tabular}}}}%
+    \put(0.50127995,0.23871876){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$y$}\end{tabular}}}}%
+    \put(0.53939045,0.16348642){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$x$}\end{tabular}}}}%
+    \put(0.48086516,0.18454209){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$\varphi$}\end{tabular}}}}%
+    \put(0.49812285,0.16286529){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$d$}\end{tabular}}}}%
+    \put(0.63202208,0.12924599){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$\vartheta$}\end{tabular}}}}%
+    \put(0.46115158,0.2136363){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\delta s$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

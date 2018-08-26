@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '03_Gauss_3D.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{408.87299805bp}%
+    \setlength{\unitlength}{408.8730011bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,10 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.57614317)%
-    \put(0,0){\includegraphics[width=\unitlength]{03_Gauss_3D.pdf}}%
-    \put(0.35499716,0.5408338){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E$}}}%
-    \put(0.68797463,0.39353488){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$r$}}}%
-    \put(0.73688956,0.02876914){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z$}}}%
+  \begin{picture}(1,0.57614314)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{03_Gauss_3D.pdf}}%
+    \put(0.35499715,0.54083377){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$I$}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{03_Gauss_3D.pdf}}%
+    \put(0.68797461,0.39353485){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$r$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{03_Gauss_3D.pdf}}%
+    \put(0.73688954,0.02876913){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
