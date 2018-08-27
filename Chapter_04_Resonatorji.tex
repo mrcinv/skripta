@@ -147,9 +147,9 @@ interferometer\footnote{Francoska fizika Maurice Paul Auguste Charles Fabry, 186
 Jean-Baptiste Alfred Perot, 1863--1925.}. 
 Da nastane med zrcaloma stoječe valovanje, mora biti razdalja 
 med zrcaloma večkratnik polovične valovne dolžine (enačba~\ref{eq:k-votlina})
-\beq
+\begin{equation}
 L = \frac{n \lambda}{2}.
-\eeq
+\end{equation}
 Prepustnost interferometra za ravni val, ki vpada pravokotno na zrcali z
 odbojnostjo ${\cal R}$, je 
 \begin{equation}
@@ -174,9 +174,9 @@ $\mathcal{R}.$}
 
 \begin{definition}
 Pokaži, da je prepustnost Fabry-Perotovega interferometra, katerega zrcali imata odbojnost $\cal{R}$, enaka 
-\beq
+\begin{equation}
 T = \frac{1}{1+\frac{4\cal{R}}{(1-{\cal R})^2}\sin^2 \delta},
-\eeq
+\end{equation}
 kjer je $\delta = kL\cos{\vartheta}$, $L$ razmik med zrcaloma, $\vartheta$ vpadni kot, 
 $k$ pa valovni vektor svetlobe.
 \end{definition}
@@ -385,32 +385,32 @@ kriterija za stabilnost. Takrat si pomagamo z matrikami ABCD\index{ABCD matrike}
 
 Izhajamo iz zahteve, da se v stabilnem resonatorju snop po enem celotnem obhodu
 preslika sam vase. Gaussov snop na neki točki v resonatorju 
-zapišemo s kompleksno ukrivljenostjo (enačba~\ref{eq:q-inv}).
+zapišemo s kompleksno ukrivljenostjo $q$ (enačba~\ref{eq:q-inv}).
 V najpreprostejšem primeru resonatorja snop prepotuje dano razdaljo, se odbije od zrcala, prepotuje
 resonator v nasprotni smeri, se odbije od drugega zrcala in se vrne v začetno lego. V bolj 
 zapletenih primerih dodamo še prehode skozi druge optične elemente. Matriko 
-za celotni prehod potem zapišemo kot produkt matrik ABCD za posamezne prehode $M = M_N M_{N-1} ...M_2 M_1$.
+za celotni prehod zapišemo kot produkt matrik ABCD za posamezne prehode $M = M_N M_{N-1} ...M_2 M_1$.
 Končni produkt za celoten obhod je matrika oblike
-\beq
+\begin{equation}
 M = \left[\begin{array}{cc}
 A & B\\
 C & D
 \end{array}\right],
-\eeq
+\end{equation}
 kompleksni krivinski radij po obhodu pa je enak začetnemu kompleksnemu radiju
-\beq
+\begin{equation}
 q_2 = \frac{Aq+B}{Cq+D} = q.
-\eeq
+\end{equation}
 Gornjo enačbo prepišemo v 
-\beq
+\begin{equation}
 Cq^2+(D-A)q-B=0.
-\eeq
-Da je $w$ realen, mora biti $q$ kompleksen in diskriminanta negativna
-\beq
+\end{equation}
+Da je $w$ realen, mora biti $q$ kompleksen in diskriminanta kvadratne enačbe negativna
+\begin{equation}
 (D-A)^2+ 4BC<0.
-\eeq
-Upoštevamo še, da je determinanta matrike $AD-BC=1$ in dobimo pogoj za 
-stabilnost\index{Stabilnost resonatorja}, zapisan s koeficienti matrike $M$:
+\end{equation}
+Upoštevamo še, da je determinanta matrike $AD-BC=1$ in pogoj za 
+stabilnost\index{Stabilnost resonatorja} zapišemo s koeficienti matrike $M$
 \boxeq{eq:stabilnost_ABCD}{
 -1 < \left(\frac{A+D}{2}\right) < 1.
 }
@@ -422,7 +422,7 @@ pogoj za stabilnost (enačba~\ref{eq:stabilnost_ABCD}) ekvivalenten pogoju~(\ref
 
 \begin{remark}
 Podoben, a malo bolj zapleten račun lahko naredimo tudi za resonatorje, v katerih se snop 
-ne vrne v svojo začetno obliko po enem obhodu, ampak je teh obhodov $n$. Potem zapišemo
+ne vrne v svojo začetno obliko po enem obhodu, ampak je teh obhodov $n$. V tem primeru zapišemo
 matriko $M$ kot produkt elementov v enem obhodu, celotna matrika pa je enaka $M^n$. Iz pogoja,
 da matrika ne divergira za velike $n$, izpeljemo pogoj za stabilnost, ki je natančno 
 enak pogoju~(\ref{eq:stabilnost_ABCD}). 
@@ -432,31 +432,32 @@ enak pogoju~(\ref{eq:stabilnost_ABCD}).
 Doslej smo obravnavali le prostorsko obliko polja v resonatorju, ničesar pa še nismo
 povedali o časovni odvisnosti lastnih nihanj. Frekvence
 lastnih nihanj\index{Lastne frekvence resonatorja} izpeljemo iz pogoja, 
-da se mora faza snopa pri enem obhodu
-(preletu resonatorja v obeh smereh) spremeniti za mnogokratnik
+da se mora faza snopa pri enem obhodu\footnote{Prelet resonatorja je prehod svetlobe od enega zrcala
+do drugega, obhod pa imenujemo prelet v obe smeri.}
+spremeniti za mnogokratnik
 $2\pi$. Fazo za osnovni snop zapišemo po enačbi~(\ref{eq:gaussov-snop})\index{Gouyeva faza}
 \begin{equation}
 \phi = kz+\frac{kr^{2}}{2R} -\eta(z) = kz-\arctan \left(\frac{z}{z_{0}}\right),
 \label{eq:fazag}
 \end{equation}
-pri čemer  gledamo valovanje na osi, pri $r=0$. 
-Razlika faze pri enem preletu je 
+pri čemer  smo se omejili na valovanje na osi, pri $r=0$. 
+Razlika faze po obhodu je 
 \begin{equation}
-\frac{\omega_{n}}{c}L-\left[\arctan \left(\frac{z_{2}}{z_{0}}\right)-
-\arctan\left(\frac{z_{1}}{z_{0}}\right)\right]=n\pi.
+2\frac{\omega_{n}}{c}L-2\left(\arctan \left(\frac{z_{2}}{z_{0}}\right)-
+\arctan\left(\frac{z_{1}}{z_{0}}\right)\right)=2n\pi.
 \label{eq:fazan}
 \end{equation}
-Pri tem smo zanemarili, da lahko pride do dodatne majhne spremembe
-faze pri odboju na zrcalu. Ta za delček valovne dolžine
-spremeni efektivno dolžino resonatorja, ki je niti ne poznamo
-tako natančno. Iz istega razloga za osnovni snop ni treba upoštevati člena
-v oglatem oklepaju enačbe~(\ref{eq:fazan}), saj gre tudi v tem primeru za nek 
-konstanten premik. Tako dobimo znano enačbo za resonančne frekvence 
+Člen v oklepaju je enak za vsa nihanja in le za delček valovne dolžine 
+spremeni efektivno dolžino resonatorja. Ker dolžine resonatorja niti ne poznamo
+tako natančno, lahko ta prispevek zanemarimo. Iz istega razloga lahko izpustimo
+tudi spremembo faze na zrcalu. Od tod sledi znana enačba za resonančne frekvence 
 \begin{equation}
 \omega_{n}=\frac{n\pi c}{L}.
 \label{eq:omega}
 \end{equation}
-Razmik med dvema zaporednima lastnima frekvencama je v skladu z enačbo~(\ref{eq:delta-omega-resonator})
+Konstantni členi, ki jih pri zapisu frekvence nismo upoštevali, ne vplivajo
+na razmik med dvema zaporednima lastnima frekvencama, ki je v skladu
+enačbo~(\ref{eq:delta-omega-resonator})
 \begin{equation}
 \Delta\omega=\frac{\pi c}{L}.
 \label{eq:deltaomega}
@@ -470,24 +471,17 @@ odvisen tudi od števila vozlov. Tako je na primer v cilindričnih koordinatah
 \end{equation}
 Resonančni pogoj zapišemo kot
 \begin{equation}
-\frac{\omega_{n,p,l}}{c}L-(2p+l+1)\left[\arctan\left(\frac{z_{2}}{z_{0}}\right)-
-\arctan\left(\frac{z_{1}}{z_{0}}\right)\right]=n\pi.
+2\frac{\omega_{n,p,l}}{c}L-2(2p+l+1)\left(\arctan\left(\frac{z_{2}}{z_{0}}\right)-
+\arctan\left(\frac{z_{1}}{z_{0}}\right)\right)=2n\pi.
 \end{equation}
 Resonančne frekvence so torej odvisne tudi od števila prečnih vozlov (slika~\ref{fig:crte}),
 kar je dodaten razlog, da v laserjih vzbujamo le osnovno lastno nihanje.
-\begin{figure}[h]
-\centering
-\def\svgwidth{90truemm} 
-\input{slike/04_crte.pdf_tex}
-\caption{Resonančne frekvence za skoraj planparalelni ($R\gg L$) resonator.}
-\label{fig:crte}
-\end{figure}
 
 Zanimiv in praktično pomemben je primer konfokalnega resonatorja\index{Resonator!konfokalni},
 pri katerem je $z_{0}=L/2$ in $\arctan(L/2z_{0})= \arctan(1)=\pi/4$. Resonančne frekvence
 so 
 \begin{equation}
-\omega_{n,p,l}=\frac{\pi c}{L}\left[n+\frac{1}{2}(2p+l+1)\right].
+\omega_{n,p,l}=\frac{\pi c}{L}\left(n+\frac{1}{2}(2p+l+1)\right).
 \label{eq:omega_konf}
 \end{equation}
 
@@ -501,7 +495,7 @@ vase.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{60truemm} 
+\def\svgwidth{55truemm} 
 \input{slike/04_Konfokalni.pdf_tex}
 \caption{V konfokalnem resonatorju se žarek šele po dveh preletih
 vrne sam vase.}
@@ -509,43 +503,44 @@ vrne sam vase.}
 \end{figure}
 
 Pri skoraj planparalelnem\index{Resonator!planparalelni} 
-resonatorju je $z_{0}\gg L$, $\arctan(L/2z_{0})$ lahko razvijemo, upoštevamo enačbo~(\ref{eq:zosim}) 
-in dobimo
-\beq
-\omega_{n,p,l}=\frac{\pi c}{L}\left[n+(2p+l+1)\frac{1}{\pi}\sqrt{\frac{2L}{R}}\right].
-\eeq
+resonatorju je $z_{0}\gg L$, $\arctan(L/2z_{0})$ lahko razvijemo, 
+upoštevamo enačbo~(\ref{eq:zosim}) in zapišemo
+\begin{equation}
+\omega_{n,p,l}=\frac{\pi c}{L}\left(n+(2p+l+1)\frac{1}{\pi}\sqrt{\frac{2L}{R}}\right).
+\end{equation}
 Ker je $L$ majhen v primerjavi z $R$, so resonance snopov nizkega prečnega reda 
-zelo blizu resonancam osnovnih snopov, niso pa čisto enake. Poglejmo primer. Vzemimo 
-simetrični resonator z dolžino $L=1~\si{\metre}$ in krivinskim radijem zrcal $R=50~\si{\metre}$, 
+zelo blizu resonancam osnovnih snopov. Poglejmo primer. Vzemimo 
+simetrični resonator z dolžino $L=1~\si{\metre}$ in $R=50~\si{\metre}$, 
 valovna dolžina pa naj bo $\lambda= 500~\si{\nano\metre}$. Z uporabo enačbe~(\ref{eq:zosim})
 hitro lahko izračunamo $z_0 = 4,97~\si{\metre}$. Ker je pogoj $z_0\gg L$ izpolnjen, lahko uporabimo
-gornji približek. Razlika med frekvencama dveh osnovnih snopov je
-\beq
-\Delta \omega_{n,p,l} = \frac{\pi c}{L} = 940~\si{\mega\hertz},
-\eeq
-medtem ko je razlika med frekvencama dveh prečnih snopov
-\beq
-\Delta \omega_{n,p,l} = \frac{c}{L}\sqrt{\frac{2L}{R}}  = 60~\si{\mega\hertz}.
-\eeq
+gornji približek. Razlika med frekvencama dveh osnovnih snopov je $\Delta \omega_{n,p,l} = 
+\pi c/L = 940~\si{\mega\hertz}$, medtem ko je razlika med frekvencama dveh prečnih snopov
+$\Delta \omega_{n,p,l} = c\sqrt{2/RL} = 60~\si{\mega\hertz}$.
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/04_crte.pdf_tex}
+\caption{Resonančne frekvence za skoraj planparalelni ($R\gg L$) resonator}
+\label{fig:crte}
+\end{figure}
 
 \section{Izgube v resonatorjih}
 Energija lastnega nihanja odprtega resonatorja ni konstantna, ampak se počasi
 zmanjšuje iz več vzrokov:
 \begin{enumerate}
-\item Odbojnost ogledal ni enaka 1. Tudi če bi znali narediti popolno odbojna zrcala, 
+\item Odbojnost zrcal ni enaka 1. Tudi če bi znali narediti popolno odbojna zrcala, 
 tak resonator ne bi bil uporaben, saj nihanja ne bi mogli sklopiti z zunanjim poljem. Če 
-torej hočemo dobiti nekaj svetlobe iz laserja ali filtrirati vpadajoči
-snop, mora biti odbojnost vsaj enega od zrcal manjša od 1.\\
+naj torej laser oddaja svetlobo, mora biti odbojnost vsaj enega od zrcal manjša od 1.\\
 \item Na sredstvu in na optičnih elementih v resonatorju pride do absorpcije in
-sipanja svetlobe. Te izgube želimo navadno čim bolj zmanjšati.\\
-\item Uklonske izgube so odvisne od premera zrcal in premera snopa na njih.
+sipanja svetlobe. Te izgube želimo navadno kar se da zmanjšati.\\
+\item Uklonske izgube so odvisne od velikosti zrcal in velikosti snopa na njih.
 V dani geometriji imajo najmanjši polmer osnovni snopi, snopi višjega
 reda so širši, zato imajo večje uklonske izgube. Merilo za uklonske
 izgube je Fresnelovo število\index{Fresnelovo število} (enačba~\ref{eq:Fresnelovo_stevilo}) 
 $N_{F}=a^{2}/(L\lambda)$, kjer je $a$ polmer ogledal. Pri enakem $N_{F}$ je
 polmer snopa na izhodnem zrcalu najmanjši, če je resonator konfokalni\index{Resonator!konfokalni}, 
 zato ima tak resonator tudi najmanjše uklonske izgube (glej nalogo~\ref{naloga:uklon_konf}).
-Če je $N_{F}$ znatno večji od 1, kar navadno je, so uklonske izgube zanemarljive. \\
+Če je $N_{F}$ znatno večji od 1, kar navadno je, so uklonske izgube zanemarljive. 
 \end{enumerate}
 
 Vse izgube lahko popišemo z razpadnim časom za energijo 
@@ -560,29 +555,31 @@ W = W_0 e^{\frac{-2t}{\tau}},
 \end{equation}
 pri čemer $\tau$ imenujemo življenjski ali razpadni čas nihanj\index{Življenjski čas nihanj}.
 Izguba energije na celoten obhod resonatorja\index{Izgube v resonatorju} je
+sestavljena iz izgub na zrcalih in drugih izgub
 \begin{equation}
--dW = (1-{\cal R}_{1})W+(1-{\cal R}_{2})W +\Lambda_{0} W = \Lambda W.
+\Delta W = -(1-{\cal R}_{1})W-(1-{\cal R}_{2})W -\Lambda_{0} W = -\Lambda W.
 \label{eq:Lambda}
 \end{equation}
 Z ${\cal R}_{1}$ in ${\cal R}_{2}$ smo označili odbojnosti zrcal, od katerih je navadno ena
 kolikor mogoče blizu 1. Parameter $\Lambda_{0}$ popiše absorpcijo in
 sipanje znotraj resonatorja ter morebitne uklonske izgube. Tipične vrednosti 
-zanj so do nekaj stotink. Celotne izgube popišemo s parametrom $\Lambda$. 
+$\Lambda_0$ so do nekaj stotink. Celotne izgube združimo v parameter $\Lambda$. 
 
 Razpadni čas nihanja lahko neposredno povežemo z izgubami, če v enačbo~(\ref{eq:dW})
 vstavimo čas enega obhoda $t=2L/c$. Zapišemo
-\beq
-\frac{dW}{W}= \Lambda = -\frac{2}{\tau}\, \frac{2L}{c},
-\eeq
+\begin{equation}
+\frac{\Delta W}{W}= -\Lambda = -\frac{2}{\tau}\, \frac{2L}{c},
+\end{equation}
 od koder sledi
-\beq
-\frac{1}{\tau}=\frac{\Lambda c}{4L}=\frac{1}{\tau_{0}}+\frac{c}{4L}[(1-{\cal R}_{1})+(1-{\cal R}_{2})],
+\begin{equation}
+\frac{1}{\tau}=\frac{\Lambda c}{4L}=\frac{1}{\tau_{0}}+\frac{c}{4L}\left((1-{\cal R}_{1})
++(1-{\cal R}_{2})\right),
 \label{taulambda}
-\eeq
+\end{equation}
 kjer smo s 
-\beq
+\begin{equation}
 \tau_{0}=\frac{4L}{\Lambda_0 c}
-\eeq
+\end{equation}
 označili razpadni čas zaradi notranjih izgub\index{Izgube v resonatorju!notranje}. 
 
 Notranje izgube so navadno zelo majhne, odbojnost enega zrcala
@@ -592,8 +589,8 @@ pa je približno enaka 1, tako da je življenjski čas nihanj približno
 }
 
 Zaradi dušenja se energija lastnih nihanj eksponentno zmanjšuje, prav tako tudi
-amplituda jakosti električnega polja. Amplituda pojema z dvakrat daljšim 
-karakterističnim časom, ki je enak kar $\tau$. Spekter eksponentno pojemajoče funkcije lahko izračunamo
+amplituda jakosti električnega polja, ki pojema s karakterističnim časom $\tau$. 
+Spekter eksponentno pojemajoče funkcije lahko izračunamo
 (glej nalogo~\ref{naloga-spekter}) in dobimo Lorentzovo krivuljo\index{Spekter!Lorentzov} 
 s širino črte, ki ustreza ravno
 \begin{equation}
@@ -601,21 +598,21 @@ s širino črte, ki ustreza ravno
 \label{3.26}
 \end{equation}
 Lastne frekvence torej niso neskončno ozke, ampak imajo končno širino $2/\tau$.
-Poglejmo primer. Naj bodo notranje izgube na en obhod $\Lambda_0=0,01$,
+Poglejmo primer. Naj bodo notranje izgube na obhod $\Lambda_0=0,01$,
 eno zrcalo naj bo idealno, drugo naj ima odbojnost ${\cal R}=0,93$. Dolžina
 resonatorja naj bo $L=0,5~\si{\metre}$, valovna dolžina pa $500~\si{\nano\metre}$. Tedaj
 je $1/\tau=12\cdot10^{6}$~s$^{-1}$. Zanimivo je pogledati razmerje med 
 razliko resonančnih frekvenc $\Delta \omega$ 
 (enačba~\ref{eq:delta-omega-resonator}) in širino resonance $2/\tau$. 
-Dobimo $\Delta\omega\tau/2 \approx 80$.
+Za opisan primer velja $\Delta\omega\tau/2 \approx 80$.
 
 \begin{remark}
 Namesto razpadnega časa $\tau$ se pogosto za opis izgub uporablja
 dobrota resonatorja\index{Dobrota resonatorja}, ki jo vpeljemo kot
 razmerje med resonančno frekvenco in širino črte 
-\beq
+\begin{equation}
 Q=\frac{\omega_{n}}{2\Delta\omega_{1/2}} = \frac{\omega_{n}\tau}{2}.
-\eeq
+\end{equation}
 Za tipične optične resonatorje je resonančna 
 frekvenca $\omega_n \sim 10^{15}~\si{\hertz}$, širina pa reda 
  $1/\tau \sim 10^{7}~\si{\hertz}$. Faktor dobrote je tako $Q \sim 10^{8}$. Optični 
@@ -633,42 +630,41 @@ interferometra\index{Fabry-Perotov interferometer} (enačba~\ref{eq:Fabry-Perot-
 okoli vrha pri $\omega_{n}$
 \begin{equation}
 T=\frac{1}{1+\frac{4{\cal R}}{(1-{\cal R})^{2}}\sin^{2}L\frac{(\omega-\omega_{n})}{c}}\approx 
-\frac{1}{1+\left[\frac{2}{(1-{\cal R})}\frac{L}{c}(\omega-\omega_{n})\right]^{2}},
+\frac{1}{1+\left(\frac{2}{(1-{\cal R})}\frac{L}{c}(\omega-\omega_{n})\right)^{2}},
 \label{3.27}
 \end{equation}
- kjer smo upoštevali še, da je odbojnost blizu ${\cal R} \approx 1$. Rezultat je znana Lorentzova
+ kjer smo upoštevali še, da je odbojnost ${\cal R} \approx 1$. Rezultat je znana Lorentzova
  krivulja oblike
- \beq
+ \begin{equation}
  T = \frac{(\Delta\omega_{1/2})^2}{(\omega - \omega_n)^2+(\Delta\omega_{1/2})^2},
- \eeq
+ \end{equation}
 od koder hitro razberemo 
-\beq
+\begin{equation}
 \frac{1}{\tau}=\Delta\omega_{1/2} = \frac{c}{2L}(1-{\cal R}).
-\eeq
+\end{equation}
 
 \section{*Obravnava z uklonskim integralom}
 \label{Resonator_uklon}
 
 V nestabilnih resonatorjih stacionarna rešitev v obliki stoječega
-Gaussovega snopa ne obstaja. Zato je v takih resonatorjih precej
-zahtevno poiskati rešitev za električno polje. 
-Ker pa je problem soroden uklonu, ga lahko obravnavamo s pomočjo 
-uklonske teorije\index{Uklon}.
+Gaussovega snopa ne obstaja. Zato je v takih resonatorjih rešitev za električno polje precej
+zahtevno poiskati. Ker pa je problem soroden uklonu, ga lahko obravnavamo z 
+uklonsko teorijo\index{Uklon}.
 
 Označimo jakost električnega polja v točki $P_{1}$ prvega zrcala z $E_{1}$.
-Polje na drugem zrcalu v točki $P_2$ lahko zapišemo s pomočjo Kirchhoffovega uklonskega
-integrala\index{Kirchhoffov integral} (enačba~\ref{eq:Fresnelov-uklon})
+Polje na drugem zrcalu v točki $P_2$ lahko zapišemo s Kirchhoffovim uklonskim
+integralom\index{Kirchhoffov integral} (enačba~\ref{eq:Fresnelov-uklon})
 \begin{eqnarray}
 E_{2} & = & -\frac{i}{2\lambda}\int_{1}E_{1}(P_{1})\frac{e^{ikr}(1+\cos\vartheta)}{r}\, dS_{1} \\
  & = & \int_{1}E_{1}(P_{1})K(P_{1},P_{2})dS_{1},
 \label{eq:resuklon}
 \end{eqnarray}
 kjer je $r$ razdalja med točkama $P_{1}$ in $P_{2}$, $\vartheta$
-je kot med zveznico in normalo na zrcali, druge faktorje pa smo pospravili v faktor
-\beq
+je kot med zveznico in normalo na zrcali v osi, druge faktorje pa smo pospravili v faktor
+\begin{equation}
 K(P_{1},P_{2}) = -\frac{i}{2\lambda}\frac{e^{ikr}(1+\cos\vartheta)}{r},
 \label{jedro}
-\eeq
+\end{equation}
 ki predstavlja jedro integralske enačbe. Polje na prvem zrcalu mora
 biti na enak način povezano s poljem na drugem. Če naj zapisano polje predstavlja lastno nihanje
 resonatorja, mora biti po dveh odbojih sorazmerno začetnemu polju
@@ -695,9 +691,10 @@ za predznak.
 \caption{Koordinatna sistema na zrcalih resonatorja}
 \label{fig:uklon_res_shema}
 \end{figure}
-Vpeljimo kartezične koordinate na obeh zrcalih, kot kaže slika~(\ref{fig:uklon_res_shema}).
+Vpeljemo kartezične koordinate na obeh zrcalih, kot kaže slika~(\ref{fig:uklon_res_shema}).
 Pričakujemo, da bo prečna razsežnost lastnega stanja majhna v primerjavi
-z dolžino resonatorja $L$, zato lahko $r$ razvijemo 
+z dolžino resonatorja $L$, zato lahko $r$ razvijemo, pri čemer se kvadratni členi ravno odštejejo 
+zaradi ukrivljenosti zrcal. Ostaneta le še mešana člena
 \begin{equation}
 r\approx L-\frac{xx^{\prime}+yy^{\prime}}{L}.
 \label{3.72}
@@ -711,7 +708,7 @@ Tako iz enačbe~(\ref{eq:resuklon})
 sledi
 \begin{equation}
 E(x',y')=\pm\frac{ie^{ikL}}{\lambda L}\int E(x,y)\exp
-\left[\frac{-ik(xx^{\prime}+yy^{\prime})}{L}\right]\, dx\, dy.
+\left(\frac{-ik(xx^{\prime}+yy^{\prime})}{L}\right)\, dx\, dy.
 \label{3.73}
 \end{equation}
 Integracija poteka po celem zrcalu. Jedro integrala je produkt dveh
@@ -722,7 +719,7 @@ E(x',y')=E_{0}f(x')g(y').
 $
 S tem nastavkom morata biti funkciji $f(x')$ in $g(y')$ rešitvi enačbe
 \begin{equation}
-\alpha f(x')=\int f(x)\exp\left[\frac{-ikxx^{\prime}}{L}\right]\, dx,
+\alpha f(x')=\int f(x)\exp\left(\frac{-ikxx^{\prime}}{L}\right)\, dx,
 \label{3.75}
 \end{equation}
 kjer je $\alpha$ še neznana konstanta. Meje integrala so od enega do 
@@ -742,12 +739,12 @@ ter podobno enačbo za $g(Y')$. Enačba~(\ref{3.77}) pravi, da mora
 biti $f(X)$ podobna svoji Fourierevi transformiranki. Najpreprostejša
 funkcija s to lastnostjo je Gaussova funkcija 
 \begin{equation}
-f(X)=\exp[-\frac{1}{2}X^{2}].
+f(X)=\exp\left(-\frac{1}{2}X^{2}\right).
 \label{3.78}
 \end{equation}
 Polje na zrcalu ima tako po pričakovanju obliko Gaussovega snopa
 \begin{equation}
-E(x,y)=E_{0}\exp\left[-\frac{k(x^{2}+y^{2})}{2L}\right].
+E(x,y)=E_{0}\exp\left(-\frac{k(x^{2}+y^{2})}{2L}\right).
 \label{3.79}
 \end{equation}
 
@@ -762,9 +759,9 @@ i\alpha^{2}\frac{e^{ikL}}{\lambda L}=ie^{ikL}=\pm1.
 \label{3.80}
 \end{equation}
 Izpeljemo resonančni pogoj za
-frekvenco lastnega stanja, ki ga že poznamo~(enačba~\ref{eq:omega_konf})
+frekvenco lastnega nihanja in izračunamo razliko med dvema lastnima frekvencama, ki jo že poznamo~(enačba~\ref{eq:deltaomega})
 \begin{equation}
-\omega_{n}=ck_{n}=\frac{c}{L}(2n+1)\frac{\pi}{2}.
+\Delta \omega=\frac{\pi c}{L}.
 \label{3.81}
 \end{equation}
 Integralska enačba, dobljena iz uklonske teorije, tako da
@@ -784,15 +781,16 @@ resonator z dvema vzporednima ravnima zrcaloma (a) in resonator z dvema sferičn
 Poleg teh dveh primerov je v uporabi še cela vrsta različnih resonatorjev. Ciklični
 resonator\index{Resonator!ciklični} (c) je
 sestavljen iz več zrcal in žarek ciklično potuje med njimi. V vlakenskih laserjih je resonator
-optično vlakno med dvema zrcaloma ali pa sklenjeno vlakno. Kot laserski resonator lahko 
-delujejo tudi mikroploščice (d) ali mikrokroglice (e), v katere je s totalnim odbojem ujeta svetloba. 
+optično vlakno med dvema zrcaloma ali pa sklenjeno vlakno\index{Laser!vlakenski}. 
+Kot laserski resonator lahko delujejo tudi mikroploščice (d) ali mikrokroglice (e), 
+v katere je s totalnim odbojem\index{Totalni odboj} ujeta svetloba. 
 Namesto zrcal v mikroresonatorjih uporabimo tudi periodične dielektrične strukture, na katerih 
-pride do Braggovega odboja (f). 
+pride do Braggovega odboja (f).\index{Braggov odboj}
 \end{remark}
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{130truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/04_resonatorji.pdf_tex}
 \label{fig:resonatorji}
 \end{figure}
@@ -836,10 +834,10 @@ pride do Braggovega odboja (f).
 % 
 % Zapišimo elektromagnetno energijo v resonatorju. Električni
 % del energije polja, ki je ravno polovica celotne energije, zapišemo kot
-% \beq
+% \begin{equation}
 % W_e = \frac{1}{2}\varepsilon_0 \int E^2 dV = \frac{1}{2}\epsilon_{0}f^{2}
 % \int g^{2}dV = \frac{1}{4} (a+a^{*})^2.
-% \eeq
+% \end{equation}
 % V spremenljivki $a$ in konjugirani spremenljivki $a^{*}$ lahko prepoznamo 
 % klasično obliko kreacijskih in anihilacijskih operatorjev v kvantno-mehanskem 
 % opisu harmonskega oscilatorja. 
