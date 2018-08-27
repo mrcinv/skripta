@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '04_Resonator_Gauss.pdf' (pdf, eps, ps)
 %%
@@ -35,6 +35,8 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
     \setlength{\unitlength}{405.22448442bp}%
     \ifx\svgscale\undefined%
@@ -49,11 +51,15 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.48941443)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{04_Resonator_Gauss.pdf}}%
-    \put(0.44228983,0.45901153){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$L$}}}%
-    \put(0.18945823,0.0367102){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z_1$}}}%
-    \put(0.5837469,0.0367102){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z_2$}}}%
-    \put(0.88507786,0.34901959){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R_2$}}}%
-    \put(-0.00050367,0.36831613){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R_1$}}}%
+    \put(0.44228981,0.45901153){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$L$\end{tabular}}}}%
+    \put(0.18945821,0.03671018){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z_1$\end{tabular}}}}%
+    \put(0.58374689,0.03671018){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z_2$\end{tabular}}}}%
+    \put(0.89248116,0.35860616){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$R_2$\end{tabular}}}}%
+    \put(-0.01319508,0.35860616){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$R_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{04_Resonator_Gauss.pdf}}%
+    \put(0.92877548,0.19767022){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
