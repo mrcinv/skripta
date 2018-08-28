@@ -1091,7 +1091,7 @@ w_{21}=\frac{2\pi}{\hbar}|\langle1,n_{\alpha}+
 \delta(E_{2}-E_{1}-\hbar\omega_{\alpha}).
 \label{4.49}
 \end{equation}
-Z delta funkcijo izberemo le prehoda, pri katerih se ohranja
+Z delta funkcijo izberemo le prehod, pri katerem se ohranja
 energija.
 
 Operator elektromagnetnega polja lahko po enačbi~(\ref{eq:pqrazvoj}) 
@@ -1140,7 +1140,7 @@ polje, zato velja
  & = & -e\,\langle1|\,\hat{x}\,|2\rangle\langle n_{\alpha}+1|\,\hat{E}\,|n_{\alpha}\rangle.
 \end{eqnarray}
 Vstavimo polje, ki smo ga izrazili s kreacijskimi in anihilacijskimi operatorji (enačba~\ref{4.53}),
-upoštevamo zvezi~(\ref{eq:ankr}) in dobimo
+upoštevamo zvezi~(\ref{eq:ankr}) in zapišemo
 \begin{eqnarray}
 \langle n_{\alpha}+1|\, \hat{E}\,|n_{\alpha}\rangle & = 
 & -i\sum_{\beta}\sqrt{\frac{\hbar\omega_{\beta}}{2V\epsilon_{0}}}
@@ -1149,11 +1149,12 @@ E_{\beta}(\mathbf{r})\nonumber \\
  & = & -i\sqrt{\frac{\hbar\omega_{\alpha}}{2V\epsilon_{0}}}
  \sqrt{n_{\alpha}+1}\, E_{\alpha}(\mathbf{r}).
 \end{eqnarray}
-Od vseh operatorjev v razvoju polja dobimo namreč od nič različen matrični
+Od vseh operatorjev v razvoju polja je namreč od nič različen matrični
 element le za kreacijski operator za stanje $\alpha$.
-
 Vpeljimo še simbol za matrični element koordinate med 
-atomskimi stanji $\langle1|\hat{x}|2\rangle=x_{12}$. Iskana verjetnost za prehod iz 
+atomskimi stanji 
+$\langle1|\hat{x}|2\rangle=x_{12}$.
+ Iskana verjetnost za prehod iz 
 začetnega stanja, v katerem smo imeli vzbujen atom in $n_{\alpha}$ fotonov, v končno
 stanje z atomom v osnovnem stanju in $n_{\alpha}+1$ fotonov v stanju $\alpha$ je tako
 \begin{equation}
@@ -1162,19 +1163,19 @@ w_{21}=\frac{\pi e^{2}\omega_{\alpha}x_{12}^{2}}{V\epsilon_{0}}
 \label{4.56}
 \end{equation}
 Verjetnost za prehod je sorazmerna z $n_{\alpha}+1$ in je od nič
-različna, tudi če je število kvantov polja enako nič. Tedaj imamo seveda
+različna, tudi če je število kvantov polja enako nič. To opisuje seveda
 spontano sevanje\index{Spontano sevanje}. Prispevek, ki je 
 sorazmeren s številom že prisotnih fotonov, pa predstavlja stimulirano 
 sevanje\index{Stimulirano sevanje}. Verjetnost za prehod vsebuje
 še kvadrat prostorske odvisnosti polja $E_{\alpha}^{2}(\mathbf{r})$.
-Če ne poznamo natančnega položaja atoma ali če imamo plin atomov, ki je enakomerno
+Če ne poznamo natančnega položaja atoma ali če je plin atomov enakomerno
 porazdeljen po votlini, lahko ta člen nadomestimo kar s povprečno vrednostjo.
-Kadar imamo stoječe valovanje, je to 1/2.
+Za stoječe valovanje je to kar 1/2.
 
 Najprej poglejmo verjetnost za spontano emisijo. 
 Spontana emisija je možna v vsa elektromagnetna nihanja votline s
 pravo frekvenco. Celotno verjetnost za prehod atoma iz vzbujenega
-v osnovno stanje dobimo, če seštejemo verjetnosti za prehod z izsevanim fotonom 
+v osnovno stanje izračunamo tako, da seštejemo verjetnosti za prehod z izsevanim fotonom 
 v določenem stanju. Spomnimo se, da je ta verjetnost ravno enaka 
 Einsteinovem koeficientu $A_{21}$\index{Einsteinovi koeficienti} (enačba~\ref{4.27})
 \begin{equation}
@@ -1200,11 +1201,11 @@ Pri gornjem izračunu Einsteinovega koeficienta $A_{21}$ smo privzeli, da so vsi
 \end{remark}
 
 Zaradi spontanega sevanja vzbujeno atomsko stanje nikoli ni popolnoma
-stacionarno. Poleg tega pa energija stanja s končnim razpadnim časom ni natančno
+stacionarno. Poleg tega energija stanja s končnim razpadnim časom ni natančno
 določena, zato moramo verjetnost za stimulirano sevanje (enačba~\ref{4.56}) malo 
 popraviti. Delta funkcijo energije nadomestimo s končno široko  
 funkcijo $g(\omega-\omega_0)$, ki ima vrh pri $\omega_{0}$. Zaradi 
-spremembe integracijske spremenljivke dobimo še dodaten faktor $1/\hbar$. Tako imamo 
+spremembe integracijske spremenljivke nastopi še dodaten faktor $1/\hbar$ in zapišemo
 \begin{equation}
 w_{21}=\frac{\pi e^{2}\omega_{\alpha}x_{12}^{2}}{2V\epsilon_{0}\hbar}
 (n_{\alpha}+1)g(\omega_{\alpha}-\omega_0).
@@ -1213,9 +1214,9 @@ w_{21}=\frac{\pi e^{2}\omega_{\alpha}x_{12}^{2}}{2V\epsilon_{0}\hbar}
 
 Poglejmo še Einsteinov koeficient za stimulirano sevanje $B_{21}$. Lahko ga 
 izrazimo iz enačbe~(\ref{4.18}), če upoštevamo, da je gostota energije 
-polja $n_{\alpha}\hbar\omega_{\alpha}/V$. Dobimo
+polja $n_{\alpha}\hbar\omega_{\alpha}/V$
 \begin{equation}
-B_{21}=\frac{Vw_{21}}{n_{\alpha}\hbar\omega_{\alpha} g(\omega_{\alpha}-\omega_0)}
+B_{21}=\frac{V\,w_{21}}{n_{\alpha}\,\hbar\omega_{\alpha}\, g(\omega_{\alpha}-\omega_0)}
 =\frac{\pi e^{2}x_{12}^{2}}{2\epsilon_{0}\hbar^{2}}.
 \label{4.60}
 \end{equation}
@@ -1228,4 +1229,4 @@ ki se ujema z razmerjem, ki smo ga izpeljali z uporabo
 Planckove formule (enačba~\ref{4.27}). Prehojena pot jasno kaže zvezo med spontanim in
 stimuliranim sevanjem ter gostoto stanj elektromagnetnega polja. 
 
-\section{Rabijeve oscilacije}
+\section{*Rabijeve oscilacije}
