@@ -1,47 +1,46 @@
+\chapterimage{slike/Trinivojski.png} 
 \chapter{Laser}
 
-V tem poglavju bomo opisali delovanje laserjev. Zapisali bomo zasedbene enačbe
+***V tem poglavju bomo opisali delovanje laserjev. Zapisali bomo zasedbene enačbe
 , sprektralno širino, relaksacijske oscilacije, razložili delovanje sunkovnih
-laserjev, meritev, stabilizacija frekvence, glavnik...
+laserjev, meritev, stabilizacija frekvence, glavnik... ***
 
-\section{Akustična analogija laserja}
+\section{Laser}
 
-Spoznali smo že, da se stoječe valovanje v optičnem resonatorju obnaša kot 
-dušeno harmonično nihalo. Iz nihala lahko napravimo oscilator, to je 
-napravo, ki samostojno niha brez zunajega vzbujanja, če nam dano nihalo uspe povezati v
-povratno zvezo z ustreznim ojačevalnikom, ki pokriva izgube nihala zaradi
-dušenja. Primeri so ure z mehanskimi nihali, oscilatorji z električnim
-nihajnim krogom v elektroniki, pa vrsta glasbenih inštrumentov.
-
-Ugotovili smo, da je ojačevanje svetlobe mogoče dobiti v sredstvu z
-obrnjeno zasedenostjo med dvema nivojema. Postavimo tako snov v optični
-resonator. Na začetku dobimo predvsem spontano sevano svetlobo, ki se
+V prejšnjem poglavju smo spoznali, da se v sredstvu z obrnjeno zasedenostjo
+med dvema nivojema pojavi optično ojačevanje. Zdaj pa postavimo tako snov 
+v optični resonator. Na začetku dobimo predvsem spontano izsevano svetlobo, ki se
 odbija med zrcaloma resonatorja in se pri prehodu skozi snov ojačuje. Tako
 se vzbujajo nihanja resonatorja z nihajnimi frekvencami blizu frekvence
-atomskega prehoda, pri katerem snov ojačuje. Energija nihanj z dovolj
-majhnimi izgubami bo rasla, dokler se ojačevanje ne bo izenačilo z
-izgubami. Tak izvor svetlobe je laser. Beseda je nastala iz kratice za Light
-Amplification by Stimulated Emission of Radiation.
+atomskega prehoda, pri katerih snov ojačuje. Energija nihanj z dovolj
+majhnimi izgubami narašča, dokler se izgube ne izenačijo z ojačevanjem.
+Sistem preide v stacionarno stanje in seva močno koherentno svetlobo. Tak
+izvor svetlobe imenujemo laser. Beseda laser je nastala iz kratice za {\it Light
+Amplification by Stimulated Emission of Radiation} --  ojačanje svetlobe s
+stimulirano emisijo sevanja.
+\begin{figure}[h]
+\centering
+\def\svgwidth{100truemm} 
+\vskip4truecm
+%\input{slike/06_shema.pdf_tex}
+\caption{Shema laserja, ki ga sestavljajo ojačevalno sredstvo, črpalni mehanizem
+in resonator. }
+\label{fig:Rabi}
+\end{figure}
+V grobem ima laser tri ključne sestavne dele: ojačevalno sredstvo, 
+črpalni mehanizem in zrcali, ki tvorita resonator (slika~\ref{}). Črpalno
+sredstvo vzdržuje obrnjeno zasedenost v ojačevalnem sredstvu, resonator pa zagotavlja,
+da je dovolj valovanja, da stimulirano sevanje prevlada nad spontanim.
+Prepustnost vsaj enega od zrcal mora biti manjša od 1, zato da skozenj izhaja svetloba.
 
-Kot analogija za laser so posebno zanimiva glasbila, predvsem pihala.
-Vzemimo na primer klarinet. To glasbilo razdelimo na dve bistveni enoti:
-cev, v kateri lahko nastane stojni zvočni val, in ustnik, katerega naloga
-je dovajati energijo in s tem vzdrževati konstantno amplitudo nihanja.
-
-Frekvenca stoječega vala, to je nihanja zračnega stolpca v piščali, je
-določena z dolžino cevi ( pravzaprav le do prve odprte tonske luknjice,
-vendar te podrobnosti za nas niso pomembne ) in s številom vozlov
-stoječega vala v cevi. Na gornjem koncu, pri ustniku, lahko predpostavimo,
-da je cev zaprta, zato imamo tam hrbet nihanja pritiska. Cev je torej
-zvočni resonator.
-
-Ustnik je polobel zaključek cevi, ki ga skoraj povsem zapira ploščat,
-prožen jeziček. Ko glasbenik piha v ustnik, se ta trese in s tem proizvaja
-zvok. "Ce ustnik ni nataknjen na cev klarineta, je nastali zvok bolj
-nekakšen šum kot pa lep, dobro določen ton. Tresenje jezička je le
-približno periodično in vsebuje mnogo frekvenc.
-
-Ko ustnik nataknemo na cev in pihnemo vanj, začne tresenje jezička
+\begin{remark}
+Kot analogijo za laser vzemimo klarinet, ki je sestavljen iz cevi in iz ustnika. 
+Cev deluje kot zvočni resonator, v katerem nastane stojni zvočni val, pri čemer je
+frekvenca stoječega vala določena z dolžino cevi in s številom vozlov.
+Naloga ustnika je dovajati energijo in s tem vzdrževati konstantno 
+amplitudo nihanja. To glasbenik doseže s pihanjem v ustnik in tresenjem
+prožnega jezička, ki s tresljaji poizvaja zvok. Tresenje jezička
+je približno periodično in vsebuje mnogo različnih frekvenc. tresenje jezička
 vzbujati tiste stoječe valove v cevi, katerih frekvence so vsebovane v
 spektru tresenja jezička. Dokler je vzbujanje šibko, se ne zgodi nič
 posebnega, ko pa amplituda tlaka v cevi dovolj naraste, pride do čisto
@@ -54,10 +53,15 @@ nihanji zračnega stolpca v cevi vzdržujemo stoječe valovanje s konstantno
 amplitudo. Dovedena moč se seveda izseva kot zvok na odprtem koncu
 klarineta.
 
-\begin{figure}[tbp]
-\label{s5.1} \vskip 5cm
-\caption{Osnovna shema laserja}
-\end{figure}
+\end{remark}
+
+
+Spoznali smo že, da se stoječe valovanje v optičnem resonatorju obnaša kot 
+dušeno harmonično nihalo. Iz nihala lahko napravimo oscilator, to je 
+napravo, ki samostojno niha brez zunajega vzbujanja, če nam dano nihalo uspe povezati v
+povratno zvezo z ustreznim ojačevalnikom, ki pokriva izgube nihala zaradi
+dušenja. Primeri so ure z mehanskimi nihali, oscilatorji z električnim
+nihajnim krogom v elektroniki, pa vrsta glasbenih inštrumentov.
 
 Vrnimo se k svetlobi in si najprej oglejmo najpreprostejši model laserja.
 Privzemimo, da je le eno resonatorsko nihanje tako, da njegova frekvenca
