@@ -983,11 +983,11 @@ nehomogeni Dopplerjevi razširitvi in je zato v moderni spektroskopiji
 velikega pomena.
 \end{remark}
 
-Izračunajmo še absorpcijski koeficient za prvi, mo"can vpadni snop, tako da v
+Izračunajmo še absorpcijski koeficient za prvi, močan vpadni snop, tako da v
 gornjem izrazu vstavimo $\omega^{\prime}=\omega_S$. Vodilni člen ${\cal N}((\omega_0-
-\omega_S)/k)$ opisuje obi"cajno Gaussovo obliko Dopplerjevo
-raz"sirjene "crte, izraz v oklepaju pa da zmanj"sanje absorpcije
-zaradi nasi"cenja, ki je odvisno le od vrednosti $g(0)$ in zato enako za vse $\omega_S$. 
+\omega_S)/k)$ opisuje običajno Gaussovo obliko Dopplerjevo
+razširjene črte, izraz v oklepaju pa da zmanjšanje absorpcije
+zaradi nasičenja, ki je odvisno le od vrednosti $g(0)$ in zato enako za vse $\omega_S$. 
 Z enim samim vpadnim snopom svetlobe torej vdolbine v absorpciji ne moremo zaznati, saj 
 je izmerjena črta kljub nasičenju Gaussove oblike. 
 
@@ -1040,7 +1040,7 @@ Pokaži, da je rezultat natančnejše izpeljave absorpcijskega koeficienta
  \mu_{+}(\omega_S) = \hbar B{\cal N}\left(\frac{\omega_S-\omega_0}{k}\right)\left(1-\frac{Bj}
  {Ac}\left(g(0)+g(\omega_S-\omega_{0})\right)\right)\;.
 \end{equation}
-Pri računu privzami, da je Dopplerjeva razširitev bistveno večja in Maxwellovo porazdelitev
+Pri računu privzemi, da je Dopplerjeva razširitev bistveno večja in Maxwellovo porazdelitev
 prestavi pred integral. 
 \end{definition}
 
@@ -1243,24 +1243,24 @@ v semiklasičnem modelu. To pomeni, da dvonivojski sistem obravnavamo kvantno,
 svetlobo, ki vpada, pa kot klasično skalarno polje. 
 V odsotnosti električnega polja zapišemo Hamiltonian\index{Hamiltonova
 funkcija} za elektron kot
-\beq
+\begin{equation}
 H_0 = \hbar \omega_1 |1\rangle \langle1| + \hbar \omega_2 |2\rangle \langle2|,
-\eeq
+\end{equation}
 pri čemer je $\omega_2- \omega_1 = \omega_0$ frekvenca prehoda. V prisotnosti 
 svetlobnega polja moramo dodati še člen, ki opisuje dipolno interakcijo in dobimo
 časovno odvisen Hamiltonian
-\beq
+\begin{equation}
 H = \hbar \omega_1 |1\rangle \langle1| + \hbar \omega_2 |2\rangle \langle2|
 -e\hat{x}E_0 \cos (\omega t).
-\eeq
+\end{equation}
 Schr\"odingerjevo enačbo\index{Schr\"odingerjeva enačba}
-\beq
+\begin{equation}
 i \hbar \frac{\partial}{\partial t}|\psi\rangle = H|\psi\rangle
-\eeq
+\end{equation}
 rešujemo z nastavkom 
-\beq
+\begin{equation}
 |\psi\rangle = c_1(t)e^{-i \omega_1t}|1\rangle + c_2(t)e^{-i \omega_2t}|2\rangle,
-\eeq
+\end{equation}
 saj je valovna funkcija, ki popisuje stanje sistema, v splošnem 
 kombinacija obeh stanj. Nastavek vstavimo v enačbo, ki jo enkrat pomnožimo 
 z $\langle1|$, drugič pa z $\langle2|$ in izpeljemo sistem dveh sklopljenih enačb
@@ -1289,18 +1289,18 @@ c_2(t)&=&\frac{V}{i\hbar \Omega} e^{i\Delta t/2}\, \sin\left(\frac{\Omega t}{2}\
 \label{eq:rabi4}
 \end{eqnarray}
 Pri tem smo vpeljali tako imenovano Rabijevo frekvenco
-\beq
+\begin{equation}
 \Omega = \sqrt{\Delta^2 + \left(\frac{V}{\hbar}\right)^2} = \sqrt{(\omega_0-\omega)^2 
 + \left(\frac{\langle1|\hat{x}|2\rangle\, eE_0}{\hbar}\right)^2}
-\eeq
+\end{equation}
 \begin{definition}
 Pokaži, da sta gornja izraza (enačbi~\ref{eq:rabi3} in \ref{eq:rabi4}) res rešita
 sistem enačb (\ref{eq:rabi2}) ob izbranih začetnih pogojih.
 \end{definition}
 Poglejmo rezultat podrobneje. Verjetnost, da najdemo atom v stanju $|2\rangle$, je enaka
-\beq
+\begin{equation}
 P_2(t) = |c_2(t)|^2 = \frac{V^2}{\hbar^2 \Omega^2}\sin^2(\Omega t/2).
-\eeq
+\end{equation}
 Če je frekvenca vpadne svetlobe točno enaka frekvenci prehoda, je $\Delta = 0$ in 
 $\Omega = V/\hbar$. Takrat je amplituda nihanja zasedenosti vzbujenega stanja kar enaka 1
 in sistem v celoti periodično prehaja iz osnovnega stanja v vzbujeno in nazaj. To pomeni,
@@ -1308,10 +1308,10 @@ da pride izmenično do popolne absorpcije svetlobe in do popolne stimulirane emi
 Pri odstopajoči vpadni frekvenci se amplituda nihanja zmanjša, hkrati pa se poveča
 frekvenca oscilacij. Frekvenca oscilacij pa ni odvisna zgolj od frekvence vpadnega valovanja, 
 ampak tudi od amplitude električne poljske jakosti vpadnega valovanja. Zelo groba ocena
-frekvence je zato $\Omega \sim ~\si{MHz}$.
+frekvence je zato $\Omega \sim~\si{MHz}$.
 \begin{figure}[h]
 \centering
-\def\svgwidth{110truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/05_rabi.pdf_tex}
 \caption{Rabijeve oscilacije za tri različne vrednosti odstopanja frekvence vpadne
 svetlobe od frekvence prehoda $\Delta=\omega_0-\omega$. 
