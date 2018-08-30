@@ -394,7 +394,7 @@ Pri tem kvantni izkoristek odčitaj s slike~(\ref{fig:Fotodioda}).
 \end{definition}
 
 \subsection*{Fotopomnoževalka}
-Fotopomnoževalke so fotocelice z vgrajenim ojačanjem. Ojačanje dosežemo tako, da 
+Fotopomnoževalke so fotocelice z vgrajenim ojačenjem. Ojačenje dosežemo tako, da 
 izbit fotoelektron najprej pospešimo z napetostjo $100$--$150~\si{\volt}$ na vmesno elektrodo, 
 tako imenovano dinodo, iz katere izbije več ($\sim 5$--$10$, redkeje tudi do 40) 
 sekundarnih elektronov. Ti elektroni
@@ -420,7 +420,7 @@ elektroni do anode potujejo različno dolgo, zato je sunek na izhodu
 razširjen, tipično okoli $\sim 0,1$--$20~\si{\nano\second}$.  
 Za manj zahtevne aplikacije pogosto merimo kar povprečni tok z anode. Kadar pa opazujemo
 posamezne fotone, zaznamo na izhodu zaporedje sunkov. Takrat lahko 
-amplituda izhodnega signala močno niha, saj je koeficient ojačanja 
+amplituda izhodnega signala močno niha, saj je koeficient ojačenja 
 odvisen od števila izbitih elektronov, kar pa je statistični proces. 
 
 \section{Fotoprevodni detektorji}
@@ -494,13 +494,13 @@ zanemarimo in zapišemo
 \beq
 \Delta I = G \left( \frac{e_0 \eta_e}{h\nu}\right) P,
 \eeq
-pri čemer je koeficient ojačanja 
+pri čemer je koeficient ojačenja 
 \beq
 G = \frac{\beta_e \tau_e U}{l^2} = \frac{\tau_e}{\tau}.
 \eeq
 Vpeljali smo še čas preleta $\tau = v_e/l = \beta_e E/l = \beta_e U/l^2$.
 
-Koeficient $G$ opiše ojačanje signala. Njegova vrednost je odvisna od 
+Koeficient $G$ opiše ojačenje signala. Njegova vrednost je odvisna od 
 vrste snovi in gibljivosti nosilcev naboja v njej, velikosti
 detektorja in tudi priključene napetosti, zato lahko $G$ zavzane vrednosti od manj kot ena pa
 vse do $10^6$. 
@@ -521,7 +521,7 @@ pa za valovne dolžine do $1,8~\si{\micro\meter}$. Za zaznavanje valovnih dolži
 $2~\si{\micro\meter}$ in $7~\si{\micro\meter}$ so najprimernejši InAs, InSb in PbS detektorji, 
 pri še daljših valovnih dolžinah pa se uporablja germanij, dopiran z zlatom, bakrom, cinkom, borom ...
 Kvatni izkoristek takih detektorjev je razmeroma velik ($\eta = 0,5$ za Ge:Cu), vendar
-je lahko faktor ojačanja $G \ll 1$ (npr. $G = 0,03$ za Ge:Hg). 
+je lahko faktor ojačenja $G \ll 1$ (npr. $G = 0,03$ za Ge:Hg). 
 
 Hitrost odziva fotoprevodnika je odvisna od časa preleta nosilcev naboja,
 ki je določen z geometrijo detektorja, in od karakterističnega časa elektronskega vezja. 
@@ -533,7 +533,7 @@ vendar hkrati zmanjšamo tudi njegovo občutljivost.
 \begin{remark}
 Fotoprevodni detektorji so narejeni iz zelo tankih plasti fotoprevodnika, saj močno absorbira
 svetlobo. Tako za absorpcijo $70-90\%$ svetlobe zadošča le $1$--$2~\si{\micro\meter}$ debela plast.
-Elektrode se pogosto prepletajo, da se zmanjša dolžina preleta $l$ in poveča ojačanje $G$. 
+Elektrode se pogosto prepletajo, da se zmanjša dolžina preleta $l$ in poveča ojačenje $G$. 
 \end{remark}
 
 \section{Polprevodniške fotodiode}
@@ -763,15 +763,15 @@ pride do naglega povečanja električnega toka. Ob absopciji fotona nastali
 mobilni nosilci naboja se namreč v električnem polju tako pospešijo, da s trki ustvarjajo nove pare 
 elektron-vrzel. Ti novonastali pari ponovno ustvarjajo pare in pride do ``plazu'', podobno kot v 
 fotopomnoževalki. En foton torej sproži cel plaz elektronov, zato pravimo, da je plazovna dioda
-fotodioda z notranjim ojačanjem. Pri tem je faktor ojačanja tipično $30$-$300$ in jih lahko 
-uporabimo za detekcijo posameznih fotonov. Slabost je, da je faktor ojačanja odvisen od
+fotodioda z notranjim ojačenjem. Pri tem je faktor ojačenja tipično $30$-$300$ in jih lahko 
+uporabimo za detekcijo posameznih fotonov. Slabost je, da je faktor ojačenja odvisen od
 temperature in je zato za natančne meritve potrebna temperaturna stabilizacija.
 
 Napetost, pri kateri deluje plazovna fotodioda, je priključena v zaporni smeri jih jo 
 držimo tik pod prebojno napetostjo. Ker že  majhna odstopanja v napetosti povzročijo veliko
 spremembo v toku, moramo tudi napetost držati kar se da stabilno. Le to nam omogoča
 linearen odziv fotodiode od moči vpadne svetlobe. Take fotodiode so praviloma zelo hitre 
-($50~\si{\pico\second})$ in zelo občutljive. Z ojačanjem signala se ojača tudi šum, a je ta 
+($50~\si{\pico\second})$ in zelo občutljive. Z ojačenjem signala se ojača tudi šum, a je ta 
 porast pogosto manjša kot bi bil prispevek k šumu na zunanjih elektonskih ojačevalcih. 
 
 \begin{figure}[h]
@@ -1123,9 +1123,9 @@ pri čemer $P_o$ označuje moč vpadne svetlobe iz ozadja.
 \begin{remark}
  V detektorjih, kjer pride do notranjega ojačevanja (npr. fotopomnoževalka ali plazovna fotodioda), 
  se skupaj s signalom ojača tudi šum. Če se signal ojača za faktor $G$, se za isti faktor
- povečajo tudi šum štetja, šum ozadja in šum temnega toka. Poleg tega pride do ojačanja šuma
+ povečajo tudi šum štetja, šum ozadja in šum temnega toka. Poleg tega pride do ojačenja šuma
  zaradi naključnega povečevanja števila fotonov med pomnoževanjem signala. Tukaj nastopi
- še dodaten faktor, večji od ena, ki je odvisen of snovi, strukture in ojačanja fotodetektorja. 
+ še dodaten faktor, večji od ena, ki je odvisen of snovi, strukture in ojačenja fotodetektorja. 
  Tipična vrednost je okoli 1,5-2, lahko pa doseže vrednosti tudi nad 10.
 \end{remark}
 

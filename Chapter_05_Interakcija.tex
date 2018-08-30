@@ -11,7 +11,7 @@ svetlobe v stiku s toplotnim zalogovnikom, torej sevanje črnega telesa, ki
 zahteva kvantno obravnavo elektromagnetnega polja. Nato bomo vpeljali fenomenološki
 Einsteinov opis mikroskopskih procesov absorpcije, spontane in stimulirane
 emisije in pokazali, da ti procesi niso neodvisni. Izpeljali bomo
-izraze za absorpcijski koeficient in koeficient ojačanja, na koncu poglavja
+izraze za absorpcijski koeficient in koeficient ojačenja, na koncu poglavja
 pa bomo nakazali še kvantnomehansko izpeljavo verjetnosti za prehod
 atoma iz višjega energijskega stanja v nižje s sevanjem.
 
@@ -719,6 +719,7 @@ N_{2}-N_{1}=\frac{rN}{A_{21}} \, \frac{1}{1+\frac{B_{21}gj}{c A_{21}}} =
 Konstante pospravimo v saturacijsko gostota svetlobnega toka\index{Saturacijska gostota toka} 
 \begin{equation}
 j_s = \frac{c A_{21}}{B_{21}g}.
+\label{eq:jsatg}
 \end{equation}
 \begin{remark}
  Vidimo, da je dobljen izraz za saturacijsko gostoto toka v trinivojskem sistemu zelo 
@@ -741,23 +742,23 @@ pri čemer gostota toka $j = wc$ nastopa tudi v izrazu za razliko zasedenosti (e
 \end{equation}
 oziroma
 \boxeq{eq:djG}{
-dj=\frac{G}{1+\frac{j}{j_{s}}}\, j\, dz,
+dj=\frac{G}{1+j/j_{s}}\, j\, dz,
 }
 ki je spet zelo podobna enačbi za absorpcijo (enačba~\ref{4.36}).
-Z $G$ smo označili t.i. koeficient ojačanja pri majhnih vpadnih gostotah
-toka\index{Koeficient ojačanja}. Podan je z 
+Z $G$ smo označili t.i. koeficient ojačenja pri majhnih vpadnih gostotah
+toka\index{Koeficient ojačenja}. Podan je z 
 \begin{equation}
 G=\frac{N}{V}\frac{r}{A_{21}}\sigma=\frac{rNB_{21}\hbar\omega g}{VcA_{21}},
 \label{4.44}
 \end{equation}
-pri čemer smo koeficient ojačanja izrazili s presekom za stimulirano 
+pri čemer smo koeficient ojačenja izrazili s presekom za stimulirano 
 \index{Presek za stimulirano sevanje}sevanje $\sigma$. 
 Rešitev diferencialne enačbe je prikazana na sliki~(\ref{fig:ojacanje}). 
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/05_joja.pdf_tex}
-\caption{Naraščanje gostote svetlobnega toka pri optičnem ojačanju}
+\caption{Naraščanje gostote svetlobnega toka pri optičnem ojačenju}
 \label{fig:ojacanje}
 \end{figure}
 
@@ -790,13 +791,13 @@ ki deluje pri valovni dolžini 633~nm in ima
 za Nd:YAG\index{Laser!Nd:YAG} pri 1064~nm in širini prehoda 
 $\Delta \omega \sim 900~\si{\giga\hertz}$ pa  $\sigma \sim 10^{-22}~\si{\metre}^2$.
 Zaradi različnih presekov, različnih gostot atomov in različnih načinov črpanja se 
-koeficienti ojačanja v večnivojskih sistemih med seboj precej razlikujejo. Primere 
+koeficienti ojačenja v večnivojskih sistemih med seboj precej razlikujejo. Primere 
 laserjev bomo sicer podrobneje obravnavali v nadaljevanju, zaenkrat povejmo 
-le, da je tipičen koeficient ojačanja v He-Ne laserju z dolžino $L = 0,5~\si{\metre}$
+le, da je tipičen koeficient ojačenja v He-Ne laserju z dolžino $L = 0,5~\si{\metre}$
 enak $GL \sim 1,015$, v Nd:YAG laserju z dolžino ojačevalnega sredstva 
 $L = 10~\si{\centi\metre}$ pa $GL \sim 50$. Pri prvem laserju je sicer velik presek za stimulirano sevanje, vendar 
 je gostota atomov v obrnjeni zasedenosti razmeroma majhna. V drugem primeru pa močno 
-črpanje prevlada nad majhnim presekom in pride do močnega ojačanja.
+črpanje prevlada nad majhnim presekom in pride do močnega ojačenja.
 
 \section{Homogena in nehomogena razširitev spektralne črte}
 \label{Razsiritev}
