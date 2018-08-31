@@ -239,262 +239,224 @@ n\approx p\left(\frac{G}{G_{\rm pr}}-1\right).
 
 Poglejmo rezultat podrobneje. Pod pragom je število fotonov v izbranem
 resonatorskem nihanju okoli ena do neposredne bližine praga, kjer hitro
-naraste in doseže takoj nad pragom red velikosti $p$. Moč črpanja, s
-katero spreminjamo koeficient ojačenja $G$, gre pod pragom preko spontanega
-sevanja skoraj vsa v veliko število stanj elektromagnetnega polja, nad
-pragom pa povsem prevlada stimulirano sevanje v eno samo izbrano nihanje
-resonatorja. Obnašanje števila fotonov $n$ pri spremi\-njanju ojačenja $G$
-kaže slika \ref{s5.3}. Prehod preko praga je zaradi velikega $p$ v večini
-laserjev tako hiter, da ga ni mogoče izmeriti; izjema so polvodniški
-laserji, katerih volumen je zelo majhen, zato je tudi $p$ dovolj majhen, da
-je mogoče opaziti zvezen prehod preko praga.
-
-\begin{figure}[tbp]
-\label{s5.3} \vskip 5cm
-\caption{Odvisnost števila fotonov od ojačenja}
+naraste in doseže takoj nad pragom red velikosti $p$ (slika~\ref{fig:p}). 
+Pod pragom gre praktično vsa moč črpanja, ki jo dovajamo v sistem, 
+preko spontanega sevanja v veliko število stanj elektromagnetnega polja. 
+Nad pragom povsem prevlada stimulirano sevanje v eno samo izbrano nihanje resonatorja. 
+Prehod preko praga je zaradi velikega $p$ tako hiter, da ga ni mogoče izmeriti; 
+izjema so polvodniški laserji, katerih volumen -- in posledično $p$ -- je zelo majhen, 
+da je mogoče opaziti zvezen prehod preko praga.
+\begin{figure}[h]
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/06_p.pdf_tex}
+\caption{Odvisnost števila fotonov v resonatorju od ojačenja za $p=10^5$.}
+\label{fig:p}
 \end{figure}
 
-Iz enačbe \ref{5.8} lahko izračunamo še zasedenost gornjega atomskega
-nivoja v stacionarnem stanju: 
-\begin{equation}  \label{5.15}
-N_2=\frac{2V}{\tau B_{21}\hbar\omega g(\omega)}\frac{n}{n+1}\;\;.
+Iz enačbe (\ref{5.8}) izračunamo še zasedenost zgornjega atomskega
+nivoja v stacionarnem stanju
+\begin{equation}  
+N_2=\frac{2V}{\tau \sigma c}\frac{n}{n+1}.
+\label{5.15}
 \end{equation}
-Na pragu je po enačbi \ref{5.12} $n=\sqrt{p}$. Tako dobimo 
-\begin{equation}  \label{5.16}
-N_{2pr}=\frac{2V}{\tau B_{21}\hbar\omega g(\omega)}\frac{\sqrt{p}}{\sqrt{p}+1%
-}\;\;.
+Na pragu je po enačbi (\ref{5.12}) $n=\sqrt{p}$. 
+Sledi 
+\begin{equation}  
+N_{\rm 2pr}=\frac{2V}{\tau \sigma c}\frac{\sqrt{p}}{\sqrt{p}+1}.
+\label{5.16}
 \end{equation}
-Ker je tudi $\sqrt{p}$ veliko število, sledi iz gornjih enačb, da obrnjena
-zasedenost narašča do bližine praga, nad pragom pa je praktično
+Ker je tudi $\sqrt{p}$ veliko število, iz gornjih enačb sledi, da 
+obrnjena zasedenost narašča do bližine praga, nad pragom pa je praktično
 konstantna in skoraj natanko enaka kot na pragu. To ni težko razumeti. Nad
-pragom je število fotonov v resonatorju veliko in linearno (v našem
-preprostem modelu) narašča s povečevanjem moči črpanja, zato se
-povečuje tudi hitrost praznenja gornjega atomskega stanja s stimuliranim
-sevanjem, kar ravno izniči učinek povečanja črpanja. V stacionarno
-delujočem laserju torej ni mogoče povečati obrnjene zasedenosti nad
-vrednost na pragu $N_{2pr}$, kar ima pomembne praktične posledice, kot bomo
-videli nekoliko kasneje.
+pragom je število fotonov v resonatorju veliko in linearno narašča 
+z močjo črpanja. S tem se povečuje hitrost praznjenja gornjega atomskega 
+stanja s stimuliranim sevanjem, kar ravno izniči učinek povečanja črpanja. 
+V stacionarno delujočem laserju torej ni mogoče povečati obrnjene zasedenosti 
+nad vrednost na pragu $N_{\rm 2pr}$, kar ima pomembne praktične posledice, kot bomo
+videli v nadaljevanju.
 
-V laserju nad pragom je število fotonov zelo veliko, zato prispevka
-spontanega sevanja v enačbi \ref{5.8} v nadaljevanju ne bomo upoštevali.
-
+\begin{remark}
 Obravnava laserja z zasedbenimi enačbami je seveda zelo groba. Nismo
-upoštevali, da je svetloba v resonatorju valovanje, ki uboga valo\-vno
-enačbo. S tem smo privzeli, da je prostorska odvisnost polja v delujočem
-laserju enaka kot za lastno stanje praznega resonatorja. Poleg tega smo
+upoštevali, da je prostorska odvisnost polja v delujočem laserju 
+drugačna od lastnega stanja praznega resonatorja. Poleg tega smo
 privzeli, da so atomi lahko le v lastnih energijskih stanjih, kar je res le
 v primeru stacionarnih stanj brez zunanjega, časovno odvisnega polja
-svetlobe. "Ce za opis svetlobe uporabimo klasično valovno enačbo, za atome
-pa kvantno mehaniko, dobimo {\it polklasični približek} vedenja laserja,
-ki je mnogo zahtevnejši od zasedbenih enačb, opiše pa skoraj vse pojave v
-laserjih, razen vpliva spontanega sevanja. Za dosledno in podrobno obravnavo
-tega pa je potrebno tudi svetlobo opisati s pomočjo kvantne elektrodinamike.
+svetlobe. Bolj podroben pristop je semiklasični model, pri katerem 
+za opis svetlobe uporabimo klasično valovno enačbo, za atome
+pa kvantno mehaniko (glej poglavje~\ref{chap:semiklasicni}). Ta model
+zadošča za opis skoraj vseh pojavov v laserjih razen vpliva spontanega sevanja. 
+Za dosledno obravnavo tega je treba svetlobo opisati s pomočjo 
+kvantne elektrodinamike, kar presega okvir te knjige.
+\end{remark}
 
-Povzemimo, kaj smo z modelom zasedbenih enačb ugotovili o delovanju
-enofrekvenčnega laserja. Pri dovolj velikem ojačenju s stimuliranim
-sevanjem, ki pokriva izgube resonatorja, je v stacionarnem stanju energija
-in s tem amplituda izbranega lastnega nihanja resonatorja različna od nič.
-Del valovanja izhaja skozi eno ali obe zrcali. Frekvenca svetlobe je
-določena z izbranim lastnim stanjem resonatorja. To določa tudi prostorsko
-odvisnost valovanja v resonatorju in izhodnega snopa. Ugotovili smo, da ima
-v običajnem stabilnem resonatorju polje obliko zelo blizu Gaussovega snopa,
-zato je tak tudi izhodni snop.
-
-Lepa prostorska odvisnost izhodnega snopa je morda najpomembnejša lastnost
+Povzemimo na kratko, kaj smo ugotovili o delovanju enofrekvenčnega laserja. 
+Pri dovolj velikem ojačenju s stimuliranim sevanjem, ki pokriva izgube 
+resonatorja, je v stacionarnem stanju energija in s tem amplituda 
+izbranega lastnega nihanja resonatorja različna od nič. Frekvenca svetlobe je
+določena z izbranim lastnim stanjem resonatorja, ki določa tudi prostorsko
+odvisnost valovanja v resonatorju in izhodnega snopa. V navadnem stabilnem 
+resonatorju ima polje obliko zelo blizu Gaussovega snopa, zato je tak tudi izhodni snop.
+Gaussova prostorska odvisnost izhodnega snopa je morda najpomembnejša lastnost
 laserjev. Gaussov snop se najmanj širi zaradi uklona in ga je mogoče
-zbrati v piko približne velikosti valovne dolžine. S tem se tudi najbolj
-približa idealno točkastemu izvoru svetlobe. Te lastnosti so zelo pomembne
-za uporabo; na njih so osnovani optični komunikacijski sistemi, čitanje
-optičnih diskov, laserski obdelovalni stroji...
+zbrati v piko približne velikosti valovne dolžine in se tako najbolj
+približa idealno točkastemu izvoru svetlobe.
 
 \section{Spektralna širina enega laserskega nihanja}
 
-Spektralni širini svetlobe enofrekvenčnega laserja je treba posvetiti
-nekaj več pozornosti. Videli smo, da je amplituda svetlobe laserja
-konstantna. Spektralna širina klasičnega harmonskega nihala s stalno
-amplitudo je nič, frekvenca nihanja je natanko določena. "Ce bi se lastno
-stanje elektromagnetnega polja v resonatorju obnašalo povsem enako kot
-klasično harmonsko nihalo, bi bil tudi spekter laserja neskončno ozek.
-Laserji imajo seveda končno spektralno širino, v idealnem primeru zaradi
+Poglejmo, kaj lahko povemo o spektralni 
+širini svetlobe enofrekvenčnega laserja. Če bi se lastno stanje 
+elektromagnetnega polja v resonatorju obnašalo kot klasično 
+harmonsko nihalo, bi bil spekter laserja neskončno ozek. Vendar 
+imajo laserji končno spektralno širino -- v idealnem primeru zaradi
 kvantizacije elektromagnetnega polja, v praksi pa zaradi zunanjih motenj.
-
 Poskusimo najprej oceniti razširitev zaradi vpliva kvantizacije. Zaradi nje
-imamo poleg stimuliranega tudi spontano sevanje. To je kvantni šum, ki
-povzroči majhno razširitev spektra. Stroga obravnava tega pojava je
-mogoča le z dosledno uporabo kvantne elektrodinamike, kar seže izven
-okvira te knjige, zato se zadovoljimo le z grobo oceno.
+imamo poleg stimuliranega vedno prisotno tudi spontano sevanje. To 
+predstavlja kvantni šum, ki povzroči razširitev spektra. 
 
-\begin{figure}[tbp]
-\label{s5.4} \vskip 5cm
-\caption{Amplituda polja v resonatorju in prispevek spontanega sevanja.}
+Predstavimo amplitudo nihanja $E(t)$ na izbranem mestu v resonatorju kot kompleksno 
+število, ki ga v kompleksni ravnini določata dolžina in faza (slika~\ref{fig:fazor}). 
+Pri tem fazo določimo glede na neko začetno izbrano fazo. 
+Ker je energija svetlobe sorazmerna s številom fotonov, je dolžina 
+kar sorazmerna s korenom iz števila fotonov v nihanju. Dolžina se praktično
+ohranja, saj jo vzdržuje stimulirano sevanje, ki ravno pokriva
+izgube resonatorja. Pri tem ostaja nespremenjena tudi faza. Vendar se
+faza spreminja zaradi majhnega prispevka spontanega sevanja.
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/06_fazor.pdf_tex}
+\caption{Amplituda polja v resonatorju in njena sprememba zaradi 
+spontanega sevanja}
+\label{fig:fazor}
 \end{figure}
 
-Amplitudo svetlobe na izbranem mestu v resonatorju predstavimo kot število
-v kompleksni ravnini (Slika \ref{s5.4}). Kot, ki ga amplituda tvori z realno
-osjo, je faza glede na neko izbrano začetno fazo. Energija svetlobe je
-sorazmerna s številom fotonov; velikost amplitude polja zato lahko merimo
-kar s korenom iz števila fotonov v nihanju. Velikost amplitude je
-praktično konstantna, vzdržuje jo stimulirano sevanje, ki ravno pokriva
-izgube resonatorja. Pri tem ostaja  tudi faza nespremenjena. Pač pa se
-faza spremeni zaradi majhnega prispevka spontanega sevanja.
-
-Pri spontani emisiji se foton izseva s poljubno fazo; prispevek k kompleksni
-amplitudi na sliki \ref{s5.4} ima torej dolžino 1 in poljubno smer. Zanima
-nas povprečni kvadrat spremembe faznega kota pri enem spontano izsevanem
-fotonu: 
+Pri spontani emisiji se izseva en foton s poljubno fazo. Prispevek h kompleksni
+amplitudi ima torej dolžino 1 in poljubno smer (slika~\ref{fig:fazor}). Zanima
+nas povprečni kvadrat spremembe faznega kota pri enem spontano izsevanem fotonu
 \begin{equation}
-\overline{\delta \phi _{1}^{2}}=\frac{1}{\overline{n}}\,\overline{\cos
-^{2}\psi }=\frac{1}{2\overline{n}}\;\;,  \label{5.17}
+\overline{\Delta \varphi_{1}^{2}}=\overline{\left(\frac{\cos\psi}{\sqrt{n} }\right)^2}
+=\frac{1}{2\overline{n}},
+\label{5.17}
 \end{equation}
-kjer smo s $\psi $ označili slučajno fazno razliko med celotnim poljem
-in spontano izsevanim fotonom, indeks 1 pa označuje, da gre za spremembo
-za 1 foton. Zaporedne spontane emisije so med seboj neodvisne, zato dobimo
-povprečni kvadrat spremembe faze pri $m$ emisijah kar tako, da seštejemo
-povprečne kvadrate za posamezne fotone: 
+Zaporedne spontane emisije so med seboj neodvisne, zato izračunamo
+povprečni kvadrat spremembe faze pri $N$ emisijah kar tako, da seštejemo
+povprečne kvadrate za posamezne fotone 
 \begin{equation}
-\ \overline{\delta \phi _{m}^{2}}=m\overline{\delta \phi _{1}^{2}}=\frac{m}{2%
-\overline{n}}\;\;.  \label{5.18}
+\overline{\Delta \varphi_{m}^{2}}=m\overline{\Delta \varphi_{1}^{2}}=
+\frac{m}{2\overline{n}}.
+\label{5.18}
 \end{equation}
 
-Prešteti moramo še, koliko je spontano izsevanih fotonov na enoto
-časa. Stimulirano sevanje ravno pokrije izgube resonatorja, zato je
-stimulirano izsevnih fotonov na enoto časa $2\overline{n/}\tau $. Iz
-razdelka 4.8, enačba \ref{4.56} vemo, da je razmerje med verjetnostjo za
-stimulirano in spontano sevanje enako številu fotonov v danem stanju
-polja, zato je število spontanih sevanj na časovno enoto kar $2/\tau $.
-Tako imamo v poljubnem času $m=2t/\tau $ in 
+Ocenimo še število spontano izsevanih fotonov na časovno enoto.
+Vemo, da stimulirano sevanje ravno pokrije izgube resonatorja, zato je
+stimulirano izsevanih fotonov na časovno enoto $2\overline{n}/\tau $. Vemo tudi, 
+da je razmerje med verjetnostjo za stimulirano in spontano sevanje enako 
+številu fotonov v danem stanju polja (enačba~\ref{4.56}), zato je število 
+spontanih sevanj na časovno enoto kar $2/\tau $.
+Tako je število spontano izsevanih fotonov v času $t$ enako $m=2t/\tau $ in 
 \begin{equation}
-\overline{\delta \phi ^{2}(t)}=\frac{t}{\overline{n}\tau }\;\;.  \label{5.19}
+\overline{\Delta \varphi^{2}(t)}=\frac{t}{\overline{n}\tau }.
+\label{5.19}
 \end{equation}
-"Cas $t_{p}$, v katerem se bo faza znatno spremenila, recimo za 1, je torej
+Čas $t_{p}$, v katerem se faza znatno spremeni, je torej
 velikostnega reda 
 \begin{equation}
-t_{p}\simeq 2\overline{n}\tau =\frac{W}{\hbar \omega }\,\tau =\frac{P}{\hbar
-\omega }\tau ^{2}\;\;.  \label{5.20}
+t_{p}\sim \overline{n}\tau =\frac{W}{\hbar \omega }\,\tau =\frac{P}{\hbar
+\omega }\tau ^{2}.
+\label{5.20}
 \end{equation}
-To lezenje faze nam seveda da spektralno širino $1/t_{p}$.
+Ker je število fotonov v nihanju nad pragom zelo veliko ($10^9$ v majhnem 
+He-Ne laserju), $\tau$ pa je reda velikosti $10^{-7}$, je karakteristični
+čas za fazno razširitev idealnega laserja $t_p \sim 100~\si{s}$. 
+Iz enačbe (\ref{5.20}) vidimo tudi, da je spektralna širina, ki je
+podana z $1/t_{p}$, obratno sorazmerna z izhodno močjo laserja. 
+V neposredni bližini praga, kjer je $\overline{n}\sim 1$, pa je 
+spektralna širina približno enaka širini nihanj praznega resonatorja.
 
-"Stevilo fotonov v laserskem nihanju je nad pragom zelo veliko, recimo $10^9$
-v majhnem He-Ne laserju. $\tau$ je reda velikosti $10^{-7}$, tako da je
-karakteristični čas - koherenčni čas - idealnega laserja mnogo sekund.
-Iz enačbe \ref{5.20} vidimo še, da je spektralna širina obratno
-sorazmerna z izhodno močjo laserja. V neposredni bližini praga, kjer je $%
-\overline{n}\simeq 1$, je spektralna širina približno enaka širini nihanj
-praznega resonatorja.
-
-Dejanski laserji seveda nimajo niti približno tako ozkega spektra, kot smo
-pravkar ocenili. Frekvenca laserja je določena z dolžino resonatorja: $%
-\omega=n\pi c/L$, pri čemer je $n$ zelo veliko celo število. Majhna
-sprememba dolžine resonatorja povzroči tudi spremembo frekvence laserja,
-pri znatnejši spremembi dolžine pa lahko pride tudi do preskoka vzbujenega
-stanja resonatorja, to je števila $n$. Dolžina resonatorja se lahko
+Dejanski laserji seveda nimajo niti približno tako ozkega spektra, kot smo ga
+pravkar ocenili. Vemo, da je frekvenca laserja določena z dolžino resonatorja 
+($\omega=n\pi c/L$), pri čemer je $n$ zelo veliko celo število. Že majhna
+sprememba dolžine resonatorja povzroči spremembo frekvence laserja, pri 
+znatnejši spremembi dolžine pa lahko pride tudi do preskoka vzbujenega
+stanja resonatorja, to je števila $n$. Dolžina resonatorja se 
 spreminja predvsem zaradi zunanjih mehanskih motenj in zaradi spreminjanja
-temperature. Zato se spreminja tudi frekvenca laserja in če se posebej ne
-potrudimo s konstrukcijo resonatorja, so te fluktuacije frekvence kar reda
-velikosti razmika med sosednimi stanji resonatorja, to je reda velikosti 100
-MHz.
+temperature. Če se posebej ne potrudimo s konstrukcijo resonatorja, so 
+fluktuacije frekvence kar reda velikosti razmika med sosednimi stanji 
+resonatorja, to je reda velikosti $\sim 100~\si{MHz}$. 
+Fluktuacije dolžine je mogoče zmanjšati s skrbno konstrukcijo, 
+temperaturno stabilizacijo in uporabo materialov z majhnim toplotnim raztezkom. 
+Na tak način je mogoče dobiti laser z efektivno spektralno širino pod $\sim 1\si{MHz}$.
 
-Tu velja opozoriti, da je narava spektralne razširitve v laserju tako v
-idealnem kot v praktičnem primeru drugačna kot v navadnih svetilih. V
-prvem poglavju smo videli, da intenziteta svetlobe navadnega svetila
-fluktuira na časovni skali koherenčnega časa, ki je obraten spektralni
-širini. Po elektrotehniško lahko rečemo, da je taka svetloba amplitudno
-moduliran šum. Pri enofrekvenčnem laserju je drugače. Amplituda in s tem
-intenziteta izhodne svetlobe je konstantna, fluktuira le frekvenca oziroma
-faza. "Sum laserja je torej v obliki frekvenčne modulacije.
+Tu velja opozoriti, da je narava spektralne razširitve v laserju 
+drugačna kot v navadnih svetilih. V drugem poglavju smo videli, da 
+intenziteta svetlobe navadnega svetila fluktuira na časovni skali 
+koherenčnega časa, ki je obraten spektralni širini (poglavje~\ref{chap:kns}). 
+Šum navadnih svetil je torej amplitudno moduliran šum. Pri 
+enofrekvenčnem laserju je drugače. Amplituda in s tem intenziteta 
+izhodne svetlobe je konstantna, fluktuira le frekvenca oziroma
+faza. Šum laserja je torej v obliki frekvenčne modulacije.
 
-Fluktuacije dolžine in s tem frekvence laserja je mogoče zmanjšati. S
-skrbno konstrukcijo in uporabo materialov z majhnim toplotnim raztezkom se
-zmanjša vpliv vibracij in temperaturnih sprememb v okolici. Poleg tega
-lahko okolico temperaturno stabiliziramo in laser postavimo na vibracijsko
-izolirano mizo. Na tak način je mogoče dobiti laser z efektivno spektralno
-širino pod 1 MHz.
+\begin{remark}
+Omenili smo, da lahko s posebno konstrukcijo laserjev dosežemo
+spektralno širino pod $\sim 1\si{MHz}$. Vendar najmanjša dosežena spektralna širina
+znaša $\sim 10\si{mHz}$, kar je še 8 velikostnih redov manj! Gre za prav poseben 
+laser, ki je kar se da izoliran od okolice. Njegov resonator je zgrajen iz 
+monokristalov silicija, hlajenega na $-150~\si{\celsius}$. Fluktuacije
+dolžine resonatorja so tako pogojene s termičnimi fluktuacijami 
+v odbojnih plasteh, ki znašajo okoli $10^{-17}\si{\metre}$. 
+Koherenčna dolžina takega laserja je več
+milijonov kilometrov\footnote{Phys. Rev. Lett. {\bf 118}, 263202 (2017).}. 
+\end{remark}
 
-"Se ožjo lasersko črto lahko dobimo z aktivno stabilizacijo dolžine
-resonatorja. Ideja je taka: frekvenco svetlobe, ki izhaja iz laserja,
-primerjamo z nekim standardom in iz razlike ugotovimo spremembo dolžine
-resonatorja. Eno od obeh zrcal je nameščeno na piezoelektričnem nosilcu,
-ki mu z električno napetostjo lahko spreminjamo dolžino in tako popravimo
-dolžino resonatorja.
+\section{Primerjava laserjev in navadnih svetil}
+Primerjajmo enofrekvenčni laser, v katerem je vzbujeno le eno osnovno
+stanje resonatorja Gaussove oblike z navadnimi nekoherentnimi svetili. 
 
-Pogalvitna težava je seveda, kako najti dovolj stabilen primerjalni
-standard za frekvenco. Ena možnost je, da izhodno svetlobo spustimo skozi
-konfokalni interferometer, ki je skoraj v resonanci z laserjem in ima dovolj
-ozek vrh prepustnosti. Majhen premik frekvence laserja bo povzročil, da se
-bo spremenil skozi interferometer prepuščeni svetlobni tok. Na prvi pogled
-je videti, da s tem nismo nič pridobili, saj bo resonančna frekvenca
-interferometra stabilna tudi le toliko, kot je stabilna njegova dolžina.
-Vendar je z izolacijo in temperaturno stabilizacijo možno držati dolžino
-praznega resonatorja - interferometra - mnogo natančneje kot dolžino
-laserja, v katerem imamo aktivno sredstvo, ki mu moramo dovajati energijo.
-
-Druga možnost je stabilizirati laser na primerno molekularno absorpcijsko
-črto. Te so lahko zelo ozke, zato je tudi spekter laserja lahko izredno
-ozek, pod 1 kHz. Pri tem moti Dopplerjeva raziširitev absorpcijske črte,
-ki pa se ji je mogoče izogniti. Kako to napravimo in kako je bila s tem
-omogočena nova definicija metra, si bomo pogledali v razdelku ????.
-
-\section{Primerjava laserjev in običajnih svetil}
-
-"Cas je, da povzamemo, kar smo doslej dognali o lastnostih laserjev in jih
-primerjamo z običajnimi svetili. Kot ves čas doslej obravnavajmo
-enofrekvenčni laser, v katerem je vzbujeno le eno osnovno stanje
-resonatorja, ki je Gaussove oblike.
-
-Svetlobni snop, ki izhaja iz laserja, ima dve takoj očitni odliki. Je zelo
-usmerjen in zelo enobarven. Prva lastnost je seveda posledica tega, da je
+Svetlobni snop iz laserja, ima dve takoj očitni odliki. Je zelo
+usmerjen in zelo enobarven. Prva lastnost je posledica tega, da je
 lastno stanje stabilnega resonatorja Gaussove oblike in je zato tak tudi
-izhodni snop. Kot smo videli v 3. poglavju, je divergenca takega snopa samo
-posledica uklona in je najmanjša možna. Valovne fronte so gladke in na
-dani razdalji ves čas enake, laserski snop je torej prostorsko idealno
-koherenten. Je tudi najboljši približek točkastega svetila, kar je v
-neposredni zvezi s prostorsko koherenco.
-
+izhodni snop. Divergenca takega snopa je posledica uklona in je 
+najmanjša možna. Valovne fronte so gladke in na dani razdalji ves 
+čas enake, zato je laserski snop prostorsko idealno koherenten. 
 Koherenten Gaussov snop lahko z ustrezno optiko zberemo v piko velikosti
-valovne dolžine, s čimer dosežemo že pri skromni moči zelo veliko
-gostoto svetobnega toka. To izkoriščajo v tehnologiji za natančno in
-čisto obdelavo materialov in v medicini, kjer laserje uporabljajo za
+valovne dolžine, s čimer dosežemo že pri majhni izhodni moči zelo veliko
+gostoto svetobnega toka. To je zelo uporabno v tehnologiji za natančno in
+čisto obdelavo materialov ter v medicini, kjer laserje uporabljajo za
 zahtevne kirurške posege.
 
-Kako pa je z običajnimi svetili? V njih vsak atom sveti po svoje, zato
-nimamo prostorske koherence. Valovna fronta na danem mestu je nepravilna in
-se v koherenčnem času znatno spremeni. Svetlost površine svetila je
-neodvisna od smeri (Lambertov zakon). Osvetljenost slike, ki jo dobimo s
-poljubnim optičnim sistemom, ne more biti večja od izsevane gostote
-svetlobnega toka.
+Kako pa je z navadnimi svetili? V njih vsak atom sveti neodvisno, zato
+izsevana svetloba ni prostorsko koherentna. Valovna fronta na danem 
+mestu je nepravilna in se v koherenčnem času znatno spremeni. 
+Vendar tudi iz svetlobe navadnega nekoherentnega svetila lahko pripravimo
+koherenten snop, če na dano razdaljo od svetila postavimo zaslonko, ki
+je manjša od koherenčne ploskve na tistem mestu (glej 
+razdelek~\ref{Prostorska-koherenca}). Ocenimo moč snopa za zaslonko. 
 
-\begin{figure}[tbp]
-\label{s5.5} \vskip 5cm
-\caption{Zaslonke za pripravo prostorsko koherentnega snopa iz
-nekoherentnega svetila}
-\end{figure}
-
-Tudi iz svetlobe običajnega nekoherentnega svetila lahko pripravimo
-koherenten snop. Na neki razdalji od svetila moramo postaviti zaslonko, ki
-je manjša od koherenčne ploskve na tistem mestu (glej razdelek 1.3).
-Ocenimo, kolikšna je moč snopa za zaslonko. Svetilo naj ima svetlost%
-\footnote{%
-Svetlost je svetilnost na enoto ploskve} $B$. Pri najsvetlejših
-nekoherentnih izvorih, to so živosrebrne svetilke, doseže $B$ vrednost
-do 100 W/cm$^{2}$. Moč snopa za zaslonko je (slika \ref{s5.5}) 
+Svetilo naj ima svetlost $B$\footnote{Svetilnost je moč, izsevana v dan 
+prostoski kot $I = dP/d\Omega$; svetlost pa je svetilnost na enoto ploskve
+$B=I/S = dP/Sd\Omega$.}. Pri najsvetlejših nekoherentnih izvorih, 
+to so živosrebrne svetilke, doseže $B$ vrednost do $100~\si{W/cm^{2}}$. 
+Moč snopa za zaslonko, ki prepušča svetlobo skozi prostorski kot $\Delta\Omega$, 
+je
 \begin{equation}
-P=BS_{0}\Delta \Omega =\frac{BS_{0}S_{c}}{z^{2}}\simeq \frac{BS_{0}}{z^{2}}\,%
-\frac{\lambda ^{2}z^{2}}{S_{0}}=B\lambda ^{2}\;\;.  \label{5.21}
+P=BS_{0}\Delta \Omega =\frac{BS_{0}S_{c}}{z^{2}}\sim \frac{BS_{0}}{z^{2}}\,
+\frac{\lambda ^{2}z^{2}}{S_{0}}=B\lambda ^{2}.
+\label{5.21}
 \end{equation}
-Tu je $S_{0}$ površina svetila, $z$ oddlajenost zaslonke, $S_{c}$ pa
-velikost koherenčne ploskve, za katero smo uporabili oceno \ref{1.8} iz
-prvega poglavja. Pri svetlosti 100 W/cm$^{2}$ dobimo, da je moč
-koherentnega snopa le približno $3\cdot 10^{-7}$ W, kar je štiri rede
-velikost manj od prav šibkih laserjev z močjo 1 mW.
+Pri tem je $S_{0}$ površina svetila, $z$ oddaljenost od zaslonke, 
+$S_{c}$ pa velikost koherenčne ploskve, za katero smo uporabili oceno 
+(enačba~\ref{eq:koherencna-ploskev}). Pri svetlosti $100~\si{W/cm^{2}}$ 
+znaša moč, ki preide skozi zaslonko, le približno $3\cdot10^{-7}~\si{W}$.
+Pri enaki divergenci žarka je torej močno navadno svetlilo štiri rede
+velikosti šibkejše od zelo šibkih laserjev z močjo $1~\si{mW}$. 
 
 Druga odlična lastnost svetlobe iz enofrekvenčnega laserja je zelo majhna
-spektralna širina. Z nekaj truda je ta lahko pod 1 kHz, emisijske črte v
-plinu pa so zaradi Dopplerjeve razširitve široke vsaj nekaj GHz, pa še to
-le v razmeroma redkem in hladnem plinu, kjer je svetlost majhna.
-
-Različne širine spektrov običajne svetilke in laserja lahko
-upoštevamo tako, da kot primerjalno količino vzamemo namesto celotne
-moči v koherentnem snopu spektralno gostoto moči. Majhen šolski He-Ne
+spektralna širina. Z nekaj truda je ta lahko pod $1~\si{kHz}$, emisijske 
+črte v plinu pa so zaradi Dopplerjeve razširitve široke vsaj nekaj $\si{GHz}$, 
+pa še to le v razmeroma redkem in hladnem plinu, kjer je svetlost majhna.
+Primerjajmo spektralno gostoto moči laserja in navadnih svetil. Majhen šolski He-Ne
 laser seva 1 mW v približno $10^{7}$ Hz, tako da je spektralna gostota
 moči $dP/d\nu \simeq 10^{-10}$ W/Hz. Zelo svetla živosrebrna svetilka
 seva v močno razširjene spektralne črte s širino okoli 10 nm $\simeq
@@ -949,6 +911,32 @@ polvodnikih in mnogih drugih snoveh. Z njimi se je časovna ločljivost
 povečala za nekaj redov velikosti \cite{pikosekunde}.
 
 \section{*Stabilizacija frekvence laserja na na\-sičeno absorpcijo}
+\label{chap:stabilizacija}
+
+"Se ožjo lasersko črto lahko dobimo z aktivno stabilizacijo dolžine
+resonatorja. Ideja je taka: frekvenco svetlobe, ki izhaja iz laserja,
+primerjamo z nekim standardom in iz razlike ugotovimo spremembo dolžine
+resonatorja. Eno od obeh zrcal je nameščeno na piezoelektričnem nosilcu,
+ki mu z električno napetostjo lahko spreminjamo dolžino in tako popravimo
+dolžino resonatorja.
+
+Pogalvitna težava je seveda, kako najti dovolj stabilen primerjalni
+standard za frekvenco. Ena možnost je, da izhodno svetlobo spustimo skozi
+konfokalni interferometer, ki je skoraj v resonanci z laserjem in ima dovolj
+ozek vrh prepustnosti. Majhen premik frekvence laserja bo povzročil, da se
+bo spremenil skozi interferometer prepuščeni svetlobni tok. Na prvi pogled
+je videti, da s tem nismo nič pridobili, saj bo resonančna frekvenca
+interferometra stabilna tudi le toliko, kot je stabilna njegova dolžina.
+Vendar je z izolacijo in temperaturno stabilizacijo možno držati dolžino
+praznega resonatorja - interferometra - mnogo natančneje kot dolžino
+laserja, v katerem imamo aktivno sredstvo, ki mu moramo dovajati energijo.
+
+Druga možnost je stabilizirati laser na primerno molekularno absorpcijsko
+črto. Te so lahko zelo ozke, zato je tudi spekter laserja lahko izredno
+ozek, pod 1 kHz. Pri tem moti Dopplerjeva raziširitev absorpcijske črte,
+ki pa se ji je mogoče izogniti. Kako to napravimo in kako je bila s tem
+omogočena nova definicija metra, si bomo pogledali v razdelku ????.
+
 
 V drugem razdelku smo videli, da je efektivna spektralna širina
 eno\-frekvenčnega laserja odvisna od fluktuacij dolžine optične poti
@@ -1128,7 +1116,7 @@ standard za dolžino. Laser je pravzaprav pri tem le pomožna naprava;
 standard je ustrezni molekularni prehod.
 
 \section{*Semiklasični model laserja}
-
+\label{chap:semiklasicni}
 Doslej smo laserje obravnavali le z modelom zasedbenih enačb. Ta je zelo
 grob, saj smo zanemarili nekaj pomembnih pojavov. Svetlobo v resonatorju smo
 opisali smo opisali le s celotno energijo ali številom fotonov in se za
