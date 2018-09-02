@@ -528,11 +528,11 @@ da laser deluje pri eni sami izbrani frekvenci.}
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/06_FPmodes.pdf_tex}
-\caption{Frekvenčna odvisnost ojačenja (rdeča črta) z označenim pragom ojačenja (modra črta) 
-ter lastne frekvence resonatorja (črne črte) (a). Z rdečo so označene tiste lastne frekvence, ki se 
-v laserju ojačujejo. Ko dodamo Fabry-Perotov interferometer s dano prepustnostjo (b), povečamo
-izgube za vse načine, ki so sicer ojačani, razen za enega. Tako dosežemo delovanje laserja
-pri eni sami frekvenci (c).}
+\caption{Lastne frekvence resonatorja (a) in frekvenčna odvisnost ojačenja z označenim 
+pragom ojačenja (b). Z rdečo so označene tiste lastne frekvence, ki se v laserju ojačujejo. 
+Ko dodamo Fabry-Perotov interferometer s dano prepustnostjo (c), povečamo
+izgube za vse načine, ki bi sicer bili ojačani, razen za enega. 
+Tako dosežemo delovanje laserja pri eni sami frekvenci (d).}
 \label{fig:FPmodes}
 \end{figure}
 
@@ -543,133 +543,142 @@ bila os interferometra vzporedna z osjo resonatorja, bi se pojavile dodatne reso
 kar bi močno motilo delovanje laserja.
 \end{remark}
 
-naloga?
-
-
 \section{Relaksacijske oscilacije}
+Stacionarno delovanje laserjev smo že dodobra spoznali. Za obravnavo
+nestacionarnega delovanja pa moramo reševati sistem diferencialnih enačb 
+(\ref{5.7}) in (\ref{5.8}), kar gre v splošnem le numerično.
 
-Doslej smo obravnavali le stacionarno delovanje laserjev. Včasih želimo
-izhodno moč modulirati s spreminjanjem črpanja. Pogosto laserji delujejo v
-sunkih. V nekaterih aktivnih sredstvih je mogoče doseči obrnjeno
-zasedenost le za kratek čas, črpanje v sunkih je včasih enostavnješe,
-recimo z bliskavko pri trdnih laserjih, dostikrat pa tudi želimo dobiti iz
-laserja kratke in močne koherentne sunke svetlobe. Za obravnavo
-nestacionarnega delovanja moramo seveda reševati sistem diferencialnih
-enačb \ref{5.7} in \ref{5.8}, kar gre v splošnem le numerično.
-
-Preden se lotimo sunkov, poglejmo, kako se obnaša laser, ki je blizu
-stacionarnega stanja. Spet se omejimo na enofrekvenčni laser, ki ga
-opišemo z enačbami \ref{5.7} in \ref{5.8}. Te zaradi preglednosti
-zapišimo nekoliko drugače. Vpeljimo brezdimnezijski čas $t^{\prime}=t A$
-in $\tau^{\prime}=\tau A$, čas torej merimo v enotah življenskega časa
-laserskega nivoja. Upoštevajmo še, da je $VA/(B\hbar\omega g(\omega_0))=p$%
-, kjer je $p$ število stanj elektromagnetnega polja v volumnu $V$ in
-znotraj spektralne širine laserskega nivoja. Tako imamo 
-\begin{eqnarray}  \label{5.23}
-\frac{d N_2}{d t^{\prime}}&=&-\frac{1}{p}\,nN_2-N_2+N_{20} \\
-\frac{d n}{d t^{\prime}}& = & \frac{1}{p}\,nN_2-\frac{2}{\tau^{\prime}}n
-\;\;.
+Za začetek si oglejmo, kako se obnaša laser v bližini stacionarnega stanja. 
+Spet se omejimo na enofrekvenčni laser, ki ga opišemo z enačbama (\ref{5.7})
+in (\ref{5.8}). Te zaradi preglednosti zapišimo nekoliko drugače. Najprej vpeljimo 
+brezdimnezijski čas $t^{\prime}=t A$ in $\tau^{\prime}=\tau A$, kar pomeni, da merimo 
+čas v enotah življenskega časa laserskega nivoja. Uporabimo spet parameter
+$p=VA/(B\hbar\omega g)$ (enačba~\ref{5.10}), ki pomeni število stanj 
+elektromagnetnega polja v volumnu $V$ in znotraj spektralne širine laserskega nivoja. 
+Enačbi potem zapišemo 
+\begin{eqnarray}  
+\frac{d N_2}{d t^{\prime}}&=&-\frac{nN_2}{p}-N_2+N_{20} \label{5.23a} \\
+\frac{d n}{d t^{\prime}}& = & \frac{nN_2}{p}-\frac{2}{\tau^{\prime}}n.
+\label{5.23}
 \end{eqnarray}
-Pri tem smo vpeljali konstanto $N_{20}= rN/A$, ki ima tudi nazornen pomen:
-je zasedenost, ki bi jo dobili pri danem stacionarnem črpanju, če v
-izbranem stanju ne bi bilo fotonov in s tem ne stimuliranega sevanja in
-torej meri moč črpanja. V enačbi za hitrost spreminjanja števila fotonov
+Pri tem smo vpeljali konstanto $N_{20}= rN/A$, ki ima tudi nazornen pomen.
+Predstavlja zasedenost, ki bi jo dobili pri danem stacionarnem črpanju, če v
+izbranem stanju ne bi bilo fotonov in s tem ne stimuliranega sevanja. Meri torej 
+moč črpanja. V enačbi za hitrost spreminjanja števila fotonov
 smo zanemarili prispevek spontanega sevanja, za katerega smo že ugotovili,
 da se pozna le do praga.
 
-Pri nelinearnih diferencialnih enačbah lahko pogosto dobimo upora\-bne
-približke z linearizacijo. Naj laser najprej deluje stacionarno, v nekem
-trenutku pa ga nekoliko izmaknemo iz stacionarnega stanja, recimo tako, da
+Pri reševanju nelinearnih diferencialnih enačb pogosto poiščemo približke rešitev
+z linearizacijo. Naj laser najprej deluje stacionarno, v nekem trenutku pa se 
+nekoliko izmakne iz stacionarnega stanja. To se lahko zgodi, na primer, če
 spremenimo moč črpanja. Trenutno zasedenost $N_2$ in število fotonov $n$
 lahko zapišemo v obliki 
-\begin{equation}  \label{5.24}
-N_2= N_{2s}+x \mbox{\hskip 1cm in \hskip 1cm} n=n_s+y\;\;,
+\begin{equation}  
+N_2= N_{2s}+x \qquad {\mathrm in} \qquad n=n_s+y,
+\label{5.24}
 \end{equation}
-kjer sta $N_{2s}$ in $n_s$ vrednosti $N_2$ in $n_s$ v stacionarnem stanju.
-Zanju velja 
-\begin{equation}  \label{5.25}
+kjer sta $N_{2s}$ in $n_s$ vrednosti v stacionarnem stanju. Zanju velja 
+\begin{equation}  
 N_{2s}=\frac{2p}{\tau^{\prime}}
+\label{5.25}
 \end{equation}
 in 
-\begin{equation}  \label{5.26}
-n_s=p\frac{N_{20}-N_{2s}}{N_{2s}}=p(a-1)\;\;.
+\begin{equation} 
+n_s=p\frac{N_{20}-N_{2s}}{N_{2s}}=p(a-1).
+\label{5.26}
 \end{equation}
-Kot smo ugotovili že v drugem razdelku, je stacionarna zasedenost enaka
-zasedenosti na pragu, ki je odvisna od izgub resonatorja, kar kaže tudi
-enačba \ref{5.25}. Razmerje $a=N_{20}/N_{2s}$ je mera za moč črpanja in
+Enačba (\ref{5.25}) je v skladu s tem, da je stacionarna zasedenost 
+enaka zasedenosti na pragu, ta pa je odvisna od izgub resonatorja. 
+Razmerje $a=N_{20}/N_{2s}$ je mera za moč črpanja in
 mora biti v delujočem laserju večje od 1. V večini praktičnih primerov
 doseže $a$ vrednosti do 3 ali 5.
 
-Postavimo sedaj nastavka \ref{5.24} v enačbi \ref{5.23}. Dobimo 
-\begin{eqnarray}  \label{5.27}
-\frac{d x}{d t^{\prime}} &=&-\frac{1}{p}n_sN_{2s}-N_{2s}+N_{20}- \frac{1}{p}
+Vstavimo nastavka (enačbi~\ref{5.24}) v enačbi (\ref{5.23a} in \label{5.23}). 
+Dobimo sistem enačb
+\begin{eqnarray}  
+\frac{d x}{d t^{\prime}} &=&-\frac{n_sN_{2s}}{p}-N_{2s}+N_{20}- \frac{1}{p}
 (n_sx+N_{2s}y+xy)-x \\
-\frac{d y}{d t^{\prime}} &=& \frac{1}{p}n_sN_{2s}-\frac{2}{\tau^{\prime}}n_s
+\frac{d y}{d t^{\prime}} &=& \frac{n_sN_{2s}}{p}-\frac{2}{\tau^{\prime}}n_s
 + \frac{1}{p}(n_s x+N_{2s} y+xy)-\frac{2}{\tau^{\prime}}y
+\label{5.27}
 \end{eqnarray}
 
 Ker sta $x$ in $y$ majhna v primeri s stacionarnimi vrednostmi, lahko
-zanemarimo produkt $xy$. Vsi členi, ki vsebujejo le stacionarne vrednosti,
-dajo ravno 0, saj smo jih tako določili. "Ce upoštevamo še izraza \ref
-{5.25} in \ref{5.26}, dobimo željeni linearizirani diferencialni enačbi
-za odmika od stacionarnih vrednosti 
+zanemarimo mešan produkt $xy$. Vsi členi, ki vsebujejo le stacionarne vrednosti,
+dajo ravno 0, saj smo jih tako določili. Če upoštevamo še izraza 
+za stacionarni vrednosti (enačbi~\ref {5.25} in \ref{5.26}), 
+zapišemo linearizirani diferencialni enačbi za odmika od stacionarnih vrednosti 
 \begin{eqnarray}
 \frac{dx}{dt^{\prime }} &=&-a\,x-\frac{2}{\tau ^{\prime }}\,y  \label{5.28}
 \\
-\frac{dy}{dt^{\prime }} &=&(a-1)\,x\;\;.
+\frac{dy}{dt^{\prime }} &=&(a-1)\,x.
 \end{eqnarray}
-Kot smo pri linearnih sistemih diferencialnih enačb s konstantnimi
-koeficienti vajeni, poiščemo rešitev v obliki eksponentne funkcije 
+Linearne sisteme diferencialnih enačb s konstantnimi
+koeficienti rešujemo tako, da poiščemo rešitev v obliki eksponentne funkcije 
 \begin{equation}
-x=x_{0}e^{\lambda t^{\prime }}\mbox{\hskip 1cm in \hskip 1cm}%
-y=y_{0}e^{\lambda t^{\prime }}\;\;.  \label{5.29}
+x=x_{0}e^{\lambda t^{\prime }} \qquad {\mathrm in } \qquad 
+y=y_{0}e^{\lambda t^{\prime }}.
+\label{5.29}
 \end{equation}
 Dobljeni homogeni sistem linearnih enačb 
 \begin{eqnarray}
 (a+\lambda )x_{0}+\frac{2}{\tau ^{\prime }}y_{0} &=&0  \label{5.30} \\
 -(a-1)x_{0}+\lambda y_{0} &=&0
 \end{eqnarray}
-bo imel netrivialno rešitev le, če bo njegova determinanta nič: 
+ima netrivialno rešitev le, če je njegova determinanta enaka nič
 \begin{equation}
-\lambda ^{2}+a\lambda +\frac{2}{\tau ^{\prime }}(a-1)=0\;\;.  \label{5.301}
+\lambda ^{2}+a\lambda +\frac{2}{\tau ^{\prime }}(a-1)=0.  
+\label{5.301}
 \end{equation}
 Rešitvi sta 
 \begin{equation}
-\lambda =-\frac{a}{2}\pm \sqrt{\frac{a^{2}}{4}-\frac{2}{\tau ^{\prime }}(a-1)%
-}\;\;.  \label{5.31}
+\lambda =-\frac{a}{2}\pm \sqrt{\frac{a^{2}}{4}-\frac{2}{\tau ^{\prime }}(a-1)}.
+\label{5.31}
 \end{equation}
-Narava rešitve je odvisna od velikosti brezdimenzijskega relaksacijskega
-časa nihanja resonatorja $\tau ^{\prime }=A\tau $. Za $\tau ^{\prime }>2$
-je izraz pod korenom pozitiven pri vseh $a$ in laser se vrača v
-stacionarno stanje eksponentno. Za $\tau <2$ pa je koren v nekem območju
+Obnašanje rešitve je odvisno od velikosti brezdimenzijskega relaksacijskega
+časa nihanja resonatorja $\tau ^{\prime }=A\tau $. Kratek račun pokaže, da je 
+za $\tau ^{\prime }>2$ izraz pod korenom pozitiven pri vseh $a$ in laser 
+se vrača v stacionarno stanje eksponentno. Za $\tau' <2$ pa je koren v nekem območju
 parametra $a$ imaginaren in laser se vrača v stacionarno stanje z
-dušenim nihanjem, ki mu pravimo {\it relaksacijske oscilacije}.
+dušenim nihanjem, ki mu pravimo relaksacijske oscilacije.
 
-\begin{figure}[tbp]
-\label{s5.8} \vskip 5cm
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+%\input{slike/06_Relax.pdf_tex}
 \caption{Relaksacijske oscilacije}
+\label{fig:relax}
 \end{figure}
 
-V običajnih resonatorjih je $\tau$ velikostnega reda $10^{- 7}$~s. Razpadna
+V navadnih resonatorjih je $\tau \sim 10^{-7}~\si{s}$. Razpadna
 konstanta laserskega nivoja $A$ je navadno dokaj majhna, ker je le v takih
-primerih lahko doseči obrnjeno zasedenost, tipična vrednost je recimo $%
-10^5 $ s$^{-1}$, lahko pa je še dosti manjša. Tedaj je $%
-\tau^{\prime}\simeq 10^{-2}$ in imamo relaksacijske oscilacije pri vseh
-dosegljivih vrednostih črpanja nad pragom, to je za $a>1$. Ker $a$ v praksi
-ni nikoli dosti večji od 3, je frekvenca oscilacij $\omega^{\prime}_r$ v
-brezdimenzijskih enotah približno $1/\sqrt{\tau^{\prime}}$. "Ce preidemo
-nazaj na prave enote časa, dobimo $\omega_r\simeq \sqrt{A/\tau}$. V tem
-primeru je torej frekvenca relaksacijskih oscilacij velikostnega reda
-geometrijske sredine med razpadnima konstantama nihanja resonatorja in
-atomskega stanja. Primer takega nihanja pri vključitvi laserja kaže slika 
-\ref{s5.8}.
+primerih lahko doseči obrnjeno zasedenost. Vzemimo $A \sim 10^5/\si{s}$,
+lahko pa je ta vrednost še dosti manjša. Tedaj je $\tau^{\prime}\sim 10^{-2}$ 
+in relaksacijske oscilacije se pojavijo pri vseh dosegljivih vrednostih črpanja 
+nad pragom, to je za $a>1$. Ker $a$ v praksi ni nikoli dosti večji od 3, 
+je frekvenca oscilacij v brezdimenzijskih enotah v grobem
+enaka $\omega^{\prime}_r\sim 1/\sqrt{\tau^{\prime}}$. Ko preidemo
+nazaj na prave enote časa, dobimo $\omega_r\sim \sqrt{A/\tau}$. Frekvenca 
+relaksacijskih oscilacij je v tem primeru velikostnega reda geometrijske 
+sredine med razpadnima konstantama nihanja resonatorja in atomskega stanja. 
+Primer takega nihanja pri vključitvi laserja kaže slika~(\ref{fig:relax}).
 
-Relaksacijske oscilacije so praktično pomembne, ker določajo gornjo mejo
+\begin{remark}
+Relaksacijske oscilacije so praktično pomembne, saj določajo gornjo mejo
 hitrosti, s katero lahko izhodna moč laserja sledi modulaciji črpanja.
-Poleg tega imamo pri tej frekvenci resonanco, pri kateri se šum črpanja
-ojačano prenaša v šum izhodne moči.
+Poleg tega se pri tej frekvenci pojavi resonanca, pri kateri se šum črpanja
+ojačano prenaša v šum izhodne moči. 
+\end{remark}
+
 
 \section{Delovanje v sunkih s preklopom dobrote}
+Včasih želimo
+izhodno moč modulirati s spreminjanjem črpanja. Pogosto laserji delujejo v
+sunkih. V nekaterih aktivnih sredstvih je mogoče doseči obrnjeno
+zasedenost le za kratek čas, črpanje v sunkih je včasih enostavnješe,
+recimo z bliskavko pri trdnih laserjih, dostikrat pa tudi želimo dobiti iz
+laserja kratke in močne koherentne sunke svetlobe. 
+
 
 Veliko trenutno moč dobimo iz laserjev, kadar delujejo v kratkih sunkih.
 Pogosto tedaj tudi ojačevalno sredstvo črpamo v sunkih. Pri tem se
