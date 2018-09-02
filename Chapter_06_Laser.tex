@@ -481,7 +481,7 @@ različna. Šum laserja je v obliki frekvenčne modulacije,
 \end{remark}
 
 \section{Večfrekvenčni laser}
-Doslej smo obravnavali laserje, v katerih je bilo vzbujeno eno samo
+Do zdaj smo obravnavali laserje, v katerih je bilo vzbujeno eno samo
 valovanje. Vendar je ojačevalna širina večine aktivnih sredstev 
 navadno večja od razlike med frekvencami posameznih 
 stanj resonatorja. V plinih, na primer, je ojačevalna širina zaradi 
@@ -497,40 +497,53 @@ komponente svetlečega plina. Ostaja pa prostorsko koherentna.
 Za holografijo, interferometrijo in nekatere spektroskopske uporabe
 potrebujemo ozko spektralno črt. Zato moramo poskrbeti, da je vzbujeno le
 eno nihanje resonatorja, najbolje tisto, ki je najbližje vrhu ojačenja
-ativnega sredstva. To dosežemo tako, da za vsa ostala nihanja povečamo izgube.
-To lahko naredimo tako, da v resonator postavimo še Fabry-Perotov
-interferometer, kot kaže slika (\ref{s5.6}). Njegova prepustnost v
-odvisnosti od frekvence, razmika med zrcali $L_{f}$ in nagiba glede na os
-resonatorja je podana z enačbo (glej 3. poglavje) 
+ativnega sredstva. To dosežemo tako, da za vsa ostala nihanja povečamo izgube, 
+na primer s Fabry-Perotovim interferometrom, ki ga vstavimo v laserski resonator
+(slika~\ref{fig:FPres}). Njegova prepustnost v odvisnosti od frekvence $\omega$, debeline $L$,
+prepustnosti zrcal ${\cal R}$ in nagiba glede na os resonatorja $\varphi$ 
+je podana z enačbo~(\ref{eq:FP}) 
 \begin{equation}
-T=\frac{1}{1+\frac{4{\cal {R}}}{(1-{\cal {R}})^{2}}\sin ^{2}(\frac{\omega }{c%
-}L_{f}\cos \phi )}  \label{5.22}
+T=\frac{1}{1+\frac{4{\cal {R}}}{(1-{\cal {R}})^{2}}\sin^{2}(\frac{\omega}{c}L\cos \varphi )}
+\label{5.22}
 \end{equation}
-in jo kaže slika \ref{s5.7}. Izrazitost vrhov prepustnosti je odvisna od
-reflektivnosti zrcal interferometra. Z ustrezno izbiro razmika med zrcali in
-nagiba lahko dosežemo, da vrh prepustnosti ravno sovpada z izbranim
-stanjem resonatorja. Izgube za ostala nihanja, vsebovane v $G_{pr}$, so se s
-tem povečale in laser sveti le pri eni sami izbrani frekvenci. Na sliki 
+in jo kaže slika~(\ref{fig:Fabry-Perot}). Razmik med zrcaloma in nagib interferometra
+izberemo tako, da vrh prepustnosti sovpada z izbranim stanjem resonatorja. 
+Izgube za ostala nihanja, ki bi sicer bila ojačana, se tako povečajo in laser
+sveti le pri eni sami izbrani frekvenci. Na sliki 
 \ref{s5.7} so prikazane povečane izgube, lastna stanja 
 resonatorja in ojačenje aktivnega sredstva. Ker zadošča že zmerno
 povečanje izgub, je reflektivnost zrcal interferometra običajno dokaj
-nizka, pod 0,5.
+nizka, pod 0,5. 
 
 \begin{figure}[h]
-\label{s5.6} \vskip 5cm
-\caption{Frekvenčna odvisnost ojačenja, položaj lastnih frekvenc
-resonatorja in ojačenje na pragu.
-Frekvenčna odvisnost ojačenja, položaj lastnih frekvenc
-resonatorja in ojačenje na pragu, kadar je v resonator vgrajen
-Fabry-Perotov interferometer.}
+\centering
+\def\svgwidth{110truemm} 
+\input{slike/06_FPres.pdf_tex}
+\caption{Shema laserja, v katerega vstavimo Fabry-Perotov interferometer. Tako dosežemo,
+da laser deluje pri eni sami izbrani frekvenci.}
+\label{fig:FPres}
 \end{figure}
 
-Naloga: Izberi ustrezne parametre interferometra.
+\begin{figure}[h]
+\centering
+\def\svgwidth{110truemm} 
+%\input{slike/06_FPmodes.pdf_tex}
+\caption{Frekvenčna odvisnost ojačenja z označenim pragom ojačenja (a), 
+lastne frekvence resonatorja (b) in frekvence, ki se v takem resonatorju ojačajo (c). 
+Ko dodamo Fabry-Perotov interferometer s dano prepustnostjo (d), dosežemo
+delovanje pri eni sami frekvenci (e).}
+\label{fig:FPmodes}
+\end{figure}
 
-Nagib interferometra je potreben tudi zato, da se neprepuščena svetloba
-odbije ven iz smeri osi resonatorja. "Ce bi bila os interferometra vzporedna
-z osjo resonatorja, bi nastale dodatne, neželjene resonance z osnovnimi
-zrcali resonatorja, kar bi močno motilo delovanje laserja.
+\begin{remark}
+Nagib interferometra omogoča natančno spreminjanje izbrane frekvence, poleg tega
+pa je nujen, da se neprepuščena svetloba odbije ven iz smeri osi resonatorja. Če bi 
+bila os interferometra vzporedna z osjo resonatorja, bi se pojavile dodatne resonance, 
+kar bi močno motilo delovanje laserja.
+\end{remark}
+
+naloga?
+
 
 \section{Relaksacijske oscilacije}
 
