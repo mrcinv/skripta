@@ -670,101 +670,189 @@ Poleg tega se pri tej frekvenci pojavi resonanca, pri kateri se šum črpanja
 ojačano prenaša v šum izhodne moči. 
 \end{remark}
 
-
-\section{Delovanje v sunkih s preklopom dobrote}
-Kadar potrebujemo veliko izhodno moč laserja pri zmerni povprečni porabi energije,
-zvezno delujoči laserji, ki smo jih obravnavali do zdaj, niso primerni. 
-Poslužiti se moramo sunkovnih laserjev, ki v kratkem časovnem intervalu 
+\section{Sunkovni laserji}
+Kadar potrebujemo veliko izhodno moč laserja pri zmerni povprečni porabi 
+energije, zvezno delujoči laserji, ki smo jih obravnavali do zdaj, 
+niso primerni. Poslužiti se moramo sunkovnih laserjev, 
+ki v kratkem časovnem intervalu 
 delujejo z zelo veliko izhodno močjo. 
 
-Poglejmo primer. Zvezno 
+Poglejmo primer. Zvezno delujoč laser z izhodno močjo $10~\si{kW}$ bi pri
+$0,1~\%$ izkoristku poteboval črpalno moč $10~\si{MW}$. Po drugi strani 
+sunkovni laser, ki seva svetlobo v $10~\si{ns}$ dolgih sunkih s 
+povprečno energijo $1~\si{J}$, deluje z močjo $100~\si{MW}$. Pri 
+ponovitvni sunkov $1000/\si{s}$ je tako potrebna črpalna moč le $1~\si{kW}$.
+Poznamo tri načine sunkovnega delovanja laserjev. V prvem primeru 
+periodično spreminjamo črpalno moč, v drugih dveh (preklop dobrote in 
+uklepanje faz) pa periodično spreminjamo izgube v resonatorju. 
 
-
-Včasih želimo
-izhodno moč modulirati s spreminjanjem črpanja. Pogosto laserji delujejo v
-sunkih. V nekaterih aktivnih sredstvih je mogoče doseči obrnjeno
-zasedenost le za kratek čas, črpanje v sunkih je včasih enostavnješe,
-recimo z bliskavko pri trdnih laserjih, dostikrat pa tudi želimo dobiti iz
-laserja kratke in močne koherentne sunke svetlobe. 
-
-
-Veliko trenutno moč dobimo iz laserjev, kadar delujejo v kratkih sunkih.
-Pogosto tedaj tudi ojačevalno sredstvo črpamo v sunkih. Pri tem se
-pojavi težava. Ko ob močnem črpanju obrnjena zasedenost znatno
+Poglejmo najprej najpreprostejši način, pri katerem moduliramo črpanje.
+To dosežemo na primer z bliskavko ali drugim sunkovnim laserjem.
+Tipično je frekvenca modulacije črpanja $\nu \sim 20~\si{Hz}$.
+V takem laserju je črpanje periodično (slika~\ref{fig:pulseG}). Vendar
+se pri tem lahko pojavi težava. Ko ob močnem črpanju obrnjena zasedenost znatno
 preseže zasedenost praga (v nestacionarnem stanju je to mogoče), laser
-posveti in v kratkem času zasedenost pade nazaj pod prag. "Ce tedaj
-črpanje še traja, čez čas zasedenost zopet dovolj naraste in laser
+posveti in v kratkem času zasedenost pade nazaj pod prag. Če tedaj
+črpanje še traja, čez čas zasedenost dovolj naraste in laser
 ponovno posveti. To se lahko večkrat ponovi. Razmiki med zaporednimi sunki
 so reda velikosti periode relaksacijskih oscilacij, so pa lahko precej
 nepravilni. Pri takem režimu delovanja v posameznem sunku ne dobimo
 razpoložljive energije črpanja v enem samem lepo oblikovanem sunku, kar
-je za vrsto uporab zelo pomembno.
+je za vrsto uporab zelo pomembno. 
 
-Opisani težavi se je moč izogniti. V sistemu atomov v stanju obrnjene
-zasedenosti je shranjena energija, ki se preko stimuliranega sevanja lahko
-pretvori v koherenten svetlobni sunek. "Cim večja je stopnja inverzije, tem
-več energije je na voljo. Ugotovili pa smo, da obrnjene zasedenosti v
-resonatorju z danimi izgubami ni mogoče povečati znatno nad prag. Pri
-velikih izgubah je prag visoko in je shranjene energije več. Zato postopamo
-takole. Najprej držimo izgube resonatorja velike in ustvarimo veliko
-obrnjeno zasedenost. Nato dovolj hitro izgube zmanjšamo. Optično ojačenje
-je veliko in energija svetlobe v kratkem času močno naraste. S tem se tudi
-obrnjena zasedenost hitro zniža na vrednost močno pod pragom.
-Predstavljamo si lahko, da dobimo prvi nihaj relaksacijskih oscilacij, le da
-je začetno stanje daleč od stacionarnega in je zato linearni približek
-zelo slab. Iz laserja dobimo kratek in zelo močan sunek svetlobe. Energija
-sunka je skoraj tolikšna kot je bila energija obrnjene zasedenosti.
-Elektrotehniki izgube resonatorjev podajajo z dobroto, to je razmerjem
-frekvence lastnega stanja in njegove širine, zato opisano tehniko imenujemo 
-{\it preklop dobrote}. Dogajanje kaže slika \ref{s5.9}.
-
-\begin{figure}[tbp]
-\label{s5.9} \vskip 10cm
-\caption{Obrnjena zasedenost in energija v laserju pri preklopu dobrote}
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/06_pulseG.pdf_tex}
+\caption{Delovanje sunkovnega laserja z moduliranim črpanjem}
+\label{fig:pulseG}
 \end{figure}
 
-Izgube resonatorja je mogoče spreminjati na mnogo načinov. Najenostavneje
-je vrteti eno od ogledal. Tedaj dobimo uglašen resonator le v kratkem
+\section{Delovanje v sunkih s preklopom dobrote}
+Namesto modulacije črpanja lahko v sunkovnih laserjih periodično spreminjamo 
+izgube. Čim večje so namreč izgube, višji je prag za delovanje laserja in 
+večjo stopnjo inverzije lahko dosežemo. Tako v sistemu atomov shranimo več 
+energije, ki se lahko izseva iz sistema preko stimuliranega sevanja. 
+Ko je enkrat ustvarjena velika obrnjena zasedenost, izgube zelo hitro zmanjšamo. 
+Optično ojačenje je veliko in energija svetlobe v kratkem času močno naraste. 
+S tem se tudi obrnjena zasedenost hitro zniža na vrednost močno pod pragom.
+Predstavljamo si lahko, da dobimo prvi nihaj relaksacijskih oscilacij, le da
+je začetno stanje daleč od stacionarnega in zato linearni približek ne drži več.
+Iz laserja dobimo kratek in zelo močan sunek svetlobe, pri čemer je energija
+sunka skoraj tolikšna kot je bila energija obrnjene zasedenosti. Tipične
+dolžine sunkov, ki jih dosežemo na ta način, so $t \sim 10~\si{ns}$, sunki
+pa se ponavljajo s frekvenco $\nu \sim 1$--$100~\si{kHz}$.
+Dogajanje v laserju kaže slika~(\ref{fig:pulseQ}).
+
+\begin{remark}
+V elektrotehniki se izgube resonatorjev podajajo z dobroto $Q$, to je razmerjem
+frekvence lastnega stanja in njegove širine. Ker s povečanjem izgub spremenimo 
+širino črte in z njo dobroto, opisano tehniko imenujemo preklop dobrote. 
+\end{remark}
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/06_pulseQ.pdf_tex}
+\caption{Izgube ($\Lambda$), relativno ojačenje ($G/G_{\rm pr}$), zasedenost višjega 
+nivoja ($N_2$) in izsevana moč laserja ($P$) v odvisnosti od časa, kadar laser 
+deluje v režimu preklopa dobrote.}
+\label{fig:pulseQ}
+\end{figure}
+
+Izgube resonatorja je mogoče spreminjati na več načinov. Najpreprosteje
+je vrteti eno od ogledal. Tedaj je resonator uglašen le v kratkem
 trenutku, ko je ogledalo pravokotno na os. Metoda je dokaj uspešna, a
-zastarela. Boljši in danes največkrat uporabljani način je, da v
-resonator vgradimo elektrooptični ali akustooptični modulator, o katerih
-bomo govorili kasneje. Z njimi lahko električno krmilimo izgube.
+zastarela. Boljši in danes najbolj razširjen način je z vgradnjo
+elektro-optičnega ali akusto-optičnega modulatorja, o katerih
+bomo govorili v nadaljevanju (poglavje~\ref{chap:modulacija}). Na kratko povejmo, 
+da lahko z njimi električno krmilimo izgube z visoko frekvenco.
 
-Kot smo že povedali, nelinearnih laserskih enačb ne moremo analitično
-rešiti. Zato najprej napravimo nekaj ocen. Trajanje sunka je odvisno od
-hitrosti, s katero se izprazni gornji laserski nivo. To se ne more zgoditi
+Kot smo že povedali, nelinearnih laserskih enačb za zasedenost in število fotonov
+(enačbi~\ref{5.7}) in (\ref{5.8}) ne moremo analitično rešiti. Preden jih podrobneje
+pogledamo, napravimo nekaj ocen. Dolžina sunka je odvisna od hitrosti, 
+s katero se izprazni zgornji laserski nivo. To se ne more zgoditi
 hitreje kot v nekaj preletih sunka skozi resonator. Trajanje sunka je torej
-vsaj nekajkrat $2L/c$, to je za 15 cm dolg resonator vsaj 10 ns.
+vsaj nekajkrat $2L/c$, to je za $15~\si{cm}$ dolg resonator vsaj nekaj $\si{ns}$.
 
-Ocenimo lahko še tudi hitrost naraščanja na začetku in upadanja na koncu
-sunka. Zapišimo najprej še enkrat enačbi za zasedenost in število
+Ocenimo še hitrost naraščanja števila fotonov na začetku in 
+njegovega upadanja na koncu sunka. Zapišimo najprej še enkrat enačbi za zasedenost in število
 fotonov, pri čemer upoštevajmo, da nas zanima le dogajanje v času sunka,
-ki je zeko kratek v primeri atomskim razpadnim časom, zato zanemarimo
-ustrezni člen v enačbi \ref{5.7}. Navadno je tudi črpanje prešibko, da
+ki je zeko kratek v primerjavi z atomskim razpadnim časom, zato 
+ustrezni člen v enačbi (\ref{5.7}) zanemarimo. Navadno je tudi črpanje prešibko, da
 bi med sunkom znatno vplivalo na zasedenost, zato lahko člen $rN$
 izpustimo. S črpanjem seveda ustvarimo začetno zasedenost $N_{20}$. Tako
-nam ostane 
-\begin{eqnarray}  \label{5.32}
-\frac{d N_2}{d t}&=&-\frac{1}{V}B\hbar\omega g(\omega)\,n\,N_2 \\
-\frac{d n}{d t}&=&\frac{1}{V}B\hbar\omega g(\omega)\,n\,N_2 - \frac{2}{\tau}%
-\,n\;.
+ostane 
+\begin{eqnarray}  
+\frac{d N_2}{d t}&=&-\frac{\sigma c}{V}\,n\,N_2 \label{5.32a}\\
+\frac{d n}{d t}&=&\frac{\sigma c}{V}\,n\,N_2 - \frac{2}{\tau}\,n.
+\label{5.32}
 \end{eqnarray}
-Na začetku sunka se vrednost $N_2$ ne razlikuje dosti od začetne vrednosti 
-$N_{20}$, tako da število fotonov narašča približno eksponentno: 
-\begin{equation}  \label{5.33}
-n(t)=n_0e^{\frac{1}{V}B\hbar\omega g(\omega)t}= n_0e^{t/\tau_r}\;\;.
+Na začetku sunka je $n$ majhen, $N_2$ pa velik in njegova vrednost
+se ne razlikuje dosti od začetne vrednosti $N_{20}$. Število fotonov
+na začetku sunka tako narašča približno eksponentno
+\begin{equation}  
+n(t)=n_0e^{t\,N_{20}\,\sigma c/V}= n_0e^{t/\tau_r}.
+\label{5.33}
 \end{equation}
 Začetnega števila fotonov ne poznamo, vemo pa, da je velikostnega reda 1,
-saj ga dobimo zaradi spontane emisije. Da bo $n$ narastel na znatno
-vrednost, recimo več od 10$^{10}$ fotonov, je potreben čas blizu 30 $%
-\tau_r $.
+saj predstavlja spontano emisijo. Da $n$ naraste na znatno
+vrednost, recimo več od $10^{10}$ fotonov, je potreben čas blizu $30~\tau_r$.
 
-Vzemimo za primer neodimov laser. Presek za stimulirano sevanje $\sigma
-(\omega )=\frac{1}{c}B\hbar \omega g(\omega )$ (razdelek 4.4) je okoli 10$%
-^{-19}$ cm$^{2}$. Naj bo začetna gostota zasedenosti $N_{20}/V=10^{19}/%
-\mbox{cm}^{3}$. Tedaj je $\tau _{r}=3$ ns. Proti koncu sunka pade obrnjena
-zasedenost precej pod prag in za grobo oceno lahko predpostavimo, da
-ojačevanja ni več. "Stevilo fotonov bo tedaj upadalo s
+Proti koncu sunka $N_2$ pojema zaradi sevanja svetlobe in $N_2 \to 0$. Ostane
+samo še en člen, ki da preprosto rešitev
+\begin{equation}  
+n(t)=\tilde{n}_0e^{-2t/\tau}.
+\label{5.33a}
+\end{equation}
+Eksponentno pojemanje števila fotonov na koncu sunka je torej določeno z izgubami
+resonatorja (enačba~\ref{taulambda}). 
+
+Dogajanja v vmesnih časih ne moremo enostavno popisati, lahko pa najdemo
+medsebojno zvezo med $n$ in $N_2$, če iz enačb eliminiramo čas. 
+Izrazimo $dt$ iz enačbe (\ref{5.32a}) in ga vstavimo v enačbo~(\ref{5.32}).
+Sledi
+\begin{equation}
+dn=-dN_{2}+\frac{\tilde{N}_2}{N_{2}}dN_{2}\;\;,  \label{5.341}
+\end{equation}
+kjer smo zapisati $\tilde{N}_{2}=2V/(\sigma c\,\tau)$.
+Enačbo brez težav integriramo
+\boxeq{5.351}{
+n=N_{20}-N_{2}+\tilde{N}_{2}\ln \frac{N_{2}}{N_{20}}.
+}
+Pri tem smo privzeli, da je na začetku sunka $n=0$ in $N_{2}=N_{20}$. 
+
+Iz dobljene zveze najprej izračunamo, kolikšna je končna zasedenost $N_{2k}$. Na
+koncu mora biti zopet $n=0$, kar da transcendentno enačbo za $N_{2k}$
+\beq
+\ln \frac{N_{2k}}{N_{20}} = \frac{N_{2k}}{N_{20}}- \frac{N_{20}}{\tilde{N}_2}.
+\eeq
+Enačba ima obliko
+\beq
+\ln \frac{x}{a}= x-a,
+\eeq
+kjer je $x=N_{2k}/N_{20}$ in $a=N_{20}/\tilde{N}_{2}$, in jo lahko preprosto
+numerično rešimo. Izkaže se, da kadar je začetna zasedenost $N_{20}$
+le malo nad pragom, tudi končna zasedenost $N_{2k}$ ne pade dosti pod prag, 
+zato je izraba energije slabša. Pri večjih začetnih vrednostih $N_{20}$ pa 
+pade končna zasedenost praktično na nič. Za $a=2$, na primer,
+je $x=0,41$, medtem ko je že pri $a=4$ vrednost $x$ le še 0,08. 
+
+Ko poznamo začetno in končo vrednost zasedenosti, lahko izračunamo 
+celotno energijo sunka $W=\hbar \omega (N_{20}-N_{2k})$. Če je začetna vrednost
+dovolj nad pragom, lahko končno zasedenost zanemarimo in je 
+\boxeq{QW}{
+W\approx\hbar \omega\,N_{20}.
+}
+
+Trenutna moč, ki izhaja iz laserja, je dana s $P=(\hbar \omega 2/\tau )n$.
+Največja je v vrhu sunka, ki je določen z $dn/dN_{2}=0$. Ta enačba ima
+rešitev pri $N_{2}=\tilde{N}_{2}$, vrh sunka je torej natanko tedaj, ko
+pade zasedenost $N_2$ na prag $\tilde{N}_2$. 
+
+Izsevana moč je tedaj 
+\beq
+P_{\rm max}=\frac {n_{\rm max} \hbar \omega}{2L/c}\left(1-\cal{R}\right) = 
+\frac {2 n_{\rm max} \hbar \omega}{\tau}.
+\eeq
+Ko vstavimo še vrednost za $n_{\rm max}$, dobimo
+\beq
+P_{\rm max}=\frac {2\hbar \omega}{\tau} \left(N_{20}-\tilde{N}_{2}-\tilde{N}_{2}
+\ln (N_{20}/\tilde{N}_{2})\right).
+\eeq
+Ker je navadno $N_{20}\gg \tilde{N}_2$, je $n_{\rm max} \approx N_{20}$
+in 
+\boxeq{QP}{
+P_{\rm max} \approx \frac{2 \hbar \omega N_{20}}{\tau}.
+}
+
+Vzemimo za primer neodimov laser. Presek za stimulirano sevanje 
+$\sigma=B\hbar \omega g/c$ je okoli $10^{-19}\si{cm}^{2}$. 
+Naj bo začetna gostota zasedenosti $N_{20}/V=10^{19}\si{cm}^3$. 
+Tedaj je $\tau _{r}=3$ ns. 
+PREVERI!!!!
+
+"Stevilo fotonov bo tedaj upadalo s
 krakterističnim razpadnim časom resonatorja $\tau /2\simeq 2L/c(1-{\cal R%
 })^{-1}$. V laserjih s preklopom dobrote je odbojnost izhodnega zrcala
 navadno dokaj nizka, recimo 0,5. Pri $L=15\;\mbox{cm}$ je tako $\tau =4$ ns.
@@ -773,43 +861,6 @@ Celotno trajanje sunka je v izbranem primeru tako približno 10 ns, pri
 spontanega sevanja. Energija sunka je blizu $N_{20}\hbar \omega $, to je pri
 aktivnem volumnu 0,5 cm$^{3}$ nekaj desetink joula. Od tod lahko ocenimo
 še, da je moč v vrhu sunka velikostnega reda 10 MW.
-
-Iz enačb \ref{5.32} sicer ne moremo izračunati časovnih odvisnosti $%
-N_{2}$ in $n$, lahko pa najdemo njuno medsebojno zvezo. Izrazimo iz prve $dt$
-in ga postavimo v drugo enačbo. Dobimo 
-\begin{equation}
-dn=-dN_{2}+\frac{N_{2p}}{N_{2}}dN_{2}\;\;,  \label{5.341}
-\end{equation}
-kjer smo upoštevali, da je $N_{2p}=2V/(B\hbar \omega g(\omega )\tau )$.
-Enačbo brez težav integriramo: 
-\begin{equation}
-n=N_{20}-N_{2}+N_{2p}\ln \frac{N_{2}}{N_{20}}\;\;.  \label{5.351}
-\end{equation}
-Vzeli smo, da je na začetku $N_{2}=N_{20}$ in $n=0$. Iz dobljene zveze
-lahko najprej izračunamo, kolikšna je končna zasedenost $N_{2k}$. Na
-koncu mora biti zopet $n=0$, kar nam da transcendentno enačbo za $N_{2k}$.
-Ima obliko $(x/a)=\exp (x-a)$, kjer je $x=N_{2k}/N_{20}$ in $a=N_{20}/N_{2p}$%
-. Kadar je začetna zasedenost le malo nad pragom, tudi končna ne pade
-dosti pod prag, zato je izraba energije slabša. Pri večjih začetnih
-vrednostih $N_{20}$ pa pade končna skoraj na nič. Za $a=2$, na primer,
-je $x=0,41$, medtem ko je že pri $a=4$ $x$ le še 0,08. S tem lahko
-izračunamo celotno energijo sunka: $W=\hbar \omega (N_{20}-N_{2k})$.
-
-Trenutna moč, ki izhaja iz laserja, je dana s $P=(2\hbar \omega /\tau )n$.
-Največja bo v vrhu sunka, ki je določen z $dn/dN_{2}=0$. Ta enačba ima
-očitno rešitev pri $N_{2}=N_{2p}$, vrh sunka je torej natanko tedaj, ko
-pade zasedenost na prag. Moč je tedaj $P_{max}=(2\hbar \omega /\tau
-)[N_{20}-N_{2p}-N_{2p}\ln (N_{20}/N_{2p})]$.
-
-S preklopom dobrote dobimo zelo kratke in močne svetlobne sunke. Vendar je
-največja energija omejena. "Ce je začetna obrnjena zasedenost dovolj
-velika, postane ojačenje tolikšno, da se svetloba že v enem preletu
-aktivnega sredstva močno ojači in izprazni laserski nivo. To omejuje
-nadaljne črpanje. Večje moči dosežejo tako, da sunke iz laserja ojačijo
-s prehodom skozi enako aktivno snov, kot je v laserju. Z večstopenjskim
-ojačevanjem je mogoče doseči zelo velike energije v nanosekundnih sunkih,
-do 100 kJ. Da se ojačevalniki med seboj ne motijo, jih je treba ločiti s
-Faradayevimi izolatorji.
 
 Naloga: Oceni, kolikšna je dosegljiva zasedenost pri dani dolžini Nd:YAG
 paličke.
