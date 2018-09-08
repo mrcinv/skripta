@@ -96,14 +96,14 @@ od koder sledi
 Ta enačba ima dve rešitvi za energijo svetlobnega nihanja. 
 Prva je $W=0$, druga pa  
 \boxeq{5.4}{ 
-W=W_s \left(\frac{G}{G_{\rm pr}}-1\right),
+W=W_s \left(\frac{G}{G_p}-1\right),
 }
 pri čemer je 
 \boxeq{5.5}{
-G_{\rm pr} = \frac{\Lambda}{2L'}.
+G_p = \frac{\Lambda}{2L'}.
 }
 Vidimo, da je druga rešitev za energijo nihanja pozitivna le v primeru,
-da je ojačenje večje od ojačenja praga $G> G_{\rm pr}$. Združimo 
+da je ojačenje večje od ojačenja praga $G> G_p$. Združimo 
 obe rešitvi in zapišemo, da je energija svetlobe v laserju pod pragom enaka
 nič, nad pragom pa linearno narašča z ojačenjem (slika~\ref{fig:energija}).
 Ojačenje je seveda odvisno od stopnje obrnjene zasedenosti, ta pa je povezana
@@ -187,9 +187,9 @@ Sledi
 \label{5.9}
 \end{equation}
 Enačbo zapišemo še bolj pregledno, če vpeljemo koeficient ojačenja $G$ (enačba~\ref{4.44})
-in ojačenje na pragu $G_{\rm pr}$ (enačbi~\ref{taulambda} in \ref{5.5})
+in ojačenje na pragu $G_p$ (enačbi~\ref{taulambda} in \ref{5.5})
 \beq
-G_{\rm pr}\, n\, \left(1+\frac{\sigma c}{VA_{21}}n \right)= G(n+1)
+G_p\, n\, \left(1+\frac{\sigma c}{VA_{21}}n \right)= G(n+1)
 \eeq
 Vpeljemo še brezdimenzijsko konstanto $p$, pri čemer upoštevamo zvezo
 med Einsteinovimi koeficienti (enačba~\ref{4.27})
@@ -213,27 +213,27 @@ centra atomske črte.
 
 Enačbo~(\ref{5.9}) zapišemo 
 \begin{equation}
-\frac{1}{p}\,n^{2}-(\frac{G}{G_{\rm pr}}-1)\,n-\frac{G}{G_{\rm pr}}=0
+\frac{1}{p}\,n^{2}-(\frac{G}{G_p}-1)\,n-\frac{G}{G_p}=0
 \label{5.11}
 \end{equation}
 s pozitivno rešitvijo 
 \begin{equation}
-n=\frac{p}{2}\left( \left(\frac{G}{G_{\rm pr}}-1\right)+\sqrt{\left(\frac{G}{G_{\rm pr}}
--1\right)^{2}+ \frac{4G}{pG_{\rm pr}}}\right).
+n=\frac{p}{2}\left( \left(\frac{G}{G_p}-1\right)+\sqrt{\left(\frac{G}{G_p}
+-1\right)^{2}+ \frac{4G}{pG_p}}\right).
 \label{5.12}
 \end{equation}
 Ker je $p$ zelo veliko število, lahko koren razvijemo, če le ni ojačenje
-preveč blizu praga, ko je $G/G_{\rm pr}\simeq 1$. Pod pragom je $G<G_{\rm pr}$ 
+preveč blizu praga, ko je $G/G_p\simeq 1$. Pod pragom je $G<G_p$ 
 in 
 \begin{equation}
-n\approx \frac{p}{2}\left( \left(\frac{G}{G_{\rm pr}}-1\right)+\left(1
--\frac{G}{G_{\rm pr}}\right)+\frac{2G}{p(G_{\rm pr}-G)}\right) =\frac{G}{G_{\rm pr}-G}.
+n\approx \frac{p}{2}\left( \left(\frac{G}{G_p}-1\right)+\left(1
+-\frac{G}{G_p}\right)+\frac{2G}{p(G_p-G)}\right) =\frac{G}{G_p-G}.
 \label{5.13}
 \end{equation}
 Pri razvoju korena smo upoštevali, da mora biti pozitiven. Nad pragom je
 število fotonov 
 \begin{equation}
-n\approx p\left(\frac{G}{G_{\rm pr}}-1\right).
+n\approx p\left(\frac{G}{G_p}-1\right).
 \label{5.14}
 \end{equation}
 
@@ -734,7 +734,7 @@ frekvence lastnega stanja in njegove širine. Ker s povečanjem izgub spremenimo
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/06_pulseQ.pdf_tex}
-\caption{Izgube ($\Lambda$), relativno ojačenje ($G/G_{\rm pr}$), zasedenost višjega 
+\caption{Izgube ($\Lambda$), relativno ojačenje ($G/G_p$), zasedenost višjega 
 nivoja ($N_2$) in izsevana moč laserja ($P$) v odvisnosti od časa, kadar laser 
 deluje v režimu preklopa dobrote.}
 \label{fig:pulseQ}
@@ -846,43 +846,39 @@ in
 P_{\rm max} \approx \frac{2 \hbar \omega N_{20}}{\tau}.
 }
 
-Vzemimo za primer neodimov laser. Presek za stimulirano sevanje 
-$\sigma=B\hbar \omega g/c$ je okoli $10^{-19}\si{cm}^{2}$. 
-Naj bo začetna gostota zasedenosti $N_{20}/V=10^{19}\si{cm}^3$. 
-Tedaj je $\tau _{r}=3$ ns. 
-PREVERI!!!!
-
-"Stevilo fotonov bo tedaj upadalo s
-krakterističnim razpadnim časom resonatorja $\tau /2\simeq 2L/c(1-{\cal R%
-})^{-1}$. V laserjih s preklopom dobrote je odbojnost izhodnega zrcala
-navadno dokaj nizka, recimo 0,5. Pri $L=15\;\mbox{cm}$ je tako $\tau =4$ ns.
-Celotno trajanje sunka je v izbranem primeru tako približno 10 ns, pri
-čemer traja okoli 100 ns od preklopa dobrote, da sunek zraste iz šuma
+Poglejmo primer. Naj bo presek za stimulirano sevanje $\sigma=B\hbar \omega g/c$ 
+okoli $10^{-19}\si{cm}^{2}$ in začetna gostota zasedenosti $N_{20}/V=10^{19}\si{cm}^3$,
+kar so tipični podatki za neodimov laser. Tedaj je $\tau_{r}=30~\si{ps}$ in čas naraščanja
+sunka okoli $\sim 1~\si{ns}$. Število fotonov se nato zmanjšuje s
+krakterističnim razpadnim časom resonatorja $\tau /2\sim 2L/(c(1-{\cal R}))$. 
+Za dosego kratkih sunkov svetlobe je zato v laserjih s preklopom dobrote odbojnost 
+izhodnega zrcala navadno dokaj nizka, recimo $0,5$. Pri $L=15~\si{cm}$ je tako $\tau=4~\si{ns}$.
+Celotno trajanje sunka je v izbranem primeru tako $~\sim~10~\si{ns}$, pri
+čemer traja okoli $100~\si{ns}$ od preklopa dobrote, da sunek zraste iz šuma
 spontanega sevanja. Energija sunka je blizu $N_{20}\hbar \omega $, to je pri
-aktivnem volumnu 0,5 cm$^{3}$ nekaj desetink joula. Od tod lahko ocenimo
-še, da je moč v vrhu sunka velikostnega reda 10 MW.
-
-Naloga: Oceni, kolikšna je dosegljiva zasedenost pri dani dolžini Nd:YAG
-paličke.
+aktivnem volumnu $0,5~\si{cm}^2$ nekaj desetink joula. Od tod lahko ocenimo, da je
+moč v vrhu sunka velikostnega več $10~\si{MW}$.
 
 \section{Uklepanje faz}
 \label{chap:Uklepanje}
-"Se dosti krajše sunke kot s preklopom dobrote je mogoče dobiti na
-povsem drug način, ki je prav presentljiva manifestacija koherentnosti
-laserske svetlobe. Naj v laserju niha več nihanj hkrati. Njihove frekvence
-so enakomerno razmaknjene za $\Delta \omega =\pi c/L$. Celotno električno
-polje v neki točki v laserju je 
+Krajše sunke kot s preklopom dobrote je mogoče dobiti z uklepanjem faz.
+Pri tem gre za povsem drugačen način, ki je prav presentljiva manifestacija koherentnosti
+laserske svetlobe. Spoznali smo že, da v laserju navadno niha več nihanj hkrati,
+pri čemer so njihove frekvence enakomerno razmaknjene za $\Delta \omega =\pi c/L$ 
+(enačba~\ref{eq:delta-omega-resonator}). Celotno električno
+polje v neki točki v laserju zapišemo kot vsoto 
 \begin{equation}
-E(t)=\sum_{m=-N/2}^{N/2}A_{m}e^{i[(\omega _{0}+m\Delta \omega )t+\varphi
-_{m}(t)]}\;\;.  \label{5.342}
+E(t)=\sum_{m=-N/2}^{N/2}A_{m}e^{i(\omega _{0}+m\Delta \omega )t+i\varphi,
+_{m}(t)}.
+\label{5.342}
 \end{equation}
-$N$ je število vseh vzbujenih nihanj. Upoštevali smo, da ima vsako
+pri čemer je $N$ število vseh vzbujenih nihanj. Upoštevali smo, da ima vsako
 nihanje lahko poljubno fazo $\varphi _{m}(t)$, ki je v splošnem predvsem
 zaradi zunanjih motenj slučajna funkcija časa. Zaradi tega se tudi
 celotno polje slučajno spreminja, kar močno zmanjšuje uporabnost
 takega laserja tam, kjer je potrebna časovna koherenca.
 
-\begin{figure}[tbp]
+\begin{figure}[h]
 \label{s5.10} \vskip 5cm
 \caption{"Casovna odvisnost moči mnogofrekvenčnega laserja z enakimi
 fazami }
@@ -900,7 +896,7 @@ Trenutna moč izhodne svetlobe ima časovno odvisnost
 P(t)=P_{0}\frac{\sin ^{2}(N\Delta \omega t/2)}{\sin ^{2}(\Delta \omega t/2)}
 \label{5.36}
 \end{equation}
-in jo kaže slika \ref{5.10}. Predstavlja periodično zaporedje sunkov, ki
+in jo kaže slika \ref{s5.10}. Predstavlja periodično zaporedje sunkov, ki
 si slede s periodo $T=2\pi /\Delta \omega =2L/c$, kar je enako času obhoda
 svetlobe v resonatorju. Konstanta $P_{0}$ je moč posameznega nihanja.
 Moč v vrhu sunka je tako $N^{2}P_{0}$, povprečna moč pa $NP_{0}$.
