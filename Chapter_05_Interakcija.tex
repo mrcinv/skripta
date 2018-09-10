@@ -4,8 +4,8 @@
 
 V prejšnjih poglavjih smo obravnavali svetlobo v praznem prostoru. Oglejmo si
 zdaj osnovne procese interakcije svetlobe s snovjo. To je seveda zelo
-obširna tema in je bomo obdelali le toliko, kolikor jo potrebujemo za
-razumevanje ojačevanja svetlobe s stimulirano emisijo, ki je osnova za
+obširna tema in jo bomo obdelali le v obsegu, potrebnem za
+razumevanje ojačevanja svetlobe s stimulirano emisijo, kar je osnova za
 delovanje laserjev. Najprej bomo na kratko pogledali termodinamsko ravnovesje 
 svetlobe v stiku s toplotnim zalogovnikom, torej sevanje črnega telesa, ki 
 zahteva kvantno obravnavo elektromagnetnega polja. Nato bomo vpeljali fenomenološki
@@ -42,8 +42,8 @@ vektorjem\index{Valovni vektor}
 \mathbf{k}=\left(\frac{\pi l}{L},\frac{\pi m}{L},\frac{\pi n}{L}\right),
 \end{equation} 
 katerega velikost je povezana s frekvenco $k = \omega/c$.
-Iz Maxwellove enačbe za prazen prostor (enačba~\ref{eq:Maxwell3}) 
-$\nabla\cdot\mathbf{E}=0$ sledi $\mathbf{k}\cdot\mathbf{E}=0$. 
+Iz Maxwellove enačbe za prazen prostor $\nabla\cdot\mathbf{E}=0$ (enačba~\ref{eq:Maxwell3})
+sledi $\mathbf{k}\cdot\mathbf{E}=0$. 
 Za vsako trojico števil $l$, $m$ in $n$ obstajata tako dve
 neodvisni polarizaciji.
 
@@ -88,7 +88,7 @@ lahko z uporabo gostote stanj spremenimo v integrale po $k$ ali po $\omega$
 \label{4.5}
 \end{equation}
 
-Označimo zdaj brezdimenzijski krajevni del rešitve~(enačba~\ref{eq:stojece_votlina}) z 
+Označimo brezdimenzijski krajevni del rešitve~(enačbe~\ref{eq:stojece_votlina}) z 
 $E_{\alpha}$, kjer $\alpha$
 označuje trojico števil $l$, $m$ in $n$ in še obe možni polarizaciji. 
 Pripadajoče magnetno polje izračunamo z Maxwellovo enačbo (enačba~\ref{eq:Maxwell2}) 
@@ -100,14 +100,13 @@ Polja $\mathbf{E}_{\alpha}$ in $\mathbf{B}_{\alpha}$ tvorijo poln ortogonalen
 sistem, zato jih lahko uporabimo za razvoj poljubnega elektromagnetnega polja v votlini
 \begin{eqnarray}
 \mathbf{E}(\mathbf{r},t) & = & -\frac{1}{\sqrt{V\epsilon_{0}}}
-\sum_{\alpha}p_{\alpha}(t)\mathbf{E}_{\alpha}(\mathbf{r}) \quad \mathrm{in}\nonumber \\
+\sum_{\alpha}p_{\alpha}(t)\mathbf{E}_{\alpha}(\mathbf{r}) \quad \mathrm{in} \label{eq:pqrazvoj1}\\
 \mathbf{B}(\mathbf{r},t) & = & i\sqrt{\frac{\mu_{0}}{V}}c_0\sum_{\alpha}
 \omega_{\alpha}q_{\alpha}(t)\mathbf{B}_{\alpha}(\mathbf{r}).
 \label{eq:pqrazvoj}
 \end{eqnarray}
-Vstavimo splošen razvoj~(enačbi~\ref{eq:pqrazvoj}) v Maxwellovi enačbi~(enačbi~\ref{eq:Maxwell1}
-in \ref{eq:Maxwell2}), upoštevamo zvezo~(enačba~\ref{Maxalfa}) in njej analogno za rotor magnetnega polja
-in dobimo 
+Vstavimo splošen razvoj~(enačbi~\ref{eq:pqrazvoj1} in \ref{eq:pqrazvoj}) v 
+Maxwellovi enačbi~(enačbi~\ref{eq:Maxwell1} in \ref{eq:Maxwell2}), upoštevamo zvezo~(enačba~\ref{Maxalfa}) in njej analogno za rotor magnetnega polja. Sledi
 \begin{equation}
 p_{\alpha}=\dot{q}_{\alpha} \quad \mathrm{in} \quad 
 \omega_{\alpha}^{2}q_{\alpha}=-\dot{p}_{\alpha},
@@ -121,11 +120,12 @@ od koder sledi še
 Ta enačba da seveda pričakovano časovno odvisnost oblike $e^{-i \omega_\alpha t}$.
 
 \begin{definition}
- Uporabi razvoj polja (enačbi~\ref{eq:pqrazvoj}) in iz Maxwellovih enačb izpelji
+ Uporabi razvoj polja (enačbi~\ref{eq:pqrazvoj1} in \ref{eq:pqrazvoj}) 
+ in iz Maxwellovih enačb izpelji
  enačbo~(\ref{4.8}).
 \end{definition}
 
-Z upoštevanjem razvoja (enačbi~\ref{eq:pqrazvoj}) lahko zapišemo še energijo 
+Z upoštevanjem razvoja (enačbi~\ref{eq:pqrazvoj1} in \ref{eq:pqrazvoj}) zapišemo energijo 
 polja -- \index{Hamiltonova funkcija}Hamiltonovo 
 funkcijo\footnote{Irski matematik Sir William Rowan Hamilton, 1805--1865.}
 \begin{equation}
@@ -156,12 +156,6 @@ W_{n,\alpha}=\hbar\omega_{\alpha}(n_{\alpha}+\frac{1}{2}), \quad n_{\alpha}= 0, 
 spremeni za 1, pravimo foton.}\index{Foton} Energija
 fotona je tako enaka $\hbar \omega$, $n$ pa predstavlja število fotonov z dano energijo.
 
-\begin{remark}
-Vzemimo svetlobo z valovno dolžino $500~\si{\nano\metre}$. Temu ustreza frekvenca
-$\omega = 3,8 \cdot 10^{15}~\si{\hertz}$ in energija fotona $W = 4 \cdot 10^{-19}~\si{\joule}$
-oziroma $W = 2,5~\mathrm{e}\si{\volt}$.
-\end{remark}
-
 Celotno energijo kvantiziranega elektromagnetnega polja \index{Energija polja}v votlini
 izračunamo tako, da seštejemo prispevke vseh možnih stanj
 \begin{equation}
@@ -171,13 +165,19 @@ pri čemer smo izpustili ničelno energijo\index{Ničelna energija}.
 Izpuščali jo bomo tudi v nadaljevanju, saj
 je to energija osnovnega stanja, ki se ne more sprostiti. 
 
+\begin{remark}
+Vzemimo vidno svetlobo z valovno dolžino $500~\si{\nano\metre}$. Temu ustreza frekvenca
+$\omega = 3,8 \cdot 10^{15}~\si{\hertz}$ in energija fotona $W = 4 \cdot 10^{-19}~\si{\joule}$
+oziroma $W = 2,5~\mathrm{e}\si{\volt}$.
+\end{remark}
+
 \section{Sevanje črnega telesa}
 Obravnavajmo sevanje v votlini, ki je v toplotnem ravnovesju s stenami s temperaturo
 $T$. Iz statistične fizike vemo, da verjetnost $P$, da je v izbranem stanju 
 votline $\alpha$ število fotonov enako $n_{\alpha}$, zapišemo z Boltzmannovo porazdelitvijo
 \index{Boltzmannova porazdelitev}
 \begin{equation}
-P(n_{\alpha})=\frac{e^{-W_{n,\alpha}/k_BT}}{\sum_{n_{\alpha}}e^{-W_{n,\alpha}/k_BT}} = 
+P(n_{\alpha})=\frac{e^{-W_{n\alpha}/k_BT}}{\sum_{n_{\alpha}}e^{-W_{n\alpha}/k_BT}} = 
 \frac{e^{-\beta\hbar\omega_{\alpha}n_{\alpha}}}
 {\sum_{n_{\alpha}}e^{-\beta\hbar\omega_{\alpha}n_{\alpha}}}=
 e^{-\beta\hbar\omega_{\alpha}n_{\alpha}}(1-e^{-\beta\hbar\omega_{\alpha}}),
@@ -209,8 +209,8 @@ okolico s temperaturo $T$
 u(\omega)=\hbar\omega\langle n\rangle \rho(\omega)
 =\frac{\hbar}{\pi^{2}c^{3}}\frac{\omega^{3}}{e^{\beta\hbar\omega}-1}.
 }
-Planckov zakon lahko zapišemo tudi z valovno dolžino in dobimo energijo na enoto volumna
-na interval valovne dolžine\index{Spekter!Planckov}
+Planckov zakon lahko zapišemo tudi z valovno dolžino in energija na enoto volumna
+na interval valovne dolžine\index{Spekter!Planckov} je
 \begin{equation}
 u(\lambda)=\frac{8 \pi h c}{\lambda^5}\frac{1}{e^{\beta h c/\lambda}-1}.
 \end{equation}
@@ -224,11 +224,11 @@ u(\lambda)=\frac{8 \pi h c}{\lambda^5}\frac{1}{e^{\beta h c/\lambda}-1}.
 \end{figure}
 
 \section{Absorpcija, spontano in stimulirano sevanje}
-Oglejmo si zdaj osnovne procese interakcije svetlobe s snovjo. Naj
-bo v votlini poleg elektromagnetnega polja še $N$ atomov, ki se med
+Oglejmo si osnovne procese interakcije svetlobe s snovjo. Naj
+bo v votlini poleg elektro\-magnet\-nega polja še $N$ atomov, ki se med
 seboj ne motijo. Za začetek naj bodo atomi prav enostavni\index{Dvonivojski sistem}:
 imajo naj le dve energijski stanji z energijama $E_{1}$ in $E_{2}$ (slika~\ref{sl4.1}\,a). 
-Stanje $E_2$ naj ima večjo energijo od $E_1$, razlika med njima pa naj bo
+Stanje $E_2$ naj ima višjo energijo od $E_1$, razlika med njima pa naj bo
 \begin{equation}
  E_2 - E_1 = \hbar \omega_0.
 \end{equation}
@@ -287,7 +287,7 @@ r_{12}=B_{12}u(\omega_{0}).
 \label{4.16}
 \end{equation}
 To je enostavno razumeti. Več kot je fotonov v votlini pri frekvenci, ki je
-v bližini frekvence prehoda, več fotonov se bo absorbiralo in večja je 
+v bližini frekvence prehoda, več fotonov se lahko absorbira in večja je 
 verjetnost za prehod atoma v višje stanje. Pri absorpciji se
 seveda število fotonov v enem od stanj polja pri frekvenci
 $\omega_{0}$ zmanjša za ena.
@@ -304,16 +304,17 @@ r_{21}=B_{21}u(\omega_{0}).
 V tem primeru smo sorazmernostni koeficient označili z $B_{21}$. Kadar pride do
 stimuliranega sevanja, se število atomov v vzbujenem stanju zmanjša, 
 število fotonov v stanju, ki je prehod povzročilo, pa se poveča za ena. 
-Izsevana svetloba ima zato enako fazo, frekvenco, polarizacijo in smer potovanja kot 
+Izsevana svetloba ima enako fazo, frekvenco, polarizacijo in smer potovanja kot 
 vpadla. Tipične vrednosti parametra so $B_{21} \sim 10^{16}$--$10^{20}~\si{\metre^3/\joule\second^2}$.
 
-Preden nadaljujemo, se še nekoliko pomudimo pri izrazih za absorpcijo
-(enačba~\ref{4.16}) in stimulirano emisijo (enačba~\ref{4.17}).
+Pomudimo se še nekoliko pri izrazih za absorpcijo
+(enačba~\ref{4.16}) in za stimulirano emisijo (enačba~\ref{4.17}).
 Zapisani enačbi veljata le, kadar je spektralna gostota \index{Spektralna gostota energije}
 elektromagnetnega polja $u(\omega)$
 preko celotne spektralne širine prehoda približno konstantna 
 (slika~\ref{fig:spektri}\,a). To je gotovo res, če
-obravnavamo sevanje v votlini, ki je v termičnem ravnovesju (črno telo). 
+obravnavamo sevanje v votlini, ki je v termičnem ravnovesju z okolico (črno telo).
+\index{Sevanje črnega telesa}
 
 \begin{figure}[h]
 \centering
@@ -342,7 +343,7 @@ svetlobe (slika~\ref{fig:spektri}\,b). Naj bo  $w_{R}$ gostota energije skoraj
 monokromatske svetlobe s frekvenco $\omega_R$. Verjetnost za absorpcijo na časovno 
 enoto je potem  
 \boxeq{4.18}{
-r_{12}=B_{12}g(\omega_R-\omega_0)\, w_{\omega R}.
+r_{12}=B_{12}g(\omega_R-\omega_0)\, w_{R}.
 }
 
 Koeficiente $A_{21}$, $B_{12}$ in $B_{21}$, s katerimi smo opisali spontano sevanje,
@@ -352,7 +353,7 @@ tudi Einsteinovi koeficienti\index{Einsteinovi koeficienti}. Poglejmo si jih pod
 
 \subsection*{Einsteinovi koeficienti}
 \label{AB}
-Zasedenost stanj\index{Zasedenost stanj} pove število atomov v določenem stanju. 
+Zasedenost stanj\index{Zasedenost stanj} določa število atomov v določenem stanju. 
 Ker zaenkrat obravnavamo preproste modele atomov z zgolj 
 dvema stanjema, zapišemo samo dve zasedenosti\index{Dvonivojski sistem}. Naj bo $N_1$ zasedenost 
 nižjega stanja, $N_{2}$ zasedenost višjega stanja, skupno število atomov pa
@@ -371,7 +372,7 @@ stanje, povečuje pa se zaradi absorpcije. To zapišemo z enačbo
 \end{equation}
 Zaradi ohranitve skupnega števila atomov velja 
 \begin{equation}
-\frac{dN_{1}}{dt}=\frac{-dN_{2}}{dt}.
+\frac{dN_{1}}{dt}=-\frac{dN_{2}}{dt}.
 \end{equation}
 V termičnem ravnovesju sta zasedenosti konstantni, tako da lahko zapišemo 
 \begin{equation}
@@ -438,8 +439,9 @@ Spontano sevanje, ki je seveda tudi prisotno, lahko zanemarimo, saj
 je svetloba izsevana na vse strani enakomerno in le majhen del je izsevan v smeri snopa.
 Sprememba energije snopa na enoto časa je enaka razliki med 
 številom absorpcij in stimuliranih prehodov na enoto časa, pomnoženih z 
-energijo fotona\footnote{Za poenostavitev tukaj pišemo obliko atomske spektralne črte kot $g$, 
-pri čemer je to Lorentzova krivulja okoli osrednje frekvence $\omega_0$.}
+energijo fotona\footnote{Zaradi preglednosti tukaj pišemo obliko atomske spektralne črte kot $g$, 
+pri čemer je to vrednost Lorentzove krivulje z osrednjo frekvenco $\omega_0$ pri $\omega$, 
+torej $g(\omega-\omega_0)$.}
 \begin{equation}
 dP=r_{12}\,\frac{(N_{2}-N_{1})}{V}\,\,S dz\, \, \hbar\omega = 
 \frac{(N_{2}-N_{1})}{V}\,B_{21}g w_{\omega} \, \hbar\omega \,S dz,
@@ -485,7 +487,8 @@ in
 \end{equation}
 Tako smo makroskopski koeficient absorpcije v plinu atomov povezali
 z Einsteinovim koeficientom $B_{21}$. Povejmo še, da so 
-tipične velikosti presekov $\sigma \sim 10^{-22}$--$10^{-16}~\si{\metre^2}$. 
+tipične velikosti presekov $\sigma \sim 10^{-24}$--$10^{-16}~\si{\metre^2}$,
+navadno so večji pri plinskih laserjih in manjši pri trdninskih.
 
 \begin{remark}
 Energija se pri absorpciji na plinu dvonivojskih atomov seveda
@@ -541,10 +544,10 @@ Kot vidimo, je saturacijska gostota odvisna le od frekvence vpadnega valovanja
 in širine atomskega prehoda. Za črto z valovno dolžino $600~\si{\nano\metre}$ 
 in širino $10^{8}~\si{\hertz}$ znaša saturacijska gostota svetlobnega toka okoli 
 $20~\si{\milli\watt/\centi\metre^2}$. Tako veliko gostoto svetlobnega toka je v tako ozkem
-frekvenčnem intervalu z običajnimi svetili praktično nemogoče doseči, 
+frekvenčnem intervalu z navadnimi svetili praktično nemogoče doseči, 
 medtem ko jo z laserji z lahkoto.
 
-Izraz za razliko zasedenosti stanj lahko zdaj zapišemo v preglednejši obliki
+Izraz za razliko zasedenosti stanj lahko zapišemo v preglednejši obliki
 \begin{equation}
 \Delta N=-\frac{N}{1+j/j_{s}(\omega)}.
 \label{4.35}
@@ -559,18 +562,18 @@ kjer je
 }
 absorpcijski koeficient\index{Absorpcijski koeficient} pri majhnih gostotah vpadnega toka.
 
-Enačbo (\ref{4.35}) brez težav integriramo in dobimo 
+Enačbo (\ref{4.35}) brez težav integriramo 
 \begin{equation}
 \ln\frac{j}{j_{0}}+\frac{j-j_{0}}{j_{s}}=-\mu_{0}\, z,
 \label{4.37}
 \end{equation}
 kjer smo z $j_{0}$ označili začetno gostoto toka. Kadar je ta dosti
-manjša od $j_{s}$, lahko drugi člen v gornji enačbi zanemarimo in dobimo 
-navadno eksponentno pojemanje
+manjša od $j_{s}$, lahko drugi člen v gornji enačbi zanemarimo in gostota svetlobnega
+toka eksponentno pojema
 \begin{equation}
 j = j_0 e^{-\mu_0 z}.
 \end{equation}
-Pri zelo velikih vpadnih gostotah pa lahko zanemarimo prvi člen in pride do 
+Pri zelo velikih vpadnih gostotah lahko zanemarimo prvi člen in pride do 
 linearnega zmanjševanja gostote svetlobnega toka
 \begin{equation}
 j=j_{0}-\mu_{0}j_{s}z = j_0 - \frac{N}{2V}\, A\, \hbar \omega\, z.
@@ -590,13 +593,14 @@ zadnje oblike zapisa~(enačba~\ref{4.38}).
 \end{figure}
 
 \section{Optično ojačevanje}
+\index{Optično ojačevanje}
 V prejšnjih razdelkih smo obravnavali prehod svetlobe skozi dvonivojski plin. V primeru
 termičnega ravnovesja je zgornji nivo manj zaseden od spodnjega in v plinu pride
 do absorpcije svetlobe. Če pa nekako dosežemo stanje obrnjene zasedenosti\index{Obrnjena zasedenost},
 za katerega velja $N_{2}>N_{1}$, se snop svetlobe pri prehodu skozi plin ojačuje. 
 Tako stanje seveda ni v termičnem ravnovesju in ga je treba vzdrževati z dovajanjem 
 energije plinu oziroma črpanjem\index{Črpanje}. 
-Načinov, kako dosežemo obrnjeno zasedenost s črpanjem je veliko.  
+Načinov, kako dosežemo obrnjeno zasedenost s črpanjem, je veliko.  
 
 V plinih je najpogostejši način vzbujanja z električnim tokom. Elektroni,
 ki so glavni nosilci toka, se zaletavajo v atome ali ione in jih vzbujajo
@@ -613,7 +617,7 @@ do obrnjene zasedenosti. Primer takega laserja je He-Ne laser\index{Laser!He-Ne}
 
 V trdnih neprevodnih kristalih sta v optičnem področju absorpcija
 in sevanje pri določeni valovni dolžini navadno posledica primesi.
-Obrnjeno zasedenost para nivojev primesi največkrat dobimo tako, da
+Obrnjeno zasedenost para nivojev primesi največkrat dosežemo tako, da
 kristal obsevamo s svetlobo s frekvenco, ki ustreza prehodu na nek
 nivo nad izbranim parom. Primera takega laserja sta Nd:YAG in Ti:safir 
 laser. \index{Laser!Nd:YAG} \index{Laser!Ti:safir}
@@ -626,10 +630,10 @@ na konkretnih primerih laserjev, ki jih bomo obravnavali v poglavju~\ref{chap:Pr
 \section{Optično črpanje trinivojskega sistema}
 Kot primer optičnega ojačevanja si oglejmo najpreprostejši model optičnega črpanja.
 Gre za plin atomov s tremi nivoji, tako imenovani trinivojski sistem. Osnovno stanje, ki 
-ga označimo z $|0\rangle$,  naj ima energijo $E_0$. Poleg tega imajo atomi še 
+ga označimo z $|0\rangle$,  naj ima energijo $E_0$. Poleg tega naj imajo atomi še 
 dve vzbujeni stanji z energijo $E_1$ (stanje $|1\rangle$) in energijo $E_2>E_1$
 (stanje $|2\rangle$)\index{Trinivojski sistem}, tako da je energijska razlika med vzbujenima 
-nivojema je $E_2-E_1 = \hbar \omega_0$.
+nivojema $E_2-E_1 = \hbar \omega_0$ (slika~\ref{fig:3nivojski}\,a).
 
 Na tak trinivojski plin svetimo s črpalno svetlobo, ki vzbuja atome iz osnovnega stanja 
 $|0\rangle$ v stanje $|2\rangle$, pri čemer je lahko spektralna gostota $u_{p}$ črpalne 
@@ -647,7 +651,7 @@ frekvence $\omega_{0}$ (slika~\ref{fig:3nivojski}\,b).
 \input{slike/05_Trinivojski.pdf_tex}
 \caption{Shema energijskih nivojev trinivojskega sistema in oznake koeficientov za prehode
 med njimi (a). 
-V plinskih laserjih imamo navadno stanje obrnjene zasedenosti med drugim in prvim
+V plinskih laserjih je stanje obrnjene zasedenosti navadno med drugim in prvim
 vzbujenim stanjem (b), v navadnih trdninskih laserjih (npr. rubinskem) pa med 
 prvim vzbujenim in osnovnim stanjem (c). Pogosto so laserji štiri- ali večnivojski (d).}
 \label{fig:3nivojski}
@@ -679,7 +683,7 @@ Zasedbene enačbe so tako
 \frac{dN_{2}}{dt} & = & rN_0-A_{20}N_{2}-A_{21}N_{2}-B_{21}\,g\,w\, (N_2-N_1).
 \label{4.39}
 \end{eqnarray}
-Pri zapisu smo predpostavili, da je $N_0 \approx N \gg N_1, N_2$ in zato lahko črpanje $B_{20}\, 
+Pri zapisu smo predpostavili, da je $N_0 \approx N \gg N_1, N_2$, zato smo lahko črpanje $B_{20}\, 
 u_{p} (N_0-N_2)$, ki je praktično konstantno, zapisali s koeficientom $r$. Mehanizem črpanja 
 smo tako skrili v $r$ in prav nič ni pomembno, na kakšen način poteka.\index{Optično črpanje}
 S tem smo obravnavo posplošili z optičnega črpanja na druge sisteme. 
@@ -706,7 +710,7 @@ B_{21}g\,w} \,\frac{rN}{A_{10}}.
 \end{equation}
 Iz gornje enačbe sledi, da pride do obrnjene \index{Obrnjena zasedenost}
 zasedenosti, če je $A_{10}>A_{21}$, torej kadar je
-razpadni čas stanja $|1\rangle$ krajši kot razpadni čas stanja $|2\rangle$.
+razpadni čas stanja $|1\rangle$ krajši od razpadnega časa stanja $|2\rangle$.
 Tak rezultat smo seveda lahko pričakovali.
 
 V praktični primerih navadno velja $A_{10}\gg A_{21}$. Ob upoštevanju zveze $j=wc$ povežemo
@@ -722,20 +726,22 @@ j_s = \frac{c A_{21}}{B_{21}g}.
 \label{eq:jsatg}
 \end{equation}
 \begin{remark}
- Vidimo, da je dobljen izraz za saturacijsko gostoto toka v trinivojskem sistemu zelo 
- podoben saturacijski gostoti za dvonivojski sistem (enačba~\ref{4.34}), razlikujeta se le
+ Vidimo, da je  izraz za saturacijsko gostoto toka v trinivojskem sistemu 
+ (enačba~\ref{eq:jsatg}) zelo  podoben saturacijski gostoti za dvonivojski 
+ sistem (enačba~\ref{4.34}), razlikujeta se le
 v faktorju 2. Do te razlike pride zaradi različnega števila stanj, saj pogoj $N_{1}+N_{2}=N$
 v trinivojskem sistemu ne velja. 
 \end{remark}
-Poglejmo zdaj, kaj se zgodi s svetlobo ob vpadu na plast trinivojskega plina. Naj ima vpadna
+Poglejmo, kaj se zgodi s svetlobo ob vpadu na plast trinivojskega plina. Naj ima vpadna
 svetloba frekvenco $\omega$ in gostoto svetlobnega toka $j=wc$. Račun je zelo podoben 
-računu pri absorpciji (enačba~\ref{4.29}). Zapišemo spremembo gostote toka na debelini $dz$ 
+računu za absorpcijo (enačba~\ref{4.29}). Zapišemo spremembo gostote toka na debelini $dz$ 
 \begin{equation}
 dj=\frac{(N_{2}-N_{1})}{V}\, B_{21}g\, \frac{\hbar\omega}{c}j\, dz,
 \label{eq:dj}
 \end{equation}
-pri čemer gostota toka $j = wc$ nastopa tudi v izrazu za razliko zasedenosti (enačba~\ref{eq:3n_N}). 
-Če to upoštevamo, dobimo diferencialno enačbo za gostoto toka
+pri čemer gostota toka $j$ nastopa tudi v izrazu za razliko
+zasedenosti (enačba~\ref{eq:3n_N}). Če to upoštevamo, 
+dobimo diferencialno enačbo za gostoto toka
 \begin{equation}
 \frac{1}{j}\left(1+\frac{j}{j_{s}}\right)\, dj=G\, dz
 \label{4.43}
@@ -753,12 +759,12 @@ G=\frac{N}{V}\frac{r}{A_{21}}\sigma=\frac{rNB_{21}\hbar\omega g}{VcA_{21}},
 \end{equation}
 pri čemer smo koeficient ojačenja izrazili s presekom za stimulirano 
 \index{Presek za stimulirano sevanje}sevanje $\sigma$. 
-Rešitev diferencialne enačbe je prikazana na sliki~(\ref{fig:ojacanje}). 
+Rešitev diferencialne enačbe (enačba~\ref{eq:djG}) je prikazana na sliki~(\ref{fig:ojacanje}). 
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/05_joja.pdf_tex}
-\caption{Naraščanje gostote svetlobnega toka pri optičnem ojačenju}
+\caption{Naraščanje gostote svetlobnega toka pri optičnem ojačevanju}
 \label{fig:ojacanje}
 \end{figure}
 
@@ -786,9 +792,9 @@ absorpcijo (enačba~\ref{sigmaabs}) dvonivojskega sistema\index{Presek za absorp
 Presek za stimulirano
 sevanje je tako odvisen od frekvence in je sorazmeren vrednosti atomske spektralne 
 črte pri frekvenci prehoda. Za He-Ne laser\index{Laser!He-Ne}, 
-ki deluje pri valovni dolžini 633~nm in ima 
+ki deluje pri valovni dolžini $633~\si{nm}$ in ima 
 širino prehoda $\Delta \omega \sim 10~\si{\giga\hertz}$, znaša tako  $\sigma \sim 10^{-16}~\si{\metre}^2$, 
-za Nd:YAG\index{Laser!Nd:YAG} pri 1064~nm in širini prehoda 
+za Nd:YAG\index{Laser!Nd:YAG} pri $1064~\si{nm}$ in širini prehoda 
 $\Delta \omega \sim 900~\si{\giga\hertz}$ pa  $\sigma \sim 10^{-22}~\si{\metre}^2$.
 Zaradi različnih presekov, različnih gostot atomov in različnih načinov črpanja se 
 koeficienti ojačenja v večnivojskih sistemih med seboj precej razlikujejo. Primere 
@@ -797,13 +803,13 @@ le, da je tipičen koeficient ojačenja v He-Ne laserju z dolžino $L = 0,5~\si{
 enak $GL \sim 1,015$, v Nd:YAG laserju z dolžino ojačevalnega sredstva 
 $L = 10~\si{\centi\metre}$ pa $GL \sim 50$. Pri prvem laserju je sicer velik presek za stimulirano sevanje, vendar 
 je gostota atomov v obrnjeni zasedenosti razmeroma majhna. V drugem primeru pa močno 
-črpanje prevlada nad majhnim presekom in pride do močnega ojačenja.
+črpanje prevlada nad majhnim presekom in pride do močnega ojačenja.\index{Optično ojačevanje}
 
 \section{Homogena in nehomogena razširitev spektralne črte}
 \label{Razsiritev}
 Doslej smo predpostavili, da svetijo vsi atomi obravnavane snovi
 pri isti frekvenci $\omega_{0}$ in z isto spektralno širino, ki smo
-jo popisali s funkcijo $g(\omega-\omega_0)$, z vrhom pri $\omega_0$. Če to drži, 
+jo popisali s funkcijo $g(\omega-\omega_0)$, z vrhom pri $\omega_0$. Če to velja, 
 pravimo, da je razširitev spektralne črte homogena\index{Spektralna črta!homogena razširitev}. 
 Primera homogene razširitve sta naravna širina in razširitev zaradi trkov med atomi. 
 Funkcija $g(\omega-\omega_0)$ je v tem primeru Lorentzove oblike\index{Spekter!Lorentzov} 
@@ -853,7 +859,7 @@ in pokaži, da je njena širina podana z enačbo~(\ref{4.83}).
 \end{definition}
 
 Izračunajmo Dopplerjevo razširitev na primeru He-Ne laserja. Za prehod
-atoma neona pri 632,8~nm in temperaturi 300~K dobimo 
+atoma neona pri $632,8~\si{nm}$ in temperaturi $300~\si{K}$ je 
 $\Delta\omega_{D}=8\cdot10^{9}~\si{\hertz}$. Dejanske izmerjene vrednosti širine 
 črte za He-Ne \index{Laser!He-Ne}laser 
 znašajo okoli $10~\si{\giga\hertz}$, kar je znatno več od naravne širine
@@ -875,9 +881,9 @@ preprosto analitično zapisati\index{Spekter!Voigtov}.
 \index{Nasičena absorpcija!nehomogeno razširjene črte}
 V razdelku~(\ref{chap:NasAbs}) smo obravnavali nasičenje absorpcije pri homogeno 
 razširjenem prehodu. Pri nasičenju absorpcije, kadar prevladuje nehomogena razširitev,
-nastopijo pomembni novi pojavi, zato si to podrobneje oglejmo.
+nastopijo pomembni novi pojavi.
 
-Naj na dvonivojski plin \index{Dvonivojski sistem}
+Začnimo z dvonivojskim plinom\index{Dvonivojski sistem}, na katerega 
 vpada močan snop monokromatske svetlobe s frekvenco $\omega_S$,
 ki je blizu osrednje frekvence $\omega_{0}$ Dopplerjevo razširjene 
 črte\index{Dopplerjeva razširitev}. S svetlobo
@@ -935,7 +941,7 @@ Porazdelitev ${\cal Z}(v)$ je podobna nemoteni porazdelitvi atomov
 po hitrosti ${\cal N}(v)$, le da je pri hitrosti $v=(\omega_{0}-\omega_S)/k$
 zmanjšana zaradi vpliva vpadne svetlobe. Atomi s to hitrostjo namreč svetlobo
 absorbirajo in s tem prehajajo v gornje stanje. V porazdelitvi
-atomov tako nastane vdolbina\index{Bennetova vdolbina}, 
+atomov tako nastane vdolbina\index{Bennettova vdolbina}, 
 pravimo ji tudi Bennettova
 vdolbina\footnote{Ameriški fizik William Ralph Bennett Jr., 1930--2008.}, 
 (slika \ref{fig:Bennet}). Širina vdolbine je določena
@@ -1081,7 +1087,7 @@ v vsakem nihanju votline $\alpha$. Zapišemo okrajšano
 \label{4.48}
 \end{equation}
 Začetno stanje celotnega sistem naj bo tako $|2,n_{\alpha}\rangle$, kar pomeni, da je
-atom v gornjem stanju, polje pa ima $n_{\alpha}$ fotonov v enem samem stanju $\alpha$.
+atom v gornjem stanju (stanju 2), polje pa ima $n_{\alpha}$ fotonov v enem samem stanju $\alpha$.
 Ustrezno končno stanje po prehodu je $|1,n_{\alpha}+1\rangle$.
 
 V prvem redu teorije motenj je verjetnost za prehod iz začetnega v končno stanje
@@ -1104,11 +1110,12 @@ razvijemo po lastnih nihanjih votline
 \end{equation}
 kjer je $\hat{p}_{\alpha}$ operator gibalne količine stanja $\alpha$, $E_{\alpha}$
 pa funkcija, ki popisuje krajevno odvisnost polja. Vemo, da se vsako 
-elektromagnetno nihanje votline obnaša kot harmonski oscilator.
-Zato lahko vpeljemo kreacijske in anihilacijske operatorje
+elektromagnetno nihanje votline obnaša kot harmonski oscilator.\index{Harmonski oscilator}
+Zato lahko vpeljemo kreacijske in anihilacijske operatorje\index{Operator!kreacijski}
+\index{Operator!anihilacijski}
 \begin{eqnarray}
 \hat{a}_{\alpha}^{\dagger} & = & \frac{1}{\sqrt{2\hbar\omega_{\alpha}}}\,
-(\omega_{\alpha}\hat{q}_{\alpha}-i\hat{p}_{\alpha}) \\
+(\omega_{\alpha}\hat{q}_{\alpha}-i\hat{p}_{\alpha}) \qquad \mathrm{in} \\
 \hat{a}_{\alpha} & = & \frac{1}{\sqrt{2\hbar\omega_{\alpha}}}\,(\omega_{\alpha}\hat{q}_{\alpha}+i\hat{p}_{\alpha}).
 \end{eqnarray}
  Kreacijski operatorji povečujejo, anihilacijski pa zmanjšujejo število
@@ -1121,11 +1128,11 @@ fotonov v danem stanju
 Edini od nič različni matrični elementi so tako oblike
 \begin{eqnarray}
 \langle n_\alpha +1|\, \hat{a}_{\alpha}^{\dagger}\,|n_{\alpha}\rangle & = 
-& \sqrt{n_{\alpha}+1} \qquad \mathrm{in} \nonumber\\
+& \sqrt{n_{\alpha}+1} \qquad \mathrm{in} \label{eq:ankr.1}\\
 \langle n_\alpha-1|\,\hat{a}_{\alpha}\,|n_{\alpha}\rangle & = & \sqrt{n_{\alpha}}.
 \label{eq:ankr}
 \end{eqnarray}
-Operatorje $\hat{p}_{\alpha}$ zdaj lahko izrazimo s kreacijskimi in anihilacijskimi
+Operatorje $\hat{p}_{\alpha}$ lahko izrazimo s kreacijskimi in anihilacijskimi
 operatorji in jih vstavimo v razvoj električnega polja (enačba~\ref{4.50}). Dobimo
 \begin{equation}
 \hat{E}(\mathbf{r},t)=-i\sum_{\alpha}\sqrt{\frac{\hbar\omega_{\alpha}}{2V\epsilon_{0}}}\,
@@ -1141,7 +1148,7 @@ polje, zato velja
  & = & -e\,\langle1|\,\hat{x}\,|2\rangle\langle n_{\alpha}+1|\,\hat{E}\,|n_{\alpha}\rangle.
 \end{eqnarray}
 Vstavimo polje, ki smo ga izrazili s kreacijskimi in anihilacijskimi operatorji (enačba~\ref{4.53}),
-upoštevamo zvezi~(\ref{eq:ankr}) in zapišemo
+upoštevamo zvezi~(\ref{eq:ankr.1}) in (\ref{eq:ankr}) in zapišemo
 \begin{eqnarray}
 \langle n_{\alpha}+1|\, \hat{E}\,|n_{\alpha}\rangle & = 
 & -i\sum_{\beta}\sqrt{\frac{\hbar\omega_{\beta}}{2V\epsilon_{0}}}
@@ -1170,8 +1177,8 @@ sorazmeren s številom že prisotnih fotonov, pa predstavlja stimulirano
 sevanje\index{Stimulirano sevanje}. Verjetnost za prehod vsebuje
 še kvadrat prostorske odvisnosti polja $E_{\alpha}^{2}(\mathbf{r})$.
 Če ne poznamo natančnega položaja atoma ali če je plin atomov enakomerno
-porazdeljen po votlini, lahko ta člen nadomestimo kar s povprečno vrednostjo.
-Za stoječe valovanje je to kar 1/2.
+porazdeljen po votlini, lahko ta člen nadomestimo s povprečno vrednostjo.
+Za stoječe valovanje je to 1/2.
 
 Najprej poglejmo verjetnost za spontano emisijo. 
 Spontana emisija je možna v vsa elektromagnetna nihanja votline s
@@ -1189,10 +1196,10 @@ Za prostorsko odvisnost polja $E^{2}(\mathbf{r})$ smo vzeli povprečje
 in upoštevamo enačbo~(\ref{4.4}). Dobimo
 \begin{equation}
 A_{21}=\frac{\pi e^{2}x_{12}^{2}}{2\hbar\epsilon_{0}}\int\rho(\omega_{\alpha})\omega_\alpha\, 
-\delta(\omega_{0}-\omega_{\alpha})\, d\omega_{\alpha}=\frac{e^{2}\omega_{0}^{3}x_{12}^{2}}{2\pi\epsilon_{0}\hbar c^{3}}.
+\delta(\omega_{0}-\omega_{\alpha})\, d\omega_{\alpha}=\frac{e^{2}\omega_{0}^{3}x_{12}^{2}}{2\pi\epsilon_{0}\hbar c^{3}},
 \label{4.58}
 \end{equation}
- Z $\omega_{0}=(E_{2}-E_{1})/\hbar$ smo označili frekvenco prehoda. S tem smo 
+ pri čemer smo z $\omega_{0}=(E_{2}-E_{1})/\hbar$ označili frekvenco prehoda. S tem smo 
  izpeljali vrednost Einsteinovega koeficienta $A_{21}$. 
 \begin{remark}
 Pri gornjem izračunu Einsteinovega koeficienta $A_{21}$ smo privzeli, da so vsi dipoli urejeni  
@@ -1240,7 +1247,8 @@ vrednosti zasedenosti nivojev\index{Rabijeve oscilacije} imenujemo Rabijeve
 oscilacije\footnote{Ameriški fizik in nobelovec Isidor Isaac Rabi, 1898--1988.}. 
 
 Obravnavajmo sklopitev dvonivojskega sistema z elektromagnetnim valovanjem 
-v semiklasičnem modelu. To pomeni, da dvonivojski sistem obravnavamo kvantno, 
+v semiklasičnem modelu.\index{Semiklasični model} 
+To pomeni, da dvonivojski sistem obravnavamo kvantno, 
 svetlobo, ki vpada, pa kot klasično skalarno polje. 
 V odsotnosti električnega polja zapišemo Hamiltonian\index{Hamiltonova
 funkcija} za elektron kot
@@ -1248,22 +1256,26 @@ funkcija} za elektron kot
 H_0 = \hbar \omega_1 |1\rangle \langle1| + \hbar \omega_2 |2\rangle \langle2|,
 \end{equation}
 pri čemer je $\omega_2- \omega_1 = \omega_0$ frekvenca prehoda. V prisotnosti 
-svetlobnega polja moramo dodati še člen, ki opisuje dipolno interakcijo in dobimo
-časovno odvisen Hamiltonian
+svetlobnega polja moramo dodati še člen, ki opisuje dipolno interakcijo in 
+časovno odvisen Hamiltonian zapišemo kot
 \begin{equation}
 H = \hbar \omega_1 |1\rangle \langle1| + \hbar \omega_2 |2\rangle \langle2|
 -e\hat{x}E_0 \cos (\omega t).
+\label{eq:sk-H}
 \end{equation}
 Schr\"odingerjevo enačbo\index{Schr\"odingerjeva enačba}
 \begin{equation}
 i \hbar \frac{\partial}{\partial t}|\psi\rangle = H|\psi\rangle
+\label{eq:sk-S}
 \end{equation}
 rešujemo z nastavkom 
 \begin{equation}
 |\psi\rangle = c_1(t)e^{-i \omega_1t}|1\rangle + c_2(t)e^{-i \omega_2t}|2\rangle,
+\label{eq:sk-n}
 \end{equation}
 saj je valovna funkcija, ki popisuje stanje sistema, v splošnem 
-kombinacija obeh stanj. Nastavek vstavimo v enačbo, ki jo enkrat pomnožimo 
+kombinacija obeh stanj. Nastavek (enačba~\ref{eq:sk-n}) in Hamiltonian 
+(enačba~\ref{eq:sk-H}) vstavimo v enačbo (\ref{eq:sk-S}), ki jo enkrat pomnožimo 
 z $\langle1|$, drugič pa z $\langle2|$ in izpeljemo sistem dveh sklopljenih enačb
 \begin{equation}
 \frac{d c_1}{dt}=-\frac{i}{\hbar} V \cos (\omega t) e^{-i\omega_0 t}\, c_2 
@@ -1271,7 +1283,7 @@ z $\langle1|$, drugič pa z $\langle2|$ in izpeljemo sistem dveh sklopljenih ena
 \frac{d c_2}{dt}=-\frac{i}{\hbar} V \cos (\omega t) e^{i\omega_0 t}\, c_1,
 \end{equation}
 pri čemer je $V = -\langle1|e\hat{x}E_0|2\rangle$. Zapišemo še $\cos(\omega t)$ kot
-kompleksno število in zanemarimo hitro spreminjajočo se komponento (pri $\omega_0 + \omega)$,
+kompleksno število in zanemarimo hitro spreminjajočo se komponento pri $\omega_0 + \omega$,
 tako da enačbi prepišemo v 
 \begin{equation}
 \frac{d c_1}{dt}=-\frac{i}{2\hbar} V e^{-i\Delta t}\, c_2 
@@ -1289,13 +1301,13 @@ i \frac{\Delta}{\Omega} \sin\left(\frac{\Omega t}{2}\right) \right)\qquad \mathr
 c_2(t)&=&\frac{V}{i\hbar \Omega} e^{i\Delta t/2}\, \sin\left(\frac{\Omega t}{2}\right).
 \label{eq:rabi4}
 \end{eqnarray}
-Pri tem smo vpeljali tako imenovano Rabijevo frekvenco
+Pri tem smo vpeljali tako imenovano Rabijevo frekvenco\index{Rabijeva frekvenca}
 \begin{equation}
 \Omega = \sqrt{\Delta^2 + \left(\frac{V}{\hbar}\right)^2} = \sqrt{(\omega_0-\omega)^2 
 + \left(\frac{\langle1|\hat{x}|2\rangle\, eE_0}{\hbar}\right)^2}
 \end{equation}
 \begin{definition}
-Pokaži, da sta gornja izraza (enačbi~\ref{eq:rabi3} in \ref{eq:rabi4}) res rešita
+Pokaži, da enačbi~(\ref{eq:rabi3}) in (\ref{eq:rabi4}) rešita
 sistem enačb (\ref{eq:rabi2}) ob izbranih začetnih pogojih.
 \end{definition}
 Poglejmo rezultat podrobneje. Verjetnost, da najdemo atom v stanju $|2\rangle$, je enaka
@@ -1309,7 +1321,7 @@ da pride izmenično do popolne absorpcije svetlobe in do popolne stimulirane emi
 Pri odstopajoči vpadni frekvenci se amplituda nihanja zmanjša, hkrati pa se poveča
 frekvenca oscilacij. Frekvenca oscilacij pa ni odvisna zgolj od frekvence vpadnega valovanja, 
 ampak tudi od amplitude električne poljske jakosti vpadnega valovanja. Zelo groba ocena
-frekvence je zato $\Omega \sim~\si{MHz}$.
+Rabijeve frekvence je zato $\Omega \sim~\si{MHz}$.
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
@@ -1323,6 +1335,5 @@ zmanjšuje, njihova frekvenca pa povečuje.}
 \begin{remark}
 Rabijeve oscilacije niso omejene samo na optične prehode, ampak se pojavijo pri 
 vrsti dvonivojskih sistemov, ki interagirajo z spreminjajočim se zunanjim poljem, na primer
-pri jedrski magnetni resonanci (NMR) ali kvantnih logičnih vezjih oziroma kvantnih 
-računalnikih.
+pri jedrski magnetni resonanci (NMR) ali kvantnih logičnih vezjih.
 \end{remark}
