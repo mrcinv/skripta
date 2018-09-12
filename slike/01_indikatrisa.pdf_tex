@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '01_indikatrisa.pdf' (pdf, eps, ps)
 %%
@@ -35,10 +35,8 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
-  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
-  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{62.4607029bp}%
+    \setlength{\unitlength}{66.62474976bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -51,22 +49,20 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,1.18847764)%
-    \lineheight{1}%
-    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{01_indikatrisa.pdf}}%
-    \put(0.75941547,1.06356392){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\bf{k}$\end{tabular}}}}%
-    \put(0.8879027,0.51864475){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
-    \put(-0.0033228,0.28571315){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$x$\end{tabular}}}}%
+    \put(0.75941546,1.06356385){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\bf{k}$}}}%
+    \put(0.88790268,0.51864471){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$y$}}}%
+    \put(-0.0033228,0.28571314){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{01_indikatrisa.pdf}}%
-    \put(0.19536929,0.30902344){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n_1$\end{tabular}}}}%
-    \put(0.74761282,0.5144656){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n_2$\end{tabular}}}}%
-    \put(0.43946829,1.05721619){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n_3$\end{tabular}}}}%
+    \put(0.19536928,0.30902343){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_1$}}}%
+    \put(0.74761277,0.51446561){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_2$}}}%
+    \put(0.43946827,1.05721615){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_3$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{01_indikatrisa.pdf}}%
-    \put(0.05481608,0.72290918){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n_a$\end{tabular}}}}%
-    \put(0.30550496,0.30282345){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n_b$\end{tabular}}}}%
+    \put(0.05481605,0.72290918){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_a$}}}%
+    \put(0.30550495,0.30282344){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_b$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{01_indikatrisa.pdf}}%
-    \put(0.29631996,0.57634671){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\bf{D}_a$\end{tabular}}}}%
-    \put(0.38984065,0.39938909){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\bf{D}_b$\end{tabular}}}}%
-    \put(0.35010234,1.10297203){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
+    \put(0.29631995,0.57634669){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\bf{D}_a$}}}%
+    \put(0.38984063,0.39938907){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\bf{D}_b$}}}%
+    \put(0.35010233,1.10297198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z$}}}%
   \end{picture}%
 \endgroup%
