@@ -868,47 +868,53 @@ pri čemer so njihove frekvence enakomerno razmaknjene za $\Delta \omega =\pi c/
 (enačba~\ref{eq:delta-omega-resonator}). Celotno električno
 polje v neki točki v laserju zapišemo kot vsoto 
 \begin{equation}
-E(t)=\sum_{m=-N/2}^{N/2}A_{m}e^{i(\omega _{0}+m\Delta \omega )t+i\varphi,
-_{m}(t)}.
+E(t)=\sum_{m=-N/2}^{N/2}A_{m}e^{i(\omega _{0}+m\Delta \omega )t+i\varphi
+_{m}(t)},
 \label{5.342}
 \end{equation}
 pri čemer je $N$ število vseh vzbujenih nihanj. Upoštevali smo, da ima vsako
 nihanje lahko poljubno fazo $\varphi _{m}(t)$, ki je v splošnem predvsem
 zaradi zunanjih motenj slučajna funkcija časa. Zaradi tega se tudi
 celotno polje slučajno spreminja, kar močno zmanjšuje uporabnost
-takega laserja tam, kjer je potrebna časovna koherenca.
+takega laserja.
 
-\begin{figure}[h]
-\label{s5.10} \vskip 5cm
-\caption{"Casovna odvisnost moči mnogofrekvenčnega laserja z enakimi
-fazami }
-\end{figure}
-
-Denimo, da so faze vseh nihanj enake. Poleg tega zaradi enostavnosti
-računa privzemimo še, da so tudi vse amplitude $A_{m}$ enake. Tedaj
-postane vsota \ref{5.342} geometrijska in jo lahko brez težav seštejemo: 
+Denimo, da nekako dosežemo enake faze vseh nihanj. Poleg tega zaradi enostavnosti
+računa privzemimo, da so tudi vse amplitude $A_{m}$ enake. Tedaj
+postane vsota (\ref{5.342}) geometrijska in jo brez težav seštejemo 
 \begin{equation}
-E(t)=A_{0}e^{i\omega _{0}t}\frac{\sin (N\Delta \omega t/2)}{sin(\Delta
-\omega t/2)}\;\;.  \label{5.352}
+E(t)=A_{0}\,e^{i\omega _{0}t}\frac{\sin (N\Delta \omega t/2)}{\sin(\Delta
+\omega t/2)}.
+\label{5.352}
 \end{equation}
-Trenutna moč izhodne svetlobe ima časovno odvisnost 
+Moč izhodne svetlobe ima časovno odvisnost 
 \begin{equation}
-P(t)=P_{0}\frac{\sin ^{2}(N\Delta \omega t/2)}{\sin ^{2}(\Delta \omega t/2)}
+P(t)=P_{0}\,\frac{\sin ^{2}(N\Delta \omega t/2)}{\sin ^{2}(\Delta \omega t/2)},
 \label{5.36}
 \end{equation}
-in jo kaže slika \ref{s5.10}. Predstavlja periodično zaporedje sunkov, ki
-si slede s periodo $T=2\pi /\Delta \omega =2L/c$, kar je enako času obhoda
+ki jo kaže slika~(\ref{s5.10}). Predstavlja periodično zaporedje sunkov, ki
+si sledijo s periodo $T=2\pi /\Delta \omega =2L/c$, kar je enako času obhoda
 svetlobe v resonatorju. Konstanta $P_{0}$ je moč posameznega nihanja.
 Moč v vrhu sunka je tako $N^{2}P_{0}$, povprečna moč pa $NP_{0}$.
 Računsko je pojav enak kot uklon na mrežici in lahko rečemo, da imamo
 opravka z interferenco v času. Dolžina sunkov je \index{Uklonska mrežica}
 \begin{equation}
-\tau _{ML}=\frac{T}{N}=\frac{2\pi }{N\Delta \omega }=\frac{2\pi }{\Delta
-\omega _{G}}\;\;,  \label{5.37}
+\tau_{ML}=\frac{T}{N}=\frac{2\pi }{N\Delta \omega }=\frac{2\pi }{\Delta
+\omega_{G}},
+\label{5.37}
 \end{equation}
 ker je $N$ ravno število nihanj znotraj širine ojačevanja $\Delta
 \omega _{G}$. Dolžina sunka je torej obratno sorazmerna s širino
 ojačevanja aktivnega sredstva.
+
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/06_pulseML.pdf_tex}
+\caption{Časovna odvisnost moči večfrekvenčnega laserja z enakimi (uklenjenimi) fazami}
+\label{s5.10}
+\end{figure}
+
 
 Premislimo še, kakšna je prostorska odvisnost električnega polja v
 resonatorju. Polje na danem mestu opisuje enačba \ref{5.352}. "Se
