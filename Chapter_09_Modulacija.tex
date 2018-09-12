@@ -4,15 +4,15 @@
 \label{chap:modulacija}
 Pri obravnavi širjenja svetlobe skozi snov je najpomembnejši parameter lomni količnik
 oziroma tenzor dielektričnosti. V tem poglavju bomo spoznali, kako zunanje polje vpliva 
-na lomni količnik in tako na širjenje svetlobe skozi snov. To nam omogoča,
-da z zunanjim poljem spreminjamo -- moduliramo -- lastnosti svetlobe. En primer uporabe smo že spoznali pri 
+na lomni količnik in tako na širjenje svetlobe skozi snov. To omogoča spreminjanje
+-- modulacijo -- lastnosti svetlobe z zunanjim poljem. En primer uporabe smo že spoznali pri 
 obravnavi laserja, kjer za preklop dobrote potrebujemo element, ki hitro spreminja 
 prepustnost. Še pomembnejša je modulacija valovanja pri optičnem prenosu informacij.
 
 Svetlobno valovanje lahko moduliramo na več načinov. Z ustreznim moduliranjem
 lomnega količnika lahko valovanju spreminjamo amplitudo\index{Elektro-optična modulacija!amplitudna} 
 ali frekvenco oziroma fazo\index{Elektro-optična modulacija!frekvenčna}
-\index{Elektro-optična modulacija!fazna}. 
+\index{Elektro-optična modulacija!fazna} (slika~\ref{fig:amfm}). 
 \begin{figure}[h]
 \centering
 \def\svgwidth{140truemm} 
@@ -31,26 +31,26 @@ primer elektro-optičnih modulatorjev na osnovi tekočih kristalov.
 
 \section{Elektro-optični pojav}
 Elektro-optični pojav\index{Elektro-optični pojav} opisuje spremembe optičnih lastnosti 
-snovi (dielektričnosti in lomnega količnika) pod vplivom zunanjega električnega polja. 
-Omejimo se na statično zunanje polje oziroma
+snovi (dielektričnosti in lomnega količnika)\index{Lomni količnik} pod vplivom 
+zunanjega električnega polja. Omejimo se na statično zunanje polje oziroma
 na polje, katerega frekvenca je bistveno manjša od optične frekvence. Omejitev na nizko 
 frekvenco je potrebna zato, da optično polje še lahko obravnavamo linearno. 
 Kako je v nasprotnem primeru, ko je frekvenca polja primerljiva z optično frekvenco, 
 smo na široko obravnavali v poglavju o nelinearni optiki (poglavje~\ref{chap:NLO}).
 
-Namesto dielektričnega tenzorja\index{Dielektričnost!inverzna} 
+Zaradi priročnosti namesto dielektričnega tenzorja\index{Dielektričnost!inverzna} 
 vpeljemo inverzni dielektrični tenzor
-\beq
+\begin{equation}
 \underline{b}=\underline{\epsilon}^{-1}.
-\eeq
+\end{equation}
 
 \begin{definition}
 Pokaži, da je zveza med spremembo inverznega tenzorja $\delta \underline{b}$ 
 in spremembo dielektričnega tenzorja $\delta \underline{\varepsilon}$ 
-\beq
+\begin{equation}
  \delta \underline{\varepsilon}= -\underline{b}^{-1}\delta \underline{b}\, \underline{b}^{-1}
  = -\underline{\tilde{\varepsilon}}\, \delta \underline{b}\, \underline{\tilde{\varepsilon}},
-\eeq
+\end{equation}
 pri čemer $\underline{\tilde{\varepsilon}}$ označuje dielektrični tenzor v odsotnosti zunanjega polja 
 (nemoten tenzor).
 \end{definition}
@@ -66,32 +66,35 @@ zato inverzni dielektrični tenzor v lastnem nemotenem sistemu preprosto zapiše
 0 & 0&  1/n_3^2
 \end{array}\right],
 \end{equation}
-pri čemer so $n_1$, $n_2$ in $n_3$ lomni količniki snovi. Ko priključimo zunanje polje, se tenzor
-spremeni. Pri elektro-optičnem pojavu so spremembe tenzorja dielektričnosti zaradi vpliva zunanjega polja navadno razmeroma majhne in lahko spremembo komponente $\delta b_{ij}$ zapišemo kot 
+pri čemer so $n_1$, $n_2$ in $n_3$ lomni količniki snovi, ki so v splošnem različni. 
+Ko priključimo zunanje polje, se tenzor
+spremeni. Pri elektro-optičnem pojavu so spremembe tenzorja dielektričnosti zaradi vpliva
+zunanjega polja navadno majhne in lahko spremembo komponente $\delta b_{ij}$ zapišemo kot 
 potenčno vrsto zunanjega polja $E$, 
 pri čemer upoštevajmo zgolj prva dva člena v razvoju
 \boxeq{7.1}{
 \delta b_{ij}=r_{ijk}E_{k}+q_{ijkl}E_{k}E_{l}.
 }
 Prvi člen je linearno sorazmeren z zunanjim poljem in opisuje linearni elektro-optični
+\index{Elektro-optični pojav!linearni|see {Pockelsov pojav}}
 ali Pockelsov\index{Pockelsov pojav} pojav\footnote{Nemški fizik Friedrich Carl Alwin Pockels, 1865--1913.}. 
 Tenzor tretjega ranga $r_{ijk}$ imenujemo elektro-optični 
 tenzor\index{Elektro-optični tenzor}
 ali tudi Pockelsov tenzor\index{Pockelsov tenzor|see {Elektro-optični tenzor}}. 
 Pockelsov tenzor je različen od nič v snoveh brez centra inverzije, značilne vrednosti Pockelsovega
-tenzorja pa so okoli $r \sim 10^{-12} - 10^{-10}$~m/V.
+tenzorja pa so okoli $r \sim 10^{-12}$--$10^{-10}~\si{\m/\V}$.
 
 Kvadratnemu elektro-optičnemu pojavu pravimo Kerrov\index{Kerrov pojav}
-pojav\footnote{Škotski fizik John Kerr, 1824--1907.}, tenzorju $\underline{q}$ 
-pa Kerrov tenzor\index{Kerrov tenzor}. 
-Kerrov pojav je praviloma precej šibkejši od Pockelsovega, vendar je različen od nič v vseh snoveh, ne glede na
-njihove simetrijske lastnosti, torej tudi v tekočinah. 
-Značilna vrednost Kerrovega tenzorja je $q \sim 10^{-24}$~m$^2$/V$^2$. Navadno ločimo dva primera Kerrovega
-pojava: Kerrov elektro-optični pojav pri zunanjih poljih z nizko frekvenco, in optični Kerrov pojav, ki smo 
+pojav\footnote{Škotski fizik John Kerr, 1824--1907.}, tenzorju $q_{ijkl}$ 
+pa Kerrov tenzor\index{Kerrov tenzor}. \index{Elektro-optični pojav!kvadratni|see {Kerrov pojav}}Kerrov pojav je praviloma precej šibkejši od Pockelsovega, vendar je različen od 
+nič v vseh snoveh, ne glede na njihove simetrijske lastnosti, torej tudi v tekočinah. 
+Značilna vrednost Kerrovega tenzorja je $q \sim 10^{-24}$~m$^2$/V$^2$. 
+Navadno ločimo dva primera Kerrovega pojava: Kerrov elektro-optični pojav 
+pri zunanjih poljih z nizko frekvenco, in optični Kerrov pojav, ki smo 
 ga podrobneje spoznali pri obravnavi nelinearnih optičnih pojavov (poglavje~\ref{OKP}).
 
-Za uporabo trdnih kristalov je pomemben
-predvsem linearni člen, zato se bomo osredotočili le nanj in zapisali
+Pri uporabi trdnih kristalov navadno prevlada linearni člen, zato se osredotočimo
+le nanj in zapišemo
 \boxeq{eq:Pockels}{
 \delta b_{ij}=r_{ijk}E_{k}.
 }
@@ -100,41 +103,33 @@ predvsem linearni člen, zato se bomo osredotočili le nanj in zapisali
 Simetrija snovi pomembno vpliva na obliko tenzorjev, ki opisujejo njene lastnosti.
 Pockelsov tenzor $\underline{r}$ je tenzor tretjega ranga, zato je lahko različen
 od nič le v kristalih brez centra inverzije. 
-Ker je inverzni dielektrični tenzor $\underline{b}$ simetričen, je v prvih dveh indeksih simetričen
-tudi Pockelsov tenzor
-\beq
+\begin{definition}
+Pokaži, da je v kristalih s centrom inverzije tenzor $\underline{r}$
+vedno enak nič. 
+\end{definition}
+
+Ker je inverzni dielektrični tenzor $\underline{b}$ simetričen, je v 
+prvih dveh indeksih simetričen tudi $\underline{r}$
+\begin{equation}
 r_{ijk} = r_{jik}.
-\eeq
+\end{equation}
 V najmanj simetričnem primeru triklinskega kristala ima tako namesto 27 zgolj 
 18 neodvisnih komponent, v kristalih z višjo simetrijo pa še manj. 
 
-Podobno kot pri nelinearni susceptibilnosti (poglavje~\ref{Chap:Chi}) 
-tudi elektro-optični tenzor pogosto zapišemo le z dvema komponentama. 
+Podobno kot nelinearno susceptibilnost (poglavje~\ref{Chap:Chi}) lahko
+tudi elektro-optični tenzor zapišemo le z dvema komponentama. 
 Prva dva indeksa, v katerih je $r_{ijk}$ simetričen, združimo
 v enega z vrednostmi od 1 do 6 po dogovoru $xx=1$, $yy=2$, $zz=3$,
 $yz=4$, $zx=5$ in $xy=6$. Tako postane $r_{ijk}$ matrika velikosti
 $6\times3$, simetrični tenzor drugega ranga $b_{ij}$ pa šestdimenzionalen
 vektor.
-
-% \begin{definition}
-% Naj bo $Q$ transformacijska matrika za dano simetrijsko operacijo. Potem za tenzorje
-% tretjega ranga velja
-% \beq
-% r_{ijk} = Q_{ip}Q_{jq}Q_{kr}r_{pqr}.
-% \eeq
-% Zapiši transformacijsko matriko $Q$ za vrtenje okoli osi $z$ za $\pi/2$ in pokaži, da so
-% v primeru štirištevne simetrije od nič različne le komponente $r_{xxz}=r_{yyz}, r_{zzz}, 
-% r_{yzx}=-r_{xzy}$ in $r_{xzx}=r_{yzy}$. Razmisli in izračunaj, kakšen bi bil tenzor $r$, če bi 
-% štirištevni simetriji dodali še zrcaljenje čez ravnino $xy$.
-% \end{definition}
-
 Nekaj primerov Pockelsovih tenzorjev pri različnih kristalnih simetrijah
 je podanih v tabeli~(\ref{table:Pockels}).
 
 \begin{table}[h!]
  \centering
 \begin{tabular}{|c|c|c|c|} \hline  
-      Kristal & Grupa & Neničelne komponente tenzorja $r$ & Vrednost ($10^{-12}$~m/V)\\ \hline
+      Kristal & Grupa & Neničelne komponente tenzorja $r$ & Vrednost ($10^{-12}~\si{\m/\V}$)\\ \hline
       BaTiO$_3$\index{BaTiO$_3$} & 4mm & $r_{xzx} = r_{yzy} = r_{zxx} = r_{zyy} = 
       r_{51} = r_{42}$  &
 	    (pri $1,55~\si{\micro\metre}$) $r_{51} = 800$ \\
@@ -145,7 +140,8 @@ je podanih v tabeli~(\ref{table:Pockels}).
 	    $r_{41} = 8,77$ \\
 	    & & $r_{xyz} = r_{yxz} = r_{63}$ &  $r_{63} = -10,3$ \\ \hline
       GaAs\index{GaAs}\index{ZnTe} &  $\overline{4}$3m&
-	  $r_{yzx} = r_{zyx} = r_{xzy} = r_{zxy} = r_{xyz} = r_{yxz}$  & (pri $10,6~\si{\micro\metre}$) $r_{41} = 1,5$ \\
+	  $r_{yzx} = r_{zyx} = r_{xzy} = r_{zxy} = r_{xyz} = r_{yxz}$  & 
+	  (pri $10,6~\si{\micro\metre}$) $r_{41} = 1,5$ \\
 	ZnTe  & &   $= r_{41} = r_{52}=r_{63}$  &(pri $3,4~\si{\micro\metre}$) $r_{41} = 4,2$ 
 	    \\ \hline
       LiNbO$_3$\index{LiNbO$_3$} & 3m & $r_{xzx} = r_{zxx} = r_{yzy} = r_{zyy} = r_{51} = r_{42}$  &
@@ -158,7 +154,7 @@ je podanih v tabeli~(\ref{table:Pockels}).
 \hline 
 \end{tabular}
   \caption{Koeficienti Pockelsovega tenzorja za nekaj izbranih snovi. Če ni navedeno drugače, veljajo
-  vrednosti pri valovni dolžini okoli 600~nm.}
+  vrednosti pri valovni dolžini okoli $600~\si{nm}$.}
 \label{table:Pockels}
 \end{table}
 
@@ -183,11 +179,11 @@ elektro-optičnega kristala in kako to vpliva na svetlobo, ki potuje skozi tak k
 Navadno se uporabljajo kristali, ki so dvolomni že brez zunanjega polja. 
 Kot primer vzemimo kristal KH$_{2}$PO$_{4}$ (KDP)\index{KDP}, ki ima tetragonalno 
 simetrijo ($\bar{4}2m$). Kot razberemo iz tabele~(\ref{table:Pockels}) ima 
-elektro-optični tenzor dve neodvisni komponenti: $r_{41} = r_{52}=8,77 \times 10^{-12}$~m/V
-in $r_{63}= -10,3 \times 10^{-12}$~m/V.
+elektro-optični tenzor dve neodvisni komponenti: $r_{41} = r_{52}=8,77 \times 10^{-12}~\si{\m/\V}$
+in $r_{63}= -10,3 \times 10^{-12}~\si{\m/\V}$.
 
 Kristal naj bo odrezan po kristalografskih oseh, svetloba naj skozi kristal potuje 
-v smeri optične osi, to je smeri $z$, v isti smeri pa na kristal priključimo
+v smeri optične osi, to je po dogovoru smeri $z$, v isti smeri pa na kristal priključimo
 polje $E_z$. Ker je smer električnega polja vzporedna s smerjo širjenja svetlobe, taki 
 postavitvi pravimo longitudinalna in pojavu longitudinalna 
 modulacija.\index{Elektro-optična modulacija!longitudinalna} 
@@ -201,8 +197,9 @@ analizatorja sestavimo amplitudni modulator (glej poglavje~\ref{chap:ampmod}).}
 \label{fig:amshema}
 \end{figure}
 
-Inverzni tenzor dielektričnosti v odsotnosti zunanjega polja zapišemo kot
-\beq
+Inverzni tenzor dielektričnosti brez zunanjega polja za optično enoosni KDP zapišemo kot
+\index{Dvolomnost!enoosne snovi}
+\begin{equation}
 \underline{\tilde{b}} = 
 \left[\begin{array}{ccc}
 1/n_o^2 & 0& 0\\
@@ -210,9 +207,9 @@ Inverzni tenzor dielektričnosti v odsotnosti zunanjega polja zapišemo kot
 0 & 0&  1/n_e^2
 \end{array}\right],
 \label{7.8}
-\eeq
-pri čemer sta $n_o$ in $n_e$ redni in izredni lomni količnik. Ko priključimo 
-polje, se tenzor dielektričnosti spremeni zaradi Pockelsovega pojava. Sprememba
+\end{equation}
+kjer sta $n_o$ in $n_e$ redni in izredni lomni količnik. Ko priključimo 
+polje, se tenzor dielektričnosti zaradi Pockelsovega pojava spremeni. Sprememba
 inverznega tenzorja dielektričnosti je po enačbi~(\ref{eq:Pockels})
 \begin{align}
 \delta b_{xx} & =r_{xxx}E_x + r_{xxy}E_y + r_{xxz}E_z = 0,\nonumber \\
@@ -224,7 +221,7 @@ inverznega tenzorja dielektričnosti je po enačbi~(\ref{eq:Pockels})
 \end{align}
 Vidimo, da je večina členov enaka nič, se pa zaradi zunanjega električnega
 polja v smeri $z$ pojavi izvendiagonalna komponenta 
-\beq
+\begin{equation}
 \underline{b} = 
 \left[\begin{array}{ccc}
 1/n_o^2 & 0& 0\\
@@ -240,7 +237,7 @@ r_{63}E_z& 1/n_o^2 & 0\\
 0 & 0&  1/n_e^2
 \end{array}\right].
 \label{7.8a}
-\eeq
+\end{equation}
 Če želimo izračunati, kako se po kristalu pod napetostjo širi vpadni svetlobni
 snop, moramo gornji tenzor diagonalizirati. Lastne vrednosti novega tenzorja
 in pripadajoče nove lastne osi so
@@ -249,65 +246,70 @@ in pripadajoče nove lastne osi so
 \lambda_2 &= \frac{1}{n_o^2}- r_{63}E_z \quad \mathrm{in} \quad \mathbf{e}_2 = \frac{1}{\sqrt{2}}(-1,1,0)\\
 \lambda_3 &= \frac{1}{n_e^2} \quad \mathrm{in} \quad \mathbf{e}_3 = (0,0,1).
 \end{align}
-Os $z$ se ohranja, drugi dve novi lastni osi pa sta zasukani za kot $45~^\circ$ glede na prvotni osi $x$ in $y$.
+Os $z$ se ohranja, drugi dve novi lastni osi pa sta zasukani za kot $45~\si{\degree}$ 
+glede na prvotni osi $x$ in $y$.
 V novem koordinatnem sistemu je inverzni dielektrični tenzor diagonalen in enak
-\beq
+\begin{equation}
 \underline{b} = 
 \left[\begin{array}{ccc}
 1/n_o^2 + r_{63}E_z& 0& 0\\
 0 & 1/n_o^2 - r_{63}E_z& 0\\
 0 & 0& 1/n_e^2
 \end{array}\right].
-\eeq
+\end{equation}
 \begin{figure}[h]
 \centering
 \def\svgwidth{60truemm} 
 \input{slike/09_AMindikatrisa.pdf_tex}
-\caption{Optično enoosni kristal postane pod napetostjo dvoosen. Indikatrisa, ki je pravokotno
+\caption{Optično enoosen kristal postane pod napetostjo dvoosen. Indikatrisa, ki je pravokotno
 na optično os brez polja krožnica (polna črta), se pod vplivom napetosti spremeni v elipso (črtkana črta). }
 \label{fig:amn}
 \end{figure}
 
 Spomnimo se, da potuje svetloba skozi kristal vzdolž osi $z$. Brez zunanjega električnega
-polja je kristal enoosen z optično osjo v smeri $z$. Lomni količnik je neodvisen od
+polja je kristal enoosen z optično osjo v smeri $z$\index{Dvolomnost!enoosne snovi}. 
+Lomni količnik je neodvisen od
 polarizacije vpadnega valovanja in je enak $n_o$. Ko priključimo polje, postane kristal
-optično dvoosen, saj so vse tri lastne vrednosti tenzorja dielektričnosti različne. \index{Dvolomnost!Dvoosne snovi}
+optično dvoosen, saj so vse tri lastne vrednosti tenzorja dielektričnosti različne. 
+\index{Dvolomnost!dvoosne snovi}
 
 Za žarek, 
 ki potuje vzdolž osi $z$, torej obstajata dve lastni smeri $x'$ in $y'$ z ustreznima
 novima lastnima količnikoma, ki ju izrazimo kot
-\beq
+\begin{equation}
 \frac{1}{n_{x'}^2} = \frac{1}{n_o^2}+ r_{63}E_z \quad \mathrm{in} \quad 
 \frac{1}{n_{y'}^2} = \frac{1}{n_o^2}- r_{63}E_z. 
-\eeq
+\end{equation}
 \index{Lomni količnik}
-Za vsa eksperimentalno dosegljiva polja velja, da je $rE\ll1/n_o^2$, 
-zato lahko gornja izraza razvijemo za majhne popravke
-\beq
+Za vsa eksperimentalno dosegljiva polja velja $rE\ll1/n_o^2$ in 
+gornja izraza lahko razvijemo za majhne popravke
+\begin{equation}
 n_{x'} = \sqrt{\frac{n_o^2}{1+ n_o^2 r_{63}E_z}} \approx n_o \sqrt{1- n_o^2 r_{63}E_z}.
-\eeq
+\end{equation}
 Nova lomna količnika sa tako 
 \boxeq{EOnx}{
 n_{x'}\approx n_o - \frac{1}{2}n_o^3 r_{63}E_z,\\
 n_{y'}\approx n_o + \frac{1}{2}n_o^3 r_{63}E_z.
 }
-Različni lastni polarizaciji torej potujeta vzdolž osi $z$ z različnima hitrostma. Ko 
+Različni lastni polarizaciji ob priključenem zunanjem polju potujeta vzdolž osi $z$ z različnima hitrostma. Ko 
 prepotujeta dolžino kristala $L$, pride med njima do fazne razlike
-\beq
+\begin{equation}
 \Delta \phi = k_0 n_{y'} L - k_0 n_{x'} L = \frac{\omega}{c_0}L 
 n_o^3 r_{63}E_z.
 \label{phiAM}
-\eeq 
+\end{equation} 
 
 Kadar polarizacija vpadnega valovanja ne sovpada z novima lastnima osema $x'$ ali $y'$, je 
 svetloba po preletu kristala v splošnem eliptično polarizirana. 
 
-Vpeljemo še karakteristično napetost $U_\pi$, pri kateri je dodatna \index{$\pi$-napetost}
+Vpeljemo še karakteristično napetost $U_\pi$ (imenovano tudi $\pi$-napetost), 
+pri kateri je dodatna \index{$\pi$-napetost}
 fazna razlika enaka $\pi$ in kristal deluje kot ploščica $\lambda/2$\index{Ploščica $\lambda/2$}
 \boxeq{UpiL}{
 U_\pi = \frac{\pi c_0}{\omega n_o^3 r_{63}} = \frac{\lambda}{2 n_o^3 r_{63}}.
 }
-Za kristal KDP je $\pi$-vrednost napetosti pri valovni dolžini $633~\si{\nano\metre}$ okoli  $9000~\si{\volt}$, kar 
+Za kristal KDP\index{KDP} je $\pi$-napetost pri valovni 
+dolžini $633~\si{\nano\metre}$ okoli  $9000~\si{\volt}$, kar 
 je precej velika napetost. Velike delovne napetosti
 so značilne za kristalne elektro-optične modulatorje in so njihova
 glavna pomanjkljivost. 
@@ -317,10 +319,22 @@ glavna pomanjkljivost.
 Iz praktičnih razlogov je navadno preprosteje priključiti električno polje v smeri, ki 
 je pravokotna na smer širjenja svetlobe. Taki postavitvi pravimo transverzalna in pojavu
 transverzalna modulacija\index{Elektro-optična modulacija!transverzalna}.
-
 Tudi to postavitev obravnavajmo na primeru. Za zgled vzemimo kristal \index{LiNbO$_3$}LiNbO$_3$, ki 
 ima trigonalno simetrijo (3m) in po tabeli~(\ref{table:Pockels}) štiri 
 neodvisne komponente: $r_{51}=r_{42}, r_{13}=r_{23}, r_{33}$ in $r_{22}=-r_{12}=-r_{61}$.
+
+Naj se svetloba širi vzdolž osi $z$, ki je hkrati tudi optična os, 
+električno polje pa priključimo v smeri $y$ (slika~\ref{fig:tmshema}). 
+Krajši račun pokaže, da je inverzni dielektrični tenzor v polju enak
+\begin{equation}
+\underline{b} = 
+ \left[\begin{array}{ccc}
+1/n_o^2  -r_{22}E_y& 0& 0\\
+0& 1/n_o^2+r_{22}E_y& r_{51}E_y\\
+0 & r_{51}E_y&  1/n_e^2
+\end{array}\right].
+\label{7.8b}
+\end{equation}
 
 \begin{figure}[h]
 \centering
@@ -329,63 +343,51 @@ neodvisne komponente: $r_{51}=r_{42}, r_{13}=r_{23}, r_{33}$ in $r_{22}=-r_{12}=
 \caption{Shema transverzalne modulacije signala}
 \label{fig:tmshema}
 \end{figure}
-\pagebreak
-Naj se svetloba širi vzdolž osi $z$, ki je hkrati tudi optična os, 
-električno polje pa priključimo v smeri $y$ (slika~\ref{fig:tmshema}). 
-Krajši račun pokaže, da je inverzni dielektrični tenzor v polju enak
-\beq
-\underline{b} = 
- \left[\begin{array}{ccc}
-1/n_o^2  -r_{22}E_y& 0& 0\\
-0& 1/n_o^2+r_{22}E_y& r_{51}E_y\\
-0 & r_{51}E_y&  1/n_e^2
-\end{array}\right].
-\label{7.8b}
-\eeq
+
 Tudi v tem primeru tenzor diagonaliziramo in poiščemo nove lastne vrednosti.
-Če privzamemo, da je sprememba zaradi električnega polja majhna ($rE\ll1$),
+Če privzamemo, da je sprememba zaradi električnega polja majhna ($rE\ll1$), lahko
 zanemarimo člene, v katerih $rE$ nastopa v kvadratni obliki, in dobimo nove lastne vrednosti 
 \begin{align}
-\lambda_1 &\approx \frac{1}{n_o^2}-r_{22}E_y \\
-\lambda_2 &\approx \frac{1}{n_o^2}+ r_{22}E_y \\
-\lambda_3 &\approx \frac{1}{n_e^2},
+\lambda_1 &\approx \frac{1}{n_o^2}-r_{22}E_y, \\
+\lambda_2 &\approx \frac{1}{n_o^2}+ r_{22}E_y\quad \mathrm{in} \\
+\lambda_3 &\approx \frac{1}{n_e^2}.
 \end{align}
-kar ustreza lomnim količnikom 
+Ustrezni lomni količniki so 
 \begin{align}
-n_{x'} &\approx n_o+\frac{1}{2}n_o^3r_{22}E_y\\
-n_{y'} &\approx n_o-\frac{1}{2}n_o^3r_{22}E_y\\
+n_{x'} &\approx n_o+\frac{1}{2}n_o^3r_{22}E_y,\\
+n_{y'} &\approx n_o-\frac{1}{2}n_o^3r_{22}E_y \quad \mathrm{in}\\
 n_z' &\approx n_e.
 \end{align}
-\index{Dvolomnost!Dvoosne snovi}
-Kako pa je z novimi lastnimi osmi? Hitro ugotovimo, da se tudi pri 
+\index{Dvolomnost!dvoosne snovi}
+Kako pa je z novimi lastnimi osmi? Hitro ugotovimo (enačba~\ref{7.8b}), da se pri 
 priključenem polju os $x$ ohranja. Pojavi se torej zasuk okoli osi $x$,
 ki ga označimo s kotom $\vartheta$. Račun pokaže, da je za smiselne
 vrednosti električnega polja ta kot zelo majhen ($\vartheta~
-\approx~r_{51}E_y/(1/n_o^2-1/n_e^2) \sim~1$~mrad),
+\approx~r_{51}E_y/(1/n_o^2-1/n_e^2) \sim~1~\si{mrad}$),
 tako da lahko v približku rečemo, da se lastne osi ohranjajo. 
 
 Če potuje svetloba vzdolž osi $z$, sta torej lomna količnika za 
 polarizaciji v smeri $x$ in $y$ približno enaka $n_{x'}$ in $n_{y'}$, fazna razlika med 
 polarizacijama po preletu kristala z dolžino $L$ pa je 
-\beq
+\begin{equation}
 \Delta \phi = k_0 n_{y'} L - k_0 n_{x'} L = \frac{\omega}{c_0}L 
 n_o^3 r_{22}E_y.
 \label{fazaTM}
-\eeq
+\end{equation}
 Karakteristična $\pi$-napetost \index{$\pi$-napetost}je tako
 \boxeq{UpiT}{
 U_\pi = \frac{\lambda d}{2 Ln_o^3 r_{22}},
 }
 pri čemer moramo ločiti med $L$, ki je dolžina kristala v smeri $z$, in $d$, ki je  
 širina kristala v smeri, v kateri priključimo napetost. 
-Za izbran kristal ($d=5$~mm, $L=1$~cm) je $\pi$-vrednost 
+Za izbran kristal ($d=5~\si{mm}$, $L=1~\si{cm}$) je $\pi$-vrednost 
 napetosti pri valovni dolžini $633~\si{\nano\metre}$ okoli $2000~\si{\volt}$. 
 
 \begin{remark}
 Transverzalno modulacijo lahko dosežemo tudi tako, da se žarek širi vzdolž 
 osi $y$, električno polje pa priključimo vzdolž optične osi $z$.
 V tem primeru se lastne osi ohranijo in kristal ostane optično enoosen. Vendar 
-pa ima tudi ta rešitev določene slabosti. Ker je kristal že sam po sebi dvolomen\index{Dvolomnost}, 
+ ima tudi ta rešitev določene slabosti. Ker je kristal že sam po sebi dvolomen\index{Dvolomnost}, 
 povzroči zunanje polje le majhno dodatno fazno razliko, zato je najbolje, če je dolžina 
 kristala taka, da velja $k_{0}L(n_{o}-n_{e})=2N\pi$. Pri tem pa nastopi težava. 
 Pogoj je lahko zaradi temperaturnega raztezanja in odvisnosti lomnih količnikov od temperature
@@ -405,25 +407,25 @@ amplitude svetlobnega snopa. Pod vplivom polja pride v kristalu do
 faznega zamika med polarizacijama, ki je sorazmeren napetosti 
 (enačbi~\ref{phiAM} in \ref{fazaTM}).
 Če za tak kristal postavimo analizator, lahko z napetostjo spreminjamo 
-prepuščeno moč svetlobe -- amplitudno moduliramo signal.
+moč prepuščene svetlobe -- amplitudno moduliramo signal.
 
 Vrnimo se k longitudinalni\index{Elektro-optična modulacija!longitudinalna}
 modulaciji (slika~\ref{fig:amshema}).
 Naj bo vpadna električna poljska jakost $E_0$ polarizirana v smeri $y$. 
 Ko priključimo napetost, sta novi lastni osi zasukani 
-za kot $45~^\circ$ glede na prvotni lastni osi (slika~\ref{fig:amn}). Vpadno 
+za kot $45~\si{\degree}$ glede na prvotni lastni osi (slika~\ref{fig:amn}). Vpadno 
 valovanje razstavimo na komponenti $x'$ in $y'$
-\beq
+\begin{equation}
 \mathbf{E}_0 = E_0\, \mathbf{e}_y = \frac{E_0}{\sqrt{2}}\left(\mathbf{e}_{x'} + \mathbf{e}_{y'}\right).
-\eeq
+\end{equation}
 Po prehodu skozi kristal pride med njima do fazne razlike $\Delta \phi$ 
 (enačba~\ref{phiAM}), zato je polje $\mathbf{E}_1$ ob izstopu iz kristala
-\beq
+\begin{equation}
 \mathbf{E}_1 = \frac{E_0}{\sqrt{2}}\left(e^{ik_0 n_{x'}L}\mathbf{e}_{x'} + 
 e^{ik_0 n_{y'}L}\mathbf{e}_{y'}\right)
 = \frac{E_0}{\sqrt{2}}e^{ik_0 n_{x'}L}\left(\mathbf{e}_{x'} + 
 e^{i\Delta\phi}\mathbf{e}_{y'}\right).
-\eeq
+\end{equation}
 Analizator na izhodni strani je obrnjen v smeri $x$, to je pravokotno
 na smer vpadne polarizacije, in prepusti le projekcijo obeh lastnih polarizacij
 na os $x$
@@ -465,22 +467,23 @@ prepustnost modulatorja spremeni z 0 na 1 (slika~\ref{fig:amt}).
 Pogosto želimo, da je zveza med modulacijsko napetostjo in izhodno
 gostoto toka linearna. To lahko dosežemo, če modulator deluje v okolici $\Delta\phi=\pi/2$
 (slika~\ref{fig:amt}).
-Ena rešitev bi bila dodati stalno visoko napetost, signal pa modulirati okoli
-te vrednosti. Precej bolj praktična rešitev je, da med polarizator
-in kristal dodamo ploščico $\lambda/4$\index{Ploščica $\lambda/4$}, ki da zahtevan stalni
+Ena rešitev je dodati stalno visoko napetost, signal pa modulirati okoli
+te vrednosti. Precej bolj praktičen pristop je z uporabo ploščice $\lambda/4$\index{Ploščica $\lambda/4$},
+ki jo dodamo med polarizator in kristal, tako da se pojavi stalni
 fazni premik med rednim in izrednim valom. Potem lahko z razmeroma majhno napetostjo
 linearno amplitudno moduliramo svetlobo\index{Elektro-optična modulacija!linearna}.
 
 \section{Fazna in frekvenčna modulacija}
 \index{Elektro-optična modulacija!fazna}
 \index{Elektro-optična modulacija!frekvenčna}
-Svetlobo smo amplitudno modulirali, tako da smo z zunanjim
-poljem spremenili fazi lastnih valov, zaradi česar je postalo linearno
+Svetlobo amplitudno moduliramo, tako da z zunanjim
+poljem spremenimo fazi lastnih valov, zaradi česar postane linearno
 polarizirano vpadno valovanje po prehodu kristala eliptično polarizirano.
-Spremembo polarizacije smo z analizatorjem prevedli v spremembo amplitude.
+Spremembo polarizacije z analizatorjem prevedemo v spremembo amplitude.
 
 Včasih pa želimo modulirati fazo vpadne svetlobe. Tudi to si oglejmo na primeru longitudinalne
- modulacije\index{Elektro-optična modulacija!longitudinalna}. Fazno oziroma frekvenčno modulacijo dosežemo tako,
+ modulacije\index{Elektro-optična modulacija!longitudinalna}. Fazno oziroma 
+ frekvenčno modulacijo dosežemo tako,
 da vhodno polarizacijo izberemo vzporedno eni od novih lastnih osi kristala, 
 na primeri osi $x'$, izhodni polarizator pa odstranimo (slika~\ref{fig:fmshema}). 
 \begin{figure}[h]
@@ -493,61 +496,55 @@ novih lastnih osi kristala, ki se pojavijo pod vplivom zunanjega polja.}
 \end{figure}
 
 Celoten fazni zamik po preletu skozi kristal zapišemo kot 
-\beq
+\begin{equation}
 \phi =  k_0 n_{x'} L -\omega_0 t= \frac{\omega_0}{c_0}L \left(n_o -
 \frac{1}{2}n_o^3 r_{63}\frac{U}{L}\right)-\omega_0 t,
 \label{fmphi}
-\eeq
+\end{equation}
 pri čemer smo lomni količnik zapisali skladno z enačbo~(\ref{EOnx}). Opazimo,
-da je fazni zamik odvisen od priključene zunanje napetosti.
+da je fazni zamik odvisen od priključene zunanje napetosti. 
 
 Obravnavajmo dva primera spreminjajoče se napetosti. V prvem primeru naj bo 
 napetost linearna funkcija časa 
-\beq
+\begin{equation}
 U= U_0 + \frac{\Delta U}{\Delta t}t.
-\eeq
+\end{equation}
 Celotna faza prepuščenega valovanja je potem
-\beq
+\begin{equation}
 \phi = \frac{\omega_0}{c_0}L n_o - \frac{\omega_0 n_o^3 r_{63}}{2c_0}\left( U_0 + 
 \frac{\Delta U}{\Delta t}t\right) - \omega_0 t.
-\eeq
+\end{equation}
 Trenutno frekvenco valovanja izračunamo kot negativni odvod faze po času
-\beq
-\omega = -\frac{d\phi}{dt} = \omega_0 + \frac{\omega_0 n_o^3 r_{63}}{2c_0}\frac{\Delta U}{\Delta t} 
-\eeq
-oziroma
-\beq
-\omega  = \omega_0 + \Delta \omega.
-\eeq
+\begin{equation}
+\omega = -\frac{d\phi}{dt} = \omega_0 + \frac{\omega_0 n_o^3 r_{63}}{2c_0}\frac{\Delta U}{\Delta t} =
+\omega_0 + \Delta \omega.
+\end{equation}
 Linearno spreminjajoča se modulacijska napetost da torej konstanten frekvenčni premik, kar v optiki 
 pogosto potrebujemo. Dosegljive spremembe frekvence so seveda dokaj majhne,
-do nekaj sto~MHz, saj so omejene s hitrostjo spreminjanja napetosti.
+do nekaj sto~$\si{MHz}$, saj so omejene s hitrostjo spreminjanja napetosti.
 Napetost seveda tudi ne more neomejeno naraščati. Kadar se napetost
 vrača na nič, pride do frekvenčnega premika v nasprotni smeri, ki pa ga
 lahko zanemarimo, če je čas vračanja bistveno krajši od časa naraščanja.
 
-Poglejmo še drug primer, pri katerem se priključena napetost periodično spreminja. 
-Zapišemo jo kot \begin{equation}
-U=U_{0}\sin(\omega_{m}t).
-\label{7.21}
-\end{equation}
-Vstavimo gornji izraz v enačbo~(\ref{fmphi}) in zapišemo fazo izhodnega valovanja 
-\beq
+Poglejmo še primer, ko se priključena napetost periodično spreminja kot
+$U=U_{0}\sin(\omega_{m}t)$.
+Vstavimo izraz v enačbo~(\ref{fmphi}) in zapišemo fazo izhodnega valovanja 
+\begin{equation}
 \phi = \frac{\omega_0}{c_0}L n_o - \frac{\omega_0 n_o^3 r_{63}}{2c_0} U_0\sin(\omega_{m}t)
 - \omega_0 t.
-\eeq
-V primeru linearno spreminjajoče napetosti smo na tem mestu fazo odvajali in dobili hitrost, ki 
+\end{equation}
+V primeru linearno spreminjajoče se napetosti smo na tem mestu fazo odvajali in dobili hitrost, ki 
 je bila konstantna. V tem primeru pa z odvajanjem dobimo kotno hitrost, ki se spreminja s časom. Zato
 se računa lotimo drugače. Konstantni člen v gornjem izrazu lahko izpustimo in zapišemo električno
 poljsko jakost prepuščenega valovanja  
-\beq
+\begin{equation}
 E = E_0 \cos\left( \omega_0 t + \frac{\omega_0 n_o^3 r_{63}}{2c_0} U_0\sin(\omega_{m}t)\right)
 = E_0 \cos\left( \omega_0 t + \delta \sin(\omega_{m}t)\right),
-\eeq
+\end{equation}
 pri čemer je
-\beq
+\begin{equation}
 \delta = \frac{\omega_0 n_o^3 r_{63}}{2c_0} U_0.
-\eeq
+\end{equation}
 Z uporabo Jacobi-Angerjevih\footnote{Nemška matematika Carl Gustav Jacob Jacobi, 1804--1851, in Carl
 Theodor Anger, 1803--1858.} identitet 
 \begin{align}
@@ -573,10 +570,10 @@ Ob upoštevanju Jacobi-Angerjevih identitet (enačbi~\ref{JA}) pokaži, da elekt
 izhodne svetlobe ob priključeni izmenični napetosti s frekvenco $\omega_m$ ustreza
 polju v enačbi~(\ref{fmJA}).
 \end{definition}
-Zaradi periodične fazne modulacije se torej v spektru pojavijo stranski pasovi, ki so 
+Zaradi periodične fazne modulacije se v spektru pojavijo stranski pasovi, ki so 
 od osnovne frekvence $\omega_0$ odmaknjeni za večkratnike modulacijske frekvence $\omega_m$. 
-Njihova velikost je podana s kvadratom Besselovih funkcij parametra $\delta$.
-Ker je ta navadno majhen, se pogosto zadovoljimo le s prvim členom.
+Njihova velikost je podana s kvadratom Besslovih funkcij parametra $\delta$.
+Ker je ta navadno majhen, za opis pogosto zadošča le prvi člen.
 
 \begin{remark}
 Elektro-optični pojav izkoriščamo tudi za uklanjanje žarkov. 
@@ -590,82 +587,45 @@ kažeta v nasprotni smeri. S spreminjanjem napetosti, ki jo priključimo prečno
 razširjanja svetlobe, lahko zelo hitro in zelo natančno spreminjamo smer izhodnega žarka. 
 Vendar ta pristop ni splošno uveljavljen, predvsem zaradi velike napetosti, ki je 
 potrebna za znatno uklanjanje. Veliko bolj razširjen je akusto-optični pojav, ki ga 
-bomo spoznali v naslednjem razdelku. 
+bomo spoznali v nadaljevanju. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{95truemm} 
+\def\svgwidth{85truemm} 
 \input{slike/09_EOdefl.pdf_tex}
 \caption{Shema elektro-optičnega deflektorja}
+\vglue-1truecm
 \label{fig:deflshema}
 \end{figure}
 \end{remark}
+\begin{remark}
+Elektro-optični pojav ima dva prispevka: direktnega, kjer zunanje polje 
+vpliva neposredno na elektronsko polarizabilnost, in posredno spremembo
+lomnega količnika zaradi piezoelektrične deformacije. Pri nizkih frekvencah sta prispevka 
+primerljiva, pri velikih frekvencah pa deformacija kristala ne more slediti
+modulacijski napetosti in ostane le direktni prispevek. To se zgodi nad 
+akustičnimi resonancami kristala. Pri akustičnih resonancah, ko 
+modulacija v kristalu vzbudi stoječe zvočno valovanje, pa se piezoelektrični 
+prispevek resonančno poveča. Pogoj za akustično resonanco je, da je dimenzija 
+kristala mnogokratnik polovice valovne dolžine akustičnega vala v kristalu. 
+Pri kristalih reda velikosti centimeter in hitrosti zvočnih valov okoli
+$5000~\si{\m/\s}$ so resonance v območju od nekaj sto $\si{kHz}$ do
+nekaj deset $\si{MHz}$. 
 
-% \section{*Modulacija pri visokih frekvencah}
-% Do zdaj smo obravnavali elektro-optično modulacijo pri statičnih poljih ali 
-% poljih, ki so se le počasi spreminjali s časom. Poglejmo še,
-% kaj se zgodi pri visokih modulacijskih frekvencah.
-% 
-% Elektro-optični pojav pri nizkih frekvencah ima dva prispevka: direktnega,
-% kjer zunanje polje vpliva neposredno na elektronsko polarizabilnost,
-% in posrednega preko piezoelektričnega pojava. Snovi, ki nimajo centra
-% inverzije, so tudi piezoelektrične in se v zunanjem električnem polju
-% deformirajo. Deformacija pa povzroči spremembo lomnega količnika,
-% o čemer bomo podrobneje govorili v enem od naslednjih oddelkov. Celotno
-% spremembo tenzorja $b_{ij}$ lahko zapišemo 
-% \begin{eqnarray}
-% \delta b_{ij} & = & r_{ijk}^{\ast}E_{k}+p_{ijlm}S_{lm}\nonumber \\
-%  & = & r_{ijk}^{\ast}E_{k}+p_{ijlm}\pi_{lmk}E_{k}
-% \end{eqnarray}
-%  Tu je $S_{lm}=\pi_{lmk}E_{k}$ piezoelektrično povzročena deformacija.
-% Pri nizkih frekvencah sta oba prispevka primerljivo velika in je efektivni
-% elektro-optični tenzor $r_{ijk}=r_{ijk}^{\ast}+p_{ijlm}\pi_{lmk}$.
-% Pri dovolj velikih frekvencah deformacija kristala ne more več slediti
-% modulacijski napetosti in ostane le direktni prispevek $r_{ijk}^{\ast}$.
-% To se zgodi nad akustičnimi resonancami kristala. Pri akustičnih resonancah,
-% to je, kadar modulacija v kristalu vzbudi stoječe zvočno valovanje,
-% pa se piezoelektrični prispevek resonančno poveča.
-% 
-% Pogoj za akustično resonanco je, da je dimenzija kristala mnogokratnik
-% polovice valovne dolžine akustičnega vala v kristalu. Uporabne dimenzije
-% kristalov so reda velikosti centimeter, hitrost zvočnih valov je okoli
-% 5000~m/s, tako da so resonance v področju od nekaj sto kHz do
-% nekaj deset MHz. Mogoče jih je tudi izkoristiti za povečanje elektro-optičnega
-% efekta pri izbrani frekvenci.
-% 
-% Pri visokih frekvencah postane pomembna tudi električna vezava modulatorja.
-% Kristal predstavlja neko kapacitivno breme. Njegova impedanca pada
-% z rastočo frekvenco, zato je vedno večji del padca napetosti na notranjem
-% uporu izvora napetosti. Pomagamo si lahko tako, da vzporedno s kristalom
-% vežemo še tuljavo, tako da je resonančna frekvenca $1/(L_{t}C)$ nastalega
-% nihajnega kroga enaka željeni modulacijski frekvenci $\omega_{m}$.
-% Tedaj je večina padca napetosti na kristalu in tuljavi. Da resonanca
-% ni preostra in da je na voljo dovolj širok pas modulacijskih frekvenc,
-% vežemo vzporedno s kristalom še upor z upornostjo $R$. Širina modulacijskega
-% pasu je 
-% \begin{equation}
-% \Delta\omega_{m}=\frac{1}{RC}\;.\label{7.24}
-% \end{equation}
-%  Na uporu se troši moč 
-% \begin{equation}
-% P=\frac{1}{2}\frac{U^{2}}{R}=\frac{1}{2}U^{2}C\Delta\omega_{m}=
-% \frac{\epsilon\epsilon_{0}La}{2d}U^{2}C\Delta\omega_{m}\;,\label{7.25}
-% \end{equation}
-%  kjer je $a$ velikost kristala v prečni smeri. Naj bo $U$ ravno
-% napetost, ki da fazno razliko $\pi$. Potem sledi z uporabo enačbe
-% \ref{7.18} 
-% \begin{equation}
-% P=\frac{A}{L}\,\frac{\epsilon\epsilon_{0}\Delta\omega_{m}\lambda^{2}}{3n_{0}^{6}r^{2}}\;,\label{7.26}
-% \end{equation}
-%  kjer je $A$ prečni presek kristala. Potrebna moč je odvisna od lastnosti
-% modulatorja in širine modulacijskega pasu. Pri širini modulacijskega
-% pasu 1~MHz in preseku kristala 1~cm$^{2}$ je potrebna moč nekaj
-% deset W, kar je za visokonapetosten in hiter izvor že znatna moč.
+Pri visokih frekvencah postane pomembna tudi električna vezava modulatorja,
+saj kristal predstavlja kapacitivno breme. Njegova impedanca pojema z 
+rastočo frekvenco, zato je vedno večji del padca napetosti na notranjem 
+uporu izvora napetosti. Pomagamo si z vzporedno vezavo tuljave, 
+tako da je resonančna frekvenca $1/(LC)$ nastalega nihajnega kroga 
+enaka modulacijski frekvenci, z dodatnim uporom pa spreminjamo širino resonance.
+Tipična moč, ki je potrebna za modulacijo je nekaj $10~\si{W}$, 
+kar je za visokonapetosten in hiter izvor že znatna moč. 
+\end{remark}
 
 \section{Elasto-optični in akusto-optični pojav}
 \index{Elasto-optični pojav}
 \index{Akusto-optični pojav}
 Pri elasto-optičnem pojavu dielektrične lastnosti snovi in njen lomni količnik
-spreminjamo z mehansko deformacijo. Podobno kot pri elektro-optičnem pojavu opišemo pojav
+spreminjamo z mehansko deformacijo. Tudi tu opišemo pojav
 s spremembo inverznega dielektričnega tenzorja\index{Dielektričnost!inverzna}
 \begin{equation}
 \underline{b} = \underline{\tilde{b}}+ \delta\underline{b},
@@ -676,8 +636,7 @@ kot
 \boxeq{7.27}{
  \delta b_{ij}=p_{ijkl}S_{kl}.
 }
-Sorazmerna je s tenzorjem deformacije snovi oziroma 
-Greenovim tenzorjem\footnote{Angleški matematični fizik George Green, 1793--1841.} v
+Sorazmerna je s tenzorjem deformacije snovi (Greenovim tenzorjem\footnote{Angleški matematični fizik George Green, 1793--1841.}) v
 linearnem približku
 \begin{equation}
 S_{kl}=\frac{1}{2}\left({\frac{\partial u_{k}}{\partial x_{l}}}+{\frac{\partial u_{l}}{\partial x_{k}}}\right),
@@ -689,14 +648,14 @@ Vpeljali smo še sorazmernostni faktor
 $p_{ijkl}$, ki ga imenujemo elasto-optični tenzor\index{Elasto-optični tenzor}. 
 Tenzor $p$ je različen od nič v vsaki snovi, saj povezuje dva simetrična tenzorja 
 drugega ranga. Posledično je simetričen v prvem in drugem paru indeksov
-\beq
+\begin{equation}
 p_{ijkl} = p_{jikl} = p_{ijlk} =p_{jilk}.
-\eeq
+\end{equation}
 V najbolj splošnem primeru triklinske kristalne simetrije 
 ima tako 36 neodvisnih komponent, v bolj simetričnih snoveh pa se število 
 neodvisnih komponent še zmanjša. Če vpeljemo skrajšan zapis indeksov ($xx = 1,
 yy=2, zz = 3, yz = 4, zx = 5, xy = 6$), zapišemo tenzor za primer izotropne snovi kot
-\beq
+\begin{equation}
 \underline{p}_{\textrm{izo}} = 
 \left[\begin{array}{cccccc}
 p_{11} & p_{12}& p_{12}&0&0&0\\
@@ -707,14 +666,14 @@ p_{12} & p_{12}& p_{11}&0&0&0\\
 0 & 0& 0&0&0&p_{44}
 \end{array}\right],
 \label{tenzorp}
-\eeq
+\end{equation}
 pri čemer je $p_{44}= \frac{1}{2}(p_{11}-p_{12})$. Koeficienti tenzorja so 
 brezdimenzijski, njihova tipična vrednost pa je $p\sim0,1$. Za vodo, na primer, 
 velja $p_{11} \simeq p_{12} = 0,31$, za LiNbO$_3$\index{LiNbO$_3$} pa $p_{11} = -0,02, 
 p_{12} = 0,08, p_{13} = 0,13,  p_{14} = -0,08, p_{31} = 0,17, p_{33} = 0,07,
 p_{41} = -0,15, p_{44} = 0,12$.
 
-Podobno kot pri elektro-optičnem pojavu lahko iz enačbe~(\ref{7.27}) izrazimo
+Iz enačbe~(\ref{7.27}) izrazimo
 spremembo dielektričnega tenzorja 
 \begin{equation}
 \delta\epsilon_{ij}=-\tilde{\epsilon}_{ii}\tilde{\epsilon}_{jj}p_{ijkl}S_{kl},
@@ -731,17 +690,17 @@ pravimo tudi akusto-optični pojav.
 \begin{definition}
 Po izotropni snovi se širi longitudinalno valovanje vzdolž smeri $z$, tako da 
 deformacijo v snovi zapišemo kot
-\beq
+\begin{equation}
 \mathbf{u} = A \cos(q z - \Omega t)\mathbf{e}_z.
-\eeq
-Pokaži, da je taka snov dvolomna z optično osjo vzdolž osi z, lastni 
+\end{equation}
+Pokaži, da je taka snov dvolomna z optično osjo vzdolž osi $z$, lastni 
 lomni količniki pa so 
 \begin{align}
 n_{x'} &\approx n(1+\frac{1}{2}n^2p_{12}q A \sin (q z - \Omega t))\\
 n_{y'} &\approx n(1+\frac{1}{2}n^2p_{12}q A \sin (q z - \Omega t))\\
 n_z' &\approx n(1+\frac{1}{2}n^2p_{11}q A \sin (q z - \Omega t)),
 \end{align}
-kjer je $n$ lomni količnik v odsotnosti motnje.
+kjer je $n$ lomni količnik v odsotnosti motnje.\index{Lomni količnik}
 \end{definition}
 
 \section{Uklon svetlobe na zvočnem valovanju}
@@ -753,19 +712,19 @@ Na drugo stran kristala damo akustični absorber ali pa reflektor, tako da lahko
 v snovi vzbudimo tudi stoječe valovanje. 
 Zaradi zvočnega valovanja se v snovi periodično spreminja gostota in 
 z njo lomni količnik\index{Lomni količnik}
-\beq
-n = \tilde{n} + \delta n \sin \left(\frac{2\pi}{\Lambda} x- \Omega t\right).
-\eeq
+\begin{equation}
+n = \tilde{n} + \delta n \,\sin \left(\frac{2\pi}{\Lambda} x- \Omega t\right).
+\end{equation}
 V zgoščini je lomni količnik nekoliko večji kot v razredčini, zato je optična pot na takem mestu
 skozi plast daljša. Ravno svetlobno valovanje, ki vpada na plast pravokotno glede
 na smer širjenja zvoka, po izstopu zato nima povsod enake faze, 
 valovno čelo pa je periodično modulirano s periodo 
 valovne dolžine zvočnega valovanja. Zvočno valovanje v snovi torej deluje kot 
 optična fazna mrežica. Tipična frekvenca, s katero vzbujamo elastično
-deformacijo, je okoli $\Omega=50$~MHz, ustrezna valovna dolžina pa okoli $\Lambda = 100~\si{\micro\metre}$. 
-Frekvence, ki so v uporabi, navadno sežejo od nekaj MHz prek 10 GHz. Vsa ta valovanja imenujemo
-ultrazvočno valovanje. 
-
+deformacijo, je okoli $\Omega=50~\si{MHz}$, ustrezna valovna dolžina pa okoli 
+$\Lambda = 100~\si{\micro\metre}$. Frekvence, ki so v uporabi, navadno sežejo od 
+nekaj $\si{MHz}$ prek $10~\si{GHz}$. Čeprav so vse te frekvence
+daleč nad slišnimi, pogosto imenujemo ta valovanja kar zvočna. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{60truemm} 
@@ -774,20 +733,21 @@ ultrazvočno valovanje.
 \label{fig:ao}
 \end{figure}
 
-Oglejmo si dva limitna primera. V prvem primeru je debelina plasti $d$, 
-v kateri vzbujamo zvočno valovanje, zelo majhna (slika~\ref{fig:ao_bragg}\,a). 
-Takrat modulator deluje kot tanka uklonska mrežica \index{Uklon}in pojavi se veliko 
+Oglejmo si dva limitna primera. V prvem primeru je debelina plasti, 
+v kateri vzbujamo zvočno valovanje, zelo majhna in $d \ll \Lambda^2/\lambda$ (slika~\ref{fig:ao_bragg}\,a).
+Takrat modulator deluje kot tanka uklonska mrežica \index{Uklon}\index{Uklonska 
+mrežica}in pojavi se veliko 
 uklonskih vrhov, intenziteta posameznega žarka pa je razmeroma majhna. 
 Kote, pod katerimi se pojavijo ojačitve, izračunamo po preprosti enačbi
 \boxeq{R-N}{
-\Lambda (\sin \vartheta - \sin \beta ) = \pm N \lambda,
+\Lambda (\sin \vartheta - \sin \beta ) = N \lambda,
 }
 pri čemer je $\lambda$ valovna dolžina svetlobe v snovi, $N$ pa celo število. Takemu pojavu 
 pravimo Raman-Nathov uklon\footnote{Indijski fizik in nobelovec Sir Chandrasekhara 
 Venkata Raman, 1888--1970, 
 in indijski fizik N. S. Nagendra Nath.}\index{Raman-Nathov uklon}. 
 Opazimo ga pri razmeroma nizkih zvočnih frekvencah 
-(pod $\sim10$~MHz) in majhnih debelinah (pod $\sim 1$~cm) pri poljubnem vpadnem 
+(pod $\sim10~\si{MHz}$) in majhnih debelinah (pod $\sim 1~\si{cm}$) pri poljubnem vpadnem 
 kotu $\vartheta$.
 \begin{figure}[h]
 \centering
@@ -795,7 +755,7 @@ kotu $\vartheta$.
 \input{slike/09_AO_1.pdf_tex}
 \caption{Ob vpadu svetlobe na tanko plast zvočnega valovanja (a) se pojavi veliko uklonskih vrhov, 
 na debeli plasti zvočnega valovanja (b) pa je opazen zgolj en uklonjen vrh, 
-pa še ta le ob izpolnjenem Braggovem pogoju (enačba~\ref{7.29a}).}
+pa še ta le ob izpolnjenem Braggovem pogoju.}
 \label{fig:ao_bragg}
 \end{figure}
 
@@ -803,10 +763,10 @@ V nasprotnem limitnem primeru se svetloba uklanja na ravnih zvočnih valovih in 
 kot debela uklonska mrežica (slika~\ref{fig:ao_bragg}\,b). 
 V splošnem je delež uklonjene svetlobe na taki mrežici neuporabno majhen. 
 Znaten postane le tedaj, kadar je izpolnjen Braggov\index{Braggov uklon}
-pogoj\footnote{Angleška znanstvenika in nobelovca Sir William Henry Bragg, 1862--1942,
+pogoj\footnote{Angleška znanstvenika in nobelovca oče in sin Sir William Henry Bragg, 1862--1942,
 in Sir William Lawrence Bragg, 1890--1971.}
 \boxeq{7.29a}{
-2 \Lambda\sin\vartheta=\pm N\lambda.
+2 \Lambda\sin\vartheta= N\lambda.
 }
 
 Poglejmo natančneje, kako pridemo do gornjega pogoja. Zapišimo pogoj
@@ -823,7 +783,7 @@ Ker je frekvenca zvočnega vala dosti nižja od frekvence svetlobe, se frekvenca
 pri sipanju le malo spremeni in $\mathbf{k}_{0}$ in $\mathbf{k}_{1}$ sta po velikosti skoraj enaka.
 Tedaj je $q=2k_{0}\sin\vartheta$ (glej sliko~\ref{fig:ao_bragg3}), od koder sledi Braggov pogoj 
 (enačba~\ref{7.29a}). Obenem je vpadni kot na zvočni val enak izhodnemu, kar pomeni, da se na
-zvočnem valu Braggovo sipana svetloba zrcalno odbije. Razmere so torej
+zvočnem valu Braggovo sipana svetloba zrcalno odbije.\index{Braggov odboj} Razmere so torej
 povsem analogne Braggovemu sipanju rentgenske svetlobe na kristalnih
 ravninah. Kot bomo pokazali v nadaljevanju, je ob izpolnjenem Braggovem pogoju mogoče doseči, 
 da se vsa vpadna svetloba uklanja.
@@ -842,16 +802,15 @@ Izhajajmo iz pogoja, da je razširitev žarka na debelini plasti zvočnega valov
  divergenco kot (enačba~\ref{eq:divergenca-snopa}) $\theta \sim \lambda/w_0 \sim 2\lambda/\Lambda$.
  Po drugi strani pa zaradi modulacije divergenca valovanja ne sme presegati 
  razširitve $\theta \sim \Lambda/2d$. Sledi kriterij za debelino $d$, pri kateri preidemo iz enega v drug režim
-\beq
+\begin{equation}
 d \sim \frac{\Lambda^2}{4 \lambda}.
-\eeq
+\end{equation}
 Če svetloba z $\lambda = 1~\si{\micro\metre}$ vpade na kristal, v katerem je vzbujeno zvočno
-valovanje z valovno dolžino $\Lambda = 0,2~\si{\milli\metre}$ in frekvenco $\Omega = 150~\si{\mega\hertz}$, 
-je mejna debelina $d \sim 1~\si{\centi\meter}$.
+valovanje z valovno dolžino $\Lambda = 0,2~\si{\milli\metre}$ in frekvenco $\Omega = 150~\si{\mega\hertz}$, je mejna debelina $d \sim 1~\si{\centi\meter}$.
 \end{remark}
 
 Če je zvočno valovanje potujoče, kar smo v gornjem razmišljanju že privzeli
-s tem, ko smo mu pripisali natanko določen valovni vektor $\mathbf{q}$,
+s tem, da smo mu pripisali natanko določen valovni vektor $\mathbf{q}$,
 se spremeni tudi frekvenca sipanega vala zaradi Dopplerjevega premika
 pri odboju na zvočnem valovanju, ki potuje s hitrostjo $v_{z}$. Upoštevati
 moramo le projekcijo na smer vpadne in odbite svetlobe, zato je 
@@ -873,19 +832,21 @@ frekvenca pa se enkrat poveča, drugič zmanjša za $\Omega$. Zato se pojavi utr
 sipanega vala s frekvenco $2\Omega$.
 
 \subsection*{Uporaba akusto-optičnih modulatorjev}
+\index{Akusto-optični modulator}
 Spoznali smo, da lahko z zvočnim valovanjem spreminjamo smer vpadne svetlobe.
-Bistvena razlika od navadnih uklonskih mrežic je dinamičnost akusto-optičnih modulatorjev, 
-saj lahko uklonski kot svetlobe hitro spreminjamo, pri čemer pa smo omejeni s 
+Bistvena razlika od navadnih uklonskih mrežic\index{Uklonska 
+mrežica} je dinamičnost akusto-optičnih modulatorjev, 
+saj lahko uklonski kot svetlobe hitro spreminjamo. Pri tem smo omejeni s 
 tem, da mora biti vsaj približno izpolnjen Braggov pogoj. S kombinacijo dveh med seboj 
 pravokotnih akusto-optičnih modulatorjev lahko žarek 
 premikamo po ravnini, kar s pridom uporabljamo v različnih optičnih napravah, 
 na primer v optičnih pincetah, optičnih čitalcih ali 
-optičnih litografskih zapisovalnikih.
+optičnih litografskih zapisovalnikih.\index{Optična pinceta}
 
 Z vklapljanjem in izklapljanjem zvočnega valovanja, ki ga vzbujamo s piezoelektričnim elementom,
 na katerega pritisnemo izmenično napetost, lahko moduliramo intenziteto
 direktnega svetlobnega snopa. To potrebujemo na primer pri preklapljanju
-dobrote laserskega resonatorja.
+dobrote laserskega resonatorja.\index{Preklop dobrote}
 
 Tretji primer uporabe je spreminjanje frekvence svetlobe. Možne so spremembe
 do nekaj $100~\si{\mega\hertz}$, kar je ravno primerno za uporabo v laserskih merilnikih
@@ -896,11 +857,11 @@ predmeta, če pa referenčni svetlobi nekoliko spremenimo frekvenco,
 se pojavi utripanje tudi tedaj, ko predmet miruje. Frekvenca utripanja
 se poveča ali zmanjša glede na predznak hitrosti predmeta.
 
-Naslednja pomembna uporaba je za uklepanje faz
+Naslednja pomembna uporaba je za uklepanje faz\index{Uklepanje faz}
 v laserskem resonatorju. Če je v Braggovem elementu prisotno stoječe zvočno
 valovanje, je amplituda direktnega snopa modulirana s frekvenco zvoka.
 Kadar je frekvenca zvoka ravno enaka razmiku frekvenc laserskih nihanj,
-lahko nastanejo uklenjene faze vzbujenih nihanj in s tem kratki, periodični
+lahko nastanejo uklenjene faze vzbujenih nihanj in s tem kratki
 sunki svetlobe.
 
 Zanimiva je tudi uporaba Braggovega elementa za izdelavo
@@ -914,7 +875,7 @@ od kota odklona in torej od frekvence zvočnega vala. Spekter zaznamo
 z vrstičnim detektorjem. Akusto-optični element oziroma Braggova celica 
 torej frekvenčni spekter zvočnih valov prevede v prostorski
 spekter prepuščene svetlobe. Prostorski spekter svetlobe pa lahko
-analiziramo z lečo, ki nam v goriščni ravnini da prostorsko
+analiziramo z lečo, ki v goriščni ravnini da prostorsko
 Fourierevo transformacijo svetlobnega snopa pred lečo.
 
 \section{*Račun akusto-optičnega pojava}
@@ -929,13 +890,13 @@ Nanj pod kotom $\vartheta$ glede na os $z$ (normalo na kristal)
 vpada ravno svetlobno valovanje z valovnim vektorjem 
 $\mathbf{k}=(k_{x},0,k_{z})= k(\sin\vartheta,0,\cos\vartheta)$.
 Vse valovanje, vpadno na levi od zvočnega snopa in izhodno na njegovi desni,
-obravnavajmo znotraj snovi, da nam ni treba upoštevati še loma, ki
+obravnavajmo znotraj snovi, da ni treba upoštevati še loma, ki
 le zaplete izraze. 
 
 Privzemimo, da se v snovi zaradi zvočnih valov spremeni le velikost
 dielektrične konstante. Ob upoštevanju zveze med spremembo dielektričnosti in deformacijo
-v zvočnem valu~(enačba~\ref{7.29}) lahko spremembo dielektričnosti
-zapišemo kot  
+v zvočnem valu~(enačba~\ref{7.29}) spremembo dielektričnosti
+zapišemo kot  \index{Dielektričnost}
 \begin{equation}
 \epsilon=\tilde{\epsilon}+\delta\epsilon = 
 \tilde{\varepsilon} -\tilde{\epsilon}^{2}pS_{0}\sin(qx-\Omega t).
@@ -943,10 +904,10 @@ zapišemo kot
 \end{equation}
 Zaradi spremembe dielektričnosti pride do pojava
 dodatne električne polarizacije $\delta P$\index{Električna polarizacija}
-\beq
+\begin{equation}
 \delta P = \varepsilon_0 \delta \varepsilon E = - \varepsilon_0 
 \tilde{\varepsilon}^2 p S_0 \sin(qx-\Omega t)E.
-\eeq
+\end{equation}
 Dodatna polarizacija v valovno enačbo doprinese nehomogen člen, podobno
 kot pri nelinearni optiki (enačba~\ref{8.3}). Zapišemo
 \begin{equation}
@@ -972,38 +933,38 @@ le počasi spreminjajo.
 
 Izračunajmo 
 \begin{equation}
-\nabla^{2}E=\sum_{n}\left( -[k_{z}^{2}+(k_{x}+nq)^{2}]A_{n}(z)+2ik_{z}A_{n}'(z)\right) \, 
-e^{i[(k_x+nq)x+k_{z}z-(\omega+n\Omega)t]}.
+\nabla^{2}E=\sum_{n}\left( -(k_{z}^{2}+(k_{x}+nq)^{2})A_{n}(z)+2ik_{z}A_{n}'(z)\right) \, 
+e^{i((k_x+nq)x+k_{z}z-(\omega+n\Omega)t)}.
 \label{7.35}
 \end{equation}
 Člene z $A_{n}''$ lahko izpustimo, če je le $k_{z}A_{n}'\gg A_{n}''$ oziroma 
-kadar se $A_{n}$ spreminjajo počasi v primerjavi z $exp(ik_{z}z)$. Drugi odvod 
+kadar se $A_{n}$ spreminjajo počasi v primerjavi z $\exp(ik_{z}z)$. Drugi odvod 
 polarizacije po času da
-\beq
+\begin{equation}
 \begin{split}
 \frac{\partial^2 \delta P}{\partial t^2} =&-\frac{\varepsilon_0 \tilde{\varepsilon}^2pS_0}{2i} 
-\sum_{n} A_n(z) \exp\left(i[(k_x+nq)x+k_{z}z-(\omega+n\Omega)t]\right) \cdot \\ &\left(
--[n\Omega+\omega+\Omega]^2e^{i(qx-\Omega t)} + [n\Omega+\omega-\Omega]^2e^{i(-qx+\Omega t)} \right),
+\sum_{n} A_n(z) \exp\left(i((k_x+nq)x+k_{z}z-(\omega+n\Omega)t)\right) \cdot \\ &\left(
+-(n\Omega+\omega+\Omega)^2e^{i(qx-\Omega t)} + (n\Omega+\omega-\Omega)^2e^{i(-qx+\Omega t)} \right),
 \label{7.35a}
 \end{split}
-\eeq
+\end{equation}
 drugi odvod polja po času pa 
-\beq
+\begin{equation}
 \frac{\partial E^{2}}{\partial t^{2}} = - \sum_{n}(n\Omega + \omega)^2 
 A_{n}(z)e^{in(qx-\Omega t)}e^{i(k_{x}x+k_{z}z-\omega t)}.
 \label{7.35b}
-\eeq
+\end{equation}
 Vstavimo izraze (\ref{7.35}), (\ref{7.35a}) in (\ref{7.35b}) v valovno enačbo (\ref{7.33a})
 in izenačimo člene z isto časovno in prostorsko frekvenco, na primer
 s $k_z z+(k_x+mq)x-(\omega+m\Omega)t$. Tako dobimo 
 \begin{eqnarray}
--[k_{z}^{2}+(k_{x}+mq)^{2}]A_{m}+2ik_{z}A_{m}' + \frac{\tilde{\varepsilon}}{c^2}(m\Omega+\omega)^2A_m
+-\left(k_{z}^{2}+(k_{x}+mq)^{2}\right)A_{m}+2ik_{z}A_{m}' + \frac{\tilde{\varepsilon}}{c^2}(m\Omega+\omega)^2A_m
 =\\ =\frac{\mu_0\varepsilon_0\tilde{\varepsilon}^2pS_0}{2i}(\omega+m\Omega)^{2}(A_{m-1}-A_{m+1}).
 \end{eqnarray}
 Upoštevamo, da je 
-\beq 
+\begin{equation} 
 k_{x}^{2}+k_{z}^{2}=k^{2}=\frac{\tilde{\epsilon}\omega^2}{c^{2}}
-\eeq
+\end{equation}
 in naredimo približek $(\omega +m\Omega)^2 \approx \omega^2$.
 Sledi
 \begin{equation}
@@ -1028,7 +989,7 @@ v enačbi~(\ref{7.37}) izpustimo. S tem zapišemo preprost sistem enačb
 A_{m}'+i\beta_{m}A_{m}=\xi A_{m-1},
 \label{7.40}
 \end{equation}
- ki jih lahko zapored integriramo: 
+ ki jih lahko zapored integriramo
 \begin{equation}
 A_{m}(z)=\xi e^{-i\beta_{m}z}\int_{0}^{z}A_{m-1}(z')
 e^{i\beta_{m}z'}dz'.
@@ -1054,9 +1015,9 @@ k_x+ \frac{q}{2} = k \sin\vartheta + \frac{q}{2} = 0
 \label{7.43}
 \end{equation}
 Vidimo, da predstavlja $\beta_{1}=0$ ravno pogoj za Braggovo sipanje vpadnega
-vala.
+vala.\index{Braggov uklon}
 
-Delež moči uklonjenega vala je potem
+Delež moči uklonjenega vala je 
 \boxeq{7.45}{
 \frac{I_{1}}{I_{0}}=\left|\frac{A_{1}}{A_{0}}\right|^{2}=(\xi d)^{2}
 \left(\frac{\sin\beta_{1}d/2}{\beta_{1}d/2}\right)^{2}.
@@ -1074,19 +1035,19 @@ primer $m=1$. Tedaj so vse ostale amplitude $A_{m, m\ne0,1}$
 majhne in ne vplivajo na $A_{1}$. Zaradi velike pretvorbe 
 $A_{0}(z)$ ne smemo več obravnavati kot konstante. Upoštevamo 
 izpolnjen Braggov pogoj (enačba~\ref{7.43}) in iz sistema enačb~(\ref{7.37})
-dobimo\index{Braggov uklon}
+sledi\index{Braggov uklon}
 \begin{eqnarray}
 A_{0}'+\xi A_{1} & = & 0\nonumber \\
 A_{1}'-\xi A_{0} & = & 0.
 \end{eqnarray}
 Ob začetnih pogojih $A_{0}(0)=A_{0}$ in $A_{1}(0)=0$ sta rešitvi gornjih enačb
-\beq
+\begin{equation}
 A_{0}(d) = A_{0}\cos (\xi d)
-\eeq
+\end{equation}
 in
-\beq
+\begin{equation}
 A_{1}(d) = A_{0}\sin (\xi d).
-\eeq
+\end{equation}
 Če je izpolnjen Braggov pogoj, se moč vpadnega vala na razdalji $\pi/(2\xi)$
 skoraj vsa pretoči v uklonjeni snop, nato pa zopet nazaj (slika \ref{s7.10}).
 Za čim bolj učinkovito delovanje akusto-optičnega modulatorja seveda
@@ -1107,11 +1068,11 @@ Razmerje med močjo uklonjenega in vpadnega snopa je tako
 }
 Poiščimo še amplitudo deformacije $S_0$. Za longitudinalne (zvočne) valove v snovi oblike 
 $u = u_0 \cos(qz - \Omega t)$ je deformacija 
-\beq
+\begin{equation}
 S_{zz} = \frac{1}{2}\bigl( \frac{\partial u}{\partial z}+ 
 \frac{\partial u}{\partial z}\bigr) = \frac{\partial u}{\partial z} = - u_0 q\, \sin(qz - \Omega t).
-\eeq
-Povprečna gostota energijskega toka je 
+\end{equation}
+Povprečna gostota energijskega toka je \index{Gostota energijskega toka}
 \begin{equation}
 j_{z}= \frac{1}{T}\int_0^T 
 v_z \left(\frac{1}{2} \varrho \left(\frac{\partial u}{\partial t}\right)^2
@@ -1124,12 +1085,13 @@ kjer je $v_z$ hitrost zvoka v snovi in $\varrho$ gostota snovi. Sledi
 S_{0}=\sqrt{\frac{2j_{z}}{\varrho v_{z}^{3}}}.
 \label{7.50}
 \end{equation}
-Praktično je vpeljati merilo uporabnosti neke snovi za akusto-optični modulator. To je koeficient 
+Praktično je vpeljati merilo uporabnosti neke snovi za akusto-optični modulator. To je 
+koeficient \index{Koeficient $M$}
 \begin{equation}
 M=\frac{n_{0}^{6}p^{2}}{\varrho v_{z}^{3}}.
 \label{7.51}
 \end{equation}
-Večja kot je njegova vrednost, bolj izrazit je akusto-optični pojav v dani snovi. 
+Večja kot je vrednost koeficienta $M$, bolj izrazit je akusto-optični pojav v dani snovi. 
 
 Poglejmo primer. V kremenu z gostoto $\varrho=2,2\cdot10^{3}~\si{\kilo\gram/\metre^3}$ 
 je hitrost zvoka $v_{z}=6000~\si{\metre/\second}$,
@@ -1149,17 +1111,17 @@ Uklonski kot je torej precej majhen.
 
 \begin{remark}
 Opisani račun izkoristka uklona na zvočnih valovih je uporaben tudi
-pri računu izkoristka holograma. V primeru faznega holograma je račun
-povsem enak in nam kaže tudi razliko med tankim in debelim hologramom.
+pri računu izkoristka holograma.\index{Hologram} V primeru faznega holograma je račun
+povsem enak in jasno kaže razliko med tankim in debelim hologramom.
 Kako pa je z izkoristkom amplitudnega holograma, kjer je modulirana
-absorpcija v snovi, lahko bralec izračuna sam.\footnote{Glej H. Kogelnik, Bell Syst. Tech. J.
-48, 2909 (1969).}
+absorpcija v snovi, lahko bralec izračuna sam ali najde v literaturi.\footnote{H.
+Kogelnik, Bell Syst. Tech. J. 48, 2909 (1969).}
 \end{remark}
 
 \subsection*{Raman-Nathov uklon}
 Oglejmo si še tretji primer. Izhajamo iz sistema enačb~(\ref{7.37}), ki smo ga 
 zaenkrat rešili za primer Braggovega uklona oziroma v njegovi bližini. 
-Enačbe je preprosto rešiti še v primeru t. i. Raman-Nathovega približka. 
+Enačbe je preprosto rešiti še v primeru tanke mrežice oziroma t. i. Raman-Nathovega približka. 
 \index{Raman-Nathov uklon}Vpeljimo novo neodvisno spremenljivko $\zeta=2\xi z$. 
 Zveza~(\ref{7.37})
 preide v 
@@ -1180,7 +1142,7 @@ v enačbi~(\ref{7.53}) prepoznamo rekurzijsko zvezo za Besslove funkcije
 \label{7.55}
 \end{equation}
 z rešitvijo $A_{m}(z)=A_{0}J_{m}(2\xi z)$. Kadar je $2\xi d$ ničla funkcije
-J$_{0}$, prvič je to pri $2\xi d\approx 2,4$, se vsa energija ukloni iz
+$J_{0}$, prvič je to pri $2\xi d\approx 2,4$, se vsa energija ukloni iz
 vpadnega snopa, vendar se v tem primeru 
 razporedi v mnogo uklonjenih snopov.
 
@@ -1207,10 +1169,12 @@ preide v izotropno tekočo fazo, če pa ga ohladimo, neposredno ali prek drugih
 tekočekristalnih faz preide v trdno kristalno obliko. 
 
 Smer povprečne urejenosti podolgovatih molekul opišemo z enotskim vektorjem 
-$\mathbf{n}$, ki ga imenujemo direktor. Smeri $\mathbf{n}$ in $-\mathbf{n}$ sta 
+$\mathbf{n}$, ki ga imenujemo direktor.\index{Tekoči kristali!direktor} 
+Smeri $\mathbf{n}$ in $-\mathbf{n}$ sta 
 enakovredni, saj molekule z enako verjetnostjo kažejo v smer $+\mathbf{n}$ kot 
 v $-\mathbf{n}$. Stopnja urejenosti v mikroskopski sliki ni prav velika, povprečen
 odklon molekul od $\mathbf{n}$ je nekaj deset stopinj, odvisno seveda od temperature.
+\index{Tekoči kristali!5CB}
 \begin{figure}[h]
 \centering
 \def\svgwidth{30truemm} 
@@ -1223,13 +1187,13 @@ ali 5CB (levo) in shematski prikaz nematične faze z označenim direktorjem (des
 \end{figure}
 
 Molekule so v nematični fazi v povprečju orientacijsko urejene, zato se nematik
-obnaša kot enoosen dvolomni kristal\index{Dvolomnost!Enoosna snov}. Njegova optična os je vzporedna 
+obnaša kot enoosen dvolomni kristal\index{Dvolomnost!enoosne snovi}. Njegova optična os je vzporedna 
 z $\mathbf{n}$, lastni vrednosti dielektričnega tenzorja pa sta $\varepsilon_\bot$ in
 $\varepsilon_{\parallel}$, ki ustrezata rednemu ($n_o$) in izrednemu ($n_e$) 
-lomnemu količniku.  
+lomnemu količniku.\index{Dielektričnost}\index{Lomni količnik}
 Ker je optična polarizabilnost benzenovih obročev vzdolž osi molekul precej večja kot
 v prečni smeri, je razlika med rednim in izrednim lomnim količnikom v nematiku razmeroma 
-velika, navadno med 0,1 in 0,2, seveda spet odvisno od temperature.
+velika, navadno med $0,1$ in $0,2$, seveda spet odvisno od temperature.
 
 V povprečju so molekule urejene v smeri direktorja. Če se smer direktorja lokalno
 spremeni, je energija takega deformiranega 
@@ -1281,16 +1245,16 @@ w_{el}=-\frac{1}{2}\mathbf{E}\cdot \mathbf{D}.
 \end{equation}
 Električno polje lahko razstavimo na del, ki je vzporeden z $\mathbf{n}$, in del, ki je
 pravokoten nanj
-\beq
+\begin{equation}
 \mathbf{E} = (\mathbf{E} \cdot \mathbf{n}) \mathbf{n} + \left( \mathbf{E} - 
 (\mathbf{E} \cdot \mathbf{n}) \mathbf{n} \right).
-\eeq
+\end{equation}
 Potem je 
-\beq
+\begin{equation}
 \mathbf{D} = \varepsilon_0 \varepsilon_\bot \mathbf{E} + \varepsilon_0 \varepsilon_a
 (\mathbf{E}\cdot\mathbf{n})\mathbf{n},
 \label{7.56a}
-\eeq
+\end{equation}
 pri čemer je $\varepsilon_a = \varepsilon_\parallel - \varepsilon_\bot$ anizotropni
 del dielektrične konstante. Anizotropni del gostote energije je tako do konstante
 \boxeq{7.56}{
@@ -1323,9 +1287,9 @@ d(n_{e}-n_{o})=(2N+1)\frac{\lambda}{2},
 kjer je $N$ celo število, $n_e$ izredni in $n_o$ redni 
 lomni količnik. Ker je v nematikih $n_{e}-n_{o}\sim0,1$, 
 je ustrezna debelina $d$ nekaj $\si{\micro\metre}$. Tak vzorec damo med dva prekrižana 
-polarizatorja s prepustno smerjo pod kotom 45$^\circ$ glede na $\mathbf{n}$
+polarizatorja s prepustno smerjo pod kotom $45~\si{\degree}$ glede na $\mathbf{n}$
 oziroma optično os. Vzorec, ki deluje kot ploščica $\lambda/2$, 
-polarizacijo svetlobe z izbrano valovno dolžino zasuče za 90$^\circ$ in 
+polarizacijo svetlobe z izbrano valovno dolžino zasuče za $90~\si{\degree}$ in 
 svetloba prehaja skozi analizator. Ko
 priključimo napetost, se optična os obrne v smeri polja. Polarizacija vpadne 
 svetlobe se pri prehodu skozi plast ohrani in 
@@ -1334,9 +1298,10 @@ stanja, ki prepušča svetlobo, v stanje, ki svetlobe ne prepusti.
 Vendar ima tak preklopnik nekaj slabosti. Prepustnost je odvisna
 od valovne dolžine svetlobe in od temperature, poleg tega mora biti debelina 
 plasti povsod povsem enaka. Zato se v praksi uporablja zasukan nematik. 
+\index{Tekoči kristali!zasukan nematik}
 
 Zasukan  nematik nastane tako, da površini, ki vsiljujeta planarno ureditev,
-zasučemo za kot 90$^\circ$ eno glede na drugo (slika~\ref{LCD1}\,a), zato se $\mathbf{n}$ 
+zasučemo za kot $90~\si{\degree}$ eno glede na drugo (slika~\ref{LCD1}\,a), zato se $\mathbf{n}$ 
 v plasti zvezno zavrti.
 Pokazali bomo, da polarizacija svetlobe, ki je ob vstopu 
 v plast polarizirana v smeri urejanja, pri prehodu skozi plast približno
@@ -1346,14 +1311,14 @@ obrne v smer pravokotno na plast tekočega kristala (slika~\ref{LCD1}\,b). V tem
 se polarizacija ne zasuče in analizator svetlobe ne prepusti. Plast med prekrižanima
 polarizatorjema brez polja torej prepušča svetlobo, s poljem pa ne. Pri tem
 delovanje prikazovalnika ni dosti odvisno niti od debeline plasti niti
-od valovne dolžine. 
+od valovne dolžine svetlobe. 
 \begin{figure}[h!]
 \centering
 \def\svgwidth{105truemm} 
 \input{slike/09_LCD1.pdf_tex}
 \caption{a) Zasukana nematična celica. 
 Polarizacija (P) približno sledi smeri zasukanega direktorja in analizator (A) 
-prepusti svetlobo. b) Ko priključimo električno polje, se tekočekristalne molekule
+prepusti svetlobo. b) Ko priključimo električno polje ($\mathbf{E}$), se tekočekristalne molekule
 zasučejo v smer polja. Polarizacija svetlobe (P) se ohranja in analizator (A) 
 svetlobe ne prepušča. }
 \label{LCD1}
@@ -1372,14 +1337,15 @@ sodobnejših zaslonov ima tekoče kristale urejene planarno, tekočekristalne
 zaslone pa lahko z dodatnimi plastmi naredimo tudi občutljive na dotik.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=70truemm]{slike/09_LCD.jpg}
+\includegraphics[width=80truemm]{slike/09_LCD.jpg}
 \caption{Vsak piksel tekočekristalnega zaslona je sestavljen iz treh barv.}
 \end{figure}
 \end{remark}
 
 \section{*Račun prehoda svetlobe skozi zasukan nematik}
+\index{Tekoči kristali!zasukan nematik}
 Pokazati moramo še, da polarizacija svetlobe pri prehodu skozi zasukan nematik 
-približno sledi zasuku optične osi. 
+približno sledi zasuku optične osi. \index{Dvolomnost!enoosne snovi}
 Vzemimo vzorec, kakršen je na sliki~(\ref{LCD1}\,a) in ga obravnavajmo
 kot lokalno optično enoosno snov. Pri $z=0$ naj bo optična
 os v smeri $x$, ko se premikamo vzdolž osi $z$, pa naj se optična os suče
@@ -1388,7 +1354,6 @@ v ravnini $xy$. Kot med optično osjo in osjo $x$ tako zapišemo
 \varphi=qz.
 \label{7.58}
 \end{equation}
-
 Poleg zasukane nematične celice je pomemben primer
 snovi s takimi lastnostmi holesterični tekoči kristal, ki je zelo
 podoben nematičnemu, le da so molekule kiralne in se $\mathbf{n}$ spontano suče okoli
@@ -1423,17 +1388,17 @@ za valovanje s frekvenco $\omega$ oblike
 \label{7.61}
 \end{equation}
 ali po komponentah, upoštevajoč tenzor dielektričnosti~(enačba~\ref{7.59})
-\beq
+\begin{equation}
 \frac{d^{2}E_{x}}{dz^{2}} + 
 (\beta^{2}+\alpha^{2}\cos(2qz))E_{x}+\alpha^{2}E_{y}\sin(2qz) = 0
 \label{7.62a}
-\eeq
+\end{equation}
 in 
-\beq
+\begin{equation}
 \frac{d^{2}E_{y}}{dz^{2}} +
 \alpha^{2}E_{x}\sin(2qz)+(\beta^{2}-\alpha^{2}\cos(2qz))E_{y} = 0,
 \label{7.62b}
-\eeq
+\end{equation}
 kjer je $\alpha^{2}=\epsilon_{a}\omega^{2}/(2c^{2})$ in 
 $\beta^{2}=\bar{\epsilon}\omega^{2}/c^{2}$. Dobili smo torej sistem
 dveh sklopljenih diferencialnih enačb. 
@@ -1441,46 +1406,46 @@ dveh sklopljenih diferencialnih enačb.
 Za reševanje je ugodno vpeljati krožni polarizaciji 
 $E_{+}=E_{x}+iE_{y}$ in $E_{-}=E_{x}-iE_{y}$.
 Enačbi~(\ref{7.62a}) in (\ref{7.62b}) prepišemo v
-\beq
+\begin{equation}
 -\frac{d^{2}E_{+}}{dz^{2}}=\beta^{2}E_{+}+\alpha^{2}E_{-}e^{2iqz}
 \label{lcm1}
-\eeq
+\end{equation}
 in 
-\beq
+\begin{equation}
 -\frac{d^{2}E_{-}}{dz^{2}}=\alpha^{2}E_{+}e^{-2iqz}+\beta^{2}E_{-}.
 \label{lcm2}
-\eeq
+\end{equation}
 
-Lastne rešitve poiščimo v obliki 
-\beq
+Lastne rešitve poiščemo v obliki 
+\begin{equation}
 E_{+}  =  Ae^{i(k+q)z} 
 \label{7.65a}
-\eeq
+\end{equation}
 in
-\beq
+\begin{equation}
 E_{-}  =  Be^{i(k-q)z}.
 \label{7.65}
-\eeq
+\end{equation}
 Nastavek reši sistem enačb~(\ref{lcm1}) in (\ref{lcm2}), 
 natanko takrat, kadar $A$ in $B$ rešita sistem homogenih linearnih enačb 
-\beq
-[(k+q)^{2}-\beta^{2}]A-\alpha^{2}B  =  0 
-\eeq
+\begin{equation}
+\left((k+q)^{2}-\beta^{2}\right)A-\alpha^{2}B  =  0 
+\end{equation}
 in
-\beq
--\alpha^{2}A+[(k-q)^{2}-\beta^{2}]B  =  0.
-\eeq
+\begin{equation}
+-\alpha^{2}A+\left((k-q)^{2}-\beta^{2}\right)B  =  0.
+\end{equation}
  Sistem je netrivialno rešljiv, če je determinanta koeficientov enaka
 nič
 \begin{equation}
-(k^{2}+q^{2}-\beta^{2})^{2}-4k^{2}q^{2}-\alpha^{4}=0.
+\left(k^{2}+q^{2}-\beta^{2}\right)^{2}-4k^{2}q^{2}-\alpha^{4}=0.
 \label{7.66}
 \end{equation}
 Spomnimo se, da sta $\beta$ in $\alpha$ sorazmerna z $\omega$,
 zato dobljena enačba predstavlja disperzijsko relacijo -- zvezo med 
 $\omega$ in $k$ -- za svetlobo v zavitem sredstvu
 \begin{equation}
-(k^{2}+q^{2}-\frac{\bar{\epsilon}\omega^{2}}{c^{2}})^{2}-
+\left(k^{2}+q^{2}-\frac{\bar{\epsilon}\omega^{2}}{c^{2}}\right)^{2}-
 4k^{2}q^{2}- \frac{\epsilon_{a}^2\omega^{4}}{4c^{4}}
 =0.
 \label{7.66a}
@@ -1499,7 +1464,7 @@ k^{2}=\left\{ \begin{matrix}\beta^{2}+\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilo
 \end{equation}
  Ti vrednosti ustrezata velikosti valovnega vektorja za izredni
 in redni val v navadnem enoosnem kristalu. Vstavimo ju v enačbi~(\ref{7.65a}) ali
-(\ref{7.65}) in za polarizaciji lastnih valov dobimo $B=\pm A$.
+(\ref{7.65}) in za polarizaciji lastnih valov velja $B=\pm A$.
 
 Izračunajmo še obe kartezični komponenti električnega polja za prvo rešitev
 \begin{align}
@@ -1521,9 +1486,9 @@ polarizacija.
 
 \begin{remark}
 Disperzijsko zvezo (enačba~\ref{7.66} oziroma~\ref{7.66a}) 
-lahko rešimo numerično (slika~\ref{gap}). Vidimo, da pri 
-izbranem $\alpha$ pri vseh frekvencah, razen v ozkem območju -- recimo mu frekvenčna reža --
-obstajajo štiri realne rešitve za $k$, 
+lahko rešimo numerično (slika~\ref{gap}). Pri izbrani vrednosti $\alpha$ 
+obstajajo pri vseh frekvencah, razen v ozkem območju -- recimo mu frekvenčna reža --
+štiri realne rešitve za $k$, 
 po dve za valovanji v pozitivni in v negativni smeri.
 V območju reže je en par rešitev imaginaren. Vsaki vrednosti $k$
 pripada neko razmerje amplitud $A$ in $B$, ki ga izračunamo
@@ -1536,21 +1501,20 @@ potujoč val, drug pa polje, ki eksponentno pojema v sredstvo. Zato
 se svetloba s frekvenco v reži in z ustrezno polarizacijo, ki vpada
 na holesterični tekoči kristal, totalno odbije. Pojav je povsem analogen
 Braggovemu odboju na kristalih in daje holesterikom značilen obarvan
-videz.\index{Tekoči kristali!holesterik}
+videz.\index{Tekoči kristali!holesterik}\index{Braggov odboj}
 \begin{figure}[h]
 \centering
 \def\svgwidth{80truemm} 
 \input{slike/09_gap.pdf_tex}
 \caption{Rešitve disperzijske zveze (enačba~\ref{7.66}) v zasukanem nematiku
-ali holesteriku
-pri izbrani $\alpha$. Razen na ozkem frekvenčnem območju obstajajo štiri 
+ali holesteriku pri danem $\alpha$. Razen v frekvenčni reži (modra pasova) obstajajo štiri 
 rešitve za vsako frekvenco.}
 \label{gap}
 \end{figure}
 \end{remark}
 
 \section{Račun preklopa v tekočem kristalu -- Frederiksov prehod}
-V prejšnjem razdelku smo omenili, da lahko z dovolj velikim zunanjim poljem 
+Omenili smo, da lahko z dovolj velikim zunanjim poljem 
 molekule tekočega kristala, razen tik ob površini, obrnemo v smeri polja. 
 Izračunajmo jakost polja, ki je potrebna za ta zasuk. 
 \index{Frederiksov prehod}
@@ -1562,8 +1526,8 @@ energijo\footnote{Angleški fizik Sir Frederick Charles Frank, 1911--1998.}
 \index{Frankova prosta energija}
 \boxeq{7.70}{
 F_{e}=\frac{1}{2}\int\left\{ K_{1}(\nabla\cdot\mathbf{n})^{2}+K_{2}
-[\mathbf{n}\cdot(\nabla\times\mathbf{n})]^{2}+K_{3}
-[\mathbf{n}\times(\nabla\times\mathbf{n})]^{2}\right\} dV.
+\left(\mathbf{n}\cdot(\nabla\times\mathbf{n})\right)^{2}+K_{3}
+\left(\mathbf{n}\times(\nabla\times\mathbf{n})\right)^{2}\right\} dV.
 }
 Pri tem so $K_{1}$, $K_{2}$ in $K_{3}$ tri Frankove elastične
 konstante, ki so odvisne od snovi in tudi od temperature. 
@@ -1582,11 +1546,11 @@ V zunanjem električnem polju se energija tekočega kristala dodatno spremeni.
 Navadno je neodvisna električna količina električna poljska jakost, saj je polje posledica
 zunanje napetosti na elektrodah. Ustrezni člen v prosti energiji je tedaj 
 (enačbi~\ref{lcwe} in~\ref{7.56a})
-\beq
+\begin{equation}
 F_{el} = -\int \frac{1}{2} \mathbf{D}\cdot\mathbf{E} dV= -\frac{1}{2} \int
 \left( \varepsilon_0 \varepsilon_\bot \mathbf{E}\cdot\mathbf{E} + 
 \varepsilon_{0}\varepsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2}\right)dV = F_0 + F_{el,a}.
-\eeq
+\end{equation}
 Prvi člen je neodvisen od $\mathbf{n}$, zato ni pomemben pri izračunu
 preklopa. Prosta energija
 nematičnega tekočega kristala v električnem polju je tako 
@@ -1603,12 +1567,12 @@ Da lahko z minimizacijo $F$ izrazimo $\mathbf{n}(\mathbf{r})$, moramo
 torej poznati še robne pogoje.
 
 Poglejmo primer. Naj bo nematični tekoči kristal med dvema vzporednima
-steklenima ploščama v razmiku $d$. Na obeh ploščah naj bo $\mathbf{n}$ vzporeden
+steklenima ploščama, med katerima je razmik $d$. Na obeh ploščah naj bo $\mathbf{n}$ vzporeden
 s površino in obrnjen v isto smer, tako da je brez zunanjega 
 polja $\mathbf{n}$ povsod enako usmerjen. Naj bo to smer $x$.
 Na stekleni plošči dodamo elektrodi, ki ustvarjata polje pravokotno na 
 prvotno smer direktorja, naj bo to smer $z$.
-Ko priključimo polje, je energijsko ugodnejše, če
+Ko priključimo polje, je energijsko ugodnejše, da
 se molekule vsaj delno zasučejo v smer polja. Ta zasuk opišemo s
 komponento vektorja $\mathbf{n}$ v smeri $z$
 \begin{equation}
@@ -1623,9 +1587,9 @@ n_{z}(z)=a\sin (qz), \qquad q=\frac{\pi}{d},
 \end{equation}
 ki ni nič drugega kot prvi člen razvoja prave rešitve v Fourierevo vrsto.
 Ker je direktor enotski vektor, velja
-\beq
+\begin{equation}
 n_x = \sqrt{1-a^2\sin^2(qz)} \approx 1 - \frac{a^2}{2}\sin^2(qz).
-\eeq
+\end{equation}
 Vzdolž smeri $x$ in $y$ se direktor ne spreminja, zato velja
 \begin{equation}
 \nabla\times\mathbf{n}=(0,\frac{dn_{x}}{dz},0)
@@ -1639,12 +1603,12 @@ n_{x}\frac{dn_{x}}{dz}).
 \end{equation}
 Površinska gostota proste energije je tako 
 \begin{eqnarray}
-F_S & = & \frac{1}{2}\int\left[K_{1}\left(\frac{dn_{z}}{dz}\right)^{2}+K_{3}(n_x^2+n_{z}^{2})
+F_S & = & \frac{1}{2}\int\left(K_{1}\left(\frac{dn_{z}}{dz}\right)^{2}+K_{3}(n_x^2+n_{z}^{2})
 \left(\frac{dn_{x}}{dz}\right)^{2}-
-\epsilon_{0}\epsilon_{a}(n_{z}E)^{2}\right]dz=\nonumber \\
+\epsilon_{0}\epsilon_{a}(n_{z}E)^{2}\right)dz=\nonumber \\
  & = & \frac{1}{2}\int_{0}^{d}
- [K_{1}q^{2}a^{2}\cos^{2}(qz)+K_{3}q^{2}a^{4}\sin^{2}(qz)\cos^2(qz)-
- \epsilon_{0}\epsilon_{a}E^2a^{2}\sin^{2}(qz)]dz=\nonumber \\
+ \left(K_{1}q^{2}a^{2}\cos^{2}(qz)+K_{3}q^{2}a^{4}\sin^{2}(qz)\cos^2(qz)-
+ \epsilon_{0}\epsilon_{a}E^2a^{2}\sin^{2}(qz)\right)z=\nonumber \\
  & = & \frac{d}{4q}a^2\left( K_{1}q^{2}+\frac{1}{4}K_{3}q^{2}a^2-\epsilon_{0}\epsilon_{a}E^2\right).
 \end{eqnarray}
 V našem primeru smo integral lahko izračunali, saj smo uporabili nastavek (enačba~\ref{7.74}).
@@ -1662,25 +1626,25 @@ najmanjša. Tedaj mora biti $a$ rešitev enačbe
 a=0
 \end{equation}
 in
-\beq
+\begin{equation}
 a^{2}=2\frac{\epsilon_{0}\epsilon_{a}E^2-K_{1}q^{2}}{K_{3}q^{2}}.
 \label{7.79}
-\eeq
+\end{equation}
  Pri majhnih poljih, ko je $\epsilon_{0}\epsilon_{a}E^2<K_{1}q^{2}$,
 je fizikalno smiselna le prva rešitev, torej brez deformacije, pri velikih poljih pa je  
 stabilna druga rešitev. Ko večamo polje, deformacija
 v sredini plasti hitro naraste, tako da se $\mathbf{n}$ postavi skoraj
 popolnoma v smer zunanjega polja. Tedaj naša rešitev seveda ni dobra,
 saj smo pri računu privzeli, da je $n_{z}\ll1$. Prehodu iz nedeformiranega
-stanja v deformirano stanje pravimo tudi Frederiksov prehod\footnote{Ruski fizik
+stanja v deformirano stanje pravimo  Frederiksov prehod\footnote{Ruski fizik
 Vsevolod Konstantinovič Frederiks, tudi Fr\'{e}edericksz, 1885--1944.}. Na njem
 temelji preklapljanje optičnih prikazovalnikov na nematične tekoče kristale.
 
 Izračunajmo še kritično jakost električnega polja, pri kateri pride do prehoda v deformirano fazo.
 To se zgodi pri 
-\beq
+\begin{equation}
 \epsilon_{0}\epsilon_{a}E_c^2-K_{1}q^{2} = 0
-\eeq
+\end{equation}
 oziroma
 \boxeq{FreeE}{
 E_c = \frac{\pi}{d}\sqrt{\frac{K_1}{\varepsilon_0\varepsilon_a}}.
@@ -1688,15 +1652,15 @@ E_c = \frac{\pi}{d}\sqrt{\frac{K_1}{\varepsilon_0\varepsilon_a}}.
 
 Poglejmo še, kako narašča amplituda deformacije v bližini prehoda. Iz enačbe~(\ref{7.79})
 sledi 
-\beq
+\begin{equation}
 a = \sqrt{\frac{2 \varepsilon_0 \varepsilon_a}{K_3 q^2 }(E^2-E_c^2)}.
-\eeq
+\end{equation}
 Pogosto naredimo približek enakih konstant, kjer privzamemo, da so vse Frankove 
 elastične konstante enake vrednosti. V tem približku je 
-\beq
+\begin{equation}
 a \approx \sqrt{\frac{2(E^2-E_c^2)}{E_c^2}}
-\eeq
-in torej korensko narašča s naraščajočim poljem (slika~\ref{Fred}). Tak prehod je torej
+\end{equation}
+in amplituda korensko narašča s naraščajočim poljem (slika~\ref{Fred}). Tak prehod je
 fazni prehod drugega reda, saj količina, ki opisuje prehod (amplituda deformacije $a$)
 zvezno preide iz vrednosti $a=0$ v končno vrednost. 
 \begin{figure}[h]
@@ -1710,10 +1674,9 @@ zvezno preide iz vrednosti $a=0$ v končno vrednost.
 \begin{definition}
 Izračunaj Frederiksov prehod v zasukani nematični celici (kot zasuka med zgornjo in spodnjo 
 mejno ploskvijo naj bo $\pi/2$) in pokaži, da je kritično polje za prehod enako
-\beq
+\begin{equation}
 E_c =  \frac{\pi}{d}\sqrt{\frac{K_1}{\varepsilon_0\varepsilon_a}}
 \sqrt{1 + \frac{K_3-2K_2}{4K_1}}.
-\eeq
+\end{equation}
 Namig: uporabi nastavek $\varphi = z \pi/2d$ in $\vartheta = a \sin(\pi z/d)$. 
 \end{definition}
-

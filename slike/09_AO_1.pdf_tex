@@ -49,9 +49,8 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.38442988)%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{09_AO_1.pdf}}%
     \put(0.01570695,0.36639659){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
-
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{09_AO_1.pdf}}%
     \put(0.1643488,0.00794468){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
     \put(0.06719877,0.19673249){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta$}}}%
     \put(0.375323,0.1089526){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\beta$}}}%
