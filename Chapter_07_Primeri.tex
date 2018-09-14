@@ -631,221 +631,222 @@ medicini (npr. za odstranjevanje ledvičnih kamnov), astronomiji (za umetne lase
 \index{Laser!vlakenski}
 
 \section{Polprevodniški laserji}
-% 
-% Za široko uporabo so danes brez dvoma najpomembnejši polvodniški laserji.
-% Njihove glavne značilnosti so majhne dimenzije, neposredno črpanje z
-% električnim tokom majhne jakosti in pri nizki napetosti, velik izkoristek,
-% preko 20%,
-% pri pretvorbi električne moči v svetlobno, in možnost hitre modulacije
-% svetlobne moči z modulacijo električnega toka. Poleg tega jih je moč
-% integrirati z drugimi polvodniškimi elementi in se za njihovo izdelavo
-% uporablja običajna polvodniška tehnologija.
-% 
-% Polvodniki absorbirajo svetlobo s frekvenco nad energijo prehoda iz
-% valenčnega v prevodni pas. Pri tem z vzbuditvijo elektrona iz valenčnega v
-% prevodni pas nastane par elektron-vrzel. Ta se lahko rekombinira z
-% izsevanjem fotona, kar ustreza spontanemu ali stimuliranemu prehodu v atomih
-% in molekulah. Zaradi ohranitve gibalne količine se valovni vektor elektrona
-% pri prehodu le zelo malo spremeni, saj je valovni vektor vidne svetlobe
-% majhen v primerjavi z vektorjem recipročne mreže polvodniškega kristala.
-% To ima pomembno posledico. Najobičajnejša polvodnika, silicij in germanij,
-% imata vrh prevodnega pasu v centru Brilluinove cone, to je pri valovnem
-% vektorju nič, dno prevodnega pasu pa pri končno velikem valovnem vektorju.
-% Zato direkten prehod z dna prevodnega pasu v vrh valenčnega pasu z
-% izsevanjem fotona ni možen, potrebna je sočasna emisija ali absorpcija
-% fonona, ki poskrbi za ohranitev gibalne količine. Tak proces pa je seveda
-% mnogo manj verjeten, zato v siliciju in germaniju v običajni obliki ni
-% mogoče dobiti znatnega sevanja s prehodi iz prevodnega v valenčni pas.
-% 
-% Opisane težave ni pri spojinah iz tretje in pete skupine elementov, na
-% primer GaAs, kjer je valenčni pas 1,4 eV nad prevodnim. Na njih so osnovani
-% polvodniški laserji.
-% 
-% Verjetnost za zasedenost elektronskih stanj v termičnem ravnovesju v
-% polvodniku je podana s Fermi-Diracovo funkcijo \ref{ts}:
-% 
-% \begin{equation}  \label{6.1}
-% f(E)=\frac{1}{e^{(E-E_F)/k_B T}+1}\;\;.
-% \end{equation}
-% Pri nizkih temperaturah so zasedena vsa stanja do Fermijeve energije $E_F$,
-% nad njo pa so prazna. V čistem polvodniku je $E_F$ na sredini med
-% valenčnim in prevodnim pasom, z dodajanjem donorskih primesi pa se
-% približuje prevodnemu pasu. Če je koncentracija primesi dovolj velika,
-% lahko $E_F$ tudi pri absolutni ničli pride nad dno prevodnega pasu. Tak
-% degenriran polvodnik se obnaša podobno kot kovina.
-% 
-% Če polvodnik ni v termičnem ravnovesju, na primer v p-n spoju, skozi
-% katerega teče električni tok, lahko vpeljemo približni Fermijevi energiji 
-% $E_{Fv}$ in $E_{Fp}$ posebej za valenčni in prevodni pas. Tak približek je
-% dober, kadar je čas, v katerem preidejo vzbujeni elektroni z višjih
-% energij na dno prevodnega pasu, dosti krajši od časa prehoda iz prevodnega
-% v valenčni pas. Ta pogoj je v polvodnikih, ki jih uporabljamo za laserje,
-% navadno zelo dobro izpoljnen. Preko trkov s fononi elektroni preidejo v dno
-% prevodenga pasu v pikosekundah, za prehod v valenčni pas, to je za
-% rekombinacijo elektrona z vrzeljo, pa so potrebne nanosekunde.
-% 
-% Neravnovesno stanje, ki ga lahko opišemo z približnima Fermijevima
-% energijama, dobimo, kadar v degeneriran polvodnik p-tipa z dovolj veliko
-% hitrostjo dodajamo elektrone v prevodni pas. To lahko storimo preko p-n
-% spoja, na katerem je napetost v prevodni smeri. Tedaj dobimo položaj, ki ga
-% kaže slika \ref{s6.10}. Naj bo $N_p$ gostota elektronov v prevodnem pasu, $I
-% $ električni tok skozi spoj, $\tau$ pa čas za rekombinacijo elektrona in
-% vrzeli. Velja 
-% \begin{equation}  \label{6.2}
-% \frac{N_p}{\tau}=\frac{I}{e V}\;,
-% \end{equation}
-% kjer je V volumen, v katerem se elektroni nahajajo. Po drugi strani je $N_p$
-% podana kot integral gostote elektronskih stanj v prevodnem pasu $%
-% \rho_p(E)=1/(2\pi^2)(2m_p/\hbar^2)^{3/2}(E-E_g)^{1/2}$, kjer je $m_p$
-% efektivna masa prevodnih elektronov, in Fermi- Diracove funkcije: 
-% \begin{equation}  \label{6.3}
-% N_p=\int_{0}^{\infty}\,\rho_p(E)f_p(E)\,dE
-% \end{equation}
-% Iz enačb \ref{6.2} in \ref{6.3} lahko izračunamo vrednost $E_{Fp}$ pri
-% poljubni temperaturi. Pri $T=0$ je integral preprost in je 
-% \begin{equation}  \label{6.4}
-% E_{Fp}(T=0)=(2\pi^2)^{2/3}\frac{\hbar^2}{2m_p}\,N_p^{2/3}
-% \end{equation}
-% $E_{Fp}$ je odvisna od toka skozi spoj in od temperature, kar je pomebno za
-% delovanje polvodniškega laserja.
-% 
-% Naj na p-n spoj vpada svetlobni snop s frekvenco $\omega$, ki je nekoliko
-% nad $E_g/\hbar$. Svetloba povzroča prehode med stanji z energijo $E_p$ v
-% prevodnem pasu in med stanji z energijo $E_v$ v valenčnem pasu, kot kaže
-% slika \ref{s6.11}. Ta stanja se lahko razlikujejo po valovnem vektorju, zato
-% moramo verjetnost za stimuliran prehod najprej zapisati za določen valovni
-% vektor $\vec{k}$, nato pa sešteti po vseh možnih $\vec{k}$. V primeru
-% izotropnih elektronskih pasov je verjetnost za prehod odvisna le od
-% velikosti $\vec{k}$. Uporabimo zlato pravilo, kjer upoštevamo, da je
-% verjetnost za zasedenost gornjega stanja $f_p(E_p)$ in verjetnost, da je
-% spodnje stanje nezasedeno, $1-f_v(E_v)$: 
-% \begin{equation}  \label{6.5}
-% w_s(k)=\frac{2\pi}{\hbar}|H_{pv}|^2\delta(E_p-E_v- \hbar\omega)
-% f_p(E_p)[1-f_v(E_v)]\;,
-% \end{equation}
-% kjer je $H_{pv}= |p\rangle \hat{x}|v\rangle E $ matrični element za dipolni
-% prehod v svetlobnem polju $E$ med prevodnim in valenčnim pasom. Podobno je
-% verjetnost za absorpcijo 
-% \begin{equation}  \label{6.6}
-% w_a(k)=\frac{2\pi}{\hbar}|H_{pv}|^2\delta(E_p-E_v- \hbar\omega)
-% f_v(E_v)[1-f_p(E_p)]\;.
-% \end{equation}
-% 
-% Razliko med številom spontanih emisij in absorpcij na enoto volumna dobimo,
-% če razliko gornjih verjetnosti seštejemo po vseh $k$: 
-% \begin{eqnarray}  \label{6.7}
-% N_{pv}-N_{vp}&=&\int[w_s-w_a]\rho(k)\,dk  \nonumber \\
-% &=&\frac{2}{\pi\hbar}|H_{pv}|^2 \int[f_p(E_p)-f_v(E_v)]
-% \delta(E_p-E_v-\hbar\omega) k^2\,dk\;.
-% \end{eqnarray}
-% Upoštevli smo, da je gostota stanj $\rho(k)=1/\pi^2 k^2dk$. Štejmo
-% energijo od vrha valenčnega pasu. Energija elektronov blizu dna prevodnega
-% pasu je $E_g+1/(2m_e)\hbar^2 k^2$, vrzeli pri vrhu prevodnega pasu pa $%
-% 1/(2m_h)\hbar^2 k^2$, kjer sta $m_e$ in $m_h$ efektivni masi elektronov in
-% vrzeli. Tako je 
-% \begin{equation}  \label{6.8}
-% E_p-E_v=\hbar\omega^{\prime}=\frac{\hbar^2 k^2}{2}(\frac{1}{m_h}+ \frac{1}{%
-% m_e})+E_g=\frac{hbar^2 k^2}{2m_r}+E_g\;,
-% \end{equation}
-% kjer smo z $m_r=m_e m_h/(m_e+m_h)$ označili reducirano maso lektrona in
-% vrzeli. Iz zadnjega izraza dobimo 
-% \begin{equation}  \label{6.9}
-% k^2=\frac{2m_r}{\hbar}(\omega^{\prime}-\frac{E_g}{\hbar})
-% \end{equation}
-% in 
-% \begin{equation}  \label{6.10}
-% k^2dk=\frac{1}{2}(\frac{2m_r}{\hbar})^{3/2}\sqrt{\omega^{\prime}- \frac{E_g}{%
-% \hbar})}\;.
-% \end{equation}
-% V \ref{6.7} preidemo z integracije po $k$ na $\omega^{\prime}$ in dobimo z
-% upoštevanjem lastnosti delta-funkcije 
-% \begin{equation}  \label{6.11}
-% N_p-N_v=\frac{1}{\pi\hbar^2}(\frac{2m_r}{\hbar})^{3/2} \sqrt{\omega-\frac{E_g%
-% }{\hbar}}[f_p(E_p)-f_v(E_v)]\;.
-% \end{equation}
-% Zaradi \ref{6.9} je še $E_p=m_r/m_e(\omega-E_g/\hbar)+E_g$ in $%
-% E_v=m_r/m_h(\omega-E_g/\hbar)$.
-% 
-% Dobljeni izraz je sorazmeren z ojačenjem vpadne svetlobe v polvodniku.
-% Ojačenje bo očitno realno le, če bo $\omega$ večja od $E_g/\hbar$. Pri
-% nižjih frekvencah seveda sploh ni prehodov in polvodnik je prozoren. Da
-% bomo imeli res ojačenje in ne absorpcije, mora biti tudi $f_p(E_p)>f_v(E_v)$%
-% , torej 
-% \begin{equation}  \label{6.12}
-% \frac{1}{e^{(E_p-E_{Fp})}+1}>\frac{1}{e^{(E_v-E_{Fv})}+1}\;.
-% \end{equation}
-% Gornja neenačba bo veljala, če bo 
-% \begin{equation}  \label{6.13}
-% \hbar\omega<E_{Fp}-E_{Fv}\;.
-% \end{equation}
-% To je osnovni pogoj za ojačevanje v polvodnikih. Ojačujejo se lahko tiste
-% frekvence, ki so nad energijsko špranjo $E_g$ in pod razliko približnih
-% neravnovesnih Fermijevih energij za oba pasova. Ojačenje kot funkcijo
-% frekvence kaže slika \ref{s6.12}.
-% 
-% Vrednosti $E_{Fp}$ in $E_{Fv}$ sta odvisni tako od toka skozi p-n spoj kot
-% od temperature. Z njima je povezan tudi vrh ojačenja, kar je mogoče
-% izkoristiti za spreminjanje frekvence polvodniškega laserja s tokom ali
-% temperaturo.
-% 
-% Ojačenja v polvodniških laserjih je precej veliko, lahko več od 100~cm$%
-% ^{-1}$. Zato je mogoče dobiti delujoč laser že v zelo kratkem aktivnem
-% volumnu le nekaj mikronov. Običajni polvodniški laserji so dolgi okoli
-% 0.25~mm.
-% 
-% Najpomembnejši polvodniši laserji so osnovani na na sistemu GaAs z Ga$%
-% _{1-x}$Al$_{x}$As in na sistemu Ga$_{1- x}$In$_{x}$As$_{1-y}$P$_y$. Prvi
-% delujejo od 750 nm do 880 nm, odvisno od $x$ in koncentracije primesi, drugi
-% pa med 1,1~$\mu$m in 1,6~$\mu$m in so posebno pomembni za optične
-% komunikacije, ki najve"krat delujejo pri 1,3~$\mu$m in 1,55~$\mu$m. Poglejmo
-% si delovanje galij-arsenidnega laserja nekoliko pobliže.
-% 
-% Galij-arsenidni laser je narejen iz plasti GaAs in Ga$_{1- x}$Al$_x$As z
-% ustreznimi primesmi, kot kaže slika \ref{s6.13}. Take plastne strukture je
-% naredijo z epitaksialno rastjo. Pri tem je pomembno, da so medatomske
-% razdalje plasti čim bolj enake, da na meji dveh plasti ni napak. Ga$_{1-x}$%
-% Al$_x$As ima energijsko špranjo med vvalenčnim in prevodnim pasom nekoliko
-% večjo kot čisti GaAs, poleg tega ima tudi nekoliko večji lomni količni.
-% Obe lastnosti sta pomembni za delovanje laserja. Aktivna plast je tanka,
-% okoli 0,2~$\mu$m debela plast čistega GaAs. Potek energije pasov preko
-% aktivne plasti z napetostjo v prevodni smeri kaže slika \ref{s6.14}.
-% Elektroni tečejo iz n-tipa Ga$_{1-x}$Al$_x$As v prevodni pas aktivne plasti
-% GaAs, vrzeli pa iz p Ga$_{1-x}$Al$_x$As v valenčni pas. Zaradi manjše
-% energijske špranje so tako elektroni kot vrzeli ujeti, da ne morejo
-% difundirati iz aktivne plasti in je zato koncentracija elektronov v
-% prevodnem pasu in vrzeli v valenčnem že pri razmeroma majhnih tokovih
-% lahko velika in je izpolnjen pogoj za ojačevanje svetlobe.
-% 
-% Zaradi manjšega lomnega količnika GaAs od Ga$_{1- x}$Al$_x$As je laserska
-% svetloba ujeta v aktivni plasti, podobno kot v optičnih vlaknih, kot kaže
-% slika \ref{s6.15}. To dodatno zmanjšuje izgube, ker preprečuje absorpcijo
-% v področju izven aktivne plasti, kjer ni izpolnjen pogoj za ojačevanje.
-% 
-% Resonatorska zrcala so navadno kar gladko odklane stranske ploskve
-% polvodniškega kristala, ki imajo zaradi velikega lomnega količnika ($n=3,6$%
-% ) dovolj veliko reflektivnost za učinkovito delovanje laserja.
-% 
-% Pri strukturi, ki jo kaže slika \ref{s6.13}, je aktivna plast v prečni
-% smeri neomejena, zato lahko hkrati sveti mnogo prečnih nihanj, zaradi
-% česar je slabša prečna koherenca snopa in delovanje laserja nestabilno.
-% To slabost popravijo tako, da plasti ob straneh pojedkajo, da ostane le
-% kakih 10~$\mu$m širok greben, kot kaže slika \ref{s6.16}. Odjedkani
-% material nadomestijo s čistim Ga$_{1-x}$Al$_x$As, tako da je aktivni
-% volumen od vseh strani obdan s snovjo z večjim lomnim količnikom. S tem
-% dobimo pravokoten svetlobni vodnik, v katerem je ujet laserski snop. Ob
-% primerni izbiri deleža aluminija dobijo take lomne količnike, da je v
-% laserju možen le osnovni snop brez vozlov v prečni smeri. Izhodni snop iz
-% laserja je seveda eliptičen s presekom okoli 1~$\mu$m v navpični in 10~$\mu
-% $m v prečni smeri. To da v večji oddaljenosti snop z divergenco kakih 70$^o
-% $ v navpični in okoli 5$^o$ v prečni smeri. Če potrebujemo cilindrično
-% simetričen snop, ga moramo popraviti z ustreznimi cilindričnimi lečami
-% (Naloga).
-% 
-% Galij-arsenidni laser, kakršen je prikazan na sliki \ref{s6.16} lahko
-% deluje že pri črpalnem toku nekaj miliamperov. Tipični tokovi so med
-% 50~mA in 100~mA. Ker se velik delež elektonov in vrzeli rekombinira s
-% sevanjem v aktivni plasti, je izkoristek GaAs laserjev velik, tudi preko 30
-% . Tipična izhodna moč je tako reda velikosti
-% 10~mW. Zaradi velike gibljivosti elektronov in vrzeli v GaAs je mogoče tok
-% in s tem izhodno svetlobno moč tudi zelo hitro modulirati, do nekaj GHz,
-% kar je pomembno za uporabo v optičnih komunikacijah.
+\subsection{Svetlobne diode - LED}
+
+Za široko uporabo so danes brez dvoma najpomembnejši polvodniški laserji.
+Njihove glavne značilnosti so majhne dimenzije, neposredno črpanje z
+električnim tokom majhne jakosti in pri nizki napetosti, velik izkoristek,
+preko 20%,
+pri pretvorbi električne moči v svetlobno, in možnost hitre modulacije
+svetlobne moči z modulacijo električnega toka. Poleg tega jih je moč
+integrirati z drugimi polvodniškimi elementi in se za njihovo izdelavo
+uporablja običajna polvodniška tehnologija.
+
+Polvodniki absorbirajo svetlobo s frekvenco nad energijo prehoda iz
+valenčnega v prevodni pas. Pri tem z vzbuditvijo elektrona iz valenčnega v
+prevodni pas nastane par elektron-vrzel. Ta se lahko rekombinira z
+izsevanjem fotona, kar ustreza spontanemu ali stimuliranemu prehodu v atomih
+in molekulah. Zaradi ohranitve gibalne količine se valovni vektor elektrona
+pri prehodu le zelo malo spremeni, saj je valovni vektor vidne svetlobe
+majhen v primerjavi z vektorjem recipročne mreže polvodniškega kristala.
+To ima pomembno posledico. Najobičajnejša polvodnika, silicij in germanij,
+imata vrh prevodnega pasu v centru Brilluinove cone, to je pri valovnem
+vektorju nič, dno prevodnega pasu pa pri končno velikem valovnem vektorju.
+Zato direkten prehod z dna prevodnega pasu v vrh valenčnega pasu z
+izsevanjem fotona ni možen, potrebna je sočasna emisija ali absorpcija
+fonona, ki poskrbi za ohranitev gibalne količine. Tak proces pa je seveda
+mnogo manj verjeten, zato v siliciju in germaniju v običajni obliki ni
+mogoče dobiti znatnega sevanja s prehodi iz prevodnega v valenčni pas.
+
+Opisane težave ni pri spojinah iz tretje in pete skupine elementov, na
+primer GaAs, kjer je valenčni pas 1,4 eV nad prevodnim. Na njih so osnovani
+polvodniški laserji.
+
+Verjetnost za zasedenost elektronskih stanj v termičnem ravnovesju v
+polvodniku je podana s Fermi-Diracovo funkcijo \ref{ts}:
+
+\begin{equation}  \label{6.1}
+f(E)=\frac{1}{e^{(E-E_F)/k_B T}+1}\;\;.
+\end{equation}
+Pri nizkih temperaturah so zasedena vsa stanja do Fermijeve energije $E_F$,
+nad njo pa so prazna. V čistem polvodniku je $E_F$ na sredini med
+valenčnim in prevodnim pasom, z dodajanjem donorskih primesi pa se
+približuje prevodnemu pasu. Če je koncentracija primesi dovolj velika,
+lahko $E_F$ tudi pri absolutni ničli pride nad dno prevodnega pasu. Tak
+degenriran polvodnik se obnaša podobno kot kovina.
+
+Če polvodnik ni v termičnem ravnovesju, na primer v p-n spoju, skozi
+katerega teče električni tok, lahko vpeljemo približni Fermijevi energiji 
+$E_{Fv}$ in $E_{Fp}$ posebej za valenčni in prevodni pas. Tak približek je
+dober, kadar je čas, v katerem preidejo vzbujeni elektroni z višjih
+energij na dno prevodnega pasu, dosti krajši od časa prehoda iz prevodnega
+v valenčni pas. Ta pogoj je v polvodnikih, ki jih uporabljamo za laserje,
+navadno zelo dobro izpoljnen. Preko trkov s fononi elektroni preidejo v dno
+prevodenga pasu v pikosekundah, za prehod v valenčni pas, to je za
+rekombinacijo elektrona z vrzeljo, pa so potrebne nanosekunde.
+
+Neravnovesno stanje, ki ga lahko opišemo z približnima Fermijevima
+energijama, dobimo, kadar v degeneriran polvodnik p-tipa z dovolj veliko
+hitrostjo dodajamo elektrone v prevodni pas. To lahko storimo preko p-n
+spoja, na katerem je napetost v prevodni smeri. Tedaj dobimo položaj, ki ga
+kaže slika \ref{s6.10}. Naj bo $N_p$ gostota elektronov v prevodnem pasu, $I
+$ električni tok skozi spoj, $\tau$ pa čas za rekombinacijo elektrona in
+vrzeli. Velja 
+\begin{equation}  \label{6.2}
+\frac{N_p}{\tau}=\frac{I}{e V}\;,
+\end{equation}
+kjer je V volumen, v katerem se elektroni nahajajo. Po drugi strani je $N_p$
+podana kot integral gostote elektronskih stanj v prevodnem pasu $%
+\rho_p(E)=1/(2\pi^2)(2m_p/\hbar^2)^{3/2}(E-E_g)^{1/2}$, kjer je $m_p$
+efektivna masa prevodnih elektronov, in Fermi- Diracove funkcije: 
+\begin{equation}  \label{6.3}
+N_p=\int_{0}^{\infty}\,\rho_p(E)f_p(E)\,dE
+\end{equation}
+Iz enačb \ref{6.2} in \ref{6.3} lahko izračunamo vrednost $E_{Fp}$ pri
+poljubni temperaturi. Pri $T=0$ je integral preprost in je 
+\begin{equation}  \label{6.4}
+E_{Fp}(T=0)=(2\pi^2)^{2/3}\frac{\hbar^2}{2m_p}\,N_p^{2/3}
+\end{equation}
+$E_{Fp}$ je odvisna od toka skozi spoj in od temperature, kar je pomebno za
+delovanje polvodniškega laserja.
+
+Naj na p-n spoj vpada svetlobni snop s frekvenco $\omega$, ki je nekoliko
+nad $E_g/\hbar$. Svetloba povzroča prehode med stanji z energijo $E_p$ v
+prevodnem pasu in med stanji z energijo $E_v$ v valenčnem pasu, kot kaže
+slika \ref{s6.11}. Ta stanja se lahko razlikujejo po valovnem vektorju, zato
+moramo verjetnost za stimuliran prehod najprej zapisati za določen valovni
+vektor $\vec{k}$, nato pa sešteti po vseh možnih $\vec{k}$. V primeru
+izotropnih elektronskih pasov je verjetnost za prehod odvisna le od
+velikosti $\vec{k}$. Uporabimo zlato pravilo, kjer upoštevamo, da je
+verjetnost za zasedenost gornjega stanja $f_p(E_p)$ in verjetnost, da je
+spodnje stanje nezasedeno, $1-f_v(E_v)$: 
+\begin{equation}  \label{6.5}
+w_s(k)=\frac{2\pi}{\hbar}|H_{pv}|^2\delta(E_p-E_v- \hbar\omega)
+f_p(E_p)[1-f_v(E_v)]\;,
+\end{equation}
+kjer je $H_{pv}= |p\rangle \hat{x}|v\rangle E $ matrični element za dipolni
+prehod v svetlobnem polju $E$ med prevodnim in valenčnim pasom. Podobno je
+verjetnost za absorpcijo 
+\begin{equation}  \label{6.6}
+w_a(k)=\frac{2\pi}{\hbar}|H_{pv}|^2\delta(E_p-E_v- \hbar\omega)
+f_v(E_v)[1-f_p(E_p)]\;.
+\end{equation}
+
+Razliko med številom spontanih emisij in absorpcij na enoto volumna dobimo,
+če razliko gornjih verjetnosti seštejemo po vseh $k$: 
+\begin{eqnarray}  \label{6.7}
+N_{pv}-N_{vp}&=&\int[w_s-w_a]\rho(k)\,dk  \nonumber \\
+&=&\frac{2}{\pi\hbar}|H_{pv}|^2 \int[f_p(E_p)-f_v(E_v)]
+\delta(E_p-E_v-\hbar\omega) k^2\,dk\;.
+\end{eqnarray}
+Upoštevli smo, da je gostota stanj $\rho(k)=1/\pi^2 k^2dk$. Štejmo
+energijo od vrha valenčnega pasu. Energija elektronov blizu dna prevodnega
+pasu je $E_g+1/(2m_e)\hbar^2 k^2$, vrzeli pri vrhu prevodnega pasu pa $%
+1/(2m_h)\hbar^2 k^2$, kjer sta $m_e$ in $m_h$ efektivni masi elektronov in
+vrzeli. Tako je 
+\begin{equation}  \label{6.8}
+E_p-E_v=\hbar\omega^{\prime}=\frac{\hbar^2 k^2}{2}(\frac{1}{m_h}+ \frac{1}{%
+m_e})+E_g=\frac{hbar^2 k^2}{2m_r}+E_g\;,
+\end{equation}
+kjer smo z $m_r=m_e m_h/(m_e+m_h)$ označili reducirano maso lektrona in
+vrzeli. Iz zadnjega izraza dobimo 
+\begin{equation}  \label{6.9}
+k^2=\frac{2m_r}{\hbar}(\omega^{\prime}-\frac{E_g}{\hbar})
+\end{equation}
+in 
+\begin{equation}  \label{6.10}
+k^2dk=\frac{1}{2}(\frac{2m_r}{\hbar})^{3/2}\sqrt{\omega^{\prime}- \frac{E_g}{%
+\hbar})}\;.
+\end{equation}
+V \ref{6.7} preidemo z integracije po $k$ na $\omega^{\prime}$ in dobimo z
+upoštevanjem lastnosti delta-funkcije 
+\begin{equation}  \label{6.11}
+N_p-N_v=\frac{1}{\pi\hbar^2}(\frac{2m_r}{\hbar})^{3/2} \sqrt{\omega-\frac{E_g%
+}{\hbar}}[f_p(E_p)-f_v(E_v)]\;.
+\end{equation}
+Zaradi \ref{6.9} je še $E_p=m_r/m_e(\omega-E_g/\hbar)+E_g$ in $%
+E_v=m_r/m_h(\omega-E_g/\hbar)$.
+
+Dobljeni izraz je sorazmeren z ojačenjem vpadne svetlobe v polvodniku.
+Ojačenje bo očitno realno le, če bo $\omega$ večja od $E_g/\hbar$. Pri
+nižjih frekvencah seveda sploh ni prehodov in polvodnik je prozoren. Da
+bomo imeli res ojačenje in ne absorpcije, mora biti tudi $f_p(E_p)>f_v(E_v)$%
+, torej 
+\begin{equation}  \label{6.12}
+\frac{1}{e^{(E_p-E_{Fp})}+1}>\frac{1}{e^{(E_v-E_{Fv})}+1}\;.
+\end{equation}
+Gornja neenačba bo veljala, če bo 
+\begin{equation}  \label{6.13}
+\hbar\omega<E_{Fp}-E_{Fv}\;.
+\end{equation}
+To je osnovni pogoj za ojačevanje v polvodnikih. Ojačujejo se lahko tiste
+frekvence, ki so nad energijsko špranjo $E_g$ in pod razliko približnih
+neravnovesnih Fermijevih energij za oba pasova. Ojačenje kot funkcijo
+frekvence kaže slika \ref{s6.12}.
+
+Vrednosti $E_{Fp}$ in $E_{Fv}$ sta odvisni tako od toka skozi p-n spoj kot
+od temperature. Z njima je povezan tudi vrh ojačenja, kar je mogoče
+izkoristiti za spreminjanje frekvence polvodniškega laserja s tokom ali
+temperaturo.
+
+Ojačenja v polvodniških laserjih je precej veliko, lahko več od 100~cm$%
+^{-1}$. Zato je mogoče dobiti delujoč laser že v zelo kratkem aktivnem
+volumnu le nekaj mikronov. Običajni polvodniški laserji so dolgi okoli
+0.25~mm.
+
+Najpomembnejši polvodniši laserji so osnovani na na sistemu GaAs z Ga$%
+_{1-x}$Al$_{x}$As in na sistemu Ga$_{1- x}$In$_{x}$As$_{1-y}$P$_y$. Prvi
+delujejo od 750 nm do 880 nm, odvisno od $x$ in koncentracije primesi, drugi
+pa med 1,1~$\mu$m in 1,6~$\mu$m in so posebno pomembni za optične
+komunikacije, ki najve"krat delujejo pri 1,3~$\mu$m in 1,55~$\mu$m. Poglejmo
+si delovanje galij-arsenidnega laserja nekoliko pobliže.
+
+Galij-arsenidni laser je narejen iz plasti GaAs in Ga$_{1- x}$Al$_x$As z
+ustreznimi primesmi, kot kaže slika \ref{s6.13}. Take plastne strukture je
+naredijo z epitaksialno rastjo. Pri tem je pomembno, da so medatomske
+razdalje plasti čim bolj enake, da na meji dveh plasti ni napak. Ga$_{1-x}$%
+Al$_x$As ima energijsko špranjo med vvalenčnim in prevodnim pasom nekoliko
+večjo kot čisti GaAs, poleg tega ima tudi nekoliko večji lomni količni.
+Obe lastnosti sta pomembni za delovanje laserja. Aktivna plast je tanka,
+okoli 0,2~$\mu$m debela plast čistega GaAs. Potek energije pasov preko
+aktivne plasti z napetostjo v prevodni smeri kaže slika \ref{s6.14}.
+Elektroni tečejo iz n-tipa Ga$_{1-x}$Al$_x$As v prevodni pas aktivne plasti
+GaAs, vrzeli pa iz p Ga$_{1-x}$Al$_x$As v valenčni pas. Zaradi manjše
+energijske špranje so tako elektroni kot vrzeli ujeti, da ne morejo
+difundirati iz aktivne plasti in je zato koncentracija elektronov v
+prevodnem pasu in vrzeli v valenčnem že pri razmeroma majhnih tokovih
+lahko velika in je izpolnjen pogoj za ojačevanje svetlobe.
+
+Zaradi manjšega lomnega količnika GaAs od Ga$_{1- x}$Al$_x$As je laserska
+svetloba ujeta v aktivni plasti, podobno kot v optičnih vlaknih, kot kaže
+slika \ref{s6.15}. To dodatno zmanjšuje izgube, ker preprečuje absorpcijo
+v področju izven aktivne plasti, kjer ni izpolnjen pogoj za ojačevanje.
+
+Resonatorska zrcala so navadno kar gladko odklane stranske ploskve
+polvodniškega kristala, ki imajo zaradi velikega lomnega količnika ($n=3,6$%
+) dovolj veliko reflektivnost za učinkovito delovanje laserja.
+
+Pri strukturi, ki jo kaže slika \ref{s6.13}, je aktivna plast v prečni
+smeri neomejena, zato lahko hkrati sveti mnogo prečnih nihanj, zaradi
+česar je slabša prečna koherenca snopa in delovanje laserja nestabilno.
+To slabost popravijo tako, da plasti ob straneh pojedkajo, da ostane le
+kakih 10~$\mu$m širok greben, kot kaže slika \ref{s6.16}. Odjedkani
+material nadomestijo s čistim Ga$_{1-x}$Al$_x$As, tako da je aktivni
+volumen od vseh strani obdan s snovjo z večjim lomnim količnikom. S tem
+dobimo pravokoten svetlobni vodnik, v katerem je ujet laserski snop. Ob
+primerni izbiri deleža aluminija dobijo take lomne količnike, da je v
+laserju možen le osnovni snop brez vozlov v prečni smeri. Izhodni snop iz
+laserja je seveda eliptičen s presekom okoli 1~$\mu$m v navpični in 10~$\mu
+$m v prečni smeri. To da v večji oddaljenosti snop z divergenco kakih 70$^o
+$ v navpični in okoli 5$^o$ v prečni smeri. Če potrebujemo cilindrično
+simetričen snop, ga moramo popraviti z ustreznimi cilindričnimi lečami
+(Naloga).
+
+Galij-arsenidni laser, kakršen je prikazan na sliki \ref{s6.16} lahko
+deluje že pri črpalnem toku nekaj miliamperov. Tipični tokovi so med
+50~mA in 100~mA. Ker se velik delež elektonov in vrzeli rekombinira s
+sevanjem v aktivni plasti, je izkoristek GaAs laserjev velik, tudi preko 30
+. Tipična izhodna moč je tako reda velikosti
+10~mW. Zaradi velike gibljivosti elektronov in vrzeli v GaAs je mogoče tok
+in s tem izhodno svetlobno moč tudi zelo hitro modulirati, do nekaj GHz,
+kar je pomembno za uporabo v optičnih komunikacijah.
