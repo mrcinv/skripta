@@ -1703,24 +1703,24 @@ pri prenosu signalov po optičnih vlaknih, in signal lahko potuje brez podaljše
 \index{Optična fazna konjugacija}
 Optična fazna konjugacija je zanimiv in danes tudi praktično pomemben
 pojav, pri katerem nastane iz danega valovanja novo valovanje, ki ima enake valovne
-fronte, vendar potuje v nasprotni smeri od prvotnega valovanja. Novo valovanje je torej tako,
-kot bi začetnemu valovanju obrnili predznak časa in ga ''zavrteli nazaj''. '
+fronte, vendar potuje v nasprotni smeri od prvotnega valovanja. Novo valovanje je tako,
+kot bi začetnemu valovanju obrnili predznak časa in ga ``zavrteli nazaj''.
 
 Vzemimo optično nelinearno snov, na katero posvetimo z dvema močnima ravnima
 snopoma v nasprotnih smereh. To sta črpalna snopa in njuna valovna vektorja 
 naj bosta ${\bf k}_{1}$ in ${\bf k}_2 = -{\bf k}_{1}$. Poleg njiju naj na snov vpada
 še tretji, signalni snop, ki ni nujno raven val (slika~\ref{08_OPC1}). 
 Signalni snop interferira s prvim črpalnim valom in s tem zaradi nelinearnosti 
-tretjega reda povzroči modulacijo lomnega količnika, ki je skoraj periodična, če
-je signalni val podoben ravnemu valu. Na tej periodični modulaciji se
-drugo črpalno valovanje uklanja, pri čemer je uklonjeno valovanje enake oblike
-kot signalno, le potuje v nasprotni smeri, ker ima drugo črpalno valovanje
+tretjega reda povzroči modulacijo lomnega količnika. Ta je skoraj periodična, če
+je signalni val podoben ravnemu valu. Na modulaciji lomnega količnika se
+drugo črpalno valovanje uklanja. Uklonjeno valovanje je enake oblike
+kot signalno, le potuje v nasprotni smeri, saj ima drugo črpalno valovanje
 nasprotno smer od prvega. Črpalni valovanji sta seveda enakovredni in ni
 mogoče ločiti, s katerim je signalno valovanje interferiralo in katero se
 uklanja.
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{60truemm} 
 \input{slike/08_opc1.pdf_tex}
 \caption{Optična fazna konjugacija. Dva močna črpalna žarka (modra) vpadata 
 na optično nelinearno snov v nasprotnih smereh, vpadni signal (rdeč) pa se odbije v 
@@ -1733,7 +1733,7 @@ podobna holografiji, le da pri holografiji najprej zapišemo predmetni snop,
 ki ga kasneje reproduciramo, pri fazni konjugaciji pa zapis začetnega valovanja in 
 njegova reprodukcija potekata sočasno. 
 \end{remark}
-Naj se signalno valovanje razširja v smeri $z$. Potem ga zapišemo kot  
+Naj se signalno valovanje razširja v smeri $z$. Zapišemo ga  
 \begin{equation}
 E_{3}=\mathfrak{\Re}\left(A_3\left(z\right)\, e^{i\left(kz-\omega t\right)}\right).
 \label{8.97}
@@ -1751,7 +1751,7 @@ da krajevni del kompleksno konjugiramo, nastalemu valovanju pravimo fazno
 konjugirano valovanje.
 \begin{figure}[h!]
 \centering
-\def\svgwidth{85truemm} 
+\def\svgwidth{80truemm} 
 \input{slike/08_opc2.pdf_tex}
 \caption{Primerjava odbojev na navadnem zrcalu (levo) in faznem konjugatorju (desno): odboj ravnega
 vala (a), odboj krogelnega valovanja (b) in odboj popačenega vala (c). Valovne fronte 
@@ -1760,22 +1760,27 @@ vpadnega vala so označene s polno črto, odbitega pa s črtkano.}
 \end{figure}
 
 Uporabna posledica fazne konjugacije je prikazana na sliki~(\ref{08_OPC2}).
-Najpreprostejši primer je vpad ravnega vala (a), ki se ne odbije po odbojnem zakonu (slika levo),
-ampak se odbije v smer, iz katere je vpadel na snov (desno). Drugi primer je krogelni val 
+Najpreprostejši primer je vpad ravnega vala (a), ki se ne odbije po 
+odbojnem zakonu (slika levo), ampak se odbije v smer, iz katere 
+je vpadel na snov (slika desno). Drugi primer je krogelni val 
 ali v približku tudi Gaussov snop (b). Ko vpade na navadno zrcalo (levo), se njegova divergenca
 ohranja in se žarek še naprej razširja. Na fazno konjugiranem zrcalu se krogelni val spet
-zbere v izvoru (desno). Tretji primer je poljubno sredstvo, ki valovanju doda naključno
-fazo, zato po prehodu valovne fronte niso več gladke (c). Ta popačen snop v faznem
-konjugatorju generira fazno konjugiran snop, ki potuje v nasprotni smeri
-in ima enako nepravilne valovne fronte kot vpadni val. Po prehodu
+zbere v izvoru (desno). 
+
+Tretji primer je poljubno sredstvo, ki valovanju doda naključno
+fazo, zato po prehodu valovne fronte niso več gladke (c). Od navadnega zrcala
+se popačen snop odbije, pri ponovnem prehodu skozi sredstvo pa se popačenje
+še poveča. Povsem drugačno je obnašanje pri odboju na faznem konjugatorju. 
+Ko popačen snop vpade na fazni konjugator, v njem generira fazno konjugiran snop, 
+ki potuje v nasprotni smeri in ima enako nepravilne valovne fronte kot vpadni val. Po prehodu
 skozi nepravilno sredstvo se neravnosti valovne fronte izničijo
-in nastanejo enake gladke valovne fronte ravnega vala, kot smo jih imeli na začetku. 
+in nastanejo enake gladke valovne fronte ravnega vala kot na začetku. 
 To lastnost popravljanja valovne fronte je mogoče 
 koristno uporabiti, na primer namesto enega zrcala v laserskem resonatorju.
 
 \begin{remark}
-Omenili smo že, da se fazno konjugirana zrcala lahko uporabljajo v laserjih, da
-izničimo popačenje Gaussovega snopa. Drug primer uporabe je pri optični astronomiji
+Omenili smo že, da se fazno konjugirana zrcala uporabljajo v laserjih za izničenje
+popačenj Gaussovega snopa. Drug primer uporabe je pri optični astronomiji
 ali optičnih komunikacijah skozi atmosfero. Naključne spremembe gostote v atmosferi
 signalu dodajo naključni fazni premik, ki signal popači. Če se signal odbije od zrcala nazaj
 proti izvoru, bo torej dvakratno popačen. Če pa se odbije od fazno konjugiranega zrcala, 
@@ -1803,6 +1808,7 @@ amplitudi konstantni, $E_{3}\left(z\right)$ in $E_{4}\left(z\right)$
 pa se le počasi spreminjata.
 
 Vstavimo $E$ v valovno enačbo z nelinearno polarizacijo (enačba~\ref{8.3})
+\index{Valovna enačba!nelinearna}
 \begin{equation}
 \nabla^{2}E+\epsilon\frac{\omega^{2}}{c_0^{2}}\, 
 E=\mu_{0}\frac{\partial^2 P_{\mathrm{NL}}}{\partial t^2}.
@@ -1813,32 +1819,32 @@ enak $P_\mathrm{NL}= \epsilon_{0}\chi^{(3)}E^3$, kjer je $\chi^{(3)} = \chi$
 efektivna nelinearna susceptibilnost
 za izbrano polarizacijo vseh polj. 
 
-Ker je $E$ zapisan kot vsota osmih različnih členov
+Ker je $E$ zapisan kot vsota osmih členov
 (enačba~\ref{8.99}), vsebuje produkt $E^3$ kar 512 členov. Vendar se njihovo število znatno zmanjša, 
 če upoštevamo le tiste z enako časovno odvisnostjo oziroma enako frekvenco.
 Poleg tega nas ne zanimajo različne kombinacije valovnih vektorjev, ampak k enačbi za $E_{3}$ 
 prispevajo le tisti členi s krajevnim faznim faktorjem $\exp(ikz)$, 
 k enačbi za $E_4$ pa tisti z $\exp(-ikz)$. Sledi
 \begin{eqnarray}
-P_{\mathrm{NL}\,3,4} &=& \frac{1}{8}\varepsilon_0\chi 
+P_{\mathrm{NL}\,3,4} &=& \frac{1}{8}\varepsilon_0\chi [
 \left(6 A_1 A_2 A_4^*+ 6A_1 A_1^*A_3 + 6A_2A_2^*A_3 + 3 A_3A_3^*A_3 + 6 A_4 A_4^* A_3\right)
 e^{i k z - i\omega t} \nonumber\\
 &+& 
 \left(6 A_1 A_2 A_3^*+6 A_1 A_1^*A_4 + 6A_2A_2^*A_4 + 6 A_3A_3^*A_4 + 3 A_4 A_4^* A_4\right)
-e^{-i k z - i\omega t}.
+e^{-i k z - i\omega t}].
 \end{eqnarray}
 Če zanemarimo še člene, v katerih nastopata $A_3$ in $A_4$ v višjih potencah, dobimo
 \begin{eqnarray}
-P_{\mathrm{NL}\,3,4} &=& \frac{3}{4}\varepsilon_0\chi 
+P_{\mathrm{NL}\,3,4} &=& \frac{3}{4}\varepsilon_0\chi [
 \left( A_1 A_2 A_4^*+ |A_1|^2 A_3 + |A_2|^2 A_3 \right)
 e^{i k z - i\omega t} \nonumber\\
 &+& 
 \left( A_1 A_2 A_3^*+|A_1|^2 A_4 + |A_2|^2A_4 \right)
-e^{-i k z - i\omega t}.
+e^{-i k z - i\omega t}].
 \end{eqnarray}
 Vstavimo gornji izraz v valovno enačbo~(enačba~\ref{8.100}) in upoštevamo, 
 da se $A_i(z)$ le počasi 
-spreminja (kar pomeni, da zanemarimo drugi odvod po $z$). Dobimo enačbi 
+spreminja (kar pomeni, da zanemarimo drugi odvod po $z$). Sledi 
 \begin{equation}
 i k \frac{dA_3}{dz} = - \frac{3}{4} \mu_0\varepsilon_0 \chi \omega^2 
 \left( A_1 A_2 A_4^*+ (|A_1|^2 + |A_2|^2) A_3 \right)
@@ -1863,7 +1869,7 @@ in
 \end{equation}
 Ko novi amplitudi vstavimo v diferencialni enačbi~(enačbi~\ref{eq:opc1} in 
 \ref{eq:opc2}), se Kerrov prispevek k fazi ravno odšteje
-in 
+in enačbi se prepišeta v 
 \begin{equation}
 \frac{d\tilde{A}_{3}}{dz}=i\frac{ 3 \chi \omega}{4 c_0 n}\,
 A_{1}A_{2}\tilde{A}_{4}^{*}
@@ -1912,14 +1918,14 @@ C_2 = -\frac{i \kappa^*}{|\kappa|}D_1.
 \end{equation}
 Potrebujemo še robne pogoje za obe valovanji. Z leve, pri $z=0$,
 poznamo $\tilde{A}_{3}^{*}\left(0\right)$, pri $z=L$ pa ne more biti odbitega
-vala in je zato $\tilde{A}_{4}\left(L\right)=0$. S tem lahko določimo konstanti $D_{1}$
+vala in je zato $\tilde{A}_{4}\left(L\right)=0$. S tem določimo konstanti $D_{1}$
 in $D_{2}$
 \begin{equation}
 D_2 = -\frac{i|\kappa|}{\kappa^*} \tilde{A}_3^*(0) \qquad
 \textrm{in} \qquad 
 D_1 = -D_2 \tan(|\kappa|L). 
 \end{equation}
-Gornje enačbe združimo in lahko zapišemo amplitudi znotraj nelinearne snovi
+Gornje enačbe združimo in zapišemo amplitudi znotraj nelinearne snovi
 \begin{eqnarray}
 \tilde{A}_{3}\left(z\right) & = & \tilde{A}_3(0)
 \frac{\cos\left(|\kappa|(L-z)\right)}{\cos\left(|\kappa|L\right)}
@@ -1949,7 +1955,7 @@ zato tudi ime fazno konjugiran val. Zanimiva je tudi njegova velikost. Ker
 je lahko $\tan\left(|\kappa|L\right)>1$, je odbit val lahko močnejši od vpadnega.
 To ojačenje odbitega vala gre seveda na račun moči črpalnih
 valov. V našem računu bi lahko amplituda odbite svetlobe narasla proti neskončnosti, 
-vendar ne smemo pozabiti, ta zapisane enačbe takrat niso več veljavne, ker smo privzeli, 
+vendar zapisane enačbe takrat niso več veljavne, saj smo privzeli, 
 da sta signalni in odbiti žarek precej šibkejša od črpalnih.
 
 Poglejmo še prepuščeni žarek. Ker je $\cos(x)\leq1$, je amplituda prepuščenega
@@ -1963,3 +1969,145 @@ valovih in zgoraj izpeljana enačba~(\ref{8.110}) velja za vsako komponento pose
 Odbite komponente so sorazmerne s konjugiranimi komponentami signalnega valovanja
 z nasprotnim valovnim vektorjem in dajo skupaj valovno fronto enake
 oblike kot pri signalnem valovanju, le giblje se v nasprotni smeri.
+
+\section{Stimulirano Ramanovo in stimulirano Brillouinovo sipanje}
+\index{Stimulirano Ramanovo sipanje}
+\index{Stimulirano Brillouinovo sipanje}
+Ko svetloba vpade na snov, se je del siplje. Poleg elastičnega Rayleighevega sipanja, 
+pri katerem se energija vpadlih fotonov in tako frekvenca svetlobe ohranja, pride
+tudi do sipanja, pri katerem se energija izhodnih fotonov razlikuje od energije vpadnih. 
+
+Če se energija fotonov spremeni zaradi prehajanja molekul snovi med različnimi
+vibracijskimi ali rotacijskimi stanji, govorimo o Ramanovem 
+sipanju\footnote{Indijski fizik in nobelovec Sir Chandrasekhara Venkata Raman, 1888--1970.}. 
+Do tega pojava lahko pride tako v plinih in tekočinah kot tudi v trdnih snoveh. Navadno 
+ločimo dva primera: Stokesovo sipanje\footnote{Irski fizik in matematik Sir George Gabriel
+Stokes, 1819--1903.}, pri katerem foton odda energijo molekuli, in anti-Stokesovo sipanje,
+pri katerem foton prejme energijo od vzbujene molekule. V prvem primeru je frekvenca
+sipane svetlobe $\omega_s=\omega_0-\omega_v$, kjer $\omega_0$ označuje frekvenco vpadne
+svetlobe, $\omega_v$ pa vibracijsko frekvenco, v drugem primeru pa $\omega_s=\omega_0+\omega_v$.
+Slednji procesi so razmeroma redki, zato je intenziteta anti-Stokesovega sipanja 
+še znatno šibkejša od že tako šibkega Ramanovega sipanja. 
+Drug zanimiv primer je, kadar pride do spremembe energije 
+fotonov zaradi vzbujanja akustičnih valov (fononov). Takrat govorimo o Brillouinovem sipanju\footnote{Francoski fizik L\'eon Nicolas Brillouin, 1889--1969.}. Opišimo
+pojava podrobneje.
+
+\subsection*{Stimulirano Ramanovo sipanje}
+Pri spontanem Ramanovem sipanju se izsevana svetloba siplje v vseh smereh 
+s poljubno fazo. Če pa na snov poleg osnovnega žarka s frekvenco $\omega_0$ 
+usmerimo dodaten Stokesov žarek s frekvenco $\omega_s$, pa ki stimulira določen prehod,
+se fotoni osnovnega žarka absorbirajo, izhajajo pa 
+fotoni pri $\omega_s$. Povedano drugače: moč izhodne svetlobe pri $\omega_s$, ki 
+je po fazi in smeri enaka vpadni, se povečuje na račun osnovnega žarka pri
+$\omega_0$. Tako pride do močnega resonančnega
+ojačenja svetlobe pri $\omega_s$ oziroma do stimuliranega Ramanovega sipanja. 
+Preostali del energije prevzamejo molekule, ki preidejo v vzbujeno vibracijsko stanje. 
+
+Obravnavajmo snov kot $N$ neodvisnih enodimenzionalnih harmonskih oscilatorjev. Nihanje
+posameznega oscilatorja opišemo z enačbo
+\beq
+\frac{d^2X(z,t)}{dt^2}+ \gamma \frac{dX}{dt}+\omega_v^2X = \frac{F(z,t)}{m},
+\label{srs:X}
+\eeq
+kjer je $X$ koordinata, $\gamma$ koeficient dušenja, $m$ masa in $F$ zunanja sila.
+Silo na en oscilator izračunamo kot odvod energije po koordinati 
+\beq
+F = \frac{dW}{dX}= \frac{1}{2}\varepsilon_0 \frac{d\alpha}{dX}\,\overline{E^2},
+\label{srs:F}
+\eeq
+pri čemer smo polarizabilnost $\alpha$ razvili v Taylorjevo vrsto do prvega člena
+\beq
+\varepsilon = \varepsilon_0(1+N\alpha) = \varepsilon_0+\varepsilon_0N\left(\alpha_0 + 
+\frac{d\alpha}{dX}\,X\right).
+\label{srs:a}
+\eeq
+Električno poljsko jakost smo zapisali kot povprečje, saj so optične frekvence 
+tako hitre, da jim molekule ne morejo slediti. 
+
+Celotno električno polje zapišemo kot vsoto osnovnega in Stokesovega polja
+\beq
+E(z,t)= \frac{1}{2}\left( E_0(z)e^{-i\omega_0t}+ E_s(z)e^{-i\omega_st} + k.k.\right)
+\eeq
+in povprečje kvadrata
+\beq
+\overline{E^2} = \frac{1}{4}\left(E_0^2E_s^* e^{-i(\omega_0-\omega_s)t}+k.k.\right).
+\eeq
+Vstavimo zapisano električno poljsko jakost najprej v izraz za silo (enačba~\ref{srs:F}),
+nato pa v enačbo osilatorja (enačba~\ref{srs:X}). Sledi
+\beq
+\frac{1}{2}\left(\omega_v^2-\omega^2-i\omega\gamma\right)\tilde{X} = 
+\frac{\varepsilon_0}{8m}\frac{d\alpha}{dX}E_0 E_s^*,
+\eeq
+pri čemer je 
+\beq
+X(z,t) = \frac{1}{2}\left(\tilde{X}e^{-i\omega t}+ k.k.\right)
+\eeq
+in $\omega = \omega_0-\omega_s$. Oscilatorji torej nihajo s kompleksno amplitudo
+\beq
+\tilde{X} = \frac{\varepsilon_0\frac{d\alpha}{dX}E_0 E_s^*}{4m\left(
+\omega_v^2-(\omega_0-\omega_s)^2-i(\omega_0-\omega_s)\gamma\right)}.
+\eeq
+Zdaj lahko zapišemo polarizacijo $P = \varepsilon_0N\alpha E$ in nelinearen del
+polarizacije je
+\beq
+P_{\mathrm{NL}} = \frac{1}{4}\varepsilon_0 N \frac{d\alpha}{dX} \, \left(\tilde{X}
+e^{-i(\omega_0-\omega_s)t}
++ k.k.\right) \cdot \left( E_0(z)e^{-i\omega_0t}+ E_s(z)e^{-i\omega_st} + k.k.\right).
+\eeq
+Omejimo se le na polarizacijo pri frekvenci $\omega_s$ in zapišemo
+\beq
+P_{\mathrm{NL},\omega_s} = \varepsilon_0 \chi_{ef}E_s = 
+\frac{\varepsilon_0^2 N }{8m}\left(\frac{d\alpha}{dX}\right)^2 \, 
+\frac{|E_0|^2}{\omega_v^2-(\omega_0-\omega_s)^2+i(\omega_0-\omega_s)\gamma}\,E_s.
+\label{srs:chi}
+\eeq
+Efektivna susceptibilnost za svetlobo pri frekvenci $\omega_s$ je 
+torej kompleksna in sorazmerna intenziteti vpadne laserske svetlobe pri osnovni frekvenci
+$\omega_0$. 
+
+Kompleksna susceptibilnost seveda pomeni tudi kompleksni lomni količnik. Če upoštevamo
+le prve člene v razvoju, se vpadna svetloba se po snovi širi kot
+\beq
+E_s(z) = E_s(0)\exp\left(i k z + ikz\frac{1}{2}\Re(\chi)- k z \frac{1}{2}\Im(\chi)\right).
+\label{srs:Es}
+\eeq
+\begin{definition}
+\label{nalogasrs}
+ Izpelji enačbo~(\ref{srs:Es}), tako da iz efektivne susceptibilnosti izračunaš lomni količnik,
+ nato pokaži, da je imaginarni del efektivne susceptibilnosti  (enačba~\ref{srs:chi}) 
+ vedno negativen. 
+\end{definition}
+Krajši račun pokaže (naloga~\ref{nalogasrs}), da je imaginarni del efektivne susceptibilnosti
+vedno negativen in električna poljska jakost eksponentno narašča. 
+
+Če je razlika frekvenc vpadne svetlobe ravno enaka vibracijski frekvenci, je sistem v 
+resonanci in ojačenje največje. Za primer: ojačenje rubinovega laserja v $1~\si{\cm}$ 
+dolgi plasti CS$_2$ je pri moči laserja $1~\si{\watt}/\si{\micro\meter}^2$ enako $2$, zelo 
+podobno vrednost dobimo tudi za LiNBO$_3$. 
+
+\begin{remark}
+ Uporaba
+\end{remark}
+
+\subsection*{Stimulirano Brillouinovo sipanje}
+Stimulirano Brillouinovo sipanje je pojav, pri katerem vpadlo svetlobno valovanje
+vzbudi akustični val (fonon), nato pa se na njem siplje. Poleg vpadne svetlobe pri $\omega_0$
+se tako pojavi še svetloba pri frekvenci $\omega_0-\omega_f$, pri čemer 
+$\omega_f$ označuje frekvenco akustičnega vala. Obe valovanji se pojavita le v točno
+določenih smereh in nad določeno intenziteto vpadne svetlobe. Najmočnejši pojav je 
+ravno v nasproti smeri od vpadne svetlobe, v smeri naprej pa Brillouinovega sipanja ni.
+Če bi namreč vstopna in izstopna svetloba bili vzporedni, bi bila razlika njunih
+valovnih vektorjev enaka nič. Poleg tega se izkaže, da je intenziteta Brilouinnovega
+sipanja sorazmerna z valovnim številom akustičnega vala, zato je 
+opazovanje v nasprotni smeri vpadne svetlobe najučinkovitejše.
+
+
+
+V vlaknih se kljub šibki ojačitvi signal močno ojači. Odvisnost Brillouinovega 
+premika od temperature in pritiska deluje kot senzor. 
+
+Tega ne bomo izpeljevali.
+
+
+
+
