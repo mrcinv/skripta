@@ -1974,7 +1974,7 @@ oblike kot pri signalnem valovanju, le giblje se v nasprotni smeri.
 \index{Stimulirano Ramanovo sipanje}
 \index{Stimulirano Brillouinovo sipanje}
 Ko svetloba vpade na snov, se je del siplje. Poleg elastičnega Rayleighevega sipanja, 
-pri katerem se energija vpadlih fotonov in tako frekvenca svetlobe ohranja, pride
+pri katerem se energija vpadlih fotonov in z njo frekvenca svetlobe ohranja, pride
 tudi do sipanja, pri katerem se energija izhodnih fotonov razlikuje od energije vpadnih. 
 
 Če se energija fotonov spremeni zaradi prehajanja molekul snovi med različnimi
@@ -1987,21 +1987,32 @@ pri katerem foton prejme energijo od vzbujene molekule. V prvem primeru je frekv
 sipane svetlobe $\omega_s=\omega_0-\omega_v$, kjer $\omega_0$ označuje frekvenco vpadne
 svetlobe, $\omega_v$ pa vibracijsko frekvenco, v drugem primeru pa $\omega_s=\omega_0+\omega_v$.
 Slednji procesi so razmeroma redki, zato je intenziteta anti-Stokesovega sipanja 
-še znatno šibkejša od že tako šibkega Ramanovega sipanja. 
+še znatno šibkejša od že tako šibkega Ramanovega sipanja. Tipični Ramanov premik 
+$\omega_0-\omega_s$ znaša okoli $10^{12}$--$10^{13}~\si{\hertz}$.
 Drug zanimiv primer je, kadar pride do spremembe energije 
-fotonov zaradi vzbujanja akustičnih valov (fononov). Takrat govorimo o Brillouinovem sipanju\footnote{Francoski fizik L\'eon Nicolas Brillouin, 1889--1969.}. Opišimo
-pojava podrobneje.
+fotonov zaradi vzbujanja akustičnih valov (fononov). Takrat govorimo o Brillouinovem 
+sipanju\footnote{Francoski fizik L\'eon Nicolas Brillouin, 1889--1969.}. Tipičen
+Brillouinov premik je $\sim 10^{10}\si{\hertz}$. 
 
 \subsection*{Stimulirano Ramanovo sipanje}
 Pri spontanem Ramanovem sipanju se izsevana svetloba siplje v vseh smereh 
 s poljubno fazo. Če pa na snov poleg osnovnega žarka s frekvenco $\omega_0$ 
-usmerimo dodaten Stokesov žarek s frekvenco $\omega_s$, pa ki stimulira določen prehod,
+usmerimo dodaten Stokesov žarek s frekvenco $\omega_s$, ki stimulira določen prehod,
 se fotoni osnovnega žarka absorbirajo, izhajajo pa 
 fotoni pri $\omega_s$. Povedano drugače: moč izhodne svetlobe pri $\omega_s$, ki 
-je po fazi in smeri enaka vpadni, se povečuje na račun osnovnega žarka pri
+je po fazi in smeri enaka vpadni, se povečuje na račun osnovnega črpalnega žarka pri
 $\omega_0$. Tako pride do močnega resonančnega
 ojačenja svetlobe pri $\omega_s$ oziroma do stimuliranega Ramanovega sipanja. 
 Preostali del energije prevzamejo molekule, ki preidejo v vzbujeno vibracijsko stanje. 
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/08_Raman.pdf_tex}
+\caption{Prehodi med energijskimi nivoji pri Ramanovem sipanju. Pri Stokesovem sipanju
+snov prevzame energijo (levo), pri anti-Stokesovem sipanju pa odda (desno).}
+\label{08_Raman}
+\end{figure}
 
 Obravnavajmo snov kot $N$ neodvisnih enodimenzionalnih harmonskih oscilatorjev. Nihanje
 posameznega oscilatorja opišemo z enačbo
@@ -2033,7 +2044,7 @@ in povprečje kvadrata
 \overline{E^2} = \frac{1}{4}\left(E_0^2E_s^* e^{-i(\omega_0-\omega_s)t}+k.k.\right).
 \eeq
 Vstavimo zapisano električno poljsko jakost najprej v izraz za silo (enačba~\ref{srs:F}),
-nato pa v enačbo osilatorja (enačba~\ref{srs:X}). Sledi
+nato pa v enačbo oscilatorja (enačba~\ref{srs:X}). Sledi
 \beq
 \frac{1}{2}\left(\omega_v^2-\omega^2-i\omega\gamma\right)\tilde{X} = 
 \frac{\varepsilon_0}{8m}\frac{d\alpha}{dX}E_0 E_s^*,
@@ -2063,10 +2074,11 @@ P_{\mathrm{NL},\omega_s} = \varepsilon_0 \chi_{ef}E_s =
 \eeq
 Efektivna susceptibilnost za svetlobo pri frekvenci $\omega_s$ je 
 torej kompleksna in sorazmerna intenziteti vpadne laserske svetlobe pri osnovni frekvenci
-$\omega_0$. 
+$\omega_0$. Iz gornjega izraza je tudi jasno, zakaj gre pri stimuliranem Ramanovem
+sipanju za nelinearen optični pojav tretjega reda.
 
-Kompleksna susceptibilnost seveda pomeni tudi kompleksni lomni količnik. Če upoštevamo
-le prve člene v razvoju, se vpadna svetloba se po snovi širi kot
+Kompleksna susceptibilnost pomeni kompleksni lomni količnik. Če upoštevamo
+le prve člene v razvoju, se vpadna svetloba po snovi širi kot
 \beq
 E_s(z) = E_s(0)\exp\left(i k z + ikz\frac{1}{2}\Re(\chi)- k z \frac{1}{2}\Im(\chi)\right).
 \label{srs:Es}
@@ -2074,19 +2086,25 @@ E_s(z) = E_s(0)\exp\left(i k z + ikz\frac{1}{2}\Re(\chi)- k z \frac{1}{2}\Im(\ch
 \begin{definition}
 \label{nalogasrs}
  Izpelji enačbo~(\ref{srs:Es}), tako da iz efektivne susceptibilnosti izračunaš lomni količnik,
- nato pokaži, da je imaginarni del efektivne susceptibilnosti  (enačba~\ref{srs:chi}) 
- vedno negativen. 
+in pokaži, da je $\Im(\chi)$ vedno negativen. 
 \end{definition}
-Krajši račun pokaže (naloga~\ref{nalogasrs}), da je imaginarni del efektivne susceptibilnosti
-vedno negativen in električna poljska jakost eksponentno narašča. 
-
-Če je razlika frekvenc vpadne svetlobe ravno enaka vibracijski frekvenci, je sistem v 
-resonanci in ojačenje največje. Za primer: ojačenje rubinovega laserja v $1~\si{\cm}$ 
-dolgi plasti CS$_2$ je pri moči laserja $1~\si{\watt}/\si{\micro\meter}^2$ enako $2$, zelo 
-podobno vrednost dobimo tudi za LiNBO$_3$. 
+Ker je imaginarni del efektivne susceptibilnosti vedno negativen (naloga~\ref{nalogasrs}), 
+električna poljska jakost eksponentno narašča na račun črpalnega laserskega snopa. 
+Največjo ojačenje je seveda v primeru, ko je sistem v resonanci
+in razlika frekvenc vpadne svetlobe ravno enaka vibracijski frekvenci.
+Če zanemarimo izgube, lahko zapišemo
+\beq
+|E_s(L)|^2 = |E_s(0)|^2 e^{G_RjL}.
+\eeq
+Vrednosti $G_R$ so $0,024~\si{\cm/\mega\watt}$ za CS$_2$, 
+$0,029~\si{\cm/\mega\watt}$ za LiNbO$_3$ in $0,0008~\si{\cm/\mega\watt}$ za SiO$_2$. 
+V meter dolgem odseku vlakna pride tako pri intenziteti svetlobe $10^{10}~\si{\watt/\meter^2}$ 
+do faktorja ojačanja $1,08$.
 
 \begin{remark}
- Uporaba
+Pojav stimuliranega Ramanovega sevanja je posebej pomemben v optičnih vlaknih, predvsem
+zaradi velike intenzitete in velike dolžine, na kateri pride do medsebojne interakcije. 
+Ta pojav uporabljamo za ojačenje signala v optičnih vlaknih.
 \end{remark}
 
 \subsection*{Stimulirano Brillouinovo sipanje}
@@ -2097,17 +2115,12 @@ $\omega_f$ označuje frekvenco akustičnega vala. Obe valovanji se pojavita le v
 določenih smereh in nad določeno intenziteto vpadne svetlobe. Najmočnejši pojav je 
 ravno v nasproti smeri od vpadne svetlobe, v smeri naprej pa Brillouinovega sipanja ni.
 Če bi namreč vstopna in izstopna svetloba bili vzporedni, bi bila razlika njunih
-valovnih vektorjev enaka nič. Poleg tega se izkaže, da je intenziteta Brilouinnovega
-sipanja sorazmerna z valovnim številom akustičnega vala, zato je 
-opazovanje v nasprotni smeri vpadne svetlobe najučinkovitejše.
+valovnih vektorjev enaka nič. 
 
-
-
-V vlaknih se kljub šibki ojačitvi signal močno ojači. Odvisnost Brillouinovega 
-premika od temperature in pritiska deluje kot senzor. 
-
-Tega ne bomo izpeljevali.
-
-
-
-
+Račun je zelo podoben računu za Ramanovo sipanjem, zato ga ne bomo ponavljali. Tudi
+v tem primeru pride do eksponentega ojačenja, vendar ne smemo pozabiti, da se val širi 
+v nasprotni smeri od vpadnega. Vrednosti parametra $G_B$, ki ima enako vlogo kot $G_R$, 
+so na primer $0,13~\si{\cm/\mega\watt}$ za CS$_2$ in $0,0045~\si{\cm/\mega\watt}$ za SiO$_2$.
+Ker je koeficient $G_B$ odvisen od zunanjih parametrov, na primer od 
+temperature ali pritiska, lahko stimulirano Brillouinovo sipanje uporabimo tudi za
+senzoriko. 
