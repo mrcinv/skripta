@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{595.84989166bp}%
+    \setlength{\unitlength}{786.27303314bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,12 +48,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.76701382)%
+  \begin{picture}(1,0.50077081)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{11_Piro.pdf}}%
-    \put(-0.06105097,0.70904403){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R$}}}%
-    \put(0.99645286,0.00606209){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega$}}}%
-    \put(0.12129414,0.00676673){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Lambda/C$}}}%
-    \put(0.84673943,0.0054857){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1/\tau_e$}}}%
+    \put(0.82041738,0.0088722){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega$}}}%
+    \put(0.11040508,0.00940619){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Lambda/C$}}}%
+    \put(0.68254277,0.00843541){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1/\tau_e$}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{11_Piro.pdf}}%
+    \put(-0.00027312,0.44368417){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{11_Piro.pdf}}%
   \end{picture}%
 \endgroup%
