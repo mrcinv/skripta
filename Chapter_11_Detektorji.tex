@@ -467,11 +467,12 @@ amplituda izhodnega signala močno niha, saj je koeficient ojačenja
 odvisen od števila izbitih elektronov, kar pa je statistični proces. 
 
 \section{Fotoprevodni detektorji}
-Fotoprevodni detektorji\footnote{Fotoprevodne detektorje včasih imenujejo tudi fotouporniki.} 
-so detektorji, ki temeljijo na notranjem fotoefektu.
+Fotoprevodni detektorji\footnote{Fotoprevodne detektorje včasih imenujemo tudi fotouporniki.} 
+so detektorji, ki temeljijo na notranjem fotoefektu.\index{Fotoprevodnik}
+\index{Fotoupornik|see Fotoprevodnik}\index{Fotoefekt!notranji}
 Vpadli foton z dovolj veliko energijo se absorbira, vendar ne izbije elektrona v prostor, 
-ampak ga iz valenčnega pasu dvigne v prevodnega. Pri tem nastane par elektron-vrzel. 
-Ob priključeni napetosti se ti nosilci naboja začnejo premikati in steče tok, 
+ampak ga iz valenčnega pasu dvigne v prevodnega. Pri tem nastane par elektron--vrzel. 
+Ob priključeni napetosti se nosilci naboja začnejo premikati in steče tok, 
 ki ga merimo. Z naraščajočim številom fotonov se prevodnost fotoprevodnika veča, 
 zato lahko z merjenjem upornosti določimo 
 intenziteto vpadle svetlobe. Tipično so fotoprevodniki iz polprevodnikov, 
@@ -479,17 +480,19 @@ lahko pa so tudi iz izolatorjev.
 
 Da foton lahko vzbudi elektron iz valenčnega v prevodni pas, mora biti njegova energija dovolj velika. 
 V čistih (nedopiranih) polprevodnikih to pomeni, da mora biti energija fotona večja od 
-širine reže. Za silicij, na primer, je širina reže 1,1~eV, s čimer lahko zaznavamo svetlobo
-z valovno dolžino do okoli 
-$1,1~\si{\micro\meter}$, za germanij 0,67~eV ($1,8~\si{\micro\meter}$) in za PbS 0,37~eV
-($3,4~\si{\micro\meter}$). Za detekcijo daljših valovnih dolžin ne uporabljamo polprevodnikov
+širine reže. Za silicij\index{Si}, na primer, je širina reže 1,1~eV, 
+s čimer lahko zaznavamo svetlobo z valovno dolžino do okoli 
+$1,1~\si{\micro\meter}$, za germanij\index{Ge} 0,67~eV ($1,8~\si{\micro\meter}$) in za PbS 0,37~eV
+\index{PbS}($3,4~\si{\micro\meter}$). 
+Za detekcijo daljših valovnih dolžin ne uporabljamo polprevodnikov
 z manjšo energijsko režo, ampak dopirane polprevodnike (slika~\ref{fig:FPrevodnik}). 
 Z novim energijskim nivojem med valenčnim in prevodnim pasom občutno zmanjšamo 
 potrebno energijo vpadlih fotonov. Vendar je pri teh nizkih energijah prispevek termično 
 vzbujenih elektronov že tako velik, da je treba detektorje hladiti, navadno s tekočim
 dušikom ali celo tekočim helijem. Tak primer je germanij, dopiran s cinkom, 
 s katerim lahko zaznavamo svetlobo do okoli $40~\si{\micro\meter}$. Pri tem ga hladimo
-na $4~\si{\kelvin}$, da zmanjšamo pojav termično vzbujenih nosilcev naboja. 
+na $4~\si{\kelvin}$, da zmanjšamo pojav termično vzbujenih nosilcev naboja. \index{Infrerdeče
+valovanje}
 \begin{figure}[h]
 \centering
 \def\svgwidth{150truemm} 
@@ -500,8 +503,9 @@ Z dopiranjem povečamo območje delovanja detektorja v infrardeče območje. }
 \label{fig:FPrevodnik}
 \end{figure}
 
-Izračunajmo električni tok, ki steče, ko posvetimo na fotoprevodnik. Spomnimo se, da
-je gostota električnega toka $j$ enaka vsoti prispevkov elektronov in vrzeli
+Izračunajmo električni tok, ki steče skozi fotoprevodnik, ko nanj posvetimo. 
+Spomnimo se, da je gostota električnega toka $j$ enaka vsoti prispevkov elektronov 
+\index{Gostota električnega toka} in vrzeli
 \begin{equation}
 j = e_0 n_v v_v + e_0 n_e v_e,
 \end{equation}
