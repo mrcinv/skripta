@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '11_poisson.pdf' (pdf, eps, ps)
 %%
@@ -35,6 +35,8 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
     \setlength{\unitlength}{647.77436829bp}%
     \ifx\svgscale\undefined%
@@ -49,18 +51,22 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.68310512)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{11_poisson.pdf}}%
-    \put(0.00035014,0.03028099){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
-    \put(-0.03571168,0.13891712){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0,05$}}}%
-    \put(-0.01669277,0.24625655){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0,1$}}}%
-    \put(-0.03571168,0.35322543){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0,15$}}}%
-    \put(-0.01891575,0.46056487){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0,2$}}}%
-    \put(-0.03571168,0.56753377){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0,25$}}}%
+    \put(0.00035017,0.03028101){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
+    \put(-0.03571164,0.13891713){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0,05$\end{tabular}}}}%
+    \put(-0.01669273,0.24625656){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0,1$\end{tabular}}}}%
+    \put(-0.03571164,0.35322544){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0,15$\end{tabular}}}}%
+    \put(-0.01891571,0.46056487){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0,2$\end{tabular}}}}%
+    \put(-0.03571164,0.56753377){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0,25$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{11_poisson.pdf}}%
-    \put(0.03850309,-0.01011257){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
-    \put(0.27159587,-0.01011257){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$5$}}}%
-    \put(0.48970347,-0.010112){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$10$}}}%
-    \put(0.71647294,-0.010112){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$15$}}}%
-    \put(0.94967174,-0.010112){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$20$}}}%
+    \put(0.03850312,-0.01011255){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
+    \put(0.27159588,-0.01011255){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$5$\end{tabular}}}}%
+    \put(0.48970345,-0.01011198){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$10$\end{tabular}}}}%
+    \put(0.71647289,-0.01011198){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$15$\end{tabular}}}}%
+    \put(0.94967166,-0.01011198){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$20$\end{tabular}}}}%
+    \put(1.0136492,-0.00945082){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$N$\end{tabular}}}}%
+    \put(-0.01117138,0.64519924){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
