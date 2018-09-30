@@ -67,7 +67,7 @@ iz katere je detektor narejen.
 \item Odzivni čas pove, kako hitro se detektor odzove na spremembo optičnega signala. Predvsem 
 optične telekomunikacije zahtevajo izredno hiter odziv.
 \item Prag detekcije pove, pri kolikšni vpadni svetlobni moči postane razmerje med signalom ($S$)
-in šumom ($N$, {\it noise}) enako $S/N = 1$. \index{Razmerje med signalom in šumom}
+in šumom ($N$, {\it noise}) enako $S/N = 1$. \index{Razmerje signal proti šumu}
 \end{enumerate}
 
 \section{Termični detektorji}
@@ -444,7 +444,7 @@ potujejo do naslednje dinode, ki je pod višjo pozitivno napetostjo (tipično ok
 višjo), kjer ponovno izbijejo elektrone, ki vpadejo na naslednjo dinodo, 
 ki je pod še višjo napetostjo ... 
 To pomnoževanje se večkrat ponovi (navadno okoli desetkrat),
-število elektronov eksponentno narašča in na en vpadli foton lahko dobimo $10^9$ elektronov na anodi. 
+število elektronov eksponentno narašča in na en vpadli foton lahko na anodo vpade $10^9$ elektronov. 
 Občutljivost fotopomnoževalk je tako precej večja od občutljivosti vakuumske fotodiode in
 dosega odzivnost na anodi do $R\sim 10^6~\si{\ampere/\watt}$.
 Fotopomnoževalka tako omogoča štetje posameznih fotonov, po drugi strani pa moramo pri 
@@ -717,7 +717,7 @@ krivuljo premika navzdol. S simboli so označene točke delovanja za različne n
  
 \begin{definition}
 Izpelji karakteristično enačbo diode (enačba~\ref{11:dioda}) in pokaži, da
-je zaporni tok 
+je zaporni tok \index{Temni tok}
 \beq
 I_0 = e_0 S \left(\frac{D_p}{L_p}p_{0n}+ \frac{D_n}{L_n}n_{0p}\right),
 \eeq
@@ -867,7 +867,7 @@ pride do naglega povečanja električnega toka. Ob absorpciji fotona nastanejo m
 se v električnem polju tako pospešijo, da s trki ustvarjajo nove pare 
 elektron--vrzel. Novonastali pari  ustvarjajo pare in pride do ``plazu'', podobno kot v 
 fotopomnoževalki. En foton  sproži cel plaz elektronov, zato pravimo, da je plazovna dioda
-fotodioda z notranjim ojačenjem. \index{Ojačenje!notranje}Pri tem je faktor ojačenja tipično $30$--$300$ 
+fotodioda z notranjim ojačenjem. \index{Notranje ojačenje}Pri tem je faktor ojačenja tipično $30$--$300$ 
 in plazovne fotodiode lahko 
 uporabimo za detekcijo posameznih fotonov. Slabost je, da je faktor ojačenja odvisen od
 temperature in je zato za natančne meritve potrebna temperaturna stabilizacija.
@@ -1051,43 +1051,55 @@ diskretna, črta je zgolj vodilo.}
 Fluktuacije števila fotonov, ki vpadejo na detektor v danem časovnem 
 intervalu, označimo z $\Delta N = N-\overline{N}$. V povprečju je ta vrednost seveda enaka nič, 
 zato sta bolj merodajni količini varianca, ki je enaka (glej nalogo~\ref{nal:Poiss})
+\index{Varianca}
 \begin{equation}
 \sigma^2 = \overline{\Delta N^2}= \overline{(N-\overline{N})^2} = \overline{N},
 \label{varianca}
 \end{equation}
-in standardni odklon
+in standardni odklon\index{Standardni odklon}
 \begin{equation}
 \sigma = \sqrt{\overline{\Delta N^2}} = \sqrt{\overline{N}}.
 \label{sigma}
 \end{equation}
+Standardni odklon, ki je merilo za velikost šuma, torej narašča korensko 
+z naraščajočim povprečnim številom vpadnih fotonov $\overline{N}$. 
 \begin{definition}
 Pokaži, da je povprečje Poissonove porazdelitve (enačba~\ref{Poisson}) vedno pri $N = \overline{N}$
 in standardni odklon $\sigma = \sqrt{\overline{N}}$.
 \label{nal:Poiss}
 \end{definition}
 
-Standardni odklon, ki je merilo za velikost šuma, torej narašča z naraščajočim številom 
-vpadnih fotonov $\overline{N}$. Vendar nas absolutni šum večinoma ne zanima, 
-saj je pri detekciji ključno razmerje 
-signala proti šumu. To količino označimo s $SNR$ ({\it Signal to Noise Ratio}-- razmerje med 
+Vendar nas absolutni šum večinoma ne zanima, 
+saj je pri detekciji ključno razmerje signal proti šumu.\index{Razmerje signal proti šumu} 
+Označimo ga s $SNR$ ({\it Signal to Noise Ratio} --
+razmerje med \index{SNR!see{Razmerje signal proti šumu}}
 signalom in šumom)\footnote{Pogosto se uporablja tudi oznako $S/N$. Tukaj smo jo 
-zaradi jasnosti zamenjali, saj $N$ označuje število fotonov oziroma elektronov.}. 
+zaradi jasnosti zamenjali, saj $N$ označuje število fotonov oziroma elektronov.}.
 V primeru Poissonove porazdelitve in šuma štetja velja
 \boxeq{11:SNR}{
-SNR = \frac{\overline{N}}{\sigma} = \sqrt{\overline{N}}.
+SNR = \frac{\overline{N}^2}{\sigma^2} = \overline{N}.
 }
-Vidimo, da razmerje signala proti šumu narašča z naraščajočim številom vpadlih fotonov, 
-relativni šum pa ob večji vpadni moči svetlobe pojema. Za primer poglejmo dva primera vpadne svetlobe. 
-V prvem je povprečno število vpadlih fotonov v danem časovnem 
-intervalu $10^6$, v drugem pa le $100$. Pri vpadu močnejšega signala 
+Vidimo, da razmerje signal proti šumu narašča linearno z naraščajočim številom vpadlih fotonov, 
+relativni šum pa ob večji vpadni moči svetlobe pojema. 
+Za primer poglejmo dva primera. V prvem je povprečno število vpadlih 
+fotonov v danem časovnem intervalu $10^6$, v drugem pa $100$. 
+Pri vpadu močnejšega signala 
 na detektorju zaznavamo $10^6 \pm 1000$ fotonov, pri vpadu šibkejšega
 pa $100 \pm 10$. Čeprav je absolutni šum v prvem primeru znatno večji, 
 je relativni šum stokrat manjši. Za zmanjšanje šuma štetja mora biti 
 torej signal kar se da velik. 
 
+\begin{remark}
+Razmerje signal proti šumu $SNR$ lahko vpeljemo na več načinov. Prvi je ta, ki smo ga 
+uporabili mi, pri katerem velja $SNR = \overline{N}^2/\sigma^2 = \overline{N}$. 
+V tem primeru gre za $SNR$ električne moči na detektorju. Lahko vpeljemo tudi $SNR_o$ optične 
+moči oziroma števila fotonov in nastalega električnega toka. Zaradi kvadratne 
+zveze med električno močjo in električnim tokom je $SNR_o=\sqrt{SNR}=\sqrt{\overline{N}}$.
+\end{remark}
+
 Pri šumu štetja gre za osnovno značilnost svetlobe, zato je ta vrsta šuma
-prisotna pri prav vseh načinih detekcije. Mi si podrobeneje oglejmo, 
-kako se ta šum izraža pri detekciji s fotodiodami. 
+prisotna pri prav vseh načinih detekcije. Podrobeneje si oglejmo, 
+kako se šum štetja izraža pri detekciji s fotodiodami. \index{Fotodioda}
 
 Naj svetloba s povprečno močjo $\overline{P}$ vpada na fotodiodo.
 Povprečno število fotoelektronov, ki se pojavijo v časovnem intervalu 
@@ -1096,7 +1108,7 @@ s kvantnim izkoristkom.
 \begin{equation}
 \overline{N}_e = \frac{\overline{P}\tau}{h \nu}\eta.
 \end{equation}
-Povprečni tok, ki steče skozi detektor, je  
+Povprečni električni tok, ki steče skozi detektor, je  
 \begin{equation}
 \overline{I} = \frac{\overline{N}_e e_0}{\tau},
 \end{equation}
@@ -1106,58 +1118,57 @@ fluktuacije izhodnega električnega toka pa so
 \frac{e_0^2}{\tau^2} = \overline{N}_e\,\frac{e_0^2}{\tau^2}= \overline{I}\,\frac{e_0}{\tau},
 \end{equation}
 pri čemer smo upoštevali enačbo~(\ref{varianca}). Vpeljemo še pasovno širino 
-detekcije $\Delta\nu_B = 1/(2\tau)$ in dobimo
+detekcije $\Delta\nu_B = 1/(2\tau)$\footnote{Pri detekciji signala navadno uporabljamo
+čas osvetlitve $\tau$, pri telekomunikacijah pa pasovno širino $\Delta\nu_B$.} 
+in zapišemo\index{Pasovna širina detekcije}
 \boxeq{11:sum}{
-\sqrt{\overline{\Delta I^2}} = \sqrt{2 \overline{I}\,e_0\, \Delta\nu_B}.
+\overline{\Delta I^2} = 2 \overline{I}\,e_0\, \Delta\nu_B.
 }
-Šum na izhodu je torej sorazmeren s korenom iz povprečne intenzitete signala in 
-s korenom od pasovne širine detekcije oziroma obratno sorazmeren z dolžino 
-merjenja. Zapišemo še razmerje signala proti šumu 
+Šum na izhodu je tako sorazmeren s povprečno intenziteto signala in 
+s pasovno širino detekcije oziroma obratno sorazmeren z dolžino 
+merjenja. Zapišemo še razmerje signal proti šumu 
 \begin{equation}
-SNR = \frac{\overline{I}}{\sqrt{\overline{\Delta I^2}}}= \frac{\sqrt{\overline{I}}}
-{\sqrt{2 e_0\, \Delta\nu_B}}.
+SNR = \frac{\overline{I}^2}{\overline{\Delta I^2}}= \frac{\overline{I}}
+{2 e_0\, \Delta\nu_B}.
 \label{SNRs}
 \end{equation}
 Po pričakovanjih je to razmerje večje pri večjem povprečnem signalu in pri daljši meritvi.
 
-\begin{remark}
-Razmerje signal proti šumu $SNR$ lahko vpeljemo na več načinov. Prvi je ta, ki smo ga 
-uporabili mi, pri katerem velja $SNR = \overline{N}/\sigma = \sqrt{\overline{N}}$. 
-V tem primeru gre za $SNR$ optične moči oziroma števila fotonov ali elektronov in s 
-tem povezanega električnega toka. Lahko pa vpeljemo tudi $SNR_e$ električne moči, ki je, 
-zaradi kvadratne zveze med električno močjo in električnim tokom, enak $SNR_e=SNR^2=\overline{N}$.
-\end{remark}
-
 \subsection*{Termični šum} 
-Termični šum imenujemo tudi Johnsonov\footnote{Švedsko-ameriški elektroinženir in fizik 
-John Bertrand Johnson, 1887--1970.} ali Nykvistov\footnote{Švedsko-ameriški elektroinženir
+Termični šum 
+\index{Šum!termični}imenujemo tudi Johnsonov\footnote{Švedsko-ameriški elektroinženir in fizik 
+John Bertrand Johnson, 1887--1970.} ali Nyquistov\footnote{Švedsko-ameriški elektroinženir
 Harry Nyquist, 1889--1976.} ali Johnson-Nyquistov\footnote{Johnson je bil leta 1928 prvi, 
-ki je pojav opazoval, Nyquist pa kmalu za eksperimentom podal teoretično razlago.} šum. 
-Do njega pride zaradi termično vzbujenega naključnega gibanja elektronov. Ti premiki
-na danem uporniku povzročijo majhne kratkotrajne fluktuacije v napetosti, napetost
-v povprečju pa seveda ostaja enaka nič.  
+ki je pojav opazoval, 
+\index{Johnsonov šum|see{Šum, termični}}
+\index{Nyquistov šum|see{Šum, termični}}
+\index{Johnson-Nyquistov šum|see{Šum, termični}}
+Nyquist pa kmalu za eksperimentom podal teoretično razlago.} šum. 
+Do njega pride zaradi termično vzbujenega naključnega gibanja elektronov. Premiki elektronov
+na danem uporniku povzročijo majhne kratkotrajne fluktuacije v napetosti, ki
+v povprečju seveda ostaja enaka nič.  
 Termični šum nastaja samo v uporniških elementih sistema, saj le ti lahko
 sprejemajo in oddajajo energijo, v kapacitivnih in induktivnih elementih pa ne.
 Izkaže se, da je termični šum najpogosteje omejujoči šum pri detekciji.
 
 Načinov izpeljave termičnega šuma na uporniku je več. Najpogostejša 
-je izpeljava na tokokrogu z dvema enakima upornikoma, ki sta v ravnovesju
+je izpeljava na primeru tokokroga, v katerem sta dva enaka upornika v termičnem ravnovesju
 pri temperaturi $T$\footnote{H. Nyquist, Phys. Rev. {\bf 32}, 110 (1928).}. 
 Ko se na uporniku pojavi termična napetost, steče skozi drugi upornik električni 
-tok in na njem se porabi elektična moč. Prenos energije z enega upornika
+tok in na njem se porablja električna moč. Prenos energije z enega upornika
 na drug lahko razumemo kot elektromagnetno valovanje, prenešena moč pa
 je v ravnovesju enaka porabljeni moči. Naj bo karakterstična impedanca
 žic enaka $R$, tako da ne pride do odboja, ampak se val v celoti absorbira.
 
 Zaradi periodičnosti velja za potujoče valove zveza $L = m \lambda$
-oziroma $k = m 2\pi/L$. Število elektromagnetnih valov $N$ v frekvenčnem intervalu 
+oziroma $k = 2\pi m/L$. Število elektromagnetnih valov $N$ v frekvenčnem intervalu 
 $\Delta\nu_B$ je potem 
 \begin{equation}
 \frac{N}{\Delta\nu_B} = \frac{L}{c},
 \end{equation}
 pri čemer je $c$ hitrost valovanja. Posamezne potujoče valove lahko obravnavamo
 tudi kot veliko število vzbujenih fotonov z energijo $Nh\nu$. Za njih velja Boltzmannova
-porazdelitev, povprečna energija enega vala pa je 
+porazdelitev, povprečna energija enega vala pa je \index{Boltzmannova porazdelitev}
 \begin{equation}
 \overline{E}(\nu) = \frac{h \nu}{e^{h\nu/kT}-1}.
 \end{equation}
@@ -1168,52 +1179,57 @@ Povprečna moč, ki jo prejema drug upornik, je
 \end{equation}
 Moč je po drugi strani enaka
 \begin{equation}
-P = \overline{\Delta I}^2\,R = \frac{\overline{\Delta U^2}}{4R},
+P = \overline{\Delta I^2}\,R = \frac{\overline{\Delta U^2}}{4R},
 \end{equation}
 saj je $I=U/2R$. Od tod sledi
 \boxeq{11:termicni}{
 \overline{\Delta U^2}  = 4 kTR \Delta \nu_B.
 }
 Šum lahko zapišemo tudi za tok, če namesto zaporedno vezanega virtualnega 
-izvira napetosti vzporedno vežemo virtualni izvor. Dobimo
+izvira napetosti vzporedno vežemo virtualni izvor. Zapišemo
 \boxeq{11:termicni}{
-\sqrt{\overline{\Delta I^2}}  = \sqrt{\frac{4 kT\Delta \nu_B}{R}}.
+\overline{\Delta I^2}  = \frac{4 kT\Delta \nu_B}{R}.
 }
-Termični šum je torej odvisen od temperature in od upornosti detektorja oziroma
-vezja, preko katerega zaznavamo signal. Zmanjšamo ga lahko s hlajenjem upornika
-ali s povečanjem upornosti, vendar na ta način zmanjšamo hitrost odziva detektorja. 
-Tipične upornosti hitrih detektorjev so tako $R \sim 50~\si{\ohm}$. Termičnega
-šuma povsem ne moremo nikoli odpraviti. 
+Termični šum je odvisen od temperature in od upornosti detektorja oziroma
+vezja, preko katerega zaznavamo signal. En način za zmanjšanje termičnega šuma
+je povečanje upornosti detektorja, vendar na ta način zmanjšamo njegovo hitrost
+odziva. Tipične upornosti, ki se uporabljajo pri hitrih detektorjih, so 
+tako $R \sim 50~\si{\ohm}$. Drugi način za zmanjševanje termičnega šuma je
+hlajenje. Kljub močnemu hlajenju termičnega šuma povsem ne moremo nikoli odpraviti. 
 
 \subsection*{Šum temnega toka} 
 Natančna opazovanja pokažejo, da na večini detektorjev zaznamo nek majhen izhodni 
-signal tudi v odsotnosti svetlobe. To je temni tok, do katerega pride zaradi
-spontanega nastanka para elektron-vrzel ali spontane emisije elektronov 
+signal tudi v odsotnosti svetlobe. 
+\index{Šum!temnega toka}
+\index{Temni tok}To je temni tok, do katerega pride zaradi
+spontanega nastanka para elektron--vrzel ali spontane emisije elektronov 
 (glej enačbo~\ref{11:dioda}). Izraza za temni tok tukaj ne bomo izpeljevali,
-povejmo le, da je sorazmeren s površino diode in 
-eksponentno odvisen od temperature in energijske reže polprevodnika 
+povejmo le, da je sorazmeren s površino diode $S$ in 
+eksponentno odvisen od temperature $T$ in energijske reže polprevodnika $E_g$
 \begin{equation}
 I_0 = j_0\, S\, e^{-E_g/kT}.
 \end{equation}
 Zaradi diskretne narave elektronov se -- podobno
-kot v primeru diskretnih vpadnih fotonov -- tudi tukaj pojavi šum štetja, le da tukaj 
+kot v primeru diskretnih vpadnih fotonov -- tudi tukaj pojavi šum štetja, le da 
 namesto povprečne vrednosti signala zaradi vpadle svetlobe nastopa temni tok. 
-Enačbo (11:sum) zato zapišemo kot 
+Enačbo (\ref{11:sum}) zato zapišemo kot 
 \boxeq{11:dark}{
-\sqrt{\overline{\Delta I^2}} = \sqrt{2 I_0\,e_0\, \Delta\nu_B}.
+\overline{\Delta I^2} = 2 I_0\,e_0\, \Delta\nu_B.
 }
-Manjši šum je torej pri detektorjih, ki imajo manjši temni tok, na primer pri silicju. 
-Germanij ima v splošnem večji temni tok in zato tudi več šuma temnega toka. Pomembno
-vlogo pa ima tudi temperatura, saj v temnem toku nastopa v eksponentu, in lahko 
-s hlajenjem šum temnega toka znatno zmanjšamo. 
+Manjši šum je pri detektorjih, ki imajo manjši temni tok, na primer pri silicju.\index{Si}
+Germanij \index{Ge} ima v splošnem večji temni tok in zato tudi več šuma temnega toka. Pomembno
+vlogo ima tudi temperatura, saj v temnem toku nastopa v eksponentu, in s hlajenjem lahko 
+šum temnega toka znatno zmanjšamo. 
 
 \subsection*{Šum zaradi sevanja ozadja}
-Kot že ime pove, pride do tega šuma zaradi sevanja ozadja pri končni temperaturi. 
-Okolico obravnavamo kot črna telesa in spekter njihovega sevanja opisuje Planckov 
-zakon (enačba~\ref{eq:Planck}). Z naraščajočo temperaturo telesa se 
-spektralni vrh pomika k nižjim valovnim dolžinam in s tem v infrardeče ali celo 
+Kot že ime pove, pride do te vrste šuma zaradi sevanja ozadja pri končni temperaturi.
+\index{Šum!sevanja ozadja}
+Okolico obravnavamo kot črna telesa\index{Sevanje črnega telesa} 
+in spekter njihovega sevanja opisuje Planckov \index{Planckov zakon}
+zakon (enačba~\ref{eq:Planck} in slika~\ref{fig:Planck}). Z naraščajočo temperaturo telesa se 
+spektralni vrh pomika k nižjim valovnim dolžinam in s tem v infrardeče\index{Infrardeče valovanje} ali celo 
 vidno območje. Največji problem predstavlja sevanje ozadja zato pri meritvah v
-območju okoli $10$--$30~\si{\micro\meter}$, kjer še telesa pri sobni temperaturi 
+območju okoli $10$--$30~\si{\micro\meter}$, v katerem še telesa pri sobni temperaturi 
 znatno sevajo. Detektorjem za infrardečo svetlobo zato pogosto zmanjšamo aperturo 
 na najmanjšo možno, poleg tega jih izoliramo od okolice in hladimo. 
 
@@ -1221,29 +1237,33 @@ Sevanje ozadja je neodvisno od vpadnega signala. Ker detektor ne loči fotonov, 
 vpadejo nanj kot signal in tistih, ki vpadejo nanj iz ozadja, se prispevek ozadja 
 kar prišteje signalu. Šum štetja (enačba~\ref{11:sum}) se tako poveča na
 \begin{equation}
-\sqrt{\overline{\Delta I^2}} = \sqrt{\frac{2 \eta e_0^2\, \Delta\nu_B}{h\nu}\,
-\overline{\left( P + P_o \right)}},
+\overline{\Delta I^2} = \frac{2 \eta e_0^2\, \Delta\nu_B}{h\nu}\,\,
+\overline{\left( P + P_o \right)},
 \label{11:ozadje}
 \end{equation}
 pri čemer $P_o$ označuje moč vpadne svetlobe iz ozadja.
 
 \begin{remark}
- V detektorjih, kjer pride do notranjega ojačevanja (npr. fotopomnoževalka ali plazovna fotodioda), 
+ V detektorjih, v katerih pride do notranjega ojačevanja
+ \index{Notranje ojačenje}(npr. fotopomnoževalka
+ \index{Fotopomnoževalka} ali plazovna fotodioda),
+ \index{Fotodioda!plazovna}
  se skupaj s signalom ojača tudi šum. Če se signal ojača za faktor $G$, se za isti faktor
  povečajo tudi šum štetja, šum ozadja in šum temnega toka. Poleg tega pride do ojačenja šuma
- zaradi naključnega povečevanja števila fotonov med pomnoževanjem signala. Tukaj nastopi
+ zaradi naključnega povečevanja števila fotonov med pomnoževanjem signala. V tem primeru nastopi
  še dodaten faktor, večji od ena, ki je odvisen of snovi, strukture in ojačenja fotodetektorja. 
- Tipična vrednost je okoli 1,5-2, lahko pa doseže vrednosti tudi nad 10.
+ Tipična vrednost je okoli $1,5$--$2$, lahko pa doseže vrednosti tudi nad $10$.
 \end{remark}
 
 \subsection*{Seštevanje šumov}
-Spoznali smo, da je več vrst šuma, ki so pri različnih pogojih različno pomembni. 
+Spoznali smo, da je več vrst šuma, ki so pri različnih pogojih različno pomembni.
+\index{Šum!seštevanje}
 V splošnem lahko vse prispevke združimo v skupni šum, pri čemer seštevamo kvadrate
 odstopanj
 \begin{equation}
-\overline{\Delta I^2} = \overline{\Delta I^2}_{\check{s}tetja} + 
-\overline{\Delta I^2}_{termi\check{c}ni} + \overline{\Delta I^2}_{temni} + 
-\overline{\Delta I^2}_{ozadje}.
+\overline{\Delta I^2} = \overline{\Delta I^2}_{\mathrm{\check{s}tetja}} + 
+\overline{\Delta I^2}_{\mathrm{termi\check{c}ni}} + \overline{\Delta I^2}_{\mathrm{temni}} + 
+\overline{\Delta I^2}_{\mathrm{ozadja}}.
 \end{equation}
 Če vstavimo izraze za tokove (enačbe~\ref{11:sum}, \ref{11:termicni}, \ref{11:dark}
 in \ref{11:ozadje}), sledi
@@ -1251,35 +1271,36 @@ in \ref{11:ozadje}), sledi
 \overline{\Delta I^2} = \left( 2 \overline{I}\,e_0 + 2 I_0\,e_0
 + 2 I_o\,e_0 + \frac{4 kT}{R} \right) \Delta\nu_B.
 }
-Kot že omenjeno, navadno prevlada termični šum nad ostalimi. Izjema je detekcija v
+Navadno prevlada termični šum nad ostalimi. Izjema je detekcija v
 infrardečem območju, kjer pomembno vpliva šum ozadja, in pri zelo nizkih intenzitetah 
 vpadne svetlobe, ko pride do izraza šum štejta. 
 
-Če pogledamo izraz za razmerje signala proti šumu
+Zapišemo izraz za razmerje signal proti šumu
 \begin{equation}
-SNR = \frac{\overline{I}}{\sqrt{\left( 2 \overline{I}\,e_0 + 2 I_0\,e_0
-+ 2 I_o\,e_0 + \frac{4 kT}{R} \right) \Delta\nu_B}},
+SNR = \frac{\overline{I}^2}{\left( 2 \overline{I}\,e_0 + 2 I_0\,e_0
++ 2 I_o\,e_0 + \frac{4 kT}{R} \right) \Delta\nu_B}.
 \end{equation}
-vidimo, da so vsi prispevki v imenovalcu neodvisni od intenzitete vpadne svetlobe
+Iz zapisanega razberemo, da so vsi prispevki v imenovalcu neodvisni od intenzitete vpadne svetlobe
 razen šuma štetja. Le-ta je pri majhnih intenzitetah majhen in celoten šum 
-zato praktično konstanten. V tem primeru $SNR$ narašča kar linearno z intenziteto
+zato praktično konstanten. V tem primeru $SNR$ narašča kvadratno z intenziteto
 vpadne svetlobe. Pri velikih intenzitah šum štetja prevlada nad ostalimi prispevki
-in odvisnost $SNR$ od intenzitete postane korenska. 
+in odvisnost $SNR$ od intenzitete postane linearna. 
 
 \begin{definition}
 Oceni šum štetja, termični šum in šum temnega toka na silicijevi fotodiodi, če 
-nanjo vpada svetloba z valovno dolžino $\lambda=850~\si{\nano\meter}$
+nanjo vpada svetloba z valovno dolžino $\lambda=850~\si{\nano\meter}$\index{Si}
+\index{Fotodioda!polprevodniška}
 in vpadno močjo $P=0,1~\si{\milli\watt}$. Kvantni izkoristek diode je $85~\%$,
 spektralna širina $\Delta\nu_B=150~\si{\mega\hertz}$, temni tok $10~\si{\nano\ampere}$,
 skupna upornost $50~\si{\ohm}$ in temperatura $300~\si{\kelvin}$. Pokaži, 
-da je razmerje signala proti šumu $SNR\sim250$. 
+da je razmerje signal proti šumu $SNR\sim250$. 
 \end{definition}
 
 Pomemben parameter, ki ga pogosto vpeljemo, je $NEP$ ({\it Noise Equivalent Power} -- 
-moč, ki ustreza šumu). Gre za vpadno moč svetlobe, ki je po velikosti primerljiva 
+moč, ki ustreza šumu).\index{$NEP$} Gre za vpadno moč svetlobe, ki je po velikosti primerljiva 
 s šumom, in zato predstavlja spodnjo mejo še možne detekcije. To se navadno zgodi 
 pri zelo nizkih močeh vpadne svetlobe, pri katerih je šum štetja zanemarljiv.
-Zapišimo pogoj, pri katerem je $SNR=1$
+Pogoj, pri katerem je $SNR=1$, zapišemo kot
 \begin{equation}
 NEP\, \frac{e_0}{h \nu} \eta \approx \sqrt{\left(2 I_0\,e_0
 + \frac{4 kT}{R} \right) \Delta\nu_B}.
@@ -1291,7 +1312,7 @@ NEP = \frac{h \nu}{\eta e_0}\sqrt{\left(2 I_0\,e_0
 \label{NEP}
 \end{equation}
 \begin{definition}
-Izračunaj $NEP$ za primer germanijeve diode pri vpadni svetlobi z valovno dolžino
+Izračunaj $NEP$ za primer germanijeve\index{Ge} diode pri vpadni svetlobi z valovno dolžino
 $\lambda = 1,5~\si{\micro\meter}$ in kvantnim izkoristkom $\eta=0,5$. Temperatura detektorja
 je $T=300~\si{\kelvin}$ in temni tok $I_0=15~\si{\micro\ampere}$. Skupna upornost
 je $R=2~\si{\kilo\ohm}$, pasovna širina zajemanja svetlobe pa 
@@ -1301,26 +1322,27 @@ $\Delta\nu_B=150~\si{\mega\hertz}$.
 \begin{remark}
 Zaradi priročnosti je pogosto podan $NEP$ na koren spektralne širine, saj ta ni 
 karakteristična za detektor, ampak je odvisna od časa zajemanja. Podatek, ki 
-ga podajo proizvajalci detektorjev, je potem $NEP$, ki je v enotah 
+ga navedejo proizvajalci detektorjev, je $NEP$ v enotah 
 $\si{\watt}/\sqrt{\si{\hertz}}$. Tipične vrednosti so 
-$10^{-11}$--$10^{-15}~\si{\watt}/\sqrt{\si{\hertz}}$, pri čemer je najmanjši
-za silicijeve fotodiode. 
+$10^{-11}$--$10^{-15}~\si{\watt}/\sqrt{\si{\hertz}}$, pri čemer najmanjše vrednosti
+dosegajo silicijeve fotodiode. \index{Si}
 \end{remark}
 
 Pri zapisu $NEP$ (enačba~\ref{NEP}) smo privzeli, da termični šum in šum temnega
 toka prevladata nad šumom štetja signala. Če uspemo ta dva prispevka znatno 
 zmanjšati, tako da postane šum štetja signala vodilni člen, 
-dosežemo kvanto limito optične detekcije. Takrat je 
+dosežemo kvanto limito optične detekcije. Takrat je \index{Kvantna limita detekcije}
 \begin{equation}
 NEP = \frac{2 h\nu \Delta \nu_B}{\eta},
 \end{equation}
-kar znaša za zgoraj opisane primere $NEP \sim 10^{-10}\si{\watt}$. Kvantna limita
+kar znaša za zgoraj opisane primere $NEP \sim 10^{-10}~\si{\watt}$. Kvantna limita
 je z navadnim merjenjem praktično nedosegljiva, saj je treba odpraviti vse ostale izvore 
-šuma. En način, kako jo kljub vsemu lahko dosežemo, je s heterodinskim načinom
+šuma. En način, kako jo vseeno lahko dosežemo, je s heterodinskim načinom
 detekcije, ki ga bomo spoznali v naslednjem razdelku.
 
 \section{Heterodinska detekcija}
 Heterodinska detekcija (pogosto imenovana tudi koherentna detekcija) je poseben način
+\index{Heterodinska detekcija}
 detekcije svetlobe, ki omogoča zaznavanje zelo šibkih signalov. Za razliko od direktne detekcije,
 ki smo jo obravnavali do zdaj in pri kateri pride do neposredne zaznave vpadlega fotona, 
 gre pri heterodinski detekciji za zaznavanje valovanja z amplitudo in fazo. Pri takem 
@@ -1335,7 +1357,7 @@ referenčnega pa z
 E_r = E_{r0} \cos(\omega_rt),
 \end{equation}
 pri čemer je $E_{r0}$ konstanta. Če sta oba vpadna snopa vzporedna\footnote{Dodaten pogoj je,
-da imata isto polarizacijo in čim bolj podobna polmer in ukrivljenost valovnih front.} je intenziteta, 
+da imata isto polarizacijo in čim bolj podoben polmer ter ukrivljenost valovnih front.} je intenziteta, 
 ki vpada na detektor, enaka
 \begin{equation}
 I \propto |E|^2 = |E_s+E_r|^2 = |E_{s0}|^2 \, \cos^2(\omega_st+\phi)+
@@ -1347,10 +1369,10 @@ kot
 \begin{equation}
 E_{s0}E_{r0}\left( \cos(\omega_st+\omega_rt+\phi)+\cos(\omega_st-\omega_rt+\phi)\right).
 \end{equation}
-Člen z vsoto obeh frekvenc se izpovpreči, drug člen pa ostane in ga lahko zaznavamo. 
+Člen z vsoto obeh frekvenc se izpovpreči, drugi člen pa ne in ga lahko zaznavamo. 
 Pri tem smo privzeli, da je razlika frekvenc dovolj majhna, da seže v odzivno območje
 detektorja. Poseben primer, ko sta frekvenci povsem enaki, imenujemo homodinski režim 
-detekcije. 
+detekcije. \index{Homodinska detekcija}
 
 Ker je referenčni žarek navadno bistveno močnejši od signalnega, je celotna intenziteta
 na detektorju enaka
@@ -1360,23 +1382,22 @@ na detektorju enaka
 S tem znatno pridobimo na občutljivosti, saj na detektorju ne zaznavamo več 
 kvadrata majhnega signala, ampak majhen signal, pomnožen z velikim referenčnim. 
 
-Poglejmo še razmerje $SNR$ za tak primer detekcije. Največji prispevek k šumu je 
-zaradi šuma štetja referenčne svetlobe, saj je le ta praviloma bistveno močnejša od signala
+Poglejmo še razmerje $SNR$ za primer heterodinske detekcije. Največji prispevek k šumu je 
+zaradi šuma štetja referenčne svetlobe, saj je ta praviloma bistveno močnejša od signala
 \begin{equation}
-\sqrt{\overline{\Delta I^2}} = \sqrt{2I_re_0 \Delta\nu_B}=\sqrt{
- e_0^2\Delta\nu_B\frac{\eta E_{r0}^2}{h\nu}},
+\overline{\Delta I^2} = 2I_re_0 \Delta\nu_B=e_0^2\Delta\nu_B\frac{\eta E_{r0}^2}{h\nu},
 \end{equation}
-pri čemer smo z $I_r$ označili tok, ki steče zaradi referenčne svetlobe. Singal v tem 
+pri čemer smo z $I_r$ označili tok, ki steče zaradi referenčne svetlobe. Signal v tem 
 primeru ni več vpadni signal, ampak kombinirani izhod iz detektorja, ki ga zaznavamo
 le pri razliki frekvenc $\omega_s-\omega_r$. Sledi
 \begin{equation}
-SNR = \frac{\frac{e_0 \eta}{h \nu} E_{s0}E_{r0}}{\sqrt{
- e_0^2\Delta\nu_B\frac{\eta E_{r0}^2}{h\nu}}} = \sqrt{\frac{\eta}{h \nu \Delta\nu_B}}E_{s0}.
+SNR = \frac{\left(\frac{e_0 \eta}{h \nu} E_{s0}E_{r0}\right)^2}{e_0^2\Delta\nu_B\frac{\eta 
+E_{r0}^2}{h\nu}} = \frac{\eta}{h \nu \Delta\nu_B}E_{s0}^2.
 \end{equation}
 Če to primerjamo z vrednostjo $SNR$ pri navadni detekciji (enačba~\ref{SNRs}), vidimo, 
-da se razmerje signala proti šumu pri isti pasovni širini izboljša za faktor $\sqrt{2}$
+da se razmerje signal proti šumu pri isti pasovni širini izboljša za faktor $2$
 (oziroma še več, če je prisoten še kakšen drug šum).
 Ker je pri navadni detekciji težko meriti pri tako majhni pasovni širini, je razmerje
-signala proti šumu v primeru heterodinske detekcije zato praviloma znatno večje. Poleg tega
-je heterodinski način detekcije neobčutljiv za svetlobo iz ozadja, zato se pogosto 
-uporablja za detekcijo svetlobe in infrardečem območju. 
+signal proti šumu v primeru heterodinske detekcije posledično praviloma znatno večje. 
+Poleg tega je heterodinski način detekcije neobčutljiv za svetlobo iz ozadja in se 
+zato pogosto uporablja za detekcijo svetlobe in infrardečem območju.\index{Infrardeče valovanje}
