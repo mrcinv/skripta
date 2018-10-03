@@ -472,7 +472,7 @@ odvisen od števila izbitih elektronov, kar pa je statistični proces.
 \section{Fotoprevodni detektorji}
 Fotoprevodni detektorji\footnote{Fotoprevodne detektorje včasih imenujemo tudi fotouporniki.} 
 so detektorji, ki temeljijo na notranjem fotoefektu.\index{Fotoprevodnik}
-\index{Fotoupornik|see Fotoprevodnik}\index{Fotoefekt!notranji}
+\index{Fotoupornik|see {Fotoprevodnik}}\index{Fotoefekt!notranji}
 Vpadni foton z dovolj veliko energijo se absorbira, vendar ne izbije elektrona v prostor, 
 ampak ga iz valenčnega pasu dvigne v prevodnega. Pri tem nastane par elektron--vrzel. 
 Ob priključeni napetosti se nosilci naboja začnejo premikati in steče tok, 
@@ -483,9 +483,9 @@ lahko pa so tudi iz izolatorjev.
 
 Da foton lahko vzbudi elektron iz valenčnega v prevodni pas, mora biti njegova energija dovolj velika. 
 V čistih (nedopiranih) polprevodnikih to pomeni, da mora biti energija fotona večja od 
-širine reže. Za silicij\index{Si}, na primer, je širina reže 1,1~eV, 
+širine reže. Za silicij\index{Silicij}, na primer, je širina reže 1,1~eV, 
 s čimer lahko zaznavamo svetlobo z valovno dolžino do okoli 
-$1,1~\si{\micro\meter}$, za germanij\index{Ge} 0,67~eV ($1,8~\si{\micro\meter}$) in za PbS 0,37~eV
+$1,1~\si{\micro\meter}$, za germanij\index{Germanij} 0,67~eV ($1,8~\si{\micro\meter}$) in za PbS 0,37~eV
 \index{PbS}($3,4~\si{\micro\meter}$). 
 Za detekcijo daljših valovnih dolžin ne uporabljamo polprevodnikov
 z manjšo energijsko režo, ampak dopirane polprevodnike (slika~\ref{fig:FPrevodnik}). 
@@ -542,7 +542,7 @@ vpadle svetlobe kot
 \end{equation}
 Pogosto je gibljivost elektronov znatno večja od gibljivosti vrzeli (npr.
 $0,135~\si{\meter}^2/\si{\volt\second}$ proti $0,048~\si{\meter}^2/\si{\volt\second}$ za silicij), 
-\index{Si} zato prvi člen v oklepaju zanemarimo in zapišemo
+\index{Silicij} zato prvi člen v oklepaju zanemarimo in zapišemo
 \boxeq{eq:fup}{
 \Delta I = G \left( \frac{e_0 \eta_e}{h\nu}\right) P,
 }
@@ -569,7 +569,7 @@ Izračunali smo spremembo toka, če fotoprevodnik osvetlimo s konstantno vpadno 
 Fotoprevodniki so uporabni na širokem spektralnem območju, od ultra\-vijolične 
 do daljne infra\-rdeče svetlobe.\index{Ultravijolično valovanje}\index{Infrardeče valovanje} 
 V vidnem in bližnjem infrardečem območju se 
-uporablja pretežno silicijeve fotoprevodnike, germanijeve\index{Si}\index{Ge}
+uporablja pretežno silicijeve fotoprevodnike, germanijeve\index{Silicij}\index{Germanij}
 pa za valovne dolžine do $1,8~\si{\micro\meter}$. Za zaznavanje valovnih dolžin med okoli 
 $2~\si{\micro\meter}$ in $7~\si{\micro\meter}$ so najprimernejši InAs, InSb in PbS detektorji, 
 pri še daljših valovnih dolžinah pa se uporablja germanij, dopiran z zlatom, bakrom, cinkom, borom ...
@@ -604,7 +604,7 @@ stik, ali napetost, ki se pojavi na stiku.
 Spektralni odziv\index{Detektor!spektralni odziv} 
 fotodiod je odvisen od energijske reže polprevodnika, 
 iz katerega je fotodioda narejena.
-Silicijeve \index{Si} fotodiode so tako uporabne za zaznavanje valovnih dolžin do okoli
+Silicijeve \index{Silicij} fotodiode so tako uporabne za zaznavanje valovnih dolžin do okoli
 $1,1~\si{\micro\meter}$, za večje valovne dolžine (do $1,6~\si{\micro\meter}$) 
 uporabljamo InGaAs.\index{InGaAs} Izkoristek fotodiod
 je navadno zelo velik in presega $50~\%$, pri energiji fotonov blizu energijske reže 
@@ -923,7 +923,7 @@ okoli $6~\si{\micro\meter}$) ali plazovnih fotodiod.\index{Fotodioda!plazovna}
 \subsection*{CCD}
 Detektorji CCD\index{Detektor!CCD} so sestavljeni iz posameznih tako imenovanih MOS 
 ({\it Metal-Oxide-Semiconductor}
--- kovina-oksid-polprevodnik) kondenzatorjev. Njihova osnova je dopiran silicij\index{Si}, vmesna 
+-- kovina-oksid-polprevodnik) kondenzatorjev. Njihova osnova je dopiran silicij\index{Silicij}, vmesna 
 plast med polprevodnikom in prevodno elektrodo pa je navadno zelo tanka plast (pod $100~\si{nm}$)
 SiO$_2$ (slika~\ref{11_MOS}).\index{SiO$_2$}
 Prevodna elektroda je bila prvotno iz kovine (npr. aluminija) in je elementu detektorja dala tudi ime.
@@ -1192,7 +1192,7 @@ saj je $I=U/2R$. Od tod sledi
 }
 Šum lahko zapišemo tudi za tok, če namesto zaporedno vezanega virtualnega 
 izvira napetosti vzporedno vežemo virtualni izvor toka. Zapišemo
-\boxeq{11:termicni}{
+\boxeq{11:termicnii}{
 \overline{\Delta I^2}  = \frac{4 kT\Delta \nu_B}{R}.
 }
 Termični šum je odvisen od temperature in od upornosti detektorja oziroma
@@ -1221,8 +1221,8 @@ Enačbo (\ref{11:sum}) zato zapišemo kot
 \boxeq{11:dark}{
 \overline{\Delta I^2} = 2 I_0\,e_0\, \Delta\nu_B.
 }
-Manjši šum je pri detektorjih, ki imajo manjši temni tok, na primer pri siliciju.\index{Si}
-Germanij \index{Ge} ima v splošnem večji temni tok in zato tudi več šuma temnega toka. Pomembno
+Manjši šum je pri detektorjih, ki imajo manjši temni tok, na primer pri siliciju.\index{Silicij}
+Germanij \index{Germanij} ima v splošnem večji temni tok in zato tudi več šuma temnega toka. Pomembno
 vlogo ima tudi temperatura, saj v temnem toku nastopa v eksponentu. S hlajenjem lahko 
 šum temnega toka znatno zmanjšamo. 
 
@@ -1271,7 +1271,7 @@ odstopanj
 \overline{\Delta I^2}_{\mathrm{termi\check{c}ni}} + \overline{\Delta I^2}_{\mathrm{temni}} + 
 \overline{\Delta I^2}_{\mathrm{ozadja}}.
 \end{equation}
-Če vstavimo izraze za tokove (enačbe~\ref{11:sum}, \ref{11:termicni}, \ref{11:dark}
+Če vstavimo izraze za tokove (enačbe~\ref{11:sum}, \ref{11:termicnii}, \ref{11:dark}
 in \ref{11:ozadje}), sledi
 \boxeq{skupensum}{
 \overline{\Delta I^2} = \left( 2 \overline{I}\,e_0 + 2 I_0\,e_0
@@ -1294,7 +1294,7 @@ in odvisnost $SNR$ od intenzitete postane linearna.
 
 \begin{definition}
 Oceni šum štetja, termični šum in šum temnega toka na silicijevi fotodiodi, če 
-nanjo vpada svetloba z valovno dolžino $\lambda=850~\si{\nano\meter}$\index{Si}
+nanjo vpada svetloba z valovno dolžino $\lambda=850~\si{\nano\meter}$\index{Silicij}
 \index{Fotodioda!polprevodniška}
 in vpadno močjo $P=0,1~\si{\milli\watt}$. Kvantni izkoristek diode je $85~\%$,
 spektralna širina $\Delta\nu_B=150~\si{\mega\hertz}$, temni tok $10~\si{\nano\ampere}$,
@@ -1318,7 +1318,7 @@ NEP = \frac{h \nu}{\eta e_0}\sqrt{\left(2 I_0\,e_0
 \label{NEP}
 \end{equation}
 \begin{definition}
-Izračunaj $NEP$ za primer germanijeve\index{Ge} diode pri vpadni svetlobi z valovno dolžino
+Izračunaj $NEP$ za primer germanijeve\index{Germanij} diode pri vpadni svetlobi z valovno dolžino
 $\lambda = 1,5~\si{\micro\meter}$ in kvantnim izkoristkom $\eta=0,5$. Temperatura detektorja
 je $T=300~\si{\kelvin}$ in temni tok $I_0=15~\si{\micro\ampere}$. Skupna upornost
 je $R=2~\si{\kilo\ohm}$, pasovna širina zajemanja svetlobe pa 
@@ -1331,7 +1331,7 @@ karakteristična za detektor, ampak je odvisna od časa zajemanja. Podatek, ki
 ga navedejo proizvajalci detektorjev, je $NEP$ v enotah 
 $\si{\watt}/\sqrt{\si{\hertz}}$. Tipične vrednosti so 
 $10^{-11}$--$10^{-15}~\si{\watt}/\sqrt{\si{\hertz}}$, pri čemer najmanjše vrednosti
-dosegajo silicijeve fotodiode. \index{Si}
+dosegajo silicijeve fotodiode. \index{Silicij}
 \end{remark}
 
 Pri zapisu $NEP$ (enačba~\ref{NEP}) smo privzeli, da termični šum in šum temnega
