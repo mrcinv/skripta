@@ -1,0 +1,71 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file '07_FibEr.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{827.51298559bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.42529597)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{07_FibEr.pdf}}%
+    \put(0.03716157,0.40171126){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Energija}}}%
+    \put(0.27966205,0.00421507){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{osnovno stanje}}}%
+    \put(0.10745889,0.17945644){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{optično }}}%
+    \put(0.27900466,0.06514523){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{hitri prehodi}}}%
+    \put(0.27900466,0.31217157){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{hitri prehodi}}}%
+    \put(0.2533973,0.16004445){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1520-1560~\si{\nano\metre}$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{07_FibEr.pdf}}%
+    \put(0.10660714,0.15459149){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{črpanje}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{07_FibEr.pdf}}%
+    \put(0.64636072,0.00081987){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Valovna dolžina [nm]}}}%
+    \put(0.50322482,0.02917437){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1450}}}%
+    \put(0.6446705,0.02917437){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1500}}}%
+    \put(0.78414655,0.02917437){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1550}}}%
+    \put(0.92387486,0.02917437){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1600}}}%
+    \put(0.55269658,0.20271198){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Absorpcija}}}%
+    \put(0.82002141,0.27622027){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Emisija}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{07_FibEr.pdf}}%
+  \end{picture}%
+\endgroup%
