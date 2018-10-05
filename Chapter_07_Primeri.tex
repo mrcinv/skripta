@@ -124,8 +124,8 @@ Nekaj tipičnih podatkov za He-Ne laser je zbranih v tabeli~(\ref{tab:Ar}).
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/07_HeNeShema.pdf_tex}
-\caption{Shema He-Ne laserja: R - razelektritvena cev, IZ - izhodno zrcalo, Z - zrcalo
-z veliko odbojnostjo, B - Brewstrovi okni}
+\caption{Shema He-Ne laserja: R -- razelektritvena cev, IZ -- izhodno zrcalo, Z -- zrcalo
+z veliko odbojnostjo, B -- Brewstrovi okni}
 \label{fig:HeNeShema}
 \end{figure}
 
@@ -187,9 +187,9 @@ velike količine odvečne toplote najpogosteje vodno hlajeni.
 \centering
 \def\svgwidth{110truemm} 
 \input{slike/07_ArShema.pdf_tex}
-\caption{Poenostavljena shema Ar laserja s prizmo: R - razelektritvena cev, 
-IZ - izhodno zrcalo, Z - zrcalo z veliko odbojnostjo, B - Brewstrovi okni, 
-P - prizma
+\caption{Poenostavljena shema Ar laserja s prizmo: R -- razelektritvena cev, 
+IZ -- izhodno zrcalo, Z -- zrcalo z veliko odbojnostjo, B -- Brewstrovi okni, 
+P -- prizma
 }
 \label{fig:ArS}
 \end{figure}
@@ -293,9 +293,9 @@ laser pri zelo veliko različnih valovnih dolžinah, dodamo frekvenčno selektiv
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/07_CO2Shema.pdf_tex}
-\caption{Poenostavljena shema najpreprostejšega CO$_2$ laserja: R - razelektritvena cev, 
-IZ - izhodno zrcalo, Z - zrcalo z veliko odbojnostjo, B - Brewstrovi okni, 
-U - uklonska mrežica
+\caption{Poenostavljena shema najpreprostejšega CO$_2$ laserja: R -- razelektritvena cev, 
+IZ -- izhodno zrcalo, Z -- zrcalo z veliko odbojnostjo, B -- Brewstrovi okni, 
+U -- uklonska mrežica
 }
 \label{fig:CO2S}
 \end{figure}
@@ -459,10 +459,10 @@ bolj kompaktno konstrukcijo in boljšo stabilnost izhodne moči.
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/07_NdS.pdf_tex}
-\caption{Shema vzdolžnega diodnega črpanja Nd:YAG laserja. O - ojačevalno sredstvo, 
-IZ - izhodno zrcalo, D - dikroično zrcalo, 
-prepustno za črpalno svetlobo in odbojno za lasersko, DL - diodni 
-laser za črpanje, L - leča
+\caption{Shema vzdolžnega diodnega črpanja Nd:YAG laserja. O -- ojačevalno sredstvo, 
+IZ -- izhodno zrcalo, D -- dikroično zrcalo, 
+prepustno za črpalno svetlobo in odbojno za lasersko, DL -- diodni 
+laser za črpanje, L -- leča
 }
 \label{fig:NdS}
 \end{figure}
@@ -629,18 +629,105 @@ medicini (npr. za odstranjevanje ledvičnih kamnov), astronomiji (za umetne lase
  
 \section{Vlakenski laserji}
 \index{Laser!vlakenski}
+Posebna vrsta laserjev so vlakenski laserji, v katerih predstavlja aktivno 
+sredstvo optično vlakno, dopirano z ioni redkih zemelj. \index{Optično vlakno}
+(Za podroben opis optičnih vlaken glej poglavje~\ref{chap:fibri})
+Valovna dolžina, pri kateri oddajajo svetlobo, je odvisna od snovi, s katero
+je vlakno dopirano. Najpogosteje je to erbij ($1550~\si{nm}$),\index{Erbij}
+iterbij ($\sim 1100~\si{nm}$)\index{Iterbij} ali neodim ($1064~\si{nm}$).\index{Neodim} 
+Vlakenske laserje odlikuje
+izredno velik izkoristek (tipično okoli $70$--$80~\%$, lahko tudi več) 
+in posledično zelo velika moč (do $20~\si{kW}$). Za njih sta značilni tudi
+izredno velika kakovost žarka (faktor $M^2<1,1$, glej enačbo~\ref{faktorM}) in 
+razmeroma majhna občutljivost na zunanje motnje. Delujejo lahko v zveznem
+ali sunkovnem načinu.
+
+Oglejmo si vlakenski laser, katerega vlakno je dopirano z ioni erbija 
+(masni delež $\sim 1~\%$). Vlakna so pogosto dodatno dopirana z iterbijem, kar
+poveča absorpcijo črpalnega laserja in s tem izkoristek laserja. Laser črpamo
+optično z lasersko diodo pri $980~\si{nm}$ ali $1480~\si{nm}$, laserski prehodi 
+pa se zgodijo ob povratku v osnovno stanje. Osnovno stanje je razcepljeno v več podnivojev
+(slika~\ref{fig:ErFib}), zato je valovna dolžina oddane svetlobe v razmeroma 
+širokem intervalu $1520$--$1560~\si{nm}$. Velika spektralna širina
+omogoča delovanje z uklepanjem faz. 
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/07_FibEr.pdf_tex}
+\caption{Energijski nivoji v erbijevem vlakenskem laserju (levo) in 
+absorpcijski ter emisijski spekter za erbij (desno). Dodaten vrh pri $980~\si{nm}$ 
+ni prikazan.}
+\label{fig:ErFib}
+\end{figure} 
+
+Zgradba vlakenskih laserjev se razlikuje od do zdaj opisanih. Glavna razlika je
+seveda v resonatorju, ki je v tem primeru kar optično vlakno. Tipičen premer je 
+$\sim 5~\si{\micro\meter}$, dolžina pa več metrov. Na koncih vlakna lahko 
+postavimo dikroična zrcala, ki omogočajo longitudinalno sklopitev črpalnega 
+žarka v vlakno. Navadno namesto navadnih zrcal uporabimo periodične strukture 
+na koncih vlakna, na katerih se valovanje izbrane valovne dolžine Braggovo odbija
+(slika~\ref{fig:Fibshema}). \index{Laser!zgradba}
+S selektivnim odbojem se spekter ojačanjega izhodnega valovanja bistveno zmanjša. 
+
+Navadno uporabljamo vlakna, ki so sestavljena iz sredice in dveh plaščev. Laserska
+svetloba ostaja ujeta v sredici vlakna, črpalno pa vodimo po notranjem plašču. To
+omogoča bistveno lažjo sklopitev črpalnega žarka v vlakno poleg tega povečanje
+efektivnega polmera žarka vodi do manjših vršnih intenzitet in manjše verjetnosti
+pojava neželenih nelinearnih pojavov. 
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/07_Fibshema.pdf_tex}
+\caption{Shema vlakenskega laserja: LD -- črpalna laserska dioda, 
+BPS -- Braggova periodična struktura, V -- optično vlakno
+}
+\label{fig:Fibshema}
+\end{figure}
+
+Vlakenski laseri se uporabljajo v telekomunikacijah, saj oddajajo svetlobo 
+valovnih dolžin, pri katerih je v vlaknih najmanjša disperzija (poglavje~\ref{chap:Disperzija}). 
+Velika intenziteta svetlobe omogoča obdelavo, varjenje, vrtanje in rezanje kovin. 
+Zaradi svojih mehanskih lastnosti so primerni tudi za premično lasersko obdelavo snovi.
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|l|c|}\hline
+Valovna dolžina  & $1550~\si{\nano\meter}$\\ \hline
+Verjetnost za spontani prehod $A$ & $ \sim 90/\si{\second}$ \\ \hline
+Presek za stimulirano emisijo $\sigma$ & $7 \times 10^{-25}~\si{\metre}^2$ \\ \hline
+Spektralna širina črte $\Delta \nu$ & $3 \times 10^{12}~\si{\hertz}$  \\ \hline
+Gostota obrnjene zasedenosti $\Delta N/V$ & $ \sim 10^{24}/\si{\metre}^3$ \\ \hline
+\end{tabular}
+\caption{Tipični podatki za erbijev vlakenski laser}
+\label{tab:fib}
+\end{center}
+\end{table}
+
+\begin{remark}
+ Namesto vlaken, dopiranih z ioni redkih zemelj, lahko za izdelavo vlakenskih laserjev
+ izkoristimo pojav stimuliranega Ramanovega sipanja (glej poglavje~\ref{chap:SRS}). 
+ Pri tem pojavu se črpalni žarek svetlobe neelastično siplje, ojači pa se žarek 
+ pri nižji frekvenci. Razlika frekvenc ustreza vibracijskim prehodom 
+ molekul, ki prevzamejo preostanek energije. Signal, ki se pri prehodu ojačuje, 
+ ostaja pretežno ujet v vlakno z Braggovimi periodičnimi strukturami na koncih.
+ Zavedati se moramo razlike med navadnim laserjem, ki deluje zaradi vzpostavljene
+ obrnjene zasedenosti, in Ramanskim laserjem, v katerem pride do ojačenja sipane
+ svetlobe. 
+\end{remark}
 
 \section{Polprevodniški laserji}
+Za široko uporabo so danes brez dvoma najpomembnejši polprevodniški laserji.
+Njihove glavne značilnosti so majhna dimenzija, preprosta izdelava,
+velik izkoristek, predvsem pa neposredno črpanje z električnim tokom.
+Za črpanje z električnim tokom so potrebne le zelo majhne jakosti oziroma
+nizke napetosti, kar omogoča hitro modulacijo svetlobne moči z modulacijo 
+električnega toka.
+
 \subsection{Svetlobne diode - LED}
 
-Za široko uporabo so danes brez dvoma najpomembnejši polvodniški laserji.
-Njihove glavne značilnosti so majhne dimenzije, neposredno črpanje z
-električnim tokom majhne jakosti in pri nizki napetosti, velik izkoristek,
-preko 20%,
-pri pretvorbi električne moči v svetlobno, in možnost hitre modulacije
-svetlobne moči z modulacijo električnega toka. Poleg tega jih je moč
-integrirati z drugimi polvodniškimi elementi in se za njihovo izdelavo
-uporablja običajna polvodniška tehnologija.
+
 
 Polvodniki absorbirajo svetlobo s frekvenco nad energijo prehoda iz
 valenčnega v prevodni pas. Pri tem z vzbuditvijo elektrona iz valenčnega v
