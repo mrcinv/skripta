@@ -10,11 +10,11 @@ in si na kratko ogledali razširjanje svetlobe v anizotropnih snoveh.
 Elektromagnetno polje v praznem prostoru opišemo z dvema vektorskima
 poljema, električnim in magnetnim, ki sta v splošnem funkciji lege $\mathbf{r}$
 in časa $t$. Vsaki točki v prostoru lahko priredimo \index{Električno polje!jakost}jakost
-električnega polja $\mathbf{E}(\mathbf{r},t)$ in \index{Magnetno polje!jakost}jakost
-magnetnega polja $\mathbf{H}(\mathbf{r},t)$. Za opis elektromagnetnega
+električnega polja $\mathbf{E}(\mathbf{r},t)$ in \index{Magnetno polje!gostota}gostoto
+magnetnega polja $\mathbf{B}(\mathbf{r},t)$. Za opis elektromagnetnega
 polja v snovi vpeljemo dve dodatni količini. To sta \index{Električno polje!gostota}gostota
-električnega polja $\mathbf{D}(\mathbf{r},t)$ in gostota magnetnega
-polja\index{Magnetno polje!gostota} $\mathbf{B}(\mathbf{r},t)$.
+električnega polja $\mathbf{D}(\mathbf{r},t)$ in jakost magnetnega
+polja\index{Magnetno polje!jakost} $\mathbf{H}(\mathbf{r},t)$.
 Vse te količine povezujejo \index{Maxwellove enačbe}Maxwellove
 enačbe\footnote{Škotski fizik James Clerk Maxwell, 1831--1879.}
 \boxeq{eq:Maxwell1}{
@@ -36,14 +36,14 @@ kjer $\mathbf{P}$ označuje \index{Električna polarizacija}električno
 polarizacijo, to je gostoto električnih dipolov, $\mathbf{M}$
 pa \index{Magnetizacija}magnetizacijo, to je gostoto magnetnega momenta.
 Polarizacija in magnetizacija sta odvisni od zunanjih polj $\mathbf{E}$
-in $\mathbf{H}$. V splošnem sta njuni odvisnosti zelo zapleteni,
+in $\mathbf{B}$. V splošnem sta njuni odvisnosti zelo zapleteni,
 v izotropnih in linearnih snoveh\footnote{Med nelinearne snovi, za katere napisani zvezi ne veljata,
 sodijo na primer feroelektriki in feromagneti.}
 pa se zvezi poenostavita v 
 \begin{equation}
 \mathbf{P}=\epsilon_{0}\chi_e\mathbf{E} = \epsilon_{0}(\epsilon-1)\mathbf{E} \qquad \textrm{in} 
 \qquad
-\mathbf{M}=\chi_m \mathbf{H} = (\mu-1)\mathbf{H}
+\mathbf{M}=\frac{(\mu-1)}{\mu\mu_0}\mathbf{B} = \chi_m \mathbf{H} = (\mu-1)\mathbf{H}
 \label{eq:PM}.
 \end{equation}
 Vpeljali smo \index{Susceptibilnost!električna} električno ($\chi_e$) in 
@@ -52,10 +52,11 @@ Vpeljali smo \index{Susceptibilnost!električna} električno ($\chi_e$) in
 \index{Magnetna permeabilnost}magnetno permeabilnost $\mu$. Ko združimo gornje
 enačbe, lahko zapišemo dve konstitutivni
 relaciji
-\begin{align}
-\mathbf{D} & =\epsilon_{0}\epsilon\mathbf{E}\quad \mathrm{in}\\
-\mathbf{B} & =\mu_{0}\mu\mathbf{H}.
-\end{align}
+\begin{equation}
+\mathbf{D}  =\epsilon_{0}\epsilon\mathbf{E}\qquad \textrm{in} 
+\qquad
+\mathbf{H}  =\frac{\mathbf{B}}{\mu_{0}\mu}.
+\end{equation}
 V linearnih anizotropnih snoveh moramo namesto skalarnih vrednosti $\varepsilon$
 in $\mu$ zapisati tenzorje. 
 
@@ -97,11 +98,11 @@ Večinoma bomo obravnavali elektromagnetna valovanja v izotropnih,
 homogenih in linearnih snoveh brez zunanjih izvorov in
 nosilcev naboja ($\mathbf{j}_e=0$ in $\rho_{e}=0$). 
 Iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) izpeljemo valovno 
-enačbo\index{Valovna enačba} za jakost električnega ali magnetnega polja 
+enačbo\index{Valovna enačba} za jakost električnega in gostoto magnetnega polja 
 \boxeq{eq:valovna-skalarna}{
 \nabla^{2}\mathbf{E}-\frac{1}{c^{2}}\frac{\partial^{2}\mathbf{E}}{\partial t^{2}} = 0
 \quad \mathrm{in} \quad
-\nabla^{2}\mathbf{H}-\frac{1}{c^{2}}\frac{\partial^{2}\mathbf{H}}{\partial t^{2}} = 0.
+\nabla^{2}\mathbf{B}-\frac{1}{c^{2}}\frac{\partial^{2}\mathbf{B}}{\partial t^{2}} = 0.
 }
 Pri tem je hitrost valovanja\index{Hitrost valovanja} v snovi enaka 
 \boxeq{eq:c}{
