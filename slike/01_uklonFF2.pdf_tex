@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{762.58319092bp}%
+    \setlength{\unitlength}{574.58702087bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,21 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.75546303)%
+  \begin{picture}(1,0.50838425)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(-0.15156976,-0.3509018){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.28423539\unitlength}\raggedright  \end{minipage}}}%
-    \put(0.04604952,-0.36968707){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
-    \put(0.15238502,-0.71473018){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.11319522\unitlength}\raggedright  \end{minipage}}}%
-    \put(0.27850231,-0.33203646){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.74882916\unitlength}\raggedright  \end{minipage}}}%
-    \put(0.30411549,0.0830243){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{ }\end{tabular}}}}%
+    \put(0.31332397,0.1101886){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{ }\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{01_uklonFF2.pdf}}%
-    \put(0.18768047,0.72804416){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathrm{zaslon}$\end{tabular}}}}%
-    \put(0.75400001,0.72807721){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathrm{zaslon}$\end{tabular}}}}%
-    \put(0.61657236,0.46607304){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$S$\end{tabular}}}}%
-    \put(0.86018463,0.45470749){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$P$\end{tabular}}}}%
-    \put(-0.00075137,0.4887766){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$S$\end{tabular}}}}%
-    \put(0.31291932,0.47304053){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$P$\end{tabular}}}}%
+    \put(-0.00195984,0.47201941){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{01_uklonFF2.pdf}}%
+    \put(0.65271851,0.47201951){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
+    \put(0.57169448,0.56717834){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.3391171\unitlength}\raggedright \end{minipage}}}%
   \end{picture}%
 \endgroup%

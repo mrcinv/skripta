@@ -138,8 +138,8 @@ Iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4})
 izpelji kontinuitetno enačbo v odsotnosti električnih tokov
 \begin{equation}
 -\nabla\cdot\mathbf{\mathbf{S}}=\frac{\partial}{\partial t}\left(\frac{1}{2}\epsilon_{0}\mathbf{E}^{2}+
-\frac{1}{2}\mu_{0}\mathbf{H}^{2}\right)+\mathbf{E}\cdot\frac{\partial\mathbf{P}}{\partial t}+
-\mu_{0}\mathbf{H}\cdot\frac{\partial\mathbf{M}}{\partial t}.
+\frac{1}{2}\frac{\mathbf{B}^{2}}{\mu_0}\right)+\mathbf{E}\cdot\frac{\partial\mathbf{P}}{\partial t}-
+\mathbf{M}\cdot\frac{\partial\mathbf{B}}{\partial t}.
 \label{eq:PoyntingTh}
 \end{equation}
 Pomagaj si z zvezo $\nabla\cdot(\mathbf{E}\times\mathbf{H})=(\nabla\times\mathbf{E})\cdot\mathbf{H}-
@@ -158,7 +158,7 @@ v homogeni izotropni snovi tako velja
 kjer je $w$\index{Gostota energije} celotna
 gostota energije elektromagnetnega polja. Zapišemo jo kot 
 \boxeq{eq:gostota-energije}{
-w=\frac{1}{2}\epsilon\epsilon_{0}\mathbf{E}^{2}+\frac{1}{2}\mu\mu_{0}\mathbf{H}^{2}.
+w=\frac{1}{2}\epsilon\epsilon_{0}\mathbf{E}^{2}+\frac{1}{2}\frac{\mathbf{B}^{2}}{\mu\mu_{0}}.
 }
 
 Valovno enačbo in ohranitvene zakone lahko zapišemo tudi za anizotropne,
@@ -235,8 +235,8 @@ Velikost valovnega vektorja\index{Valovni vektor} $\mathbf{k}$ je valovno števi
 Vektorja jakosti električnega $\mathbf{E}$ in magnetnega polja $\mathbf{H}$ zadostujeta
 Maxwellovim enačbam (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}), iz katerih sledi,
 da sta polji vedno medsebojno pravokotni, 
-hkrati pa pravokotni na valovni vektor $\mathbf{k}$. Elektromagnetno valovanje je torej
-transverzalno valovanje. 
+hkrati pa pravokotni na valovni vektor $\mathbf{k}$ (naloga~\ref{naloga-TEM-ortogonalnost}).
+Elektromagnetno valovanje je torej transverzalno valovanje. 
 Zaradi enolične zveze med električnim in magnetnim poljem zadošča
 za opis ravnega vala le eno polje, navadno se odločimo za električno.
 
@@ -567,8 +567,8 @@ iz zelo tankih prevodnih žic. Takšna mrežica deluje kot polarizator za vpadno
 Elektromagnetni val s polarizacijo, ki je vzporedna žicam, pri prečkanju v žicah inducira tok
 in val se delno odbije in delno absorbira. Za valovanje, ki je polarizirano pravokotno 
 na žice, je ta inducirani tok bistveno manjši, saj je smer toka omejena
-vzdolž žice. Posledično je val, ki je polariziran pravokotno na žice, prepuščen, 
-val, ki je polariziran vzporedno z žicami, pa ne. 
+vzdolž žice. Posledično je val, polariziran pravokotno na žice, prepuščen, 
+val, polariziran vzporedno z žicami, pa ne. 
 Takšni polarizatorji se večinoma uporabljajo v mikrovalovni tehniki, 
 vendar se v zadnjih letih z razvojem in izboljšavo litografskih postopkov
 vse pogosteje uporabljajo tudi v bližnjem infrardečem področju svetlobe.\index{Infrardeče valovanje}
@@ -595,6 +595,12 @@ kjer je $\mathbf{n}$ normala na ploskev, po kateri teče integral, $r$ pa je odd
 do ploskve $dS$. Kirchhoffov integral velja splošno za katerokoli harmonično 
 funkcijo, ki reši valovno enačbo (enačba~\ref{eq:skalarna-valovna-enačba}), ne samo $E$, in torej
 ni vezan na obravnavo uklona svetlobe. 
+\begin{figure}[h]
+\centering \def\svgwidth{50truemm} 
+  \input{slike/01_uklonFK.pdf_tex}
+\caption{Integracijska ploskev v Kirchhoffovem integralu zajema odprtino in objema točko $P$.}
+\label{fig:UklonFK}
+\end{figure}
 
 Naj svetloba iz točkastega izvora v točki $S$ (slika \ref{fig:UklonFK}) vpada na zaslon
 z odprtino poljubne oblike. Izračunajmo skalarno polje v točki $P$ na drugi 
@@ -604,6 +610,7 @@ strani zaslona. Vpadno svetlobo zapišemo kot
 E = A \frac{e^{ikr'}}{r'},
 \end{equation}
 kjer je $r'$ razdalja od izvora do točke na zaslonu, A pa zaradi ohranitve energije konstanta.
+
 Integracijska ploskev je lahko poljubna sklenjena ploskev, ki objema točko $P$. Izberemo tako, ki
 zajema odprtino na zaslonu, poleg tega pa naredimo še dva približka:\\
 \begin{enumerate}
@@ -614,13 +621,6 @@ pa sta njuna prispevka zanemarljivo majhna.\\
 Gornja približka sta precej groba, vendar se izkaže, da se kljub temu
 dobro ujemata z eksperimentalno določeno uklonsko sliko, s čimer 
 upravičimo njuno uporabo.
-
-\begin{figure}[]
-\centering \def\svgwidth{65truemm} 
-  \input{slike/01_uklonFK.pdf_tex}
-\caption{Integracijska ploskev v Kirchhoffovem integralu zajema odprtino in objema točko $P$.}
-\label{fig:UklonFK}
-\end{figure}
 
 Kirchhoffov integral za primer točkastega izvora svetlobe se potem zapiše kot integral, pri čemer
 integriramo zgolj po odprtini
@@ -683,35 +683,10 @@ Izračun Fresnel-Kirchhoffovega integrala (enačba~\ref{eq:Kirchhoffov-integral}
 je v splošnem zelo zapleten, zato se 
 pogosto poslužujemo dveh približkov: Fraunhoferjevega\footnote{Nemški fizik 
 Joseph von Fraunhofer, 1787--1826.} in Fresnelovega\index{Fresnelov uklon}. 
-Fraunhoferjeva uklonska slika\index{Fraunhoferjev uklon} velja za daljno polje, kadar lahko 
-vpadni in uklonjeni val dovolj dobro opišemo z ravnim valom. 
-Bolj zapleteno Fresnelovo uklonsko sliko moramo uporabiti, kadar obravnavamo 
-primer bližnjega polja in ukrivljene valovne fronte.
-\begin{figure}[h]
-\centering \def\svgwidth{110truemm} 
-  \input{slike/01_uklonFF2.pdf_tex}
-\caption{V Fraunhoferjevem približku vpadno in uklonjeno valovanje obravnavamo kot ravna valova 
-in na zaslonu nastane znana uklonska slika (levo). Fresnelov približek moramo uporabiti za obravnavno uklona v 
-primeru bližnjega polja (desno).}
-\label{fig:UklonFF}
-\end{figure}
 
-Mejo med daljnim in bližnjim poljem kvalitativno določa Fresnelovo 
-število\index{Fresnelovo število}
-\begin{equation}
-F= \frac{a^2}{L\lambda}.
-\label{eq:Fst}
-\end{equation} 
-Pri tem je $a$ karakteristična dimenzija odprtine, $L$ tipična oddaljenost od odprtine ter
-$\lambda$ valovna dolžina. V grobem velja, da lahko Fraunhoferjev približek uporabimo,
-kadar je $F<1$ in je odstopanje
-faze od ravnega vala znotraj odprtine majhno. Sicer moramo uklon obravnavati v Fresnelovem 
-približku ali celo v polni obliki. 
-
-Zapišimo uklonske integrale za oba približka. Izhajajmo iz Fresnel-Kirchhoffovega integrala
-za točkast izvor
-(enačba~\ref{eq:Fresnel-Kirchoffov-integral}) in zapišimo razdaljo $r$ s koordinatama na 
-zaslonu $x'$ in $y'$ ter
+Izhajamo iz Fresnel-Kirchhoffovega integrala za točkast izvor
+(enačba~\ref{eq:Fresnel-Kirchoffov-integral}) in zapišemo 
+razdaljo $r$ s koordinatama na zaslonu $x'$ in $y'$ ter
 lego točke $P$ s koordinatami $x,y$ in $z$ (slika \ref{fig:Uklon-koordinate}). Privzamemo,
 da je oddaljenost do zaslona bistveno večja od prečnih dimenzij. 
 
@@ -723,28 +698,49 @@ je od odprtine oddaljen za $z$.}
 \label{fig:Uklon-koordinate}
 \end{figure}
 
-Zapišemo
+Zapišemo razdaljo $r$ in jo razvijemo
 \begin{equation}
-r = \sqrt{(x-x')^2+(y-y')^2 + z^2}
+r = \sqrt{(x-x')^2+(y-y')^2 + z^2} \approx z + \frac{(x-x')^2}{2z} +\frac{(y-y')^2}{2z}.
 \end{equation}
-in razvijemo
-\begin{equation}
-r \approx z + \frac{(x-x')^2}{2z} +\frac{(y-y')^2}{2z}.
-\end{equation}
-
-V Fraunhoferjevem približku zadošča uporaba le linearnih členov v gornjem
-izrazu in Fraunhoferjev uklonski integral zapišemo kot
-\begin{equation}
-\label{eq:FraunhoferApprox}
-E_P(x,y,z) =  \frac{1}{i\lambda z} e^{i k (z + (x^2+y^2) /2z)}\int \int E_S e^{-ik (xx'+yy')/z} dx' dy',
-\end{equation}
-kar ni nič drugega kot Fouriereva transformacija polja $E_S$.
-
-V Fresnelovem približku upoštevamo tudi kvadratne člene v razvoju in ga zapišemo kot
+Vstavimo razvoj v uklonski integral (enačba~\ref{eq:Fresnelov-uklon}), pri 
+čemer $r$ v imenovalcu nadomestimo kar z $z$. Dobljen zapis je Fresnelov uklonski
+približek 
 \begin{equation}
 \label{eq:FresnelApprox}
-E_P(x,y,z) =  \frac{1}{i \lambda z } e^{i k z}\int \int E_S e^{-ik ((x-x')^2+(y-y')^2)/2z} dx' dy'.
+E_P(x,y,z) =  \frac{1}{i \lambda z } e^{i k z}\int \int E_S\, e^{ik ((x-x')^2+(y-y')^2)/2z} dx' dy'.
 \end{equation}
+Kadar v razvoju zadošča uporaba le linearnih členov, govorimo o Fraunhoferjevem
+uklonu. Fraunhoferjev uklonski integral zapišemo kot
+\begin{equation}
+\label{eq:FraunhoferApprox}
+E_P(x,y,z) =  \frac{1}{i\lambda z} e^{i k (z + (x^2+y^2) /2z)}\int \int E_S\,
+e^{-ik (xx'+yy')/z} dx' dy
+\end{equation}
+in v njem  prepoznamo Fourierevo transformacijo polja $E_S$.
+
+Fraunhoferjeva uklonska slika\index{Fraunhoferjev uklon} velja za razmeroma velike oddaljenosti
+zaslona od uklonske odprtine, ko lahko uklonjeni val dovolj dobro opišemo z ravnim valom. 
+Bolj zapleteno Fresnelovo uklonsko sliko moramo uporabiti, kadar obravnavamo 
+primer bližnjega polja. 
+Mejo med Fraunhoferjevim in Fresnelovim približkom kvalitativno določa Fresnelovo 
+število\index{Fresnelovo število}
+\begin{equation}
+F= \frac{a^2}{L\lambda}.
+\label{eq:Fst}
+\end{equation} 
+Pri tem je $a$ karakteristična dimenzija odprtine, $L$ tipična oddaljenost zaslona 
+od odprtine ter $\lambda$ valovna dolžina svetlobe. V grobem velja, da lahko 
+Fraunhoferjev približek uporabimo, kadar je $F<1$ in je odstopanje faze od ravnega vala 
+znotraj odprtine majhno. Sicer moramo uklon obravnavati v Fresnelovem približku ali 
+celo v polni obliki. 
+
+\begin{figure}[h]
+\centering \def\svgwidth{100truemm} 
+  \input{slike/01_uklonFF2.pdf_tex}
+\caption{Skicirana značilna uklonska slika odprtine v Fraunhoferjevem režimu (a), 
+ko je oodaljenost od zaslona bistveno večja od velikosti odprtine, in v Fresnelovem režimu (b).}
+\label{fig:UklonFF}
+\end{figure}
 
 \begin{definition}
 \label{naloga-Frauhofer-Kirchhoff-uklon}
@@ -774,6 +770,7 @@ Gostoto električnega polja~\index{Električno polje!gostota} v anizotropni snov
 \label{eq:gostota-elektricnega-polja-tenzor}
 \end{equation}
 kjer je $\underline{\epsilon}$ tenzor drugega reda in ima v splošnem devet komponent.
+
 V dielektričnih snoveh, v katerih ne pride do optične aktivnosti ali absorpcije, je tenzor
 realen in simetričen $\epsilon_{ij}=\epsilon_{ji}^*$. Tak tenzor lahko vedno
 diagonaliziramo, torej poiščemo koordinatni sistem, v katerem je 
