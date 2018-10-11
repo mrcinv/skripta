@@ -267,7 +267,7 @@ Zapišimo še povprečno gostoto energije valovanja\index{Gostota energije}.
 K energiji prispevata tako magnetno kot električno polje. Oba prispevka sta enaka, zato velja
 \begin{equation}
 \left\langle w\right\rangle =\frac{1}{4}\epsilon\epsilon_{0}\left|E_{0}\right|^{2}+
-\frac{1}{4}\frac{\left|H_{0}\right|^{2}}{\mu\mu_{0}}=\frac{1}{2}\epsilon\epsilon_{0}\left|E_{0}\right|^{2}.
+\frac{1}{4}\frac{\left|B_{0}\right|^{2}}{\mu\mu_{0}}=\frac{1}{2}\epsilon\epsilon_{0}\left|E_{0}\right|^{2}.
 \end{equation}
 Povprečna gostota energije $w$, pomnožena s hitrostjo svetlobe v
 snovi, da gostoto energijskega toka $j$ oziroma intenziteto 
@@ -797,7 +797,7 @@ ki se širi vzdolž lastne osi $z$, ne sovpada z lastnima osema $x$ ali $y$, nas
 prehodu skozi kristal iz vpadnega linearno polariziranega valovanja v splošnem eliptično valovanje\index{Polarizacija!eliptična}. Lastni komponenti namreč potujeta različno
 hitro, zato pride med njima do faznega zamika. 
 
-Za poljubno smer širjenja valovanja ter poljubno polarizacijo je račun razmeroma zapleten. 
+Za poljubno smer širjenja valovanja in poljubno polarizacijo je račun razmeroma zapleten. 
 Formalen pristop izhaja iz valovne enačbe (enačba~\ref{eq:valovna-skalarna}), v kateri
 moramo upoštevati tudi električno polarizacijo 
 $\mathbf{P} = \epsilon_{0}(\underline{\epsilon}-I)\mathbf{E}$. Iz nje sledi 
@@ -815,8 +815,9 @@ določajo smeri optičnih osi. \index{Optična os}
 \input{slike/01_kploskev.pdf_tex}
 \caption{Dvolistna ploskev valovnega vektorja, pri čemer zaradi nazornosti rišemo le prvi 
 oktant. V dvoosnem kristalu (levo) sta dve optični osi. Druga os ni narisana, leži pa 
-simetrično glede na os $z$. V optično enoosnem kristalu (desno) je le ena optična os, 
-po dogovoru je to os $z$ (desno). Rdeče puščice označujejo polarizacijo.}
+simetrično glede na os $z$. Privzeli smo, da velja $n_1<n_2<n_3$.
+V optično enoosnem kristalu (desno) je le ena optična os, 
+po dogovoru je to os $z$. Rdeče puščice označujejo ustrezno polarizacijo.}
 \label{kploskev}
 \end{figure}
 
@@ -836,7 +837,7 @@ Za lažjo predstavo si oglejmo ploskev valovnega vektorja (slika~\ref{kploskev},
 V tem primeru niti ni treba risati celotne ploskve, ampak zaradi rotacijske simetrije
 zadošča, da narišemo presek ploskve valovnega vektorja z ravnino, ki jo določata 
 optična os in valovni vektor $\mathbf{k}$ (vpadno ravnino). 
-Zaradi simetrije je pomemben le kot $\vartheta$ med valovnim vektorjem $\mathbf{k}$ 
+Pomemben je le kot $\vartheta$ med valovnim vektorjem $\mathbf{k}$ 
 in optično osjo $z$, zato si lahko drugo koordinatno os poljubno izberemo. Tukaj izberemo
 os $y$ (slika~\ref{fig:Elipsa}). 
 
@@ -873,9 +874,9 @@ prav tako $\mathbf{k}$ in $\mathbf{S}$. Žarek se širi v smeri valovnega vektor
 valovne fronte pa so pravokotne nanj. To velja tudi za redni žarek v anizotropnih
 snoveh. Izredni žarek pa ima, kot že ime nakazuje, ``izredne'' lastnosti. Vektorja
 $\mathbf{E}$ in $\mathbf{D}$ nista vzporedna, zato tudi valovni vektor $\mathbf{k}$ ni vzporeden
-toku energije oziroma Poyntingovemu vektorju $\mathbf{S}$ (slika \ref{fig:Elipsa}\,c). 
-Energijski tok tako potuje v smeri, ki ni enaka smeri valovnega vektorja. Smer
-Poyntingovega vektorja določimo kot normalo na elipso pri kotu $\vartheta$. 
+energijskemu toku oziroma Poyntingovemu vektorju $\mathbf{S}$ (slika \ref{fig:Elipsa}\,c). 
+Smer energijskega toka, ki ni enaka smeri valovnega vektorja, določimo kot normalo 
+na elipso pri kotu $\vartheta$. 
 
 \subsection*{Dvojni lom}
 Ko vpade žarek na snov, se lomi. Hitrost valovanja -- in s tem tudi 
@@ -890,8 +891,8 @@ je lomni količnik snovi enak rednemu lomnemu količniku $n_o$
 \sin\vartheta_{1}=n_{o}\sin\vartheta_{o}.
 \end{equation}
 Pri zapisu smo privzeli, da je lomni količnik snovi, iz katere valovanje prehaja v anizotropen 
-kristal, enak 1. Za izredni val s TM polarizacijo (električna poljska jakost leži v vpadni ravnini) prav tako 
-velja lomni zakon
+kristal, enak 1. Za izredni val s TM polarizacijo (električna poljska jakost leži v vpadni ravnini) 
+prav tako zapišemo lomni zakon
 \begin{equation}
 \sin\vartheta_{1}=n(\vartheta_e)\sin\vartheta_{e},
 \end{equation}
@@ -905,16 +906,17 @@ obeh prepuščenih žarkov sicer vzporedna valovnemu vektorju vpadnega žarka ($
 \mathbf{k}_o \parallel \mathbf{k}_e$), razlikujeta pa se smeri Poyntingovih vektorjev
 ($\mathbf{S}_1 \parallel \mathbf{S}_o \nparallel \mathbf{S}_e$). Ob prehodu skozi 
 plast anizotropne snovi tako svetloba potuje v dveh smereh in nastaneta dve sliki 
-(slika~\ref{foto:dvolom}) z medsebojno pravokotnima polarizacijama. 
+z medsebojno pravokotnima polarizacijama (slika~\ref{foto:dvolom}) . 
 
 \begin{figure}[h]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/01_dvolom.pdf_tex}
 \caption{Dvojni lom. Pri poševnem vpadu na anizotropno snov se
-valovanje loči na dva različno polarizirana žarka (a).
-Optična os je usmerjena pod poljubnim kotom glede na normalo mejne ravnine. Valovna vektorja
-sta v tem primeru kolinearna, Poyntingova vektorja pa imata različne smeri (b).}
+valovanje loči na dva različno polarizirana žarka (a). Če je optična os 
+usmerjena pod poljubnim kotom glede na normalo mejne ravnine, pride do razklona svetlobe
+tudi pri pravokotnem vpadu. Valovna vektorja sta tudi v tem primeru kolinearna, 
+Poyntingova vektorja pa imata različne smeri (b).}
 \label{fig:dvolomnost}
 \end{figure}
 
@@ -923,7 +925,8 @@ sta v tem primeru kolinearna, Poyntingova vektorja pa imata različne smeri (b).
 \def\svgwidth{140truemm} 
 \input{slike/01_FotoDvolom.pdf_tex}
 \caption{Dvojni lom v kristalu kalcita (islandski dvolomec). \index{Kalcit}
-Z linearnim polarizatorjem pokažemo, da imata razmaknjeni sliki različni polarizaciji.}
+Po prehodu skozi kristal nastaneta dve razmaknjeni sliki in z linearnim polarizatorjem 
+pokažemo, da imata sliki različni polarizaciji.}
 \label{foto:dvolom}
 \end{figure}
 
@@ -935,7 +938,8 @@ Z linearnim polarizatorjem pokažemo, da imata razmaknjeni sliki različni polar
       BaTiO$_3$ & 2,4042 & 2,3605 \\ \hline \index{BaTiO$_3$}
       LiNbO$_3$ & 2,2864 & 2,2022 \\ \hline \index{LiNbO$_3$}
       KH$_2$PO$_4$ & 1,5074 & 1,4669 \\ \hline \index{KH$_2$PO$_4$|see {KDP}}\index{KDP}
-      tekoči kristal 5CB ($25~\si{\degreeCelsius}$) & 1,5319 & 1,7060 \\ \hline \index{Tekoči kristali} \index{Telur}
+      tekoči kristal 5CB ($25~\si{\degreeCelsius}$) & 1,5319 & 1,7060 \\ 
+      \hline \index{Tekoči kristali} \index{Telur}
       telur ($\lambda = 10~\si{\micro\metre}$) & 4,7969 & 6,2455 \\ 
 \hline 
 \end{tabular}

@@ -719,48 +719,104 @@ Gostota obrnjene zasedenosti $\Delta N/V$ & $ \sim 10^{24}/\si{\metre}^3$ \\ \hl
 
 \section{Polprevodniški laserji}
 Za široko uporabo so danes brez dvoma najpomembnejši polprevodniški laserji.
-Njihove glavne značilnosti so majhna dimenzija, preprosta izdelava,
-velik izkoristek, predvsem pa neposredno črpanje z električnim tokom.
+Njihove glavne značilnosti so majhna dimenzija ($\sim 10$--$100~\si{\micro\metre}$), 
+preprosta izdelava, velik izkoristek ($\sim 50~\%$), 
+predvsem pa neposredno črpanje z električnim tokom.
 Za črpanje z električnim tokom so potrebne le zelo majhne jakosti oziroma
-nizke napetosti, kar omogoča hitro modulacijo svetlobne moči z modulacijo 
-električnega toka.
+nizke napetosti (tipično $15~\si{\milli\ampere}$ pri $2~\si{\volt}$), 
+kar omogoča zelo hitro modulacijo svetlobne moči z modulacijo 
+električnega toka. Njihova slabost je razmeroma širok spekter in posledično
+majhna koherenca.
+
+\subsection*{Mehanizem delovanja}
+Pri polprevodniških laserjih je mehanizem delovanja drugačen od do zdaj obravnavanih
+laserjev, zato si ga podrobneje oglejmo. Pri običajnih laserjih so elektroni
+lokalizirani okoli ionov in njihova kvantna stanja so točno določena. Ko elektron
+preide iz višjega v nižje stanje, izseva svetlobo točno določene valovne dolžine. 
+Pri polprevodniških laserjih elektroni niso lokalizirani in zaradi interakcij 
+se elektronska stanja razširijo v elektronske pasove, med katerimi ostanejo 
+prepovedani pasovi oziroma energijske reže. Tipična energijska
+reža v polprevodnikih med prevodnim in valenčnim pasom je $\lesssim 2~\si{eV}$, 
+zato je že pri sobni temperaturi prevodni pas deloma zaseden, v valenčnem pasu
+pa se pojavijo vrzeli.
+
+Polprevodniki absorbirajo svetlobo s frekvenco, ki je enaka ali večja od širine
+reže med valenčnim in prevodnim pasom. Pri tem z vzbuditvijo elektrona iz valenčnega v
+prevodni pas nastane par elektron--vrzel. Ta se lahko rekombinira z
+izsevanjem fotona, kar ustreza spontanemu ali stimuliranemu prehodu v atomih
+in molekulah. Zaradi ohranitve gibalne količine se valovni vektor elektrona
+pri prehodu le zelo malo spremeni, saj je valovni vektor vidne svetlobe
+majhen v primerjavi z vektorjem recipročne mreže polprevodniškega kristala.
+To ima pomembno posledico. Najobičajnejša polprevodnika, silicij in germanij,
+imata vrh prevodnega pasu v centru Brilluinove cone pri valovnem
+vektorju $\mathbf{k}=0$, dno prevodnega pasu pa pri $\mathbf{k} \neq 0$.
+Direkten direkten prehod z dna prevodnega pasu v vrh valenčnega pasu z
+izsevanjem fotona zato ni možen, priti mora  še do emisije ali absorpcije
+fonona, ki poskrbi za ohranitev gibalne količine. Tak proces je mnogo 
+manj verjeten, zato v siliciju in germaniju v običajni obliki ni
+mogoče dobiti znatnega sevanja s prehodi iz prevodnega v valenčni pas.
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{110truemm} 
+\input{slike/07_Ek.pdf_tex}
+\caption{Shema energijskih nivojev v polprevodniku. Zelena označuje prevodni
+pas, modra pa valenčni. Prehod preko direktne reže (levo) je veliko bolj 
+verjeten kot prehod preko indirektne reže (desno), saj mora priti še do emisije
+ali absorpcije fonona.
+}
+\label{fig:Ek}
+\end{figure}
+
+Opisane težave ni pri spojinah iz tretje in pete skupine elementov, na
+primer GaAs, kjer je valenčni pas $1,4~\si{eV}$ nad prevodnim. 
+Z ustrezno izbiro elementov delujejo polprevodniški laserji v območju 
+valovnih dolžin od $\sim 400~\si{nm}$ do več $\si{\micro\meter}$. 
+
+V termičnem ravnovesju je se na dnu prevodnega pasu nahajajo termično 
+vzbujeni elektroni, na vrhu valenčnega pasu pa vrzeli. Gostoto stanj za
+prevodni in valenčni pas zapišemo kot
+\beq
+\varrho_p(E) = \frac{1}{2\pi^2}\left(\frac{2m_p^*}{\hbar^2} \right)^{3/2} \sqrt{E-E_g}
+\quad \mathrm{in}\quad
+\varrho_v(E) = \frac{1}{2\pi^2}\left(\frac{2m_v^*}{\hbar^2} \right)^{3/2} \sqrt{-E}.
+\eeq
+Pri tem $m^*$ označuje efektivno maso v prevodnem ali valenčnem pasu, ki 
+jo izračunamo kot
+\beq
+m^* = \frac{\hbar^2}{d^2E/dk^2}.
+\eeq
+Vidimo, da je edini parameter, ki nastopa v izrazu za gostoto stanj, efektivna
+masa elektronov oziroma vrzeli. Ti dve masi sta značilni za posamezen polprevodnik
+in znašajo, na primer v GaAs, $m_p^* = 0,067~m_e$ in $m_v^* = 0,55~m_e$. 
+Gostota stanj za vrzeli je v tem primeru znatno večja kot gostota stanj za elektrone.
+
+Verjetnost za zasedenost elektronskih stanj je podana s Fermi-Diracovo funkcijo 
+\begin{equation}  
+f(E)=\frac{1}{e^{(E-E_F)/k_B T}+1},
+\label{eq:7FD}
+\end{equation}
+kjer $E_F$ označuje Fermijevo energijo. Spomnimo, da so pri $T=0$ vsa stanja pod
+Fermijevo energijo zasedena, nad njo pa prazna. V čistem polprevodniku je $E_F$ 
+na sredini med valenčnim in prevodnim pasom, z dodajanjem donorskih primesi (tip $n$) 
+pa se verjetnost, da elektroni zasedajo prevodni pas, povečuje in Fermijeva energija
+se približuje prevodnemu pasu. 
+
+
+yariv
+irena
+pollock
+davies
+silfvast
+yariv quantum
+nove knjige.
 
 \subsection{Svetlobne diode - LED}
 
 
 
-Polvodniki absorbirajo svetlobo s frekvenco nad energijo prehoda iz
-valenčnega v prevodni pas. Pri tem z vzbuditvijo elektrona iz valenčnega v
-prevodni pas nastane par elektron-vrzel. Ta se lahko rekombinira z
-izsevanjem fotona, kar ustreza spontanemu ali stimuliranemu prehodu v atomih
-in molekulah. Zaradi ohranitve gibalne količine se valovni vektor elektrona
-pri prehodu le zelo malo spremeni, saj je valovni vektor vidne svetlobe
-majhen v primerjavi z vektorjem recipročne mreže polvodniškega kristala.
-To ima pomembno posledico. Najobičajnejša polvodnika, silicij in germanij,
-imata vrh prevodnega pasu v centru Brilluinove cone, to je pri valovnem
-vektorju nič, dno prevodnega pasu pa pri končno velikem valovnem vektorju.
-Zato direkten prehod z dna prevodnega pasu v vrh valenčnega pasu z
-izsevanjem fotona ni možen, potrebna je sočasna emisija ali absorpcija
-fonona, ki poskrbi za ohranitev gibalne količine. Tak proces pa je seveda
-mnogo manj verjeten, zato v siliciju in germaniju v običajni obliki ni
-mogoče dobiti znatnega sevanja s prehodi iz prevodnega v valenčni pas.
 
-Opisane težave ni pri spojinah iz tretje in pete skupine elementov, na
-primer GaAs, kjer je valenčni pas 1,4 eV nad prevodnim. Na njih so osnovani
-polvodniški laserji.
 
-Verjetnost za zasedenost elektronskih stanj v termičnem ravnovesju v
-polvodniku je podana s Fermi-Diracovo funkcijo \ref{ts}:
-
-\begin{equation}  \label{6.1}
-f(E)=\frac{1}{e^{(E-E_F)/k_B T}+1}\;\;.
-\end{equation}
-Pri nizkih temperaturah so zasedena vsa stanja do Fermijeve energije $E_F$,
-nad njo pa so prazna. V čistem polvodniku je $E_F$ na sredini med
-valenčnim in prevodnim pasom, z dodajanjem donorskih primesi pa se
-približuje prevodnemu pasu. Če je koncentracija primesi dovolj velika,
-lahko $E_F$ tudi pri absolutni ničli pride nad dno prevodnega pasu. Tak
-degenriran polvodnik se obnaša podobno kot kovina.
 
 Če polvodnik ni v termičnem ravnovesju, na primer v p-n spoju, skozi
 katerega teče električni tok, lahko vpeljemo približni Fermijevi energiji 
