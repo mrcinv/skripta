@@ -778,7 +778,7 @@ valovnih dolžin od $\sim 400~\si{nm}$ do več $\si{\micro\meter}$.
 V najpreprostejši sliki energijske pasove v polprevodniku opišemo s parabolično 
 odvisnostjo od valovnega vektorja $\mathbf{k}$
 \beq
-F = \frac{\hbar^2 k^2}{2m^*}.
+E = \frac{\hbar^2 k^2}{2m^*}.
 \eeq
 Pri tem $m^*$ označuje efektivno maso v prevodnem ali valenčnem pasu, ki 
 jo izračunamo kot
@@ -829,34 +829,99 @@ in (\ref{6.3a}) sledi
 \beq
 N_{p0} = \frac{1}{4}\left(\frac{2m_e^* kT}{\hbar^2 \pi} \right)^{3/2} e^{E_F-E_g}.
 \eeq
+Število elektronov v prevodnem pasu (in vrzeli v valenčnem) je tudi pri končnih 
+temperaturah razmeroma nizko. Ga pa lahko znatno povečamo, če povišamo Fermijevo energijo.
 
-Število elektronov v prevodnem pasu lahko torej znatno povečamo, če povišamo Fermijevo energijo.
 To dosežemo z dopiranjem, nadzorovanim uvajanjem nečistoč. Če dodamo donorske primesi,
 to so take, ki povečajo število elektronov, govorimo o polprevodniku tipa $n$, 
 če pa dodajamo akceptorske snovi, torej take, ki elektrone vežejo nase, pa govorimo
 o polprevodniku tipa $p$. Primeri donorskih snovi za GaAs so žveplo, selen ali telur,
-primer akceptorskih snovi pa cink in kadmij.
-Zaradi dodanih snovi se v energijski reži pojavita nova
-energijska nivoja. Donorski nivo je tipično tik pod prevodnim pasom, Fermijeva 
-energija se premakne navzgor in že pri sobni temperaturi dosežemo veliko število elektronov v 
-prevodnem pasu. Podobno je v tipu $p$ akceptorski pas tik nad valenčnim, Fermijeva
-energija se pomakne navzdol in število vrzeli v valenčnem pasu naraste. Da dosežemo
-znatno število fotonov iz rekombinacije elektronov in vrzeli, moramo na isto mesto
-spraviti p in n tip polprevodnika. To naredimo s pn stikom.
+primer akceptorskih snovi pa cink in kadmij. Zaradi dodanih snovi se v energijski 
+reži pojavita nova energijska nivoja. Donorski nivo je tipično tik pod prevodnim 
+pasom, Fermijeva energija se premakne navzgor in že pri sobni temperaturi dosežemo 
+veliko število elektronov v prevodnem pasu. 
+Podobno je v tipu $p$ akceptorski pas tik nad valenčnim, Fermijeva
+energija se pomakne navzdol in število vrzeli v valenčnem pasu naraste. 
 
-\subsection{Stik $\mathit{p}$--$\mathit{n}$}
-najpreprostejša oblika je pn stik. prevodna smer je p->n. 
-Fermijeva energija se izenači, prevodni in valenčni pas pa se ukrivita. Ko dodamo
-tok v prevodni smeri, se potencialna bariera zmanjša in prosti elektroni 
-difundirajo na p stran, vrzeli pa na n. Zaradi razlike v efektivni masi je mobilnost
-elektronov veliko večja od vrzeli, zato gre več elektkronov na p stran kot vrzeli na n. 
+Da dosežemo znatno število rekombinacij elektronov in vrzeli (in torej znatno
+število izstopnih fotonov), moramo v istem delu vzorca doseči veliko koncentracijo
+obeh nosilcev naboja. To naredimo s stikom $p-n$.
 
-Na p strani je zdaj veliko novih elektronov. Dokler ne pride do rekombinaije, je veliko
-elektronov v prevodnem in veliko vrzeli v valenčnem pasu. Zato Fermijeva funkcija
-ni dobra za opis in uporabimo koncept kvazi-Fermijevega nivoja Fn in Fp. 
+\subsection{Stik $\mathit{p}$-$\mathit{n}$}
+Najpreprostejši primer je stik $p$-$n$, pri katerem staknemo dva kosa iste 
+snovi, le da je na eni strani ta snov dopirana z akceptorji in na drugi z donorji.
+Ko staknemo območji $p$ in $n$, elektroni iz prevodnega pasu $n$ strani difundirajo 
+na stran $p$, vrzeli pa ravno obratno. V stacionarnem stanju nastane ozek pas, 
+tako imenovani, izpraznjeni sloj, v katerem ni prostih nosilcev naboja. Na strani $n$
+ostanejo pozitivni donorski ioni, na strani $p$ pa negativni akceptorski ioni strani, ki 
+ustvarjajo električno polje. Nastalo polje preprečuje nadaljnjo difuzijo nosilcev 
+naboja. V ravnovesju se Fermijeva energija na obeh straneh izenači, prevodni 
+in valenčni pas pa se ukrivita. 
+
+Ko skozi stik sreče tok v prevodni smeri (to je od $p$ proti $n$), se potencialni
+skok zmanjša in prosti elektroni iz prevodnega pasu difundirajo na stran $p$, 
+vrzeli iz valenčnega pasu pa na stran $n$. Zaradi razlike v efektivni masi je mobilnost
+elektronov veliko večja od vrzeli, zato gre več elektronov na p stran kot vrzeli na n.
+Zdaj imamo na p strani veliko dodatnih elektronov. Dokler ne pride do rekombinacije,
+imamo veliko populacijo elektronov v pravodnem in veliko populacijo vrzeli v valenčnem pasu. 
+Zato za opis ni več dobra Fermijeva funkcija. Zato Fermijeva funkcija
+ni dobra za opis in uporabimo koncept kvazi-Fermijevega nivoja Fn in Fp.
+kvazi fermijev nivo opisuje porazdelitev nosilcev naboja znotraj svojega pasu.
+kvazi fermij elektronov je 
 
 
 
+\beq
+N_{p0} = \frac{1}{4}\left(\frac{2m_e^* kT}{\hbar^2 \pi} \right)^{3/2} e^{E_F-E_g}.
+\eeq
+
+\beq
+N_{v0}=\int_{-\infty}^{0}\,\rho_v(E)f_v(E)\,dE.
+\label{6.3b}
+\eeq
+
+
+V izpraznjenem območju
+se pojavi velika koncentracija elektronov in vrzeli, kar vodi do velikega števila
+rekombinacij. Dioda oddaja svetlobo pri valovni dolžini okoli reže. Pri nizkih
+tokovih pride so spontane rekombinacije. Pri velikih koncentracijah nosilcev
+naboja pa pride do stimuliranih rekmbinacij, ki omogočajo optično ojačenje. 
+
+Forward bias naredi Fermijeva nivoja različna in Efn je večji od EFp. Razlika narašča
+kot funkcija toka, ki teče skozi stik. Če je razlika večja od gapa, oziroma
+bolj natančno 
+\beq
+E_{Fn}-E_{Fp} \geq h \ni \geq E_g.
+\eeq
+
+Ta enačba je ekvivalentna pogoju za obrnjeno zasedenost v navadnih laserjih. 
+
+
+ko v forward smeri, elektroni z n strani so injektirani v vmesno območje, kjer soobstojajo
+z vrzelmi, ki so injektirane iz p stgrani. Pride do rekombinacije s spontano ali
+stimulirano emisijo. Da dosežemo ojačanje, mora forward voltage preseči širino reže. 
+
+
+\subsection*{Zgradba laserja}
+Prvi polprevodniški laser je deloval leta 1962, GaAs, oddaja pri 850 nm. Osnovna zgradba:
+active region je izpraznjena plast dolžine 200-500 mikronov in 100-200 mikronod širine.
+debelina je tipično zelo majhna, okoli 1 mikron. je homojunction laser.  Homostik. PREVOD?
+
+laser je navadno resonator med dvema končnima strenama kristala polprevodnika. 
+Lomni količnik npr gaas 3,5, kar da odbojnost 0,3. in niti ne rabijo posebnega coatinga čez.
+
+GaAs je deloval pri 77K. Če povečaš temperaturo, več elektronov zasede stanje nad Fermijevo
+energijo in optično ojačenje se zmanjša. Naraste prag delovanja, ki je pa tako velik, da ga
+skurimo. Slabost je tudi, da je velikost žarka v s meri veliko večja od debeline aktivnega 
+območja. Posledično veliko svetlobe potuje po p in n območju, kjer se absorbira. 
+Drug problem je hiter drift nosilcev naboja ven iz izpraznjege območja, zato je le del 
+na voljo za stimulirano emisijo.
+
+Heterostrukture.
+
+Bistveno izboljšano delovanje. P in N stran sta narejena iz različne snovi. To odkritje leta 1970
+Alferov in Kroemer, ki sta dobila Nobelovo nagrado leta 2000. Tipično, recimo
+$p-Ga_{1-x}Al_xAs p GaAs n-Ga_{1-x}Al_xAs$, na podlagi od n GaAs.Tipično je x 0,3
 
 
 yariv
@@ -866,6 +931,8 @@ davies
 silfvast
 yariv quantum
 nove knjige.
+renk - 150 strani
+
 
 \subsection{Svetlobne diode - LED}
 
