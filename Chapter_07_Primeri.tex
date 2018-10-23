@@ -886,7 +886,7 @@ f_v(E)=\frac{1}{e^{(E-F_v)/k_B T}+1}.
 V termičnem ravnovesju je razlika med kvazi-Fermijevima energijama $F_{p}-F_v$ 
 enaka nič, z naraščajočim vzbujanjem pa se razlika povečuje.
 
-\subsection{Ojačenje v polprevodnikih}
+\subsection*{Ojačenje v polprevodnikih}
 Posvetimo na polprevodnik v vzbujenem stanju s svetlobo s frekvenco $\omega$.
 Vpadna svetloba povzroča prehode med stanji z energijo $E_a$ v valenčnem 
 in med stanji z energijo $E_b$ v prevodnem pasu (slika~\ref{fig:Ek}\,b).
@@ -1030,98 +1030,86 @@ dolgi okoli $0,25~\si{mm}$.
 
 \subsection*{Zgradba laserja}
 Prvi polprevodniški laser (1962) je bil narejen iz GaAs in je oddajal svetlobo 
-pri $850~\si{nm}$. Preprosta shema takega laserja je na sliki~(\ref{fig:GaAsshema}).
-
-
-
-laser je navadno resonator med dvema končnima strenama kristala polprevodnika. 
-Lomni količnik npr gaas 3,5, kar da odbojnost 0,3. in niti ne rabijo posebnega coatinga čez.
-
-GaAs je deloval pri 77K. Če povečaš temperaturo, več elektronov zasede stanje nad Fermijevo
-energijo in optično ojačenje se zmanjša. Naraste prag delovanja, ki je pa tako velik, da ga
-skurimo. Slabost je tudi, da je velikost žarka v s meri veliko večja od debeline aktivnega 
-območja. Posledično veliko svetlobe potuje po p in n območju, kjer se absorbira. 
-Drug problem je hiter drift nosilcev naboja ven iz izpraznjege območja, zato je le del 
-na voljo za stimulirano emisijo.
-
-Heterostrukture.
-
-Bistveno izboljšano delovanje. P in N stran sta narejena iz različne snovi. To odkritje leta 1970
-Alferov in Kroemer, ki sta dobila Nobelovo nagrado leta 2000. Tipično, recimo
-$p-Ga_{1-x}Al_xAs p GaAs n-Ga_{1-x}Al_xAs$, na podlagi od n GaAs.Tipično je x 0,3
-
-
-Polprevodniki absorbirajo svetlobo s frekvenco, ki je enaka ali večja od širine
-reže med valenčnim in prevodnim pasom. 
-Ta se lahko rekombinira z
-izsevanjem fotona, kar ustreza spontanemu ali stimuliranemu prehodu v atomih
-in molekulah. 
-
-
-
+pri $850~\si{nm}$. Shema takega laserja je na sliki~(\ref{fig:pnshema}).
+Vidimo, da polprevodniški laser nima navadnega resonatorja iz dveh odbojnih zrcal,
+ampak se svetloba odbija na gladko odklanih stranskih ploskvah kristala. Zaradi
+velikega lomnega količnika (npr. $n=3,5$ za GaAs) je odbojnost dovolj velika
+za učinkovito delovanje laserja.
  
- Skica preprostega pn laserja. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{130truemm} 
+\input{slike/07_pnshema.pdf_tex}
+\caption{Shema preprostega polprevodniškega laserja (levo) in porazdelitev svetlobne
+intenzitete na stiku $p$-$n$. Tipična širina je $100$--$200~\si{\micro\metre}$, 
+dolžina pa $200$--$500~\si{\micro\metre}$. Svetlobni profil v laserju (desno). Svetloba 
+se ojači v aktivnem območju (vijolična), v območju $p$ in $n$ pa se absorbira.
+}
+\label{fig:pnshema}
+\end{figure}
 
-mobility pf eleltrtons much higher than of holes, electrtons inject into the 
-p region in greater number han holes diffurse into the n region. 
+Opisani polprevodniški laserji imajo kar nekaj slabosti. So zelo močno dopirani, 
+dobro delujejo le močno hlajeni (prvotno pri $77~\si{K}$), poleg tega je žarek 
+v takih laserjih pogosto širši od debeline aktivnega območja. Debeline
+aktivnega območja ne moremo nadzorovano spreminjati, saj je odvisna od difuzije in rekombinacije. 
+Tipično znaša $\sim 1~\si{\micro\meter}$, širina žarka pa nekaj mikronov več, zato
+znaten del svetlobe potuje po območju $p$ in $n$, kjer pride do 
+absorpcije in do povečanih izgub ter segrevanja. Tokovi, potrebni za 
+delovanje takega laserja, so visoki ($\sim 1~\si{kA}/\si{cm}^2$), 
+kakovost žarka pa razmeroma slaba. 
+
+Bistveno izboljšano delovanje je v tako imenovanih heterostrukturah, kjer sta območji 
+$p$ in $n$ narejeni iz različnih snovi\footnote{Za iznajdbo heterostruktur sta Zhores I. Alferov 
+in Herbert Kroemer leta 2000 prejela Nobelovo nagrado.}. Najpomembnejša primera heterostrukture
+sta stika $n$-Ga$_{1-x}$Al$_x$As--$p$-GaAs--$p$-Ga$_{1-x}$Al$_x$As in 
+Ga$_{1-x}$In$_{x}$As$_{1-y}$P$_y$. Prvi deluje v območju od $750~\si{nm}$ do $880~\si{nm}$, 
+odvisno od $x$ in koncentracije primesi, drugi pa med $1,1~\si{\micro\metre}$ in 
+$1,6~\si{\micro\metre}$ in je zato posebno pomemben za optične
+komunikacije, ki največkrat delujejo pri $1,3~\si{\micro\meter}$ in $1,55~\si{\micro\meter}$. 
+Prvi primer si oglejmo podrobneje.
 
 
-Tedaj dobimo položaj, ki ga
-kaže slika \ref{s6.10}. Naj bo $N_p$ gostota elektronov v prevodnem pasu, $I
-$ električni tok skozi spoj, $\tau$ pa čas za rekombinacijo elektrona in
-vrzeli. Velja 
-\begin{equation}  \label{6.2}
-\frac{N_p}{\tau}=\frac{I}{e V}\;,
-\end{equation}
-kjer je V volumen, v katerem se elektroni nahajajo.
+\begin{remark}
+Poglaviten parameter pri izdelavi heterostruktur je  najti snovi, ki lahko rastejo skupaj.
+Take plastne strukture naredijo z epitaksialno rastjo. Pri tem je pomembno, da so medatomske
+razdalje različnih materialov enaki, sicer pride do defektov in slabšega delovanja. 
+GaAs in AlAs imata enako strukturo in praktično enako medatomsko razdaljo, zato 
+lahko brez škode na strukturi atome galija zamenjamo z atomi aluminija. Tipične 
+vrednosti $x$ v Ga$_{1-x}$Al$_x$As so $0,3$. Zaradi dodatka aluminija se spremeni energijska
+reža ($\approx 1,42 + 1,3x~\si{eV}$) in lomni količnik zlitine ($\approx 3,5-0,71x$). S 
+spreminjanjem koncentracije aluminija lahko toraj zvezno spreminjamo širino 
+energijske reže in lomni količnik snovi. 
+\end{remark}
+
+Heterostruktura ima dve poglavitni prednosti. Zlitina z aluminijem ima malenkost večjo 
+energijsko režo od čistega GaAs in mejni plasti ustvarita potencialno bariero, 
+ki preprečuje difuzijo nosilcev naboja iz aktivne plasti. Tako ostane koncentracija 
+elektronov v prevodnem pasu in vrzeli v valenčnem pasu že pri razmeroma majhnih tokovih
+velika in svetloba se ojačuje. Druga prednost je večji lomni količnik zlitine, 
+zaradi katerega ostane svetloba ujeta v aktivni plasti, podobno kot v valovnem 
+vodniku. Ker manjši del svetlobe potuje izven aktivnega območja, so manjše tudi izgube, 
+kar vodi do nižjih potrebnih tokov in zmanjšanja gretja.  
 
 
 
-yariv
-irena
-pollock
-davies
-silfvast
-yariv quantum
-nove knjige.
-renk - 150 strani
-raider
-undergraduate
+
+Aktivna plast je 0,3 mikrona. Elektroni in vrzeli so vpeljani v to plast iz n- in p-
+regij. Zlitina GaAlAs ima večjo energijsko režo of GaAs, koliko, je odvisno od x.
+To ustvari potencialno bariero, ki preprečuje difuzijo nosilcev naboja iz GaAs.
+Enako pomembno je, da je lomni količnik GaAlAs manjši, približno -0,4*x. Zato 
+se dobi valovodno obnašanje in omejitev svetlobe. Confinement zmanjša prag delovanja in izgube.
+Pri sobni temperaturi nizek prag (100x nižjI), večje izgube in močnejše ojačenje.
+
+strtuktura pgaas - pgaal - gaas - ngaal - ngaas. debelina 0,3 mikrone. 
 
 
-\subsection{Svetlobne diode - LED}
+izhodna moč narašča linearno s tokom skozi stik. 
 
-Najpomembnejši polvodniši laserji so osnovani na na sistemu GaAs z Ga$%
-_{1-x}$Al$_{x}$As in na sistemu Ga$_{1- x}$In$_{x}$As$_{1-y}$P$_y$. Prvi
-delujejo od 750 nm do 880 nm, odvisno od $x$ in koncentracije primesi, drugi
-pa med 1,1~$\mu$m in 1,6~$\mu$m in so posebno pomembni za optične
-komunikacije, ki najve"krat delujejo pri 1,3~$\mu$m in 1,55~$\mu$m. Poglejmo
-si delovanje galij-arsenidnega laserja nekoliko pobliže.
-
-Galij-arsenidni laser je narejen iz plasti GaAs in Ga$_{1- x}$Al$_x$As z
-ustreznimi primesmi, kot kaže slika \ref{s6.13}. Take plastne strukture je
-naredijo z epitaksialno rastjo. Pri tem je pomembno, da so medatomske
-razdalje plasti čim bolj enake, da na meji dveh plasti ni napak. Ga$_{1-x}$%
-Al$_x$As ima energijsko špranjo med vvalenčnim in prevodnim pasom nekoliko
-večjo kot čisti GaAs, poleg tega ima tudi nekoliko večji lomni količni.
 Obe lastnosti sta pomembni za delovanje laserja. Aktivna plast je tanka,
 okoli 0,2~$\mu$m debela plast čistega GaAs. Potek energije pasov preko
 aktivne plasti z napetostjo v prevodni smeri kaže slika \ref{s6.14}.
 Elektroni tečejo iz n-tipa Ga$_{1-x}$Al$_x$As v prevodni pas aktivne plasti
-GaAs, vrzeli pa iz p Ga$_{1-x}$Al$_x$As v valenčni pas. Zaradi manjše
-energijske špranje so tako elektroni kot vrzeli ujeti, da ne morejo
-difundirati iz aktivne plasti in je zato koncentracija elektronov v
-prevodnem pasu in vrzeli v valenčnem že pri razmeroma majhnih tokovih
-lahko velika in je izpolnjen pogoj za ojačevanje svetlobe.
-
-Zaradi manjšega lomnega količnika GaAs od Ga$_{1- x}$Al$_x$As je laserska
-svetloba ujeta v aktivni plasti, podobno kot v optičnih vlaknih, kot kaže
-slika \ref{s6.15}. To dodatno zmanjšuje izgube, ker preprečuje absorpcijo
-v področju izven aktivne plasti, kjer ni izpolnjen pogoj za ojačevanje.
-
-Resonatorska zrcala so navadno kar gladko odklane stranske ploskve
-polvodniškega kristala, ki imajo zaradi velikega lomnega količnika ($n=3,6$%
-) dovolj veliko reflektivnost za učinkovito delovanje laserja.
+GaAs, vrzeli pa iz p Ga$_{1-x}$Al$_x$As v valenčni pas. 
 
 Pri strukturi, ki jo kaže slika \ref{s6.13}, je aktivna plast v prečni
 smeri neomejena, zato lahko hkrati sveti mnogo prečnih nihanj, zaradi
@@ -1147,3 +1135,31 @@ sevanjem v aktivni plasti, je izkoristek GaAs laserjev velik, tudi preko 30
 10~mW. Zaradi velike gibljivosti elektronov in vrzeli v GaAs je mogoče tok
 in s tem izhodno svetlobno moč tudi zelo hitro modulirati, do nekaj GHz,
 kar je pomembno za uporabo v optičnih komunikacijah.
+
+
+
+
+mobility pf eleltrtons much higher than of holes, electrtons inject into the 
+p region in greater number han holes diffurse into the n region. 
+
+Tedaj dobimo položaj, ki ga
+kaže slika \ref{s6.10}. Naj bo $N_p$ gostota elektronov v prevodnem pasu, $I
+$ električni tok skozi spoj, $\tau$ pa čas za rekombinacijo elektrona in
+vrzeli. Velja 
+\begin{equation}  \label{6.2}
+\frac{N_p}{\tau}=\frac{I}{e V}\;,
+\end{equation}
+kjer je V volumen, v katerem se elektroni nahajajo.
+
+yariv
+irena
+pollock
+davies
+silfvast
+yariv quantum
+nove knjige.
+renk - 150 strani
+raider
+undergraduate
+
+\subsection{Svetlobne diode - LED}
