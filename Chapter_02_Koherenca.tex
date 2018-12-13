@@ -88,8 +88,8 @@ trkov, razširitev, povezano z Dopplerjevim pojavom, pa zanemarimo.
 Celotna izsevana svetloba je vsota delnih valov, ki izhajajo iz posameznih
 atomov in so med seboj neodvisni. Vsak delni val ohranja med trkoma,
 to je v intervalu $t_{c}$, konstantno fazo. Valovni paket dolžine 
-$t_{c}$ mora tako vsebovati frekvence v pasu $\Delta\omega = 2 \pi \Delta \nu$,
-za katerega velja $t_{c}\Delta\omega\sim1$. Koherenčni čas je torej
+$t_{c}$ mora tako vsebovati frekvence v pasu $\Delta \nu$,
+za katerega velja $t_{c}\Delta\nu\sim1$. Koherenčni čas je torej
 kar reda velikosti obratne vrednosti spektralne širine svetlobe. Povsem
 monokromatsko valovanje bil imelo neskončen koherenčni čas in bi bilo
 popolno koherentno.
@@ -259,8 +259,8 @@ na ustrezne filtre in ji s tem zmanjšati spektralno območje.
 Ožje spektralno območje ima na primer živosrebrna svetilka, zato je koherenčna
 dolžina svetlobe za izbrano spektralno črto do okoli $50~\si{\centi\metre}$.
 Koherenčna dolžina laserjev z ozko spektralno črto je tipično okoli
-$100~\si{\metre}$, v nekaterih vlakenskih laserjih\index{Laser!vlakenski} s širino spektralne
-črte nekaj $\si{\kilo\hertz}$ pa koherenčna dolžina presega $100~\si{\kilo\metre}$.
+$100~\si{\metre}$, v nekaterih vlakenskih laserjih\index{Laser!vlakenski} 
+pa koherenčna dolžina presega $100~\si{\kilo\metre}$.
 
 \section{Zveza med avtokorelacijsko funkcijo in spektrom}
 
@@ -270,23 +270,20 @@ je v povprečju stacionarno. To pomeni, da se v času meritve povprečna intenzi
 ne spreminja. Vzamemo vzorec valovanja, ki traja čas $T$, in ga razvijemo 
 v Fourierevo vrsto
 \begin{equation}
-E(t)=\sum_{n}A_{n}e^{-in\Delta\omega t},\mbox{\hskip1cm}\Delta\omega=\frac{2\pi}{T}.
+E(t)=\sum_{n}A_{n}(\omega)e^{-in\Delta\omega t},\mbox{\hskip1cm}\Delta\omega=\frac{2\pi}{T}.
 \end{equation}
-Amplitude $A_{n}$ predstavljajo delež polja pri frekvenci $\omega=n\Delta\omega$, 
+Amplitude $A_{n}(\omega)$ so slučajne spremenljivke, ki predstavljajo delež polja pri 
+krožni frekvenci $\omega=n\Delta\omega$, 
 čas $T$ pa označuje čas opazovanja in mora biti bistveno daljši od $t_{c}$. 
-Za končne vrednosti $T$ so amplitude $A_n$ slučajne spremenljivke. Povprečje  
-izračunamo kot limito $T\rightarrow\infty$, da rezultat ni odvisen od konkretnega
-vzorca svetlobnega polja. Zapišemo amplitude $A_n$
+Zapišimo amplitude $A_n$
 \begin{equation}
-A_{n}=\frac{1}{T}\int_{-T/2}^{T/2}E(t)\, e^{in\Delta\omega t}\, dt.\label{eq:amplituda-An}
+A_{n}(\omega)=\frac{1}{T}\int_{-T/2}^{T/2}E(t)\, e^{i\omega t}\, dt.\label{eq:amplituda-An}
 \end{equation}
-Kvadrat $|A_{n}|^{2}$ je sorazmeren gostoti svetlobnega toka pri frekvenci
-$\omega=n\Delta\omega$. 
-Zdaj lahko vpeljemo \index{Spekter}spekter $S(\omega)$, to
-je gostoto svetlobnega toka pri frekvencah med $\omega$ in $\omega+\Delta\omega$.
-Izračunamo ga tako, da intenziteto svetlobe pri $\omega$ delimo s 
-frekvenčnim intervalom $\Delta\omega$ in ga zapišemo 
-kot\footnote{Gostota svetlobnega toka\index{Gostota energijskega toka} 
+ Vemo, da je kvadrat $|A_{n}(\omega)|^{2}$ sorazmeren gostoti 
+svetlobnega toka pri krožni frekvenci $\omega$. Vpeljemo 
+\index{Spekter}spekter $S(\omega)$, ki podaja intenziteto svetlobe pri $\omega$,
+deljeno z intervalom $\Delta\omega$\footnote{Gostota 
+svetlobnega toka\index{Gostota energijskega toka} 
 je $j = \varepsilon \varepsilon_0 c |E|^2/2$
 z enotami W/m$^2$. Zaradi poenostavitve bomo namesto $j$ pogosto pisali intenziteto 
 $I = |E|^2$, konstantne člene pa dodali le, če bomo rabili točno numerično vrednost.} 
@@ -294,16 +291,18 @@ $I = |E|^2$, konstantne člene pa dodali le, če bomo rabili točno numerično v
 S(\omega)=\frac{|A_{n}|^{2}}{\Delta\omega}=\frac{T}{2\pi}|A_{n}|^{2}.
 \end{equation}
 Vstavimo še amplitudo $A_{n}$ (enačba \ref{eq:amplituda-An}) in dobimo 
-\begin{align}
-S(\omega) & =\frac{1}{2\pi T}\int\int_{-T/2}^{T/2}E(t)E^{*}(t^{\prime})\, 
-e^{-i\omega(t^{\prime}-t)}\, dt\, dt^{\prime}\\
- & =\frac{1}{2\pi T}\int_{-T/2}^{T/2}e^{-i\omega\tau}d\tau\int_{-T/2}^{T/2}E(t)E^{*}(t+\tau)\, dt,
+\begin{equation}
+S(\omega) =\frac{1}{2\pi T}\int\int_{-T/2}^{T/2}E(t)E^{*}(t^{\prime})\, 
+e^{-i\omega(t^{\prime}-t)}\, dt\, dt^{\prime}.
+\end{equation}
+Uvedemo novo spremenljivko $\tau=t^{\prime}-t$ in zapišemo
+\begin{equation}
+S(\omega)=\frac{1}{2\pi T}\int_{-\infty}^{\infty}e^{-i\omega\tau}d\tau\int_{-T/2}^{T/2}E(t)E^{*}(t+\tau)\, dt.
 \label{eq:spekter}
-\end{align}
-kjer smo uvedli novo spremenljivko $\tau=t^{\prime}-t$. Integral
-po $t$ da ravno korelacijsko funkcijo $G(\tau)$. Ker je $T\gg t_{c}$,
-je korelacijska funkcija na mejah integracije po $\tau$ nič, zato
-lahko meje raztegnemo do neskončnosti. S tem dobimo iskano zvezo, tako imenovani
+\end{equation}
+Opazimo, da je integral po $t$ ravno enak korelacijski funkciji $G(\tau)$. Ker je $T\gg t_{c}$,
+je korelacijska funkcija na mejah integracije po enaka $\tau$ nič, zato
+smo meje integracije lahko raztegnili do neskončnosti. Zveza, ki smo jo dobili, je 
 \index{Wiener-Hinčinov teorem} 
 Wiener-Hinčinov teorem\footnote{Ameriški matematik Norbert Wiener, 1894--1964, in 
 ruski matematik Aleksander Jakovljevič Hinčin, 1894--1959.}
@@ -313,24 +312,36 @@ d\omega.
 }
 Spekter svetlobe je torej Fouriereva transformiranka avtokorelacijske
 funkcije svetlobnega polja. 
-
-Vpeljemo lahko tudi normirani spekter 
-\beq
-s(\omega)=\frac{S(\omega)}{\int_{-\infty}^{\infty}S(\omega) d\omega} =\frac{S(\omega)}{G(0)},
-\eeq
-za katerega seveda velja 
-\beq
-\int_{-\infty}^{\infty}s(\omega)=1. 
-\eeq
-Sledi
+Spekter, ki smo ga zapisali z enačbo~(\ref{eq:spekter}), je zapisan za izbran vzorec valovanja, 
+ki traja čas $T$, in je tudi slučajna spremenljivka. Povprečen spekter dobimo tako, da naredimo
+limito $T \rightarrow \infty$. 
 \begin{equation}
-s(\omega)=\frac{1}{2\pi}\int_{-\infty}^{\infty}g(\tau)e^{-i\omega\tau}\, d\tau\;\Longleftrightarrow\; 
-g(\tau)=\int_{-\infty}^{\infty}s(\omega)e^{i\omega\tau}\, d\omega.
-\label{eq:spekter-zveza-norm}
+\langle S (\omega) \rangle = \lim_{T\to \infty}S(\omega).
 \end{equation}
+\begin{remark}
+Podobno lahko vpeljemo tudi spekter na frekvenčni interval 
+\beq
+S(\nu)=\int_{-\infty}^{\infty}G(\tau)e^{-i\,2 \pi \nu\tau}\, d\tau\;\Longleftrightarrow\; G(\tau)=\int_{-\infty}^{\infty}S(\nu)e^{i\,2\pi\nu \tau}\, d\nu.
+\eeq
+\end{remark}
+Za normirani spekter 
+\beq
+s(\omega)=\frac{S(\omega)}{\int_{-\infty}^{\infty}S(\omega) d\omega} =\frac{S(\omega)}{G(0)}
+\eeq
+seveda velja 
+\beq
+\int_{-\infty}^{\infty}s(\omega) d\omega=1. 
+\eeq
 
 Iz Wiener-Hinčinovega teorema (enačba~\ref{eq:spekter-zveza}) neposredno sledi, da je 
 koherenca povezana s spektrom in koherenčni čas $t_{c}$ s spektralno širino svetlobe.
+
+
+
+
+
+
+
 \index{Spektralna širina}Spektralno širino vpeljemo kot
 \begin{equation}
 \gamma=\frac{1}{2\pi}\frac{\left|\int_{-\infty}^{\infty}S(\omega)\, 
