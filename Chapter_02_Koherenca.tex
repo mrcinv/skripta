@@ -280,7 +280,7 @@ Zapišimo amplitude $A_n$
 A_{n}(\omega)=\frac{1}{T}\int_{-T/2}^{T/2}E(t)\, e^{i\omega t}\, dt.\label{eq:amplituda-An}
 \end{equation}
  Vemo, da je kvadrat $|A_{n}(\omega)|^{2}$ sorazmeren gostoti 
-svetlobnega toka pri krožni frekvenci $\omega$. Vpeljemo 
+svetlobnega toka pri krožni frekvenci $\omega$. Potem lahko vpeljemo 
 \index{Spekter}spekter $S(\omega)$, ki podaja intenziteto svetlobe pri $\omega$,
 deljeno z intervalom $\Delta\omega$\footnote{Gostota 
 svetlobnega toka\index{Gostota energijskega toka} 
@@ -288,7 +288,7 @@ je $j = \varepsilon \varepsilon_0 c |E|^2/2$
 z enotami W/m$^2$. Zaradi poenostavitve bomo namesto $j$ pogosto pisali intenziteto 
 $I = |E|^2$, konstantne člene pa dodali le, če bomo rabili točno numerično vrednost.} 
 \begin{equation}
-S(\omega)=\frac{|A_{n}|^{2}}{\Delta\omega}=\frac{T}{2\pi}|A_{n}|^{2}.
+S(\omega)=\frac{|A_{n}(\omega)|^{2}}{\Delta\omega}=\frac{T}{2\pi}|A_{n}(\omega)|^{2}.
 \end{equation}
 Vstavimo še amplitudo $A_{n}$ (enačba \ref{eq:amplituda-An}) in dobimo 
 \begin{equation}
@@ -302,69 +302,48 @@ S(\omega)=\frac{1}{2\pi T}\int_{-\infty}^{\infty}e^{-i\omega\tau}d\tau\int_{-T/2
 \end{equation}
 Opazimo, da je integral po $t$ ravno enak korelacijski funkciji $G(\tau)$. Ker je $T\gg t_{c}$,
 je korelacijska funkcija na mejah integracije po enaka $\tau$ nič, zato
-smo meje integracije lahko raztegnili do neskončnosti. Zveza, ki smo jo dobili, je 
-\index{Wiener-Hinčinov teorem} 
-Wiener-Hinčinov teorem\footnote{Ameriški matematik Norbert Wiener, 1894--1964, in 
+smo meje integracije po $\tau$ lahko raztegnili do neskončnosti. Zveza, ki smo jo dobili, je 
+\index{Wiener-Hinčinov izrek} 
+Wiener-Hinčinov izrek\footnote{Ameriški matematik Norbert Wiener, 1894--1964, in 
 ruski matematik Aleksander Jakovljevič Hinčin, 1894--1959.}
 \boxeq{eq:spekter-zveza}{
 S(\omega)=\frac{1}{2\pi}\int_{-\infty}^{\infty}G(\tau)e^{-i\omega\tau}\, d\tau\;\Longleftrightarrow\; G(\tau)=\int_{-\infty}^{\infty}S(\omega)e^{i\omega\tau}\, 
 d\omega.
 }
 Spekter svetlobe je torej Fouriereva transformiranka avtokorelacijske
-funkcije svetlobnega polja. 
-Spekter, ki smo ga zapisali z enačbo~(\ref{eq:spekter}), je zapisan za izbran vzorec valovanja, 
+funkcije svetlobnega polja. Pri tem ne pozabimo, da je spekter, ki smo ga zapisali z enačbo~(\ref{eq:spekter}), zapisan za izbran vzorec valovanja, 
 ki traja čas $T$, in je tudi slučajna spremenljivka. Povprečen spekter dobimo tako, da naredimo
 limito $T \rightarrow \infty$. 
 \begin{equation}
 \langle S (\omega) \rangle = \lim_{T\to \infty}S(\omega).
 \end{equation}
+\vglue-1truecm
 \begin{remark}
-Podobno lahko vpeljemo tudi spekter na frekvenčni interval 
+Zaradi priročnosti smo zapisali spekter in Wiener-Hinčinov izrek s krožno frekvenco. Podobno lahko vpeljemo tudi spekter na frekvenčni interval in Wiener-Hinčinov izrek se prepiše v
 \beq
 S(\nu)=\int_{-\infty}^{\infty}G(\tau)e^{-i\,2 \pi \nu\tau}\, d\tau\;\Longleftrightarrow\; G(\tau)=\int_{-\infty}^{\infty}S(\nu)e^{i\,2\pi\nu \tau}\, d\nu.
 \eeq
 \end{remark}
-Za normirani spekter 
-\beq
-s(\omega)=\frac{S(\omega)}{\int_{-\infty}^{\infty}S(\omega) d\omega} =\frac{S(\omega)}{G(0)}
-\eeq
-seveda velja 
-\beq
-\int_{-\infty}^{\infty}s(\omega) d\omega=1. 
-\eeq
-
-Iz Wiener-Hinčinovega teorema (enačba~\ref{eq:spekter-zveza}) neposredno sledi, da je 
-koherenca povezana s spektrom in koherenčni čas $t_{c}$ s spektralno širino svetlobe.
-
-
-
-
-
-
-
-\index{Spektralna širina}Spektralno širino vpeljemo kot
-\begin{equation}
-\gamma=\frac{1}{2\pi}\frac{\left|\int_{-\infty}^{\infty}S(\omega)\, 
-d\omega\right|^{2}}{\int_{-\infty}^{\infty}\left|S(\omega)\right|^{2}\, d\omega}
-=\frac{1}{2\pi\int_{-\infty}^{\infty}\left|s(\omega)\right|^{2}\, d\omega}.
-\label{eq:spektralna-sirina}
-\end{equation}
-Iz gornje definicije za spektralno širino in definicije za
-koherenčni čas (enačba \ref{eq:koherencni-cas}) sledi, da je spektralna
-širina ne glede na obliko spektra obratno sorazmerna s koherenčnim časom
-(glej nalogo~\ref{naloga:gammatc})\index{Koherenčni čas}
+Iz Wiener-Hinčinovega izreka (enačba~\ref{eq:spekter-zveza}) neposredno sledi, da je 
+koherenca povezana s spektrom. Koherenčni čas $t_{c}$ je tako povezan s spektralno 
+širino svetlobe $\gamma$, za katero velja (glej nalogo~\ref{naloga:gammatc})\index{Koherenčni čas}
 \boxeq{eq:spektralna-sirina-zveza}{
 \gamma=\frac{1}{t_{c}}.
 }
-
 \begin{definition}
 \label{naloga:gammatc}
-Iz definicij za spektralno
-širino $\gamma$ (enačba \ref{eq:spektralna-sirina}) in
-koherenčni čas $t_{c}$ (enačba \ref{eq:koherencni-cas})
+Formalno lahko vpeljemo spektralno širino kot 
+\begin{equation}
+\gamma=\frac{1}{2\pi\int_{-\infty}^{\infty}\left|s(\omega)\right|^{2}\, d\omega}; \quad
+\mathrm{kjer~je} \quad
+s(\omega)=\frac{S(\omega)}{\int_{-\infty}^{\infty}S(\omega) d\omega} =\frac{S(\omega)}{G(0)}
+\label{eq:spektralna-sirina}
+\end{equation}
+normirani spekter. 
+Z uporabo enačbe za koherenčni čas $t_{c}$ (enačba \ref{eq:koherencni-cas})
 pokaži, da je spektralna širina obratno sorazmerna s koherenčnim
 časom (enačba \ref{eq:spektralna-sirina-zveza}) ne glede na
-obliko spektra. Namig: Uporabi Parsevalov teorem, ki pravi:
+obliko spektra. Namig: Uporabi Parsevalov izrek, ki pravi:
 \begin{equation}
 \int_{-\infty}^{\infty}\left|f(t)\right|^{2}\, dt={2\pi}
 \int_{-\infty}^{\infty}\left|F(\omega)\right|^{2}\, d\omega,
@@ -376,22 +355,23 @@ F(\omega)=\frac{1}{2\pi} \int_{-\infty}^{\infty}f(t)e^{-i\omega\tau}\, d\tau
 Fouriereva transformiranka funkcije $f(t)$.
 \end{definition}
 
-Za zgled vzemimo konkreten primer, ki 
-je predstavljen na sliki~(\ref{fig:amplituda-intenziteta}). 
-Na sliki~(\ref{fig:SpekterAc}) sta prikazana pripadajoč 
-spekter in ustrezna avtokorelacijska funkcija. Ker so trki med atomi naključni,
-je avtokorelacijska funkcija eksponentno pojemajoča
+Za zgled Wiener-Hinčinovega izreka vzemimo primer, ki je predstavljen na 
+sliki~(\ref{fig:amplituda-intenziteta}). 
+Ker so trki med atomi naključni, je avtokorelacijska funkcija eksponentno pojemajoča
 \beq
-G(t)=G_{0} e^{-i\omega_{0}t} e^{-t/t_{c}},
+g(\tau)=e^{i\omega_{0}\tau} e^{-\tau/t_{c}},
 \label{eq:g-primer}
 \eeq
 spekter take svetlobe pa je Lorentzove oblike\index{Spekter!Lorentzov} (glej nalogo~\ref{naloga-spekter})
 \begin{equation}
- S(\omega)=G_{0}\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}}.
+s(\omega)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}},
 \label{eq:spekter-primer}
 \end{equation}
-Pri tem je $\gamma=1/t_{c}$ spektralna širina in $G_{0}$ do konstante natančno intenziteta
-svetlobe. Točke na grafih predstavljajo spekter in izračunano avtokorelacijsko funkcijo 
+pri čemer je $\gamma=1/t_{c}$ spektralna širina. 
+Normirani spekter $s(\omega)$ in ustrezna avtokorelacijska funkcija $g(\tau)$ 
+sta prikazana na sliki~(\ref{fig:SpekterAc}). 
+Točke na grafih 
+predstavljajo spekter in izračunano avtokorelacijsko funkcijo 
 za integracijski čas $T=100\,t_{c}$. Za primerjavo sta z rdečo 
 krivuljo prikazana tudi pričakovan spekter (enačba~\ref{eq:spekter-primer}) in avtokorelacijska
 funkcija (enačba~\ref{eq:g-primer}). Zaradi končnega
@@ -423,17 +403,18 @@ kjer je $\gamma=1/t_{c}$ spektralna širina.
 
 Spektralne črte atomov so pogosto Lorentzove oblike, kar je posledica
 eksponentnega razpada stanj (naravna širina). Dodatno se spektralne
-črte razširijo zaradi trkov med atomi, vendar tudi to vodi do Lorentzove
+črte razširijo zaradi trkov med atomi, vendar tudi to vodi do približno Lorentzove
 oblike spektra. V plinih je pogosto prevladujoča razširitev črt
-zaradi Dopplerjevega pojava (glej razdelek~\ref{Razsiritev}). Spekter Dopplerjevo razširjene svetlobe
-je, kot bomo videli v nadaljevanju, Gaussove oblike. V tem primeru iz enačbe~(\ref{eq:spekter-zveza})
+zaradi Dopplerjevega pojava (glej razdelek~\ref{Razsiritev}). 
+Spekter Dopplerjevo razširjene svetlobe je, kot bomo videli v 
+nadaljevanju, Gaussove oblike. V tem primeru iz enačbe~(\ref{eq:spekter-zveza})
 sledi, da je tudi avtokorelacijska funkcija Gaussove oblike.
-\vskip1truecm
+\vglue1truecm
 
 \begin{definition}\label{naloga-Planck}
 Numerično pokaži, da je koherenčni čas svetlobe, ki jo oddaja črno telo s 
 temperaturo $T$, približno enak $t_{c}\approx{\hbar}/{k_{B}T}$.\index{Sevanje črnega telesa}
-Normiran spekter sevanja črnega telesa zapišemo 
+Normirani spekter sevanja črnega telesa zapišemo 
 kot \index{Spekter!Planckov}Planckov spekter 
 \begin{equation}
 s(\omega)=\frac{15}{\pi^{4}} \frac{\hbar^4\omega^3}{(kT)^4}/\left(e^{\hbar\omega/kT}-1\right)
@@ -454,7 +435,7 @@ precej uporablja, posebej v infrardečem področju.\index{Infrardeče valovanje}
 \section{Prostorska koherenca}
 \label{Prostorska-koherenca}
 \index{Koherenca!prostorska}
-Vrnimo se k Youngovem poskusu\index{Youngov poskus} in obravnavi interference
+Vrnimo se k Youngovemu poskusu\index{Youngov poskus} in obravnavi interference
 \index{Interferenca} na dveh ozkih režah. 
 Osvetljujmo zdaj reži s svetilom končnih razsežnosti. Svetilo naj sveti skoraj enobarvno
 svetlobo in naj bo na simetrali med režama, kot kaže slika~(\ref{fig:shema-interferenca}).
@@ -465,8 +446,8 @@ interferenčne proge. Žarka, ki izhajata iz roba izvora (prekinjena črta),
 imata do rež različno dolgo pot, zato nastane med njima fazna razlika že do ravnine A, 
 ki se prišteje fazni razliki do ravnine B. Interferenčne proge, ki jih tvorita 
 robna žarka, so premaknjene glede na proge centralnih žarkov. Ker so žarki z roba
-pri našem svetilu statistično neodvisni od žarkov iz sredine, z njimi
-ne interferirajo. Celoten interferenčni vzorec je zato kar vsota interferenčnih
+statistično neodvisni od žarkov iz sredine, z njimi
+ne interferirajo. Celotni interferenčni vzorec je zato kar vsota interferenčnih
 vzorcev žarkov iz različnih delov svetila. Če je razlika poti za žarke
 iz različnih delov velikosti valovne dolžine $\lambda$, se celotna
 interferenčna slika na zaslonu B izpovpreči.
@@ -479,13 +460,15 @@ interferenčna slika na zaslonu B izpovpreči.
 \label{fig:shema-interferenca}
 \end{figure}
 
-Za razdaljo med režama $d$, pri kateri interferenčne proge
-izginejo, velja približno 
+Razdaljo med režama $d_c$, pri kateri interferenčne proge
+izginejo, imenujemo\index{Koherenčna razdalja} prečna koherenčna razdalja. 
+Zanjo velja približno 
 \begin{equation}
-\delta s = d\sin\varphi\approx d\frac{R}{z}\sim\lambda\;\Rightarrow\;
-d_{c}\sim\frac{z\lambda}{R},\label{eq:prost_koh}
+\delta s = d_c\sin\varphi\approx d_c\frac{R}{z}\sim\lambda\;\Rightarrow\;
+d_{c}\sim\frac{z\lambda}{R}.
+\label{eq:prost_koh}
 \end{equation}
-kjer $d_{c}$ imenujmo prečna koherenčna razdalja\index{Koherenčna razdalja}. Pogosto je v uporabi
+Pogosto je v uporabi
 tudi pojem \index{Koherenčna ploskev}koherenčna ploskev, to je območje, 
 v katerem je fazna razlika v povprečju konstantna. Velikost te ploskve je približno $d_{c}^{2}$.
 V območju koherenčne ploskve so tudi valovne fronte približno gladke.
@@ -499,7 +482,7 @@ električne poljske jakosti valovanj, ki izhajata iz obeh odprtin
 2\Re K_{1}K_{2}^{*}\langle E_{1}(0)E_{2}^{*}(\tau)\rangle.
 \end{align}
 Pri tem je je $\tau=d\sin\vartheta/c$ zakasnitev valovanja iz druge odprtine
-glede na valovanje iz prve. Faktorja $K_{1}$ in $K_{2}$ sta določena
+glede na valovanje iz prve, faktorja $K_{1}$ in $K_{2}$ pa sta določena
 z uklonom na posameznih odprtinah.
 Interferenčna slika je vsebovana v podobnem členu kot pri Michelsonovem
 interferometru, le da nastopa v tem primeru namesto avtokorelacijske funkcije
@@ -507,7 +490,7 @@ navzkrižna korelacijska funkcija polj $E_{1}$ in $E_{2}$ iz obeh
 odprtin.\index{Navzkrižna korelacijska funkcija} 
 
 Kako je interferenčni člen povezan z lastnostmi svetila, brez težav
-doženemo v izbranem primeru skoraj enobarvne svetlobe z osrednjo frekvenco
+doženemo v izbranem primeru skoraj enobarvne svetlobe z osrednjo krožno frekvenco
 $\omega$. Tedaj lahko za zakasnitve $\tau$, ki so krajše
 od koherenčnega časa, zapišemo 
 \begin{equation}
@@ -518,8 +501,8 @@ E_{2}(\tau)=E_{2}(0)\, e^{-i\omega\tau}
 \langle E_{1}(0)E_{2}^{*}(\tau)\rangle=\langle E_{1}(0)E_{2}^{*}(0)\rangle 
 e^{i\omega\tau}=J(P_{1},P_{2})\, e^{i\omega\tau}.
 \end{equation}
-Zadnji člen $\Re e^{i\omega\tau}= \cos(\omega \tau) = \cos(kd\sin\vartheta)$ da interferenčne
-proge za koherentno osvetlitev zaslona $A$, povprečje produkta polj
+Faktor $\Re e^{i\omega\tau}= \cos(\omega \tau) = \cos(kd\sin\vartheta)$ da interferenčne
+proge za koherentno osvetlitev zaslona, povprečje produkta polj
 v odprtinah ob istem času $J(P_{1},P_{2})=\langle E(P_{1},0)E^{*}(P_{2},0)\rangle$
 pa meri stopnjo prečne koherence med obema odprtinama. Od velikosti
 tega člena je odvisen kontrast interferenčnih prog. Izračunajmo ga.
@@ -530,12 +513,12 @@ E(P_{j})=-\frac{i}{\lambda}\int E(\xi,\eta)\frac{e^{iks_{j}}}{s_{j}}\, d\xi\, d\
 \end{equation}
 Pri tem je $s_{j}$ razdalja med točko $(\xi,\eta)$ na izvoru in točko
 $P_{j}(x_{j},y_{j})$ na reži v ravnini A (glej sliko \ref{fig:shema-interferenca}).
-Faktor pred integralom $-i/\lambda$ smo dobili iz uklonske teorije (enačba~\ref{eq:Fresnel-Kirchoffov-integral}).
+Faktor pred integralom $-i/\lambda$ izhaja iz uklonske teorije (enačba~\ref{eq:Fresnel-Kirchoffov-integral}).
 Tako je 
 \begin{equation}
 J(P_{1},P_{2})=\frac{1}{\lambda^{2}}\int\int\langle E(\xi,\eta)E^{*}(\xi^{\prime},\eta^{\prime})\rangle\frac{e^{ik(s_{1}-s_{2}^{\prime})}}{s_{1}s_{2}^{\prime}}\, d\xi\, d\eta\, d\xi^{\prime}d\eta^{\prime}.\label{eq:field-correlation}
 \end{equation}
-V našem svetilu sevajo atomi neodvisno. Valovanji iz dveh točk svetila,
+V izbranem svetilu sevajo atomi neodvisno. Valovanji iz dveh točk svetila,
 ki sta razmaknjeni za več kot $\lambda$, sta neodvisni in povprečje
 njunega produkta je enako nič. Tako približno velja 
 \begin{equation}
@@ -550,7 +533,7 @@ pred integral. Sledi
 \begin{equation}
 J(P_{1},P_{2})=\frac{1}{\pi z^{2}}\int\langle|E(\xi,\eta)|^{2}\rangle e^{ik(s_{1}-s_{2})}\, d\xi\, d\eta.\label{eq:Zernike1}
 \end{equation}
-Dobljeni izraz lahko še nekoliko poenostavimo, če razvijemo $s_{1}$
+Izraz lahko še nekoliko poenostavimo, če razvijemo $s_{1}$
 in $s_{2}$ do drugega reda
 \begin{equation}
 s_{j}=\sqrt{z^{2}+(x_{j}-\xi)^{2}+(y_{j}-\eta)^{2}}\approx z+\frac{(x_{j}-\xi)^{2}+(y_{j}-\eta)^{2}}{2z}.
@@ -558,8 +541,8 @@ s_{j}=\sqrt{z^{2}+(x_{j}-\xi)^{2}+(y_{j}-\eta)^{2}}\approx z+\frac{(x_{j}-\xi)^{
 Pri tem sta $(x_{j},y_{j})$ koordinati točke $P_{j}$. Pišimo 
 še $\langle|E(\xi,\eta)|^{2}\rangle=I(\xi,\eta)$, ki je do konstante natančno
 enak intenziteti valovanja, ter $x_{2}-x_{1}=\Delta x$
-in $y_{2}-y_{1}=\Delta y$. S tem dobimo znani rezultat, tako imenovani \index{van Cittert-Zernikov teorem}
-van Cittert-Zernikov teorem\footnote{Nizozemski fizik Pieter Hendrik van Cittert, 1889--1959, in 
+in $y_{2}-y_{1}=\Delta y$. S tem dobimo znani rezultat, tako imenovani \index{van Cittert-Zernikov izrek}
+van Cittert-Zernikov izrek\footnote{Nizozemski fizik Pieter Hendrik van Cittert, 1889--1959, in 
 nizozemski fizik in nobelovec Frits Zernike, 1888--1966.}
 \boxeq{eq:Zernike2}{
 J(\Delta x,\Delta y)=\frac{e^{-i\phi}}{\pi z^{2}}\int I(\xi,\eta)e^{ik(\Delta 
@@ -571,30 +554,24 @@ Faza
 \phi=\frac{\pi}{\lambda z}[(x_{2}^{2}+y_{2}^{2})-(x_{1}^{2}+y_{1}^{2})]
 \end{equation}
 meri skupni premik interferenčnih prog, do katerega pride, kadar svetilo
-ni na isti osi kot odprtini v zaslonu. Kadar ležijo svetilo in odprtini
-v zaslonu $A$ simetrično na isti osi, je faza $\phi$ enaka nič.
-
-Smiselno je vpeljati še normirano prečno prostorsko korelacijsko
-funkcijo\index{Navzkrižna korelacijska funkcija} 
-\begin{equation}
-j(\Delta x,\Delta y)=\frac{J(\Delta x,\Delta y)}{J(0,0)}=\frac{e^{-i\phi}\int 
-I(\xi,\eta)\exp\left[ik(\Delta x\xi+\Delta y\eta)/z\right]\, d\xi\, d\eta}
-{\int I(\xi,\eta)\, d\xi\, d\eta}.
-\label{eq:Zernike2-norm}
-\end{equation}
+ne leži na isti osi kot odprtini v zaslonu. Kadar ležita odprtini v ravnini $A$ 
+simetrično glede na os svetila, je faza $\phi$ enaka nič.
 
 Dobljeni rezultat si je vredno nekoliko ogledati. Prečno prostorsko
 korelacijsko funkcijo $J(P_{1},P_{2})$, ki določa kontrast interferenčnih
 prog, smo izrazili kot 2-D  Fourierevo transformiranko intenzitete svetlobe
-na samem svetilu (enačba \ref{eq:Zernike2}). Ob tem se spomnimo,
+na samem svetilu (enačba \ref{eq:Zernike2}). 
+\begin{remark}
+Ob tem se spomnimo,
 da velja podobna zveza med električno poljsko jakostjo v osvetljeni odprtini 
 in njeno Fraunhoferjevo uklonsko sliko (enačba~\ref{eq:FraunhoferApprox}), 
 pri čemer so količine, ki nastopajo v obeh zvezah,
-povsem različne. Različna je tudi veljavnost obeh: medtem ko je Fraunhoferjeva
-uklonska formula veljavna le v veliki oddaljenosti, za opis v bližnjem polju
+povsem različne. Različna je tudi veljavnost obeh izrazov: medtem ko je Fraunhoferjeva
+uklonska formula veljavna le v veliki oddaljenosti, za opis uklonske slike v bližnjem polju
 pa je treba uporabiti Fresnelov izraz (enačba~\ref{eq:FresnelApprox}), 
-je rezultat za $J(P_{1},P_{2})$ veljaven v obeh območjih.\index{Fraunhoferjev uklon}
+je rezultat za $J(P_{1},P_{2})$ (enačba~\ref{eq:Zernike2}) veljaven v obeh območjih.\index{Fraunhoferjev uklon}
 \index{Fresnelov uklon}
+\end{remark}
 
 Ker je velikost svetila končna, $J(P_{1},P_{2})$ pri dovolj veliki
 razdalji med točkama $P_{1}$ in $P_{2}$ gotovo pade na nič. Največja
