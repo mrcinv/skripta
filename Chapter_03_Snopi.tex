@@ -20,7 +20,7 @@ ravna in meje snopa niso vzporedne, ampak se snop zaradi uklona širi\index{Uklo
 \label{fig:Uklon-na-rezi}
 \end{figure}
 
-V veliki oddaljenosti od zaslona polje lahko izračunamo s
+V veliki oddaljenosti od zaslona polje izračunamo s
 \index{Fraunhoferjev uklon}Fraunhoferjevo uklonsko teorijo (glej poglavje~\ref{FFuklon}). 
 Vendar za oceno kota širjenja računa niti ne potrebujemo. Velja približno 
 \begin{equation}
@@ -49,7 +49,7 @@ uklonsko sliko v bližnjem polju po Fresnelovi uklonski teoriji.
 \end{definition}
 
 \section{Obosna valovna enačba}
-Obravnavo začnemo z valovno enačbo in monokromatskim valovanjem s frekvenco $\omega$. Ustrezna
+Obravnavo začnemo z valovno enačbo in monokromatskim valovanjem s krožno frekvenco $\omega$. Ustrezna
 Helmholtzeva enačba je \index{Helmholtzeva enačba}(enačba~\ref{eq:Helmholtz})
 \begin{equation}
 \nabla^{2}E+k^{2}E=0,
@@ -63,8 +63,8 @@ omejen snop, ki se širi približno vzdolž osi $z$. Uporabimo nastavek
 E=E_{0}\psi(\mathbf{r},z)e^{ikz},
 \label{eq:ravni-val-nastavek}
 \end{equation}
-kjer je $\mathbf{r}$ krajevni vektor v ravnini $xy$. Glavni del odvisnosti
-od koordinate $z$ smo zapisali v faktorju $e^{ikz}$, tako da lahko
+kjer je $\mathbf{r}$ krajevni vektor v ravnini $xy$, prečni na smer širjenja svetlobe. 
+Glavni del odvisnosti od koordinate $z$ smo zapisali v faktorju $e^{ikz}$, tako da lahko
 privzamemo, da se $\psi$ v smeri $z$ le počasi spreminja. Vstavimo
 gornji nastavek v Helmholtzevo enačbo (enačba~\ref{eq:valovna-enacba-hh})
 in pri tem zanemarimo druge odvode po $z$, saj je zaradi počasnega spreminjanja
@@ -94,16 +94,17 @@ obosne valovne enačbe~(enačba~\ref{eq:obosna-valovna-enacba}), mora veljati
 Ko vstavimo nastavek za $\psi$ v izraz za polje $E$ 
 (enačba~\ref{eq:ravni-val-nastavek}), dobimo ravni val, za katerega velja 
 \begin{equation}
-k_{3}=k-\beta=k-\frac{k_{1}^{2}+k_{2}^{2}}{2k},\label{eq:k3-razvoj}
+k_{3}=k-\beta=k-\frac{k_{1}^{2}+k_{2}^{2}}{2k}.
+\label{eq:k3-razvoj}
 \end{equation}
- pri čemer je $k_{3}$ vzdolžna in $k_{1}$ ter
-$k_{2}$ prečni komponenti valovnega vektorja, $k$ pa valovno število. 
-Za ravni val, ki je rešitev valovne enačbe (enačba~\ref{eq:valovna-enacba-hh})
+Pri tem $k_{3}$ označuje vzdolžno in $k_{1}$ ter $k_{2}$ prečni komponenti valovnega 
+vektorja, $k$ pa je valovno število. 
+Za ravni val, ki je rešitev Helmholtzeve enačbe (enačba~\ref{eq:valovna-enacba-hh})
 in ne obosnega približka, velja 
 \begin{equation}
 k_{3}=\sqrt{k^{2}-(k_{1}^{2}+k_{2}^{2})}.\label{eq:k3-tocno}
 \end{equation}
-Očitno sledi enačba~(\ref{eq:k3-razvoj}) iz enačbe~(\ref{eq:k3-tocno})
+Vidimo, da sledi enačba~(\ref{eq:k3-razvoj}) iz enačbe~(\ref{eq:k3-tocno})
 z razvojem za majhne vrednosti $k_1$ in $k_2$. To pove, da je približek obosne 
 enačbe dober, kadar je razmerje prečne in vzdolžne komponente valovnega vektorja 
 majhno. Takrat je majhen tudi kot širjenja snopa in člene, višje od kvadratnih,
@@ -127,7 +128,7 @@ snope. Iz kvantne mehanike vemo, da je najbolj lokaliziran in se najpočasneje
 širi valovni paket Gaussove oblike. Zato poskusimo najti rešitev obosne
 enačbe (enačba~\ref{eq:obosna-valovna-enacba}) z nastavkom
 \begin{equation}
-\psi(r,z)=e^{i\frac{kr^{2}}{2q(z)}}\, e^{-i\phi(z)},\label{eq:gaussov-snop-nastavek}
+\psi(r,z)=e^{ikr^{2}/2q(z)}\, e^{-i\phi(z)},\label{eq:gaussov-snop-nastavek}
 \end{equation}
 kjer funkcija $q(z)$ opisuje širjenje snopa v prečni smeri,
 $\phi(z)$ pa opisuje počasno spreminjanje faze snopa vzdolž osi $z$.
@@ -146,7 +147,7 @@ Tako iz obosnega približka (enačba~\ref{eq:obosna-valovna-enacba}) sledi
 \begin{equation}
 \frac{2ik}{q}-\frac{k^2r^2}{q^2}=ik\left(\frac{ikr^{2}}{q^2}q(z)^{\prime}+2i\phi^{\prime}\right).
 \end{equation}
-Ta zveza mora veljati pri vsakem $r$, zato so koeficienti
+Gornja zveza mora veljati pri vsakem $r$, zato so koeficienti
 pri $r^{2}$ na obeh straneh enačbe enaki in členi brez odvisnosti od $r$ prav tako. Sledi
 \begin{equation}
 q(z)^{\prime}=1\mbox{\hskip1cm in \hskip1cm}\phi^{\prime}=-\frac{i}{q}.
@@ -169,13 +170,13 @@ Sledi
  \frac{ikr^{2}z}{2(z_{0}^{2}+z^{2})}\right).
  \label{eq:gaussov-snop-vmesni}
 \end{eqnarray}
-Najprej podrobneje poglejmo realni del eksponenta. Ta opisuje širjenje snopa in njegov
-polmer, ki je funkcija koordinate $z$, zapišemo kot\index{Gaussov snop!polmer}
+Najprej podrobneje poglejmo realni del eksponenta, ki opisuje širjenje snopa. Polmer snopa $w$, 
+ki je funkcija koordinate $z$, zapišemo kot\index{Gaussov snop!polmer}
 \begin{equation}
 w^{2}=\frac{2z_{0}}{k}\left(1+\left(\frac{z}{z_{0}}\right)^{2}\right).
 \end{equation}
 V izhodišču pri $z=0$ je snop najožji in pravimo, da je tam grlo snopa\index{Gaussov snop!grlo}. 
-Polmer snopa v grlu označimo z $w_0$ in zapišemo hiperbolično odvisnost $w$ od $z$
+Polmer snopa v grlu označimo z $w_0$ in zapišemo hiperbolično odvisnost $w(z)$
 \boxeq{eq:w}{
 w^2 = w_{0}^{2}\left(1+\left(\frac{z}{z_{0}}\right)^{2}\right).
 }
@@ -205,7 +206,8 @@ Pri $z_{0}$ tudi preidemo v območje veljavnosti Fraunhoferjevega uklonskega pri
 
 Zapišimo še kot divergence snopa v velikih oddaljenostih. Polovični kot širjenja je
 \begin{equation}
-\vartheta=\lim_{z \to \infty} \frac{dw}{dz} = \frac{w_{0}}{z_{0}}=\frac{\lambda}{\pi w_{0}}.\label{eq:divergenca-snopa}
+\vartheta=\lim_{z \to \infty} \frac{dw}{dz} = \frac{w_{0}}{z_{0}}=
+\frac{\lambda}{\pi w_{0}}.\label{eq:divergenca-snopa}
 \end{equation}
 Celotna divergenca snopa\index{Gaussov snop!divergenca} pa
 \boxeq{eq:divergenca-snopa2}{
@@ -235,23 +237,45 @@ Vpeljemo količino
 R=z\left(1+\left(\frac{z_{0}}{z}\right)^{2}\right),
 }
 ki meri krivinski radij valovnih front\index{Gaussov snop!krivinski radij} 
-snopa v odvisnosti od oddaljenosti od grla $z$. To najlažje
-uvidimo, če krogelni val razvijemo po majhnih odmikih $r$ od osi
+pri oddaljenosti od grla $z$. To najlažje
+uvidimo, če zapis imaginarnega dela primerjamo z zapisom za krogelni val, razvit 
+po majhnih odmikih $r$ od osi
 $z$
 \begin{equation}
-\frac{1}{R}e^{ikR}=\frac{1}{R}e^{ik\sqrt{z^{2}+r^{2}}}\approx \frac{1}{R}e^{ik(z+\frac{r^{2}}{2R})}.\label{eq:krogelni-val}
+\frac{1}{R}e^{ikR}=\frac{1}{R}e^{ik\sqrt{z^{2}+r^{2}}}\approx \frac{1}{R}e^{ikz+ikr^{2}/2R}.
+\label{eq:krogelni-val}
 \end{equation}
- Upoštevali smo, da je na osi $z=R$.
+Upoštevali smo, da je na osi $z=R$.
 
 \begin{definition}
 \label{naloga-ukrivljenost-snopa}
 Pokaži, da je največja ukrivljenost valovnih front snopa (in s tem najmanjši $R$) ravno pri $z=\pm z_{0}$.
 Izračunaj še ukrivljenost front v grlu in v veliki oddaljenosti od grla.
 \end{definition}
- 
+
+Na sliki (\ref{fig:ravni-Gaussov-krogelni-val}) 
+so shematsko prikazane valovne fronte ravnega vala, 
+Gaussovega snopa (enačba~\ref{eq:gaussov-snop}) 
+in krogelnega vala (enačba~\ref{eq:krogelni-val}). Vidimo, da je za majhne 
+oddaljenosti od grla $z$ Gaussov snop podoben ravnemu valu 
+(ukrivljenost front je zelo majhna in $R \to \infty$). Za velike oddaljenosti
+krivinski radij valovnih front postaja kar enak oddaljenosti $z$.
+Snop je tako podoben delu krogelnega vala, le da je faza Gaussovega snopa 
+zamaknjena za $\pi/2$ glede na ravni in krogelni val. 
+
+\begin{figure}[h]
+\centering
+\def\svgwidth{70truemm} 
+\input{slike/03_fronte.pdf_tex}
+\caption{Ravni val, Gaussov snop ter
+krogelni val. Pri majhnih razdaljah od grla je Gaussov snop podoben
+ravnemu valu, pri velikih razdaljah pa krogelnemu valu, vendar njegova faza zaostaja za $\pi/2$. }
+\label{fig:ravni-Gaussov-krogelni-val}
+\end{figure}
+
 Ostane še faktor pred eksponentom v izrazu~(\ref{eq:gaussov-snop-vmesni}). Ta faktor meri
-zmanjševanje amplitude snopa in s tem poskrbi za ohranitev energijskega
-toka ob širjenju žarka, poleg tega pa da še dodatno spremembo faze. Zapišemo ga v obliki
+zmanjševanje amplitude električne poljske jakosti v snopu in s tem poskrbi za ohranitev energijskega
+toka ob širjenju žarka, poleg tega pa še dodatno spremeni fazo. Zapišemo ga v obliki
 \index{Gaussov snop!faza}
 \begin{equation}
 \frac{1}{1+i\frac{z}{z_{0}}}=\frac{1}{\sqrt{1+(\frac{z}{z_0})^{2}}}e^{-i\eta(z)}=\frac{w_{0}}{w}e^{-i\eta(z)},
@@ -264,7 +288,7 @@ Dodatna faza $\eta$, imenujemo jo tudi \index{Gouyeva faza}Gouyeva
 faza\footnote{Francoski fizik Louis Georges Gouy, 1854--1926.},
 je posledica povečane fazne hitrosti valovanja,
 kadar je valovanje omejeno v prečni smeri. Podoben pojav bomo srečali tudi pri valovanju, ki je 
-omejeno v valovode.
+omejeno v valovode (poglavje~\ref{chap:fibri}).
 
 S tem lahko končno zapišemo izraz za električno poljsko jakost osnovnega \index{Gaussov snop}Gaussovega 
 snopa\footnote{Nemški matematik, fizik in astronom Carl Friedrich Gauss, 1777--1855.}
@@ -273,55 +297,41 @@ E=E_{0}\,\frac{w_{0}}{w(z)}\,e^{ikz-i\omega t}\,e^{-r^{2}/w^{2}(z)}\,e^{ikr^{2}/
 e^{-i\eta(z)}.
 }
 
-\begin{figure}[h]
-\centering
-\def\svgwidth{110truemm} 
-\input{slike/03_Gauss_3D.pdf_tex}
-\caption{Upodobitev intenzitete svetlobe v Gaussovem snopu za $z>0$ }
-\label{fig:Gauss_3D}
-\end{figure}
-
 Intenziteta svetlobe\index{Gaussov snop!intenziteta} je sorazmerna z $E(r,z)E^*(r,z)$ in zanjo velja
 \boxeq{eq:gaussov-snop-intenziteta}{
 I(r,z)= I_{0}\,\frac{w_0^2}{w^2(z)}\,e^{-2r^{2}/w^{2}(z)}.
 }
 
+\begin{figure}[h]
+\centering
+\def\svgwidth{100truemm} 
+\input{slike/03_Gauss_3D.pdf_tex}
+\caption{Upodobitev intenzitete svetlobe v Gaussovem snopu za $z>0$ }
+\label{fig:Gauss_3D}
+\end{figure}
+
 \begin{definition}
 \label{naloga-širina-snopa}
-Pokaži, da celotna svetlobna moč v snopu enaka $P = \int I dS = \frac{1}{2}\pi w_0^2 I_0$.
+Pokaži, da celotna svetlobna moč v snopu enaka $P = \int I dS = \frac{1}{2}\pi w_0^2\, I_0$.
 \end{definition}
 
 Povejmo še nekaj o parametru $q(z)$, ki smo ga uporabili pri izračunu Gaussovega snopa v nastavku
 (enačba~\ref{eq:gaussov-snop-nastavek}). Spomnimo 
 se, da parameter $q$ narašča linearno z oddaljenostjo od grla
-\boxeq{eq:q}{
+\begin{equation}
 q(z) = z -iz_0.
-}
+\label{eq:q}
+\end{equation}
 Parameter $q$ imenujemo kompleksni krivinski radij\index{Kompleksni krivinski radij}, 
 njegov inverz pa kompleksna ukrivljenost\index{Kompleksna ukrivljenost}
 \boxeq{eq:q-inv}{
 \frac{1}{q(z)}=\frac{1}{R}+i\frac{2}{kw^{2}}.
 }
-Izkazalo se bo, da je kompleksni krivinski radij zelo uporaben pri obravnavi preslikav 
-Gaussovih snopov čez leče.
-
-Primerjajmo še Gaussov snop z drugimi valovanji. Na sliki (\ref{fig:ravni-Gaussov-krogelni-val}) 
-so shematsko prikazane valovne fronte ravnega vala, Gaussovega snopa (enačba~\ref{eq:gaussov-snop}) 
-in krogelnega vala (enačba~\ref{eq:krogelni-val}). Vidimo, da je za majhne oddaljenosti od grla $z$ Gaussov
-snop podoben ravnemu valu (ukrivljenost front je zelo majhna in $R \to \infty$), 
-medtem ko je za velike $z$ podoben krogelnemu valu (krivinski radij $R$ narašča sorazmerno z oddaljenostjo $z$). 
-Faza Gaussovega snopa je pri pri $z\gg z_{0}$ zamaknjena za $\pi/2$ glede na ravni in 
-krogelni val. 
-
-\begin{figure}[h]
-\centering
-\def\svgwidth{80truemm} 
-\input{slike/03_fronte.pdf_tex}
-\caption{Ravni val, Gaussov snop ter
-krogelni val. Pri majhnih razdaljah od grla je Gaussov snop podoben
-ravnemu valu, pri velikih razdaljah pa krogelnemu valu, vendar njegova faza zaostaja za $\pi/2$. }
-\label{fig:ravni-Gaussov-krogelni-val}
-\end{figure}
+\begin{definition}
+Uporabi enačbi (\ref{eq:z0} in \ref{eq:R}) in izpelji gornji izraz za kompleksno ukrivljenost.
+\end{definition}
+Izkazalo se bo, da je kompleksni krivinski radij zelo uporaben pri 
+obravnavi preslikav Gaussovih snopov čez leče.
 
 \section{Snopi višjega reda}
 
