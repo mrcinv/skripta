@@ -598,11 +598,11 @@ x_{1}x_{2}=f^{2}-z_{01}z_{02} \qquad \mathrm{in} \qquad
 \frac{x_{1}}{z_{01}}=\frac{x_{2}}{z_{02}}.
 \end{equation}
 Dobimo enačbi za preslikavo Gaussovega snopa čez lečo z goriščno razdaljo $f$.
-Prva enačba da 
+Prva enačba 
 \boxeq{eq:preslikava-grlo}{
 x_{2}=\frac{x_{1}f^{2}}{x_{1}^{2}+z_{01}^{2}}
 }
-in določa lego grla preslikanega snopa na desni strani leče, druga pa povečavo
+določa lego grla preslikanega snopa na desni strani leče, druga pa povečavo
 \boxeq{eq:preslikava-povecava}{
 \frac{w_{02}}{w_{01}}=\sqrt{\frac{x_{2}}{x_{1}}}.
 }
@@ -610,9 +610,9 @@ Enačba (\ref{eq:preslikava-grlo}) se ujema z izrazom za preslikavo točke v geo
 optiki le, kadar je $z_{01}\ll x_{1}$. Kadar je $z_{01}\gg f$, je
 val na leči pri vsakem $x_{1}$ skoraj raven in $x_2 \to 0$, kar pomeni, da leži
 grlo na desni strani v gorišču. V praksi za Gaussove snope, ki izhajajo iz laserjev, pogosto ne
-velja ne prva ne druga limita, temveč je treba uporabiti zapisani izraz 
+velja ne prva ne druga limita, zato je treba uporabiti zapisani izraz 
 (enačba~\ref{eq:preslikava-grlo}).
-Tudi povečava polmera grla na desni, podana z enačbo (\ref{eq:preslikava-povecava}),
+Tudi velikost polmera grla na desni, podana z enačbo (\ref{eq:preslikava-povecava}),
 je precej drugačna kot v geometrijski optiki.
 
 Za primer vzemimo snop iz He-Ne laserja\index{Laser!He-Ne} 
@@ -627,22 +627,23 @@ dale popolnoma napačen položaj grla $50~\si{\centi\metre}$ za lečo, polmer gr
 $0,5~\si{\milli\metre}$. Po drugi strani bi približek, da je vpadni
 snop kar raven, dal grlo na desni v gorišču s približno pravim polmerom. Zakaj da približek ravnih 
 valov bolj pravilen rezultat, lahko hitro uvidimo, če pogledamo
-Rayleighovo dolžino snopa: snop vpada na lečo še v območju bližnjega polja ($x_1 + f < z_{01}$), kjer 
+Rayleighovo dolžino snopa $z_{01}$: 
+snop vpada na lečo še v območju bližnjega polja ($x_1 + f < z_{01}$), kjer 
 je približno oblike ravnih valov. 
 
-Če postavimo grlo snopa v gorišče leče ($x_{1}=0$), je grlo na
+Če postavimo gorišče leče v grlo snopa ($x_{1}=0$), je grlo na
 desni strani tudi v gorišču ($x_{2}=0$). Razmerje polmerov grl
 na eni in drugi strani leče lahko izračunamo
 \begin{equation}
 \lim_{x_1 \to 0}~\frac{x_{2}}{x_{1}}=\frac{f^{2}}{z_{01}^{2}} \qquad \textrm{in} \qquad
 \frac{w_{02}}{w_{01}}= \frac{f}{z_{01}}.
 \end{equation}
-Velikost grla na desni strani je 
+Velikost grla na desni strani je tako
 \begin{equation}
 w_{02}=\frac{\lambda f}{\pi w_{01}}.
 \end{equation}
-Če torej želimo doseči čim manjše grlo po prehodu skozi lečo, mora biti polmer
-vpadnega žarka čim večji. Vpadni žarek je tako smiselno
+Če želimo doseči kar se da majhno grlo po prehodu skozi lečo, mora biti polmer
+vpadnega žarka kar se da velik. Vpadni žarek je tako smiselno
 razširiti, vendar je polmer žarka lahko največ enak polmeru leče $a$. 
 Najmanjša velikost grla, ki jo še lahko dosežemo z zbiralno lečo, je tako 
 \boxeq{eq:wmin}{
