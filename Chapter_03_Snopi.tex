@@ -334,7 +334,7 @@ njegov inverz pa kompleksna ukrivljenost\index{Kompleksna ukrivljenost}
 Uporabi enačbi (\ref{eq:z0} in \ref{eq:R}) in izpelji gornji izraz za kompleksno ukrivljenost.
 \end{definition}
 Izkazalo se bo, da je kompleksni krivinski radij zelo uporaben pri 
-obravnavi preslikav Gaussovih snopov čez leče.
+obravnavi preslikav Gaussovih snopov z lečami.
 
 \section{Snopi višjega reda}
 
@@ -533,7 +533,7 @@ snopa pred objektom.
 \section{Transformacije snopov z lečami}
 
 Vrnimo se h Gaussovim snopom in poglejmo, kaj se zgodi z njimi pri prehodu
-skozi optične elemente\index{Preslikava čez lečo}. Začnemo
+skozi optične elemente\index{Preslikava z lečo}. Začnemo
 z enostavno tanko lečo z goriščno razdaljo $f$. V geometrijski optiki
 je krivinski radij krogelnega vala, ki izhaja iz točke na osi, kar
 enak razdalji do točke. Leča točko na optični osi preslika v točko na osi,
@@ -597,7 +597,7 @@ zapišimo posebej realni in imaginarni del
 x_{1}x_{2}=f^{2}-z_{01}z_{02} \qquad \mathrm{in} \qquad
 \frac{x_{1}}{z_{01}}=\frac{x_{2}}{z_{02}}.
 \end{equation}
-Dobimo enačbi za preslikavo Gaussovega snopa čez lečo z goriščno razdaljo $f$.
+Dobimo enačbi za preslikavo Gaussovega snopa z lečo z goriščno razdaljo $f$.
 Prva enačba 
 \boxeq{eq:preslikava-grlo}{
 x_{2}=\frac{x_{1}f^{2}}{x_{1}^{2}+z_{01}^{2}}
@@ -680,8 +680,8 @@ razdalji $d=f_{1}+f_{2}$. Pokaži, da je povečava takega teleskopa enaka
 
 \section{Matrične (ABCD) preslikave v geometrijski optiki}
 
-Preden se lotimo splošnejšega zapisa preslikav Gaussovega snopa, se spomnimo, kako
-se lotimo preslikav v geometrijski optiki. 
+Preden se lotimo splošnejšega zapisa preslikav Gaussovega snopa, 
+se spomnimo, kako obravnavamo preslikave v geometrijski optiki. 
 Slika nastane kot presečišče žarkov,
 ki izhajajo iz točke predmeta pred optičnim sistemom. Žarek 
 je pravokoten na valovne ploskve, pri čemer moramo vzeti še limito,
@@ -699,7 +699,7 @@ y\\
 \vartheta
 \end{array}\right].
 \end{equation}
-Preslikavo snopa zapišemo kot matriko, ki deluje na vpadni vektor in ga preslika
+Preslikavo žarka zapišemo kot matriko, ki deluje na vpadni vektor in ga preslika
 v izhodni vektor (slika~\ref{fig:K-matricni-obravnavi})
 \begin{equation}
 \left[\begin{array}{c}
@@ -717,19 +717,20 @@ y_1\\
 \def\svgwidth{100truemm}
 \input{slike/03_k_preslikavam.pdf_tex}
 \caption{Preslikave žarkov lahko obravnavamo
-z matrikami. Optični element, ki ga prestavlja matrika $M$, preslika žarek $(y_{1},\vartheta_{1})$
+z matrikami. Optični element, ki ga predstavlja matrika $M$, 
+preslika žarek $(y_{1},\vartheta_{1})$
 v $(y_{2},\vartheta_{2})$.}
 \label{fig:K-matricni-obravnavi}
 \end{figure}
 
-Matrike $M$ so v splošnem oblike
+Matrike $M$ so na splošno oblike
 \begin{equation}
 M = \left[\begin{array}{cc}
 A & B\\
 C & D
 \end{array}\right],
 \end{equation}
-zato jih imenujemo tudi ABCD matrike\index{ABCD matrike}. Poglejmo nekaj primerov. 
+zato jih imenujemo tudi matrike ABCD\index{Matrike ABCD}. Poglejmo nekaj primerov. 
 
 Pri premiku za $d$ vzdolž osi se zaradi končnega naklona spremeni odmik od osi, naklon pa ostane enak
 \begin{equation}
@@ -780,7 +781,7 @@ y_{1}\\
 \end{array}\right].
 \end{equation}
 Pri tem koeficientov $B$ in $D$ še ne poznamo. Določimo jih iz drugega pogoja, 
-ki pravi, da ostane žarek, ki gre skozi lečo na osi, nespremenjen
+ki pravi, da se žarek, ki gre skozi lečo na osi, ne spremeni
 \begin{equation}
 \left[\begin{array}{c}
 y_{2}\\
@@ -803,7 +804,7 @@ M= \left[\begin{array}{cc}
 -\frac{1}{f} & 1
 \end{array}\right].
 \end{equation}
-Podobno izpeljavo kot za prehod skozi lečo lahko naredimo za odboj na sferičnem zrcalu
+Podobno izpeljavo kot za prehod skozi lečo naredimo za odboj na sferičnem zrcalu
 s krivinskim radijem $R$. Pripadajoča matrika je 
 \begin{equation}
 M=\left[\begin{array}{cc}
@@ -815,7 +816,7 @@ pri čemer je $R>0$ za konkavna zrcala. Matrika za odboj na ravnem zrcalu je ide
 
 Matriko sestavljene optične naprave zapišemo kot produkt matrik posameznih komponent. 
 Pri tem moramo paziti na vrstni red množenja, saj množenje matrik ni komutativno.
-Matriko preslikave čez dva optična elementa, pri čemer žarek 
+Matriko preslikave skozi dva optična elementa, pri čemer žarek 
 najprej preide element z indeksom 1 in nato element z indeksom 2, zapišemo kot 
 \begin{eqnarray}
 \left[\begin{array}{cc}
@@ -854,12 +855,11 @@ C & D
 \label{eq:Mdf}
 \end{eqnarray}
 \begin{remark}
-Opisan matrični formalizem je zelo prikladen predvsem za računanje prehoda
+Opisani matrični formalizem je zelo prikladen predvsem za računanje prehoda
 svetlobe skozi zapletene optične sisteme, saj ga je prav lahko izvesti z računalnikom. Poleg
 tega je enolično povezan z matričnim formalizmom izračuna
-kompleksne ukrivljenosti Gaussovih snopov, zato da preprosto možnost
-prenosa rezultatov računov geometrijske optike v optiko 
-snopov.
+kompleksne ukrivljenosti Gaussovih snopov, zato omogoča preprost prenos 
+rezultatov geometrijske optike v optiko snopov.
 \end{remark}
 
 \section{Linearne racionalne transformacije kompleksnega krivinskega radija}
@@ -882,6 +882,7 @@ q_2=\frac{q_1f}{f-q_1}=\frac{q_1}{-\frac{q_1}{f}+1}.
 Premik in leča dasta skupaj
 \begin{equation}
 q_2=\frac{q_1+d}{-\frac{q_1+d}{f}+1}=\frac{q_1+d}{-\frac{q_1}{f}-\frac{d}{f}+1}.
+\label{eq:premikleca}
 \end{equation}
 V vseh treh primerih lahko transformacijo kompleksnega krivinskega radija 
 $q$ zapišemo v obliki ulomljene
@@ -889,20 +890,23 @@ linearne preslikave
 \boxeq{eq:ulomljena-preslikava}{
 q_2=\frac{Aq_1+B}{Cq_1+D}.
 }
-Ko koeficiente preslikave razvrstimo v ABCD matriko 
+Ko koeficiente preslikave razvrstimo v matriko 
 \begin{equation}
 M= \left[\begin{array}{cc}
 A & B\\
 C & D
-\end{array}\right].
+\end{array}\right]
 \end{equation}
-in iz gornjih enačb razberemo koeficiente ABCD matrik\index{ABCD matrike} za opisane 
-preslikave, vidimo, da so povsem enaki kot v primeru geometrijske optike. Hitro lahko tudi preverimo, 
-da je matrika za premik in lečo enaka produktu matrike za premik in matrike za lečo
+in iz gornjih enačb razberemo koeficiente matrik \index{Matrike ABCD} za opisane 
+preslikave, vidimo, da so povsem enaki koeficientom matrik ABCD, ki jih poznamo iz
+geometrijske optike. Hitro lahko tudi preverimo, 
+da je matrika za premik in lečo, ki jo dobimo iz preslikave (enačba~\ref{eq:premikleca}),
+enaka produktu matrike za premik in matrike za lečo
 (enačba~\ref{eq:Mdf}). 
 
-Omenimo še eno lastnost ABCD matrik. Kadar po prehodu čez optične elemente preidemo v snov 
-z enakim lomnim količnikom kot je bil na začetku, je determinanta ABCD matrike enaka 1. V nasprotnem
+Omenimo še eno lastnost matrik ABCD. Kadar po prehodu skozi optične elemente snop svetlobe 
+preide v snov z enakim lomnim količnikom kot je bil na začetku, je determinanta matrike 
+ABCD enaka 1. V nasprotnem
 primeru je determinanta matrike enaka razmerju lomnih količnikov začetne in končne snovi. 
 \begin{equation}
 \det(M) = AD-BC = \frac{n_1}{n_2}.
@@ -915,13 +919,13 @@ primeru je determinanta matrike enaka razmerju lomnih količnikov začetne in ko
       Prehod skozi prostor za $d$ & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_d.pdf_tex}} & 
       $\begin{bmatrix} 1 & d\\  0 & 1 \end{bmatrix}$ \\ \hline
 
-      Prehod preko meje dveh snovi & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_n.pdf_tex}} & 
+      Prehod skozi mejo dveh snovi & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_n.pdf_tex}} & 
       $\begin{bmatrix} 1 & 0\\ 0 & \frac{n_{1}}{n_{2}} \end{bmatrix}$ \\ \hline
       
-      Prehod preko konveksno ukrivljene meje $R>0$ & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_nR.pdf_tex}} & 
+      Prehod skozi konveksno ukrivljeno mejo $R>0$ & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_nR.pdf_tex}} & 
       $\begin{bmatrix} 1 & 0\\ \frac{(n_{1}-n_{2})}{n_{2}R} & \frac{n_{1}}{n_{2}} \end{bmatrix}$ \\ \hline
       
-      Prehod preko konveksne leče $f>0$ & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_f.pdf_tex}} & 
+      Prehod skozi konveksno lečo $f>0$ & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_f.pdf_tex}} & 
       $\begin{bmatrix} 1 & 0\\ -\frac{1}{f} & 1 \end{bmatrix}$ \\ \hline
       
       Odboj na konkavnem zrcalu $R>0$ & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_R.pdf_tex}} & 
@@ -934,17 +938,17 @@ primeru je determinanta matrike enaka razmerju lomnih količnikov začetne in ko
 \end{table}
 
 \begin{definition}
-Pokaži, da za naslednje prehode veljajo ustrezne ABCD matrike. \\ \\
+Pokaži, da za naslednje prehode veljajo ustrezne matrike ABCD. \\ \\
 \begin{tabular}{|c|c|c|} \hline  
       Prehod skozi prostor in lečo & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_df.pdf_tex}} & 
       $\begin{bmatrix} 1 & d\\ -\frac{1}{f} & 1-\frac{d}{f} \end{bmatrix}$ \\ \hline
-      \parbox[c]{12em}{Prehod preko leče z debelino $d$ 
+      \parbox[c]{12em}{Prehod skozi lečo z debelino $d$ 
       in krivinskima radijema $R_1$ in $R_2$}& 
       \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_fd.pdf_tex}} & 
       $\begin{bmatrix} 1-\frac{d}{nf_{1}} & \frac{d}{n}\\
       -\frac{1}{f_2}- \frac{1}{f_1}-\frac{d}{nf_1f_2}& 1-\frac{d}{nf_{2}} \end{bmatrix}$
       $f_{i}=\frac{R_{i}}{n-1}$\\ \hline
-      Prehod čez zaporedje plasti & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_nN.pdf_tex}} & 
+      Prehod skozi zaporedje plasti & \parbox[c]{3cm}{\def\svgwidth{3cm}\input{slike/03_matrika_nN.pdf_tex}} & 
       $\begin{bmatrix} 1 & \sum_{i=1}^{N}\frac{d_{i}}{n_{i}}\\ 0 & 1 \end{bmatrix}$ \\ \hline 
 \end{tabular}
 \end{definition}
