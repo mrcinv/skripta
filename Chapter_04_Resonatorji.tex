@@ -1,8 +1,8 @@
 \chapterimage{Resonator.jpg} % Chapter heading image
 
 \chapter{Optični resonatorji}
-Osnovni gradnik vsakega laserja je resonator. V njem je vzbujeno lastno valovanje,
-ki skozi delno prepustno steno resonatorja izhaja iz sistema. V tem poglavju bomo 
+Osnovni gradnik vsakega laserja je resonator. V njem je vzbujeno lastno nihanje,
+ki skozi delno prepustno steno resonatorja kot valovanje izhaja iz sistema. V tem poglavju bomo 
 najprej spoznali optične resonatorje in kriterije za njihovo stabilno delovanje,
 nato pa izračunali lastne frekvence resonatorjev ter povezali spektralno širino črt
 izsevane svetlobe z izgubami v laserskem resonatorju. 
@@ -23,11 +23,12 @@ konstantne amplitude lastnega nihanja mora zunanji vir zgolj pokrivati izgube
 v resonatorju. Če so te majhne, je zunanji vir lahko šibek, polje
 v resonatorju pa vseeno veliko.\\
 \item Resonatorji delujejo kot filtri, ki prepuščajo le polje s točno  
-določeno frekvenco in prostorsko odvisnostjo. Primer take uporabe je 
+določeno frekvenco in izbrano prostorsko odvisnostjo. Primer take uporabe je 
 Fabry-Perotov interferometer\index{Fabry-Perotov interferometer}, opisan 
 v nadaljevanju. 
 \end{enumerate}
 
+\begin{remark}
 Resonatorje poznamo z različnih področij, na primer akustične pri glasbilih ali 
 mikrovalovne in radijske. V mikrovalovnem področju, kjer so valovne dolžine valovanja
 okoli $1~\si{\centi\metre}$, 
@@ -35,10 +36,11 @@ so resonatorji zaprte kovinske votline z dimenzijami, ki so primerljive z
 valovno dolžino vzbujenega valovanja. Resonančne frekvence so v takem resonatorju 
 med seboj dobro ločene in ni težko doseči enega samega nihanja v izbranem 
 frekvenčnem intervalu.
+\end{remark}
 
-V optičnem področju je drugače, saj so resonatorji navadno veliko večji
+V optičnem področju so resonatorji navadno veliko večji
 od valovne dolžine svetlobe. Vzemimo kocko s stranico $L\gg \lambda$, 
-v kateri je vzbujeno zelo veliko število lastnih valovanj. Število lastnih valovanj $N$ 
+v kateri je vzbujeno zelo veliko število lastnih nihanj. Število lastnih nihanj $N$ 
 na frekvenčni interval $\Delta \nu$ zapišemo z zvezno gostoto stanj\index{Gostota stanj}
 \begin{equation}
 N=2 \frac{1}{8} 4\pi k^{2}\Delta k \frac{1}{(\pi/L)^3}=\frac{\omega^{2}}{\pi^{2}c^{3}}V\Delta\omega=
@@ -52,17 +54,17 @@ Upoštevali smo tudi, da ima vsako lastno nihanje lahko dve polarizaciji.
 
 Poglejmo primer. Izberimo osrednjo frekvenco $\nu=3\cdot10^{14}~\si{\hertz}$, ki
 ustreza valovni dolžini $1~\si{\micro\metre}$, in širino frekvenčnega
-intervala $\Delta\nu=3\cdot10^{9}~\si{\hertz}$, ki je tipična za Dopplerjevo
+intervala $\Delta\nu=3\cdot10^{9}~\si{\hertz}$, ki je značilna za Dopplerjevo
 razširjeno emisijsko črto v plinu\index{Dopplerjeva razširitev}. 
 Potem je v votlini s stranico $L=1~\si{\centi\metre}$ 
-in prostornino $V=1~\si{\centi\metre^3}$ število lastnih nihanj na izbran interval 
+in prostornino $V=1~\si{\centi\metre^3}$ število lastnih nihanj na izbran frekvenčni interval 
 po enačbi~(\ref{eq:N-stevilo-stanj}) enako
 $N=2,5\cdot10^{8}$. Če bi bile vse stene votline idealna zrcala,
 bi bil čas dušenja vseh lastnih nihanj približno enako dolg in vedno bi vzbujali
 zelo veliko število resonanc hkrati. Tak resonator bi bil neuporaben.
 
 Hkratnemu vzbujanju velikega števila nihanj se izognemo z zmanjšanjem odbojnosti
-stranskih sten votline, saj s tem povečamo dušenje stoječih valov v prečni smeri.
+stranskih sten votline, saj tako povečamo dušenje stoječih valov v prečni smeri.
 Dušenje valov, ki so pravokotni na idealno odbojni končni steni, ostane nespremenjeno.
 Nazadnje lahko stranske stene povsem odstranimo, tako da stoječih valov v prečni smeri
 sploh ni več. Ostane le še nekaj valov, ki so pravokotni na končni
