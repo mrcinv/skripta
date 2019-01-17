@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '04_crte.pdf' (pdf, eps, ps)
 %%
@@ -35,6 +35,8 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
     \setlength{\unitlength}{545.91315322bp}%
     \ifx\svgscale\undefined%
@@ -49,23 +51,25 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.18260799)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{04_crte.pdf}}%
-    \put(-0.00095417,0.12925134){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$2p+l$}}}%
-    \put(0.15307702,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1$}}}%
-    \put(0.17785082,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$2$}}}%
-    \put(0.20220448,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$3$}}}%
-    \put(0.22697828,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$4$}}}%
-    \put(0.12868162,0.00638929){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_n$}}}%
-    \put(0.48098977,0.00638929){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_{n+1}$}}}%
-    \put(0.83065194,0.00638929){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_{n+2}$}}}%
-    \put(0.50636675,0.1294858){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1$}}}%
-    \put(0.53114056,0.1294858){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$2$}}}%
-    \put(0.55549421,0.1294858){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$3$}}}%
-    \put(0.58026801,0.1294858){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$4$}}}%
-    \put(0.85794096,0.1294858){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1$}}}%
-    \put(0.88271476,0.1294858){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$2$}}}%
-    \put(0.90706842,0.1294858){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$3$}}}%
-    \put(0.93184222,0.1294858){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$4$}}}%
-    \put(0.95427267,0.00486525){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega$}}}%
+    \put(-0.00095417,0.12925134){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$2p+l$\end{tabular}}}}%
+    \put(0.15307701,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.17785082,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$2$\end{tabular}}}}%
+    \put(0.20220448,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$3$\end{tabular}}}}%
+    \put(0.22697828,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$4$\end{tabular}}}}%
+    \put(0.12868162,0.00638929){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\nu_n$\end{tabular}}}}%
+    \put(0.48098976,0.00638929){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\nu_{n+1}$\end{tabular}}}}%
+    \put(0.83065193,0.00638929){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\nu_{n+2}$\end{tabular}}}}%
+    \put(0.50636674,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.53114055,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$2$\end{tabular}}}}%
+    \put(0.55549421,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$3$\end{tabular}}}}%
+    \put(0.580268,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$4$\end{tabular}}}}%
+    \put(0.85794095,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.88271475,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$2$\end{tabular}}}}%
+    \put(0.90706841,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$3$\end{tabular}}}}%
+    \put(0.93184221,0.12948581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$4$\end{tabular}}}}%
+    \put(0.95427266,0.00486525){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\nu$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
