@@ -241,7 +241,7 @@ spontano sevanje, absorpcija in stimulirano sevanje.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{140truemm} 
+\def\svgwidth{145truemm} 
 \input{slike/05_Dvonivojski.pdf_tex}
 \caption{Shema energijskih nivojev dvonivojskega atoma (a) in prehodov med njima:
 spontano sevanje (b), absorpcija (c) in stimulirano sevanje (d).}
@@ -251,9 +251,11 @@ spontano sevanje (b), absorpcija (c) in stimulirano sevanje (d).}
 \subsection*{Spontano sevanje}
 Vemo, da atom v vzbujenem stanju tudi brez vpliva zunanjega polja
 ni stabilen, temveč prej ali slej preide v nižje stanje. Temu pojavu
-pravimo spontano sevanje\index{Spontano sevanje} ali spontana emisija (slika~\ref{sl4.1}\,b). 
+pravimo spontano sevanje\index{Spontano sevanje} ali spontana emisija (slika~\ref{sl4.1}\,b).
+
 Pri spontanem sevanju je foton izsevan v katerokoli stanje polja v bližini 
-frekvence prehoda, pri tem sta smer in polarizacija izsevane svetlobe poljubni.
+frekvence prehoda. Smer izsevane svetlobe je poljubna, v odsotnosti zunanjega polja
+pa je poljubna tudi polarizacija izsevane svetlobe.
 Verjetnost za prehod na časovno enoto\index{Verjetnost za prehod} označimo z $A_{21}$.
 Za dovoljene prehode je vrednost $A_{21} \sim 10^6$--$10^8/\si{\second}$, 
 za prepovedane pa okoli $\sim 10^4/\si{\second}$. 
@@ -261,7 +263,8 @@ Karakteristični (naravni) razpadni čas\index{Razpadni čas} gornjega stanja vp
 $\tau = 1/A_{21}$. 
 
 Zaradi končnega življenjskega časa ima vzbujeno stanje končno spektralno 
-širino. Najpogosteje je atomska spektralna črta\index{Spektralna črta} kar 
+širino. Če ni Dop\-pler\-je\-ve razširitve, je atomska spektralna 
+črta\index{Spektralna črta} najpogosteje kar 
 Lorentzove oblike\index{Spekter!Lorentzov} z vrhom pri $\omega_0$
 (enačba~\ref{eq:spekter-primer})
 \boxeq{4.21}{
@@ -272,7 +275,7 @@ Funkcija $g(\omega)$ je normirana
 \int_{-\infty}^\infty g(\omega)\, d\omega=1,
 \label{4.20}
 \end{equation}
-za grobe ocene pa funkcijo $g$ aproksimiramo tudi s pravokotnikom širine
+za grobe ocene pa se funkcijo $g$ pogosto nadomesti s pravokotnikom širine
 $2\gamma$ in višine $1/2\gamma$.
 
 \subsection*{Absorpcija fotona}
@@ -304,9 +307,9 @@ r_{21}=B_{21}u(\omega_{0}).
 \end{equation}
 V tem primeru smo sorazmernostni koeficient označili z $B_{21}$. Kadar pride do
 stimuliranega sevanja, se število atomov v vzbujenem stanju zmanjša, 
-število fotonov v stanju, ki je prehod povzročilo, pa se poveča za ena. 
+število fotonov v stanju, ki je prehod povzročilo, pa se poveča. 
 Izsevana svetloba ima enako fazo, frekvenco, polarizacijo in smer potovanja kot 
-vpadla. Tipične vrednosti parametra so $B_{21} \sim 10^{16}$--$10^{20}~\si{\metre^3/\joule\second^2}$.
+vpadna. Tipične vrednosti parametra so $B_{21} \sim 10^{16}$--$10^{20}~\si{\metre^3/\joule\second^2}$.
 
 Pomudimo se še nekoliko pri izrazih za absorpcijo
 (enačba~\ref{4.16}) in za stimulirano emisijo (enačba~\ref{4.17}).
@@ -328,7 +331,7 @@ pomembno, ali je spektralna gostota elektromagnetnega polja $u(\omega)$ bistveno
 \end{figure}
 
 V splošnem primeru, ko se spekter vpadne svetlobe spreminja v območju 
-frekvence prehoda, moramo sešteti prispevke po ozkih frekvenčnih intervalih
+atomske spektralne črte, moramo sešteti prispevke po ozkih frekvenčnih intervalih
 \begin{equation}
 r_{12}=B_{12}\int g(\omega-\omega_0)\, u(\omega)\, d\omega.
 \label{4.19}
@@ -339,9 +342,9 @@ dobimo znano zvezo~(enačba~\ref{4.16}).
 
 Če pa na atome svetimo s svetlobo s spektrom, ki je ozek v primerjavi s spektralno 
 širino prehoda (na primer iz laserskega resonatorja), je verjetnost za prehod 
-odvisna tudi od tega, kako blizu centralne frekvence prehoda je frekvenca vpadne 
+odvisna tudi od tega, kako blizu osrednje frekvence prehoda je frekvenca vpadne 
 svetlobe (slika~\ref{fig:spektri}\,b). Naj bo  $w_{R}$ gostota energije skoraj
-monokromatske svetlobe s frekvenco $\omega_R$. Verjetnost za absorpcijo na časovno 
+monokromatske vpadne svetlobe s frekvenco $\omega_R$. Verjetnost za absorpcijo na časovno 
 enoto je potem  
 \boxeq{4.18}{
 r_{12}=B_{12}g(\omega_R-\omega_0)\, w_{R}.
