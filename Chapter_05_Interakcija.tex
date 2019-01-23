@@ -90,7 +90,7 @@ lahko z uporabo gostote stanj spremenimo v integrale po $k$ ali po $\omega$
 \label{4.5}
 \end{equation}
 
-Označimo krajevni del rešitve~(enačbe~\ref{eq:stojece_votlina}) z 
+Označimo brezdimenzijski krajevni del rešitve~(enačbe~\ref{eq:stojece_votlina}) z 
 $\mathbf{E}_{\alpha}$, kjer $\alpha$
 označuje trojico števil $l$, $m$ in $n$ in še obe možni polarizaciji. 
 Pripadajoče magnetno polje izračunamo z Maxwellovo enačbo (enačba~\ref{eq:Maxwell2}) 
@@ -127,7 +127,8 @@ Ta enačba da seveda pričakovano časovno odvisnost oblike $e^{-i \omega_\alpha
  enačbo~(\ref{4.8}).
 \end{definition}
 
-Z upoštevanjem razvoja (enačbi~\ref{eq:pqrazvoj1} in \ref{eq:pqrazvoj}) zapišemo energijo 
+Z upoštevanjem razvoja (enačbi~\ref{eq:pqrazvoj1} in \ref{eq:pqrazvoj}) in ob ustrezni
+normalizaciji zapišemo energijo 
 polja -- \index{Hamiltonova funkcija}Hamiltonovo 
 funkcijo\footnote{Irski matematik Sir William Rowan Hamilton, 1805--1865.}
 \begin{equation}
@@ -168,9 +169,9 @@ Izpuščali jo bomo tudi v nadaljevanju, saj
 je to energija osnovnega stanja, ki se ne more sprostiti. 
 
 \begin{remark}
-Vzemimo vidno svetlobo z valovno dolžino $500~\si{\nano\metre}$. Temu ustreza frekvenca
-$\omega = 3,8 \cdot 10^{15}~\si{\hertz}$ in energija fotona $W = 4 \cdot 10^{-19}~\si{\joule}$
-oziroma $W = 2,5~\mathrm{e}\si{\volt}$.
+Vidna svetloba z valovno dolžino $500~\si{\nano\metre}$ ima frekvenco
+$\nu = 6 \cdot 10^{14}~\si{\hertz}$. Ustrezna energija fotona je
+$W = 4 \cdot 10^{-19}~\si{\joule}$ oziroma $W = 2,5~\mathrm{e}\si{\volt}$.
 \end{remark}
 
 \section{Sevanje črnega telesa}
@@ -185,8 +186,10 @@ P(n_{\alpha})=\frac{e^{-W_{n\alpha}/k_BT}}{\sum_{\alpha}e^{-W_{n\alpha}/k_BT}} =
 e^{-\beta\hbar\omega_{\alpha}n_{\alpha}}(1-e^{-\beta\hbar\omega_{\alpha}}),
 \label{4.12}
 \end{equation}
-pri čemer $\beta = 1/k_BT$ in $k_B$ Boltzmannova konstanta. Povprečno število fotonov 
-v stanju $\alpha$ je potem pri velikem številu stanj \index{Sevanje črnega telesa}
+pri čemer $\beta = 1/k_BT$ in $k_B$ Boltzmannova konstanta. 
+
+Povprečno število fotonov 
+v stanju $\alpha$ je potem \index{Sevanje črnega telesa}
 \begin{equation}
 \langle n_{\alpha}\rangle =\sum_{\alpha}n_{\alpha}P(n_{\alpha})=\frac{1}{e^{\beta\hbar\omega_{\alpha}}-1}.
 \label{4.13}
@@ -199,28 +202,24 @@ povprečnega števila fotonov v tem stanju
 = \frac{\hbar \omega_\alpha}{e^{\beta\hbar\omega_{\alpha}}-1}.
 \end{equation}
 Ravnovesno gostoto energije elektromagnetnega polja\index{Gostota energije} v votlini na
-frekvenčni interval $u$ izračunamo tako, da povprečno energijo posameznega
+frekvenčni interval izračunamo tako, da povprečno energijo posameznega
 stanja pomnožimo z gostoto stanj $\varrho (\omega)$ 
 (enačba~\ref{4.4}). Dobimo znano formulo za energijo na enoto volumna na enoto frekvence, 
 to je \index{Planckov zakon}Planckov 
 zakon\footnote{Nemški fizik in nobelovec Max Karl Ernst Ludwig Planck, 1858--1947.}.
-Planckov zakon opiše spektralno gostoto energije svetlobe\index{Spektralna gostota energije}, izsevane iz 
+Planckov zakon opiše spektralno gostoto energije svetlobe $u$ 
+\index{Spektralna gostota energije}, izsevane iz 
 \index{Sevanje črnega telesa}črnega telesa, ki je v toplotnem ravnovesju z 
 okolico s temperaturo $T$
 \boxeq{eq:Planck}{
 u(\omega)=\hbar\omega\langle n\rangle \rho(\omega)
 =\frac{\hbar}{\pi^{2}c^{3}}\frac{\omega^{3}}{e^{\beta\hbar\omega}-1}.
 }
-Planckov zakon lahko zapišemo tudi z valovno dolžino in energija na enoto volumna
-na interval valovne dolžine\index{Spekter!Planckov} je
-\begin{equation}
-u(\lambda)=\frac{8 \pi h c}{\lambda^5}\frac{1}{e^{\beta h c/\lambda}-1}.
-\end{equation}
 
 \begin{figure}[h]
 \centering
 \def\svgwidth{110truemm} 
-\input{slike/05_Planck.pdf_tex}
+\input{slike/05_PlanckOmega.pdf_tex}
 \caption{Planckov spekter za sevanje črnega telesa pri različnih temperaturah}
 \label{fig:Planck}
 \end{figure}
