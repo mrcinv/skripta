@@ -18,7 +18,7 @@ atoma iz višjega energijskega stanja v nižje s sevanjem.
 \section{Kvantizacija elektromagnetnega polja}
 \index{Kvantizacija polja}
 Ravni valovi\index{Ravni val} so enostavne in zelo prikladne rešitve valovne 
-enačbe~(enačba~\ref{eq:valovna-skalarna}), zato jih pogosto uporabimo kot 
+enačbe~(enačba~\ref{eq:valovna-skalarna}), zato jih pogosto uporabimo za 
 bazo, po kateri razvijemo elektromagnetno polje\index{Elektromagnetno valovanje}. Možen je razvoj
 po celotnem prostoru, vendar je tedaj nekoliko nerodna normalizacija baznih
 funkcij. Če se omejimo na le del prostora, se temu problemu izognemo. Mora pa biti 
@@ -58,8 +58,8 @@ vektorja med $k$ in $k+dk$ -- to smo na hitro naredili že pri obravnavni
 resonatorjev (enačba~\ref{eq:N-stevilo-stanj}). Možni valovni vektorji tvorijo tridimenzionalno
 mrežo v prvem oktantu prostora vseh valovnih vektorjev. Razmik med
 dvema zaporednima mrežnima točkama v smeri ene od osi je $\pi/L$.
-Število točk v osmini krogelne plasti med $k$ in $k+dk$ je za dovolj
-velike $l$, $m$ in $n$ enako prostornini plasti, deljeni
+Število točk v osmini krogelne lupine med $k$ in $k+dk$ je za dovolj
+velike $l$, $m$ in $n$ enako prostornini lupine, deljeni
 s prostornino, ki pripada posamezni mrežni točki, to je $(\pi/L)^{3}$.
 Upoštevati moramo še, da sta pri vsakem $\mathbf{k}$ dovoljeni dve polarizaciji, zato
 \begin{equation}
@@ -75,8 +75,10 @@ in ga prevedemo na frekvenčno odvisnost
 \begin{equation}
 \frac{dN}{V}=\frac{8 \pi \nu^{2} }{c^{3}}d\nu = \frac{\omega^2}{\pi^2c^3}d\omega.
 \end{equation}
-Vpeljemo gostoto stanj  $\varrho (\omega)$, to je število valovanj na frekvenčni interval na enoto volumna 
-votline\index{Gostota stanj}
+Vpeljemo gostoto stanj  $\varrho (\omega)$, to je število valovanj na 
+frekvenčni interval\footnote{V tem poglavju bomo ohlapno uporabljali besedo
+frekvenca tudi za krožno frekvenco. Iz zapisa bo vedno jasno, za katero frekvenco gre.}
+na enoto volumna votline\index{Gostota stanj}
 \boxeq{4.4}{
 \rho(\omega)=\frac{dN}{V d\omega}=\frac{\omega^{2}}{\pi^{2}c^{3}}.
 }
@@ -84,12 +86,12 @@ votline\index{Gostota stanj}
 Vsote po lastnih valovanjih, to je po dovoljenih vrednostih valovnega vektorja $k$,
 lahko z uporabo gostote stanj spremenimo v integrale po $k$ ali po $\omega$
 \begin{equation}
-\sum_{k}\ldots \quad \rightarrow \quad V\int\rho(k)\ldots dk=V\int\rho(\omega)\ldots d\omega.
+\sum_{k}\ldots \quad \Rightarrow \quad V\int\rho(k)\ldots dk=V\int\rho(\omega)\ldots d\omega.
 \label{4.5}
 \end{equation}
 
-Označimo brezdimenzijski krajevni del rešitve~(enačbe~\ref{eq:stojece_votlina}) z 
-$E_{\alpha}$, kjer $\alpha$
+Označimo krajevni del rešitve~(enačbe~\ref{eq:stojece_votlina}) z 
+$\mathbf{E}_{\alpha}$, kjer $\alpha$
 označuje trojico števil $l$, $m$ in $n$ in še obe možni polarizaciji. 
 Pripadajoče magnetno polje izračunamo z Maxwellovo enačbo (enačba~\ref{eq:Maxwell2}) 
 \begin{equation}
