@@ -730,8 +730,8 @@ j_s = \frac{c A_{21}}{B_{21}g}.
 \end{equation}
 \begin{remark}
  Vidimo, da je  izraz za saturacijsko gostoto toka v trinivojskem sistemu 
- (enačba~\ref{eq:jsatg}) zelo  podoben saturacijski gostoti za dvonivojski 
- sistem (enačba~\ref{4.34}), razlikujeta se le
+ (enačba~\ref{eq:jsatg}) zelo podoben izrazu za saturacijsko gostoto v dvonivojskem
+ sistemu (enačba~\ref{4.34}), razlikujeta se le
 v faktorju 2. Do te razlike pride zaradi različnega števila stanj, saj pogoj $N_{1}+N_{2}=N$
 v trinivojskem sistemu ne velja. 
 \end{remark}
@@ -754,7 +754,7 @@ oziroma
 dj=\frac{G}{1+j/j_{s}}\, j\, dz,
 }
 ki je spet zelo podobna enačbi za absorpcijo (enačba~\ref{4.36}).
-Z $G$ smo označili t.i. koeficient ojačenja pri majhnih vpadnih gostotah
+Z $G$ smo označili t.i. koeficient ojačenja pri majhni gostoti vpadnega
 toka\index{Koeficient ojačenja}. Podan je z 
 \begin{equation}
 G=\frac{N}{V}\frac{r}{A_{21}}\sigma=\frac{rNB_{21}\hbar\omega g}{VcA_{21}},
@@ -783,43 +783,46 @@ toka narašča linearno
 j(z)=j_{0}+j_{s}Gz.
 \label{4.46}
 \end{equation}
- V tem primeru je gostota toka dovolj velika, da vsi atomi, ki jih
+V tem primeru je gostota toka tako velika, da vsi atomi, ki jih
 s črpanjem spravimo v najvišje stanje, preidejo v stanje $|1\rangle$
 s stimuliranim sevanjem. Pri konstantnem črpanju je tedaj 
 linearno naraščanje gostote toka razumljivo. 
 
 Pomudimo se še malo pri preseku za stimulirano sevanje $\sigma$
  (enačba~\ref{4.44})\index{Presek
-za stimulirano sevanje}. Opazimo, da je ta presek enak preseku za
+za stimulirano sevanje}. Opazimo, da je enak preseku za
 absorpcijo (enačba~\ref{sigmaabs}) dvonivojskega sistema\index{Presek za absorpcijo}. 
 Presek za stimulirano
 sevanje je tako odvisen od frekvence in je sorazmeren vrednosti atomske spektralne 
 črte pri frekvenci prehoda. Za He-Ne laser\index{Laser!He-Ne}, 
 ki deluje pri valovni dolžini $633~\si{nm}$ in ima 
-širino prehoda $\Delta \omega \sim 10~\si{\giga\hertz}$, znaša tako  $\sigma \sim 10^{-16}~\si{\metre}^2$, 
+širino prehoda $\Delta \nu \sim 1,5~\si{\giga\hertz}$, znaša tako  
+$\sigma \sim 10^{-16}~\si{\metre}^2$, 
 za Nd:YAG\index{Laser!Nd:YAG} pri $1064~\si{nm}$ in širini prehoda 
-$\Delta \omega \sim 900~\si{\giga\hertz}$ pa  $\sigma \sim 10^{-22}~\si{\metre}^2$.
+$\Delta \nu \sim 150~\si{\giga\hertz}$ pa  $\sigma \sim 10^{-22}~\si{\metre}^2$.
 Zaradi različnih presekov, različnih gostot atomov in različnih načinov črpanja se 
 koeficienti ojačenja v večnivojskih sistemih med seboj precej razlikujejo. Primere 
 laserjev bomo sicer podrobneje obravnavali v nadaljevanju, zaenkrat povejmo 
 le, da je tipičen koeficient ojačenja v He-Ne laserju z dolžino $L = 0,5~\si{\metre}$
 enak $GL \sim 1,015$, v Nd:YAG laserju z dolžino ojačevalnega sredstva 
-$L = 10~\si{\centi\metre}$ pa $GL \sim 50$. Pri prvem laserju je sicer velik presek za stimulirano sevanje, vendar 
+$L = 10~\si{\centi\metre}$ pa $GL \sim 50$. Pri prvem laserju je sicer 
+velik presek za stimulirano sevanje, vendar 
 je gostota atomov v obrnjeni zasedenosti razmeroma majhna. V drugem primeru pa močno 
-črpanje prevlada nad majhnim presekom in pride do močnega ojačenja.\index{Optično ojačevanje}
+črpanje prevlada nad majhnim presekom in pride do velikega ojačenja.\index{Optično ojačevanje}
 
 \section{Homogena in nehomogena razširitev spektralne črte}
 \label{Razsiritev}
-Doslej smo predpostavili, da svetijo vsi atomi obravnavane snovi
+Doslej smo privzeli, da svetijo vsi atomi obravnavane snovi
 pri isti frekvenci $\omega_{0}$ in z isto spektralno širino, ki smo
 jo popisali s funkcijo $g(\omega-\omega_0)$, z vrhom pri $\omega_0$. Če to velja, 
-pravimo, da je razširitev spektralne črte homogena\index{Spektralna črta!homogena razširitev}. 
-Primera homogene razširitve sta naravna širina in razširitev zaradi trkov med atomi. 
+je razširitev spektralne črte homogena\index{Spektralna črta!homogena razširitev}. 
 Funkcija $g(\omega-\omega_0)$ je v tem primeru Lorentzove oblike\index{Spekter!Lorentzov} 
 \boxeq{eq:homogenasirina}{
 g_L(\omega-\omega_0)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}}
 }
-s širino črte $\Delta \omega_L = 2\gamma$ (glej sliko~\ref{fig:SpekterAc}). Homogena razširitev je 
+s širino črte $\Delta \omega_L = 2\gamma$ (glej sliko~\ref{fig:SpekterAc}). 
+Primera homogene razširitve sta naravna širina in razširitev zaradi trkov med atomi.
+Homogena razširitev je 
 lahko večja od obratne vrednosti razpadnega časa nivoja. V plinu lahko trki motijo le fazo sevanja, 
 ne da bi povzročili prehod, v trdni snovi pa homogeno razširitev brez prehoda povzročajo
 termična nihanja lokalnega električnega (kristalnega) polja. 
@@ -831,7 +834,9 @@ Najpomembnejši primer nehomogene razširitve je Dopplerjeva
 \index{Dopplerjeva razširitev} razširitev v plinu. 
 Atomi plina vedno sevajo pri praktično isti frekvenci, vendar jih zaradi gibanja
 opazovalec v mirujočem (laboratorijskem) sistemu v skladu z Dopplerjevim pojavom 
-zazna pri različnih frekvencah. Tako so opazovane frekvence posameznih atomov $\omega$
+zazna pri različnih frekvencah. 
+
+Tako so opazovane frekvence posameznih atomov $\omega$
 odvisne od hitrosti $v$ atoma glede na smer opazovanja. Zapišemo jih kot  
 \begin{equation}
 \omega=\omega_{0}-\frac{v}{c}\omega_{0}=\omega_{0}-k_{0}v.
