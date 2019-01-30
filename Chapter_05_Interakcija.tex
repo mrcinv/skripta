@@ -765,7 +765,7 @@ pri čemer smo koeficient ojačenja izrazili s presekom za stimulirano
 Rešitev diferencialne enačbe (enačba~\ref{eq:djG}) je prikazana na sliki~(\ref{fig:ojacanje}). 
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{80truemm} 
 \input{slike/05_joja.pdf_tex}
 \caption{Naraščanje gostote svetlobnega toka pri optičnem ojačevanju}
 \label{fig:ojacanje}
@@ -788,27 +788,24 @@ s črpanjem spravimo v najvišje stanje, preidejo v stanje $|1\rangle$
 s stimuliranim sevanjem. Pri konstantnem črpanju je tedaj 
 linearno naraščanje gostote toka razumljivo. 
 
-Pomudimo se še malo pri preseku za stimulirano sevanje $\sigma$
+Vrnimo se k preseku za stimulirano sevanje $\sigma$
  (enačba~\ref{4.44})\index{Presek
 za stimulirano sevanje}. Opazimo, da je enak preseku za
-absorpcijo (enačba~\ref{sigmaabs}) dvonivojskega sistema\index{Presek za absorpcijo}. 
-Presek za stimulirano
-sevanje je tako odvisen od frekvence in je sorazmeren vrednosti atomske spektralne 
-črte pri frekvenci prehoda. Za He-Ne laser\index{Laser!He-Ne}, 
-ki deluje pri valovni dolžini $633~\si{nm}$ in ima 
-širino prehoda $\Delta \nu \sim 1,5~\si{\giga\hertz}$, znaša tako  
+absorpcijo (enačba~\ref{sigmaabs}) dvonivojskega sistema\index{Presek za absorpcijo}
+in tako odvisen od frekvence in sorazmeren vrednosti atomske spektralne 
+črte pri frekvenci prehoda. Za He-Ne laser\index{Laser!He-Ne} 
+($\lambda=633~\si{nm}$ in $\Delta \nu \sim 1,5~\si{\giga\hertz}$) znaša   
 $\sigma \sim 10^{-16}~\si{\metre}^2$, 
-za Nd:YAG\index{Laser!Nd:YAG} pri $1064~\si{nm}$ in širini prehoda 
-$\Delta \nu \sim 150~\si{\giga\hertz}$ pa  $\sigma \sim 10^{-22}~\si{\metre}^2$.
+za Nd:YAG\index{Laser!Nd:YAG} ($1064~\si{nm}$ in $\Delta \nu \sim 150~\si{\giga\hertz}$)
+pa  $\sigma \sim 10^{-22}~\si{\metre}^2$.
 Zaradi različnih presekov, različnih gostot atomov in različnih načinov črpanja se 
-koeficienti ojačenja v večnivojskih sistemih med seboj precej razlikujejo. Primere 
-laserjev bomo sicer podrobneje obravnavali v nadaljevanju, zaenkrat povejmo 
-le, da je tipičen koeficient ojačenja v He-Ne laserju z dolžino $L = 0,5~\si{\metre}$
-enak $GL \sim 1,015$, v Nd:YAG laserju z dolžino ojačevalnega sredstva 
+koeficienti ojačenja v večnivojskih sistemih med seboj precej razlikujejo. Tipičen 
+koeficient ojačenja v He-Ne laserju z dolžino $L = 0,5~\si{\metre}$ je 
+$GL \sim 1,015$, v Nd:YAG laserju z dolžino ojačevalnega sredstva 
 $L = 10~\si{\centi\metre}$ pa $GL \sim 50$. Pri prvem laserju je sicer 
-velik presek za stimulirano sevanje, vendar 
-je gostota atomov v obrnjeni zasedenosti razmeroma majhna. V drugem primeru pa močno 
-črpanje prevlada nad majhnim presekom in pride do velikega ojačenja.\index{Optično ojačevanje}
+velik presek za stimulirano sevanje, vendar je gostota atomov v obrnjeni zasedenosti 
+razmeroma majhna. V drugem primeru pa močno črpanje prevlada nad majhnim presekom 
+in pride do velikega ojačenja.\index{Optično ojačevanje}
 
 \section{Homogena in nehomogena razširitev spektralne črte}
 \label{Razsiritev}
@@ -967,21 +964,19 @@ tudi absorpcijski koeficient.}
 \label{fig:Bennet}
 \end{figure}
 
-Zapišimo še absorpcijski koeficient za šibko vpadno valovanje pri 
-frekvenci $\omega^{\prime}$. Upoštevati moramo, da k absorpciji prispevajo vsi atomi, katerih
+Naj na snov poleg močnega vpadnega žarka pri $\omega_S$ vpada še šibko valovanje pri 
+frekvenci $\omega^{\prime}$. Izračunajmo absorpcijski koeficient za valovanje pri $\omega^\prime$. 
+Upoštevati moramo, da k absorpciji prispevajo vsi atomi, katerih
 hitrost je taka, da je prehod dovolj blizu $\omega^{\prime}$. Absorpcijski 
 koeficient\index{Absorpcijski koeficient} potem izračunamo s seštevanjem 
 po porazdelitvi ${\cal Z}(v)$
 (enačba~\ref{eq:muabs1})
 \begin{equation}
-\mu(\omega^{\prime})=\frac{\hbar\omega^{\prime}}{c}\int{\cal Z}(v)Bg'
-(\omega^{\prime}-\omega_{0}+k'v)\, dv.
+\mu(\omega^{\prime})=\frac{\hbar\omega^{\prime}}{c}\int{\cal Z}(v)Bg(\omega^{\prime}-\omega_{0}+k'v)\, dv.
 \label{4.90}
 \end{equation}
-Na splošno se funkcija $g'$ razlikuje od funkcije $g$, ki nastopa v izrazu za
-${\cal Z}$, saj sta njuni širini lahko različni. Vsekakor pa velja, da je 
-homogena razširitev dosti manjša od Dopplerjeve širine.
-V prvem približku vzemimo, da lahko Lorentzovo $g'(\omega)$ nadomestimo kar z
+Homogena razširitev je dosti manjša od Dopplerjeve širine, zato
+v prvem približku Lorentzovo funkcijo $g$ v števcu nadomestimo kar z
 $\delta(\omega)$. Tako je absorpcijski koeficient za šibko testno svetlobo 
 \begin{eqnarray}
 \mu(\omega^{\prime}) & = & \frac{\hbar\omega^{\prime}}{k'c}B\frac{{\cal N}
