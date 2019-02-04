@@ -976,23 +976,25 @@ po porazdelitvi ${\cal Z}(v)$
 \label{4.90}
 \end{equation}
 Homogena razširitev je dosti manjša od Dopplerjeve širine, zato
-v prvem približku Lorentzovo funkcijo $g$ v števcu nadomestimo kar z
-$\delta(\omega)$. Tako je absorpcijski koeficient za šibko testno svetlobo 
+v prvem približku Lorentzovo funkcijo $g$ v enačbi (\ref{4.90}) nadomestimo kar z
+$\delta(\omega)$, v izrazu za $\cal Z$ (enačba~\ref{4.88}) pa jo pustimo. 
+Tako je absorpcijski koeficient za šibko testno svetlobo 
 \begin{eqnarray}
 \mu(\omega^{\prime}) & = & \frac{\hbar\omega^{\prime}}{k'c}B\frac{{\cal N}
 (\frac{\omega_0-\omega'}{k'})}{1+\frac{2Bj}{Ac}g(\omega_S-\omega')} \\ \nonumber 
  & \approx & \hbar B{\cal N}\left(\frac{\omega_0-\omega'}{k'}\right)\left(1-\frac{2Bj}{Ac}g(\omega_S-\omega')\right).
 \end{eqnarray}
- V drugi vrstici smo uporabili približek (enačba~\ref{4.89}). Odvisnost $\mu(\omega^{\prime})$,
-ki jo izmerimo tako, da spreminjamo frekvenco testnega snopa $\omega^{\prime}$,
-je Gaussove oblike z vdolbino pri $\omega_S$ in je podobna porazdelitvi, 
-kot jo kaže slika (\ref{fig:Bennet}). 
+V drugi vrstici smo uporabili približek (enačba~\ref{4.89}). Vidimo, da je 
+odvisnost $\mu(\omega^{\prime})$ Gaussove oblike z vdolbino pri $\omega_S$ in je tako
+podobna porazdelitvi, kot jo kaže slika (\ref{fig:Bennet}). Odvisnost 
+$\mu(\omega^{\prime})$ lahko tudi izmerimo, tako da spreminjamo 
+frekvenco testnega snopa $\omega^{\prime}$.
 
 \begin{remark}
- Merjenje nasičenja absorpcije s testnim
-žarkom torej omogoča opazovanje oblike homogene črte kljub mnogo večji
-nehomogeni Dopplerjevi razširitvi in je zato v moderni spektroskopiji
-velikega pomena.
+ Merjenje absorpcije s testnim
+žarkom omogoča opazovanje oblike homogene črte kljub mnogo večji
+nehomogeni Dopplerjevi razširitvi. V moderni spektroskopiji ima zato ta metoda
+velik pomen.
 \end{remark}
 
 Izračunajmo še absorpcijski koeficient za prvi, močan vpadni snop, tako da v
@@ -1020,12 +1022,12 @@ Willis Eugene Lamb Jr., 1913--2008.}\index{Lambova vdolbina}.
 \input{slike/05_Lamb.pdf_tex}
 \caption{Porazdelitev atomov po hitrosti v osnovnem stanju, če svetloba prehaja 
 skozi plin v dveh smereh (a). Če frekvenca vpadne svetlobe približno sovpada s centralno 
-frekvenco prehoda, se obe vdolbini prekrivata in absorpcija se zmanjša (b).}
+frekvenco prehoda, se vdolbini prekrivata in absorpcija se zmanjša (b).}
 \label{fig:Lamb}
 \end{figure}
 
-Zapišimo še enačbe za ta primer. Snop povzroči spremembo zasedenosti
-pri prehodu skozi plin v obeh smereh, zato je sedaj 
+Zapišimo enačbe za ta primer. Vpadni snop svetlobe povzroči spremembo zasedenosti
+pri prehodu skozi plin v obeh smereh, zato je zdaj 
 \begin{equation}
 {\cal Z}(v)\approx{\cal N}(v)\left(1-\frac{2Bj}{Ac}\left(g(\omega_S-\omega_{0}+kv)+
 g(\omega_S-\omega_{0}-kv)\right)\right).
@@ -1039,7 +1041,7 @@ pozitivni smeri
  {Ac}\left(g(0)+g(2(\omega_S-\omega_{0}))\right)\right)\;.
  \label{eq:lamb}
 \end{eqnarray}
-Izmerjeni absorpcijski profil je odvisen od frekvence vpadne svetlobe in ima na sredini vdolbino,
+Izmerjeni absorpcijski profil je odvisen od frekvence vpadne svetlobe $\omega_S$ in ima pri $\omega_0$ vdolbino,
 ki je zopet podobna homogeno razširjeni črti. Faktor 2 v argumentu
 funkcije $g(2(\omega_S-\omega_{0}))$ je posledica našega grobega približka,
 ko smo v integraciji $g(\omega_S-\omega_{0}+kv)$ nadomestili kar z
@@ -1052,8 +1054,8 @@ Pokaži, da je rezultat natančnejše izpeljave absorpcijskega koeficienta
  \mu_{+}(\omega_S) = \hbar B{\cal N}\left(\frac{\omega_S-\omega_0}{k}\right)\left(1-\frac{Bj}
  {Ac}\left(g(0)+g(\omega_S-\omega_{0})\right)\right)\;.
 \end{equation}
-Pri računu privzemi, da je Dopplerjeva razširitev bistveno večja in Maxwellovo porazdelitev
-prestavi pred integral. 
+Pri računu privzemi, da je širina Dopplerjeve porazdelitve bistveno večja od širine homogene
+razširitve (enačba~\ref{eq:homogenasirina}) in Maxwellovo porazdelitev postavi pred integral. 
 \end{definition}
 
 \section{*Izpeljava verjetnosti za prehod}
@@ -1091,20 +1093,19 @@ v vsakem nihanju votline $\alpha$. Zapišemo okrajšano
 |i,n_{\alpha}\rangle\equiv|i\rangle|\{n_{\alpha}\}\rangle.
 \label{4.48}
 \end{equation}
-Začetno stanje celotnega sistem naj bo tako $|2,n_{\alpha}\rangle$, kar pomeni, da je
+Začetno stanje celotnega sistema naj bo tako $|2,n_{\alpha}\rangle$, kar pomeni, da je
 atom v gornjem stanju (stanju 2), polje pa ima $n_{\alpha}$ fotonov v enem samem stanju $\alpha$.
 Ustrezno končno stanje po prehodu je $|1,n_{\alpha}+1\rangle$.
 
 V prvem redu teorije motenj je verjetnost za prehod iz začetnega v končno stanje
-na časovno enoto enaka
+na časovno enoto, pri čemer z delta funkcijo izberemo le prehod, pri katerem se ohranja
+energija, enaka
 \begin{equation}
 w_{21}=\frac{2\pi}{\hbar}|\langle1,n_{\alpha}+
 1|\,\hat{H}_{i}\,|2,n_{\alpha}\rangle|^{2}\,
 \delta(E_{2}-E_{1}-\hbar\omega_{\alpha}).
 \label{4.49}
 \end{equation}
-Z delta funkcijo izberemo le prehod, pri katerem se ohranja
-energija.
 
 Operator elektromagnetnega polja lahko po enačbi~(\ref{eq:pqrazvoj}) 
 razvijemo po lastnih nihanjih votline 
@@ -1144,7 +1145,7 @@ operatorji in jih vstavimo v razvoj električnega polja (enačba~\ref{4.50}). Do
 \left(\hat{a}_{\alpha}^{\dagger}-\hat{a}_{\alpha}\right)E_{\alpha}(\mathbf{r}).
 \label{4.53}
 \end{equation}
-Nadaljujemo z izračunom potrebnega matričnega elementa. Operator koordinate
+Nadaljujemo z izračunom matričnega elementa. Operator koordinate
 $\hat{x}$ deluje le na atomski del stanja, $\hat{E}$ pa le na elektromagnetno
 polje, zato velja 
 \begin{eqnarray}
@@ -1164,12 +1165,13 @@ E_{\beta}(\mathbf{r})\nonumber \\
 \end{eqnarray}
 Od vseh operatorjev v razvoju polja je namreč od nič različen matrični
 element le za kreacijski operator za stanje $\alpha$.
+
 Vpeljimo še simbol za matrični element koordinate med 
-atomskimi stanji 
+atomskima stanjema
 $\langle1|\hat{x}|2\rangle=x_{12}$.
  Iskana verjetnost za prehod iz 
-začetnega stanja, v katerem smo imeli vzbujen atom in $n_{\alpha}$ fotonov, v končno
-stanje z atomom v osnovnem stanju in $n_{\alpha}+1$ fotonov v stanju $\alpha$ je tako
+začetnega stanja, v katerem je v votlini vzbujen atom in $n_{\alpha}$ fotonov, v končno
+stanje, v katerem je atom v osnovnem stanju in $n_{\alpha}+1$ fotonov v stanju $\alpha$, je tako
 \begin{equation}
 w_{21}=\frac{\pi e^{2}\omega_{\alpha}x_{12}^{2}}{V\epsilon_{0}}
 (n_{\alpha}+1)\,E_{\alpha}^{2}(\mathbf{r})\,\delta(E_{2}-E_{1}-\hbar\omega_{\alpha}).
@@ -1185,10 +1187,10 @@ sevanje\index{Stimulirano sevanje}. Verjetnost za prehod vsebuje
 porazdeljen po votlini, lahko ta člen nadomestimo s povprečno vrednostjo.
 Za stoječe valovanje je to 1/2.
 
-Najprej poglejmo verjetnost za spontano emisijo. 
+Kolikšna pa je verjetnost za spontano emisijo?
 Spontana emisija je možna v vsa elektromagnetna nihanja votline s
-pravo frekvenco. Celotno verjetnost za prehod atoma iz vzbujenega
-v osnovno stanje izračunamo tako, da seštejemo verjetnosti za prehod z izsevanim fotonom 
+pravo frekvenco. Celotno verjetnost za prehod atoma iz vzbujenega stanja
+v osnovno izračunamo tako, da seštejemo verjetnosti za prehod z izsevanim fotonom 
 v določenem stanju. Spomnimo se, da je ta verjetnost ravno enaka 
 Einsteinovem koeficientu $A_{21}$\index{Einsteinovi koeficienti} (enačba~\ref{4.27})
 \begin{equation}
@@ -1201,7 +1203,7 @@ Za prostorsko odvisnost polja $E^{2}(\mathbf{r})$ smo vzeli povprečje
 in upoštevamo enačbo~(\ref{4.4}). Dobimo
 \begin{equation}
 A_{21}=\frac{\pi e^{2}x_{12}^{2}}{2\hbar\epsilon_{0}}\int\rho(\omega_{\alpha})\omega_\alpha\, 
-\delta(\omega_{0}-\omega_{\alpha})\, d\omega_{\alpha}=\frac{e^{2}\omega_{0}^{3}x_{12}^{2}}{2\pi\epsilon_{0}\hbar c^{3}},
+\delta(\omega_{0}-\omega_{\alpha})\, d\omega_{\alpha}=\frac{e^{2}\omega_{0}^{3}x_{12}^{2}}{\epsilon_{0} h c^{3}},
 \label{4.58}
 \end{equation}
  pri čemer smo z $\omega_{0}=(E_{2}-E_{1})/\hbar$ označili frekvenco prehoda. S tem smo 
@@ -1233,8 +1235,8 @@ B_{21}=\frac{V\,w_{21}}{n_{\alpha}\,\hbar\omega_{\alpha}\, g(\omega_{\alpha}-\om
 =\frac{\pi e^{2}x_{12}^{2}}{2\epsilon_{0}\hbar^{2}}.
 \label{4.60}
 \end{equation}
-Poglejmo  še razmerje izračunanih Einsteinovih koeficientov iz enačb~(\ref{4.58}) in 
-(\ref{4.60})
+Razmerje Einsteinovih koeficientov izračunamo z uporabo enačb~(\ref{4.58}) in 
+(\ref{4.60}) in dobimo
 \begin{equation}
  \frac{A_{21}}{B_{21}}=\frac{\hbar \omega_\alpha^3}{\pi^2 c^3},
 \end{equation}
@@ -1244,7 +1246,7 @@ stimuliranim sevanjem ter gostoto stanj elektromagnetnega polja.
 
 \section{*Rabijeve oscilacije}
 Ko močna svetloba vpada na dvonivojski sistem, lahko v primeru, da je frekvenca 
-svetlobe $\omega$ blizu frekvence prehoda $\omega_0$, pride do periodične 
+vpadne svetlobe $\omega$ blizu frekvence prehoda $\omega_0$, pride do periodične 
 izmenjave energije med 
 svetlobnim poljem in dvonivojskim sistemom.\index{Dvonivojski sistem} 
 Oscilacije števila fotonov oziroma pričakovane 
@@ -1254,15 +1256,15 @@ oscilacije\footnote{Ameriški fizik in nobelovec Isidor Isaac Rabi, 1898--1988.}
 Obravnavajmo sklopitev dvonivojskega sistema z elektromagnetnim valovanjem 
 v semiklasičnem modelu.\index{Semiklasični model} 
 To pomeni, da dvonivojski sistem obravnavamo kvantno, 
-svetlobo, ki vpada, pa kot klasično skalarno polje. 
+svetlobo, ki vpada nanj, pa kot klasično skalarno polje. 
 V odsotnosti električnega polja zapišemo Hamiltonian\index{Hamiltonova
 funkcija} za elektron kot
 \begin{equation}
 H_0 = \hbar \omega_1 |1\rangle \langle1| + \hbar \omega_2 |2\rangle \langle2|,
 \end{equation}
 pri čemer je $\omega_2- \omega_1 = \omega_0$ frekvenca prehoda. V prisotnosti 
-svetlobnega polja moramo dodati še člen, ki opisuje dipolno interakcijo in 
-časovno odvisen Hamiltonian zapišemo kot
+svetlobnega polja moramo dodati še člen, ki opisuje dipolno interakcijo. Celoten
+Hamiltonian postane časovno odvisen in ga zapišemo kot
 \begin{equation}
 H = \hbar \omega_1 |1\rangle \langle1| + \hbar \omega_2 |2\rangle \langle2|
 -e\hat{x}E_0 \cos (\omega t).
@@ -1297,8 +1299,8 @@ tako da enačbi prepišemo v
 \label{eq:rabi2}
 \end{equation}
 kjer je $\Delta = \omega_0-\omega$. Dodajmo še začetni pogoj, da je 
-sistem v osnovnem stanju in torej $c_1(0)=1$ in $c_2(0)=0$ in rešitvi enačb
-(\ref{eq:rabi2}) sta 
+sistem v osnovnem stanju in torej $c_1(0)=1$ in $c_2(0)=0$. Rešitvi enačb
+(\ref{eq:rabi2}) sta tako
 \begin{eqnarray}
 c_1(t)&=&e^{-i\Delta t/2}\, \left(\cos\left(\frac{\Omega t}{2}\right) + 
 i \frac{\Delta}{\Omega} \sin\left(\frac{\Omega t}{2}\right) \right)\qquad \mathrm{in} 
@@ -1306,10 +1308,10 @@ i \frac{\Delta}{\Omega} \sin\left(\frac{\Omega t}{2}\right) \right)\qquad \mathr
 c_2(t)&=&\frac{V}{i\hbar \Omega} e^{i\Delta t/2}\, \sin\left(\frac{\Omega t}{2}\right).
 \label{eq:rabi4}
 \end{eqnarray}
-Pri tem smo vpeljali tako imenovano Rabijevo frekvenco\index{Rabijeva frekvenca}
+Pri tem smo vpeljali Rabijevo frekvenco\index{Rabijeva frekvenca}
 \begin{equation}
 \Omega = \sqrt{\Delta^2 + \left(\frac{V}{\hbar}\right)^2} = \sqrt{(\omega_0-\omega)^2 
-+ \left(\frac{\langle1|\hat{x}|2\rangle\, eE_0}{\hbar}\right)^2}
++ \left(\frac{\langle1|\hat{x}|2\rangle\, eE_0}{\hbar}\right)^2}.
 \end{equation}
 \begin{definition}
 Pokaži, da enačbi~(\ref{eq:rabi3}) in (\ref{eq:rabi4}) rešita
@@ -1322,10 +1324,10 @@ P_2(t) = |c_2(t)|^2 = \frac{V^2}{\hbar^2 \Omega^2}\sin^2(\Omega t/2).
 Če je frekvenca vpadne svetlobe točno enaka frekvenci prehoda, je $\Delta = 0$ in 
 $\Omega = V/\hbar$. Takrat je amplituda nihanja zasedenosti vzbujenega stanja kar enaka 1
 in sistem v celoti periodično prehaja iz osnovnega stanja v vzbujeno in nazaj. To pomeni,
-da pride izmenično do popolne absorpcije svetlobe in do popolne stimulirane emisije.
+da prihaja izmenično do popolne absorpcije svetlobe in do popolne stimulirane emisije.
 Pri odstopajoči vpadni frekvenci se amplituda nihanja zmanjša, hkrati pa se poveča
 frekvenca oscilacij. Frekvenca oscilacij pa ni odvisna zgolj od frekvence vpadnega valovanja, 
-ampak tudi od amplitude električne poljske jakosti vpadnega valovanja. Zelo groba ocena
+ampak tudi od njegove amplitude električne poljske jakosti. Zelo groba ocena
 Rabijeve frekvence je zato $\Omega \sim~\si{MHz}$.
 \begin{figure}[h]
 \centering
@@ -1339,6 +1341,6 @@ zmanjšuje, njihova frekvenca pa povečuje.}
 \end{figure}
 \begin{remark}
 Rabijeve oscilacije niso omejene samo na optične prehode, ampak se pojavijo pri 
-vrsti dvonivojskih sistemov, ki interagirajo z spreminjajočim se zunanjim poljem, na primer
-pri jedrski magnetni resonanci (NMR) ali kvantnih logičnih vezjih.
+vrsti dvonivojskih sistemov, ki interagirajo z spreminjajočim se zunanjim poljem. Poznamo jih 
+na primer pri jedrski magnetni resonanci (NMR) ali kvantnih logičnih vezjih.
 \end{remark}
