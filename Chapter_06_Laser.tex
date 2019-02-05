@@ -1,61 +1,67 @@
 \chapterimage{slike/Laser.jpg} 
 \chapter{Laser}
 
-V tem poglavju bomo opisali delovanje laserjev in spoznali njihove prednosti
-pred navadnimi svetili. Zapisali bomo zasedbene enačbe in razložili delovanje 
-sunkovnih laserjev ter spoznali nekaj 
-, sprektralno širino, relaksacijske oscilacije, razložili delovanje sunkovnih
-laserjev, meritev, stabilizacija frekvence, glavnik..*****
+V prejšnjih poglavjih smo spoznali resonatorje, pojasnili ojačevanje svetlobe in 
+opisali črpanje, ki je potrebno za ojačevanje optičnega signala. V tem poglavju bomo vsa ta
+spoznanja združili in komponenete sestavili v eno samo napravo -- laser. Opisali 
+bomo delovanje laserjev in spoznali njihove prednosti pred navadnimi svetili. 
+Zapisali bomo zasedbene enačbe in razložili delovanje laserjev, opisali načine
+delovanja laserjev v sunkih in spoznali nekaj zanimivih pojavov, ki so posledica
+lastnosti laserske svetlobe.
 
 \section{Laser}
-
-V prejšnjem poglavju smo spoznali, da se v sredstvu z obrnjeno zasedenostjo
-med dvema nivojema pojavi optično ojačevanje. Zdaj pa postavimo tako snov 
-v optični resonator. Na začetku dobimo predvsem spontano izsevano svetlobo, ki se
-odbija med zrcaloma resonatorja in se pri prehodu skozi snov ojačuje. Tako
-se vzbujajo nihanja resonatorja z nihajnimi frekvencami blizu frekvence
+\index{Laser}
+Spoznali smo, da se svetloba pri prehodu skozi sredstvo z obrnjeno zasedenostjo
+med dvema nivojema ojačuje. Zdaj pa postavimo tako sredstvo v optični resonator. 
+\index{Resonator} Na začetku nastaja predvsem spontano izsevana svetloba, ki 
+\index{Spontano sevanje} se med zrcaloma
+resonatorja odbija in ob vsakem preletu skozi snov postopoma ojačuje.
+\index{Optično ojačevanje}
+Vzbujajo se nihanja resonatorja z nihajnimi frekvencami blizu frekvence
 atomskega prehoda, pri katerih snov ojačuje. Energija nihanj z dovolj
 majhnimi izgubami narašča, dokler se ojačenje ne izenači z izgubami.
+\index{Izgube v resonatorju}
 Sistem preide v stacionarno stanje in seva močno koherentno svetlobo. Tak
 izvor svetlobe imenujemo laser. Beseda laser je nastala iz kratice za {\it Light
 Amplification by Stimulated Emission of Radiation} --  ojačenje svetlobe s
 stimulirano emisijo sevanja.
+
 \begin{figure}[h]
 \centering
-\def\svgwidth{110truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/06_shema.pdf_tex}
-\caption{Shema laserja, ki ga sestavljajo ojačevalno sredstvo, črpalni mehanizem
-in resonator.}
+\caption{Shema laserja s ključnimi deli: ojačevalno sredstvo, 
+črpalni mehanizem in resonator}
 \label{fig:shemalaserja}
 \end{figure}
-\vglue-0.5truecm
-V grobem ima laser tri ključne sestavne dele: ojačevalno sredstvo, 
-črpalni mehanizem in zrcali, ki tvorita resonator (slika~\ref{fig:shemalaserja}). Črpalno
-sredstvo vzdržuje obrnjeno zasedenost v ojačevalnem sredstvu, resonator pa zagotavlja,
-da je dovolj valovanja, da stimulirano sevanje prevlada nad spontanim.
-Odbojnost vsaj enega od zrcal mora biti manjša od 1, zato da skozenj izhaja svetloba.
-
 \begin{remark}
 Kot klasično analogijo za laser vzemimo klarinet, ki je sestavljen iz 
-cevi in iz ustnika. Cev deluje kot zvočni resonator, v katerem nastane 
+cevi in ustnika. Cev deluje kot resonator, v katerem nastane 
 stojni zvočni val, pri čemer je frekvenca stoječega vala določena z 
-dolžino cevi in s številom vozlov. Naloga ustnika je dovajati energijo 
-in s tem vzdrževati konstantno amplitudo nihanja. To glasbenik doseže s 
-pihanjem v ustnik in tresenjem prožnega jezička, ki s tresljaji poizvaja 
+dolžino cevi in s številom vozlov. Naloga ustnika je dovajanje energije 
+in s tem vzdrževanje konstantne amplitude nihanja. To glasbenik doseže s 
+pihanjem v ustnik in tresenjem prožnega jezička, ki s tresljaji proizvaja 
 zvok. Tresenje jezička je približno periodično in vsebuje mnogo različnih 
-frekvenc, tudi take, ki ustrezajo stoječim valovom v cevi. 
+frekvenc, tudi take, ki ustrezajo frekvenci stoječih valov v cevi. 
 Ko amplituda tlaka v cevi naraste nad neko mejo, pride do zanimivega
 pojava. Nihanje tlaka v gornjem koncu cevi povratno deluje na ustnik
-in ga sili, da niha s frekvenco najbolj vzbujenega stoječega vala v cevi,
-nihanje jezička z drugimi frekvencami pa zamre. Moč pihanja gre le še v
+in ga sili, da niha s frekvenco najmočneje vzbujenega stoječega vala v cevi,
+druge frekvence pa zamrejo. Moč pihanja gre le še v
 nihanje jezička s pravo frekvenco in ojačuje nihanje zračnega stolpca. 
-Tako s povratno zvezo med nihanjem jezička in stoječim valovanjem v cevi
-vzdržujemo stoječe valovanje s konstantno amplitudo. 
+Tako se s povratno zvezo med nihanjem jezička in stoječim valovanjem v cevi
+vzdržuje stoječe valovanje s konstantno amplitudo. 
 \end{remark}
 
+V grobem ima laser tri ključne sestavne dele: ojačevalno sredstvo, 
+črpalni mehanizem in ukrivljeni zrcali, ki tvorita resonator 
+(slika~\ref{fig:shemalaserja}). Črpalni \index{Črpanje}
+mehanizem vzdržuje obrnjeno zasedenost v ojačevalnem sredstvu, resonator pa omogoča,
+da se svetloba dovolj ojača in tako stimulirano sevanje prevlada nad spontanim. 
+Odbojnost vsaj enega od zrcal mora biti manjša od 1, da skozenj lahko izhaja svetloba.
+
 Pri osnovnem opisu delovanja laserja se omejimo na najpreprostejši model in 
-privzemimo, da je le eno resonatorsko nihanje tako, da njegova frekvenca
-sovpada s frekvenco prehoda aktivne snovi. Ta privzetek v večini laserjev ni
+privzemimo, da frekvenca le enega resonatorskega nihanja sovpada s 
+frekvenco prehoda aktivne snovi. Ta privzetek v večini laserjev ni
 avtomatično izpolnjen, vendar ga je pogosto mogoče doseči z dodatnimi elementi 
 v resonatorju. Aktivno snov oziroma ojačevalno sredstvo v laserju stalno 
 črpamo in s tem vzdržujemo obrnjeno zasedenost. 
@@ -64,27 +70,30 @@ Naj bo $W$ energija svetlobnega valovanja v resonatorju. Zaradi izgub skozi
 zrcali in zaradi absorpcije ter sipanja v resonatorju se energija na en obhod 
 resonatorja zmanjša za (enačba~\ref{eq:Lambda})
 \begin{equation}
-\Delta W_{\rm izgube}=-\Lambda W=-\left((1-{\cal {R}}_{1})+(1-{\cal {R}}_{2})
+\Delta W_{\rm izgube}=-\Lambda W=-\left(1-{\cal {R}}_{1}+1-{\cal {R}}_{2}
 -2\alpha L\right)W,
 \label{5.1}
 \end{equation}
 kjer so $\Lambda $ celotne izgube, $\alpha$ so izgube na enoto poti zaradi
-absoprcije in sipanja, $L$ je dolžina resonatorja, 
+absoprcije in sipanja, $L$ je dolžina resonatorja, \index{Izgube v resonatorju}
 ${\cal {R}}_{1}$ in ${\cal {R}}_{2}$ pa sta odbojnosti
-obeh zrcal. V ojačevalnem sredstvu, v katerem vzdržujemo obrnjeno zasedenost,
-pride do ojačevanja s stimuliranim sevanjem. Enegija nihanja resonatorja 
-se tako na na en obhod po enačbi (\ref{eq:djG}) poveča za 
+zrcal. V ojačevalnem sredstvu, v katerem vzdržujemo obrnjeno zasedenost,
+pride do ojačevanja s stimuliranim sevanjem. Energija nihanja resonatorja 
+se tako na en obhod po enačbi (\ref{eq:djG}) poveča za 
+\index{Ojačevanje s stimuliranim sevanjem|see{Stimulirano sevanje}}
 \begin{equation}  
 \Delta W_{\rm oja\check{c}enje}=\frac{G}{1+W/W_s}\,W\, 2L'.
 \label{5.2}
 \end{equation}
 Namesto saturacijske gostote svetlobnega toka $j_s$ smo vpeljali
 saturacijsko energijo $W_s=Vj_s/c$, $L'$ pa označuje dolžino ojačevalnega
-sredstva. Račun pogosto poenostavimo, tako da vzamemo $L'=L$, tukaj pa zaradi
+sredstva.\index{Saturacijska energija}
+Račun pogosto poenostavimo, tako da vzamemo $L'=L$, tukaj pa zaradi
 jasnosti obdržimo ločen zapis. Privzeli smo tudi, da je ojačenje na en
 obhod dovolj majhno, da enačbe (\ref{eq:djG}) ni treba integrirati.
 
-V stacionarnem stanju se izgube izenačijo z ojačenjem
+V stacionarnem stanju se zmanjšanje energije zaradi izgub ravno izenači 
+s povečanjem energije zaradi ojačenja. Zapišemo
 \beq
 |\Delta W_{\rm izgube}|=|\Delta W_{\rm oja\check{c}enje}|,
 \eeq
@@ -96,40 +105,39 @@ od koder sledi
 Ta enačba ima dve rešitvi za energijo svetlobnega nihanja. 
 Prva je $W=0$, druga pa  
 \boxeq{5.4}{ 
-W=W_s \left(\frac{G}{G_p}-1\right),
+W=W_s \left(\frac{G}{G_\mathrm{pr}}-1\right),
 }
-pri čemer je 
+pri čemer je
 \boxeq{5.5}{
-G_p = \frac{\Lambda}{2L'}.
+G_\mathrm{pr} = \frac{\Lambda}{2L'}.
 }
-Vidimo, da je druga rešitev za energijo nihanja pozitivna le v primeru,
-da je ojačenje večje od ojačenja praga $G> G_p$. Združimo 
-obe rešitvi in zapišemo, da je energija svetlobe v laserju pod pragom enaka
-nič, nad pragom pa linearno narašča z ojačenjem (slika~\ref{fig:energija}).
+Združimo obe rešitvi: energija svetlobe v laserju je pod določeno\index{Prag delovanja laserja}
+vrednostjo ojačenja, imenujemo jo ojačenje na pragu delovanja $G_\mathrm{pr}$, enaka
+nič, nad pragom pa linearno narašča z ojačenjem $G$ (slika~\ref{fig:energija}).
 Ojačenje je seveda odvisno od stopnje obrnjene zasedenosti, ta pa je povezana
-z močjo optičnega črpanja.
+z močjo črpanja.
 \begin{figure}[h]
 \centering
-\def\svgwidth{80truemm} 
+\def\svgwidth{60truemm} 
 \input{slike/06_energija.pdf_tex}
 \caption{Odvisnost energije svetlobe v laserju od ojačenja}
 \label{fig:energija}
 \end{figure}
 
-Izhodna moč laserja je enaka deležu energije, ki na en prelet zapusti
-resonator skozi izhodno zrcalo, deljenim s časom obhoda resonatorja $2L/c$ 
+Izhodna moč laserja je enaka energiji, ki zapusti\index{Izhodna moč laserja}
+resonator skozi izhodno zrcalo, deljeni s časom obhoda resonatorja $2L/c$ 
 \boxeq{5.6}{
 P=(1-{\cal {R}}_{1})\frac{c}{2L}\,W.
 }
-Ker so vsi faktorji v gornji enačbi konstantni, je izhodna moč kar sorazmerna
-z energijo svetlobe v resonatorju. Odvisnost izhodne moči od črpanja je 
+Ker so vsi predfaktorji v gornji enačbi konstantni, je izhodna moč kar sorazmerna
+z energijo svetlobe v resonatorju. Odvisnost izhodne moči laserja od črpanja je 
 tako do konstante enaka, kot je prikazana na sliki (\ref{fig:energija}). 
 
 \begin{definition}
 Izračunaj izhodno moč iz zrcala pri dani dolžini resonatorja $L=L'$, 
 odbojnosti enega zrcala ${\cal {R}}_{2}=1$, 
-notranjih izgubah na enoto dolžine $\alpha$ in ojačenju $G$ ter pokaži, da
-je izhodna moč največja pri 
+notranjih izgubah na enoto dolžine $\alpha$ in ojačenju $G$. Pokaži, da
+je izhodna moč največja pri odbojnosti izhodnega zrcala 
 \beq
 {\cal {R}}_1 = 1-2\alpha L \left(\sqrt{\frac{G}{\alpha}}-1\right).
 \eeq
