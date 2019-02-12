@@ -718,37 +718,43 @@ ojačano prenaša v šum izhodne moči.
 Kadar potrebujemo veliko izhodno moč laserja pri zmerni povprečni porabi 
 energije, zvezno delujoči laserji, ki smo jih obravnavali do zdaj, 
 niso primerni. Poslužiti se moramo sunkovnih laserjev, 
-ki v kratkem časovnem intervalu 
-delujejo z zelo veliko izhodno močjo. 
+ki v kratkem časovnem intervalu delujejo z zelo veliko izhodno močjo. 
 
-Poglejmo primer. Zvezno delujoč laser z izhodno močjo $10~\si{kW}$ bi pri
-$0,1~\%$ izkoristku poteboval črpalno moč $10~\si{MW}$. Po drugi strani 
-sunkovni laser, ki seva svetlobo v $10~\si{ns}$ dolgih sunkih s 
-povprečno energijo $1~\si{J}$, deluje z močjo $100~\si{MW}$. Pri 
-ponovitvni sunkov $1000/\si{s}$ je tako potrebna črpalna moč le $1~\si{kW}$.
-Poznamo tri načine sunkovnega delovanja laserjev. V prvem primeru 
-periodično spreminjamo črpalno moč, v drugih dveh (preklop dobrote in 
-uklepanje faz) pa periodično spreminjamo izgube v resonatorju. 
+Poglejmo primer. Močen zvezno delujoč laser ima izhodno moč $10~\si{kW}$.
+Sunkovni laser pa naj oddaja svetlobo v $10~\si{ns}$ dolgih sunkih 
+s povprečno energijo $1~\si{J}$ in s ponovitvijo $1000/\si{s}$.
+Povprečna moč, s katero deluje tak laser, je $1~\si{kW}$, moč, ki jo 
+dosega v sunkih, pa je $100~\si{MW}$. Tako pri nižji povprečni moči laserja
+dosežemo moči, ki so za $5$--$10$ velikostnih redov večje od zvezno delujočih
+laserjev. 
 
-Poglejmo najprej najpreprostejši način, pri katerem moduliramo črpanje.
-To dosežemo na primer z bliskavko ali drugim sunkovnim laserjem.
-Tipično je frekvenca modulacije črpanja $\nu \sim 20~\si{Hz}$.
-V takem laserju je črpanje periodično (slika~\ref{fig:pulseG}). Vendar
-se pri tem lahko pojavi težava. Ko ob močnem črpanju obrnjena zasedenost znatno
-preseže zasedenost praga (v nestacionarnem stanju je to mogoče), laser
-posveti in v kratkem času zasedenost pade nazaj pod prag. Če tedaj
-črpanje še traja, čez čas zasedenost dovolj naraste in laser
-ponovno posveti. To se lahko večkrat ponovi. Razmiki med zaporednimi sunki
+V grobem poznamo dva načina sunkovnega delovanja laserjev. V prvem primeru
+periodično spreminjamo črpalno moč, v drugem pa periodično 
+spreminjamo izgube v resonatorju. V slednjo skupino uvrščamo laserje na 
+preklop dobrote in laserje, ki uklepajo faze valovanj.   
+
+Obravnavajmo najprej najpreprostejši način, pri katerem moduliramo črpanje.
+To dosežemo na primer z bliskavko ali drugim sunkovnim laserjem. V intervalu 
+črpanja je ojačenje večje od izgub in svetloba izhaja iz laserja, ko pa črpanja 
+ni, so izgube prevelike in laser ne sveti. Tipična frekvenca modulacije črpanja je 
+$\nu \sim 20~\si{Hz}$. Najbolj pogosto se modulacija črpanja uporablja
+v polprevodniških laserjih, saj je zelo preprosto modulirati črpalni električni tok. 
+
+Vendar se pri modulaciji črpanja lahko pojavi težava. Ko ob močnem črpanju 
+obrnjena zasedenost znatno preseže zasedenost praga (v nestacionarnem stanju 
+je to mogoče), laser posveti in v kratkem času zasedenost pade nazaj pod prag. 
+Če tedaj črpanje še traja, zasedenost naraste in laser ponovno posveti. 
+To se lahko večkrat ponovi. Razmiki med zaporednimi sunki
 so reda velikosti periode relaksacijskih oscilacij, so pa lahko precej
-nepravilni. Pri takem režimu delovanja v posameznem sunku ne dobimo
-razpoložljive energije črpanja v enem samem lepo oblikovanem sunku, kar
-je za vrsto uporab zelo pomembno. 
-
+nepravilni  (slika~\ref{fig:pulseG}). Pri takem režimu delovanja v posameznem 
+sunku ne dobimo razpoložljive energije črpanja v enem samem lepo oblikovanem sunku, 
+kar močno omejuje uporabnost tega pristopa.
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/06_pulseG.pdf_tex}
-\caption{Delovanje sunkovnega laserja z moduliranim črpanjem}
+\caption{Delovanje sunkovnega laserja z moduliranim črpanjem, pri katerem
+se pojavijo neželene oscilacije}
 \label{fig:pulseG}
 \end{figure}
 
