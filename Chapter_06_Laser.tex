@@ -525,40 +525,42 @@ navadno večja od razlike med frekvencami posameznih
 stanj resonatorja. V plinih, na primer, je ojačevalna širina zaradi 
 Dopplerjevega pojava vsaj nekaj $\si{GHz}$, lastne frekvence resonatorja 
 pa so pri $30~\si{cm}$ dolgem resonatorju razmaknjene za $500~\si{MHz}$. 
-Tako se lahko zgodi, da ojačenje v laserju za več nihanj
-presega ojačenje na pragu in vzbujenih je več nihanj hkrati.
-Svetloba iz takega večfrekvenčnega laserja ni več monokromatska,
+Tako se lahko zgodi, da ojačenje v laserju za več nihanj hkrati 
+presega ojačenje na pragu in vzbujenih je več nihanj.
+Svetloba iz takega večfrekvenčnega laserja ni monokromatska,
 temveč je sestavljena iz množice ozkih črt znotraj ojačevalnega pasu.
 Izsevana svetloba tako ni bistveno bolj monokromatska od ustrezne spektralne 
-komponente svetlečega plina. Ostaja pa prostorsko koherentna.
+komponente svetlečega plina. Ostaja pa seveda prostorsko koherentna.
 
 Za holografijo, interferometrijo in nekatere spektroskopske uporabe
-potrebujemo ozko spektralno črt. Zato moramo poskrbeti, da je vzbujeno le
-eno nihanje resonatorja, najbolje tisto, ki je najbližje vrhu ojačenja
-ativnega sredstva. To dosežemo tako, da za vsa ostala nihanja povečamo izgube, 
-na primer s Fabry-Perotovim interferometrom, ki ga vstavimo v laserski resonator
-(slika~\ref{fig:FPres}). Njegova prepustnost v odvisnosti od frekvence $\omega$, debeline $L$,
-prepustnosti zrcal ${\cal R}$ in nagiba glede na os resonatorja $\varphi$ 
-je podana z enačbo~(\ref{eq:FP}) 
+potrebujemo ozko spektralno črto. Zato moramo poskrbeti, da je vzbujeno le
+eno samo nihanje resonatorja, najbolje tisto, ki je najbližje vrhu ojačenja
+aktivnega sredstva. To dosežemo tako, da za vsa ostala nihanja povečamo izgube,
+na primer s Fabry-Perotovim etalonom, ki ga vstavimo v laserski resonator
+(slika~\ref{fig:FPres}). Njegova prepustnost v odvisnosti od krožne frekvence 
+$\omega$, debeline $L$, lomnega količnika $n$, odbojnost sten ${\cal R}$ in 
+nagiba glede na os resonatorja $\varphi$ je podana z enačbo~(\ref{eq:FP}) 
 \begin{equation}
-T=\frac{1}{1+\frac{4{\cal {R}}}{(1-{\cal {R}})^{2}}\sin^{2}(\frac{\omega}{c}L\cos \varphi )}
+T=\frac{1}{1+\frac{4{\cal {R}}}{(1-{\cal {R}})^{2}}\sin^{2}(\frac{n\omega}{c}L\cos \varphi )}
 \label{5.22}
 \end{equation}
-in jo kaže slika~(\ref{fig:Fabry-Perot}). Razmik med zrcaloma in nagib interferometra
+in jo kaže slika~(\ref{fig:Fabry-Perot}). 
+
+Debelino etalona in njegov nagib 
 izberemo tako, da vrh prepustnosti sovpada z izbranim stanjem resonatorja. 
 Izgube za ostala nihanja, ki bi sicer bila ojačana, se tako povečajo in laser
-sveti le pri eni sami izbrani frekvenci. Na sliki 
-(\ref{fig:FPmodes}) so prikazana ojačana lastna stanja resonatorja in prepustnost
-Fabry-Perotovega interferometra, ki vodi do enega samega ojačanega stanja. 
-Ker zadošča že zmerno povečanje izgub, je reflektivnost zrcal interferometra 
-običajno dokaj nizka, pod 0,5. 
+sveti le pri eni sami izbrani frekvenci. Ta proces je shematsko prikazan na sliki 
+(\ref{fig:FPmodes}): izmed vseh možnih stanj v resonatorju (a) svetijo le tista, za katere
+je ojačenje nad pragom (b). Ko v resonator dodamo Fabry-Perotov etalon z razmeroma velikim
+razmikom med sosednjimi vrhovi prepustnosti (c), je ojačeno eno samo nihanje (d). 
+Ker zadošča že zmerno povečanje izgub, je odbojnost sten etalona navadno dokaj nizka, 
+pod 0,5. 
 
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/06_FPres.pdf_tex}
-\caption{Shema laserja, v katerega vstavimo Fabry-Perotov interferometer. Tako dosežemo,
-da laser deluje pri eni sami izbrani frekvenci.}
+\caption{Shema laserja s Fabry-Perotovim etalonom}
 \label{fig:FPres}
 \end{figure}
 
@@ -567,33 +569,39 @@ da laser deluje pri eni sami izbrani frekvenci.}
 \def\svgwidth{100truemm} 
 \input{slike/06_FPmodes.pdf_tex}
 \caption{Lastne frekvence resonatorja (a) in frekvenčna odvisnost ojačenja z označenim 
-pragom ojačenja (b). Z rdečo so označene tiste lastne frekvence, ki se v laserju ojačujejo. 
-Ko dodamo Fabry-Perotov interferometer s dano prepustnostjo (c), povečamo
+pragom delovanja (b). Z zeleno so označene tiste lastne frekvence, ki se v laserju ojačujejo. 
+Ko dodamo Fabry-Perotov etalon z dano prepustnostjo (c), povečamo
 izgube za vse načine, ki bi sicer bili ojačani, razen za enega. 
 Tako dosežemo delovanje laserja pri eni sami frekvenci (d).}
 \label{fig:FPmodes}
 \end{figure}
 
 \begin{remark}
-Nagib interferometra omogoča natančno spreminjanje izbrane frekvence, poleg tega
+Nagib etalona omogoča natančno spreminjanje izbrane frekvence, poleg tega
 pa je nujen, da se neprepuščena svetloba odbije ven iz smeri osi resonatorja. Če bi 
-bila os interferometra vzporedna z osjo resonatorja, bi se pojavile dodatne resonance, 
+bila os etalona vzporedna z osjo resonatorja, bi se pojavile dodatne resonance, 
 kar bi močno motilo delovanje laserja.
 \end{remark}
 
+Opisali smo, kako v laserju dosežemo delovanje pri enem samem longitudinalnem nihanju.
+Poleg tega je treba omejiti tudi ojačenje višjih prečnih nihanj. To navadno 
+dosežemo z zaslonkami, saj so snopi višjih redov bolj razširjeni od osnovnega. 
+
 \section{Relaksacijske oscilacije}
 Stacionarno delovanje laserjev smo že dodobra spoznali. Za obravnavo
-nestacionarnega delovanja pa moramo reševati sistem diferencialnih enačb 
-(\ref{5.7}) in (\ref{5.8}), kar gre na splošno le numerično.
+nestacionarnega delovanja pa se moramo vrniti k obravnani zasedbenih enačb 
+(\ref{5.7}) in (\ref{5.8}). V splošnem je treba zapisan sistem diferencialnih
+enačb reševati numerično, vseeno pa lahko nekaj povemo o obnašanju laserja
+v bližini stacionarnega delovanja. 
 
-Za začetek si oglejmo, kako se obnaša laser v bližini stacionarnega stanja. 
-Spet se omejimo na enofrekvenčni laser, ki ga opišemo z enačbama (\ref{5.7})
-in (\ref{5.8}). Te zaradi preglednosti zapišimo nekoliko drugače. Najprej vpeljimo 
+Spet se omejimo na enofrekvenčni laser, v katerem zasedenost vzbujenega stanja
+in število fotonov v njem opišemo z enačbama (\ref{5.7})
+in (\ref{5.8}). Najprej zaradi preglednosti vpeljemo 
 brezdimnezijski čas $t^{\prime}=t A$ in $\tau^{\prime}=\tau A$, kar pomeni, da merimo 
-čas v enotah življenskega časa laserskega nivoja. Uporabimo spet parameter
+čas v enotah življenjskega časa laserskega nivoja. Ponovno uporabimo parameter
 $p=VA/(B\hbar\omega g)$ (enačba~\ref{5.10}), ki pomeni število stanj 
 elektromagnetnega polja v volumnu $V$ in znotraj spektralne širine laserskega nivoja. 
-Enačbi potem zapišemo 
+Enačbi zapišemo 
 \begin{eqnarray}  
 \frac{d N_2}{d t^{\prime}}&=&-\frac{nN_2}{p}-N_2+N_{20} \label{5.23a} \\
 \frac{d n}{d t^{\prime}}& = & \frac{nN_2}{p}-\frac{2}{\tau^{\prime}}n.
@@ -606,8 +614,8 @@ moč črpanja. V enačbi za hitrost spreminjanja števila fotonov
 smo zanemarili prispevek spontanega sevanja, za katerega smo že ugotovili,
 da se pozna le do praga.
 
-Pri reševanju nelinearnih diferencialnih enačb pogosto poiščemo približke rešitev
-z linearizacijo. Naj laser najprej deluje stacionarno, v nekem trenutku pa se 
+Poiščimo približne rešitve sistema sklopljenih diferencialnih enačb z 
+linearizacijo. Naj laser najprej deluje stacionarno, v nekem trenutku pa se 
 nekoliko izmakne iz stacionarnega stanja. To se lahko zgodi, na primer, če
 spremenimo moč črpanja. Trenutno zasedenost $N_2$ in število fotonov $n$
 lahko zapišemo v obliki 
@@ -629,7 +637,7 @@ Enačba (\ref{5.25}) je v skladu s tem, da je stacionarna zasedenost
 enaka zasedenosti na pragu, ta pa je odvisna od izgub resonatorja. 
 Razmerje $a=N_{20}/N_{2s}$ je mera za moč črpanja in
 mora biti v delujočem laserju večje od 1. V večini praktičnih primerov
-doseže $a$ vrednosti do 3 ali 5.
+doseže vrednosti $a \sim 5$.
 
 Vstavimo nastavka (enačbi~\ref{5.24}) v enačbi (\ref{5.23a} in \ref{5.23}). 
 Dobimo sistem enačb
@@ -637,22 +645,22 @@ Dobimo sistem enačb
 \frac{d x}{d t^{\prime}} &=&-\frac{n_sN_{2s}}{p}-N_{2s}+N_{20}- \frac{1}{p}
 (n_sx+N_{2s}y+xy)-x \\
 \frac{d y}{d t^{\prime}} &=& \frac{n_sN_{2s}}{p}-\frac{2}{\tau^{\prime}}n_s
-+ \frac{1}{p}(n_s x+N_{2s} y+xy)-\frac{2}{\tau^{\prime}}y
++ \frac{1}{p}(n_s x+N_{2s} y+xy)-\frac{2}{\tau^{\prime}}y.
 \label{5.27}
 \end{eqnarray}
 
-Ker sta $x$ in $y$ majhna v primeri s stacionarnimi vrednostmi, lahko
-zanemarimo mešan produkt $xy$. Vsi členi, ki vsebujejo le stacionarne vrednosti,
+Ker sta $x$ in $y$ majhna v primerjavi s stacionarnimi vrednostmi, lahko
+mešan produkt $xy$ zanemarimo. Vsi členi, ki vsebujejo le stacionarne vrednosti,
 dajo ravno 0, saj smo jih tako določili. Če upoštevamo še izraza 
 za stacionarni vrednosti (enačbi~\ref {5.25} in \ref{5.26}), 
 zapišemo linearizirani diferencialni enačbi za odmika od stacionarnih vrednosti 
-\begin{eqnarray}
-\frac{dx}{dt^{\prime }} &=&-a\,x-\frac{2}{\tau ^{\prime }}\,y  \label{5.28}
-\\
-\frac{dy}{dt^{\prime }} &=&(a-1)\,x.
-\end{eqnarray}
-Linearne sisteme diferencialnih enačb s konstantnimi
-koeficienti rešujemo tako, da poiščemo rešitev v obliki eksponentne funkcije 
+\begin{equation}
+\frac{dx}{dt^{\prime }} =-a\,x-\frac{2}{\tau ^{\prime }}\,y   \quad \mathrm{in} \quad
+\frac{dy}{dt^{\prime }} =(a-1)\,x.
+\label{5.28}
+\end{equation}
+Zapisan linearni sistemi diferencialnih enačb s konstantnimi
+koeficienti rešimo tako, da poiščemo rešitev v obliki eksponentne funkcije 
 \begin{equation}
 x=x_{0}e^{\lambda t^{\prime }} \qquad {\mathrm in } \qquad 
 y=y_{0}e^{\lambda t^{\prime }}.
@@ -675,32 +683,30 @@ Rešitvi sta
 \end{equation}
 Obnašanje rešitve je odvisno od velikosti brezdimenzijskega relaksacijskega
 časa nihanja resonatorja $\tau ^{\prime }=A\tau $. Kratek račun pokaže, da je 
-za $\tau ^{\prime }>2$ izraz pod korenom pozitiven pri vseh $a$ in laser 
-se vrača v stacionarno stanje eksponentno. Za $\tau' <2$ pa je koren v nekem območju
+za $\tau ^{\prime }>2$ izraz pod korenom za vse vrednosti $a$ pozitiven in laser 
+se vrača v stacionarno stanje eksponentno. Za $\tau' <2$ pa je koren v določenem območju
 parametra $a$ imaginaren in laser se vrača v stacionarno stanje z
-dušenim nihanjem, ki mu pravimo relaksacijske oscilacije.
-
+dušenim nihanjem, ki mu pravimo relaksacijske oscilacije. Primer takega nihanja 
+pri vključitvi laserja kaže slika~(\ref{fig:relax}).
 \begin{figure}[h]
 \centering
-\def\svgwidth{90truemm} 
+\def\svgwidth{80truemm} 
 \input{slike/06_relax.pdf_tex}
 \caption{Relaksacijske oscilacije intenzitete laserja po vklopu}
 \label{fig:relax}
 \end{figure}
 
-V navadnih resonatorjih je $\tau \sim 10^{-7}~\si{s}$. Razpadna
-konstanta laserskega nivoja $A$ je navadno dokaj majhna, ker je le v takih
-primerih lahko doseči obrnjeno zasedenost. Vzemimo $A \sim 10^5/\si{s}$,
-lahko pa je ta vrednost še dosti manjša. Tedaj je $\tau^{\prime}\sim 10^{-2}$ 
+Poglejmo še primer. Vzemimo vrednost $\tau \sim 10^{-7}~\si{s}$ in razpadno
+konstanto laserskega nivoja $A \sim 10^5/\si{s}$. Tedaj je $\tau^{\prime}\sim 10^{-2}$ 
 in relaksacijske oscilacije se pojavijo pri vseh dosegljivih vrednostih črpanja 
-nad pragom, to je za $a>1$. Ker $a$ v praksi ni nikoli dosti večji od 3, 
-je frekvenca oscilacij v brezdimenzijskih enotah v grobem
+nad pragom, to je za $a>1$. Ker $a$ v praksi ni nikoli dosti večji od $3$--$5$, 
+je krožna frekvenca oscilacij v brezdimenzijskih enotah približno
 enaka $\omega^{\prime}_r\sim 1/\sqrt{\tau^{\prime}}$. Ko preidemo
-nazaj na prave enote časa, dobimo $\omega_r\sim \sqrt{A/\tau}$. Frekvenca 
+nazaj na prave enote časa, dobimo $\omega_r\sim \sqrt{A/\tau}$. Krožna frekvenca 
 relaksacijskih oscilacij je v tem primeru velikostnega reda geometrijske 
 sredine med razpadnima konstantama nihanja resonatorja in atomskega stanja. 
-Primer takega nihanja pri vključitvi laserja kaže slika~(\ref{fig:relax}).
-
+Tipične vrednosti frekvence relaksacijskih oscilacij so $\sim 10^5~\si{Hz}$, 
+karakteristični čas dušenja pa $\sim 10^{-5}~\si{s}$.
 \begin{remark}
 Relaksacijske oscilacije so praktično pomembne, saj določajo gornjo mejo
 hitrosti, s katero lahko izhodna moč laserja sledi modulaciji črpanja.

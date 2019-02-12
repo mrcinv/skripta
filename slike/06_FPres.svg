@@ -23,6 +23,34 @@
        orient="auto"
        refY="0.0"
        refX="0.0"
+       id="marker1295"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path943"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path940"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
        id="Arrow1Mend"
        style="overflow:visible;"
        inkscape:isstock="true">
@@ -220,8 +248,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4643368"
-     inkscape:cx="269.99079"
+     inkscape:zoom="1.913362"
+     inkscape:cx="260.84459"
      inkscape:cy="62.309868"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -229,7 +257,7 @@
      inkscape:window-width="1624"
      inkscape:window-height="780"
      inkscape:window-x="182"
-     inkscape:window-y="514"
+     inkscape:window-y="235"
      inkscape:window-maximized="0"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -259,24 +287,14 @@
        height="36.707169"
        x="48.940697"
        y="102.86495" />
-    <g
-       id="g981"
-       transform="rotate(24.805944,172.43575,1251.8531)">
-      <rect
-         y="87.601578"
-         x="-108.80144"
-         height="82.296341"
-         width="8.0306416"
-         id="rect79"
-         style="opacity:1;fill:#c9e6ff;fill-opacity:1;stroke:#c9e6ff;stroke-width:2.15201688;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <rect
-         y="87.601578"
-         x="-81.912125"
-         height="82.296341"
-         width="8.0306416"
-         id="rect79-3"
-         style="opacity:1;fill:#c9e6ff;fill-opacity:1;stroke:#c9e6ff;stroke-width:2.15201688;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
+    <rect
+       style="opacity:1;fill:#c9e6ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.99687493;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect44"
+       width="33.808292"
+       height="75.946159"
+       x="389.97253"
+       y="-152.79837"
+       transform="rotate(32.461977)" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#d40000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Send)"
        d="m 22.760559,121.53738 530.801791,0.20271"
@@ -311,24 +329,24 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="48.892082"
+       x="99.517082"
        y="93.547226"
        id="text4218"><tspan
          sodipodi:role="line"
          id="tspan4220"
-         x="48.892082"
+         x="99.517082"
          y="93.547226"
          style="font-size:15px;line-height:1.25">ojačevalno sredstvo</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="356.23322"
-       y="62.584587"
+       x="356.01736"
+       y="72.384094"
        id="text4218-6"><tspan
          sodipodi:role="line"
          id="tspan4220-7"
-         x="356.23322"
-         y="62.584587"
+         x="356.01736"
+         y="72.384094"
          style="font-size:15px;line-height:1.25;stroke-width:1px">Fabry-Perot</tspan></text>
   </g>
 </svg>
