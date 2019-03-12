@@ -4,7 +4,7 @@
 \label{chap:fibri}
 Moderna komunikacijska tehnologija zahteva vedno hitrejši prenos
 vedno večje količine podatkov. Navadne kovinske vodnike
-so zato v računalniških in telefonskih povezavah nadomestila optična 
+so zato v računalniških in telekomunikacijskih povezavah nadomestila optična 
 vlakna, ki jih odlikujejo majhne izgube, neobčutljivost na elektromagnetne
 in medsebojne motnje ter zmožnost prenosa izjemno velike količine podatkov. 
 V tem poglavju bomo opisali mehanizme prenosa podatkov po optičnih vodnikih
@@ -39,8 +39,8 @@ za katerega velja
 \boxeq{10totalni}{
 \sin\vartheta_{c}=\frac{n_{2}}{n_{1}}.
 }
-Obstaja torej največji vpadni kot $\alpha_{\rm max}$, pod katerim 
-svetloba vpada v vodnik in ostane v njem ujeta.
+Obstaja torej največji vpadni kot $\alpha_{\rm max}$, pri katerem se
+vpadna svetloba ujame v vlakno.
 Z njim povezana je numerična odprtina (apertura) vlakna\index{Numerična odprtina}, 
 ki jo izračunamo kot 
 \begin{equation}
@@ -60,9 +60,9 @@ $NA \lesssim 0,1 $. Kot, pod katerim lahko vpada svetloba
 v vodnik (ali vlakno), da se vanj ujame, je zato zelo majhen, tipično le nekaj stopinj.
 
 \subsection*{Valovni opis}
-Za natančen opis širjenja svetlobe po vodnikih ali vlaknih\footnote{Dogovorimo se, da bomo 
-besedo vlakno uporabljali za cilindrične strukture, besedo vodnik pa za planparalelne 
-strukture in njim podobne.}, ki imajo navadno polmer
+Za natančen opis širjenja svetlobe po vodnikih ali vlaknih\footnote{Dogovorimo se, da  
+besedo vlakno uporabljamo za cilindrične strukture, besedo vodnik pa za planparalelne 
+in njim podobne strukture.}, ki imajo navadno polmer
 sredice od nekaj do nekaj deset mikrometrov, geometrijska optika ne
 zadošča. Rešiti moramo Maxwellove enačbe (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
 z ustreznimi robnimi pogoji (enačbe~\ref{eq:robni-pogoji}--\ref{eq:robni-pogoji5}),
@@ -91,7 +91,7 @@ vektorja\index{Valovni vektor} $k_{x}$ različno od nič. Ker je valovanje v pre
 omejeno na sredico končne debeline (naj bo debelina sredice enaka $a$), lahko
 $k_{x}$ zavzame le diskretne vrednosti. Te so v grobem približno enake $N\pi/a$, pri čemer je $N$
 celo število. Pravimo, da vsak $N$ določa en rod valovanj v vodniku. Po drugi strani 
-pa obstaja največji $k_x$, za katerega približno velja
+obstaja največji $k_x$, za katerega približno velja
 \begin{equation}
 k_{x \mathrm{max}} \approx k_0 \sin\alpha_{\rm max} = 
 k_0 n_1 \cos\vartheta_c = k_0 \sqrt{n_1^2 -n_2^2}.
@@ -106,19 +106,20 @@ en sam rod, imajo še posebej lepe lastnosti za uporabo v komunikacijskih
 sistemih\index{Optični vodnik!enorodovni}\index{Optično vlakno!enorodovno}.
 
 Povejmo še nekaj o hitrosti valovanja v vodniku.
-Naj bo $\beta$ velikost komponente valovnega vektorja vzdolž smeri $z$. Odvisnost polja
-od koordinate vzdolž vodnika je tako $\exp (i\beta z)$. Po drugi strani za velikost
+Naj bo $\beta$ velikost komponente valovnega vektorja vzdolž smeri $z$ in odvisnost 
+polja od koordinate vzdolž vodnika $\exp (i\beta z)$. Vemo, da za velikost
 valovnega vektorja v sredici vodnika velja
 \begin{equation}
 k_1 = n_{1}\frac{\omega}{c_0}=\sqrt{\beta^{2}+k_{x}^{2}}
 \label{9.0}.
 \end{equation}
 Za dano vrednost $k_{x}$ torej zveza med valovnim številom $\beta$
-in frekvenco $\omega$ ni linearna. Fazna hitrost\index{Hitrost valovanja!fazna} 
+in krožno frekvenco $\omega$ ni linearna. Fazna hitrost\index{Hitrost valovanja!fazna} 
 valovanja $v_{f}=\omega/\beta$ je
-odvisna od frekvence in pride do pojava disperzije\index{Disperzija}. Grupna 
+odvisna od krožne frekvence in pride do disperzije\index{Disperzija}. Grupna 
 hitrost\index{Hitrost valovanja!grupna} $v_{g}=d\omega/d\beta$ 
-se zaradi nelinearne zveze razlikuje od fazne hitrosti in njena frekvenčna odvisnost 
+se zaradi nelinearne zveze med $\beta$ in $\omega$ 
+razlikuje od fazne hitrosti in njena frekvenčna odvisnost 
 ima pomembne posledice za uporabo vlaken pri prenosu podatkov. Več o tem bomo spoznali 
 v nadaljevanju poglavja. 
 
@@ -141,7 +142,8 @@ območje II označuje sredico, območji I in III pa sta v plašču nad sredico o
 \label{fig:vodnikracun}
 \end{figure}
 
-Krajevni del valovne enačbe, ki jo rešujemo, opisuje Helmholtzeva enačba\index{Helmholtzeva enačba} 
+Krajevni del valovne enačbe, ki jo rešujemo, 
+opisuje Helmholtzeva enačba\index{Helmholtzeva enačba} 
 (enačba~\ref{eq:Helmholtz})
 \begin{equation}
 \nabla^{2}\mathbf{E}+n^2(x)\,k_{0}^{2}\,\mathbf{E}=0,
