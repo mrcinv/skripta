@@ -482,8 +482,8 @@ vlakna gostota svetlobnega toka enaka nič, zato sklepamo, da to niso osnovni na
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/10_TE01.pdf_tex}
-\caption{Gostota svetlobnega toka in električna poljska jakost za TE$_{01}$ in TM$_{01}$ rod
-v vlaknu}
+\caption{Intenziteta in smer električnega polja v vlaknu za rodova TE$_{01}$ in TM$_{01}$
+}
 \label{fig:TE01}
 \end{figure}
 
@@ -492,34 +492,32 @@ in~\ref{sekular2}), tudi tukaj zapišemo enačbo za dovoljene vrednosti $k_s$.
 Ob približku, da se lomna količnika\index{Sekularna enačba!TE rodovi}
 sredice in plašča le malo razlikujeta, je poenostavljena enačba za TE valovanje
 \boxeq{sekFiber}{
-k_sa\,\frac{J_0(k_sa)}{J_1(k_sa)}=-\kappa a\,\frac{K_0(\kappa a)}{K_1(\kappa a)},
+-k_sa\,\frac{J_0(k_sa)}{J_1(k_sa)}=\kappa a\,\frac{K_0(\kappa a)}{K_1(\kappa a)},
 }
-pri čemer velja zveza $\kappa^2+k_s^2=(NA)^2k_0^2 = V^2$. 
-Zaporedne rešitve enačbe ustrezajo rodovom TE$_{0m}$. 
-Če želimo izračunati še valovne vektorje za rodove TM$_{0m}$, moramo levo stran enačbe~(\ref{sekFiber}) pomnožiti
-z $(n_1/n_2)^2$. Ker je tudi ta faktor približno enak ena, se rešitve enačb med seboj le malo razlikujejo.
+pri čemer velja zveza $\kappa^2+k_s^2=(NA)^2k_0^2$. Zaporedne rešitve enačbe ustrezajo rodovom TE$_{0m}$. 
+Če želimo izračunati še valovne vektorje za rodove TM$_{0m}$, moramo levo stran enačbe~(\ref{sekFiber}) pomnožiti z $(n_1/n_2)^2$. Ker je ta faktor približno enak ena, se rešitve enačb med seboj le malo razlikujejo.
+
 \begin{figure}[h]
 \centering
-\def\svgwidth{90truemm} 
-\input{slike/10_SekFiber.pdf_tex}
+\def\svgwidth{70truemm} 
+\input{slike/10_TE_cilinder.pdf_tex}
 \caption{K izračunu prečnih komponent valovnega vektorja $k_s$ v 
 cilindričnem vlaknu za TE polarizacijo.
-Leva stran sekularne enačbe je narisana s črno in desna z rdečo.}
+Leva stran sekularne enačbe je narisana s črno, desna stran pa za tri različne vrednosti parametra 
+$V=k_0aNA$.}
 \label{fig:TEsecFib}
 \end{figure} 
+Zapisano sekularno enačbo rešujemo numerično, lahko pa se je lotimo grafično in 
+na sliki~(\ref{fig:TEsecFib}) poiščemo presečišča krivulj. Na sliki je leva stran enačbe prikazana
+s črno barvo, desna pa za tri različne vrednosti $V$. Pri velikem $V$ (modra črta) ima sistem tri 
+rešitve, pri srednjem $V$ (turkizna črta) eno rešitev, pri majhnem $V$ (zelena črta) pa se krivulji
+ne sekata. To pomeni, da pri dovolj majhnem polmeru vlakna $a$ TE rod ne obstaja. 
 
-Zapisano sekularno enačbo rešujemo numerično. Lahko pa se je lotimo grafično in 
-na sliki~(\ref{fig:TEsecFib}) poiščemo presečišča krivulj. Primer na sliki 
-ima dve rešitvi. S slike tudi uvidimo, da pri dovolj majhnem polmeru 
-vlakna $a$ enačba nima rešitev. Takrat se namreč
-črne krivulje ``raztegnejo'' proti desni in rdeča krivulja divergira preden 
-doseže drugo vejo črne krivulje.
-
-Zapišimo to ugotovitev še matematično. Prvi pol leve strani sekularne enačbe nastopi pri 
-$J_0 (k_s a)  = 0$, to je pri $k_s a= 2,405$. 
-Po drugi strani da desna stran enačbe realne rešitve le za $k_s a \le k_0 a\,NA = V$.
-Pogoj za polmer vlakna, pri katerem se TE$_{01}$ (ali TM$_{01}$) 
-valovanje z dano valovno dolžino sploh širi po vlaknu, je 
+Zapišimo to ugotovitev še matematično. Desna stran enačbe da realne rešitve za 
+$k_s a \le k_0 a\,NA = V$. Po drugi strani pa leva stran enačbe postane pozitivna šele pri 
+$J_0 (k_s a)  = 0$, to je pri $k_s a= 2,405$. Da ima tak sistem vsaj eno rešitev, mora veljati
+$V>2,405$, najmanjši polmer vlakna, po katerem se TE$_{01}$ (ali TM$_{01}$) valovanje 
+z dano valovno dolžino sploh širi po vlaknu, pa je 
 \boxeq{10_cutoff}{
 a \geq \frac{2,405}{k_0 NA}.
 }
@@ -527,7 +525,7 @@ a \geq \frac{2,405}{k_0 NA}.
 \subsection*{Hibridni HE in EH rodovi}
 \index{Optično vlakno!HE rodovi}
 \index{Optično vlakno!EH rodovi}
-Poglejmo še rešitve, pri katerih $\nu \neq 0$. V tem primeru je 
+Poglejmo zdaj rešitve, pri katerih $\nu \neq 0$. V tem primeru je 
 vseh šest komponent električnega in magnetnega polja valovanja različnih od nič in vsi rodovi
 imajo tudi komponento v smeri $z$. Take rodove imenujemo hibridni rodovi in jih 
 označimo s HE, če je $E_z$ razmeroma velik ali vsaj primerljiv z $E_r$ in $E_\varphi$, 
@@ -548,7 +546,7 @@ zato širi po še tako tankem vlaknu.
 \input{slike/10_HE31.pdf_tex} \\
 \def\svgwidth{85truemm} 
 \input{slike/10_EH11.pdf_tex}
-\caption{Intenziteta in električna poljska jakost za rodove
+\caption{Intenziteta in smer električnega polja v vlaknu za rodove
 HE$_{11}$, HE$_{21}$, HE$_{31}$ in EH$_{11}$}
 \label{fig:HE11}
 \end{figure}
@@ -563,17 +561,17 @@ w = (0,65 + \frac{1,619}{V^{3/2}}+\frac{2,879}{V^{6}})\,a,
 \label{Marcuse}
 \end{equation}
 pri čemer je $V = k_0 a\,NA $. Podobnost profila osnovnega
-HE$_{11}$ z Gaussovo funkcijo omogoča zelo dobro sklopitev Gaussovih
+HE$_{11}$ roda z Gaussovo funkcijo omogoča zelo dobro sklopitev Gaussovih
 snopov, ki izhajajo iz laserja, v cilindrična vlakna.
 
 Na sliki~(\ref{fig:HE11}) je poleg osnovnega HE$_{11}$ roda še nekaj primerov višjih rodov. Opazimo, 
-da imajo vsi rodovi, razen osnovnega, v izhodišču minimum. Poleg tega opazimo tudi podobnost med 
+da imajo vsi rodovi, razen osnovnega, v osi vlakna minimum. Poleg tega opazimo tudi podobnost med 
 oblikami posameznih rodov, do katere pride zaradi majhne razlike med lomnima količnikoma sredice in plašča
 ($n_1 \approx n_2$). V takem primeru se sekularne enačbe poenostavijo, nekateri rodovi so 
 med seboj degenerirani in dajo enako rešitev. Poleg rodov z enako obliko in različno polarizacijo so tako 
 med seboj degenerirani še HE$_{\nu+1,m}$ in EH$_{\nu-1,m}$ rodovi. Degenerirane 
-rodove lahko združimo v linearne kombinacije teh valov in nastanejo pretežno linearno polarizirani 
-rodovi. 
+rodove lahko združimo v linearne kombinacije teh valov in nastanejo pretežno 
+linearno polarizirani LP rodovi. 
 
 \subsection*{LP rodovi}
 \index{Optično vlakno!LP rodovi}
@@ -604,6 +602,22 @@ in EH$_{11}$ rodov, imajo štiri oblike
 \mathbf{E}_\mathrm{LP21} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_2(k_s a)
 { \cos 2\varphi \brace \sin 2\varphi}.
 \end{equation}
+Linearno polarizirani LP rodovi imajo precejšno uporabno vrednost. To so 
+namreč rodovi, ki jih v vlaknu vzbudimo, ko nanj posvetimo s polarizirano 
+lasersko svetlobo. Zavedati pa se moramo, da to niso lastni rodovi vlakna, 
+ampak njihove linearne kombinacije, ki po vlaknu potujejo z malenkost različnimi
+hitrostmi. Polarizacija svetlobe se zato vzdolž vlakna ne ohranja povsem.
+\begin{definition}
+Pokaži, da je približno število dovoljenih rodov v cilindričnem vlaknu pri 
+izbrani normirani frekvenci $V = k_0a\, NA $ enako
+\begin{equation} 
+N = \frac{4 V^2}{\pi^2}.
+\end{equation}
+Namig: Upoštevaj asimptotični razvoj Besslovih funkcij za velike argumente
+\begin{equation}
+J_\nu(x) \approx \sqrt{\frac{2}{\pi x}}\cos\left(x - \frac{\nu \pi }{2}- \frac{\pi}{4}\right).
+\end{equation}
+\end{definition}
 \begin{figure}[h!]
 \centering
 \def\svgwidth{93truemm} 
@@ -622,23 +636,6 @@ in EH$_{11}$ rodov, imajo štiri oblike
 LP$_{01}$, LP$_{02}$, LP$_{11}$ in LP$_{21}$.}
 \label{fig:LP}
 \end{figure}
-Linearno polarizirani LP rodovi imajo precejšno uporabno vrednost. To so 
-namreč rodovi, ki jih v vlaknu vzbudimo, ko nanj posvetimo s polarizirano 
-lasersko svetlobo. Zavedati pa se moramo, da to niso lastni rodovi vlakna, 
-ampak njihove linearne kombinacije, ki po vlaknu potujejo z malenkost različnimi
-hitrostmi. Polarizacija svetlobe se zato vzdolž vlakna rahlo spreminja.
-
-\begin{definition}
-Pokaži, da je približno število dovoljenih rodov v cilindričnem vlaknu pri 
-izbrani normirani frekvenci $V = k_0a\, NA $ enako
-\begin{equation} 
-N = \frac{4 V^2}{\pi^2}.
-\end{equation}
-Namig: Upoštevaj asimptotični razvoj Besslovih funkcij za velike argumente
-\begin{equation}
-J_\nu(x) \approx \sqrt{\frac{2}{\pi x}}\cos\left(x - \frac{\nu \pi }{2}- \frac{\pi}{4}\right).
-\end{equation}
-\end{definition}
 
 \subsection*{Cilindrično vlakno s paraboličnim profilom lomnega količnika}
 Čeprav je račun lastnih načinov v cilindričnem vlaknu zapleten, lahko 
