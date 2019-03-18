@@ -509,15 +509,15 @@ $V=k_0aNA$.}
 \end{figure} 
 Zapisano sekularno enačbo rešujemo numerično, lahko pa se je lotimo grafično in 
 na sliki~(\ref{fig:TEsecFib}) poiščemo presečišča krivulj. Na sliki je leva stran enačbe prikazana
-s črno barvo, desna pa za tri različne vrednosti $V$. Pri velikem $V$ (modra črta) ima sistem tri 
+s črno barvo, desna pa za tri različne vrednosti $V= k_0 a\,NA$. Pri velikem $V$ (modra črta) ima sistem tri 
 rešitve, pri srednjem $V$ (turkizna črta) eno rešitev, pri majhnem $V$ (zelena črta) pa se krivulji
 ne sekata. To pomeni, da pri dovolj majhnem polmeru vlakna $a$ TE rod ne obstaja. 
 
 Zapišimo to ugotovitev še matematično. Desna stran enačbe da realne rešitve za 
-$k_s a \le k_0 a\,NA = V$. Po drugi strani pa leva stran enačbe postane pozitivna šele pri 
+$k_s a \le  V$. Po drugi strani pa leva stran enačbe postane pozitivna šele pri 
 $J_0 (k_s a)  = 0$, to je pri $k_s a= 2,405$. Da ima tak sistem vsaj eno rešitev, mora veljati
-$V>2,405$, najmanjši polmer vlakna, po katerem se TE$_{01}$ (ali TM$_{01}$) valovanje 
-z dano valovno dolžino sploh širi po vlaknu, pa je 
+$V>2,405$. Polmer, pri katerem se TE$_{01}$ (ali TM$_{01}$) valovanje 
+z dano valovno dolžino sploh širi po vlaknu, je torej navzdol omejen z 
 \boxeq{10_cutoff}{
 a \geq \frac{2,405}{k_0 NA}.
 }
@@ -525,7 +525,7 @@ a \geq \frac{2,405}{k_0 NA}.
 \subsection*{Hibridni HE in EH rodovi}
 \index{Optično vlakno!HE rodovi}
 \index{Optično vlakno!EH rodovi}
-Poglejmo zdaj rešitve, pri katerih $\nu \neq 0$. V tem primeru je 
+Poglejmo zdaj rešitve, pri katerih je $\nu \neq 0$. V tem primeru je 
 vseh šest komponent električnega in magnetnega polja valovanja različnih od nič in vsi rodovi
 imajo tudi komponento v smeri $z$. Take rodove imenujemo hibridni rodovi in jih 
 označimo s HE, če je $E_z$ razmeroma velik ali vsaj primerljiv z $E_r$ in $E_\varphi$, 
@@ -575,7 +575,7 @@ linearno polarizirani LP rodovi.
 
 \subsection*{LP rodovi}
 \index{Optično vlakno!LP rodovi}
-Za praktično uporabo so najpomembnejši linearno polarizirani rodovi. Taki rodovi niso
+Za praktično uporabo so najpomembnejši linearno polarizirani (LP) rodovi. Taki rodovi niso
 točne rešitve valovne enačbe v cilindrični geometriji, ampak jih zapišemo kot linearno 
 kombinacijo lastnih rodov, ki so zaradi majhne razlike med lomnima količnikoma sredice
 in plašča degenerirani. Tudi te rodove označimo z dvema indeksoma: prvi določa število azimutalnih
@@ -602,22 +602,23 @@ in EH$_{11}$ rodov, imajo štiri oblike
 \mathbf{E}_\mathrm{LP21} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_2(k_s a)
 { \cos 2\varphi \brace \sin 2\varphi}.
 \end{equation}
-Linearno polarizirani LP rodovi imajo precejšno uporabno vrednost. To so 
+Linearno polarizirani LP rodovi imajo precejšnjo uporabno vrednost. To so 
 namreč rodovi, ki jih v vlaknu vzbudimo, ko nanj posvetimo s polarizirano 
 lasersko svetlobo. Zavedati pa se moramo, da to niso lastni rodovi vlakna, 
 ampak njihove linearne kombinacije, ki po vlaknu potujejo z malenkost različnimi
 hitrostmi. Polarizacija svetlobe se zato vzdolž vlakna ne ohranja povsem.
-\begin{definition}
-Pokaži, da je približno število dovoljenih rodov v cilindričnem vlaknu pri 
-izbrani normirani frekvenci $V = k_0a\, NA $ enako
+\begin{remark}
+Število rodov v večrodovnem cilindričnem vlaknu pri izbrani normirani 
+frekvenci $V = k_0a\, NA$ lahko približno ocenimo z uporabo asimptotičnega 
+razvoja Besslovih funkcij za velike argumente. Približna ocena vključuje 
+vse dovoljene rešitve pri vsaki vrednosti $\nu$ in dve polarizaciji. 
+To vodi do rezultata
 \begin{equation} 
 N = \frac{4 V^2}{\pi^2}.
 \end{equation}
-Namig: Upoštevaj asimptotični razvoj Besslovih funkcij za velike argumente
-\begin{equation}
-J_\nu(x) \approx \sqrt{\frac{2}{\pi x}}\cos\left(x - \frac{\nu \pi }{2}- \frac{\pi}{4}\right).
-\end{equation}
-\end{definition}
+V vlaknu s polmerom sredice $20~\si{\micro\meter}$ in numerično aperturo 0,2
+se tako pri valovni dolžini $1~\si{\micro\meter}$ lahko širi 256 rodov. 
+\end{remark}
 \begin{figure}[h!]
 \centering
 \def\svgwidth{93truemm} 
@@ -632,7 +633,7 @@ J_\nu(x) \approx \sqrt{\frac{2}{\pi x}}\cos\left(x - \frac{\nu \pi }{2}- \frac{\
 \input{slike/10_LP21a.pdf_tex} \\
 \def\svgwidth{93truemm} 
 \input{slike/10_LP21b.pdf_tex} \\
-\caption{Gostota svetlobnega toka in smeri električne poljske jakosti za približno linearne rodove
+\caption{Intenziteta in smer električnega polja v vlaknu za približno linearne rodove
 LP$_{01}$, LP$_{02}$, LP$_{11}$ in LP$_{21}$.}
 \label{fig:LP}
 \end{figure}
