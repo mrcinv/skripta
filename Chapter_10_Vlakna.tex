@@ -755,23 +755,66 @@ močno poveča, zato jih na izhodu iz vlakna ne moremo več ločiti.}
 \label{fig:disp}
 \end{figure}
 
-Pri potovanju svetlobe po optičnih vlaknih poznamo tri 
-vrste disperzije: materialno, valovodno in rodovno. 
-Do materialne disperzije pride zaradi odvisnosti lomnega količnika vlakna od 
-valovne dolžine svetlobe. Valovodna disperzija se pojavi zaradi nelinearne zveze 
-med valovnim številom $\beta$ in krožno frekvenco valovanja. Rodovna
-disperzija pa je posledica različnih hitrosti različnih rodov. 
-Poglejmo si disperzije podrobneje. 
-
-\subsection*{Materialna disperzija}
-\index{Disperzija!materialna}
-Vzemimo najprej enorodovno vlakno in naj bo svetloba v vlaknu modulirana
-v obliki kratkih sunkov, ki nosijo informacijo. Kratki sunki svetlobe
-potujejo z grupno hitrostjo 
+Naj bo svetloba, ki potuje skozi vlakno, modulirana v obliki kratkih sunkov, 
+ki nosijo zapis informacije. Kratki sunki svetlobe potujejo z grupno hitrostjo 
 \begin{equation}
 v_{g}=\frac{d\omega}{d\beta}=\left(\frac{d\beta}{d\omega}\right)^{-1}.
 \label{9.51}
 \end{equation}
+
+Pri potovanju svetlobe po optičnih vlaknih poznamo tri 
+vrste disperzije: rodovno, materialno in valovodno. Rodovna
+disperzija, ki je daleč največja, je posledica dejstva, da se različni 
+rodovi po vlaknu širijo z različnimi hitrostmi. Do materialne disperzije 
+pride zaradi odvisnosti lomnega količnika vlakna od 
+valovne dolžine svetlobe. Valovodna disperzija pa se pojavi zaradi 
+nelinearne zveze med valovnim številom $\beta$ in krožno frekvenco valovanja. 
+Poglejmo si disperzije podrobneje.
+
+\subsection*{Rodovna disperzija}
+\index{Disperzija!rodovna}
+\index{Optično vlakno!večrodovno}
+Na primeru planparalelnega vodnika smo pokazali, da vsaki rešitvi sekularne 
+enačbe~(enačbi~\ref{sekular1} in \ref{sekular2}) ustreza en lastni rod v vlaknu.
+Ker se vrednosti $k_x$ za različne rodove med seboj razlikujejo in so posledično vrednosti $\beta$ za 
+vsak rod drugačne, se posamezni rodovi po vlaknu širijo z različnimi hitrostmi. Kratek
+sunek svetlobe, sestavljen iz več različnih rodov, se tako po prehodu skozi vlakno
+podaljša. Izračunajmo razliko med časom, ki ga za širjenje po vlaknu potrebuje osnovni rod,
+ in časom, ki ga za premagovanje iste razdalje potrebuje zadnji še dovoljeni rod.
+
+Osnovni rod določa prva rešitev sekularne enačbe in je zato pripadajoča 
+vrednost $k_x$ zelo majhna oziroma v približku $k_s \approx 0$. Ustrezno valovno 
+število je po enačbi
+\begin{equation}
+\beta = \sqrt{\left( \frac{\omega}{c_0}\right)^2n_1^2 - k_x(\omega)^2}
+\end{equation}
+kar približno enako $\beta_0 \approx k_0 n_1$. 
+Za zadnji še dovoljeni rod velja $k_xa \approx V$ in $\beta_N \approx k_0 n_2$, pri čemer je
+$n_2$ lomni količnik plašča. 
+Za prehod vlakna z dolžino $L$ tako potrebuje osnovni rod
+\beq
+t_0 = \frac{L}{v_{g0}} = \frac{L}{\frac{d\omega}{d\beta_0}} = L \frac{d\beta_0}{d\omega} = 
+L\frac{n_1}{c_0},
+\eeq
+zadnji rod pa 
+\beq
+t_N = \frac{L}{v_{gN}} = \frac{L}{\frac{d\omega}{d\beta_N}} = L \frac{d\beta_N}{d\omega} = 
+L\frac{n_2}{c_0}.
+\eeq
+Razširitev sunka zaradi rodovne disperzije je tako 
+\boxeq{DispRod}{
+\tau_r \approx 
+\frac{L}{c_0} (n_1-n_2).
+}
+Količina podatkov, ki jo lahko prenašamo po vlaknu, je kar približno obratno sorazmerna z dolžino
+izhodnih sunkov svetlobe. Za $1~\si{\kilo\meter}$ dolgo vlakno z razliko lomnih količnikov 
+$\Delta n = 0,05$  je tako največja frekvenca modulacije okoli $10~\si{\mega\hertz}$, kar je 
+znatno premalo za današnje telekomunikacijske potrebe. Čeprav lahko disperzijo zmanjšamo 
+s paraboličnim profilom lomnega količnika, so večrodovna vlakna za prenos podatkov na dolge 
+razdalje praktično neuporabna. 
+
+\subsection*{Materialna disperzija}
+\index{Disperzija!materialna}
 Ker je sunek končno dolg, ima končno spektralno širino $\Delta \lambda=\lambda_{\mathrm{max}}-\lambda_{\mathrm{min}}$. 
 O materialni disperziji govorimo, kadar je lomni količnik vlakna odvisen od
 valovne dolžine svetlobe in zato različne spektralne komponente po vlaknu potujejo z različnimi
@@ -823,9 +866,7 @@ valovnega vektorja (enačba~\ref{eq:ks})
 \end{equation}
 Pri tem moramo $k_s$ izračunati numerično iz sekularne enačbe (ki je podobna enačbi~\ref{sekFiber}). 
 Rešitev je odvisna od valovne dolžine svetlobe oziroma njene krožne frekvence. Valovno število  
-\begin{equation}
-\beta = \sqrt{\left( \frac{\omega}{c_0}\right)^2n_1^2 - k_s(\omega)^2}
-\end{equation}
+
 je tako nelinearna funkcija krožne frekvence, zaradi česar pride do disperzije. Če naredimo podoben 
 račun kot pri materialni disperziji, je razširitev začetnega kratkega sunka enaka
 \begin{equation}
@@ -875,37 +916,7 @@ dolgem vlaknu najvišja frekvenca modulacije
 okoli $2~\si{\giga\hertz}$. V nadaljevanju bomo videli, da je pri prenosu podatkov
 v vlaknih poglavitni omejujoči faktor ravno disperzija in ne absorpcija. 
 
-\subsection*{Rodovna disperzija}
-\index{Disperzija!rodovna}
-\index{Optično vlakno!večrodovno}
-Do zdaj smo obravnavali disperzijo v enorodovnih vlaknih, v katerih
-lahko disperzijo močno zmanjšamo. V večrodovnih vlaknih pa
-je poglavitni vzrok širjenja sunkov rodovna disperzija. Do nje pride zaradi razlike 
-v hitrostih posameznih rodov. 
 
-Obravnavajmo vlakno, v katerem se širi več rodov. Osnovni rod ima najmanjšo
-vrednost in uporabimo kar približek $k_s \approx 0$ in $\beta \approx k_0 n_1$. 
-Zadnji še dovoljeni rod ima
-največjo vrednost $k_s \approx NA\, k_0$ in $\beta \approx k_0 n_2$. Grupna
-lomna količnika za prvi in zadnji rod sta tako
-\begin{equation}
-n_{g0} = c_0 \left(\frac{d\beta}{d\omega}\right) = c_0 \frac{d(k_0n_1)}{d\omega} = 
-n_1 + \omega \frac{dn_1}{d\omega}
-\end{equation}
-in
-\begin{equation}
-n_{gN} = c_0 \left(\frac{d\beta}{d\omega}\right) = c_0 \frac{d(k_0n_2)}{d\omega} = 
-n_2 + \omega \frac{dn_2}{d\omega}.
-\end{equation}
-Kratek račun pokaže, da je razširitev sunka zaradi rodovne disperzije 
-\boxeq{DispRod}{
-\tau_r \approx 
-\frac{L}{c_0} (n_1-n_2).
-}
-Za $1~\si{\kilo\meter}$ dolgo vlakno z razliko lomnih količnikov $\Delta n = 0,05$  je tako
-največja frekvenca modulacije okoli $10~\si{\mega\hertz}$, kar je znatno manj od enorodovnih vlaken.
-Čeprav lahko disperzijo zmanjšamo s paraboličnim profilom lomnega količnika, so
-večrodovna vlakna za prenos podatkov na dolge razdalje praktično neuporabna. 
 
 V večrodovnem vlaknu je treba upoštevati prispevke vseh treh disperzij. Materialna
 in valovodna sta obe odvisni od valovne dolžine in zato medsebojno korelirani, rodovna pa 
