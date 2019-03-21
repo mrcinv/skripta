@@ -193,7 +193,7 @@ $$
 $$
 \end{definition} 
 
-Nehomogene valovne enačbe v splošnem ne znamo rešiti in se moramo zateči k približkom.
+Nehomogene valovne enačbe na splošno ne znamo rešiti in se moramo zateči k približkom.
 Prva poenostavitev, ki jo naredimo, je omejitev na vzporedna vpadna žarka,
 ki se širita v smeri osi $z$. Poleg tega se omejimo na izračun samo enega
 nastalega valovanja in privzamemo, da je neodvisno od drugih nastalih valovanj.
@@ -722,7 +722,7 @@ s pripadajočim sistemom konjugiranih enačb. Pri tem je
 S črtico smo označili odvajanje po $z$. Gornji sistem enačb je očitno
 posplošitev sistema enačb~(\ref{eq:nlAz}--\ref{eq:nlA3}) za primer, ko je valovanje odvisno
 tudi od prečne koordinate. Reševanje tega nelinearnega sistema parcialnih
-diferencialnih enačb je v splošnem zelo zapleteno.
+diferencialnih enačb je na splošno zelo zapleteno.
 
 Poglejmo le najenostavnejši primer frekvenčnega podvajanja, ko je 
 $\omega_{3}=2\omega_{1}=2\omega$.
@@ -808,7 +808,7 @@ Oglejmo si še en zelo uporaben primer mešanja treh valovanj,
 ki ga opisujejo enačbe (\ref{eq:nlAz}--\ref{eq:nlA3}). Gre za
 optično parametrično ojačevanje, pri katerem nelinearne optične pojave
 izkoristimo za ojačenje optičnih signalov. Imejmo razmeroma šibek vhodni
-signal pri frekvenci $\omega_{1}$, ki ga želimo ojačati, in močno črpalno valovanje
+signal pri frekvenci $\omega_{1}$, ki ga želimo ojačiti, in močno črpalno valovanje
 pri frekvenci $\omega_{3}>\omega_{1}$. Zaradi nelinearnosti v snovi  
 intenziteta valovanja pri $\omega_{1}$ narašča, 
 intenziteta valovanja pri $\omega_{3}$ se zmanjšuje, hkrati pa zaradi
@@ -817,7 +817,7 @@ $\omega_{2}=\omega_{3}-\omega_{1}$. Proces parametričnega ojačevanja
 si torej lahko predstavljamo kot pretvorbo enega fotona pri frekvenci 
 $\omega_{3}$ v dva fotona pri $\omega_{1}$ in $\omega_{2}$.
 Parametrično ojačevanje pogosto uporabljamo za ojačenje šibkih signalov 
-v infrardečem območju.\index{Infrardeče valovanje}
+v infrardečem delu.\index{Infrardeče valovanje}
 \begin{figure}[h]
 \centering
 \def\svgwidth{80truemm} 
@@ -887,7 +887,7 @@ sklopljenih enačb, podobno~\textendash~a še bolj zapleteno~\textendash~kot v n
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/08_opagraf.pdf_tex}
-\caption{Normirani intenziteti ojačanega žarka in dodatnega nedejavnega žarka, ki nastane zaradi ohranitve
+\caption{Normirani intenziteti ojačenega žarka in dodatnega nedejavnega žarka, ki nastane zaradi ohranitve
 energije. Naraščajoči funkciji sta seveda samo približek, ki velja, dokler je ojačenje majhno in 
 se intenziteta črpalnega žarka ne zmanjšuje znatno.}
 \label{fig:opagraf}
@@ -943,7 +943,7 @@ enake  enačbam~(\ref{eq:opa}, \ref{eq:opan} in \ref{opakapa}).
 
 Za konec ocenimo koeficient ojačenja v kristalu 
 LiNbO$_{3}$\index{LiNbO$_3$}, v katerem želimo
-ojačati svetlobo z valovno dolžino $\lambda = 1~\si{\micro\metre}$. Črpamo z laserjem z 
+ojačiti svetlobo z valovno dolžino $\lambda = 1~\si{\micro\metre}$. Črpamo z laserjem z 
 valovno dolžino okoli $500~\si{\nano\metre}$ in gostoto svetlobnega 
 toka $5~\si{\mega\watt}/\si{\centi\metre}^{2}$. Lomni količnik snovi je 
 $n = 2,2$, efektivna nelinearna susceptibilnost pa  $\chi_{ef} = 5~\si{\pico\metre}/\si{\volt}$. 
@@ -970,18 +970,19 @@ zapremo med resonatorja, da se signalni žarek ($\omega_1$) ob vsakem preletu oj
 \end{figure}
 
 V optičnemu resonatorju je odbojnost zrcal za črpalni žarek ($\omega_3$) zelo majhna, 
-odbojnost za ojačani žarek pa blizu ena. Valovanje pri $\omega_1$,
+odbojnost za ojačeni žarek pa blizu ena. Valovanje pri $\omega_1$,
 ki se v parametričnem oscilatorju ojačuje, nastane spontano, prav tako valovanje pri 
 $\omega_2 = \omega_3 -\omega_1$. Njuni frekvenci sta dodatno določeni s pogojem za 
 ujemanje faz $ k_3 - k_1 - k_2 = 0$, 
 hkrati pa mora ojačevano nihanje sovpadati z lastnim nihanjem resonatorja. 
 S sukanjem ojačevalnega kristala lahko na ta način spreminjamo
-ojačano frekvenco in naredili smo nastavljiv izvor svetlobe, navadno infrardeče.\index{Infrardeče valovanje}
+ojačeno frekvenco in naredili smo nastavljiv izvor svetlobe, navadno v 
+infrardečem delu.\index{Infrardeče valovanje}
 
 Za delovanje oscilatorja mora biti jakost črpalnega žarka tako velika, da je 
 ojačenje na obhod večje od izgub. Izračunajmo za primer zgoraj narisanega 
 oscilatorja. Signal z močjo 
-$P_0$ se ob prehodu skozi ojačevalno sredstvo ojača (enačba~\ref{eq:opa})
+$P_0$ se ob prehodu skozi ojačevalno sredstvo ojači (enačba~\ref{eq:opa})
 \begin{equation}
 P_1 = P_0 \cosh^2 (\kappa L),
 \end{equation}
@@ -1095,7 +1096,7 @@ oziroma izpisano po komponentah
 \left(\mathbf{P}_{\mathrm{NL,3}}\right)_i= \epsilon_{0}\chi^{(3)}_{ijkl} \,E_j \,E_k\, E_l.
 \end{equation}
 Pri tem je $\chi^{(3)}$ tenzor četrtega ranga, njegova tipična velikost je okoli 
-$10^{-22}~\si{\metre^2/\volt^2}$. V splošnem ima 81 različnih neodvisnih komponent, to
+$10^{-22}~\si{\metre^2/\volt^2}$. Na splošno ima 81 različnih neodvisnih komponent, to
 število pa se lahko zelo zmanjša zaradi simetrije snovi. V izotropni snovi je tako
 21 neničelnih elementov, od katerih so le trije neodvisni. 
 
@@ -1110,7 +1111,7 @@ $\omega_1 - \omega_2 + \omega_3$, $- \omega_1 + \omega_2 + \omega_3$,
 $2 \omega_1\pm\omega_2$, $2 \omega_1\pm\omega_3$, $2 \omega_2\pm\omega_1$,
 $2 \omega_2\pm\omega_3$, $2 \omega_3\pm\omega_1$, $2 \omega_3\pm\omega_2$.
 Možnosti je torej precej več kot pri nelinearnosti drugega reda in računi so zato 
-v splošnem precej bolj zapleteni.
+precej bolj zapleteni.
 
 Obravnava nastanka valovanja pri
 kombinaciji frekvenc je zelo podobna obravnavi podvajanja frekvence in parametričnemu
@@ -1118,7 +1119,7 @@ ojačevanju. V enačbah za nastanek novega valovanja ali ojačevanje
 katerega od vpadnih snopov spet nastopi fazni faktor, ki vsebuje razliko
 vseh valovnih vektorjev $\Delta{\bf k}$. Da je intenziteta novega
 valovanja znatna, mora biti $\Delta kL\simeq0$, spet mora biti torej
-izpolnjen pogoj ujemanja faz. Ker v tem primeru nastopajo v splošnem štirje
+izpolnjen pogoj ujemanja faz. Ker v tem primeru nastopajo na splošno štirje
 valovni vektorji, je seveda tudi pri izbiri geometrije in polarizacij
 za ujemanje faz precej več možnosti.\index{Ujemanje faz}
 
@@ -1788,7 +1789,7 @@ ali optičnih komunikacijah skozi atmosfero. Naključne spremembe gostote v atmo
 signalu dodajo naključni fazni premik, ki signal popači. Če se signal odbije od zrcala nazaj
 proti izvoru, je torej dvakratno popačen. Če pa se odbije od fazno konjugiranega zrcala, 
 se vpliv nehomogenosti atmosfere ravno izniči in na prenos signala ne vpliva, poleg
-tega je šibek vpadni signal lahko še dodatno ojačan. 
+tega je šibek vpadni signal lahko še dodatno ojačen. 
 \end{remark}
 
 \section{*Izpeljava optične fazne konjugacije}
@@ -2106,7 +2107,7 @@ Vrednosti $G_R$ so $0,024~\si{\cm/\mega\watt}$ za CS$_2$, \index{CS$_2$}
 $0,029~\si{\cm/\mega\watt}$ za LiNbO$_3$ \index{LiNbO$_3$}
 in $0,0008~\si{\cm/\mega\watt}$ za SiO$_2$.\index{SiO$_2$} 
 V meter dolgem odseku vlakna pride tako pri intenziteti svetlobe $10^{10}~\si{\watt/\meter^2}$ 
-do faktorja ojačanja $1,08$, na vlaknu dolžine $20~\si{\metre}$ pa do faktorja $5$.
+do faktorja ojačenja $1,08$, na vlaknu dolžine $20~\si{\metre}$ pa do faktorja $5$.
 
 \begin{remark}
 Pojav stimuliranega Ramanovega sevanja je posebej pomemben v ojačenje signala v 

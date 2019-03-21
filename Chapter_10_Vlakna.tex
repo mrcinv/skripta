@@ -852,8 +852,8 @@ izogniti, lahko pa jo pri dani valovni dolžini izničimo z materialno~(slika~\r
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/10_Zero.pdf_tex} 
-\caption{Odvisnost disperzije od valovne dolžine v SiO$_2$ vlaknu.\index{SiO$_2$} $D_m$ 
-označuje materialno disperzijo, $D_v$ valovodno, $D$ pa je vsota obeh. Pri valovni dolžini
+\caption{Odvisnost koeficientov disperzije od valovne dolžine v SiO$_2$ vlaknu.\index{SiO$_2$} $D_m$ 
+je koeficient materialne disperzije, $D_v$ valovodne, $D$ pa je vsota obeh. Pri valovni dolžini
 okoli $1450~\si{\nano\meter}$ se materialna in valovodna disperzija odštejeta in skupna disperzija
 je praktično enaka nič.}
 \label{fig:MatVal}
@@ -1185,7 +1185,7 @@ se sunek tudi časovno podaljša. Razširjen sunek se nato s parom mrežic skraj
 za faktor $10$--$100$ glede na prvotno dolžino sunka. Tako nastanejo sunki,
 dolgi le okoli $10~\si{\femto\second}$, kar je le še nekaj optičnih period. 
 V vmesni stopnji, ko je sunek podaljšan, ga lahko tudi dodatno ojačimo, česar
-s prvotnim kratkim in že tako razmeroma močnim sunkom ne bi mogli narediti. Ojačan
+s prvotnim kratkim in že tako razmeroma močnim sunkom ne bi mogli narediti. Ojačen
 sunek nato s parom uklonskih mrežic ponovno zberemo in nastane zelo kratek
 zelo močen sunek svetlobe.
 \end{remark}
@@ -1203,7 +1203,7 @@ saj lahko v vlaknu pride do nelinearnih optičnih pojavov. V praksi zato
 optični signal, ki potuje po čezoceanskih vlaknih, ojačujemo. 
 
 Pri izdelavi optičnih vlaken se najpogosteje uporablja kremenovo steklo, ki 
-ima najmanjšo absorpcijo svetlobe v bližnjem infrardečem območju 
+ima najmanjšo absorpcijo svetlobe v bližnjem infrardečem delu svetlobe
 ($1300$--$1500~\si{\nano\meter}$).
 Navadno mu dodamo primesi, s čemer dosežemo želen lomni količnik in 
 zmanjšanje disperzije. 
@@ -1226,7 +1226,7 @@ $1000~\si{\decibel/\kilo\meter}$.
 \input{slike/10_FibAbs.pdf_tex} 
 \caption{Izgube v vlaknu v odvisnosti od valovne dolžine: vijolična črta -- UV absorpcija, 
 črna črta -- IR absorpcija, zelena črta -- absorpcija na OH ionih in modra črta --
-izgube zaradi Rayleighovega sipanja. Z rdečo črto je označena skupna absorpcija.}
+izgube zaradi Rayleighovega sipanja. Z rdečo črto so označene skupne izgube.}
 \label{FibAbs}
 \end{figure}
 Slika~(\ref{FibAbs}) prikazuje značilno odvisnost izgub od valovne dolžine 
@@ -1244,7 +1244,7 @@ Absorpcija na nečistočah lahko ob pazljivi izdelavi postane skoraj v celotnem
 območju praktično zanemarljiva. 
 Najbolj problematična nečistoča je voda oziroma OH$^{-}$ ioni, ki imajo velik dipolni
 moment in izrazito absorpcijo pri $1380~\si{\nano\meter}$ (zelena črta). Zelo pomemben prispevek k 
-absorpciji, posebej pri krajših valovnih dolžinah, je sipanje na fluktuacijah 
+izgubam, posebej pri krajših valovnih dolžinah, je sipanje na fluktuacijah 
 gostote (Rayleighovo sipanje),\index{Izgube v optičnih vlaknih!Rayleighovo sipanje} 
 saj je sorazmerno z $\lambda^{-4}$ (modra črta). 
 
@@ -1542,9 +1542,10 @@ je pri tem večji od lomnega količnika plašča $n_p > n_2$.
 Vhodni žarek vpada na prizmo, se ob prehodu vanjo lomi, nato pa se na stranici, ki je vzporedna
 z vodnikom, totalno odbije.\index{Totalni odboj} 
 V vmesnem območju med prizmo in sredico vodnika se pojavi evanescentni\index{Evanescentno polje}
-val z valovnim vektorjem $\beta  = k_0 n_p \sin \alpha$ v smeri vzporedno z vodnikom. Pogoj za uspešno 
-sklopitev je ujemanje vzdolžne komponente valovnega vektorja vpadne svetlobe z valovnim 
-vektorjem rodu v vodniku, ki ga želimo vzbuditi. 
+val s komponento valovnega vektorja $\beta  = k_0 n_p \sin \alpha$ v 
+smeri vzporedno z vodnikom. Pogoj za uspešno 
+sklopitev je ujemanje vzdolžnih komponent valovnega vektorja vpadne svetlobe in valovnega
+vektorja rodu v vodniku, ki ga želimo vzbuditi. 
 S spreminjanjem vpadnega kota lahko torej v vodniku vzbujamo različne rodove. 
 Če je razdalja med prizmo in vodnikom dovolj majhna (tipično pod valovno dolžino svetlobe), se v 
 valovod ob izpolnjenem pogoju ujemanja faze sklopi znaten delež vpadne svetlobe.
@@ -1553,8 +1554,9 @@ Tudi periodična struktura na valovnem vodniku (slika~\ref{fig:coupler}\,b) delu
 ujemanju valovnega vektorja vpadnega vala z valovnim vektorjem ustreznega rodu.
 Ko vpade val pod kotom $\alpha$ glede na valovni vodnik, periodična struktura na vodniku 
 spremeni njegovo fazo za večkratnik $2 \pi z/\Lambda$, pri čemer je $\Lambda$ perioda strukture.
-Če dosežemo, da se nov valovni vektor $\beta = k_0 n_2 \sin \alpha+ 2 \pi/\Lambda$ izenači z valovnim 
-vektorjem za izbrani rod v vlaknu, se vpadna svetloba sklopi v vlakno.
+Če dosežemo, da se komponenta novega valovnega vektorja $\beta = k_0 n_2 \sin \alpha+ 
+2 \pi/\Lambda$ izenači s  komponento valovnega vektorja za izbrani rod v vlaknu, 
+se vpadna svetloba sklopi v vlakno.
 
 \begin{remark}
  Oba opisana načina za sklopitev svetlobe v vlakno lahko uporabimo tudi za sklopitev svetlobe 
@@ -1903,7 +1905,7 @@ vodi do popačenja signala
 in povečanja spektralne širine. Po drugi strani stimulirano Ramanovo sipanje 
 izkoriščamo za ojačenje signala v vodnikih. Če v vlakno posvetimo z močno črpalno
 svetlobo, katere frekvenca se od signalnega žarka razlikuje za vibracijsko frekvenco
-($\sim 13~\si{THz}$), se signalni žarek ojača. Ker je spekter SiO$_2$ razmeroma 
+($\sim 13~\si{THz}$), se signalni žarek ojači. Ker je spekter SiO$_2$ razmeroma 
 širok ($\sim 5~\si{THz}$), tega pogoja ni težko izpolniti. 
 
 Pri stimuliranem Brillouinovem sipanju (SBS) pride
