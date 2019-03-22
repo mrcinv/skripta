@@ -755,13 +755,6 @@ močno poveča, zato jih na izhodu iz vlakna ne moremo več ločiti.}
 \label{fig:disp}
 \end{figure}
 
-Naj bo svetloba, ki potuje skozi vlakno, modulirana v obliki kratkih sunkov, 
-ki nosijo zapis informacije. Kratki sunki svetlobe potujejo z grupno hitrostjo 
-\begin{equation}
-v_{g}=\frac{d\omega}{d\beta}=\left(\frac{d\beta}{d\omega}\right)^{-1}.
-\label{9.51}
-\end{equation}
-
 Pri potovanju svetlobe po optičnih vlaknih poznamo tri 
 vrste disperzije: rodovno, materialno in valovodno. Rodovna
 disperzija, ki je daleč največja, je posledica dejstva, da se različni 
@@ -774,36 +767,40 @@ Poglejmo si disperzije podrobneje.
 \subsection*{Rodovna disperzija}
 \index{Disperzija!rodovna}
 \index{Optično vlakno!večrodovno}
-Na primeru planparalelnega vodnika smo pokazali, da vsaki rešitvi sekularne 
-enačbe~(enačbi~\ref{sekular1} in \ref{sekular2}) ustreza en lastni rod v vlaknu.
+Na primeru planparalelnega vodnika smo pokazali, da vsaki rešitvi sekularnih 
+enačb~(enačbi~\ref{sekular1} in \ref{sekular2}) ustreza en lastni rod v vlaknu.
 Ker se vrednosti $k_x$ za različne rodove med seboj razlikujejo in so posledično vrednosti $\beta$ za 
 vsak rod drugačne, se posamezni rodovi po vlaknu širijo z različnimi hitrostmi. Kratek
 sunek svetlobe, sestavljen iz več različnih rodov, se tako po prehodu skozi vlakno
-podaljša. Izračunajmo razliko med časom, ki ga za širjenje po vlaknu potrebuje osnovni rod,
- in časom, ki ga za premagovanje iste razdalje potrebuje zadnji še dovoljeni rod.
-
+podaljša. Izračunajmo razliko med časom, ki ga za širjenje po vlaknu dane dolžine 
+potrebuje osnovni rod, in časom, ki ga za isto razdaljo potrebuje zadnji še dovoljeni rod.
+ 
 Osnovni rod določa prva rešitev sekularne enačbe in je zato pripadajoča 
 vrednost $k_x$ zelo majhna oziroma v približku $k_s \approx 0$. Ustrezno valovno 
 število je po enačbi
 \begin{equation}
 \beta = \sqrt{\left( \frac{\omega}{c_0}\right)^2n_1^2 - k_x(\omega)^2}
+\label{nelinfib}
 \end{equation}
 kar približno enako $\beta_0 \approx k_0 n_1$. 
 Za zadnji še dovoljeni rod velja $k_xa \approx V$ in $\beta_N \approx k_0 n_2$, pri čemer je
-$n_2$ lomni količnik plašča. 
-Za prehod vlakna z dolžino $L$ tako potrebuje osnovni rod
+$n_2$ lomni količnik plašča. Zapišemo še grupno hitrost, s katero potujejo sunki 
+svetlobe po vlaknu
+\begin{equation}
+v_{g}=\frac{d\omega}{d\beta}=\left(\frac{d\beta}{d\omega}\right)^{-1}.
+\label{9.51}
+\end{equation}
+Za prehod vlakna z dolžino $L$ potrebuje osnovni rod
 \beq
-t_0 = \frac{L}{v_{g0}} = \frac{L}{\frac{d\omega}{d\beta_0}} = L \frac{d\beta_0}{d\omega} = 
-L\frac{n_1}{c_0},
+t_0 = \frac{L}{v_{g0}} =  L \,\frac{d\beta_0}{d\omega} = L\,\frac{n_1}{c_0},
 \eeq
 zadnji rod pa 
 \beq
-t_N = \frac{L}{v_{gN}} = \frac{L}{\frac{d\omega}{d\beta_N}} = L \frac{d\beta_N}{d\omega} = 
-L\frac{n_2}{c_0}.
+t_N = \frac{L}{v_{gN}} = L\, \frac{d\beta_N}{d\omega} = L\,\frac{n_2}{c_0}.
 \eeq
-Razširitev sunka zaradi rodovne disperzije je tako 
+Podaljšanje sunka zaradi rodovne disperzije je potem 
 \boxeq{DispRod}{
-\tau_r \approx 
+\tau\approx 
 \frac{L}{c_0} (n_1-n_2).
 }
 Količina podatkov, ki jo lahko prenašamo po vlaknu, je kar približno obratno sorazmerna z dolžino
@@ -812,83 +809,99 @@ $\Delta n = 0,05$  je tako največja frekvenca modulacije okoli $10~\si{\mega\he
 znatno premalo za današnje telekomunikacijske potrebe. Čeprav lahko disperzijo zmanjšamo 
 s paraboličnim profilom lomnega količnika, so večrodovna vlakna za prenos podatkov na dolge 
 razdalje praktično neuporabna. 
+\begin{remark}
+ Med rodovno disperzijo uvrščamo tudi polarizacijsko disperzijo,\index{Disperzija!polarizacijska} 
+ do katere pride zaradi različnih hitrosti valovanj z različnima polarizacijama. 
+ V idealnem cilindričnem vlaknu potujeta obe polarizaciji
+ z enako hitrostjo. V realnem vlaknu pa 
+ pride na nečistočah in asimetrijah v vlaknu do različnih hitrosti za različni polarizaciji. 
+ Ker so nečistoče slučajno in neodvisno razporejene, tako disperzijo zelo težko odpravimo.
+\end{remark}
 
 \subsection*{Materialna disperzija}
 \index{Disperzija!materialna}
-Ker je sunek končno dolg, ima končno spektralno širino $\Delta \lambda=\lambda_{\mathrm{max}}-\lambda_{\mathrm{min}}$. 
-O materialni disperziji govorimo, kadar je lomni količnik vlakna odvisen od
-valovne dolžine svetlobe in zato različne spektralne komponente po vlaknu potujejo z različnimi
-hitrostmi. Dolžino sunka $\tau$ po prehodu skozi vlakno dolžine $L$ zapišemo kot
+Optična vlakna so navadno narejena iz stekla, katerega lomni količnik je odvisen 
+od valovne dolžine svetlobe. Zaradi tako imenovane materialne disperzije različne 
+spektralne komponente svetlobnega sunka po vlaknu potujejo z različnimi hitrostmi 
+in sunek se po prehodu skozi vlakno podaljša. Pri obravnavi materialne disperzije
+se omejimo na enorodovna vlakna, v katerih rodovne disperzije ni. 
+
+Ker je sunek svetlobe končno dolg, je končna tudi njegova spektralna širina 
+$\Delta \lambda=\lambda_{\mathrm{max}}-\lambda_{\mathrm{min}}$. 
+Dolžino sunka $\tau$ po prehodu skozi vlakno dolžine $L$ približno zapišemo kot
 \begin{equation}
-\tau_m = \frac{L}{v_g(\lambda_{\mathrm{max}})} - \frac{L}{v_g(\lambda_{\mathrm{min}})} = 
-\frac{L}{c_0}\left(n_g(\lambda_{\mathrm{max}}) - n_g(\lambda_{\mathrm{min}}) \right) 
-= \frac{L}{c_0}\frac{d n_g}{d \lambda}\Delta \lambda.
-\label{MatD}
+\tau = \frac{dt}{d\lambda}\Delta \lambda = \Delta \lambda \frac{d}{d\lambda}\left(\frac{L}{v_g}\right)
+= \Delta \lambda \frac{d}{d\lambda}\left(L \frac{d\beta}{d\omega}\right).
+\label{dispračun}
 \end{equation}
-Za enorodovno vlakno velja $k_x \approx 0$ in $\beta \approx n_1 \omega/c_0$. 
-Sledi
+Za enorodovno vlakno velja $k_x \approx 0$ in $\beta \approx n_1 \omega/c_0$, pri čemer
+valovodne disperzije zaenkrat ne upoštevamo. Velja 
 \begin{equation}
-n_g = c_0 \frac{d\beta}{d\omega} = n_1 + \omega \frac{d n_1}{d\omega} = n_1 - \lambda 
-\frac{dn_1}{d\lambda}
+\frac{d\beta}{d\omega} = \frac{n_1}{c_0} + \frac{\omega}{c_0} \frac{d n_1}{d\omega} = \frac{n_1}{c_0} - 
+\frac{\lambda}{c_0}\frac{dn_1}{d\lambda},
 \end{equation}
-in
+od koder sledi 
 \begin{equation}
-\frac{dn_g}{d\lambda} = -\lambda\frac{d^2n_1}{d\lambda^2}.
+\tau =\Delta \lambda L \left( - \frac{\lambda}{c_0}\frac{d^2n_1}{d\lambda^2}\right).
 \end{equation}
-To vstavimo v izraz za dolžino sunka~(enačba~\ref{MatD}) in lahko zapišemo
-\boxeq{eq:dmat1}{
-\tau_m = D_m L\, \Delta \lambda,
-}
-pri čemer je $D_m$ koeficient materialne disperzije
+Če vpeljemo $D_m$ kot koeficient materialne disperzije
 \boxeq{eq:dmat}{
-D_m = - \frac{\lambda}{c_0}\frac{d^2n_1}{d\lambda^2}.
+D_m = - \frac{\lambda}{c_0}\frac{d^2n_1}{d\lambda^2},
 }
-Navadno ga izrazimo v enotah $\si{\pico\second/\nano\meter\, \kilo\meter}$, 
-njegova vrednost pa je lahko pozitivna ali negativna. 
-V snoveh, ki jih uporabljamo za optična vlakna, je $D_m$ reda 
+zapišemo dolžino sunka po prehodu skozi vlakno kot 
+\boxeq{eq:dmat1}{
+\tau= |D_m| L\, \Delta \lambda.
+}
+Koeficient disperzije navadno izrazimo v enotah $\si{\pico\second/\nano\meter\, \kilo\meter}$, 
+njegova vrednost pa je lahko pozitivna ali negativna, zato smo v končnem izrazu za dolžino 
+sunka dodali absolutno vrednost. 
+V snoveh, ki jih uporabljamo za izdelavo optičnih vlaken, je $D_m$ reda 
 $10~\si{\pico\second/\nano\meter\, \kilo\meter}$, lahko pa seže
 tudi do več $100~\si{\pico\second/\nano\meter\, \kilo\meter}$, odvisno seveda od valovne dolžine
 in izbrane snovi. 
 
 Materialno disperzijo lahko zmanjšamo na več načinov. Lahko uporabimo čim bolj enobarven
-vir svetlobe, da zmanjšamo $\Delta \lambda$. Za snovi, ki so v uporabi, 
-lahko celo izberemo valovno dolžino, pri kateri je koeficient materialne disperzije enak nič.
-Za SiO$_2$\index{SiO$_2$} je to pri okoli $1300$--$1500~\si{\nano\meter}$, odvisno od dopiranja stekla. Še najbolj uporabna je rešitev, pri kateri z materialno 
-disperzijo izničimo vpliv drugih disperzij in 
-na ta način zmanjšamo skupno disperzijo v vlaknu.
+vir svetlobe, da zmanjšamo $\Delta \lambda$. Za izbrano snov lahko celo izberemo valovno 
+dolžino, pri kateri je koeficient materialne disperzije enak nič. Za SiO$_2$\index{SiO$_2$} je to pri okoli $1300$--$1500~\si{\nano\meter}$, odvisno od dopiranja stekla. Še najbolj uporabna je rešitev, pri kateri 
+z materialno disperzijo izničimo vpliv drugih disperzij in na ta način zmanjšamo skupno 
+disperzijo v vlaknu.
 
 \subsection*{Valovodna disperzija}
 \index{Disperzija!valovodna}
-Spomnimo se, da v vlaknu velja zveza med prečno $k_s$ in vzdolžno komponento $\beta$ 
-valovnega vektorja (enačba~\ref{eq:ks})
+Spomnimo se, da v optičnem vodniku velja nelinearna zveza med prečno ($k_x$) in vzdolžno ($\beta$) komponento  
+valovnega vektorja (enačba~\ref{nelinfib}). Pri tem $k_x$ izračunamo numerično iz sekularne enačbe,
+rešitev pa je odvisna od valovne dolžine svetlobe. Tudi v cilindričnih vlaknih je valovno število $\beta$
+nelinearna funkcija krožne frekvence, zato pride do disperzije. Izhajamo iz zveze (enačba~\ref{dispračun})
 \begin{equation}
-\beta^2 + k_s^2 = k_0^2 n_1^2 = \left( \frac{\omega}{c_0}\right)^2n_1^2.
+\tau= \frac{dt}{d\lambda}\Delta \lambda = \Delta \lambda \frac{d}{d\lambda}\left(L \frac{d\beta}{d\omega}\right).
 \end{equation}
-Pri tem moramo $k_s$ izračunati numerično iz sekularne enačbe (ki je podobna enačbi~\ref{sekFiber}). 
-Rešitev je odvisna od valovne dolžine svetlobe oziroma njene krožne frekvence. Valovno število  
-
-je tako nelinearna funkcija krožne frekvence, zaradi česar pride do disperzije. Če naredimo podoben 
-račun kot pri materialni disperziji, je razširitev začetnega kratkega sunka enaka
+Upoštevamo zvezo med valovno dolžino in krožno frekvenco in za podaljšanje začetnega kratkega sunka dobimo
 \begin{equation}
-\tau_v = \frac{L}{v_g(\omega_{\mathrm{max}})} - \frac{L}{v_g(\omega_{\mathrm{min}})} = 
-L\frac{d \beta}{d\omega}(\omega_{\mathrm{max}}) - L\frac{d \beta}{d\omega}(\omega_{\mathrm{min}})=
-L \frac{d^2\beta}{d\omega^2}\Delta \omega.
-\label{ValD}
+\tau=-\frac{\lambda^2}{2 \pi c_0}\frac{d^2\beta}{d\lambda^2}L\, \Delta \lambda.
 \end{equation}
-Upoštevamo zvezo med valovno dolžino in krožno frekvenco in zapišemo 
-\begin{equation}
-\tau_v=-\frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}L \Delta \lambda= D_v\,L\, \Delta \lambda,
-\end{equation}
-pri čemer je  $D_v$ koeficient valovodne disperzije
+Ko vpeljemo $D_v$ kot koeficient valovodne disperzije
 \boxeq{Dvalkoef}{
-D_v = - \frac{2 \pi c_0}{\lambda^2}\frac{d^2\beta}{d\omega^2}.
+D_v = - \frac{\lambda^2}{2 \pi c_0}\frac{d^2\beta}{d\lambda^2},
 }
-Prispevek valovodne disperzije je praviloma najmanjši, reda 
+se izraz za dolžino sunka poenostavi v
+\boxeq{dispVal}{
+\tau = |D_v|\,L\, \Delta \lambda.
+}
+Koeficient valovodne disperzije je praviloma najmanjši, reda 
 $1$--$10~\si{\pico\second/\nano\meter\,\kilo\meter}$. 
 Znaten postane v enorodovnih vlaknih v območju, kjer je materialna disperzija 
 zelo majhna ali celo enaka nič. 
 V vlaknih s homogeno sredico se valovodni disperziji ne moremo
 izogniti, lahko pa jo pri dani valovni dolžini izničimo z materialno~(slika~\ref{fig:MatVal}). 
+
+Kljub temu zaradi končne spektralne širine sunka svetlobe disperzije 
+v optičnem vlaknu ne moremo nikoli povsem odpraviti. Pri celotni disperziji 
+$5~\si{\pico\second/\nano\meter\,\kilo\meter}$ in spektralni širini 
+$1~\si{\nano\meter}$ znaša v $100~\si{\kilo\meter}$ dolgem vlaknu najvišja 
+frekvenca modulacije vhodnega signala, ki ga na izhodu še lahko razločimo, 
+okoli $2~\si{\giga\hertz}$. V nadaljevanju bomo videli, da je pri prenosu podatkov
+v vlaknih poglavitni omejujoči faktor ravno disperzija in ne absorpcija. 
+
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
@@ -899,6 +912,7 @@ okoli $1450~\si{\nano\meter}$ se materialna in valovodna disperzija odštejeta i
 je praktično enaka nič.}
 \label{fig:MatVal}
 \end{figure}
+
 \begin{remark}
 Na valovodno disperzijo je mogoče vplivati tudi s konstrukcijo vlakna. Pokazali smo že, da
 v idealnem primeru v vlaknu s paraboličnim profilom lomnega količnika disperzije ni. 
@@ -906,34 +920,6 @@ V praksi je sredica sestavljena iz več plasti z različnimi lomnimi količniki 
 debelinami, s čimer se prispevek valovodne disperzije spremeni. Na ta način lahko 
 položaj ničle celotne disperzije premaknemo k valovni dolžini izvora oziroma k 
 valovni dolžini, pri kateri je v vlaknu najmanj absorpcije in izgub.
-\end{remark}
-
-Količina podatkov, ki jih lahko prenašamo po enorodovnem vlaknu, je kar približno obratno 
-sorazmerna z dolžino izhodnih sunkov svetlobe. Pri celotni disperziji 
-$5~\si{\pico\second/\nano\meter\,\kilo\meter}$ in 
-spektralni širini $1~\si{\nano\meter}$ je tako v $100~\si{\kilo\meter}$ 
-dolgem vlaknu najvišja frekvenca modulacije
-okoli $2~\si{\giga\hertz}$. V nadaljevanju bomo videli, da je pri prenosu podatkov
-v vlaknih poglavitni omejujoči faktor ravno disperzija in ne absorpcija. 
-
-
-
-V večrodovnem vlaknu je treba upoštevati prispevke vseh treh disperzij. Materialna
-in valovodna sta obe odvisni od valovne dolžine in zato medsebojno korelirani, rodovna pa 
-je odvisna predvsem od zgradbe vlakna in je od prvih dveh praktično neodvisna. Ko na 
-večrodovno vlakno posvetimo s sunkom, katerega spekter je Gaussove oblike, je dolžina 
-sunka \index{Disperzija!podaljšanje sunka}po prehodu skozi vlakno
-\boxeq{Dtotal}{
-\tau = \sqrt{(\tau_m +\tau_v)^2 + \tau_r^2}.
-}
-
-\begin{remark}
- Omenili smo tudi polarizacijsko disperzijo,\index{Disperzija!polarizacijska} 
- do katere pride zaradi različnih hitrosti valovanj
- z različnima polarizacijama. V idealnem cilindričnem vlaknu potujeta obe polarizaciji
- z enako hitrostjo. V realnem vlaknu pa 
- pride na nečistočah in asimetrijah v vlaknu do različnih hitrosti za različni polarizaciji. 
- Ker so nečistoče slučajno in neodvisno razporejene, tako disperzijo zelo težko odpravimo.
 \end{remark}
 
 \section{*Potovanje kratkega sunka po enorodovnem vlaknu}
@@ -1373,7 +1359,7 @@ in zapišemo
 \end{equation}
 Gornja enačba je zelo podobna enačbi za izračun lastnih rodov v planparalelnem
 vodniku (\ref{9.3a}), pri čemer se $\beta^2$ poveča za $1/4R^2$. Poleg tega je prisoten
-dodatni člen, ki je linearno sorazmeren z $x$. Če ponovno naredimo analogijo
+dodatni člen, ki je linearen v $x$. Če ponovno naredimo analogijo
 med lastnimi načini v valovnem vodniku in stanji delca, ujetega v končno potencialno jamo, 
 je ta člen enake oblike kot potencialna energija delca v konstantnem zunanjem električnem 
 polju (slika~\ref{fig:tunel}). Podobno kot lahko ujeti delci uhajajo iz potencialne jame
