@@ -756,13 +756,13 @@ močno poveča, zato jih na izhodu iz vlakna ne moremo več ločiti.}
 \end{figure}
 
 Pri potovanju svetlobe po optičnih vlaknih poznamo tri 
-vrste disperzije: rodovno, materialno in valovodno. Rodovna
-disperzija, ki je daleč največja, je posledica dejstva, da se različni 
-rodovi po vlaknu širijo z različnimi hitrostmi. Do materialne disperzije 
-pride zaradi odvisnosti lomnega količnika vlakna od 
-valovne dolžine svetlobe. Valovodna disperzija pa se pojavi zaradi 
+vrste disperzije: rodovno, materialno in valovodno. V večrodovnih vlaknih
+je povsem prevladujoča rodovna disperzija, ki je posledica dejstva, da se 
+različni rodovi po vlaknu širijo z različnimi hitrostmi. 
+V enorodovnih vlaknih rodovne disperzije ni, zato prideta do izraza 
+materialna disperzija, ki se pojavi zaradi odvisnosti lomnega količnika 
+vlakna od valovne dolžine svetlobe, in valovodna disperzija, ki se pojavi zaradi 
 nelinearne zveze med valovnim številom $\beta$ in krožno frekvenco valovanja. 
-Poglejmo si disperzije podrobneje.
 
 \subsection*{Rodovna disperzija}
 \index{Disperzija!rodovna}
@@ -772,7 +772,8 @@ enačb~(enačbi~\ref{sekular1} in \ref{sekular2}) ustreza en lastni rod v vlaknu
 Ker se vrednosti $k_x$ za različne rodove med seboj razlikujejo in so posledično vrednosti $\beta$ za 
 vsak rod drugačne, se posamezni rodovi po vlaknu širijo z različnimi hitrostmi. Kratek
 sunek svetlobe, sestavljen iz več različnih rodov, se tako po prehodu skozi vlakno
-podaljša. Izračunajmo razliko med časom, ki ga za širjenje po vlaknu dane dolžine 
+razdeli na posamezne delne sunke oziroma se efektivno podaljša. 
+Izračunajmo razliko med časom, ki ga za širjenje po vlaknu dane dolžine 
 potrebuje osnovni rod, in časom, ki ga za isto razdaljo potrebuje zadnji še dovoljeni rod.
  
 Osnovni rod določa prva rešitev sekularne enačbe in je zato pripadajoča 
@@ -808,7 +809,7 @@ izhodnih sunkov svetlobe. Za $1~\si{\kilo\meter}$ dolgo vlakno z razliko lomnih 
 $\Delta n = 0,05$  je tako največja frekvenca modulacije okoli $10~\si{\mega\hertz}$, kar je 
 znatno premalo za današnje telekomunikacijske potrebe. Čeprav lahko disperzijo zmanjšamo 
 s paraboličnim profilom lomnega količnika, so večrodovna vlakna za prenos podatkov na dolge 
-razdalje praktično neuporabna. 
+razdalje praktično neuporabna.
 \begin{remark}
  Med rodovno disperzijo uvrščamo tudi polarizacijsko disperzijo,\index{Disperzija!polarizacijska} 
  do katere pride zaradi različnih hitrosti valovanj z različnima polarizacijama. 
@@ -935,25 +936,26 @@ E\left(x, y, z, t\right)=\psi\left(x,y\right)\, a\left(z,t\right),
 \label{9.61}
 \end{equation}
 kjer je $\psi\left(x,y\right)$ lastna rešitev prečnega dela valovne
-enačbe, ki določa  zvezo $\beta\left(\omega\right)$. 
-Funkcija $a\left(z,t\right)$ opisuje obliko sunka v smeri $z$ in njegovo
-širjenje. Razvijmo jo pri $z=0$ po ravnih valovih z ustreznimi amplitudnimi faktorji 
+enačbe, ki določa zvezo $\beta\left(\omega\right)$. 
+Funkcija $a\left(z,t\right)$ opisuje obliko in potovanje sunka v smeri $z$. 
+Razvijmo jo pri $z=0$ po krožnih frekvencah z ustreznimi amplitudnimi faktorji 
 \begin{equation}
 a\left(0,t\right)=\int \tilde{A}(\omega)\, e^{- i\omega t}d\omega.
 \label{9.62}
 \end{equation}
-Ko sunek potuje vzdolž osi $z$, moramo vsaki frekvenčni komponenti pripisati
+Ko sunek potuje vzdolž osi $z$, vsaki komponenti pripišemo
 ustrezen fazni faktor $i \beta (\omega) z$. Tako velja
 \begin{equation}
 a\left(z,t\right)=\int \tilde{A}(\omega)\, e^{i \beta (\omega) z - i\omega t}d\omega.
 \label{9.62f}
 \end{equation}
-Osnovni sunek naj bo približno monokromatičen s frekvenco $\omega_{0}$,
+Osnovni sunek naj bo približno monokromatičen s krožno frekvenco $\omega_{0}$,
 kar pomeni, da je mnogo daljši od optične periode. Potem lahko lahko $\beta(\omega)$
-razvijemo okoli $\omega_{0}$, pri čemer vpeljemo razliko frekvenc $\Omega = \omega - \omega_0$
+razvijemo okoli $\omega_{0}$, pri čemer vpeljemo razliko krožnih frekvenc $\Omega = \omega - \omega_0$
 \begin{equation}
 \beta(\omega_0 + \Omega) \approx \beta(\omega_{0})
-+\frac{d\beta}{d\omega}\,\Omega+\frac{1}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\Omega^{2}.
++\frac{d\beta}{d\omega}\,\Omega+\frac{1}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\Omega^{2} = 
+\beta(\omega_{0}) +\beta '\,\Omega+\frac{1}{2}\,\beta ''\,\Omega^{2}.
 \label{9.62c}
 \end{equation}
 Enačbo~(\ref{9.62f}) tako prepišemo v 
@@ -963,65 +965,57 @@ i(\omega_0 + \Omega) t}d\Omega\\
 & = & e^{i \beta (\omega_0)z - i\omega_0 t} A(z,t).
 \label{9.62b}
 \end{eqnarray}
-Funkcija $A(z, t)$ očitno predstavlja prostorsko in časovno odvisnost ovojnice sunka. Z upoštevanjem
+Funkcija $A(z, t)$ predstavlja prostorsko in časovno odvisnost ovojnice sunka. Z upoštevanjem
 razvoja (enačba~\ref{9.62c}) jo zapišemo kot 
 \begin{equation}
- A(z,t) = \int \tilde{A}(\Omega)\, \exp \left(i \frac{d\beta}{d\omega}\, 
- \Omega\,z + \frac{i}{2}\frac{d^2 \beta}{d\omega^2}
- \,\Omega^2\, z - i\, \Omega\, t\right) d\Omega.
+ A(z,t) = \int \tilde{A}(\Omega)\, \exp \left(i \beta'\, \Omega\,z + 
+ \frac{i}{2}\beta''\,\Omega^2\, z - i\, \Omega\, t\right) d\Omega.
+ \label{eq:ovojnica967}
 \end{equation}
-Vpeljemo še grupno hitrost $v_g = d\omega/d\beta$ in ovojnico zapišemo kot\index{Hitrost valovanja!grupna}
+Odvajajmo ovojnico najprej po $z$
 \begin{equation}
- A(z,t) = \int \tilde{A}(\Omega)\, \exp \left(i \Omega \left(\frac{z}{v_g}-t\right)+ 
- \frac{i}{2}\frac{d}{d\omega}
- \left(\frac{1}{v_g}\right)\Omega^2 z\right) d\Omega.
- \label{9.ovoj}
+ \frac{\partial A(z,t)}{\partial z} = \int \tilde{A}(\Omega)\, 
+ \left(i \beta'\, \Omega + \frac{i}{2}\beta''\Omega^2 \right) 
+ \exp \left(i \beta'\, \Omega\,z + 
+ \frac{i}{2}\beta''\,\Omega^2\, z - i\, \Omega\, t\right) d\Omega,
+\label{9.67a}
 \end{equation}
-V primeru, da je grupna hitrost neodvisna od frekvence, da torej ni disperzije grupne hitrosti, 
-je drugi člen v eksponentu enak nič. Takrat je ovojnica enaka 
+nato pa še enkrat in dvakrat po $t$. Primerjamo dobljene odvode in dobimo enačbo
 \begin{equation}
-  A(z,t) = \int \tilde{A}(\Omega)\, e^{i \Omega \left(\frac{z}{v_g}-t\right)} d\Omega =
-  A\left(0,t-\frac{z}{v_g}\right),
-\end{equation}
-kar je ravno enako obliki signala pri $z = 0$. Oblika sunka se ob odsotnosti 
-disperzije ohranja in sunek 
-poljubne začetne oblike nepopačen potuje po vlaknu z grupno hitrostjo. 
-
-Vrnimo se k enačbi~(\ref{9.ovoj}). Odvajajmo jo po $z$ 
-\begin{equation}
- \frac{\partial A(z,t)}{\partial z} = \left( i\Omega \frac{1}{v_g}+ \frac{i}{2}
-\frac{d}{d\omega} \left(\frac{1}{v_g}\right) \Omega^2 \right) A(z,t).
-\label{9.67}
-\end{equation}
-Desno stran izraza lahko zapišemo s časovnimi odvodi ovojnice 
-\begin{equation}
-\frac{\partial A(z,t)}{\partial z} = -\frac{1}{v_{g}}\,\frac{\partial A (z,t)}{\partial t}
--\frac{i}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A\left(z,t\right)}{\partial t^{2}}
-\label{9.68} 
-\end{equation}
-oziroma
-\begin{equation}
-\left(\frac{\partial}{\partial z} + \frac{1}{v_{g}}\,\frac{\partial }{\partial t}\right)A (z,t) = 
--\frac{i}{2}\,\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A\left(z,t\right)}{\partial t^{2}}.
-\label{9.68b} 
+ \frac{\partial A(z,t)}{\partial z} = -\beta'\frac{\partial A}{\partial t} - \frac{i}{2} \beta''\frac{\partial^2 A}{\partial t^2}.
+ \label{9.68b}
 \end{equation}
 Enačbo lahko nekoliko poenostavimo z vpeljavo novih neodvisnih spremenljivk
 \begin{eqnarray}
-\tau & = & t-\frac{z}{v_{g}}\nonumber \\
+\tau & = & t-\beta'z\nonumber \quad \mathrm{in}\\
 \zeta & = & z.
 \label{9.70}
 \end{eqnarray}
-Za vrh sunka, ki naj ima pri $t=0$ koordinato $z=0$ in se giblje
-z grupno hitrostjo, je vselej $\tau=0$. Spremenljivka $\tau$ torej predstavlja
-čas v točki $z=\zeta$ , merjen od trenutka, ko tja
-prispe osrednji del sunka. Z novima spremenljivkama se enačba~(\ref{9.68b})
-prepiše v 
+Uporabimo verižno pravilo odvajanja
 \begin{equation}
-\frac{d^{2}\beta}{d\omega^{2}}\,\frac{\partial^{2}A}{\partial\tau^{2}}-
-2\, i\,\frac{\partial A}{\partial\zeta}=0
+ \frac{\partial}{\partial z}= \frac{\partial}{\partial\tau}\frac{\partial\tau}{\partial z}+ 
+ \frac{\partial}{\partial\zeta}\frac{\partial\zeta}{\partial z} = 
+ \frac{\partial}{\partial\tau}\left(-\beta'\right)+ \frac{\partial}{\partial \zeta}
+\end{equation}
+in 
+\begin{equation}
+ \frac{\partial}{\partial t}= \frac{\partial}{\partial\tau}\frac{\partial\tau}{\partial t}+ 
+ \frac{\partial}{\partial\zeta}\frac{\partial\zeta}{\partial t} = 
+ \frac{\partial}{\partial\tau}.
+\end{equation}
+Z novima spremenljivkama se enačba~(\ref{9.68b}) prepiše v 
+\begin{equation}
+\beta''\frac{\partial^{2}A}{\partial\tau^{2}}-
+2\, i\,\frac{\partial A}{\partial\zeta}=0.
 \label{9.71}
 \end{equation}
-Ta enačba ima isto obliko kot obosna valovna enačba, ki smo jo v
+Poglejmo enačbo podrobneje. Če ni disperzije in je $\beta''=0$, se $A$
+vzdolž koordinate $\zeta$ ne spreminja. To pomeni, da se oblika sunka
+ob odsotnosti disperzije ohranja in sunek poljubne začetne oblike nepopačen 
+potuje po vlaknu z grupno hitrostjo $1/\beta'$.\index{Hitrost valovanja!grupna}
+
+Če je disperzija različna od nič, ostaneta v enačbi oba člena. Opazimo, da
+ima enačba enako obliko kot obosna valovna enačba, ki smo jo v
 drugem poglavju uporabili za obravnavo koherentnih \index{Obosna valovna enačba}
 snopov (enačba~\ref{eq:obosna-valovna-enacba}). Spomnimo se, da 
 obosno valovno enačbo rešijo Gaussovi snopi (enačba~\ref{eq:gaussov-snop}). 
@@ -1030,16 +1024,17 @@ Podobnost med pojavoma seže dlje od formalne oblike. Pri snopih, ki so omejeni
 v prečni smeri, disperzija fazne in grupne hitrosti po prečnih komponentah valovnega
 vektorja povzroča spreminjanje prečnega preseka snopa. Pri časovno
 omejenih sunkih v sredstvu s frekvenčno disperzijo se namesto preseka sunka
-spreminja njegova vzdolžna oblika. Poglejmo, kako.
+spreminja njegova vzdolžna oblika oziroma njegova dolžina. Poglejmo, kako.
 
 Enačba~(\ref{9.71}) je zelo podobna obosni valovni enačbi, le da ima tukaj vlogo 
-prečne koordinate čas $\tau$. Po analogiji s snopi lahko sklepamo, da se najmanj 
-širi ravno sunek z Gaussovo časovno odvisnostjo. Celotnega računa
+prečne koordinate čas $\tau$. To, kar je bila prej širina snopa, je zdaj torej dolžina sunka.
+Po analogiji s snopi lahko sklepamo, da se najmanj 
+podaljšuje ravno sunek z Gaussovo časovno odvisnostjo. Celotnega računa
 ni treba ponavljati, namesto tega kar v izrazu za Gaussove snope 
 (enačba~\ref{eq:gaussov-snop}) napravimo ustrezno zamenjavo spremenljivk. 
 Iz enačbe~(\ref{9.71}) razberemo, da valovnemu številu $k$ pri snopih  
 ustreza parameter $\mu=(d^{2}\beta/d\omega^{2})^{-1}$. Poleg tega vpeljemo
-trajanje sunka $\sigma$, ki ustreza polmeru Gaussovega snopa $w$, in parameter
+dolžino sunka $\sigma$, ki ustreza polmeru Gaussovega snopa $w$, in parameter
 $b$, ki ustreza krivinskemu radiju $R$. Oba parametra sta seveda odvisna od $\zeta$, 
 tako kot sta parametra $w$ in $R$ odvisna od $z$. 
 
@@ -1056,30 +1051,26 @@ Gaussovega snopa (enačba~\ref{eq:w})
 \sigma^{2}=\sigma_{0}^{2}\left(1+\left(\frac{\zeta}{\zeta_{0}}\right)^{2}\right).
 }
 Tu je $\sigma_{0}$ trajanje sunka pri $\zeta=0$, to je na začetku,
-kjer je sunek najkrajši. Dodatna skupna faza $\phi\left(\zeta\right)$
-ni posebno pomembna, pač pa je zanimiv drugi eksponentni faktor v
-enačbi~(\ref{9.72}). V njem smo z $b=\zeta\left(1+\zeta_{0}^{2}/\zeta^{2}\right)$
-označili količino, ki je analogna krivinskemu radiju valovnih front
-v primeru Gaussovih snopov (enačba~\ref{eq:R}).
+kjer je sunek najkrajši. Krivinskemu radiju valovnih front ((enačba~\ref{eq:R}) v tem primeru
+ustreza količina $b=\zeta\left(1+\zeta_{0}^{2}/\zeta^{2}\right)$.
 \begin{figure}[h]
 \centering
 \def\svgwidth{110truemm} 
 \input{slike/10_Gausstau.pdf_tex}
-\caption{Primerjava krajevne širitve Gaussovega snopa in časovne širitve Gaussovega sunka}
+\caption{Primerjava širitve Gaussovega snopa in podaljšanja Gaussovega sunka}
 \label{fig:Gausstau}
 \end{figure}
 
-Odvod faze po $\tau$ predstavlja spremembo
-frekvence glede na centralno frekvenco sunka $\omega_{0}$
+Zanimivo je pogledati odvod faze po $\tau$, ki predstavlja spremembo krožne
+frekvence glede na centralno krožno frekvenco sunka $\omega_{0}$
 \begin{equation}
 \omega-\omega_{0}=\frac{\mu\tau}{b}.
 \label{9.74}
 \end{equation}
-Za pozitivne vrednosti $\mu$ je frekvenca na začetku sunka,
+Za pozitivne vrednosti $\mu$ je krožna frekvenca na začetku sunka,
 to je pri $\tau<0$, manjša od $\omega_0$, z naraščajočim časom pa se 
-linearno povečuje proti koncu sunka. Obnašanje je torej podobno tistemu, 
-ki ga poznamo iz nelinearne optike
-(slika~\ref{fig:chirp}\,a). 
+linearno povečuje proti koncu sunka. Obnašanje je torej podobno črikanju, 
+ki ga poznamo iz nelinearne optike (slika~\ref{fig:chirp}\,a). 
 
 \begin{remark}
 Pri $\zeta=0$ je sunek najkrajši možen pri dani spektralni
@@ -1098,12 +1089,13 @@ namreč ne povzroči razširitve, temveč le razliko med grupno in fazno hitrost
 \begin{definition}
 \label{naloga:pulzdisperzija}
 Naj bo vpadni sunek svetlobe Gaussove oblike $E(x,y, z=0, t) = 
-\psi(x,y) e^{-at^2-i \omega_0 t}$. Pokaži, da je ustrezna funkcija $\tilde{A}(\Omega)$ oblike
+\psi(x,y) e^{-at^2-i \omega_0 t}$. Pokaži, da je ustrezna funkcija
+$\tilde{A}(\Omega)$ oblike
 \begin{equation}
 \tilde{A}(\Omega) = \frac{1}{\sqrt{4 \pi a}}e^{-\Omega^2/4a},
 \end{equation}
-nato pa z neposredno integracijo (enačba~\ref{9.ovoj}) pokaži, 
-da je rezultat enak ovojnici, zapisani z enačbo~(\ref{9.72}), pri čemer je
+nato pa z neposredno integracijo (enačba~\ref{eq:ovojnica967}) pokaži, 
+da je podaljšan sunek pri $z\neq 0$ enak ovojnici, zapisani z enačbo~(\ref{9.72}), pri čemer je
 \begin{equation}
 \zeta_0 = \frac{\mu}{2 a}.
 \end{equation}
