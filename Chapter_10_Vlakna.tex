@@ -746,12 +746,14 @@ se oblika svetlobnih sunkov, ki prenašajo informacijo, čim bolj ohranja.
 Na obliko sunka močno vpliva disperzija, to je odvisnost fazne in grupne (skupinske) hitrosti
 valovanja od krožne frekvence. Zaradi disperzije se kratki sunki, ki potujejo po vlaknu, podaljšajo in 
 tako omejujejo količino informacije, ki jo lahko prenašamo po vlaknu dane dolžine\index{Disperzija}.
+Največja količina vhodnih podatkov na časovno enoto je kar 
+obratno sorazmerna z dolžino izhodnih sunkov svetlobe. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/10_disperzija.pdf_tex} 
-\caption{Zaradi disperzije se dolžina sunkov svetlobe, ki potujejo skozi vlakno, 
-močno poveča, zato jih na izhodu iz vlakna ne moremo več ločiti.}
+\caption{Zaradi disperzije se sunki svetlobe, ki potujejo skozi vlakno, 
+podaljšajo, zato jih na izhodu iz vlakna ne moremo več ločiti.}
 \label{fig:disp}
 \end{figure}
 
@@ -804,10 +806,11 @@ Podaljšanje sunka zaradi rodovne disperzije je potem
 \tau\approx 
 \frac{L}{c_0} (n_1-n_2).
 }
-Količina podatkov, ki jo lahko prenašamo po vlaknu, je kar približno obratno sorazmerna z dolžino
-izhodnih sunkov svetlobe. Za $1~\si{\kilo\meter}$ dolgo vlakno z razliko lomnih količnikov 
-$\Delta n = 0,05$  je tako največja frekvenca modulacije okoli $10~\si{\mega\hertz}$, kar je 
-znatno premalo za današnje telekomunikacijske potrebe. Čeprav lahko disperzijo zmanjšamo 
+Največja frekvenca modulacije vhodnega signala, pri kateri izhodne sunke še zaznamo ločeno,
+je približno obratno sorazmerna z dolžino izhodnih sunkov. Za $1~\si{\kilo\meter}$ dolgo vlakno z 
+$\Delta n = 0,05$  je tako modulacijska frekvenca oziroma količina podatkov v časovni
+enoti le 
+okoli $10~\si{\mega\hertz}$. Čeprav lahko disperzijo zmanjšamo 
 s paraboličnim profilom lomnega količnika, so večrodovna vlakna za prenos podatkov na dolge 
 razdalje praktično neuporabna.
 \begin{remark}
@@ -824,7 +827,7 @@ razdalje praktično neuporabna.
 Optična vlakna so navadno narejena iz stekla, katerega lomni količnik je odvisen 
 od valovne dolžine svetlobe. Zaradi tako imenovane materialne disperzije različne 
 spektralne komponente svetlobnega sunka po vlaknu potujejo z različnimi hitrostmi 
-in sunek se po prehodu skozi vlakno podaljša. Pri obravnavi materialne disperzije
+in sunek se po prehodu skozi vlakno podaljša. Pri obravnavi 
 se omejimo na enorodovna vlakna, v katerih rodovne disperzije ni. 
 
 Ker je sunek svetlobe končno dolg, je končna tudi njegova spektralna širina 
@@ -856,15 +859,16 @@ zapišemo dolžino sunka po prehodu skozi vlakno kot
 Koeficient disperzije navadno izrazimo v enotah $\si{\pico\second/\nano\meter\, \kilo\meter}$, 
 njegova vrednost pa je lahko pozitivna ali negativna, zato smo v končnem izrazu za dolžino 
 sunka dodali absolutno vrednost. 
-V snoveh, ki jih uporabljamo za izdelavo optičnih vlaken, je $D_m$ reda 
-$10~\si{\pico\second/\nano\meter\, \kilo\meter}$, lahko pa seže
+V snoveh, ki jih uporabljamo za izdelavo optičnih vlaken, je $D_m \sim  
+10~\si{\pico\second/\nano\meter\, \kilo\meter}$, lahko pa seže
 tudi do več $100~\si{\pico\second/\nano\meter\, \kilo\meter}$, odvisno seveda od valovne dolžine
 in izbrane snovi. 
 
 Materialno disperzijo lahko zmanjšamo na več načinov. Lahko uporabimo čim bolj enobarven
 vir svetlobe, da zmanjšamo $\Delta \lambda$. Za izbrano snov lahko celo izberemo valovno 
-dolžino, pri kateri je koeficient materialne disperzije enak nič. Za SiO$_2$\index{SiO$_2$} je to pri okoli $1300$--$1500~\si{\nano\meter}$, odvisno od dopiranja stekla. Še najbolj uporabna je rešitev, pri kateri 
-z materialno disperzijo izničimo vpliv drugih disperzij in na ta način zmanjšamo skupno 
+dolžino, pri kateri je koeficient materialne disperzije enak nič. Za SiO$_2$\index{SiO$_2$} je to pri okoli $1300$--$1500~\si{\nano\meter}$, odvisno od dopiranja stekla. 
+Še najbolj uporabna je rešitev, pri kateri 
+z materialno disperzijo izničimo vpliv valovodne disperzije in na ta način zmanjšamo skupno 
 disperzijo v vlaknu.
 
 \subsection*{Valovodna disperzija}
@@ -888,15 +892,15 @@ se izraz za dolžino sunka poenostavi v
 \boxeq{dispVal}{
 \tau = |D_v|\,L\, \Delta \lambda.
 }
-Koeficient valovodne disperzije je praviloma najmanjši, reda 
-$1$--$10~\si{\pico\second/\nano\meter\,\kilo\meter}$. 
+Koeficient valovodne disperzije je praviloma najmanjši, 
+$D_v \sim 1$--$10~\si{\pico\second/\nano\meter\,\kilo\meter}$. 
 Znaten postane v enorodovnih vlaknih v območju, kjer je materialna disperzija 
 zelo majhna ali celo enaka nič. 
 V vlaknih s homogeno sredico se valovodni disperziji ne moremo
-izogniti, lahko pa jo pri dani valovni dolžini izničimo z materialno~(slika~\ref{fig:MatVal}). 
+izogniti, lahko pa jo pri dani valovni dolžini približno izničimo z materialno~(slika~\ref{fig:MatVal}). 
 
-Kljub temu zaradi končne spektralne širine sunka svetlobe disperzije 
-v optičnem vlaknu ne moremo nikoli povsem odpraviti. Pri celotni disperziji 
+Ker ima sunek svetlobe vedno neko končno spektralno širino, disperzije 
+v optičnem vlaknu nikoli ne moremo povsem odpraviti. Pri celotni disperziji 
 $5~\si{\pico\second/\nano\meter\,\kilo\meter}$ in spektralni širini 
 $1~\si{\nano\meter}$ znaša v $100~\si{\kilo\meter}$ dolgem vlaknu najvišja 
 frekvenca modulacije vhodnega signala, ki ga na izhodu še lahko razločimo, 
@@ -930,7 +934,7 @@ valovni dolžini, pri kateri je v vlaknu najmanj absorpcije in izgub.
 \index{Disperzija!podaljšanje sunka}
 Poglejmo si podrobneje, kako po enorodovnem vlaknu ali drugem
 sredstvu z disperzijo potuje kratek sunek valovanja z dano začetno obliko.
-Sunek zapišimo kot  
+Sunek zapišemo kot  
 \begin{equation}
 E\left(x, y, z, t\right)=\psi\left(x,y\right)\, a\left(z,t\right),
 \label{9.61}
@@ -938,7 +942,7 @@ E\left(x, y, z, t\right)=\psi\left(x,y\right)\, a\left(z,t\right),
 kjer je $\psi\left(x,y\right)$ lastna rešitev prečnega dela valovne
 enačbe, ki določa zvezo $\beta\left(\omega\right)$. 
 Funkcija $a\left(z,t\right)$ opisuje obliko in potovanje sunka v smeri $z$. 
-Razvijmo jo pri $z=0$ po krožnih frekvencah z ustreznimi amplitudnimi faktorji 
+Pri $z=0$ jo razvijemo po krožnih frekvencah z ustreznimi amplitudnimi faktorji 
 \begin{equation}
 a\left(0,t\right)=\int \tilde{A}(\omega)\, e^{- i\omega t}d\omega.
 \label{9.62}
@@ -950,7 +954,7 @@ a\left(z,t\right)=\int \tilde{A}(\omega)\, e^{i \beta (\omega) z - i\omega t}d\o
 \label{9.62f}
 \end{equation}
 Osnovni sunek naj bo približno monokromatičen s krožno frekvenco $\omega_{0}$,
-kar pomeni, da je mnogo daljši od optične periode. Potem lahko lahko $\beta(\omega)$
+kar pomeni, da je mnogo daljši od optične periode. Potem lahko $\beta(\omega)$
 razvijemo okoli $\omega_{0}$, pri čemer vpeljemo razliko krožnih frekvenc $\Omega = \omega - \omega_0$
 \begin{equation}
 \beta(\omega_0 + \Omega) \approx \beta(\omega_{0})
@@ -958,7 +962,7 @@ razvijemo okoli $\omega_{0}$, pri čemer vpeljemo razliko krožnih frekvenc $\Om
 \beta(\omega_{0}) +\beta '\,\Omega+\frac{1}{2}\,\beta ''\,\Omega^{2}.
 \label{9.62c}
 \end{equation}
-Enačbo~(\ref{9.62f}) tako prepišemo v 
+Enačbo~(\ref{9.62f}) prepišemo v 
 \begin{eqnarray}
 a\left(z,t\right)&=&\int \tilde{A}(\Omega)\, e^{i \beta (\omega_0 + \Omega)z - 
 i(\omega_0 + \Omega) t}d\Omega\\
@@ -980,7 +984,7 @@ Odvajajmo ovojnico najprej po $z$
  \frac{i}{2}\beta''\,\Omega^2\, z - i\, \Omega\, t\right) d\Omega,
 \label{9.67a}
 \end{equation}
-nato pa še enkrat in dvakrat po $t$. Primerjamo dobljene odvode in dobimo enačbo
+nato pa še enkrat in dvakrat parcialno po $t$. Primerjamo izračunane odvode in dobimo enačbo
 \begin{equation}
  \frac{\partial A(z,t)}{\partial z} = -\beta'\frac{\partial A}{\partial t} - \frac{i}{2} \beta''\frac{\partial^2 A}{\partial t^2}.
  \label{9.68b}
@@ -1017,19 +1021,21 @@ potuje po vlaknu z grupno hitrostjo $1/\beta'$.\index{Hitrost valovanja!grupna}
 Če je disperzija različna od nič, ostaneta v enačbi oba člena. Opazimo, da
 ima enačba enako obliko kot obosna valovna enačba, ki smo jo v
 drugem poglavju uporabili za obravnavo koherentnih \index{Obosna valovna enačba}
-snopov (enačba~\ref{eq:obosna-valovna-enacba}). Spomnimo se, da 
+snopov (enačba~\ref{eq:obosna-valovna-enacba}). 
+Razlika med obosno valovno enačbo in enačbo~(\ref{9.71}) je v tem, da vlogo
+prečne koordinate prevzame čas $\tau$. To, kar je bila prej širina snopa, 
+je zdaj torej dolžina sunka. Spomnimo se, da 
 obosno valovno enačbo rešijo Gaussovi snopi (enačba~\ref{eq:gaussov-snop}). 
 
+\begin{remark}
 Podobnost med pojavoma seže dlje od formalne oblike. Pri snopih, ki so omejeni 
 v prečni smeri, disperzija fazne in grupne hitrosti po prečnih komponentah valovnega
 vektorja povzroča spreminjanje prečnega preseka snopa. Pri časovno
 omejenih sunkih v sredstvu s frekvenčno disperzijo se namesto preseka sunka
-spreminja njegova vzdolžna oblika oziroma njegova dolžina. Poglejmo, kako.
+spreminja njegova vzdolžna oblika oziroma njegova dolžina.
+\end{remark}
 
-Enačba~(\ref{9.71}) je zelo podobna obosni valovni enačbi, le da ima tukaj vlogo 
-prečne koordinate čas $\tau$. To, kar je bila prej širina snopa, je zdaj torej dolžina sunka.
-Po analogiji s snopi lahko sklepamo, da se najmanj 
-podaljšuje ravno sunek z Gaussovo časovno odvisnostjo. Celotnega računa
+Celotnega računa
 ni treba ponavljati, namesto tega kar v izrazu za Gaussove snope 
 (enačba~\ref{eq:gaussov-snop}) napravimo ustrezno zamenjavo spremenljivk. 
 Iz enačbe~(\ref{9.71}) razberemo, da valovnemu številu $k$ pri snopih  
@@ -1053,6 +1059,8 @@ Gaussovega snopa (enačba~\ref{eq:w})
 Tu je $\sigma_{0}$ trajanje sunka pri $\zeta=0$, to je na začetku,
 kjer je sunek najkrajši. Krivinskemu radiju valovnih front ((enačba~\ref{eq:R}) v tem primeru
 ustreza količina $b=\zeta\left(1+\zeta_{0}^{2}/\zeta^{2}\right)$.
+Po analogiji s snopi lahko sklepamo, da se najmanj 
+podaljšuje ravno sunek z Gaussovo časovno odvisnostjo. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{110truemm} 
