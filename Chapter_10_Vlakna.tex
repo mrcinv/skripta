@@ -963,12 +963,11 @@ razvijemo okoli $\omega_{0}$, pri čemer vpeljemo razliko krožnih frekvenc $\Om
 \label{9.62c}
 \end{equation}
 Enačbo~(\ref{9.62f}) prepišemo v 
-\begin{eqnarray}
-a\left(z,t\right)&=&\int \tilde{A}(\Omega)\, e^{i \beta (\omega_0 + \Omega)z - 
-i(\omega_0 + \Omega) t}d\Omega\\
-& = & e^{i \beta (\omega_0)z - i\omega_0 t} A(z,t).
+\begin{equation}
+a\left(z,t\right)=\int \tilde{A}(\Omega)\, e^{i \beta (\omega_0 + \Omega)z - 
+i(\omega_0 + \Omega) t}d\Omega  =  e^{i \beta (\omega_0)z - i\omega_0 t} A(z,t).
 \label{9.62b}
-\end{eqnarray}
+\end{equation}
 Funkcija $A(z, t)$ predstavlja prostorsko in časovno odvisnost ovojnice sunka. Z upoštevanjem
 razvoja (enačba~\ref{9.62c}) jo zapišemo kot 
 \begin{equation}
@@ -984,7 +983,23 @@ Odvajajmo ovojnico najprej po $z$
  \frac{i}{2}\beta''\,\Omega^2\, z - i\, \Omega\, t\right) d\Omega,
 \label{9.67a}
 \end{equation}
-nato pa še enkrat in dvakrat parcialno po $t$. Primerjamo izračunane odvode in dobimo enačbo
+nato pa še enkrat 
+\begin{equation}
+ \frac{\partial A(z,t)}{\partial t} = \int \tilde{A}(\Omega)\, 
+ \left(-i\Omega\right) 
+ \exp \left(i \beta'\, \Omega\,z + 
+ \frac{i}{2}\beta''\,\Omega^2\, z - i\, \Omega\, t\right) d\Omega
+\label{9.67b}
+\end{equation}
+in dvakrat parcialno po $t$
+\begin{equation}
+ \frac{\partial^2 A(z,t)}{\partial t^2} = \int \tilde{A}(\Omega)\, 
+ \left(-\Omega^2\right) 
+ \exp \left(i \beta'\, \Omega\,z + 
+ \frac{i}{2}\beta''\,\Omega^2\, z - i\, \Omega\, t\right) d\Omega.
+\label{9.67c}
+\end{equation}
+Primerjamo izračunane odvode in dobimo enačbo
 \begin{equation}
  \frac{\partial A(z,t)}{\partial z} = -\beta'\frac{\partial A}{\partial t} - \frac{i}{2} \beta''\frac{\partial^2 A}{\partial t^2}.
  \label{9.68b}
@@ -995,7 +1010,7 @@ Enačbo lahko nekoliko poenostavimo z vpeljavo novih neodvisnih spremenljivk
 \zeta & = & z.
 \label{9.70}
 \end{eqnarray}
-Uporabimo verižno pravilo odvajanja
+Uporabimo verižno pravilo odvajanja in dobimo
 \begin{equation}
  \frac{\partial}{\partial z}= \frac{\partial}{\partial\tau}\frac{\partial\tau}{\partial z}+ 
  \frac{\partial}{\partial\zeta}\frac{\partial\zeta}{\partial z} = 
@@ -1057,7 +1072,7 @@ Gaussovega snopa (enačba~\ref{eq:w})
 \sigma^{2}=\sigma_{0}^{2}\left(1+\left(\frac{\zeta}{\zeta_{0}}\right)^{2}\right).
 }
 Tu je $\sigma_{0}$ trajanje sunka pri $\zeta=0$, to je na začetku,
-kjer je sunek najkrajši. Krivinskemu radiju valovnih front ((enačba~\ref{eq:R}) v tem primeru
+kjer je sunek najkrajši. Krivinskemu radiju valovnih front (enačba~\ref{eq:R}) v tem primeru
 ustreza količina $b=\zeta\left(1+\zeta_{0}^{2}/\zeta^{2}\right)$.
 Po analogiji s snopi lahko sklepamo, da se najmanj 
 podaljšuje ravno sunek z Gaussovo časovno odvisnostjo. 
@@ -1090,8 +1105,8 @@ smo spoznali že pri fazno uklenjenih sunkih iz večfrekvenčnih laserjev
 (poglavje~\ref{chap:Uklepanje}).\index{Uklepanje faz}
 Pri potovanju sunka se zaradi disperzije faze frekvenčnih komponent
 različno spreminjajo in sunek se podaljša. Pri tem je pomemben  
-drugi odvod fazne hitrosti po frekvenci. Linearno spreminjanje faze 
-namreč ne povzroči razširitve, temveč le razliko med grupno in fazno hitrostjo.
+drugi odvod valovnega števila po krožni frekvenci. Linearno spreminjanje faze 
+namreč ne povzroči razširitve, temveč le spremembo v grupni in fazni hitrosti.
 \end{remark}
 
 \begin{definition}
@@ -1100,24 +1115,26 @@ Naj bo vpadni sunek svetlobe Gaussove oblike $E(x,y, z=0, t) =
 \psi(x,y) e^{-at^2-i \omega_0 t}$. Pokaži, da je ustrezna funkcija
 $\tilde{A}(\Omega)$ oblike
 \begin{equation}
-\tilde{A}(\Omega) = \frac{1}{\sqrt{4 \pi a}}e^{-\Omega^2/4a},
+\tilde{A}(\Omega) = \frac{1}{\sqrt{4 \pi a}}e^{-\Omega^2/4a}.
 \end{equation}
-nato pa z neposredno integracijo (enačba~\ref{eq:ovojnica967}) pokaži, 
-da je podaljšan sunek pri $z\neq 0$ enak ovojnici, zapisani z enačbo~(\ref{9.72}), pri čemer je
+Nato vpelji novi spremenljivki $\tau$ in $\zeta$ in z neposredno 
+integracijo (enačba~\ref{eq:ovojnica967}) pokaži, 
+da je podaljšan sunek pri $z\neq 0$ enak ovojnici, 
+zapisani z enačbo~(\ref{9.72}), pri čemer je
 \begin{equation}
 \zeta_0 = \frac{\mu}{2 a}.
 \end{equation}
 \end{definition}
 
 \begin{definition}
-Uporabi enačbo~(\ref{9.73}) in pokaži, da je najmanjše podaljšanje sunka svetlobe
+Uporabi enačbo~(\ref{9.73}) in pokaži, da je podaljšanje Gaussovega 
+sunka svetlobe oblike $I \propto \exp(-2\tau^2/\sigma^2)$
 pri dani dolžini vlakna enako
 \begin{equation}
-\tau_v (L) = \sqrt{\frac{2 \ln 2}{a}}\sqrt{1 + \frac{4 a^2 L^2}{\mu^2}}
-= \tau_v(0)\sqrt{1 + \left(\frac{4 \ln 2}{\tau_v(0)^2 \mu}L\right)^2}
+\sigma (L) = \sigma_0\sqrt{1 + \left(\frac{2 L }{\sigma_0^2 \mu}\right)^2}
 \end{equation}
 in za velike dolžine enako izrazu, ki smo ga izračunali pri 
-valovodni disperziji (enačba~\ref{ValD}).
+valovodni disperziji (enačba~\ref{dispVal}).
 \end{definition}
 
 \subsection*{Kompenzacija disperzije}
