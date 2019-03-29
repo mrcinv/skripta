@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '10_WDM.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{1041.36728516bp}%
+    \setlength{\unitlength}{976.28182983bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -49,12 +51,14 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.21709714)%
-    \put(0.33468743,0.40480867){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0.33468743,0.40480868){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{10_WDM.pdf}}%
-    \put(0.21641992,0.17652105){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$M$}}}%
-    \put(0.48907585,0.08738287){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$A$}}}%
-    \put(0.70926933,0.17558314){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$DM$}}}%
-    \put(0.01969294,0.20816327){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$O$}}}%
-    \put(0.96044532,0.20816327){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$D$}}}%
+    \put(0.21641992,0.17652106){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$M$\end{tabular}}}}%
+    \put(0.48907585,0.08738288){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$A$\end{tabular}}}}%
+    \put(0.70926933,0.17558315){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$DM$\end{tabular}}}}%
+    \put(0.01969294,0.20816328){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$O$\end{tabular}}}}%
+    \put(0.96044532,0.20816328){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$D$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
