@@ -1447,16 +1447,17 @@ Do zdaj smo govorili o svetlobi, ki potuje po valovnem vodniku ali optičnem vla
 svetlobo sploh sklopimo v vodnik? Poznamo več načinov sklopitve, obravnavali bomo 
 čelno sklopitev, bočno sklopitev s prizmo in bočno sklopitev s periodično strukturo.
 Prvi način navadno uporabljamo pri 
-cilindričnih vlaknih, ostali pa najpogosteje pri planarnih valovodnih strukturah.
+cilindričnih vlaknih, ostala pa najpogosteje pri planarnih valovodnih strukturah.
 
 \subsection*{Čelna sklopitev}
 \index{Sklopitev v optično vlakno!čelna sklopitev}
 Pri izračunu izkoristka sklopitve svetlobe v optično vlakno vpeljemo 
 tako imenovani prekrivalni integral, ki pove, kolikšen delež vpadne svetlobe 
 z električno poljsko jakostjo $E(r, \varphi)$ se sklopi z izbranim rodom 
-vlakna $n,m$.\index{Prekrivalni integral}
+vlakna.\index{Prekrivalni integral}
 To naredimo tako, da vpadni val razvijemo po lastnih rodovih vlakna, iz ortogonalnosti
-rodov pa sledi prekrivalni integral, ki ga moramo seveda ustrezno normirati. Zapišemo ga kot
+rodov pa sledi prekrivalni integral, ki ga moramo seveda ustrezno normirati. Za sklopitev v rod, 
+označen z indeksoma $n$ in $m$, zapišemo prekrivalni integral kot
 \begin{equation}
 \eta = \frac{|\int E(r, \varphi) E^*_{n,m}(r, \varphi) r\, dr\, d\varphi|^2}
 {\left(\int |E(r, \varphi)|^2 r\, dr\, d\varphi \right) \left(\int |E_{n,m}(r, \varphi)|^2 
@@ -1468,8 +1469,8 @@ oziroma v kartezičnih koordinatah
 {\left(\int |E(x, y)|^2 dx\,dy \right) \left(\int |E_{n,m}(x, y)|^2 
 dx\, dy \right)}.
 \end{equation}
-Če računamo sklopitev v osnovi rod vlakna, ga iz praktičnih razlogov nadomestimo 
-z Gaussovim profilom z ustreznim efektivnim polmerom (enačba~\ref{Marcuse}). 
+Če računamo sklopitev svetlobe v osnovi rod vlakna, je priročno osnovni rod 
+nadomestiti z Gaussovim profilom z ustreznim efektivnim polmerom (po enačbi~\ref{Marcuse}). 
 
 \begin{remark}
 Sklopitev svetlobe v večrodovno vlakno lahko obravnavamo geometrijsko, kot smo to naredili
