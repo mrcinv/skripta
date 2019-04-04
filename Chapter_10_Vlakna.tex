@@ -1441,74 +1441,77 @@ z močjo okoli $20$--$100~\si{\milli\watt}$. Na ta način lahko v $10$--$30~\si{
 dolgih odsekih vlaken dosežemo več 1000-kratno ojačenje ($30$--$40~\si{\decibel}$), kar 
 je dovolj za kompenzacijo izgub.
 
-\section{Sklopitev svetlobe v vlakna}
+\section{Sklopitev svetlobe v optične vodnike}
 \index{Sklopitev v optično vlakno}
 Do zdaj smo govorili o svetlobi, ki potuje po valovnem vodniku ali optičnem vlaknu. Kako pa 
 svetlobo sploh sklopimo v vodnik? Poznamo več načinov sklopitve, obravnavali bomo 
 čelno sklopitev, bočno sklopitev s prizmo in bočno sklopitev s periodično strukturo.
 Prvi način navadno uporabljamo pri 
-cilindričnih vlaknih, ostala pa najpogosteje pri planarnih valovodnih strukturah.
+cilindričnih vlaknih, ostala dva načina pa najpogosteje pri planarnih valovodnih strukturah.
 
 \subsection*{Čelna sklopitev}
 \index{Sklopitev v optično vlakno!čelna sklopitev}
-Pri izračunu izkoristka sklopitve svetlobe v optično vlakno vpeljemo 
+Sklopitev svetlobe v večrodovno vlakno lahko obravnavamo geometrijsko, kot smo to naredili
+na začetku poglavja (slika~\ref{fig:vodnik}). Izračunali smo, da je največji 
+vpadni kot, pod katerim se svetloba še sklopi v vlakno, določen z numerično odprtino 
+vlakna $\sin \alpha_{\mathrm{max}}= NA$  (enačba~\ref{10NAa}).
+
+Za bolj natančen izračun izkoristka sklopitve svetlobe v optično vlakno vpeljemo 
 tako imenovani prekrivalni integral, ki pove, kolikšen delež vpadne svetlobe 
 z električno poljsko jakostjo $E(r, \varphi)$ se sklopi z izbranim rodom 
 vlakna.\index{Prekrivalni integral}
 To naredimo tako, da vpadni val razvijemo po lastnih rodovih vlakna, iz ortogonalnosti
-rodov pa sledi prekrivalni integral, ki ga moramo seveda ustrezno normirati. Za sklopitev v rod, 
+pa sledi prekrivalni integral, ki ga moramo seveda ustrezno normirati. Za sklopitev v rod, 
 označen z indeksoma $n$ in $m$, zapišemo prekrivalni integral kot
+\boxeq{10:prekintxy}{
+\eta = \frac{|\int E(x,y) E^*_{n,m}(x,y) dx\, dy|^2}
+{\left(\int |E(x, y)|^2 dx\,dy \right) \left(\int |E_{n,m}(x, y)|^2 
+dx\, dy \right)},
+}
+oziroma v cilindričnih koordinatah
 \begin{equation}
 \eta = \frac{|\int E(r, \varphi) E^*_{n,m}(r, \varphi) r\, dr\, d\varphi|^2}
 {\left(\int |E(r, \varphi)|^2 r\, dr\, d\varphi \right) \left(\int |E_{n,m}(r, \varphi)|^2 
-r\, dr\, d\varphi \right)},
+r\, dr\, d\varphi \right)}.
+\label{10:prekint}
 \end{equation}
-oziroma v kartezičnih koordinatah
-\begin{equation}
-\eta = \frac{|\int E(x,y) E^*_{n,m}(x,y) dx\, dy|^2}
-{\left(\int |E(x, y)|^2 dx\,dy \right) \left(\int |E_{n,m}(x, y)|^2 
-dx\, dy \right)}.
-\end{equation}
-Če računamo sklopitev svetlobe v osnovi rod vlakna, je priročno osnovni rod 
-nadomestiti z Gaussovim profilom z ustreznim efektivnim polmerom (po enačbi~\ref{Marcuse}). 
-
-\begin{remark}
-Sklopitev svetlobe v večrodovno vlakno lahko obravnavamo geometrijsko, kot smo to naredili
-na začetku poglavja (slika~\ref{fig:vodnik}). Izračunali smo (enačba~\ref{10NAa}), da je največji 
-vpadni kot, pod katerim se svetloba še sklopi v vlakno, določen z numerično odprtino 
-vlakna $\sin \alpha_{\mathrm{max}}= NA$.
-\end{remark}
+Točen račun gornjega integrala je na splošno precej zapleten, saj vsebuje integrale
+Besslovih funkcij. V primeru osnovnega roda račun poenostavimo, tako da 
+prečno odvisnost polja nadomestimo z Gaussovim profilom z ustreznim 
+efektivnim polmerom (po enačbi~\ref{Marcuse}). 
 
 \subsection*{Bočna sklopitev}
 \index{Sklopitev v optično vlakno!bočna sklopitev}
-Neposredna sklopitev svetlobe v vodnik preko plašča ni mogoča. Ker je namreč lomni količnik
-sredice večji od lomnega količnika plašča, dovolj velikega vstopnega kota, pod katerim bi 
-se svetloba ujela v sredico, ni mogoče doseči. Zato je za sklopitev preko stranice treba 
-uporabiti drugačen pristop. Navadno uporabimo prizmo ali pa periodično strukturo na vlaknu. 
+Neposredna sklopitev svetlobe v optični vodnik preko plašča ni mogoča. V vodniku je namreč
+lomni količnik sredice vedno večji od lomnega količnika plašča, zato dovolj velikega vstopnega 
+kota, pod katerim bi se svetloba ujela v sredico, ni mogoče doseči. Za sklopitev preko stranice 
+zato uporabimo drugačen pristop, navadno s prizmo ali s periodično strukturo na vlaknu. 
+
+V prvem primeru uporabimo prizmo, kot kaže slika~(\ref{fig:coupler}\,a). Lomni količnik prizme
+je pri tem večji od lomnega količnika plašča $n_p > n_2$.
+Vhodni žarek vpada na prizmo, se ob prehodu vanjo lomi, nato pa se na stranici, ki je vzporedna
+z vodnikom, totalno odbije.\index{Totalni odboj} 
+V tankem vmesnem območju med prizmo in sredico vodnika se pojavi evanescentni\index{Evanescentno polje}
+val s komponento valovnega vektorja $\beta_v  = k_0 n_p \sin \alpha$ v 
+smeri vzporedno z vodnikom. 
+
+Pogoj za uspešno 
+sklopitev v vlakno je ujemanje vzdolžne komponente valovnega vektorja vpadne svetlobe $\beta_v$ 
+z vzdolžno komponentno valovnega vektorja $\beta_n$ tistega rodu, ki ga želimo vzbuditi. 
+S spreminjanjem vpadnega kota $\alpha$ spreminjamo $\beta_v$ in v vodniku vzbujamo različne rodove. 
+Pri tem mora biti razdalja med prizmo in vodnikom dovolj majhna (tipično reda valovne dolžine svetlobe), 
+da se v valovod ob izpolnjenem pogoju ujemanja faze sklopi znaten delež vpadne svetlobe.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/10_coupler.pdf_tex} 
 \caption{Dva primera bočne sklopitve svetlobe v valovni vodnik: sklopitev s prizmo (a) in sklopitev
 s periodično strukturo (b)}
 \label{fig:coupler}
 \end{figure}
-V prvem primeru uporabimo prizmo, kot kaže slika~(\ref{fig:coupler}\,a). Lomni količnik prizme
-je pri tem večji od lomnega količnika plašča $n_p > n_2$.
-Vhodni žarek vpada na prizmo, se ob prehodu vanjo lomi, nato pa se na stranici, ki je vzporedna
-z vodnikom, totalno odbije.\index{Totalni odboj} 
-V vmesnem območju med prizmo in sredico vodnika se pojavi evanescentni\index{Evanescentno polje}
-val s komponento valovnega vektorja $\beta  = k_0 n_p \sin \alpha$ v 
-smeri vzporedno z vodnikom. Pogoj za uspešno 
-sklopitev je ujemanje vzdolžnih komponent valovnega vektorja vpadne svetlobe in valovnega
-vektorja rodu v vodniku, ki ga želimo vzbuditi. 
-S spreminjanjem vpadnega kota lahko torej v vodniku vzbujamo različne rodove. 
-Če je razdalja med prizmo in vodnikom dovolj majhna (tipično pod valovno dolžino svetlobe), se v 
-valovod ob izpolnjenem pogoju ujemanja faze sklopi znaten delež vpadne svetlobe.
-
-Tudi periodična struktura na valovnem vodniku (slika~\ref{fig:coupler}\,b) deluje na 
-ujemanju valovnega vektorja vpadnega vala z valovnim vektorjem ustreznega rodu.
+Tudi sklopitev s periodično strukturo na valovnem vodniku (slika~\ref{fig:coupler}\,b) deluje na 
+ujemanju vzdolžnih komponent valovnega vektorja vpadnega vala in valovnega vektorja ustreznega rodu.
 Ko vpade val pod kotom $\alpha$ glede na valovni vodnik, periodična struktura na vodniku 
 spremeni njegovo fazo za večkratnik $2 \pi z/\Lambda$, pri čemer je $\Lambda$ perioda strukture.
 Če dosežemo, da se komponenta novega valovnega vektorja $\beta = k_0 n_2 \sin \alpha+ 
@@ -1519,57 +1522,55 @@ se vpadna svetloba sklopi v vlakno.
  Oba opisana načina za sklopitev svetlobe v vlakno lahko uporabimo tudi za sklopitev svetlobe 
  iz vlakna, pri čemer mora biti ravno tako izpolnjen pogoj ujemanja faz. 
  Sklapljanje svetlobe skozi prizmo je uporabno tudi za raziskave tankih plasti snovi. 
- Iz pogoja za ujemanje faz lahko določimo lastnosti tanke plasti, njeno debelino ali njen lomni količnik. 
+ Iz pogoja za ujemanje faz lahko določimo lastnosti tanke plasti, na primer njen lomni količnik. 
 \end{remark}
 
-\section{Sklopitev med valovodi}
+\section{Sklopitev med optičnimi vodniki}
 \index{Sklopitev med valovodi}
-\subsection*{Izgube na spoju dveh vlaken}
+\subsection*{Čelna sklopitev dveh vlaken}
 \index{Izgube v optičnih vlaknih!spoj dveh vlaken}
-Omenili smo že, da pride do izgub tudi na spoju dveh vlaken. 
-V idealnem primeru sta dve stikajoči vlakni povsem enaki in se sredici povsem ujemata. 
-Čim se pojavijo majhna odstopanja v velikosti ali poravnavi sredice, na stiku pride 
-do izgub, na tipičnem spoju vlaken do okoli $0,2$--$0,5~\si{\decibel}$.
+Pri telekomunikacijah z optičnimi vodniki so spoji med posameznimi vodniki neizogibni.
+V idealnem primeru sta vodnika povsem enaka in se natančno stikata, tako da na spoju
+ne prihaja do dodatnih izgub ali popačenja signala. Čim pa se pojavijo odstopanja 
+v velikosti polmera sredice, razlike v vrednostih lomnih količnikov ali nenatančna poravnava 
+sredice, na spoju pride do izgub. Tipično znašajo izgube na spoju vlaken do okoli 
+$0,2$--$0,5~\si{\decibel}$.
 
 Omejimo se na spoj enorodovnih vlaken, v katerih krajevni del 
 električne poljske jakosti osnovnega roda zapišemo kot
 \begin{equation}
 E(r, \varphi, z)=\psi(r, \varphi) e^{i\beta z}.
 \end{equation} 
-
-Za izračun sklopitve med dvema vlaknoma vpeljemo prekrivalni integral,\index{Prekrivalni integral}
-ki pove, kolikšen delež moči iz prvega vlakna 
+Podobno kot smo zapisali prekrivalni integral pri sklopitvi svetlobe v vlakno (enačba~\ref{10:prekint}),
+vpeljemo prekrivalni integral za izračun sklopitve med dvema vlaknoma,\index{Prekrivalni integral}
+ki pove, kolikšen delež svetlobe moči iz prvega vlakna 
 se sklopi v osnovni rod v drugem vlaknu. Sklopitveni faktor je
 \boxeq{10:overlap}{
 \eta = \frac{|\int \psi_1(r, \varphi) \psi_2^*(r, \varphi) r\, dr\, d\varphi|^2}
 {\left(\int |\psi_1|^2 r\, dr\, d\varphi \right) \left(\int |\psi_2|^2 r\, dr\, d\varphi \right)},
 }
 pri čemer z indeksom $1$ označimo osnovni rod v prvem vlaknu, z indeksom $2$ pa 
-v drugem. Točen izračun sklopitve je na splošno precej zapleten, saj vsebuje integrale
-Besslovih funkcij. Zato račun poenostavimo, tako 
-da prečno odvisnost osnovnega roda v cilindričnem vlaknu nadomestimo z 
-Gaussovo funkcijo in uporabimo efektivni polmer snopa (enačba~\ref{Marcuse}).\index{Gaussov 
+v drugem. Tudi tukaj račun poenostavimo in namesto Besslovega profila uporabimo 
+Gaussov profil z ustreznim efektivnim polmerom snopa (enačba~\ref{Marcuse}).\index{Gaussov 
 snop!efektivni polmer}
 
-Izračunajmo za primer sklopitveni faktor in izgube na stiku dveh vlaken z rahlo 
+Izračunajmo za primer sklopitveni faktor in izgube na spoju dveh vlaken z rahlo 
 različnima polmeroma. Po Marcusejevi formuli najprej določimo efektivna polmera Gaussovih snopov
-v obeh vlaknih $w_1$ in $w_2$. Prečni profil v prvem vlaknu je tako\index{Marcusejeva formula}
+v obeh vlaknih $w_1$ in $w_2$. Prečni profil v vlaknih je potem\index{Marcusejeva formula}
 \begin{equation}
-\psi_1 = A_1 e^{-r^2/w_1^2},
+\psi_{1,2} = A_{1,2} e^{-r^2/w_{1,2}^2}.
 \end{equation}
-v drugem pa 
-\begin{equation}
-\psi_2 = A_2 e^{-r^2/w_2^2}.
-\end{equation}
-Vstavimo gornja nastavka v enačbo~(\ref{10:overlap}) in zapišemo
+Vstavimo gornja nastavka v prekrivalni integral~(enačba~\ref{10:overlap}) in dobimo
 \begin{equation}
 \eta = \frac{|\int A_1 \, e^{-r^2/w_1^2}\, A_2\, e^{-r^2/w_2^2}\, 2 \pi\, r\, dr|^2}
 {\left(\int A_1^2 \,e^{-2r^2/w_1^2} \, 2 \pi \, r\, dr \right) \left( A_2^2\, 
 e^{-2r^2/w_2^2}\, 2 \pi \, r\, dr \right)},
+\label{10:prekintw}
 \end{equation}
 od koder sledi
 \begin{equation}
 \eta = \frac{4 w_1^2 w_2^2}{(w_1^2+w_2^2)^2}.
+\label{10:w1w2}
 \end{equation}
 Kadar sta polmera vlaken enaka, je prekrivanje popolno in $\eta = 1$. Z naraščajočo razliko
 med polmeroma pa vrednost $\eta$ pojema. Pri tem
@@ -1579,12 +1580,13 @@ obratno pa je tudi res, saj se v širšem končnem vlaknu poleg osnovnega vzbudi
 tudi višji rodovi. 
 
 Pri prehodu iz vlakna z $w = 10~\si{\micro\meter}$ v vlakno
-s polmerom $w = 8~\si{\micro\meter}$ (ali obratno), je sklopitveni faktor enak $0,95$. 
-To je enako razmerju prepuščene intenzitete svetlobe, zato lahko izračunamo izgube kar z
-enačbo~(\ref{dB}). Izračunana sklopitev ustreza izgubam $0,21~\si{\decibel}$. 
+s polmerom $w = 8~\si{\micro\meter}$ (ali obratno), je sklopitveni faktor (oziroma
+razmerje med prepuščeno in vpadno intenziteto svetlobe) enak $0,95$. Po enačbi~(\ref{dB})
+so izgube za izračunano sklopitev enake $0,21~\si{\decibel}$. 
 
 \begin{definition}
-Pokaži, da je sklopitveni faktor za dve enaki vzporedni vlakni, ki sta iz osi izmaknjeni
+Izračunaj prekrivalni integral (enačba~\ref{10:prekintw}) in pokaži veljavnost enačbe~(\ref{10:w1w2}).
+Poleg tega pokaži tudi, da je sklopitveni faktor za dve enaki vzporedni vlakni, ki sta iz osi izmaknjeni
 za $\Delta$, enak
 \begin{equation}
 \eta = \exp \left( - \frac{\Delta^2}{w^2}\right).
