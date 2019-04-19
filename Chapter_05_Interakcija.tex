@@ -237,21 +237,38 @@ Stanje $E_2$ naj ima višjo energijo od $E_1$, razlika med njima pa naj bo
 Zaradi interakcije s poljem pri frekvenci prehoda $\omega_{0}$
 atomi prehajajo iz nižjega stanja v višje in obratno. Prehajanje 
 med obema stanjema opisujejo trije procesi: 
-spontano sevanje, absorpcija in stimulirano sevanje.
+absorpcija, spontano sevanje in stimulirano sevanje.
 
 \begin{figure}[h]
 \centering
 \def\svgwidth{145truemm} 
 \input{slike/05_Dvonivojski.pdf_tex}
-\caption{Shema energijskih nivojev dvonivojskega atoma (a) in prehodov med njima:
-spontano sevanje (b), absorpcija (c) in stimulirano sevanje (d).}
+\caption{Shema energijskih nivojev dvonivojskega atoma (a) in treh vrst prehodov med njima:
+absorpcija (b), spontano sevanje (c) in stimulirano sevanje (d).}
 \label{sl4.1}
 \end{figure}
 
+\subsection*{Absorpcija fotona}
+Absorpcija fotona\index{Absorpcija fotona} je prehod, pri katerem se foton 
+z ustrezno energijo absorbira, atom pa preide iz nižjega energijskega stanja v višje (slika~\ref{sl4.1}\,b). 
+Verjetnost za prehod na časovno enoto\index{Verjetnost za prehod}, ki jo označimo z $r_{12}$, 
+je sorazmerna spektralni gostoti energije polja \index{Spektralna gostota energije}$u(\omega)$, 
+to je energiji na enoto volumna in frekvenčni interval, pri frekvenci prehoda $\omega_{0}$.
+Sorazmernostni koeficient označimo z $B_{12}$ in 
+zapišemo
+\begin{equation}
+r_{12}=B_{12}u(\omega_{0}).
+\label{4.16}
+\end{equation}
+To je enostavno razumeti. Več kot je fotonov v votlini pri frekvenci, ki je
+v bližini frekvence prehoda, več fotonov se lahko absorbira in večja je 
+verjetnost za prehod atoma v višje stanje. Pri absorpciji se
+seveda število fotonov v enem od stanj polja pri frekvenci
+$\omega_{0}$ zmanjša za ena.
+
 \subsection*{Spontano sevanje}
-Vemo, da atom v vzbujenem stanju tudi brez vpliva zunanjega polja
-ni stabilen, temveč prej ali slej preide v nižje stanje. Temu pojavu
-pravimo spontano sevanje\index{Spontano sevanje} ali spontana emisija (slika~\ref{sl4.1}\,b).
+Atom v vzbujenem stanju ni stabilen, temveč prej ali slej spontano preide v nižje stanje. Temu pojavu
+pravimo spontano sevanje\index{Spontano sevanje} ali spontana emisija (slika~\ref{sl4.1}\,c).
 
 Pri spontanem sevanju je foton izsevan v katerokoli stanje polja v bližini 
 frekvence prehoda. Smer izsevane svetlobe je poljubna, v odsotnosti zunanjega polja
@@ -278,23 +295,6 @@ Funkcija $g(\omega)$ je normirana
 za grobe ocene pa se funkcijo $g$ pogosto nadomesti s pravokotnikom širine
 $2\gamma$ in višine $1/2\gamma$.
 
-\subsection*{Absorpcija fotona}
-Absorpcija fotona\index{Absorpcija fotona} je prehod, pri katerem se foton 
-z ustrezno energijo absorbira, atom pa preide iz nižjega energijskega stanja v višje (slika~\ref{sl4.1}\,c). 
-Verjetnost za prehod na časovno enoto\index{Verjetnost za prehod} $r_{12}$ je sorazmerna 
-spektralni gostoti energije polja \index{Spektralna gostota energije}$u(\omega)$, to je
-energiji na enoto volumna in frekvenčni interval, 
-pri frekvenci prehoda $\omega_{0}$. Sorazmernostni koeficient označimo z $B_{12}$ in 
-zapišemo
-\begin{equation}
-r_{12}=B_{12}u(\omega_{0}).
-\label{4.16}
-\end{equation}
-To je enostavno razumeti. Več kot je fotonov v votlini pri frekvenci, ki je
-v bližini frekvence prehoda, več fotonov se lahko absorbira in večja je 
-verjetnost za prehod atoma v višje stanje. Pri absorpciji se
-seveda število fotonov v enem od stanj polja pri frekvenci
-$\omega_{0}$ zmanjša za ena.
 
 \subsection*{Stimulirano sevanje}
 Tretji pojav je prehod atoma iz višjega stanja v nižje zaradi interakcije
@@ -325,8 +325,8 @@ obravnavamo sevanje v votlini, ki je v termičnem ravnovesju z okolico (črno te
 \def\svgwidth{140truemm} 
 \input{slike/05_Spektri.pdf_tex}
 \caption{Pri izračunu verjetnosti za absorpcijo in stimulirano emisijo je 
-pomembno, ali je spektralna gostota elektromagnetnega polja $u(\omega)$ bistveno širša
-(a) ali bistveno ožja (b) od širine atomske spektralne črte $g(\omega-\omega_0)$.}
+pomembna oblika spektralne gostote elektromagnetnega polja $u(\omega)$. V prvem primeru je 
+bistveno širša (a), v drugem pa bistveno ožja (b) od širine atomske spektralne črte $g(\omega-\omega_0)$.}
 \label{fig:spektri}
 \end{figure}
 
