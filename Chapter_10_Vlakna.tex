@@ -1659,19 +1659,16 @@ B e^{i \beta_2 z}k_0^2\left(n(x)^2 -n_2(x)^2\right)\psi_2 + \\2 i \beta_1 A' \ps
 2 i \beta_2 B' \psi_2 e^{i \beta_2 z} = 0.
 \end{multline}
 Enačbo pomnožimo s kompleksno konjugirano vrednostjo $\psi_1^*$ in integriramo po $x$.
-Upoštevamo ortonormalnost funkcij $\psi$ in zapišemo 
+Upoštevamo, da se funkciji $\psi_1$ in $\psi_2$ le malo prekrivata, in zapišemo 
 \begin{equation}
 \frac{dA}{dz} = i A K_{11}+i B e^{i(\beta_2-\beta_1)z} K_{12},
 \end{equation}
 pri čemer sta
 \begin{equation}
-K_{11}= \frac{k_0^2}{2 \beta_1}\int\psi_1^*\psi_1 (n^2-n_1^2)dx
-\end{equation}
-in 
-\begin{equation}
+K_{11}= \frac{k_0^2}{2 \beta_1}\int\psi_1^*\psi_1 (n^2-n_1^2)dx \qquad \mathrm{in} \qquad 
 K_{12}= \frac{k_0^2}{2 \beta_1}\int\psi_1^*\psi_2 (n^2-n_2^2)dx.
 \end{equation}
-Koeficient $K_{11}$ določa spremembo amplitude v vlaknu zaradi prisotnosti 
+Koeficient $K_{11}$ določa spremembo faze v vlaknu zaradi prisotnosti 
 drugega vlakna, kar lahko zanemarimo. Tako ostane samo sklopitveni člen
 \begin{equation}
 \frac{dA}{dz} = i B e^{i(\beta_2-\beta_1)z} K_{12}
@@ -1696,6 +1693,7 @@ A = e^{i \Delta \beta z/2}\left( a_1 e^{i \gamma z} + a_2 e^{-i \gamma z}\right)
  da med parametri enačb velja sledeča zveza
  \begin{equation}
  \gamma^2 = K^2 + \frac{\Delta \beta ^2}{4},
+ \label{10kgamma}
  \end{equation}
  pri čemer je $K = \sqrt{K_{12}K_{21}}$ in $\Delta \beta = \beta_2 - \beta_1$. 
  Nato uporabi enačbo~(\ref{10_B}) in pokaži, da je rešitev za amplitudo $B$
@@ -1714,25 +1712,23 @@ za $A$ in $B$
 \begin{equation}
  A = A_0 e^{i \Delta \beta z/2} \left( \cos(\gamma z) - 
 \frac{i \Delta \beta}{2 \gamma}\sin(\gamma z) \right)
-\end{equation}
-in
-\begin{equation}
+\quad \mathrm{in} \quad 
 B =  A_0 e^{-i \Delta \beta z/2} \frac{i K_{21}}{\gamma}\sin(\gamma z).
 \end{equation}
-Moč, ki se pretaka po posameznem vlaknu je tako
+Moč, ki se pretaka po posameznem vlaknu, je tako z upoštevanjem zveze~(\ref{10kgamma})
 \begin{equation}
 P_1 = P_0 \left( \cos^2(\gamma z) + \frac{\Delta \beta^2}{4 \gamma^2}\sin^2(\gamma z) \right)
 = P_0 \left( 1 - \frac{K^2}{\gamma^2}\sin^2(\gamma z) \right)
 \end{equation}
 in
 \begin{equation}
-P_2 =  P_0\, \frac{K^2}{\gamma^2}\sin^2(\gamma z),
+P_2 =  P_0\, \frac{K^2}{\gamma^2}\sin^2(\gamma z).
 \end{equation}
-pri čemer smo privzeli, da velja $K_{12} \sim K_{21} \sim K$. 
+Privzeli smo, da velja $|K_{12}|=|K_{21}|= K$. 
 Obe funkciji sta oscilirajoči in svetloba se periodično pretaka med vlaknoma
 s periodo $\pi/\gamma$ (slika~\ref{fig:foscil}). Amplituda prenosa je 
 odvisna od sklopitvenega faktorja $K$ in ujemanja valovnih 
-vektorjev v obeh vlaknih. Večji koeficient $K$
+števil v obeh vlaknih. Večji koeficient $K$
 in manjše odstopanje $\Delta \beta$ vodita v večji prenos svetlobnega toka v drugo vlakno. 
 \begin{figure}[h!]
 \centering
@@ -1752,16 +1748,16 @@ P_1 &= P_0 \cos^2 (\gamma z) \quad \mathrm{in}\\
 P_2 &= P_0 \sin^2 (\gamma z).
 }
 Na ta način lahko v drugo vlakno sklopimo poljuben delež vpadne svetlobe. 
-Pri dolžini sklopitve $L = \pi/2 \gamma$ pride do celotnega prenosa svetlobnega toka v drugo vlakno.
-Pogosto sklopimo le eno polovico intenzitete vpadne svetlobe. To se zgodi pri dolžini 
-$L = \pi/4 \gamma$ in takrat govorimo o 3-dB sklopitvi. \index{Sklopitev med valovodi!3-dB sklopitev}
+Do celotnega prenosa svetlobnega toka v drugo vlakno pride pri dolžini sklopitve $L = \pi/2 \gamma$. 
+Pri dolžini $L = \pi/4 \gamma$ sklopimo eno polovico intenzitete vpadne svetlobe in govorimo o 3-dB sklopitvi. \index{Sklopitev med valovodi!3-dB sklopitev}
 
 \begin{remark}
- Pri dani dolžini sklopitve med vlaknoma $L$ je intenziteta svetlobe v drugem vlaknu močno odvisna od
- parametra $\gamma$, to je od sklopitve med vlaknoma in od razlike med valovnima vektorjema 
- v obeh vlaknih. Zgolj z rahlim spreminjanjem parametrov, na primer lomnega količnika enega od vlaken,
- lahko močno vplivamo na delež sklopljenega svetlobnega toka. S priključeno napetostjo in elektro-optičnim
- pojavom v enem izmed vlaken lahko tako zelo natančno spreminjamo delež sklopljene svetlobe. 
+ Pri izbrani dolžini sklopitve med vlaknoma je intenziteta svetlobe, ki preide v drugo vlakno,
+ močno odvisna od parametra $\gamma$, torej od prekrivalnega integrala in od razlike $\Delta \beta$. 
+ Z rahlim spreminjanjem parametrov, na primer lomnega 
+ količnika enega od vlaken, lahko spreminjamo delež svetlobe v drugem vlaknu. V ta 
+ namen pogosto uporabimo elektro-optični pojav in s spreminjanjem priključene napetosti na
+ enem od vlaken natančno določimo delež svetlobe, ki preide v drugo vlakno.  
 \end{remark}
 
 \section{*Vpliv spremembe lomnega količnika vlakna na širjenje svetlobe}
@@ -1769,16 +1765,17 @@ Sprememba lomnega količnika sredice ali plašča vlakna povzroči spremembo
 valovnega števila $\beta$ za izbran rod. V enorodovnih vlaknih je to
 mogoče izkoristiti za izdelavo senzorjev, na primer temperature ali
 tlaka. Spremembo valovnega števila, do katere pride zaradi zunanjih vplivov,
-izmerimo preko spremembe faze valovanja na izhodu iz vlakna, to je,
+izmerimo preko spremembe faze valovanja na izhodu iz vlakna
 z ustrezno sestavljenim interferometrom. Ker je dolžina vlakna lahko
 velika (v nekaj centimetrov velik tulec lahko brez težav navijemo
 kilometre vlakna), je celotna sprememba faze velika že pri majhnih
-spremembah merjene količine. Sprememba valovnega števila povzroča
-tudi neželene spremembe faze in odboje pri prenosu informacij.
+spremembah merjene količine. Po drugi strani pa že majhna sprememba 
+valovnega števila povzroča neželene spremembe faze in odboje pri prenosu 
+informacij.
 V tem razdelku zato poglejmo, kako se spremeni valovno število pri
 dani spremembi lomnega količnika in koliko svetlobe se odbije.
 
-Obravnavajmo rod vlakna z vzdolžno komponento valovnega vektorja $\beta_{lm}$ in prečnim
+Obravnavajmo rod z vzdolžno komponento valovnega vektorja $\beta_{lm}$ in prečnim
 profilom $\psi_{lm}\left(r,\varphi\right).$ Ta mora zadoščati Helmholtzevi enačbi 
 (enačba~\ref{eq:Helmholtz})
 \begin{equation}
@@ -1786,8 +1783,10 @@ profilom $\psi_{lm}\left(r,\varphi\right).$ Ta mora zadoščati Helmholtzevi ena
 \label{9.22}
 \end{equation}
 Naj se dielektrična konstanta na delu vlakna spremeni za $\delta\epsilon.$
-Posledično se spremenita tudi valovno število $\beta=\beta_{lm}+\delta\beta$
-in prečna oblika $\psi=\psi_{lm}+\delta\psi.$ Tudi popravljena funkcija
+Posledično se na tem mestu spremenita tudi valovno število $\beta=\beta_{lm}+\delta\beta$
+in prečna oblika $\psi=\psi_{lm}+\delta\psi.$ 
+
+Tudi popravljena funkcija
 $\psi$ mora zadoščati enačbi (\ref{9.22}), zato za perturbacijo velja
 \begin{equation}
 \nabla_{\bot}^{2}\delta\psi+\left(\epsilon(r)k_{0}^{2}-\beta_{lm}^{2}\right)\delta\psi+
@@ -1795,22 +1794,23 @@ $\psi$ mora zadoščati enačbi (\ref{9.22}), zato za perturbacijo velja
 \label{9.23}
 \end{equation}
 pri čemer smo zanemarili produkte majhnih količin. Množimo obe strani
-enačbe s $\psi_{lm}^{*}$, integriramo po preseku vlakna in zapišemo
+enačbe s $\psi_{lm}^{*}$, integriramo po preseku vlakna in dobimo
 \begin{eqnarray}
  &  & \int\psi_{lm}^{*}\nabla_{\bot}^{2}\delta\psi\,
  dS+\int\left(\epsilon(r)k_{0}^{2}-\beta_{lm}^{2}\right)
- \delta\psi\,\psi_{lm}^{*}+k_{0}^{2}\int\delta\epsilon\,\left|\psi_{lm}\right|^{2}dS\nonumber\\
+ \delta\psi\,\psi_{lm}^{*}dS+k_{0}^{2}\int\delta\epsilon\,\left|\psi_{lm}\right|^{2}dS\nonumber\\
  & = & 2\beta_{lm}\,\delta\beta\int\left|\psi_{lm}\right|^{2}dS.
+ \label{9.24}
 \end{eqnarray}
 Prvi člen na levi preoblikujmo z uporabo zvez 
 \beq
 \int(u\,\nabla_{\bot}^{2}v-v\nabla_{\bot}^{2}u)\,
 dS=\int\nabla_{\bot}\cdot(u\nabla_{\bot}v-v\nabla_{\bot}u)\, 
-dS=\oint (u\,\nabla_{\bot}v-v\,\nabla_{\bot}u)\cdot \mathbf{ds}.
+dS=\oint (u\,\nabla_{\bot}v-v\,\nabla_{\bot}u)\cdot d\mathbf{s}.
 \eeq
-Ker funkciji $\psi_{lm}$ in $\delta\psi$ opisujeta vodene valove,
-morata iti za velike $r$ proti nič, zato je integral po krivulji
-v gornji zvezi nič in velja 
+Funkciji $\psi_{lm}$ in $\delta\psi$ opisujeta vodene valove, zato
+morata iti njune vrednosti za velike $r$ proti nič. Posledično gre
+proti nič tudi integral po krivulji $d\mathbf{s}$ in velja 
 \beq
 \int\psi_{lm}^{*}\nabla_{\bot}^{2}\delta\psi\,
 dS=\int\delta\psi\nabla_{\bot}^{2}\psi_{lm}^{*}\, dS.
@@ -1830,18 +1830,22 @@ najnižjem redu je $\delta\beta$ sorazmerna s uteženim povprečjem
 $\delta\epsilon$, pri čemer je utež $\psi_{lm}$.
 \end{remark}
 
-Sprememba valovnega števila $\beta$ v delu vlakna ne povzroči le spremembe faze, 
+Sprememba valovnega števila $\delta \beta$ v delu vlakna ne povzroči le spremembe faze, 
 ampak tudi delni odboj.
 To je le nekoliko druga oblika odboja na (zvezni ali ostri) meji 
 dveh dielektrikov ali, splošneje, odboja valovanja na območju,
 kjer se spremeni fazna hitrost valovanja.
-Odboj na območju vlakna, kjer se spreminja $\beta$, najpreprosteje opišemo 
-z enačbo za odboj na meji dveh dielektrikov pri pravokotnem
+Amplitudo odbitega valovanja, do katerega pride na območju vlakna, kjer se 
+spreminja $\beta$, najpreprosteje dobimo z uporabo
+enačbe za odboj na meji dveh dielektrikov pri pravokotnem
 vpadu. Odbita amplituda je tedaj (enačba~\ref{eq:Fresnel1})
 \begin{equation}
-E_{r}=\frac{n_{2}-n_{1}}{n_{2}+n_{1}}E_{0}.
+E_{r}=\frac{n_{2}-n_{1}}{n_{2}+n_{1}}E_{0},
 \label{9.26}
 \end{equation}
+pri čemer $n_1$ in $n_2$ označujeta nespremenjen in rahlo spremenjen lomni
+količnik sredice vlakna. 
+
 Mislimo si, da je sprememba $\beta$ na delu vlakna sestavljena iz
 majhnih stopničastih sprememb $\Delta\beta_{i}$ na intervalih $\Delta z$.
 Za ravno valovanje je sprememba fazne hitrosti sorazmerna s spremembo
