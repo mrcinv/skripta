@@ -1870,10 +1870,10 @@ E_{r}=\frac{E_{0}}{2\,\beta}\,\int\frac{d\beta}{dz}\, e^{2i\beta z}dz.
 \label{9.29}
 \end{equation}
 Za primer poglejmo linearno spremembo lomnega količnika in linearno spremembo 
-valovnega števila za $\Delta\beta_{0}$ na razdalji $L$. Krajši račun pokaže, da je 
+valovnega števila za $\Delta\beta$ na razdalji $L$. Krajši račun pokaže, da je 
 delež intenzitete odbitega valovanja 
 \begin{equation}
-\frac{I_{r}}{I_{0}}=\left( \frac{\Delta\beta_{0}}{2 \beta}\,\frac{\sin\beta L}{\beta L}\right)^2.
+\frac{I_{r}}{I_{0}}=\left( \frac{\Delta\beta}{2 \beta}\,\frac{\sin\beta L}{\beta L}\right)^2.
 \label{9.30}
 \end{equation}
 Odbojnost je največja, kadar je $L \ll 1/\beta$,
@@ -1884,12 +1884,14 @@ interference vseh delnih odbojev in odbojnost je enaka nič.
 \begin{definition}
 Naj se valovno število ob prehodu spreminja kot funkcija erf
 \begin{equation}
-\beta (z)= \frac{2\Delta \beta_0}{\sqrt{\pi}} \int_0^z e^{-t^2}dt.
+\beta (z)= \beta_0 + \frac{2\Delta \beta}{\sqrt{\pi}} \int_0^{z/a} e^{-t^2}dt.
 \end{equation}
-Pokaži, da je amplituda odbitega valovanja v tem primeru enaka
+Pokaži, da je amplituda 
+odbitega valovanja za majhne spremembe $\Delta \beta$ enaka
 \begin{equation}
-\frac{E_r}{E_0} = \frac{\Delta \beta_0}{\beta}e^{-\beta^2}.
+\frac{E_r}{E_0} = \frac{\Delta \beta}{\beta_0}e^{-a^2\beta_0^2}.
 \end{equation}
+Po pričakovanju je odbojnost največja pri $a\to 0$, to je v primeru ostre stopnice.
 \end{definition}
 
 \section{Nelinearni pojavi v optičnih vlaknih}
@@ -1911,7 +1913,7 @@ morajo biti vodniki zgrajeni iz snovi, ki imajo nelinearno susceptibilnost
 različno od nič. Prednost vodnikov pred navadnimi kristali je v tem, 
 da svetloba znotraj sredice vodnika potuje brez uklona. Posledično je
 pretvorba iz osnovne v frekvenčno podvojeno svetlobo, ki je sorazmerna s kvadratom 
-dolžine (enačba~\ref{eq:shgl2}), zelo učinkovita. Seveda 
+dolžine poti (enačba~\ref{eq:shgl2}), zelo učinkovita. Seveda 
 mora biti izpolnjen tudi pogoj za ujemanje faz.\index{Ujemanje faz} To 
 omogoča rodovna disperzija, zaradi \index{Disperzija!rodovna}
 katere lahko rodova pri osnovni in podvojeni frekvenci potujeta po vodniku
@@ -1939,8 +1941,8 @@ svetlobo, katere frekvenca se od signalnega žarka razlikuje za vibracijsko frek
 
 Pri stimuliranem Brillouinovem sipanju (SBS) pride
 \index{Brillouinovo sipanje!stimulirano} do odboja vpadne svetlobe na 
-optično vzbujenem akustičnem valu v snovi (poglavje~\ref{chap:SRS}). Posledično
-se signal v smeri naprej oslabi, pojavi pa se odbit val, katerega intenziteta
+optično vzbujenem akustičnem valu v snovi (poglavje~\ref{chap:SRS}). Signal
+v smeri naprej oslabi, pojavi pa se odbit val, katerega intenziteta
 narašča eksponentno z intenziteto vpadne svetlobe. 
 Neželenemu pojavu se lahko izognemo z zmanjšanjem vpadne
 moči (pod $\sim 100~\si{mW}$ na kanal) 
@@ -1953,9 +1955,9 @@ Opišimo tri pojave:
 \item 
 Samo-fazna modulacija ali lastna fazna modulacija ({\it SPM -- Self-phase modulation}). Različni deli
 sunka zaradi različne intenzitete občutijo različen lomni količnik in pride
-do tako imenovanega čričkanja~(enačba~\ref{eq:chirpi} 
+do tako imenovanega črikanja~(enačba~\ref{eq:chirpi} 
 in slika~\ref{fig:optsoliton}). \index{Samo-fazna modulacija}
-Pojav vodi do spektralne razširitve in zaradi\index{Čričkanje}
+Pojav vodi do spektralne razširitve in zaradi\index{Črikanje}
 disperzije tudi do časovnega podaljšanja sunka. Z ustrezno disperzijo dosežemo 
 krajšanje sunkov ali pojav optičnih solitonov (poglavje~\ref{chap:soliton}).
 \index{Soliton!optični}
@@ -1973,7 +1975,7 @@ saj lahko z zunanjim kontrolnim žarkom spreminjamo fazo izbranega sunka.
 Sklopitev štirih valov ({\it FWM -- Four-wave mixing}). Če po vlaknu potuje več
 valovanj z različnimi frekvencami,\index{Sklopitev štirih valov} 
 pride zaradi nelinearne sklopitve do pojava
-valovanj pri dodatnih frekvencah (vsotah in razlikah obstoječih valovanj). V primeru, 
-da uporabimo vlakno z zelo majhno disperzijo ali celo brez nje, pride do ujemanja
-faz in znatne pretvorbe v druge frekvence.  
+valovanj pri dodatnih frekvencah (vsotah in razlikah obstoječih valovanj). To se pojavi
+predvsem v vlaknih z zelo majhno disperzijo, v katerih pride do ujemanja
+faz.  
 \end{enumerate}
