@@ -3,7 +3,7 @@
 \chapter{Modulacija svetlobe}
 \label{chap:modulacija}
 Pri obravnavi širjenja svetlobe skozi snov je najpomembnejši parameter lomni količnik
-oziroma tenzor dielektričnosti. V tem poglavju bomo spoznali, kako zunanje polje vpliva 
+oziroma tenzor dielektričnosti. V tem poglavju bomo spoznali, kako lahko z zunanjim poljem vplivamo 
 na lomni količnik in tako na širjenje svetlobe skozi snov. To omogoča spreminjanje
 -- modulacijo -- lastnosti svetlobe z zunanjim poljem. En primer uporabe smo že spoznali pri 
 obravnavi laserja, kjer za preklop dobrote potrebujemo element, ki hitro spreminja 
@@ -33,41 +33,38 @@ primer elektro-optičnih modulatorjev na osnovi tekočih kristalov.
 Elektro-optični pojav\index{Elektro-optični pojav} opisuje spremembe optičnih lastnosti 
 snovi (dielektričnosti in lomnega količnika)\index{Lomni količnik} pod vplivom 
 zunanjega električnega polja. Omejimo se na statično zunanje polje oziroma
-na polje, katerega frekvenca je bistveno manjša od optične frekvence. Omejitev na nizko 
+na polje, ki se spreminja s frekvenco, ki je bistveno manjša od optične frekvence. 
+Omejitev na nizko 
 frekvenco je potrebna zato, da optično polje še lahko obravnavamo linearno. 
 Kako je v nasprotnem primeru, ko je frekvenca polja primerljiva z optično frekvenco, 
 smo na široko obravnavali v poglavju o nelinearni optiki (poglavje~\ref{chap:NLO}).
+
+Vzemimo optično anizotropno snov z nemotenim tenzorjem dielektričnosti 
+$\underline{\tilde{\epsilon}}$. V snoveh brez absorpcije ali optične aktivnosti
+je tenzor $\underline{\tilde{\epsilon}}$ realen in simetričen, zato ga lahko 
+diagonaliziramo~(enačba~\ref{eq:gostota-elektricnega-polja-lastni}). Lastne vrednosti 
+$\varepsilon_1$, $\varepsilon_2$ in $\varepsilon_3$ ustrezajo kvadratom treh lomnih
+količnikov $n_1^2$, $n_2^2$ in $n_3^2$, ki so na splošno različni.
 
 Zaradi priročnosti namesto dielektričnega tenzorja\index{Dielektričnost!inverzna} 
 vpeljemo inverzni dielektrični tenzor
 \begin{equation}
 \underline{b}=\underline{\epsilon}^{-1}.
 \end{equation}
-
-\begin{definition}
-Pokaži, da je zveza med spremembo inverznega tenzorja $\delta \underline{b}$ 
-in spremembo dielektričnega tenzorja $\delta \underline{\varepsilon}$ 
+V lastnem nemotenem sistemu ga preprosto zapišemo kot
 \begin{equation}
- \delta \underline{\varepsilon}= -\underline{b}^{-1}\delta \underline{b}\, \underline{b}^{-1}
- = -\underline{\tilde{\varepsilon}}\, \delta \underline{b}\, \underline{\tilde{\varepsilon}},
-\end{equation}
-pri čemer $\underline{\tilde{\varepsilon}}$ označuje dielektrični tenzor v odsotnosti zunanjega polja 
-(nemoten tenzor).
-\end{definition}
-
-Tenzor dielektričnosti $\underline{\tilde{\varepsilon}}$ 
-je v lastnem nemotenem sistemu diagonalen z lastnimi vrednostmi $n_1^2, n_2^2$ in $n_3^2$, 
-zato inverzni dielektrični tenzor v lastnem nemotenem sistemu preprosto zapišemo kot
-\begin{equation}
-\underline{\tilde{b}} = 
+\underline{\tilde{b}} = \left[\begin{array}{ccc}
+1/\varepsilon_1 & 0& 0\\
+0 & 1/\varepsilon_2& 0\\
+0 & 0&  1/\varepsilon_3
+\end{array}\right] = 
 \left[\begin{array}{ccc}
 1/n_1^2 & 0& 0\\
 0 & 1/n_2^2& 0\\
 0 & 0&  1/n_3^2
-\end{array}\right],
+\end{array}\right].
 \end{equation}
-pri čemer so $n_1$, $n_2$ in $n_3$ lomni količniki snovi, ki so na splošno različni. 
-Ko priključimo zunanje polje, se tenzor
+Ko priključimo zunanje polje, se tenzor $\underline{\tilde{b}}$
 spremeni. Pri elektro-optičnem pojavu so spremembe tenzorja dielektričnosti zaradi vpliva
 zunanjega polja navadno majhne in lahko spremembo komponente $\delta b_{ij}$ zapišemo kot 
 potenčno vrsto zunanjega polja $E$, 
@@ -108,19 +105,24 @@ Razmisli, zakaj je v kristalih s centrom inverzije tenzor $\underline{r}$
 vedno enak nič. 
 \end{definition}
 
-Ker je inverzni dielektrični tenzor $\underline{b}$ simetričen, je v 
+Ker je inverzni dielektrični tenzor $\underline{b}$ vedno simetričen, je v 
 prvih dveh indeksih simetričen tudi $\underline{r}$
 \begin{equation}
 r_{ijk} = r_{jik}.
 \end{equation}
 V najmanj simetričnem primeru triklinskega kristala ima tako namesto 27 zgolj 
-18 neodvisnih komponent, v kristalih z višjo simetrijo pa še manj. 
+18 neodvisnih komponent, v kristalih z višjo simetrijo pa še precej manj. 
 
 Podobno kot nelinearno susceptibilnost (poglavje~\ref{Chap:Chi}) lahko
-tudi elektro-optični tenzor zapišemo le z dvema komponentama. 
+tudi elektro-optični tenzor zaradi simetrije zapišemo le z dvema komponentama. 
 Prva dva indeksa, v katerih je $r_{ijk}$ simetričen, združimo
-v enega z vrednostmi od 1 do 6 po dogovoru $xx=1$, $yy=2$, $zz=3$,
-$yz=4$, $zx=5$ in $xy=6$. Tako postane $r_{ijk}$ matrika velikosti
+v enega z vrednostmi od 1 do 6 po dogovoru 
+\begin{eqnarray}
+ xx=1 \qquad  yz=zy = 4 \\
+ yy=2 \qquad  zx=xz = 5 \\
+ zz=3 \qquad  xy=yx = 6.
+\end{eqnarray}
+Tako postane $r_{ijk}$ matrika velikosti
 $6\times3$, simetrični tenzor drugega ranga $b_{ij}$ pa šestdimenzionalen
 vektor.
 Nekaj primerov Pockelsovih tenzorjev pri različnih kristalnih simetrijah
