@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '09_AOshema.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{654.4628418bp}%
+    \setlength{\unitlength}{613.55891418bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -49,10 +51,12 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.72099756)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{09_AOshema.pdf}}%
-    \put(0.31901903,0.08284983){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
-    \put(0.47400082,-0.00363779){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d$}}}%
-    \put(0.65992926,0.5914397){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\Lambda$}}}%
-    \put(0.20270205,0.43103598){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta$}}}%
+    \put(0.31901903,0.08284983){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$x$\end{tabular}}}}%
+    \put(0.47400082,-0.00852729){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$d$\end{tabular}}}}%
+    \put(0.65992926,0.5914397){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\Lambda$\end{tabular}}}}%
+    \put(0.18314402,0.43103598){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\vartheta$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

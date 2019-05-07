@@ -672,7 +672,7 @@ p_{12} & p_{12}& p_{11}&0&0&0\\
 \end{equation}
 pri čemer je $p_{44}= \frac{1}{2}(p_{11}-p_{12})$. Koeficienti tenzorja so 
 brezdimenzijski, njihova tipična vrednost pa je $p\sim0,1$. Za vodo, na primer, 
-velja $p_{11} \simeq p_{12} = 0,31$ in $p_{44} \sim 0$, za LiNbO$_3$\index{LiNbO$_3$} pa $p_{11} = -0,02, 
+velja $p_{11} \simeq p_{12} = 0,31$ in $p_{44} = 0$, za LiNbO$_3$\index{LiNbO$_3$} pa $p_{11} = -0,02, 
 p_{12} = 0,08, p_{13} = 0,13,  p_{14} = -0,08, p_{31} = 0,17, p_{33} = 0,07,
 p_{41} = -0,15, p_{44} = 0,12$.
 
@@ -712,7 +712,7 @@ kjer je $n$ lomni količnik v odsotnosti motnje.\index{Lomni količnik}
 Vzbudimo v plasti prozorne izotropne snovi zvočno valovanje z valovno dolžino $\Lambda$, 
 ki potuje v smeri $x$. To naredimo tako, da na eno stran snovi priključimo piezoelektrik, 
 ki se pod izmenično napetostjo periodično krči in razteza s krožno frekvenco $\Omega$.
-Na drugo stran kristala damo akustični absorber ali pa reflektor, tako da lahko 
+Na drugo stran damo akustični absorber ali reflektor, tako da lahko 
 v snovi vzbudimo tudi stoječe valovanje. 
 Zaradi zvočnega valovanja se v snovi periodično spreminja gostota in 
 z njo lomni količnik\index{Lomni količnik} (glej nalogo~\ref{nalogaAO})
@@ -731,12 +731,12 @@ nekaj $\si{MHz}$ prek $10~\si{GHz}$. Čeprav so vse te frekvence
 daleč nad slišnimi, taka valovanja imenujemo zvočna oziroma akustična. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{60truemm} 
+\def\svgwidth{50truemm} 
 \input{slike/09_AOshema.pdf_tex}
 \caption{Vpadna svetloba se na zvočnem valovanju v snovi uklanja.}
 \label{fig:ao}
 \end{figure}
-
+\vglue-5truemm
 Oglejmo si dva limitna primera. V prvem primeru je debelina plasti, 
 v kateri vzbujamo zvočno valovanje, zelo majhna in 
 $d \ll \Lambda^2/\lambda$ (slika~\ref{fig:ao_bragg}\,a).
@@ -774,6 +774,8 @@ in Sir William Lawrence Bragg, 1890--1971.}
 \boxeq{7.29a}{
 2 \Lambda\sin\vartheta= N\lambda.
 }
+Ker je valovna dolžina svetlobe precej manjša od valovne dolžine zvočnega valovanja, je $\vartheta$
+praviloma zelo majhen $\vartheta \sim 10^{-2}$. 
 
 Poglejmo natančneje, kako pridemo do gornjega pogoja. Zapišimo pogoj
 za ohranitev gibalne količine fotona pri sipanju na zvočnem valu
@@ -802,21 +804,23 @@ da se vsa vpadna svetloba uklanja.
 \label{fig:ao_bragg3}
 \end{figure}
 \begin{remark}
- Poskusimo še malo bolj natančno oceniti, kdaj je v veljavi Raman-Nathov in kdaj Braggov režim. 
-Izhajajmo iz pogoja, da je razširitev žarka na debelini plasti zvočnega valovanja dovolj
- majhna, da se snop ne širi iz območja zgoščine v območje razredčine, da se torej ne razširi za 
- več kot za $\Lambda/2$. Tako zapišemo
- divergenco kot (enačba~\ref{eq:divergenca-snopa}) $\theta \sim \lambda/w_0 \sim 2\lambda/\Lambda$.
- Po drugi strani pa zaradi modulacije divergenca valovanja ne sme presegati 
- razširitve $\theta \sim \Lambda/2d$. Sledi kriterij za debelino $d$, pri kateri preidemo iz enega v drug režim
+Naredimo še oceno izračuna, kdaj je v veljavi Raman-Nathov in kdaj Braggov režim. 
+Izhajajmo iz pogoja, da je laserski snop na poti skozi plast zvočnega 
+valovanja tako ozek, da ostane v celoti znotraj
+ene razredčine ali zgoščine. Širino razredčin in zgoščin ocenimo na $\Lambda/2$, to pa je potem tudi 
+približno premer laserskega snopa $2w$. Dolžina, znotraj katere se snop še ne razširi znatno,
+je dolžina grla $2z_0 = 2 \pi w^2/\lambda$ (enačba~\ref{eq:z0}). Največja dolžina poti, pri 
+kateri je pogoj izpolnjen in snop ostane znotraj ene razredčine ali zgoščine, je tako
 \begin{equation}
-d \sim \frac{\Lambda^2}{4 \lambda}.
+d_c \sim 2z_0 \sim \frac{2 \pi w^2}{\lambda} \sim \frac{\pi \Lambda^2}{8 \lambda}.
 \end{equation}
-Če svetloba z $\lambda = 1~\si{\micro\metre}$ vpade na kristal, v katerem je vzbujeno zvočno
-valovanje z valovno dolžino $\Lambda = 0,2~\si{\milli\metre}$ in frekvenco $\Omega = 150~\si{\mega\hertz}$, je mejna debelina $d \sim 1~\si{\centi\meter}$.
+Pri debelinah $d \ll d_c$ velja Raman-Nathov približek, pri debelinah $d \gg d_c$ pa Braggov uklon.
+Poglejmo primer. Če svetloba z $\lambda = 1~\si{\micro\metre}$ vpade na kristal, 
+v katerem je vzbujeno zvočno valovanje s krožno frekvenco $\Omega = 150~\si{\mega\hertz}$ in
+pripadajočo valovno dolžino $\Lambda = 0,1~\si{\milli\metre}$, je mejna debelina $d_c \sim 6~\si{mm}$.
 \end{remark}
 
-Če je zvočno valovanje potujoče, kar smo v gornjem razmišljanju že privzeli
+Če je zvočno valovanje potujoče, kar smo v gornji obravnavi že privzeli
 s tem, da smo mu pripisali natanko določen valovni vektor $\mathbf{q}$,
 se spremeni tudi frekvenca sipanega vala zaradi Dopplerjevega premika
 pri odboju na zvočnem valovanju, ki potuje s hitrostjo $v_{z}$. Upoštevati
@@ -828,7 +832,7 @@ moramo le projekcijo na smer vpadne in odbite svetlobe, zato je
 \end{equation}
 pri čemer smo uporabili Braggov pogoj (enačba~\ref{7.29a}). Sprememba frekvence
 sipane svetlobe je torej kar enaka frekvenci zvočnega valovanja. To je seveda v skladu 
-z gornjo zahtevo, da se pri uklonu na zvočnem valovanju ohranja energija
+z gornjo zahtevo, da se pri uklonu na zvočnem valovanju ohranja skupna energija
 vpadnega fotona in kvanta zvočnega valovanja (fonona), ki se pri sipanju 
 absorbira ali pri njem nastane.
 
@@ -843,8 +847,8 @@ sipanega vala s frekvenco $2\Omega$.
 Spoznali smo, da lahko z zvočnim valovanjem spreminjamo smer vpadne svetlobe.
 Bistvena razlika od navadnih uklonskih mrežic\index{Uklonska 
 mrežica} je dinamičnost akusto-optičnih modulatorjev, 
-saj lahko uklonski kot svetlobe hitro spreminjamo. Pri tem smo omejeni s 
-tem, da mora biti vsaj približno izpolnjen Braggov pogoj. S kombinacijo dveh med seboj 
+saj lahko uklonski kot svetlobe hitro spreminjamo. Poglavitna omejitev je,
+da mora biti vsaj približno izpolnjen Braggov pogoj. S kombinacijo dveh med seboj 
 pravokotnih akusto-optičnih modulatorjev lahko žarek 
 premikamo po ravnini, kar s pridom uporabljamo v različnih optičnih napravah, 
 na primer v optičnih pincetah, optičnih čitalcih ali 
@@ -855,7 +859,14 @@ na katerega pritisnemo izmenično napetost, lahko moduliramo intenziteto
 direktnega svetlobnega snopa. To potrebujemo na primer pri preklapljanju
 dobrote laserskega resonatorja.\index{Preklop dobrote}
 
-Tretji primer uporabe je spreminjanje frekvence svetlobe. Možne so spremembe
+Akusto-optične modulatorje uporabljamo tudi za uklepanje faz\index{Uklepanje faz}
+v laserskem resonatorju. Če je v Braggovem elementu prisotno stoječe zvočno
+valovanje, je amplituda direktnega snopa modulirana s frekvenco zvoka.
+Kadar je frekvenca zvoka ravno enaka razmiku frekvenc laserskih nihanj,
+lahko nastanejo uklenjene faze vzbujenih nihanj in s tem kratki
+sunki svetlobe.
+
+Naslednji primer uporabe je spreminjanje frekvence svetlobe. Možne so spremembe
 do nekaj $100~\si{\mega\hertz}$, kar je ravno primerno za uporabo v laserskih merilnikih
 hitrosti, kjer merimo frekvenco utripanja med referenčno svetlobo in svetlobo, odbito od
 merjenega predmeta. Če ima referenčna svetloba
@@ -863,13 +874,6 @@ isto frekvenco kot merilni snop, ni mogoče določiti predznaka hitrosti
 predmeta, če pa referenčni svetlobi nekoliko spremenimo frekvenco,
 se pojavi utripanje tudi tedaj, ko predmet miruje. Frekvenca utripanja
 se poveča ali zmanjša glede na predznak hitrosti predmeta.
-
-Naslednji primer uporabe akusto-optičnih modulatorjev je za uklepanje faz\index{Uklepanje faz}
-v laserskem resonatorju. Če je v Braggovem elementu prisotno stoječe zvočno
-valovanje, je amplituda direktnega snopa modulirana s frekvenco zvoka.
-Kadar je frekvenca zvoka ravno enaka razmiku frekvenc laserskih nihanj,
-lahko nastanejo uklenjene faze vzbujenih nihanj in s tem kratki
-sunki svetlobe.
 
 Zanimiva je tudi uporaba Braggovega elementa za izdelavo
 hitrega frekvenčnega analizatorja električnih signalov.  
@@ -927,9 +931,9 @@ pri čemer smo privzeli, da je $\nabla\cdot\mathbf{E}\approx 0$, čeprav je
 $\epsilon$ funkcija kraja. 
 
 Enačbo~(\ref{7.33a}) brez dodane polarizacije $\delta P$ rešijo ravni valovi 
-z valovnim vektorjem $\mathbf{k}$ in frekvenco $\omega$. Tej rešitvi se 
+z valovnim vektorjem $\mathbf{k}$ in krožno frekvenco $\omega$. Tej rešitvi se 
 primešajo valovi z valovnim vektorjem $\mathbf{k}\pm n\mathbf{q}$
-in frekvenco $\omega\pm n\Omega$. Zato iščemo rešitve v obliki vsote
+in krožno frekvenco $\omega\pm n\Omega$. Zato iščemo rešitve v obliki vsote
 ravnih valov, torej Fouriereve vrste
 \begin{equation}
 E=\sum_{n}A_{n}(z)e^{in(qx-\Omega t)}e^{i(k_{x}x+k_{z}z-\omega t)}.
@@ -1064,27 +1068,29 @@ Za čim bolj učinkovito delovanje akusto-optičnega modulatorja seveda
 \centering
 \def\svgwidth{90truemm} 
 \input{slike/09_AOcalc.pdf_tex}
-\caption{Intenziteta prepuščenega (črna) in uklonjenega (rdeča) valovanja na zvočnem valovanju v
-odvisnosti od debeline plasti zvočnega valovanja}
+\caption{Relativna intenziteta prepuščenega (črna) in uklonjenega (rdeča) 
+valovanja na zvočnem valovanju v
+odvisnosti od debeline plasti zvočnega valovanja.}
 \label{s7.10}
 \end{figure}
 
 V gornja izraza vstavimo še parameter $\xi$, ki je podan z enačbo~(\ref{7.38}).
 Razmerje med močjo uklonjenega in vpadnega snopa je tako
 \boxeq{7.48}{
-\frac{I_{1}}{I_{0}}=\sin^{2}\left(\frac{\pi n_{0}^{3}pS_{0}d}{2\lambda\cos\vartheta}\right).
+\frac{I_{1}}{I_{0}}=\sin^{2}\left(\frac{\pi n_{0}^{3}pS_{0}d}{2\lambda\cos\vartheta}\right),
 }
+pri čemer je $n_0=\sqrt{\tilde{\varepsilon}}$.
 Poiščimo še amplitudo deformacije $S_0$. Za longitudinalne (zvočne) valove v snovi oblike 
-$u = u_0 \cos(qz - \Omega t)$ je deformacija 
+$u = u_0 \cos(qx - \Omega t)$ je deformacija 
 \begin{equation}
-S_{zz} = \frac{1}{2}\bigl( \frac{\partial u}{\partial z}+ 
-\frac{\partial u}{\partial z}\bigr) = \frac{\partial u}{\partial z} = - u_0 q\, \sin(qz - \Omega t).
+S_{xx} = \frac{1}{2}\bigl( \frac{\partial u}{\partial x}+ 
+\frac{\partial u}{\partial x}\bigr) = \frac{\partial u}{\partial x} = - u_0 q\, \sin(qx - \Omega t).
 \end{equation}
 Povprečna gostota energijskega toka je \index{Gostota energijskega toka}
 \begin{equation}
 j_{z}= \frac{1}{T}\int_0^T 
 v_z \left(\frac{1}{2} \varrho \left(\frac{\partial u}{\partial t}\right)^2
-+ \frac{1}{2} \varrho v_z^2\left(\frac{\partial u}{\partial z}\right)^2
++ \frac{1}{2} \varrho v_z^2\left(\frac{\partial u}{\partial x}\right)^2
 \right) dt = \frac{1}{2} \varrho v_z^3 S_0^2,
 \label{7.49}
 \end{equation}
@@ -1100,22 +1106,17 @@ M=\frac{n_{0}^{6}p^{2}}{\varrho v_{z}^{3}}.
 \label{7.51}
 \end{equation}
 Večja kot je vrednost koeficienta $M$, bolj izrazit je akusto-optični pojav v dani snovi. 
-
+Izkoristek pretvorbe s koeficientom $M$ potem zapišemo kot
+\begin{equation}
+ \frac{I_{1}}{I_{0}}=\sin^{2}\left(\frac{\pi d}{\lambda\cos\vartheta}\sqrt{\frac{j_z M}{2}}\right).
+\end{equation}
 Poglejmo primer. V kremenu z gostoto $\varrho=2,2\cdot10^{3}~\si{\kilo\gram/\metre^3}$ 
 je hitrost zvoka $v_{z}=6000~\si{\metre/\second}$,
-$\tilde{n}=1,46$ in $p=0,2$. To da $M=8\cdot10^{-16}~\si{\watt/\metre^2}$.
+$n_0=1,46$ in $p=0,2$. To da $M=8\cdot10^{-16}~\si{\metre^2/\watt}$.
 Pri gostoti zvočnega toka $10~\si{\watt/\centi\metre^2}$ in valovni dolžini svetlobe 
 $633~\si{\nano\metre}$ pride do popolnega prenosa moči v uklonjeni snop pri 
-debelini $d=3~\si{\centi\metre}$. Gornja gostota
-zvočnega toka je kar velika in je ni prav lahko doseči, zato so 
-uklonski izkoristki navadno nekaj manjši od 1.
-
-Izračunajmo še kot odklona uklonjenega vala $\theta = 2 \vartheta$  
-\begin{equation}
-\theta \approx \frac{q}{k}=\frac{\lambda}{\tilde{n}\Lambda}=1,7\cdot10^{-3}.
-\label{7.52}
-\end{equation}
-Uklonski kot je torej precej majhen.
+debelini $d \sim 3~\si{\centi\metre}$. Upoštevana gostota zvočnega toka je kar velika
+in je ni prav lahko doseči, zato so uklonski izkoristki navadno nekaj manjši od 1.
 
 \begin{remark}
 Opisani račun izkoristka uklona na zvočnih valovih je uporaben tudi
