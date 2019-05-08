@@ -1212,8 +1212,9 @@ nehomogenosti $\mathbf{n}$. To lastnost, ki je značilna za tekoče kristale,
 imenujemo orientacijska elastičnost. Vendar so v makroskopskem vzorcu
 nematičnega tekočega kristala elastični navori prešibki,
 da bi uredili celoten vzorec, zato se na splošno smer direktorja $\mathbf{n}$ 
-po vzorcu neurejeno spreminja. V optičnih napravah pa potrebujemo urejene vzorce, zato
-moramo ureditev vzorca vsiliti. To naredimo z zunanjim električnim ali magnetnim poljem, 
+po vzorcu neurejeno spreminja. Da dobimo urejene vzorce, ki jih potrebujemo za izdelavo
+optičnih naprav, moramo ureditev vzorca 
+vsiliti. To naredimo z zunanjim električnim ali magnetnim poljem, 
 ali pa vzorce pripravimo dovolj tanke, da ureditev vsilijo mejne površine. 
 
 Poglejmo, kako nastane urejen vzorec v tankih plasteh. Če površino,
@@ -1246,8 +1247,8 @@ Zaradi urejenosti molekul električna (ali magnetna) susceptibilnost nematičneg
 kristala ni skalar, temveč ima dve različni lastni vrednosti,
 eno za smer vzporedno z $\mathbf{n}$, drugo za pravokotno nanj. Zato je
 elektrostatična energija odvisna od kota med zunanjim poljem $\mathbf{E}$
-in direktorjem $\mathbf{n}$. Gostoto električne energije\index{Gostota energije} 
-zapišemo kot 
+in direktorjem $\mathbf{n}$. Pri konstantnem zunanjem električnem polju 
+gostoto električne energije\index{Gostota energije} zapišemo kot 
 \begin{equation}
 w_{el}=-\frac{1}{2}\mathbf{E}\cdot \mathbf{D}.
 \label{lcwe}
@@ -1267,7 +1268,7 @@ Potem je
 pri čemer je $\varepsilon_a = \varepsilon_\parallel - \varepsilon_\bot$ anizotropni
 del dielektrične konstante. Anizotropni del gostote energije je tako do konstante
 \boxeq{7.56}{
-w_a = -\frac{1}{2}\epsilon_{0}\epsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2},
+w_a = -\frac{1}{2}\epsilon_{0}\epsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2}.
 }
 Če je $\epsilon_{a}>0$, se molekule tekočega kristala uredijo v smeri 
 zunanjega polja, v nasprotnem primeru pa pravokotno nanj.
@@ -1325,10 +1326,8 @@ od valovne dolžine svetlobe.
 \centering
 \def\svgwidth{105truemm} 
 \input{slike/09_LCD1.pdf_tex}
-\caption{a) Zasukana nematična celica. 
-Polarizacija (P) približno sledi smeri zasukanega direktorja in analizator (A) 
-prepusti svetlobo. b) Ko priključimo električno polje ($\mathbf{E}$), se tekočekristalne molekule
-zasučejo v smer polja. Polarizacija svetlobe (P) se ohranja in analizator (A) 
+\caption{a) V zasukani nematični celici polarizacija sledi smeri zasukanega 
+direktorja in analizator (A) prepušča svetlobo. b) V električnem polju ($\mathbf{E}$) se tekočekristalne molekule zasučejo v smer polja. Polarizacija svetlobe se ohranja in analizator (A) 
 svetlobe ne prepušča. }
 \label{LCD1}
 \end{figure}
@@ -1337,8 +1336,8 @@ svetlobe ne prepušča. }
 Tekočekristalni zasloni, ki jih uporabljamo v praksi, so precej bolj zapleteni.
 Najpreprostejši so črno-beli prikazovalniki, ki delujejo z odbito svetlobo (npr. 
 v žepnih računalih), zato imajo za analizatorjem odbojno površino. Večina 
-sodobnih prikazovalnikov (npr. računalniški ali telefonski zasloni) pa za 
-osvetlitev uporablja LED ali fluorescenčna svetila.
+sodobnih prikazovalnikov (npr. računalniški ali telefonski zasloni) ima svoj izvor svetlobe, 
+praviloma so to LED ali fluorescenčna svetila.
 Barve dosežemo z barvnimi filtri (rdečim, modrim in zelenim) na vsakem 
 pikslu posebej, natančno krmiljenje pikslov pa s tankoplastnimi 
 tranzistorji ({\it Thin film transistors}, TFT). Veliko
@@ -1347,7 +1346,8 @@ zaslone pa lahko z dodatnimi plastmi naredimo tudi občutljive na dotik.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=80truemm]{slike/09_LCD.jpg}
-\caption{Vsak piksel tekočekristalnega zaslona je sestavljen iz treh barv.}
+\caption{Na močno povečani sliki računalniškega tekočekristalnega zaslona se 
+jasno vidi, da je vsak piksel sestavljen iz treh barv.}
 \end{figure}
 \end{remark}
 
@@ -1386,11 +1386,15 @@ obrnjen v smeri $x$, povprečna vrednost $\bar{\varepsilon}$ pa
 \bar{\varepsilon}=\frac{\varepsilon_{\parallel}+\varepsilon_{\perp}}{2}.
 \label{7.60}
 \end{equation}
+Namig: Zasukan tenzor $\varepsilon (z)$ pri danem $z$  izračunamo 
+iz nezasukanega $\tilde{\varepsilon}$ s
+transformacijo $\varepsilon (z) = A(\varphi) \cdot \tilde{\varepsilon} \cdot A(\varphi)^\mathrm{T}$,
+pri čemer je $A(\varphi)$ rotacijska matrika.
 \end{definition}
 
 Iz Maxwellovih enačb~(enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) 
 hitro uvidimo, da je valovna enačba
-za valovanje s frekvenco $\omega$ oblike
+za valovanje s krožno frekvenco $\omega$ v našem primeru oblike
 \begin{equation}
 \frac{d^{2}\mathbf{E}}{dz^{2}}+\frac{\omega^{2}}{c^{2}} \epsilon
 (z)\mathbf{E}=0
@@ -1409,8 +1413,8 @@ in
 \label{7.62b}
 \end{equation}
 kjer je $\alpha^{2}=\epsilon_{a}\omega^{2}/(2c^{2})$ in 
-$\beta^{2}=\bar{\epsilon}\omega^{2}/c^{2}$. Dobili smo torej sistem
-dveh sklopljenih diferencialnih enačb. 
+$\beta^{2}=\bar{\epsilon}\omega^{2}/c^{2}$. S tem smo dobili sistem
+dveh sklopljenih diferencialnih enačb, ki ga lahko rešimo.
 
 Za reševanje je ugodno vpeljati krožni polarizaciji 
 $E_{+}=E_{x}+iE_{y}$ in $E_{-}=E_{x}-iE_{y}$.
@@ -1452,7 +1456,7 @@ nič
 \end{equation}
 Spomnimo se, da sta $\beta$ in $\alpha$ sorazmerna z $\omega$,
 zato dobljena enačba predstavlja disperzijsko relacijo -- zvezo med 
-$\omega$ in $k$ -- za svetlobo v zavitem sredstvu
+$\omega$ in $k$ -- za svetlobo v zasukanem sredstvu
 \begin{equation}
 \left(k^{2}+q^{2}-\frac{\bar{\epsilon}\omega^{2}}{c^{2}}\right)^{2}-
 4k^{2}q^{2}- \frac{\epsilon_{a}^2\omega^{4}}{4c^{4}}
@@ -1460,20 +1464,20 @@ $\omega$ in $k$ -- za svetlobo v zavitem sredstvu
 \label{7.66a}
 \end{equation}
 
-Na splošno je iskanje rešitev gornje enačbe zapleten problem, vendar 
-za razlago delovanja zasukane nematične celice zadošča približek 
-$q\ll\beta$ in $\alpha$, ko je torej perioda sukanja optične osi
+Da dobimo disperzijsko odvisnost $k(\omega)$, moramo rešiti gornjo kvadratno enačbo. 
+Vendar za razlago delovanja zasukane nematične celice zadošča približek 
+$q\ll\alpha$ in $q\ll\beta$, saj je perioda sukanja optične osi
 velika v primerjavi z valovno dolžino svetlobe. Tedaj lahko $q$ v disperzijski
 zvezi (enačba~\ref{7.66}) zanemarimo in velja
 \begin{equation}
 k^{2}=\left\{ \begin{matrix}\beta^{2}+\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilon_{\parallel} 
-\\               \beta^{2}-\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilon_{\bot} 
-              \end{matrix}\right.
+\\               \beta^{2}-\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilon_{\bot}.
+              \end{matrix}\right
 \label{7.67}
 \end{equation}
- Ti vrednosti ustrezata velikosti valovnega vektorja za izredni
-in redni val v navadnem enoosnem kristalu. Vstavimo ju v enačbi~(\ref{7.65a}) ali
-(\ref{7.65}) in za polarizaciji lastnih valov velja $B=\pm A$.
+Ti vrednosti ustrezata velikosti valovnega vektorja za izredni
+in redni val v navadnem enoosnem kristalu. Vstavimo ju v enačbi~(\ref{7.65a} in
+\ref{7.65}) in za polarizaciji lastnih valov dobimo $B=\pm A$.
 
 Izračunajmo še obe kartezični komponenti električnega polja za prvo rešitev
 \begin{align}
@@ -1481,10 +1485,10 @@ E_{x} &=  \frac{1}{2}(E_{+}+E_{-})  =  \frac{1}{2}Ae^{ikz}(e^{iqz}+e^{-iqz})  = 
 E_{y} & = \frac{1}{2i}(E_{+}-E_{-})  =  \frac{1}{2i}Ae^{ikz}(e^{iqz}-e^{-iqz})  =  Ae^{ikz}\sin qz.
 \label{7.68}
 \end{align}
-Polarizacija torej res sledi optični osi. Druga rešitev da val,
+Zasuk polarizacije torej res sledi zasuku optične osi. Druga rešitev da val,
 ki je polariziran pravokotno na lokalno optično os in se prav tako
-suče z njo. Pri tem se prvi val širi s fazno hitrostjo $c/n_{e}$, torej kot
-izredni val, drugi pa s $c/n_{o}$, to je kot redni val. Če na zasukano
+suče z njo. Pri tem se prvi val širi kot izredni val s fazno hitrostjo $c/n_{e}$, 
+drugi pa kot redni val s $c/n_{o}$. Če na zasukano
 nematično celico vpada svetloba, ki je polarizirana ali vzporedno z 
 optično osjo ob meji ali pravokotno nanjo, se pojavi na izhodni strani 
 polarizacija, zasukana za enak kot, kot je zasukana optična os. 
