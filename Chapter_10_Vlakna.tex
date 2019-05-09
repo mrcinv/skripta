@@ -583,7 +583,12 @@ vozlov, drugi pa število radialnih vrhov. Poglejmo nekaj primerov (slika~\ref{f
 
 Osnovni LP$_{01}$ je kar približno enak osnovnemu HE$_{11}$ rodu. Električna poljska jakost je 
 \begin{equation}
-\mathbf{E}_\mathrm{LP01} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_0(k_s a),
+\mathbf{E}_\mathrm{LP01} \propto 
+\left \{
+  \begin{matrix}
+  \mathbf{e}_x \\ \mathbf{e}_y 
+  \end{matrix}
+\right \} \, J_0(k_s a),
 \end{equation}
 saj ima dve možni smeri polarizacije. Na splošno so LP$_{0m}$ zelo podobni rodovom HE$_{1m}$. 
 
@@ -591,16 +596,32 @@ Višje rodove, na primer LP$_{11}$ sestavimo kot linearno kombinacijo
 TE$_{01}$ ali TM$_{01}$ in HE$_{21}$.
 Električna poljska jakost v LP$_{11}$ je tako 
 \begin{equation}
-\mathbf{E}_\mathrm{LP11} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_1(k_s a)
-{ \cos\varphi \brace \sin\varphi},
+\mathbf{E}_\mathrm{LP11} \propto \left \{
+  \begin{matrix}
+  \mathbf{e}_x \\ \mathbf{e}_y 
+  \end{matrix}
+\right \} \, J_1(k_s a)
+\left \{
+  \begin{matrix}
+  \cos\varphi  \\ \sin\varphi 
+  \end{matrix}
+\right \}
 \end{equation}
 kar opisuje štiri različne oblike rodov LP$_{11}$.
 
 Tudi LP$_{21}$ rodovi, ki nastanejo kot kombinacija HE$_{31}$
 in EH$_{11}$ rodov, imajo štiri oblike
 \begin{equation}
-\mathbf{E}_\mathrm{LP21} \propto { \mathbf{e}_x \brace \mathbf{e}_y} \, J_2(k_s a)
-{ \cos 2\varphi \brace \sin 2\varphi}.
+\mathbf{E}_\mathrm{LP21} \propto \left \{
+  \begin{matrix}
+  \mathbf{e}_x \\ \mathbf{e}_y 
+  \end{matrix}
+\right \} \, J_2(k_s a)
+\left \{
+  \begin{matrix}
+  \cos 2 \varphi  \\ \sin 2 \varphi 
+  \end{matrix}
+\right \}.
 \end{equation}
 Linearno polarizirani LP rodovi imajo precejšnjo uporabno vrednost. To so 
 namreč rodovi, ki jih v vlaknu vzbudimo, ko nanj posvetimo s polarizirano 

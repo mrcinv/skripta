@@ -4,7 +4,7 @@
 \label{chap:Primeri}
 V tem poglavju bomo spoznali nekaj najpomembnejših vrst laserjev.
 V grobem laserje razlikujemo po aktivnem sredstvu 
-(plin, trdna snov, organsko barvilo, polprevodnik), pri čemer pa tudi pri izbranem
+(plin, trdna snov, organsko barvilo, polprevodnik), pri čemer tudi pri izbranem
 sredstvu obstaja veliko različnih izvedb in načinov delovanja. Za vsak 
 obravnavani primer bomo navedli osnovne karakteristike, v podrobnosti 
 izvedbe pa se ne bomo spuščali. 
@@ -12,8 +12,8 @@ izvedbe pa se ne bomo spuščali.
 \section{Laserski sistemi}
 \index{Laserski sistemi}
 Laser \index{Laser} je lahko dokaj preprosta naprava, z malo sestavnimi deli, 
-lahko pa je zelo velik in zapleten sistem. Večina velikih laserskih sistemov
-je sestavljena iz osnovnega laserja, ki ni posebno močan, daje pa kvaliteten
+lahko pa je zelo velik in zapleten sistem. Večina laserskih sistemov
+je sestavljena iz osnovnega laserja, ki ni posebno močan, a daje kvaliteten
 snop svetlobe, in iz enega ali več ojačevalnikov. V njih se svetloba 
 ojačuje v sredstvu, ki je enako kot v osnovnem laserju in ki je v kolikor 
 mogoče visokem stanju obrnjene zasedenosti. V več ojačevalnih korakih 
@@ -22,13 +22,13 @@ se tako doseže zelo velika svetlobna moč.
 Pri velikih laserskih močeh nastopi vrsta novih težav. Da gostota 
 svetlobnega toka ne povzroča poškodb optičnih komponent, mora 
 premer ojačevanega snopa (in s tem premer vseh vmesnih ojačevalnih stopenj) 
-naraščati. Zadnje stopnje velikih laserskih sistemov imajo 
-tako premer večji od pol metra, kar seveda pomeni, da morajo imeti tolikšno odprtino 
+naraščati. Na zadnjih stopnjah največjih laserskih sistemov je 
+premer snopa lahko večji od pol metra, kar seveda pomeni, da morajo imeti tolikšno odprtino 
 tudi vse ostale optične komponente. Poleg tega je
 treba skrbno paziti, da se odbita svetloba ne vrača v prejšnji
-ojačevalnik ali v osnovni laser in moti njegovega delovanja. Zato so med
-ojačevalnimi stopnjami optični izolatorji, ki temeljijo na Faradayevem
-pojavu vrtenja polarizacije v snovi v magnetnem polju.
+ojačevalnik ali v osnovni laser in s tem moti njegovo delovanje. Med
+posamezne ojačevalne stopnje zato damo optične izolatorje, ki temeljijo na Faradayevem
+pojavu vrtenja polarizacije v snovi z magnetnim poljem.
 
 \begin{figure}[h!]
 \centering
@@ -39,37 +39,39 @@ $500~\si{\tera\watt}$ moči v sunku. \\Vir: National Ignition Facility, Livermor
 \end{figure}
 
 Moči svetlobe, ki jih oddajajo najmočnejši laserski sistemi, imajo zelo velike
-vrednosti. Najmočnejši zvezno delujoči laserji dosegajo tako moči prek 
-$\sim 100~\si{\kilo\watt}$. Še bistveno večje moči pa dosegajo sunkovni laserji, 
-saj lahko dosežejo moč tudi $\sim 10^{15}~\si{\watt}$. 
-Vendar so sunki tako velike svetlobne moči izredno kratki, tipično reda pikosekunde, tako da
-znaša celotna moč v takem sunku svetlobe tako ``le'' $\sim \si{\kilo\joule}$. Dodaten 
-parameter pri tako močnih sunkovnih laserjih je čas, ki poteče med dvema zaporednima
-sunkoma. Najmočnejši laserski sistemi tako lahko izsevajo največ nekaj sunkov dnevno. 
+vrednosti. Najmočnejši zvezno delujoči laserji dosegajo moči prek 
+$\sim 100~\si{\kilo\watt}$. Še bistveno večje moči dosegajo sunkovni laserji, 
+saj lahko v sunku dosežejo moč tudi $\sim 10^{15}~\si{\watt}$. 
+Vendar so sunki s tako veliko svetlobno močjo izredno kratki, tipično reda pikosekunde, tako da
+znaša celotna energija v sunku ``le'' $\sim \si{\kilo\joule}$. Pomemben
+parameter pri sunkovnih laserjih je tudi čas, ki poteče med dvema zaporednima
+sunkoma (repeticija). Najmočnejši laserski sistemi lahko izsevajo največ nekaj sunkov dnevno. 
 
 \section{He-Ne laser}
 \index{Laser!He-Ne}
-
-Kot prvi primer si oglejmo helij-neon (He-Ne) laser, ki je bil prvi zvezno 
+Najprej si oglejmo helij-neon (He-Ne) laser, ki je bil prvi zvezno 
 delujoči laser in je še danes zelo razširjen. Najpogosteje deluje 
-pri valovni dolžini $632,8~\si{\nano\metre}$ v rdečem delu spektra, poleg 
-tega pa tudi pri infrardečih $1,15~\si{\micro\metre}$ in 
+pri valovni dolžini $632,8~\si{\nano\metre}$ v rdečem delu spektra, lahko 
+pa tudi pri infrardečih $1,15~\si{\micro\metre}$ in 
 $3,39~\si{\micro\metre}$ ter nekaterih drugih\index{Infrardeče valovanje}
 valovnih dolžinah v oranžnem in zelenem delu spektra. Laser deluje v zveznem 
 načinu delovanja s tipičnimi močmi $0,5 - 100~\si{\milli\watt}$.
 
-Slika~(\ref{fig:HeNeE}) kaže relevantne energijske nivoje helija in neona. 
+Ojačevalno sredstvo je plin, mešanica helija in neona, katerih relevantni
+energijski nivoji so prikazani na sliki~(\ref{fig:HeNeE}). 
 \index{Energijski nivoji!He-Ne}
 \index{Trinivojski sistem}
 Atome helija
 s trki z elektroni vzbudimo v eno izmed dveh dolgoživih metastabilnih stanj $2^3S$ ali
 $2^1S$ z razpadnima časoma $0,1~\si{\milli\second}$ in $5~\si{\micro\second}$.
 Ti dve stanji slučajno praktično sovpadata z dvema stanjema neona ($4s$ in $5s$). 
-Ko v helij dodamo razmeroma majhno količino neona, se energija s trki 
+Ko heliju dodamo neon, se energija s trki 
 prenese z vzbujenih helijevih atomov na atome neona, ki s tem preidejo v 
-že omenjeni vzbujeni stanji, helijevi atomi pa se vrnejo v osnovno stanje. 
-Majhna energijska razlika med nivoji helija in neona (okoli $1,2~\si{\tera\hertz}$) pri 
-tem preide v kinetično energijo obeh atomov. 
+že omenjeni vzbujeni stanji. Helijevi atomi se po trku vrnejo v osnovno stanje, od koder
+jih lahko ponovno vzbudimo. Prenos energije z atomov helija na atome neona s trki je 
+zelo učinkovit, zato zasedenost vzbujenih neonovih stanj hitro naraste. Ko preseže 
+zasedenost nižjih vzbujenih stanj v neonu, pride do obnrnjene zasedenosti. 
+
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
@@ -82,13 +84,13 @@ ustrezno valovno dolžino.}
 
 Znano rdečo svetlobo He-Ne laserja z valovno dolžino $632,8~\si{\nano\metre}$ dobimo 
 pri prehodu iz stanja $5s$ v eno od stanj $3p$. Pri tem je življenjski čas 
-stanja $5s$ okoli $100~\si{\nano\second}$, stanja $3p$ pa okoli $10~\si{\nano\second}$.
-Spodnji $3p$ nivo se prazni s spontano emisijo v metastabilno stanje $3s$. 
+stanja $5s$ okoli $100~\si{\nano\second}$, stanja $3p$ pa okoli $10~\si{\nano\second}$, zato
+se spodnji nivo s spontano emisijo hitro prazni  v metastabilno stanje $3s$. 
 V njem se atomi nabirajo, saj so dipolni sevalni prehodi v osnovno stanje prepovedani,
 in atomi le s trki ob steno cevi prehajajo v osnovno stanje. Da pospešimo
-praznjenje spodnjega nivoja in povečamo obrnjeno zasedenost, moramo torej 
+praznjenje nivoja $3s$ in omogočimo večjo obrnjeno zasedenost, moramo torej 
 zmanjšati premer razelektritvene cevi. Zaradi gibanja atomov je spektralna 
-črta Dopplerjevo razširjena\index{Dopplerjeva razširitev}. 
+črta Dopplerjevo razširjena\index{Dopplerjeva razširitev} ($\Delta \nu = 1,5~\si{GHz}$). 
 
 Lasersko delovanje dobimo tudi pri prehodu iz $5s$ v stanje $4p$, pri katerem 
 ima izsevana svetloba valovno dolžino $3,39~\si{\micro\metre}$. 
@@ -99,8 +101,8 @@ deloma pa zaradi kratke življenjske dobe spodnjega laserskega nivoja $4p$.
 Zato bi pričakovali, da bo He-Ne laser svetil v infrardečem delu in ne vidnem. 
 To delno prepreči absorpcija v steklu, delno pa izgube namerno povečamo s selektivno odbojnostjo
 resonatorskih zrcal, ki dvigne prag delovanja za $3,39~\si{\micro\metre}$ 
-nad prag za $632,8~\si{\nano\metre}$. V nekaterih primerih v laser dodamo
-celico metana, ki infrardeč del svetlobe močno absorbira, rdeče pa ne.
+nad prag za $632,8~\si{\nano\metre}$. V laser lahko dodamo tudi
+celico metana, ki infrardeč del svetlobe močno absorbira, vidnega pa ne.
 Omenimo še prehode iz stanja $4s$, ki ga dosežejo neonovi atomi s trki
 z vzbujenimi helijevimi atomi iz nivoja $2^3S$. Prehod $4s$ v $3p$, ki da svetlobo
 pri $1,15~\si{\micro\metre}$, je bil prvi opaženi prehod v He-Ne laserjih.
@@ -116,8 +118,8 @@ Cev na obeh straneh zapirata okni, ki sta nagnjeni za Brewstrov kot (glej enačb
 tako da so izgube pri odboju za eno polarizacijo kar se da majhne.
 Izhodna svetloba iz laserja je zato seveda polarizirana. V manjših laserjih
 so namesto Brewstrovih oken na razelektritveno cev privarjena kar
-resonatorska zrcala. Tak laser je nepolariziran. 
-Razelektritvena cev je obdana z dvema ukrivljenima zrcaloma, 
+resonatorska zrcala, zaradi česar so taki laserji nepolarizirani. 
+Navadno je razelektritvena cev obdana z dvema ukrivljenima zrcaloma, 
 ki imata zelo veliko odbojnost za izbrano valovno dolžino.
 Nekaj tipičnih podatkov za He-Ne laser je zbranih v tabeli~(\ref{tab:Ar}).
 \begin{figure}[h]
@@ -141,14 +143,14 @@ in dolgo služijo (do 50 000 ur).
 Danes jih sicer izrivajo polprevodniški laserji, vendar so še vedno v uporabi
 v merilnih napravah, v optičnih čitalnih sistemih, v šolah, v raziskovalnih 
 laboratorijih za interferometrijo, holografijo itd. Na njem je osnovan tudi 
-sekundarni standard za meter.
+standard za meter.
 
 \section{Argonski ionski laser}
 \index{Laser!argonski}
 \index{Štirinivojski sistem}
 Kot drugi primer plinskega laserja obravnavajmo argonski ionski (Ar$^+$) laser,
 ki je najbolj poznan po zveznem delovanju v modrem in zelenem delu spektra pri 
-valovnih dolžinah $488~\si{\nano\metre}$ in $514,4~\si{\nano\metre}$, deluje 
+valovnih dolžinah $488,0~\si{\nano\metre}$ in $514,5~\si{\nano\metre}$, deluje 
 pa tudi v bližnjem ultravijoličnem delu spektra. Tipične moči delovanja argonskega laserja
 so $100~\si{\milli\watt} - 50~\si{\watt}$.\index{Ultravijolično valovanje}
 
