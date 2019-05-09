@@ -1443,10 +1443,12 @@ Nastavek reši sistem enačb~(\ref{lcm1}) in (\ref{lcm2}),
 natanko takrat, kadar $A$ in $B$ rešita sistem homogenih linearnih enačb 
 \begin{equation}
 \left((k+q)^{2}-\beta^{2}\right)A-\alpha^{2}B  =  0 
+\label{7.66c}
 \end{equation}
 in
 \begin{equation}
 -\alpha^{2}A+\left((k-q)^{2}-\beta^{2}\right)B  =  0.
+\label{7.66d}
 \end{equation}
  Sistem je netrivialno rešljiv, če je determinanta koeficientov enaka
 nič
@@ -1470,15 +1472,16 @@ $q\ll\alpha$ in $q\ll\beta$, saj je perioda sukanja optične osi
 velika v primerjavi z valovno dolžino svetlobe. Tedaj lahko $q$ v disperzijski
 zvezi (enačba~\ref{7.66}) zanemarimo in velja
 \begin{equation}
-k^{2}=\left\{ \begin{matrix}\beta^{2}+\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilon_{\parallel} 
-\\               \beta^{2}-\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilon_{\bot}.
-              \end{matrix}\right
+k^{2}=
+\begin{cases}
+\beta^{2}+\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilon_{\parallel}\\
+\beta^{2}-\alpha^{2}=\frac{\omega^{2}}{c^{2}}\epsilon_{\bot}.
+\end{cases}
 \label{7.67}
 \end{equation}
 Ti vrednosti ustrezata velikosti valovnega vektorja za izredni
 in redni val v navadnem enoosnem kristalu. Vstavimo ju v enačbi~(\ref{7.65a} in
 \ref{7.65}) in za polarizaciji lastnih valov dobimo $B=\pm A$.
-
 Izračunajmo še obe kartezični komponenti električnega polja za prvo rešitev
 \begin{align}
 E_{x} &=  \frac{1}{2}(E_{+}+E_{-})  =  \frac{1}{2}Ae^{ikz}(e^{iqz}+e^{-iqz})  =  Ae^{ikz}\cos qz\\
@@ -1498,23 +1501,23 @@ tekoči kristal zopet sestavimo, s čemer seveda na splošno nastane eliptična
 polarizacija.
 
 \begin{remark}
-Disperzijsko zvezo (enačba~\ref{7.66} oziroma~\ref{7.66a}) 
-lahko rešimo numerično (slika~\ref{gap}). Pri izbrani vrednosti $\alpha$ 
+Disperzijsko zvezo (enačbi~\ref{7.66} in \ref{7.66a}) 
+lahko rešimo (slika~\ref{gap}). Pri izbrani vrednosti $\alpha$ 
 obstajajo pri vseh frekvencah, razen v ozkem območju -- rečemo mu frekvenčna reža --
-štiri realne rešitve za $k$, 
-po dve za valovanji v pozitivni in v negativni smeri.
+štiri realne rešitve za $k$, po dve za valovanji v pozitivni in v negativni smeri.
 V območju reže je en par rešitev imaginaren. Vsaki vrednosti $k$
 pripada neko razmerje amplitud $A$ in $B$, ki ga izračunamo
-iz enačb~(\ref{7.65a}) in (\ref{7.65}) in ki določa polarizacijo lastnega vala. Polarizacije
+iz enačb~(\ref{7.66c}) in (\ref{7.66d}) in ki določa polarizacijo lastnega vala. Polarizacije
 lastnih valov so na splošno eliptične in pri dani frekvenci med
 seboj niso pravokotne, saj zapisani sistem enačb ne predstavlja čisto 
 navadnega problema lastnih vektorjev simetrične matrike. 
 V območju frekvenčne reže le en par rešitev predstavlja
 potujoč val, drug pa polje, ki eksponentno pojema v sredstvo. Zato
-se svetloba s frekvenco v reži in z ustrezno polarizacijo, ki vpada
-na holesterični tekoči kristal, totalno odbije. Pojav je povsem analogen
-Braggovemu odboju na kristalih in daje holesterikom značilen obarvan
-videz.\index{Tekoči kristali!holesterik}\index{Braggov odboj}
+se svetloba s frekvenco v reži in z ustrezno polarizacijo totalno odbije. Pojav v zasukanih
+nematskih celicah ni opazen, saj je tam $q \ll \alpha$. Če pa je perioda vijačnice
+primerljiva z valovno dolžino svetlobe, kot na primer v holesteričnih
+tekočih kristalih, pride do značilnega obarvanega videza. Pojav
+je povsem analogen Braggovemu odboju na kristalih.\index{Tekoči kristali!holesterik}\index{Braggov odboj}
 \begin{figure}[h]
 \centering
 \def\svgwidth{80truemm} 
@@ -1527,9 +1530,9 @@ rešitve za vsako frekvenco.}
 \end{remark}
 
 \section{Račun preklopa v tekočem kristalu -- Frederiksov prehod}
-Omenili smo, da lahko z dovolj velikim zunanjim poljem 
-molekule tekočega kristala, razen tik ob površini, obrnemo v smeri polja. 
-Izračunajmo jakost polja, ki je potrebna za ta zasuk. 
+Ob opisu tekočekristalnih prikazovalnikov smo omenili, da lahko z dovolj velikim 
+zunanjim električnim poljem molekule tekočega kristala, razen tik ob urejevalni površini,
+obrnemo v smeri polja. Izračunajmo jakost polja, ki je potrebna za ta zasuk. 
 \index{Frederiksov prehod}
 
 Energija nematičnega tekočega kristala je najnižja, kadar je direktor $\mathbf{n}$
@@ -1545,7 +1548,7 @@ F_{e}=\frac{1}{2}\int\left\{ K_{1}(\nabla\cdot\mathbf{n})^{2}+K_{2}
 Pri tem so $K_{1}$, $K_{2}$ in $K_{3}$ tri Frankove elastične
 konstante, ki so odvisne od snovi in tudi od temperature. 
 Prvi člen predstavlja povečanje energije zaradi deformacije v obliki 
-pahljače, drugi zaradi zasuka, tretji pa zaradi upogiba (slika~\ref{s7.20}).
+pahljače, drugi zaradi zasuka in tretji zaradi upogiba (slika~\ref{s7.20}).
 \begin{figure}[h]
 \centering
 \def\svgwidth{140truemm} 
@@ -1560,7 +1563,7 @@ Navadno je neodvisna električna količina električna poljska jakost, saj je po
 zunanje napetosti na elektrodah. Ustrezni člen v prosti energiji je tedaj 
 (enačbi~\ref{lcwe} in~\ref{7.56a})
 \begin{equation}
-F_{el} = -\int \frac{1}{2} \mathbf{D}\cdot\mathbf{E} dV= -\frac{1}{2} \int
+F_{el} = -\int \frac{1}{2} \mathbf{D}\cdot\mathbf{E}\, dV= -\frac{1}{2} \int
 \left( \varepsilon_0 \varepsilon_\bot \mathbf{E}\cdot\mathbf{E} + 
 \varepsilon_{0}\varepsilon_{a}(\mathbf{E}\cdot\mathbf{n})^{2}\right)dV = F_0 + F_{el,a}.
 \end{equation}
@@ -1568,8 +1571,8 @@ Prvi člen je neodvisen od $\mathbf{n}$, zato ni pomemben pri izračunu
 preklopa. Prosta energija
 nematičnega tekočega kristala v električnem polju je tako 
 \begin{equation}
-F=F_{0}+F_{e}-\int \frac{1}{2}\varepsilon_{0}\varepsilon_{a}
-(\mathbf{E}\cdot \mathbf{n})^{2}dV = F_0 + F_e + F_{el,a},
+F=F_e + F_{el} = F_0 + F_e + F_{el,a} = F_{0}+F_{e}-\int \frac{1}{2}\varepsilon_{0}\varepsilon_{a}
+(\mathbf{E}\cdot \mathbf{n})^{2}dV,
 \label{7.72}
 \end{equation}
  kjer $F_{0}$ predstavlja del proste energije, ki je neodvisen od $\mathbf{n}$.
@@ -1614,24 +1617,24 @@ Vzdolž smeri $x$ in $y$ se direktor ne spreminja, zato velja
 n_{x}\frac{dn_{x}}{dz}).
 \label{7.76}
 \end{equation}
-Površinska gostota proste energije je tako 
+Površinska gostota proste energije je tako do konstante
 \begin{eqnarray}
 F_S & = & \frac{1}{2}\int\left(K_{1}\left(\frac{dn_{z}}{dz}\right)^{2}+K_{3}(n_x^2+n_{z}^{2})
 \left(\frac{dn_{x}}{dz}\right)^{2}-
 \epsilon_{0}\epsilon_{a}(n_{z}E)^{2}\right)dz=\nonumber \\
  & = & \frac{1}{2}\int_{0}^{d}
  \left(K_{1}q^{2}a^{2}\cos^{2}(qz)+K_{3}q^{2}a^{4}\sin^{2}(qz)\cos^2(qz)-
- \epsilon_{0}\epsilon_{a}E^2a^{2}\sin^{2}(qz)\right)z=\nonumber \\
- & = & \frac{d}{4q}a^2\left( K_{1}q^{2}+\frac{1}{4}K_{3}q^{2}a^2-\epsilon_{0}\epsilon_{a}E^2\right).
+ \epsilon_{0}\epsilon_{a}E^2a^{2}\sin^{2}(qz)\right)dz=\nonumber \\
+ & = & \frac{d}{4}\left( K_{1}q^{2}a^2+\frac{1}{4}K_{3}q^{2}a^4-\epsilon_{0}\epsilon_{a}E^2a^2\right).
 \end{eqnarray}
 V našem primeru smo integral lahko izračunali, saj smo uporabili nastavek (enačba~\ref{7.74}).
 Sicer bi morali uporabiti Euler-Lagrangeevo metodo za minimizacijo proste energije, ki 
 jo poznamo iz variacijskega računa.
 
 Zdaj lahko poiščemo amplitudo deformacije $a$, pri kateri je prosta energija
-najmanjša. Tedaj mora biti $a$ rešitev enačbe 
+najmanjša in odvod $dF_S/da=0$. Tedaj mora biti $a$ rešitev enačbe 
 \begin{equation}
-2(K_{1}q^{2}-\epsilon_{0}\epsilon_{a}E)a+K_{3}q^{2}a^{3}=0.
+2(K_{1}q^{2}-\epsilon_{0}\epsilon_{a}E^2)a+K_{3}q^{2}a^{3}=0.
 \label{7.78}
 \end{equation}
  Rešitvi sta 
@@ -1644,8 +1647,8 @@ a^{2}=2\frac{\epsilon_{0}\epsilon_{a}E^2-K_{1}q^{2}}{K_{3}q^{2}}.
 \label{7.79}
 \end{equation}
  Pri majhnih poljih, ko je $\epsilon_{0}\epsilon_{a}E^2<K_{1}q^{2}$,
-je fizikalno smiselna le prva rešitev, torej brez deformacije, pri velikih poljih pa je  
-stabilna druga rešitev. Ko večamo polje, deformacija
+je fizikalno smiselna le prva rešitev, ki predstavlja vzorec brez deformacije. Pri 
+velikih poljih postane stabilna druga rešitev. Takrat deformacija
 v sredini plasti hitro naraste, tako da se $\mathbf{n}$ postavi skoraj
 popolnoma v smer zunanjega polja. Tedaj naša rešitev seveda ni dobra,
 saj smo pri računu privzeli, da je $n_{z}\ll1$. Prehodu iz nedeformiranega
@@ -1662,6 +1665,7 @@ oziroma
 \boxeq{FreeE}{
 E_c = \frac{\pi}{d}\sqrt{\frac{K_1}{\varepsilon_0\varepsilon_a}}.
 }
+V tipičnem tekočekristalnem prikazovalniku je napetost, potrebna za prehod, $U = E_cd \sim 3 \si{\volt}$. 
 
 Poglejmo še, kako narašča amplituda deformacije v bližini prehoda. Iz enačbe~(\ref{7.79})
 sledi 
