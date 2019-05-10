@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '07_NdE.pdf' (pdf, eps, ps)
 %%
@@ -35,6 +35,8 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
     \setlength{\unitlength}{440.56884285bp}%
     \ifx\svgscale\undefined%
@@ -49,17 +51,22 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.72287504)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{07_NdE.pdf}}%
-    \put(0.04074661,0.6930908){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Energija}}}%
-    \put(0.3832307,0.00458705){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{osnovno stanje}}}%
-    \put(0.29830526,0.31836324){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{optično}}}%
-    \put(0.05475074,0.56623468){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$^4F_{5/2}$}}}%
-    \put(0.5275397,0.06133974){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{hitri prehodi}}}%
-    \put(0.60653032,0.30725034){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1,06~\si{\micro\metre}$}}}%
-    \put(0.05475074,0.00769915){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$^4I_{9/2}$}}}%
-    \put(0.70663528,0.11024424){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$^4I_{11/2}$}}}%
-    \put(0.70663528,0.48515234){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$^4F_{3/2}$}}}%
-    \put(0.44565294,0.5642191){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{hitri prehodi}}}%
-    \put(0.29848682,0.2783408){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{črpanje}}}%
+    \put(0.04074661,0.69309085){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}Energija (eV)\end{tabular}}}}%
+    \put(0.38323071,0.00458707){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}osnovno stanje\end{tabular}}}}%
+    \put(0.29830527,0.31836328){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}optično\end{tabular}}}}%
+    \put(0.05475074,0.56623472){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$^4F_{5/2}$\end{tabular}}}}%
+    \put(0.52753972,0.0511257){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}hitri prehodi\end{tabular}}}}%
+    \put(0.60653034,0.30725038){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$1,06~\si{\micro\metre}$\end{tabular}}}}%
+    \put(0.05475074,0.00769917){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$^4I_{9/2}$\end{tabular}}}}%
+    \put(0.70663531,0.09322083){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$^4I_{11/2}$\end{tabular}}}}%
+    \put(0.70663531,0.49877114){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$^4F_{3/2}$\end{tabular}}}}%
+    \put(0.44565295,0.56421915){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}hitri prehodi\end{tabular}}}}%
+    \put(0.29848683,0.27834084){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}črpanje\end{tabular}}}}%
+    \put(-0.08184738,0.52421804){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$1,5$\end{tabular}}}}%
+    \put(-0.08184738,0.35129645){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$1,0$\end{tabular}}}}%
+    \put(-0.08184738,0.18129699){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0,5$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

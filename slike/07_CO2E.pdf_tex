@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '07_CO2E.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{532.7731155bp}%
+    \setlength{\unitlength}{573.27308955bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,20 +50,25 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.59031372)%
+  \begin{picture}(1,0.54860988)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{07_CO2E.pdf}}%
-    \put(0.03069167,0.56568409){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Energija}}}%
-    \put(0.22380916,0.00834873){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{osnovno stanje}}}%
-    \put(0.15191712,0.21715407){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{trki z elektroni}}}%
-    \put(0.21092143,0.43993868){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{medatomski trki}}}%
-    \put(0.46405353,0.50250975){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$001$}}}%
-    \put(0.66242356,0.31629671){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$020$}}}%
-    \put(0.86671001,0.33207262){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$100$}}}%
-    \put(0.48066338,0.35745316){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$9,4~\si{\micro\metre}$}}}%
-    \put(0.67462603,0.4241756){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$10,6~\si{\micro\metre}$}}}%
-    \put(0.66242356,0.1661404){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$010$}}}%
-    \put(0.66242356,0.0163758){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$000$}}}%
-    \put(0.16891286,0.5216722){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{N$_2$}}}%
-    \put(0.56806866,0.52176807){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{CO$_2$}}}%
+    \put(0.09917035,0.53356992){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}Energija (eV)\end{tabular}}}}%
+    \put(0.2786447,0.00775891){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}osnovno stanje\end{tabular}}}}%
+    \put(0.2118316,0.2018128){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}trki z elektroni\end{tabular}}}}%
+    \put(0.29021643,0.40885837){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}medatomski trki\end{tabular}}}}%
+    \put(0.52284897,0.46700899){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$001$\end{tabular}}}}%
+    \put(0.70720477,0.29395132){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$020$\end{tabular}}}}%
+    \put(0.89705902,0.30861271){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$100$\end{tabular}}}}%
+    \put(0.52258606,0.3322002){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$9,4~\si{\micro\metre}$\end{tabular}}}}%
+    \put(0.72377828,0.39420891){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$10,6~\si{\micro\metre}$\end{tabular}}}}%
+    \put(0.70720477,0.15440309){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$010$\end{tabular}}}}%
+    \put(0.70720477,0.0152189){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$000$\end{tabular}}}}%
+    \put(0.22762665,0.48481767){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}N$_2$\end{tabular}}}}%
+    \put(0.61951576,0.48490676){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}CO$_2$\end{tabular}}}}%
+    \put(-0.00090863,0.45254497){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0,3$\end{tabular}}}}%
+    \put(-0.00090863,0.30395287){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0,2$\end{tabular}}}}%
+    \put(-0.00090863,0.15237335){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0,1$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
