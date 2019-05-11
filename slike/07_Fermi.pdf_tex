@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{575.21840494bp}%
+    \setlength{\unitlength}{866.27673051bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,21 +50,28 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.24696013)%
+  \begin{picture}(1,0.1645903)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
+    \put(-0.00077573,0.15112578){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
+    \put(0.29035085,0.02983858){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E$\end{tabular}}}}%
+    \put(0.19338022,-0.00306977){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_F$\end{tabular}}}}%
+    \put(0.04151421,0.148383){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$f$\end{tabular}}}}%
+    \put(0.33324957,0.15112578){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
+    \put(0.63182658,0.02983858){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E$\end{tabular}}}}%
+    \put(0.53312442,-0.00306977){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_F$\end{tabular}}}}%
+    \put(0.3839198,0.148383){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$f$\end{tabular}}}}%
+    \put(0.66923729,0.15112577){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}c)\end{tabular}}}}%
+    \put(0.96781428,0.02983857){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E$\end{tabular}}}}%
+    \put(0.83274934,-0.00306977){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_v$\end{tabular}}}}%
+    \put(0.71990753,0.14838299){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$f$\end{tabular}}}}%
+    \put(0.90875669,-0.00289977){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_p$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{07_Fermi.pdf}}%
-    \put(0.88170597,0.27780113){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.41196666\unitlength}\raggedright  \end{minipage}}}%
+    \put(0.58546362,0.18506911){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27355093\unitlength}\raggedright  \end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{07_Fermi.pdf}}%
-    \put(0.36744483,0.27780113){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.41196666\unitlength}\raggedright  \end{minipage}}}%
+    \put(0.24398789,0.18506911){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27355093\unitlength}\raggedright  \end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{07_Fermi.pdf}}%
-    \put(-0.00116825,0.22668261){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
-    \put(0.43726727,0.04402456){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E$\end{tabular}}}}%
-    \put(0.29122987,0.00489552){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_F$\end{tabular}}}}%
-    \put(0.06252024,0.22255199){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$f$\end{tabular}}}}%
-    \put(0.50187262,0.22668261){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
-    \put(0.95152842,0.04402456){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E$\end{tabular}}}}%
-    \put(0.80288332,0.00489552){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_F$\end{tabular}}}}%
-    \put(0.57818176,0.22255199){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$f$\end{tabular}}}}%
+    \put(0.92145136,0.1850691){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27355093\unitlength}\raggedright  \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{07_Fermi.pdf}}%
   \end{picture}%
 \endgroup%

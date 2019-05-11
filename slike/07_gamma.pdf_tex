@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '07_gamma.pdf' (pdf, eps, ps)
 %%
@@ -35,6 +35,8 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
     \setlength{\unitlength}{260.55807279bp}%
     \ifx\svgscale\undefined%
@@ -49,12 +51,14 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.62110679)%
-    \put(1.3181096,1.23482303){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
-    \put(0.47587143,0.8946672){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.90947403\unitlength}\raggedright \end{minipage}}}%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(1.31810957,1.23482301){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.47587141,0.8946672){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.90947401\unitlength}\raggedright  \end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{07_gamma.pdf}}%
-    \put(0.90613204,0.01897176){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E$}}}%
-    \put(0.04461481,0.55552507){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\gamma$}}}%
-    \put(0.13230332,0.01373979){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_g$}}}%
-    \put(0.68178158,0.01338664){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$F_p-F_v$}}}%
+    \put(0.89211266,0.13177268){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\hbar \omega$\end{tabular}}}}%
+    \put(0.04461481,0.55552507){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\gamma$\end{tabular}}}}%
+    \put(0.13230332,0.0137398){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_g$\end{tabular}}}}%
+    \put(0.68178157,0.01338665){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_p-F_v$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
