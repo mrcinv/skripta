@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '07_Ek.pdf' (pdf, eps, ps)
 %%
@@ -35,6 +35,8 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
     \setlength{\unitlength}{649.94758185bp}%
     \ifx\svgscale\undefined%
@@ -49,27 +51,27 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.28977144)%
-    \put(0.66679818,0.45944132){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
-    \put(0.27195012,0.11470507){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k$}}}%
-    \put(0.15257313,0.27081604){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E$}}}%
-    \put(0.15892068,0.12696995){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_g$}}}%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0.66679822,0.45944134){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{07_Ek.pdf}}%
-    \put(0.34989821,0.26985562){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{b)}}}%
-    \put(0.62151674,0.11470507){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k$}}}%
-    \put(0.50213976,0.27081604){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E$}}}%
-    \put(0.45965939,0.12795509){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_g$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{07_Ek.pdf}}%
-    \put(0.53552669,0.13922162){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\hbar \omega$}}}%
-    \put(0.51588193,0.07691435){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$a$}}}%
-    \put(0.51250558,0.19971057){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$b$}}}%
-    \put(0.96123646,0.11470507){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k$}}}%
-    \put(0.84185942,0.27081606){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E$}}}%
-    \put(0.83987496,0.12858656){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_g$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{07_Ek.pdf}}%
-    \put(0.89307445,0.21155978){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$F_p$}}}%
-    \put(0.90627455,0.08340511){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$F_v$}}}%
-    \put(0.68904561,0.26985564){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{c)}}}%
-    \put(0.00162653,0.26985562){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a)}}}%
-    \put(0.32915258,0.32307595){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.36459984\unitlength}\raggedright \end{minipage}}}%
+    \put(0.27195013,0.11470507){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$k$\end{tabular}}}}%
+    \put(0.15257314,0.27081605){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E$\end{tabular}}}}%
+    \put(0.15892069,0.12696995){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_g$\end{tabular}}}}%
+    \put(0.34989824,0.26985563){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
+    \put(0.62151677,0.11470507){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$k$\end{tabular}}}}%
+    \put(0.50213979,0.27081605){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E$\end{tabular}}}}%
+    \put(0.45965942,0.12795509){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_g$\end{tabular}}}}%
+    \put(0.53552672,0.13922162){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\hbar \omega$\end{tabular}}}}%
+    \put(0.51588196,0.07691435){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$a$\end{tabular}}}}%
+    \put(0.51250561,0.19971057){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$b$\end{tabular}}}}%
+    \put(0.96123651,0.11470507){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$k$\end{tabular}}}}%
+    \put(0.84185947,0.27081607){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E$\end{tabular}}}}%
+    \put(0.83987501,0.12858656){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_g$\end{tabular}}}}%
+    \put(0.8930745,0.21155978){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_p$\end{tabular}}}}%
+    \put(0.9062746,0.08340511){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_v$\end{tabular}}}}%
+    \put(0.68904566,0.26985565){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}c)\end{tabular}}}}%
+    \put(0.00162653,0.26985563){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
+    \put(0.3291526,0.32307597){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.36459986\unitlength}\raggedright  \end{minipage}}}%
   \end{picture}%
 \endgroup%

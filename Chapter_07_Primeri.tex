@@ -720,29 +720,30 @@ Gostota obrnjene zasedenosti $\Delta N/V$ & $ \sim 10^{24}/\si{\metre}^3$ \\ \hl
 \end{remark}
 
 \section{Polprevodniški laserji}
-Za široko uporabo so danes brez dvoma najpomembnejši polprevodniški laserji.
-Njihove glavne značilnosti so majhna dimenzija ($\sim 10$--$100~\si{\micro\metre}$), 
-utečena izdelava, velik izkoristek ($\sim 50~\%$), predvsem pa neposredno 
+\index{Laser!polprevodniški}\index{Laser!diodni|see {Laser!polprevodniški}}
+Za široko uporabo so danes nedvomno najpomembnejši polprevodniški oziroma diodni 
+laserji. Njihove glavne značilnosti so majhna dimenzija ($\sim 10$--$100~\si{\micro\metre}$), 
+utečena izdelava in nizka cena, velik izkoristek ($\sim 50~\%$), predvsem pa neposredno 
 črpanje z električnim tokom. Za črpanje zadoščajo že majhni tokovi 
 (tipično $\sim 100~\si{\milli\ampere}$), kar omogoča zelo hitro modulacijo 
-svetlobne moči s spreminjajočim električnim tokom. 
-Slabost polprevodniških laserjev je razmeroma širok 
+svetlobne moči s spreminjajočim se črpanjem. Slabost polprevodniških laserjev je razmeroma širok 
 spekter in posledično majhna koherenca. Polprevodniški laserji delujejo v območju 
 valovnih dolžin od $\sim 375~\si{nm}$ do več $\si{\micro\meter}$. Izhodne moči
-so zelo odvisne od valovne dolžine: v UV območju so nizke ($\sim 100~\si{mW}$),
+so zelo odvisne od valovne dolžine: v UV območju so razmeroma nizke ($\sim 100~\si{mW}$),
 sicer pa dosegajo vrednosti $\sim 3~\si{\watt}$.
 
-\subsection*{Energijski pasovi v polprevodnikih}
-Delovanje polprevodniških laserjev temelji na rekombinaciji elektronov 
-iz prevodnega pasu z vrzelmi iz valenčnega pasu, pri kateri se izseva foton. 
-Oglejmo si energijske pasove in prehode med njimi podrobneje.  
-Pri običajnih laserjih so elektroni
-lokalizirani okoli ionov in njihova kvantna stanja so točno določena. Ko elektron
-preide iz višjega v nižje stanje, izseva svetlobo točno določene valovne dolžine. 
-Pri polprevodniških laserjih elektroni niso lokalizirani in zaradi interakcij 
-se elektronska stanja razširijo v elektronske pasove, med katerimi ostanejo 
-prepovedani pasovi oziroma energijske reže (tabela~\ref{table:gap}). 
+Na hitro lahko rečemo, da delovanje diodnih laserjev temelji na rekombinaciji elektronov 
+iz prevodnega pasu z vrzelmi v valenčnem pasu, pri čemer se izseva foton. Ta proces je lahko 
+spontan, kot v svetlečih diodah, lahko pa tudi stimuliran, kar vodi do ojačenja svetlobe 
+in laserkega delovanja. Za podrobnejšo razlago ojačenja v polprevodniških 
+laserjih moramo poznati osnove polprevodniške fizike, zato jo na kratko ponovimo.  
 
+\subsection*{Energijski pasovi v polprevodnikih}
+V trdnih snoveh elektroni niso lokalizirani in zaradi interakcij med sosednjimi atomi
+se sicer ostra elektronska stanja razširijo v elektronske pasove. Pasovi se lahko 
+prekrivajo (kovine), lahko pa se med njimi pojavijo energijske reže. Če je velikost
+energijske reže $E_g$ med valenčnim in prevodnim pasom nekaj $kT$, je snov polprevodnik 
+(tabela~\ref{table:gap}), sicer je izolator. 
 \begin{table}[h]
  \centering
 \begin{tabular}{|l|c|c|c|c|c|c|} \hline  
@@ -752,79 +753,81 @@ prepovedani pasovi oziroma energijske reže (tabela~\ref{table:gap}).
   \caption{Širina energijske reže v nekaterih polprevodnikih}
 \label{table:gap}
 \end{table}
-
+\vglue-5truemm
 Pri najobičajnejših polprevodnikih, siliciju in germaniju, leži vrh 
-prevodnega pasu v centru Brillouinove cone pri valovnem vektorju $\mathbf{k}=0$, 
+valenčnega pasu pri valovnem vektorju $\mathbf{k}=0$, 
 dno prevodnega pasu pa pri $\mathbf{k} \neq 0$ (slika~\ref{fig:Ek}\,a). 
-Tako režo imenujemo indirektna
-reža. Pri spojinah tretje in pete skupine elementov, na primer GaAs, je reža
-direktna, saj ležita tako dno prevodnega kot vrh valenčnega pasu pri $\mathbf{k}=0$.
-(slika~\ref{fig:Ek}\,b)
-
+Tako režo imenujemo indirektna reža. Prehod elektrona preko indirektne reže je malo verjeten, 
+saj mora zaradi ohranitve gibalne količine priti še do interakcije s fononom. Bolj primerne
+so snovi z direktno režo, pri kateri
+ležita tako dno prevodnega kot vrh valenčnega pasu pri $\mathbf{k}=0$ (slika~\ref{fig:Ek}\,b). 
+Snovi z direktno režo so na primer GaAs in druge spojine elementov tretje in pete skupine.
 \begin{figure}[h]
 \centering
 \def\svgwidth{145truemm} 
 \input{slike/07_Ek.pdf_tex}
-\caption{Shema energijskih nivojev v polprevodniku. Zelena označuje prevodni
-pas, modra pa valenčni. Prehod preko indirektne reže (a) je malo verjeten, 
-saj mora zaradi ohranitve gibalne količine priti še do interakcije s fononom.
-Tipični prehodi so zato preko direktne reže (b). V vzbujenem stanju (c) so 
+\caption{Energijski pasovi v polprevodniku, kjer modra označuje valenčni pas, 
+zelena pa prevodnega. Reža je indirektna (a) ali direktna (b). V vzbujenem stanju (c) so 
 najnižja mesta v prevodnem pasu zasedena in najvišja mesta valenčnega pasu
-izpraznjena. Za vsak pas posebej vpeljemo Fermijevo energijo $F_p$ in $F_v$. 
+izpraznjena. 
 }
 \label{fig:Ek}
 \end{figure}
 
-Razlika v legi vrhov ima pomembno posledico pri uporabi za izvor svetlobe. Fotoni 
-v polprevodniku namreč nastanejo ob rekombinaciji elektrona z dna prevodnega pasu
-in vrzeli z vrha valenčnega pasu. Kadar pride do prehoda v snovi z indirektno režo, 
-pride tudi do spremembe gibalne količine elektrona. Te razlike ne more prevzeti
-foton, saj je njegova gibalna količina več redov velikosti premajhna, zato 
-mora zaradi ohranitve gibalne količine priti hkrati še do emisije ali absorpcije 
-fonona. Proces, ki vključuje foton in fonon, je mnogo manj verjeten, zato 
-v siliciju in germaniju v običajni obliki ni mogoče dobiti znatnega sevanja 
-s prehodi iz prevodnega v valenčni pas. Opisane težave ni pri spojinah z 
-direktno režo, zato se te spojine uporablja za izdelavo polprevodniških laserjev. 
-
-V najpreprostejši sliki prevodni pas v bližini minimuma opišemo 
-s parabolično odvisnostjo od valovnega vektorja $\mathbf{k}$
+V najpreprostejši sliki obliko prevodnega pasu v bližini minimuma opišemo 
+s parabolično odvisnostjo od velikosti valovnega vektorja $\mathbf{k}$
 \beq
 E_p = E_g + \frac{\hbar^2 k^2}{2m_p}.
 \label{pp:Ec}
 \eeq
 Pri tem $m_e$ označuje efektivno maso elektrona v prevodnem pasu, ki upošteva
-interakcije z mrežo in se zato razlikuje od navadne mase $m_0$.
+interakcije z mrežo in se zato razlikuje od navadne mase elektrona $m_0$.
 Podobno z efektivno maso zapišemo energijo vrzeli v valenčnem pasu
 \beq
 E_v = - \frac{\hbar^2 k^2}{2m_v}.
 \label{pp:Ev}
 \eeq
-Iz izraza za gostoto stanj $\varrho(k) dk = k^2dk /\pi^2$ (povsem analogen 
-enačbi~\ref{4.3}) lahko z upoštevanjem gornjih zvez zapišemo
-gostoti stanj na energijski interval za prevodni in valenčni pas
+Zapišimo še gostoti stanj na energijski interval za prevodni in valenčni pas. Izhajamo iz zveze
+$\varrho(k) dk = k^2dk /\pi^2$ (enačba~\ref{4.3}) in z upoštevanjem gornjih zvez dobimo
 \beq
 \varrho_p(E) = \frac{1}{2\pi^2}\left(\frac{2m_p}{\hbar^2} \right)^{3/2} \sqrt{E-E_g}
 \qquad \mathrm{in}\qquad
 \varrho_v(E) = \frac{1}{2\pi^2}\left(\frac{2m_v}{\hbar^2} \right)^{3/2} \sqrt{-E}.
 \label{eq:rho_p}
 \eeq
-Ključna parametra, ki nastopata v izrazih za gostoto stanj, sta efektivna masa 
+Pri tem sta ključna parametra efektivna masa 
 elektronov in vrzeli. Ti dve masi sta značilni za posamezen polprevodnik
-in znašata, na primer v GaAs, $m_e = 0,067~m_0$ in $m_v = 0,5~m_0$, pri 
-čemer je $m_0$ masa elektrona. Gostota stanj za vrzeli je v GaAs zato približno 
+in znašata, na primer v GaAs, $m_e = 0,067~m_0$ in $m_v = 0,5~m_0$. 
+Gostota stanj za vrzeli je v GaAs zato približno 
 dvajsetkrat večja od gostote stanj za elektrone.
 
-Verjetnost za zasedenost stanj je zaradi Paulijevega izključitvenega
-načela podana s Fermi-Diracovo funkcijo 
+Verjetnost za zasedenost stanj je podana s Fermi-Diracovo funkcijo 
 \begin{equation}  
 f_p(E)=\frac{1}{e^{(E-E_F)/k_B T}+1},
 \label{eq:7FD}
 \end{equation}
-kjer $E_F$ označuje Fermijevo energijo. Spomnimo, da so pri $T=0$ vsa stanja pod
-Fermijevo energijo zasedena, nad njo pa prazna, Fermijeva energija torej leži
-v energijski reži. Pri končni temperaturi se na dnu prevodnega pasu nahajajo 
-termično vzbujeni elektroni, na vrhu valenčnega pasu pa vrzeli. Pri tem je
-verjetnost za pojav vrzeli v valenčnem pasu je $f_v = 1 - f_p$.
+kjer $E_F$ označuje Fermijevo energijo. Pri $T=0$ so vsa stanja pod
+Fermijevo energijo zasedena, nad njo pa prazna in Fermijeva energija leži
+v energijski reži (slika~\ref{fig:Fermi}\,a). Pri končni temperaturi se na dnu prevodnega pasu nahajajo 
+termično vzbujeni elektroni, na vrhu valenčnega pasu pa vrzeli (slika~\ref{fig:Fermi}\,b). Verjetnost 
+za pojav vrzeli v valenčnem pasu je $f_v = 1 - f_p$.
+\begin{figure}[h]
+\centering
+\def\svgwidth{105truemm} 
+\input{slike/07_Fermi.pdf_tex}
+\caption{Verjetnost za zasedenost stanj. Pri $T=0$ je valenčni pas poln, prevodni pa prazen (a).
+Pri končni temperaturi termično vzbujeni elektroni preidejo v prevodni pas (b).
+}
+\label{fig:Fermi}
+\end{figure}
+\vglue-0.5truecm
+\begin{remark}
+$E_F$ se določi iz pogoja, da je število elektronov v prevodnem pasu enako 
+številu vrzeli v valenčnem pasu in $N_{p0} = N_{v0}$. Fermijeva energija
+leži na sredini energijske reže le v primeru, da sta efektivni masi 
+za elektrone in vrzeli enaki. Sicer pride do premika Fermijeve energije 
+proti pasu z manjšo efektivno maso. 
+\end{remark}
 
 Število elektronov v prevodnem pasu na prostorninsko enoto izračunamo kot 
 produkt gostote stanj in verjetnost, da je stanje zasedeno, integrirano po 
@@ -833,43 +836,31 @@ celotnem energijskem pasu
 N_{p0}=\int_{E_g}^{\infty}\,\rho_p(E)f_p(E)\,dE.
 \label{6.3a}
 \eeq
-Število vrzeli v valenčnem pasu pa je 
+Število vrzeli v valenčnem pasu je 
 \beq
 N_{v0}=\int_{-\infty}^{0}\,\rho_v(E)f_v(E)\,dE.
 \label{6.3b}
 \eeq
 Število elektronov v prevodnem pasu (in vrzeli v valenčnem) je pri
-$T=0$ enako nič, vendar tudi pri končnih temperaturah ostaja razmeroma nizko. 
-Znatno pa ga lahko povečamo, če polprevodnik dopiramo in s tem povišamo 
+$T=0$ enako nič in tudi pri končnih temperaturah ostaja razmeroma nizko. 
+Znatno ga lahko povečamo, če polprevodnik dopiramo in s tem povišamo 
 Fermijevo energijo.
 
-\begin{remark}
-$E_F$ se določi iz pogoja, da je število elektronov v prevodnem pasu enako 
-številu vrzeli v valenčnem pasu in $N_{p0} = N_{v0}$. Fermijeva energija
-torej leži na sredini energijske reže le v primeru, da sta efektivni masi 
-za elektrone in vrzeli enaki. Sicer pride do premika Fermijeve energije 
-proti pasu z manjšo efektivno maso. 
-\end{remark}
-
-% Če naredimo približek $E-E_F\gg kT$, se izraz za verjetnost poenostavi v eksponentno
-% funkcijo in število elektronov v prevodnem pasu lahko izračunamo. Iz enačb~(\ref{eq:rho_p}) 
-% in (\ref{6.3a}) sledi
-% \beq
-% N_{p0} = \frac{1}{4}\left(\frac{2m_e^* kT}{\hbar^2 \pi} \right)^{3/2} e^{E_F-E_g}.
-% \eeq
 
 Dopiranje polprevodnika pomeni nadzorovano dodajanje ustreznih nečistoč. 
 Če dodamo donorske primesi, ki povečajo število elektronov v snovi, 
 govorimo o polprevodniku tipa $n$, če pa dodajamo akceptorske snovi, ki 
-elektrone sprejemajo, pa govorimo o polprevodniku tipa $p$. 
+elektrone sprejemajo, govorimo o polprevodniku tipa $p$. 
 Primeri donorjev za GaAs so žveplo, selen ali telur,
-primer akceptorjev pa cink in kadmij. Zaradi primesi se v energijski 
-reži pojavi nov energijsk nivo. Donorski nivo je navadno tik pod prevodnim 
-pasom, akceptorski pa tik nad valenčnim pasom. V tipu $n$ se tako Fermijeva 
-energija premakne navzgor, pri močnem dopiranu tudi v prevodni pas. Tako že 
-pri sobni temperaturi dosežemo veliko število elektronov v prevodnem pasu. 
-Podobno je v tipu $p$, v katerem se Fermijeva energija pomakne navzdol 
-in število vrzeli v valenčnem pasu močno naraste. 
+primer akceptorjev pa cink in kadmij. 
+
+Zaradi primesi se v energijski 
+reži pojavi dodatni energijski nivo, pri čemer je donorski nivo navadno 
+tik pod prevodnim pasom, akceptorski pa tik nad valenčnim. V tipu $n$ se
+Fermijeva energija premakne navzgor, pri močnem dopiranu lahko tudi v 
+prevodni pas. Tako že pri sobni temperaturi dosežemo veliko število 
+elektronov v prevodnem pasu. Podobno je v tipu $p$, v katerem se Fermijeva 
+energija pomakne navzdol in število vrzeli v valenčnem pasu močno naraste. 
 
 Ko elektrone vzbudimo iz valenčnega v prevodni pas (to lahko naredimo 
 električno ali optično), se v valenčnem pasu pojavijo
@@ -878,7 +869,7 @@ vlada v prevodnem pasu kvazi-termično ravnovesje, saj je relaksacija
 elektronov znotraj pasu bistveno hitrejša (tipično $\si{ps}$). 
 Za veliko populacijo elektronov v prevodnem in veliko populacijo vrzeli v 
 valenčnem pasu Fermijeva funkcija ni več dobra za opis zasedenosti stanj 
-(slika~\ref{fig:Ek}\,a). Uporabimo
+(slika~\ref{fig:Ek}\,c). Uporabimo
 koncept kvazi-Fermijevih nivojev $F_p$ in $F_v$, s katerima opišemo porazdelitvi
 v vsakem pasu posebej, za prevodni in valenčni pas
 \beq
@@ -888,7 +879,7 @@ f_v(E)=\frac{1}{e^{(E-F_v)/k_B T}+1}.
 V termičnem ravnovesju je razlika med kvazi-Fermijevima energijama $F_{p}-F_v$ 
 enaka nič, z naraščajočim vzbujanjem pa se razlika povečuje.
 
-\subsection*{Ojačenje v polprevodnikih}
+\subsection*{Ojačenje svetlobe v polprevodnikih}
 Posvetimo na polprevodnik v vzbujenem stanju s svetlobo s frekvenco $\omega$.
 Vpadna svetloba povzroča prehode med stanji z energijo $E_a$ v valenčnem 
 in med stanji z energijo $E_b$ v prevodnem pasu (slika~\ref{fig:Ek}\,b).
@@ -985,6 +976,9 @@ velja pri $T=0$, rdeča pa pri $T>0$.
 }
 \label{s6.11}
 \end{figure}
+
+\subsection*{Stik $\textbf{\textit{p}}$-$\textbf{\textit{n}}$}
+\index{Stik $p$-$n$}
 
 Neravnovesno stanje, ki je pogoj za ojačenje svetlobe, lahko dosežemo, 
 kadar v degeneriran polprevodnik tipa $p$ z dovolj veliko
