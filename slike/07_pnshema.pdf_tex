@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '07_pnshema.pdf' (pdf, eps, ps)
 %%
@@ -35,6 +35,8 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
     \setlength{\unitlength}{599.29926835bp}%
     \ifx\svgscale\undefined%
@@ -49,14 +51,16 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.29555101)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{07_pnshema.pdf}}%
-    \put(-0.00143167,0.00749757){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{izhodna svetloba}}}%
-    \put(0.01545084,0.17901364){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{aktivno obmo{\v c}je}}}%
-    \put(0.35454392,0.27110239){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{elektrodi}}}%
-    \put(0.69277634,0.27884817){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p$}}}%
-    \put(0.70485287,0.23155025){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n$}}}%
+    \put(-0.00143167,0.00749758){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}izhodna svetloba\end{tabular}}}}%
+    \put(0.01545084,0.17901365){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}aktivno obmo{\v c}je\end{tabular}}}}%
+    \put(0.35454392,0.2711024){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}elektrodi\end{tabular}}}}%
+    \put(0.69277633,0.27884818){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
+    \put(0.70485286,0.23155027){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{07_pnshema.pdf}}%
-    \put(0.83719289,0.19024216){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p$}}}%
-    \put(0.83719289,0.08512273){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n$}}}%
+    \put(0.83719288,0.19024218){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
+    \put(0.83719288,0.08512275){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

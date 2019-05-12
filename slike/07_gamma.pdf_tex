@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{260.55807279bp}%
+    \setlength{\unitlength}{446.82793565bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,15 +50,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.62110679)%
+  \begin{picture}(1,0.65821669)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(1.31810957,1.23482301){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
-    \put(0.47587141,0.8946672){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.90947401\unitlength}\raggedright  \end{minipage}}}%
+    \put(0.75037824,0.28772481){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\hbar \omega$\end{tabular}}}}%
+    \put(0.02983048,0.61689015){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\gamma$\end{tabular}}}}%
+    \put(0.08096415,0.28753177){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_g$\end{tabular}}}}%
+    \put(0.58634715,0.39239355){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_p-F_v$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{07_gamma.pdf}}%
-    \put(0.89211266,0.13177268){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\hbar \omega$\end{tabular}}}}%
-    \put(0.04461481,0.55552507){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\gamma$\end{tabular}}}}%
-    \put(0.13230332,0.0137398){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_g$\end{tabular}}}}%
-    \put(0.68178157,0.01338665){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_p-F_v$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

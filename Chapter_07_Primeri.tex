@@ -721,19 +721,20 @@ Gostota obrnjene zasedenosti $\Delta N/V$ & $ \sim 10^{24}/\si{\metre}^3$ \\ \hl
 
 \section{Polprevodniški laserji}
 \index{Laser!polprevodniški}\index{Laser!diodni|see {Laser!polprevodniški}}
-Za široko uporabo so danes nedvomno najpomembnejši polprevodniški oziroma diodni 
-laserji. Njihove glavne značilnosti so majhna dimenzija ($\sim 10$--$100~\si{\micro\metre}$), 
-utečena izdelava in nizka cena, velik izkoristek ($\sim 50~\%$), predvsem pa neposredno 
-črpanje z električnim tokom. Za črpanje zadoščajo že majhni tokovi 
-(tipično $\sim 100~\si{\milli\ampere}$), kar omogoča zelo hitro modulacijo 
+Danes so nedvomno najpomembnejši polprevodniški oziroma diodni 
+laserji. Njihove glavne značilnosti so veliko ojačenje in zato majhna 
+dimenzija ($\sim 10$--$100~\si{\micro\metre}$), utečena izdelava in nizka cena, 
+velik izkoristek ($\sim 50~\%$), predvsem pa neposredno črpanje z električnim tokom. 
+Za črpanje zadoščajo že majhni tokovi 
+(tipično $\sim 100~\si{\milli\ampere}$), kar omogoča zelo hitro modulacijo ($\si{GHz}$)
 svetlobne moči s spreminjajočim se črpanjem. Slabost polprevodniških laserjev je razmeroma širok 
 spekter in posledično majhna koherenca. Polprevodniški laserji delujejo v območju 
 valovnih dolžin od $\sim 375~\si{nm}$ do več $\si{\micro\meter}$. Izhodne moči
 so zelo odvisne od valovne dolžine: v UV območju so razmeroma nizke ($\sim 100~\si{mW}$),
 sicer pa dosegajo vrednosti $\sim 3~\si{\watt}$.
 
-Na hitro lahko rečemo, da delovanje diodnih laserjev temelji na rekombinaciji elektronov 
-iz prevodnega pasu z vrzelmi v valenčnem pasu, pri čemer se izseva foton. Ta proces je lahko 
+Na hitro lahko rečemo, da delovanje diodnih laserjev temelji na rekombinaciji  
+elektronov iz prevodnega pasu z vrzelmi v valenčnem pasu, pri čemer se izseva foton. Ta proces je lahko 
 spontan, kot v svetlečih diodah, lahko pa tudi stimuliran, kar vodi do ojačenja svetlobe 
 in laserkega delovanja. Za podrobnejšo razlago ojačenja v polprevodniških 
 laserjih moramo poznati osnove polprevodniške fizike, zato jo na kratko ponovimo.  
@@ -741,8 +742,9 @@ laserjih moramo poznati osnove polprevodniške fizike, zato jo na kratko ponovim
 \subsection*{Energijski pasovi v polprevodnikih}
 V trdnih snoveh elektroni niso lokalizirani in zaradi interakcij med sosednjimi atomi
 se sicer ostra elektronska stanja razširijo v elektronske pasove. Pasovi se lahko 
-prekrivajo (kovine), lahko pa se med njimi pojavijo energijske reže. Če je velikost
-energijske reže $E_g$ med valenčnim in prevodnim pasom nekaj $kT$, je snov polprevodnik 
+prekrivajo (kovine), lahko pa se med najvišjim polno zasedenim 
+(valenčnim) pasom in najnižjim nezasedenim (prevodnim) pasom pojavi energijska reža. 
+Če je velikost energijske reže $E_g$ nekaj $kT$, je snov polprevodnik 
 (tabela~\ref{table:gap}), sicer je izolator. 
 \begin{table}[h]
  \centering
@@ -754,14 +756,18 @@ energijske reže $E_g$ med valenčnim in prevodnim pasom nekaj $kT$, je snov pol
 \label{table:gap}
 \end{table}
 \vglue-5truemm
-Pri najobičajnejših polprevodnikih, siliciju in germaniju, leži vrh 
-valenčnega pasu pri valovnem vektorju $\mathbf{k}=0$, 
+Ko na polprevodnik vpade foton z energijo $\hbar\omega > E_g$, se foton absorbira, elektron
+iz valenčnega pasu preide v prevodni pas, v valenčnem pasu pa ostane vrzel. Pričakovali bi, 
+da se tak elektron, ki je medtem hitro prešel v dno prevodnega pasu, spontano vrne v valenčni 
+pas, pri čemer se svetloba izseva. Vendar je pri 
+prehodu treba upoštevati tudi ohranitev gibalne količine. Pri najobičajnejših polprevodnikih, 
+siliciju in germaniju, leži vrh valenčnega pasu pri valovnem vektorju $\mathbf{k}=0$, 
 dno prevodnega pasu pa pri $\mathbf{k} \neq 0$ (slika~\ref{fig:Ek}\,a). 
-Tako režo imenujemo indirektna reža. Prehod elektrona preko indirektne reže je malo verjeten, 
-saj mora zaradi ohranitve gibalne količine priti še do interakcije s fononom. Bolj primerne
-so snovi z direktno režo, pri kateri
-ležita tako dno prevodnega kot vrh valenčnega pasu pri $\mathbf{k}=0$ (slika~\ref{fig:Ek}\,b). 
-Snovi z direktno režo so na primer GaAs in druge spojine elementov tretje in pete skupine.
+Prehod elektrona preko take indirektne reže je malo verjeten, saj mora zaradi ohranitve 
+gibalne količine priti še do interakcije s fononom. Prehod je veliko bolj verjeten v 
+snoveh z direktno režo, pri katerih ležita tako dno prevodnega kot vrh valenčnega pasu 
+pri $\mathbf{k}=0$ (slika~\ref{fig:Ek}\,b). Snovi z direktno režo so na primer GaAs in 
+druge spojine elementov tretje in pete skupine, ki so najbolj uporabni za izdelavo diodnih laserjev.
 \begin{figure}[h]
 \centering
 \def\svgwidth{145truemm} 
@@ -781,7 +787,8 @@ E_p = E_g + \frac{\hbar^2 k^2}{2m_p}.
 \label{pp:Ec}
 \eeq
 Pri tem $m_e$ označuje efektivno maso elektrona v prevodnem pasu, ki upošteva
-interakcije z mrežo in se zato razlikuje od navadne mase elektrona $m_0$.
+interakcije z mrežo in se zato razlikuje od mase prostega elektrona $m_0$.
+
 Podobno z efektivno maso zapišemo energijo vrzeli v valenčnem pasu
 \beq
 E_v = - \frac{\hbar^2 k^2}{2m_v}.
@@ -858,9 +865,17 @@ Zaradi primesi se v energijski
 reži pojavi dodatni energijski nivo, pri čemer je donorski nivo navadno 
 tik pod prevodnim pasom, akceptorski pa tik nad valenčnim. V tipu $n$ se
 Fermijeva energija premakne navzgor, pri močnem dopiranu lahko tudi v 
-prevodni pas. Tako že pri sobni temperaturi dosežemo veliko število 
-elektronov v prevodnem pasu. Podobno je v tipu $p$, v katerem se Fermijeva 
+prevodni pas. V tem primeru so zasedena vsa stanja v valenčnem pasu in vsa
+stanja do Fermijeve energije v prevodnem. Podobno je v močno dopiranjem tipu $p$, v katerem se Fermijeva 
 energija pomakne navzdol in število vrzeli v valenčnem pasu močno naraste. 
+Prosta so tako vsa stanja v prevodnem pasu in stanja do Fermijeve energije v 
+valenčnem pasu.
+
+\begin{remark}
+ Zgolj z dopiranjem se verjetnost za prehod in izsevanje fotona ne spremeni. V
+ $n$ tipu, na primer, se število elektronov v prevodnem pasu sicer znatno poveča, 
+ vendar v prevodnem pasu  ni dovolj ustreznih vrzeli, s katerimi bi se elektroni lahko rekombinirali.
+\end{remark}
 
 Ko elektrone vzbudimo iz valenčnega v prevodni pas, se v valenčnem pasu pojavijo
 vrzeli. Dokler ne pride do rekombinacije (tipično nekaj $\si{ns}$),
@@ -954,6 +969,8 @@ energije reže, sicer ne pride niti do absoprcije niti do ojačenja. Gornja zvez
 da za ojačenje svetlobe ne zadošča le nekaj vzbujenih elektronov in nekaj ustreznih vrzeli. 
 V prevodnem pasu mora biti toliko elektronov, da pri neki energiji zasedejo vsaj polovico stanj, 
 hkrati pa mora biti v valenčnem pasu toliko vrzeli, da je vsaj polovica stanj nezasedena.
+Svetloba se bo ojačala torej le v primeru, da je začetna energija manjša od $F_p$ in končna
+večja od $F_v$.
 
 Koeficient ojačenja vpadne svetlobe pri dani 
 frekvenci $\omega$ je
@@ -969,17 +986,17 @@ koeficient ojačenja razumljivo narašča, manjša pa se z naraščajočo
 temperaturo. Njegovo odvisnost od energije vpadnih fotonov kaže slika~(\ref{s6.11}).
 \begin{figure}[h]
 \centering
-\def\svgwidth{50truemm} 
+\def\svgwidth{80truemm} 
 \input{slike/07_gamma.pdf_tex}
 \caption{Ojačenje v polprevodniku kot funkcija frekvence svetlobe. Črna črta
-velja pri $T=0$, rdeča pa pri $T>0$. 
+velja pri $T=0$ in rdeča pri $T>0$. Pri frekvencah, večjih od $(F_p-F_v)/\hbar$,
+pride do absorpcije svetlobe. 
 }
 \label{s6.11}
 \end{figure}
-
 \subsection*{Spoj $\textbf{\textit{p}}$-$\textbf{\textit{n}}$}
-\index{Stik $p$-$n$}
-Ugotovili smo, da se svetloba v polprevodniku ojačuje le, če je v prevodnem pasu
+\index{Spoj $p$-$n$}
+Svetloba se v polprevodniku ojačuje le, če je na istem mestu v prevodnem pasu
 dovolj veliko število elektronov, v valenčnem pasu pa zadosti vrzeli. Za delovanje
 polprevodniškega laserja moramo torej s črpanjem vzdrževati neravnovesno stanje, 
 podobno kot smo pri navadnih laserjih vzdrževali obrnjeno zasedenost. 
@@ -999,7 +1016,7 @@ V ravnovesju se Fermijeva energija na obeh straneh izenači,
 prevodni in valenčni pas pa se ukrivita. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{130truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/07_pnlaser.pdf_tex}
 \caption{Energijska pasova v močno dopiranem spoju $p$-$n$ (levo) in 
 ista pasova ob priključeni napetosti $U$ v prevodni smeri (desno). $F_p$ in $F_v$
@@ -1009,23 +1026,28 @@ v katerem pride do rekombinacije elektronov in vrzeli.
 \label{fig:pnlaser}
 \end{figure}
 
-Ko na stik priključimo napetost v prevodni smeri (torej pozitivno napetost na stran
-$p$), se potencialni skok zmanjša. 
-V ozkem območju v bližini spoja pride do hkratne zasedenosti elektronov
-v prevodnem pasu in vrzeli v valenčnem pasu. To imenujemo aktivno območje,
-saj v njem prihaja do rekombinacij in do nastanka fotonov. Pri nizkih 
-priključenih napetostih oziroma nizkih tokovih skozi stik $p$-$n$ prihaja
-do spontane rekombinacije in nizke izsevane moči svetlobe. Pri večjih napetostih,
-($e_0U \approx E_g$) pride do velikih koncentracijah nosilcev naboja in
-stimuliranih rekombinacij, ki omogočajo optično ojačenje. 
+Ko na spoj priključimo napetost v prevodni smeri (torej pozitivno napetost na stran
+$p$), se potencialni skok zmanjša. Pri tem je potencialna razlika kar sorazmerna s priključeno
+napetostjo $U$. Fermijevi energiji na $p$ in $n$ strani se razmakneta in v
+ozkem območju v bližini spoja pride do hkratne zasedenosti elektronov
+v prevodnem pasu in vrzeli v valenčnem pasu (slika~\ref{fig:pnlaser}). 
+To imenujemo aktivno območje, saj v njem prihaja do rekombinacij in do nastanka fotonov. 
+
+Pri nizkih 
+priključenih napetostih oziroma nizkih tokovih skozi spoj $p$-$n$ prihaja
+do spontane rekombinacije in nizke izsevane moči svetlobe. 
+Pri večjih napetostih, ko je $e_0U \approx E_g$, pride do velikih koncentracijah nosilcev naboja in
+stimuliranih rekombinacij, ki omogočajo optično ojačenje. Takrat presežemo prag delovanja
+diodnega laserja. 
 Ojačenje v polprevodniških laserjih je precej veliko, lahko več od 
 $100~/\si{cm}$, zato je mogoče dobiti delujoč laser že v zelo majhnem aktivnem 
 območju, lahko tudi le nekaj mikronov. Običajni polprevodniški laserji so tako 
-dolgi okoli $0,25~\si{mm}$.
+dolgi okoli do $0,25~\si{mm}$.
 
 \subsection*{Zgradba laserja}
 Prvi polprevodniški laser (1962) je bil narejen iz GaAs in je oddajal svetlobo 
-pri $850~\si{nm}$. Shema takega laserja je na sliki~(\ref{fig:pnshema}).
+pri $850~\si{nm}$. Shema takega laserja je na sliki~(\ref{fig:pnshema}). Svetloba se ojačuje
+v tanki aktivni plasti in iz laserja izhaja v smeri vzdolžno z laserjem. 
 Vidimo, da polprevodniški laser nima navadnega resonatorja iz dveh odbojnih zrcal,
 ampak se svetloba odbija kar na gladko odklanih stranskih ploskvah kristala. Zaradi
 velikega lomnega količnika (npr. $n=3,5$ za GaAs) je odbojnost dovolj velika
@@ -1036,7 +1058,8 @@ za učinkovito delovanje.
 \input{slike/07_pnshema.pdf_tex}
 \caption{Shema preprostega polprevodniškega laserja (levo) in porazdelitev svetlobne
 intenzitete na spoju $p$-$n$. Tipična širina je $100$--$200~\si{\micro\metre}$, 
-dolžina pa $200$--$500~\si{\micro\metre}$. Svetlobni profil v laserju (desno). Svetloba 
+dolžina $200$--$500~\si{\micro\metre}$, debelina aktivne plasti pa le $\sim 1~\si{\micro\metre}$. 
+Svetlobni profil v laserju (desno). Svetloba 
 se ojači v aktivnem območju (vijolična), v območju $p$ in $n$ pa se absorbira.
 }
 \label{fig:pnshema}
@@ -1049,17 +1072,20 @@ aktivnega območja ne moremo nadzorovano spreminjati, saj je odvisna od difuzije
 Tipično znaša $\sim 1~\si{\micro\meter}$, širina žarka pa nekaj mikronov več, zato
 znaten del svetlobe potuje po območju $p$ in $n$, kjer pride do 
 absorpcije in do povečanih izgub ter segrevanja. Tokovi, potrebni za 
-delovanje takega laserja, so visoki ($\sim 1~\si{kA}/\si{cm}^2$), 
+delovanje takega laserja, so visoki ($\sim 100~\si{kA}/\si{cm}^2$ pri sobni temperaturi), 
 kakovost žarka pa razmeroma slaba. 
 
-Bistveno izboljšano delovanje je v tako imenovanih heterostrukturah, kjer sta območji 
-$p$ in $n$ narejeni iz različnih snovi\footnote{Za iznajdbo heterostruktur sta Zhores I. Alferov 
-in Herbert Kroemer leta 2000 prejela Nobelovo nagrado.}. Najpomembnejša primera heterostrukture
-sta stika $n$-Ga$_{1-x}$Al$_x$As--$p$-GaAs--$p$-Ga$_{1-x}$Al$_x$As in 
-Ga$_{1-x}$In$_{x}$As$_{1-y}$P$_y$. Prvi deluje v območju od $750~\si{nm}$ do $880~\si{nm}$, 
-odvisno od $x$ in koncentracije primesi, drugi pa med $1,1~\si{\micro\metre}$ in 
-$1,6~\si{\micro\metre}$ in je zato posebno pomemben za optične
-komunikacije, ki največkrat delujejo pri $1,3~\si{\micro\meter}$ in $1,55~\si{\micro\meter}$. 
+Bistveno izboljšano delovanje je v tako imenovanih heterostrukturah. Gre za dvojni spoj $p$-$n$, 
+v katerem sta spojeni dve različni snovi, aktivno območje (tipično debelo le okoli $100~\si{nm}$) 
+pa se nahaja med polprevodnikoma tipa $p$ in $n$.\footnote{Za 
+iznajdbo heterostruktur sta Zhores I. Alferov in Herbert Kroemer leta 2000 prejela Nobelovo nagrado.}
+Najpomembnejši primer je plast $p$-GaAs, ki se nahaja med plastjo  $n$-Al$_x$Ga$_{1-x}$As in $p$-Al$_x$Ga$_{1-x}$As
+(slika~\ref{fig:hetero}). Elektroni v tem primeru tečejo iz tipa $n$ v prevodni pas aktivne plasti
+GaAs, vrzeli pa iz tipa $p$ v valenčni pas. 
+Tak laser deluje v območju od $750~\si{nm}$ do $880~\si{nm}$, odvisno od $x$ in koncentracije primesi.
+Drug pomemben primer je laser z In$_{x}$Ga$_{1-x}$As$_{1-y}$P$_y$, ki seva svetlobo z valovno 
+dolžino med $1,1~\si{\micro\metre}$ in $1,6~\si{\micro\metre}$. To ga naredi še posebej pomembnega za optične
+komunikacije, v katerih se najpogosteje uporablja svetlobo pri $1,3~\si{\micro\meter}$ in $1,55~\si{\micro\meter}$. 
 Prvi primer si oglejmo podrobneje.
 
 \begin{remark}
@@ -1068,83 +1094,110 @@ Take plastne strukture naredijo z epitaksialno rastjo, zato morajo biti medatoms
 razdalje različnih materialov čim bolj enake, sicer pride do defektov in slabšega delovanja. 
 GaAs in AlAs imata enako strukturo in praktično enako medatomsko razdaljo, zato 
 lahko brez škode na strukturi atome galija zamenjamo z atomi aluminija. Tipične 
-vrednosti $x$ v Ga$_{1-x}$Al$_x$As so $0,3$. Zaradi dodatka aluminija se spremeni energijska
-reža ($\approx 1,42 + 1,3x~\si{eV}$) in lomni količnik zlitine ($\approx 3,5-0,71x$). S 
-spreminjanjem koncentracije aluminija lahko zvezno spreminjamo širino 
-energijske reže in lomni količnik snovi. 
+vrednosti $x$ v Al$_x$Ga$_{1-x}$As so $0,3$. S spreminjanjem koncentracije aluminija $x$ lahko 
+zvezno spreminjamo širino energijske reže ($E_g \approx 1,42 + 1,3x~\si{eV}$) in lomni količnik 
+zlitine ($n \approx 3,5-0,71x$).
 \end{remark}
 
-Heterostruktura ima dve poglavitni prednosti. Zlitina z aluminijem ima malenkost večjo 
-energijsko režo od čistega GaAs in mejni plasti ustvarita potencialno bariero, 
-ki preprečuje difuzijo nosilcev naboja iz aktivne plasti. Tako ostane koncentracija 
+Heterostruktura ima nekaj poglavitnih prednosti. Zlitina z aluminijem ima malenkost večjo 
+energijsko režo od čistega GaAs, zato mejni plasti ustvarita potencialno bariero, 
+ki preprečuje difuzijo nosilcev naboja iz aktivne plasti (slika~\ref{fig:hetero}). Tako ostane koncentracija 
 elektronov v prevodnem pasu in vrzeli v valenčnem pasu že pri razmeroma majhnih tokovih
 velika in svetloba se ojačuje. Druga prednost je večji lomni količnik zlitine, 
 zaradi katerega ostane svetloba ujeta v aktivni plasti, podobno kot v valovnem 
-vodniku. Ker manjši del svetlobe potuje izven aktivnega območja, so manjše tudi izgube, 
-kar vodi do nižjih potrebnih tokov in zmanjšanja gretja.  
+vodniku. Ker manjši del svetlobe potuje izven aktivnega območja, je ojačenje večje,
+poleg tega se zaradi večje energijske reže občuno zmanjša absorpcija izven aktivnega območja.
+Skupaj z zmanjšano debelino aktivnega območja to vodi do nižjih tokov, 
+potrebnih za delovanje laserja, izboljšanega izkoristka in zmanjšanja gretja.  
+\begin{figure}[h]
+\centering
+\def\svgwidth{145truemm} 
+\input{slike/07_hetero.pdf_tex}
+\caption{Shema dvojne heterostrukture (levo) oblika energijskih pasov 
+na spoju pri napetosti, priključeni v prevodni smeri. V aktivnem območju
+je število elektronov v prevodnem pasu in vrzeli v valenčnem pasu zelo veliko, zato pride do 
+močnega ojačenja svetlobe.
+}
+\label{fig:hetero}
+\end{figure}
 
+Pri strukturi, ki jo kaže slika (\ref{fig:hetero}), je aktivna plast v prečni smeri praktično neomejena, 
+zato lahko hkrati sveti mnogo prečnih nihanj. Posledično je prečna koherenca snopa razmeroma slaba in 
+delovanje laserja nestabilno. To slabost popravijo tako, da plasti ob straneh pojedkajo, da ostane le
+kakih $10~\si{\micro\meter}$ širok pas. Odjedkani material nadomestijo s čistim Al$_x$Ga$_{1-x}$As, 
+tako da je aktivno območje z vseh strani obdano s snovjo z večjim lomnim količnikom in laserski
+snop ostane ujet v pravokoten valovni vodnik. Izhodni snop je zaradi oblike aktivne snovi eliptičen s 
+premerom okoli $1~\si{\micro\meter}$ v navpični in $10~\si{\micro\meter}$ v prečni smeri. 
+To da v večji oddaljenosti snop z divergenco kakih $50~\si{deg}$ v navpični in okoli $5~\si{\deg}$ 
+v prečni smeri. Če potrebujemo cilindrično simetričen snop, ga moramo popraviti z ustreznimi 
+cilindričnimi lečami (Naloga, SLIKA).
 
+\begin{remark}
+Omenili smo, da polprevodniški laserji nimajo posebnih zrcal. Zaradi velikega lomnega
+količnika polprevodnika se dovolj svetlobe odbije na mejni ploskvi. Naloga resonatorja pa ni 
+samo odboj svetlobe, ampak tudi izbira posameznega nihajnega načina. Ker tega z odbojem 
+na ploskvi ne dosežemo, pogosto uporabimo periodične strukture, na katerih se svetloba selektivno
+Braggovo odbije. Druga možnost je periodično spreminjajoča se debelina plasti, na kateri pride
+do porazdeljene povratne sklopitve ({\it distributed feedback}). 
+ 
+Večja odbojnost mejnih ploskev je nujna v laserjih, pri katerih svetloba ne izhaja iz
+tanke aktivne plasti, vzporedno z ravnino spoja $p$-$n$, ampak izhaja iz večje površine. To so 
+tako imenovani VCSEL ({\it Vertical cavity surface-emitting laser}). Ker je sevalna površina večja in 
+ojačevalno sredstvo krajše, je ojačenje na prelet manjše in mora biti odbojnost resonatorja toliko večja. 
+\end{remark}
 
+\begin{remark}
+Posebna vrsta polprevodniških laserjev so nizko-dimenzionalni laserji. Zaradi velikosti, ki
+je vsaj v eni smeri primerljiva z medatomsko razdaljo (tipično pod $20~\si{nm}$), 
+se bistveno zmanjša gostota stanj. Za dosego zahtevane razlike med kvazi-Fermijevih 
+nivojev -- in s tem doseči prag za delovanje laserja --
+je tako potrebna precej manjša gostota nosilcev naboja.
 
-Aktivna plast je 0,3 mikrona. Elektroni in vrzeli so vpeljani v to plast iz n- in p-
-regij. Confinement zmanjša prag delovanja in izgube.
-Pri sobni temperaturi nizek prag (100x nižjI), večje izgube in močnejše ojačenje.
+V kvantnih pikah, ki so kvantno omejene v vseh treh smereh, 
+so stanja diskretna in pasov ni več. Ker pa je tehnološko zelo zahtevno izdelati povsem enake
+kvantne pike, je izsevana svetloba iz skupine kvantnih pik zelo nehomogeno razširjena. 
+\end{remark}
 
-izhodna moč narašča linearno s tokom skozi stik. 
-
-Obe lastnosti sta pomembni za delovanje laserja. Aktivna plast je tanka,
-okoli 0,2~$\mu$m debela plast čistega GaAs. Potek energije pasov preko
-aktivne plasti z napetostjo v prevodni smeri kaže slika \ref{s6.14}.
-Elektroni tečejo iz n-tipa Ga$_{1-x}$Al$_x$As v prevodni pas aktivne plasti
-GaAs, vrzeli pa iz p Ga$_{1-x}$Al$_x$As v valenčni pas. 
-
-Pri strukturi, ki jo kaže slika \ref{s6.13}, je aktivna plast v prečni
-smeri neomejena, zato lahko hkrati sveti mnogo prečnih nihanj, zaradi
-česar je slabša prečna koherenca snopa in delovanje laserja nestabilno.
-To slabost popravijo tako, da plasti ob straneh pojedkajo, da ostane le
-kakih 10~$\mu$m širok greben, kot kaže slika \ref{s6.16}. Odjedkani
-material nadomestijo s čistim Ga$_{1-x}$Al$_x$As, tako da je aktivni
-volumen od vseh strani obdan s snovjo z večjim lomnim količnikom. S tem
-dobimo pravokoten svetlobni vodnik, v katerem je ujet laserski snop. Ob
-primerni izbiri deleža aluminija dobijo take lomne količnike, da je v
-laserju možen le osnovni snop brez vozlov v prečni smeri. Izhodni snop iz
-laserja je seveda eliptičen s presekom okoli 1~$\mu$m v navpični in 10~$\mu
-$m v prečni smeri. To da v večji oddaljenosti snop z divergenco kakih 70$^o
-$ v navpični in okoli 5$^o$ v prečni smeri. Če potrebujemo cilindrično
-simetričen snop, ga moramo popraviti z ustreznimi cilindričnimi lečami
-(Naloga).
-
-Galij-arsenidni laser, kakršen je prikazan na sliki \ref{s6.16} lahko
-deluje že pri črpalnem toku nekaj miliamperov. Tipični tokovi so med
-50~mA in 100~mA. Ker se velik delež elektonov in vrzeli rekombinira s
-sevanjem v aktivni plasti, je izkoristek GaAs laserjev velik, tudi preko 30
-. Tipična izhodna moč je tako reda velikosti
-10~mW. Zaradi velike gibljivosti elektronov in vrzeli v GaAs je mogoče tok
-in s tem izhodno svetlobno moč tudi zelo hitro modulirati, do nekaj GHz,
-kar je pomembno za uporabo v optičnih komunikacijah.
-
-
-
-
-mobility pf eleltrtons much higher than of holes, electrtons inject into the 
-p region in greater number han holes diffurse into the n region. 
-
-Tedaj dobimo položaj, ki ga
-kaže slika \ref{s6.10}. Naj bo $N_p$ gostota elektronov v prevodnem pasu, $I
-$ električni tok skozi spoj, $\tau$ pa čas za rekombinacijo elektrona in
-vrzeli. Velja 
-\begin{equation}  \label{6.2}
-\frac{N_p}{\tau}=\frac{I}{e V}\;,
-\end{equation}
-kjer je V volumen, v katerem se elektroni nahajajo.
+Diodni laserji so danes najbolj razširjeni. Uporabljamo jih v vsakodnevnih napravah, pogosto 
+pa jih uporabljamo tudi za črpanje trdninskih ali vlakenskih laserjev. Med drugim jih odlikuje tudi
+zelo dolg življenjski čas (do 50 000 ur). S spreminjanjem črpalnega toka lahko delujejo sunkovno
+s frekvencami več $\si{GHz}$, lahko pa delujejo tudi v načinu uklenjenih faz. 
 
 yariv
-irena
 pollock
 davies
 silfvast
-yariv quantum
-raider
-undergraduate
 
 \subsection{Svetlobne diode - LED}
+Svetlobne diode delujejo podobno kot polprevodniški laserji. Na spoju $p$-$n$ prihaja do 
+spontane emisije fotonov zaradi rekombinacij elektronov in vrzeli. Za razliko od laserjev 
+svetlobne diode nimajo praga delovanja, ampak začnejo svetiti, čim je na spoj priključena 
+napetost v prevodni smeri. Zaradi spontane narave prehodov je svetloba, ki jo oddajajo
+svetloben diode, nekoherentna in nepolarizirana. 
+
+Prve svetlobne diode so bile izdelane iz GaAsP in so oddajale svetlobo pri $710~\si{nm}$. Pomemben
+napredek je bila izdelava svetlobnih diod, ki so oddajale svetlobo v modrem delu 
+spektra.\footnote{Za iznajdbo modrih LED so Isamu Akasaki, Hiroshi Amano and 
+Shuji Nakamura leta 2014 prejeli Nobelovo nagrado.} Te so sestavljene iz dvojne
+heterostrukture, v kateri je plast InGaN, dopiranega s cinkom, 
+med plastema $p$-AlGaN in $n$-AlGaN.
+
+Belo svetlobo iz LED svetil lahko dobimo z mešanjem svetlobe iz treh različnih 
+diod, rdeče, zelene in modre. Bolj primeren je pristop z uporabo ene same diode, 
+ki oddaja svetlobo v modrem delu spektra, ki pajo prevlečemo z molekulami fosforja. 
+Fosfor modro svetlobo absorbira in spontano izseva svetlobo pri nižjih frekvencah 
+oziroma daljših valovnih dolžinah. Z ustrezno izbiro parametrov dobimo belo svetlobo
+ceneje in preprosteje kot s tremi ločenimi diodami. 
+
+\begin{remark}
+Posebna vrsta svetlobnih diod so organske svetlobne diode (OLED). Te so narejene iz
+organskih snovi, ki se obnašajo kot organski polprevodniki. Z spreminjanjem kemijske
+sestave se spreminja valovno dolžino, ki jo LED oddaja. Njihova poglavitna prednost
+je preprosta izdelava, saj je proizvodnja organski spojin preprostejša in cenejša
+od rasti kristalov. 
+\end{remark}
+
+
+Svetlobne diode odlikuje dolga življenjska doba (do 50 000 ur), dober izkoristek 
+(nad $25~\%$). 
+
