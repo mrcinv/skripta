@@ -1246,139 +1246,173 @@ standard je ustrezni molekularni prehod.
 \section{*Semiklasični model laserja}
 \label{chap:semiklasicni}
 Doslej smo laserje obravnavali le z modelom zasedbenih enačb. Ta je zelo
-grob, saj smo zanemarili nekaj pomembnih pojavov. Svetlobo v resonatorju smo
-opisali smo opisali le s celotno energijo ali številom fotonov in se za
-njeno valovno naravo nismo menili. Kar privzeli smo, da je frekvenca
-delujočega laserja in oblika polja v njem enaka kot za lastno stanje
+grob, saj smo pri tem zanemarili nekaj pomembnih pojavov. Svetlobo v 
+resonatorju smo opisali le s celotno energijo oziroma številom fotonov in se za
+njeno valovno naravo nismo menili. Kar privzeli smo, da sta frekvenca
+delujočega laserja in oblika polja v njem enaki kot za lastno stanje
 praznega resonatorja. Aktivno snov smo opisali le z zasedenostjo zgornjega
-in spodnjega laserskega stanja in smo s tem izpustili možnost, da se zaradi
-sodelovanja z elektromagnetnim poljem atomi nahajajo v nestacionarnem,
+in spodnjega laserskega stanja in s tem izpustili možnost, da se zaradi
+interakcij z elektromagnetnim poljem atomi nahajajo v nestacionarnem,
 mešanem stanju.
 
-Gornje pomanjkljivosti odpravimo s tem, da elektromagnetno polje v
-resonatorju obravnavamo z valovno enačbo, za atome aktivne snovi pa
-upoštevamo, da se pokoravajo Schroedingerjevi enačbi. S tem dobimo {\it %
-semiklasični model} laserja. Za še natančnejši opis pa moramo tudi
-svetlobo obravnavati kvantno, kar presega okvir te knjige.
+Gornje pomanjkljivosti delno odpravimo s tem, da elektromagnetno polje v
+resonatorju obravnavamo klasično z valovno enačbo, atome aktivne snovi pa
+kvantno in upoštevamo, da se pokoravajo Schr\"odingerjevi enačbi. S tem dobimo 
+semiklasični model laserja. Za še natančnejši opis bi morali obravnavati
+kvantno tudi svetlobo, kar pa presega okvir te knjige.
 
-Aktivna snov naj bo še naprej kar najenostavnejša, to je množica enakih
-dvonivojskih atomov s stanji $|1\rangle$ in $|2\rangle$, ki imata energiji $%
-W_1$ in $W_2$. Atomi s svetlobo sodelujejo preko dipolne interakcije oblike $%
-e\hat{x}E(t)$, kjer je $E(t)$ polje v resonatorju, ki naj bo zaradi
-preprostosti polarizirano v smeri osi $x$. "Casovno odvisno stanje atomov
+Aktivna snov naj bo množica enakih dvonivojskih 
+atomov s stanjema $|1\rangle$ in $|2\rangle$, ki imata energiji $W_1$ in $W_2$.
+Atomi s svetlobo sodelujejo preko dipolne interakcije oblike $H = -eE(t)\hat{x}$, 
+kjer je $E(t)$ polje v resonatorju, ki naj bo zaradi preprostosti 
+polarizirano v smeri osi $x$. Časovno odvisno stanje atomov
 zapišimo v obliki 
 \begin{equation}  \label{5.45}
 |\psi\rangle=c_1(t)|1\rangle\exp(-iW_1t/\hbar)+
-c_2(t)|2\rangle\exp(-iW_2t/\hbar)\;.
+c_2(t)|2\rangle\exp(-iW_2t/\hbar).
 \end{equation}
-Iz Schroedingerjeve enačbe dobimo za koeficienta $c_1(t)$ in $c_2(t)$ 
-\begin{equation}  \label{5.46}
-\dot{c}_1=\frac{1}{i\hbar}\,E(t)v_{12}e^{-i\omega_0 t}c_2 \dot{c}_2=\frac{1}{%
-i\hbar}\,E(t)v_{12}e^{i\omega_0 t}c_1\;,
+Iz Schr\"odingerjeve enačbe (enačba~\ref{eq:sk-S}) dobimo za časovna odvoda
+koeficientav $c_1(t)$ in $c_2(t)$ zvezi
+(enačbi~\ref{eq:c1c2})
+\begin{equation}
+\frac{d c_1}{dt}=-\frac{i}{\hbar} E(t)v_{12} e^{-i\omega_0 t}\, c_2 
+\qquad \mathrm{in} \qquad
+\frac{d c_2}{dt}=-\frac{i}{\hbar} E(t)v_{12} e^{i\omega_0 t}\, c_1,
+\label{5.46}
 \end{equation}
-kjer je $\omega_0=(W_2-W_1)/\hbar$ in $v_{12}=e\langle 1|\hat{x}||2\rangle$.
+pri čemer je $v_{12} = -e\langle1|\hat{x}|2\rangle$ in $\omega_0=(W_2-W_1)/\hbar$.
 
-Električni dipolni moment atoma v stanju $ket{\psi}$ je 
-\begin{equation}  \label{5.47}
-p=-e\langle\psi|\hat{x}|\psi\rangle=-(c_1^{\ast}c_2e^{-i \omega_0
-t}+c_1c_2^{\ast}e^{i \omega_0 t}) v_{12}\;.
+Električni dipolni moment atoma v stanju ${\psi}$ je 
+\begin{equation}  
+\label{5.47}
+p=-e\langle\psi|\hat{x}|\psi\rangle=
+(c_1^{\ast}c_2e^{-i \omega_0t}+c_1c_2^{\ast}e^{i \omega_0 t}) v_{12}.
 \end{equation}
-Razdelimo $p$ na dva dela: 
-\begin{equation}  \label{5.48}
-p=p^++p^-=v_{12}[\eta(t)+\eta^{\ast}(t)]\;,
+Razdelimo $p$ na dva dela in zapišemo
+\begin{equation}  
+\label{5.48}
+p=p^+ + p^-=v_{12}[\eta(t)+\eta^{\ast}(t)],
 \end{equation}
 kjer smo vpeljali $\eta(t)=c_1^{\ast}c_2e^{-i \omega_0 t}$.
 
-Zanima nas, kako se dipolni moment spreminja s časom. Zato s pomočjo
-enačb \ref{5.46} izrazimo 
-\begin{equation}  \label{5.49}
-\dot{\eta}=- i \omega_0\eta-\frac{1}{i\hbar}\,E(t)v_{12} (|c_2|^2-|c_1|^2)\;.
+Zanima nas, kako se dipolni moment spreminja s časom. Zadošča, če poznamo, kako se 
+s časom spreminja parameter $\eta(t)$. Njegov časovni odvod izrazimo
+iz enačb (\ref{5.46}) in dobimo
+\begin{equation}  
+\label{5.49}
+\dot{\eta}=- i \omega_0\eta+\frac{i}{\hbar}\,E(t)v_{12} \left(|c_2|^2-|c_1|^2\right).
 \end{equation}
-$|c_i|^2$ je verjetnost za zasedenost stanja $|i\rangle$. Izraz v oklepaju
-na desni strani gornje enačbe torej meri razliko zasednosti obeh stanj;
-označimo ga z $\zeta$. Podobno kot zgoraj izrazimo časovni odvod 
-\begin{equation}  \label{5.50}
-\dot{\zeta}=\frac{2v_{12}}{i\hbar}\,E(t)(\eta^{\ast}- \eta)\;.
+Spomnimo, da je $|c_i|^2$ verjetnost za zasedenost stanja $|i\rangle$. Izraz v oklepaju
+na desni strani gornje enačbe torej meri razliko zasednosti obeh stanj, ki jo označimo
+s $\zeta$. Podobno kot zgoraj izrazimo spreminjanje razlike zasedenosti s časovni odvodom 
+\begin{equation}  
+\label{5.50}
+\dot{\zeta}=-\frac{2i}{\hbar}\, E(t)v_{12}(\eta^{\ast}- \eta).
 \end{equation}
-S tem smo iz Schroedingerjeve enačbe dobili enačbe za časovni razvoj
-diponega momenta in obrnjene zasedenosti, ki pa jih moramo še dopolniti.
-Naj bo atom na začetku v stanju $|2\rangle$ in naj bo $E(t)=0$. Začetna
-vrednost $\zeta(0)=1$ in po enačbi \ref{5.50} naj bi bila $\zeta(t)$
-konstantna. Vemo pa, da se atom, ki je v vzbujenem stanju, sčasoma vrne v
-osnovno stanje. Verjetnost za prehod na časovno enoto smo označili z $A$.
-Poleg tega moramo na nek način upoštevati še črpanje, s katerim
+S tem smo iz Schr\"odingerjeve enačbe dobili enačbi za časovni razvoj
+dipolnega momenta in obrnjene zasedenosti, ki pa ju moramo še dopolniti.
+
+Naj bo atom na začetku v vzbujenem stanju $|2\rangle$ in naj bo $E(t)=0$. Začetna
+vrednost obrnjene zasedenosti je tako $\zeta(0)=1$. Po enačbi (\ref{5.50}) naj bi 
+bil odvod obrnjene zasedenosti enak nič in $\zeta$ konstantna. 
+Vemo pa, da se atom, ki je v vzbujenem stanju, sčasoma vrne v
+osnovno stanje. Verjetnost za tak spontan prehod na časovno enoto smo označili z $A$ (glej 
+poglavje~\ref{chap:ASSS}).
+
+Poleg tega moramo upoštevati še črpanje, s katerim
 vzdržujemo obrnjeno zasedenost in s tem lasersko delovanje. Za podroben
 opis črpanja bi morali v Hamiltonov operator dodati ustrezne člene in
 morda upoštevati še druga stanja atomov, vendar nas take podrobnosti na
-tem mestu ne zanimajo. Zaradi črpanja stacionarna vrednost $\zeta$ v
-odsotnosti laserskega polja $E(t)$ ni -1, temveč zavzame neko vrendost $%
-\zeta_0$ med -1 in 1, odvisno od moči črpanja. Tako lahko enačbo \ref
-{5.50} popravimo: 
-\begin{equation}  \label{5.51}
-\dot{\zeta}=A(\zeta_0-\zeta)+ \frac{2v_{12}}{i\hbar}\,E(t)(\eta^{\ast}-\eta)%
-\;,
+tem mestu ne zanimajo. Če bi ne bilo črpanja, bi bila stacionarna vrednost
+v odsotnosti laserskega polja
+\begin{equation}
+ \zeta_{\mathrm{stac}}= |c_2|^2-|c_1|^2 = -1.
 \end{equation}
-kjer prvi člen popisuje spontane prehode v nižje stanje in vpliv črpanja.
+Zaradi črpanja zavzame obrnjena zasedenost neko vrednost $-1<\zeta_0<1$, 
+odvisno od moči črpanja. Enačbi (\ref{5.50}) dodamo ustrezen člen
+\begin{equation}  
+\label{5.51}
+\dot{\zeta}=A(\zeta_0-\zeta)- \frac{2i}{\hbar}\,E(t)v_{12}(\eta^{\ast}-\eta),
+\end{equation}
+ki popisuje vpliv črpanja in spontane prehode v nižje stanje. 
 
-Podobno dopolnimo še enačbo \ref{5.49}. Pri $E(t)=0$ da časovno odvisnost 
-$\eta$ oblike $e^{-i \omega_0 t}$, to je brez dušenja. Vema pa, da
+Podobno dopolnimo še enačbo za časovno spreminjanje električnega dipola 
+(enačba~\ref{5.49}). Pri $E(t)=0$ da zapisana oblika enačbe časovno odvisnost 
+$\eta \propto e^{-i \omega_0 t}$, to je brez dušenja. Vendar vemo, da
 polarizacija v mešanem stanju razpada vsaj zaradi spontanega sevanja, lahko
 pa še zaradi drugih vplivov, na primer trkov z drugimi atomi. Označimo
-koeficient dušenja polarizacije z $\gamma$, ki meri tudi spektralno širino
-svetlobe, ki jo sevajo atomi pri prehodu $2\rightarrow 1$. Tako imamo 
-\begin{equation}  \label{5.52}
-\dot{\eta}=- (i \omega_0\eta+\gamma)- \frac{1}{i\hbar}\,E(t)v_{12} \zeta \;.
+koeficient dušenja polarizacije, ki meri tudi spektralno širino svetlobe, 
+ki jo sevajo atomi pri prehodu $2\rightarrow 1$, z $\gamma$. Zapišemo
+dopolnjeno enačbo
+\begin{equation}  
+\label{5.52}
+\dot{\eta}=- (i \omega_0+\gamma)\eta+\frac{i}{\hbar}\,E(t)v_{12} \zeta
 \end{equation}
-Tej enačbi moramo dodati še konjugirano kompleksno enačbo. Enačbe \ref
-{5.51} in \ref{5.52} pogosto imenujejo Blochove enačbe. Najprej so jih
-uporabili za obravnavo jedrske magnetne resonance.
+in kompleksno konjugirano enačbo
+\begin{equation}  
+\label{5.52c}
+\dot{\eta}^*=-(-i \omega_0+\gamma)\eta^*-\frac{i}{\hbar}\,E(t)v_{12} \zeta.
+\end{equation}
+Tako smo dobili sklopljene diferencialne enačbe, ki popisujejo časovno
+spreminjanje obrnjene zasedenosti in dipolnega momenta atoma. 
+\begin{remark}
+ Enačbe~(\ref{5.51}), (\ref{5.52}) in (\ref{5.52c}) pogosto imenujemo 
+ Maxwell-Blochove ali optične Blochove enačbe\footnote{Švicarsko-ameriški fizik in nobelovec Felix Bloch, 1905--1983.}. Osnovne Blochove enačbe opisujejo gibanje jerdskega magnetnega
+ momenta v elektromagnetnem polju, zato so jih najprej uporabili za opis 
+ jedrske magnetne in elektronske spinske resonance. 
+\end{remark}
 
-Potrebujemo še enačbo za polje $E(t)$. Zanj dobimo iz Maxwellovih enačb
-valovno enačbo, kjer moramo upoštevati, da imamo tudi od nič različno
-polarizacijo snovi, ki je v primeru, da so vsi atomi enakovredni, podana z 
-\begin{equation}  \label{5.53}
-P=\frac{N}{V}\,v_{12}(\eta+\eta^{\ast})=P^++P^-\;.
+Za opis potrebujemo še enačbo za polje $E(t)$. To naredimo klasično, tako da
+električna poljska jakost zadošča valovni enačbi. Upoštevati moramo, 
+da imamo tudi od nič različno tudi polarizacijo snovi. 
+Valovna enačba v skalarni obliki je tedaj
+\begin{equation}  
+\label{5.54}
+\nabla^2 E-\frac{1}{c^2}\frac{\partial^2 E}{\partial t^2}=\mu_0 \frac{\partial^2 P}{\partial t^2},
 \end{equation}
-Valovna enačba je tedaj \cite{empolje} 
-\begin{equation}  \label{5.54}
-\nabla^2 E-\frac{1}{c^2}\ddot{E}=\mu_0 \ddot{P}\;.
+pri čemer je v primeru, da so vsi atomi enakovredni, polarizacija enaka
+\begin{equation}  
+\label{5.53}
+P=\frac{N}{V}p = \frac{N}{V}\,v_{12}(\eta+\eta^{\ast})=P^+ + P^-.
 \end{equation}
-
 Namesto mikroskopske količine $\zeta$ lahko uvedemo še gostoto obrnjene
-zasedenosti $Z=(N/V)\zeta$, pa lahko enačbi \ref{5.51} in \ref{5.52}
+zasedenosti $Z=(N/V)\zeta$ in enačbe (\ref{5.51}), (\ref{5.52}) in (\ref{5.52c})
 prepišemo v obliko 
-\begin{eqnarray}  \label{5.56}
-\dot{P}^{\pm}&=&(\mp i \omega_0-\gamma)P^{\pm}+ \frac{v_{12}^2}{i\hbar} E\,Z
-\\
-\dot{Z}&=&A(Z_0-Z)-\frac{2}{i\hbar}E(P^--P^+)\;.
-\end{eqnarray}
-Prehod od enačb \ref{5.51} in \ref{5.52} na \ref{5.55} je mogoč le, kadar
-so vsi atomi enakovredni, to je, kadar ni nehomogene razširitve. Kako je v
-primeru nehomogene razširitve, si bralec lahko ogleda v \cite{haken2}.
+\boxeq{5.56}{
+\frac{dZ}{dt} &= A(Z_0-Z)-\frac{2i}{\hbar}E(P^- - P^+), \\
+\frac{dP^+}{dt}&=(-i \omega_0-\gamma)P^{+}+\frac{i}{\hbar} Ev_{12}^2 Z, \label{5.56b}\\
+\frac{dP^-}{dt}&=(i \omega_0-\gamma)P^{-}+\frac{i}{\hbar} Ev_{12}^2 Z.\label{5.56c}
+}
+Opozorimo še, da je prehod z enačb (\ref{5.51}--\ref{5.52c}) na (\ref{5.56}--\ref{5.56c}) 
+mogoč le, kadar so vsi atomi enakovredni, to je, kadar ni nehomogene razširitve 
+spektra.\footnote{Kako je v primeru nehomogene razširitve, lahko bralec poišče npr. v 
+H. Haken,  Laser Theory, Springer Verlag.}
 
-Enačbe \ref{5.51}, \ref{5.52} ali \ref{5.55}, skupaj z \ref{5.54} dajejo
-semiklasični opis sodelovanja svetlobe in snovi. Iz izpeljave je vidno, da
-je v njem spontano sevanje obravnavano pomankljivo, le s fenomenološkim
-na\-stavkom, kar je moč popraviti tako, da tudi elektromagnetno polje
-kvantiziramo. Kljub tej pomanjkljivosti je s semiklasičnim modelom mogoče
-zelo podrobno obravnavati večino pojavov v laserjih in tudi druge probleme
-širjenja svetlobe po snovi. Reševanje zapisanega sistema nelinearnih
-parcialnih diferencialnih enačb pa je na splošno zelo težavno.
+Enačbe (\ref{5.56}--\ref{5.56c}), skupaj z valovno enačbo (enačba~\ref{5.54}) podajajo
+semiklasični opis interakcij svetlobe s snovjo. Iz izpeljave je vidno, da
+je v semiklasičnem opisu spontano sevanje obravnavano pomanjkljivo, le s fenomenološkim
+nastavkom. To je moč popraviti tako, da tudi elektromagnetno polje kvantiziramo. 
+Kljub tej pomanjkljivosti je s semiklasičnim modelom mogoče zelo podrobno opisati 
+večino pojavov v laserjih in tudi druge probleme širjenja svetlobe po snovi. 
+Reševanje zapisanega sistema nelinearnih parcialnih diferencialnih enačb je pa 
+na splošno zelo težavno.
 
-Da bomo semiklasične enačbe le nekoliko pobliže spoznali, na kratko
-poglejmo najenostavnejši primer, to je laser, v katerem je vzbujeno le eno
-resonatorsko stanje. Polje ima tedaj obliko 
-\begin{equation}  \label{5.57}
-E(\vec{r},t)=E_{\lambda}(t)u_{\lambda}(\vec{r})\;,
+Semiklasične enačbe pobliže spoznajmo na najenostavnešjem primeru. To naj bo laser, 
+v katerem je vzbujeno le eno resonatorsko stanje. Polje ima tedaj obliko
+\begin{equation}  
+\label{5.57}
+E(\vec{r},t)= E_{\lambda}(t)u_{\lambda}(\vec{r}),
 \end{equation}
 kjer je $u_{\lambda}(\vec{r})$ krajevni del lastnega stanja resonatorja, ki
 zadošča enačbi 
-\begin{equation}  \label{5.58}
-\nabla^2 u_{\lambda}- \frac{\omega_{\lambda}^2}{c^2}u_{\lambda}=0\;.
+\begin{equation}  
+\label{5.58}
+\nabla^2 u_{\lambda}+\frac{\omega_{\lambda}^2}{c^2}u_{\lambda}=0.
 \end{equation}
-$E_{\lambda}(t)$ opisuje časovno odvisnost, ki je za laser v stacionarnem
-delovanju periodična, vendar frekvenca ni nujno kar enaka lastni frekvneci
-praznega resonatorja $\omega_{\lambda}$, temveč jo moramo še izračunati.
+Funkcija $E_{\lambda}(t)$ opisuje časovno odvisnost. Za laser v stacionarnem
+delovanju je periodična, vendar njena krožna frekvenca ni nujno enaka lastni
+krožni frekvenci praznega resonatorja $\omega_{\lambda}$. Krožno frekvenco 
+$\omega_\lambda$ moramo še izračunati.
 
 Tudi polarizacijo lahko razvijemo po lastnih funkcijah $u_{\lambda}(\vec{r})$%
 . Ker so te med seboj ortogonalne, preide valovna enačba \ref{5.54} v 
