@@ -1272,8 +1272,8 @@ zapišimo v obliki
 c_2(t)|2\rangle\exp(-iW_2t/\hbar).
 \end{equation}
 Iz Schr\"odingerjeve enačbe (enačba~\ref{eq:sk-S}) dobimo za časovna odvoda
-koeficientav $c_1(t)$ in $c_2(t)$ zvezi
-(enačbi~\ref{eq:c1c2})
+koeficientov $c_1(t)$ in $c_2(t)$ zvezi
+(glej enačbi~\ref{eq:c1c2})
 \begin{equation}
 \frac{d c_1}{dt}=-\frac{i}{\hbar} E(t)v_{12} e^{-i\omega_0 t}\, c_2 
 \qquad \mathrm{in} \qquad
@@ -1307,7 +1307,7 @@ na desni strani gornje enačbe torej meri razliko zasednosti obeh stanj, ki jo o
 s $\zeta$. Podobno kot zgoraj izrazimo spreminjanje razlike zasedenosti s časovni odvodom 
 \begin{equation}  
 \label{5.50}
-\dot{\zeta}=-\frac{2i}{\hbar}\, E(t)v_{12}(\eta^{\ast}- \eta).
+\dot{\zeta}=-\frac{2i}{\hbar}\, E(t)v_{12}\left(\eta^{\ast}- \eta\right).
 \end{equation}
 S tem smo iz Schr\"odingerjeve enačbe dobili enačbi za časovni razvoj
 dipolnega momenta in obrnjene zasedenosti, ki pa ju moramo še dopolniti.
@@ -1332,7 +1332,7 @@ Zaradi črpanja zavzame obrnjena zasedenost neko vrednost $-1<\zeta_0<1$,
 odvisno od moči črpanja. Enačbi (\ref{5.50}) dodamo ustrezen člen
 \begin{equation}  
 \label{5.51}
-\dot{\zeta}=A(\zeta_0-\zeta)- \frac{2i}{\hbar}\,E(t)v_{12}(\eta^{\ast}-\eta),
+\dot{\zeta}=A\left(\zeta_0-\zeta\right)- \frac{2i}{\hbar}\,E(t)v_{12}\left(\eta^{\ast}-\eta\right),
 \end{equation}
 ki popisuje vpliv črpanja in spontane prehode v nižje stanje. 
 
@@ -1346,12 +1346,12 @@ ki jo sevajo atomi pri prehodu $2\rightarrow 1$, z $\gamma$. Zapišemo
 dopolnjeno enačbo
 \begin{equation}  
 \label{5.52}
-\dot{\eta}=- (i \omega_0+\gamma)\eta+\frac{i}{\hbar}\,E(t)v_{12} \zeta
+\dot{\eta}=- \left(i \omega_0+\gamma\right)\eta+\frac{i}{\hbar}\,E(t)v_{12} \zeta
 \end{equation}
 in kompleksno konjugirano enačbo
 \begin{equation}  
 \label{5.52c}
-\dot{\eta}^*=-(-i \omega_0+\gamma)\eta^*-\frac{i}{\hbar}\,E(t)v_{12} \zeta.
+\dot{\eta}^*=-\left(-i \omega_0+\gamma\right)\eta^*-\frac{i}{\hbar}\,E(t)v_{12} \zeta.
 \end{equation}
 Tako smo dobili sklopljene diferencialne enačbe, ki popisujejo časovno
 spreminjanje obrnjene zasedenosti in dipolnega momenta atoma. 
@@ -1373,15 +1373,15 @@ Valovna enačba v skalarni obliki je tedaj
 pri čemer je v primeru, da so vsi atomi enakovredni, polarizacija enaka
 \begin{equation}  
 \label{5.53}
-P=\frac{N}{V}p = \frac{N}{V}\,v_{12}(\eta+\eta^{\ast})=P^+ + P^-.
+P=\frac{N}{V}p = \frac{N}{V}\,v_{12}\left(\eta+\eta^{\ast}\right)=P^+ + P^-.
 \end{equation}
 Namesto mikroskopske količine $\zeta$ lahko uvedemo še gostoto obrnjene
 zasedenosti $Z=(N/V)\zeta$ in enačbe (\ref{5.51}), (\ref{5.52}) in (\ref{5.52c})
 prepišemo v obliko 
 \boxeq{5.56}{
-\frac{dZ}{dt} &= A(Z_0-Z)-\frac{2i}{\hbar}E(P^- - P^+), \\
-\frac{dP^+}{dt}&=(-i \omega_0-\gamma)P^{+}+\frac{i}{\hbar} Ev_{12}^2 Z, \label{5.56b}\\
-\frac{dP^-}{dt}&=(i \omega_0-\gamma)P^{-}+\frac{i}{\hbar} Ev_{12}^2 Z.\label{5.56c}
+\frac{dZ}{dt} &= A\left(Z_0-Z\right)-\frac{2i}{\hbar}E\left(P^- - P^+\right), \\
+\frac{dP^+}{dt}&=\left(-i \omega_0-\gamma\right)P^{+}+\frac{i}{\hbar} Ev_{12}^2 Z, \label{5.56b}\\
+\frac{dP^-}{dt}&=\left(i \omega_0-\gamma\right)P^{-}+\frac{i}{\hbar} Ev_{12}^2 Z.\label{5.56c}
 }
 Opozorimo še, da je prehod z enačb (\ref{5.51}--\ref{5.52c}) na (\ref{5.56}--\ref{5.56c}) 
 mogoč le, kadar so vsi atomi enakovredni, to je, kadar ni nehomogene razširitve 
@@ -1397,148 +1397,149 @@ večino pojavov v laserjih in tudi druge probleme širjenja svetlobe po snovi.
 Reševanje zapisanega sistema nelinearnih parcialnih diferencialnih enačb je pa 
 na splošno zelo težavno.
 
+\subsection*{Primer enofrekvenčnega laserja}
 Semiklasične enačbe pobliže spoznajmo na najenostavnešjem primeru. To naj bo laser, 
 v katerem je vzbujeno le eno resonatorsko stanje. Polje ima tedaj obliko
 \begin{equation}  
 \label{5.57}
-E(\vec{r},t)= E_{\lambda}(t)u_{\lambda}(\vec{r}),
+E(\mathbf{r},t)= E_{\lambda}(t)u_{\lambda}(\mathbf{r}),
 \end{equation}
-kjer je $u_{\lambda}(\vec{r})$ krajevni del lastnega stanja resonatorja, ki
+kjer je $u_{\lambda}(\mathbf{r})$ krajevni del lastnega stanja resonatorja, ki
 zadošča enačbi 
 \begin{equation}  
 \label{5.58}
 \nabla^2 u_{\lambda}+\frac{\omega_{\lambda}^2}{c^2}u_{\lambda}=0.
 \end{equation}
 Funkcija $E_{\lambda}(t)$ opisuje časovno odvisnost. Za laser v stacionarnem
-delovanju je periodična, vendar njena krožna frekvenca ni nujno enaka lastni
+delovanju je periodična, vendar njena krožna frekvenca $\Omega$ ni nujno enaka lastni
 krožni frekvenci praznega resonatorja $\omega_{\lambda}$. Krožno frekvenco 
-$\omega_\lambda$ moramo še izračunati.
+$\Omega$ moramo še izračunati.
 
-Tudi polarizacijo lahko razvijemo po lastnih funkcijah $u_{\lambda}(\vec{r})$%
-. Ker so te med seboj ortogonalne, preide valovna enačba \ref{5.54} v 
-\begin{equation}  \label{5.59}
-\omega_{\lambda}^2 E_{\lambda}-\ddot{E_{\lambda}}= \frac{1}{\epsilon_0}\ddot{%
-P}_{\lambda}\;.
+Najprej razvijmo po lastnih funkcijah $u_{\lambda}(\mathbf{r})$ še polarizacijo. 
+Ker so lastne funkcije med seboj ortogonalne, preide valovna enačba (\ref{5.54}) 
+ob upoštevanju enačbe~(\ref{5.58}) v 
+\begin{equation}  
+\label{5.59}
+\omega_{\lambda}^2 E_{\lambda}+\frac{d^2 E_\lambda}{dt^2}= - \frac{1}{\epsilon_0}\frac{d^2P_\lambda}{dt^2}.
 \end{equation}
 
 Razstavimo $E_{\lambda}(t)$ na dva dela: 
 \begin{equation}  \label{5.60}
 E_{\lambda}(t)=E_{\lambda}^+(t)+E_{\lambda}^-(t)=A^+(t)e^{-i
-\omega_{\lambda}t}+A^-(t)e^{i \omega_{\lambda}t}\;.
+\omega_{\lambda}t}+A^-(t)e^{i \omega_{\lambda}t}.
 \end{equation}
-Dejanska frekvenca laserja je blizu $\omega_{\lambda}$, zato pričakujemo,
-da bosta amplitudi $A^{\pm}(t)$ v primerjavi z $e^{-i \omega_{\lambda}t}$ le
-počasni funkciji časa. Izračunajmo 
-\begin{eqnarray}  \label{5.61}
-\ddot{E}_{\lambda}^+&=&-\omega_{\lambda}^2 E_{\lambda}^+-2i \omega_{\lambda} 
-\dot{A}^+ e^{-i \omega_{\lambda}t} + \ddot{A}^+ e^{-i \omega_{\lambda}t} 
-\nonumber \\
-&\simeq&-\omega_{\lambda}^2 E_{\lambda}^+-2i \omega_{\lambda}(\dot{E}%
-_{\lambda}^++i \omega_{\lambda}E_{\lambda}^+)
-\end{eqnarray}
-V drugi vrstici smo izpustili člen z $\ddot{A}^+$, ker pričakujemo, da je
-majhen. S tem smo napravili približek {\it počasne amplitude}.
+Dejanska krožna frekvenca laserja je blizu $\omega_{\lambda}$, zato pričakujemo,
+da se bosta amplitudi $A^{\pm}(t)$ v primerjavi z $e^{-i \omega_{\lambda}t}$ le
+počasi spreminjali s časom. Izračunajmo 
+\begin{equation}  
+\label{5.61}
+\frac{d^2 E_\lambda^+}{dt^2}=-\omega_{\lambda}^2 E_{\lambda}^+ - 2i \omega_{\lambda} 
+\frac{dA^+}{dt} e^{-i \omega_{\lambda}t} \approx 
+-\omega_{\lambda}^2 E_{\lambda}^+-2i \omega_{\lambda}\left(\frac{dE_{\lambda}^+}{dt}+
+i \omega_{\lambda}E_{\lambda}^+\right).
+\end{equation}
+Izpustili smo drugi odvod $A$ po času in s tem napravili približek počasno spreminjajoče se amplitude.
 
-Polarizacija snovi je približno periodična s frekvenco $\omega_0$, z
-amplitudo, ki je tudi počasna funkcija časa. Zato je $\ddot{P}%
-_{\lambda}^+\simeq- \omega_0^2 P_{\lambda}^+$. Pri drugem odvodu polja po
-času smo potrebovali en člen več, ker se člen $-\omega_{\lambda}^2
-E_{\lambda}^+$ na levi strani enačbe \ref{5.54} odšteje. Z uporabo tega
-približka in enačb \ref{5.58} in \ref{5.61} preide valovna enačba \ref
-{5.54} za eno nihanje v 
-\begin{equation}  \label{5.62}
-\dot{E}_{\lambda}^+=-i \omega_{\lambda} E_{\lambda}^++\frac{i \omega_0}{%
-2\epsilon_0}P_{\lambda}^+\;.
+Polarizacija snovi je približno periodična s krožno frekvenco $\omega_0$, 
+ki je približno enaka $\omega_\lambda$.
+Tudi amplituda polarizacije se le počasi spreminja, zato lahko privzamemo, da je 
+$\ddot{P}_{\lambda}^+ \approx - \omega_\lambda^2 P_{\lambda}^+$. Z uporabo tega
+približka in enačbe~(\ref{5.61}) preide valovna enačba (enačba~\ref{5.54}) za eno nihanje v 
+\begin{equation}  
+\label{5.62}
+\frac{dE_{\lambda}^+}{dt}=-i \omega_{\lambda} E_{\lambda}^++
+\frac{i \omega_0}{2\epsilon_0}P_{\lambda}^.
 \end{equation}
 
-Doslej nismo upoštevali, da je polje v praznem resonatorju dušeno, zato
-moramo gornjo enačbo še popraviti: 
-\begin{equation}  \label{5.63}
-\dot{E}_{\lambda}^+=(-i \omega_{\lambda}-\frac{1}{\tau}) E_{\lambda}^++\frac{%
-i \omega_0}{2\epsilon_0}P_{\lambda}^+\;.
+Doslej še nismo upoštevali, da je polje v praznem resonatorju dušeno, zato
+moramo gornjo enačbo še popraviti
+\begin{equation}  
+\label{5.63}
+\frac{dE_{\lambda}^+}{dt}=\left(-i \omega_{\lambda}-\frac{1}{\tau}\right) E_{\lambda}^+ 
++\frac{i \omega_0}{2\epsilon_0}P_{\lambda}^+.
 \end{equation}
-Kadar v reosnatorju ni snovi, je dobljena enačba enaka kot enačba \ref
-{3.45}.
+Kadar v resonatorju ni snovi, je dobljena enačba enaka enačbi (\ref{3.36}).
 
-Enačbi \ref{5.55} in \ref{5.56} sta nelinearni, zato ju n moč kar tako
-prepisati za primer razvoja po lastnih stanjih resonatorja. Pri enačbi za
-razvoj polarizacije \ref{5.55} imamo v zadnjem členu na desni produkt
-komponente polja $E_{\lambda}$ in obrnjene zasedenosti $Z$, od katere
-bistveno prispeva le krajevno povprečje $\bar{Z}$, ki se tudi s časom le
-počasi spreminja. Seveda vsebuje $Z$ tudi krajevno odvisne komponente, ki
-pa so pomembne predvsem zato, ker sklaplajo različna lastna stanja
-resonatorja, kar presega našo trenutno obravnavo. Tako imamo 
-\begin{equation}  \label{5.64}
-\dot{P}_{\lambda}^+=(-i \omega_0- \gamma)P_{\lambda}^++\frac{v_{12}^2} {%
-i\hbar}\,E_{\lambda}^+\bar{Z}\;.
+Enačbe (\ref{5.56}--\ref{5.56c}) so nelinearne, zato jih ni moč kar tako
+prepisati za primer razvoja po lastnih stanjih resonatorja. Pri enačbah za
+razvoj polarizacije (enačbi~\ref{5.56b} in \ref{5.56c}) v zadnjem členu na desni 
+nastopa produkt komponente polja $E_{\lambda}$ in obrnjene zasedenosti $Z$. Bistveno
+prispeva le krajevno povprečje $\overline{Z}$, ki se s časom le počasi spreminja.
+Seveda vsebuje $Z$ tudi krajevno odvisne komponente, ki pa so pomembne 
+predvsem zato, ker sklapljajo različna lastna stanja resonatorja, vendar to
+presega našo trenutno obravnavo. Tako iz enačbe~(\ref{5.56b}) dobimo
+\begin{equation}  
+\label{5.64}
+\frac{d P_\lambda^+}{dt}=\left(-i \omega_0-\gamma\right)P^{+}+\frac{iv_{12}^2}{\hbar} E_\lambda^+ \overline{Z}.
 \end{equation}
 
-Enačbo za $\bar{Z}$ dobimo iz \ref{5.56}. V zadnjem členu imamo produkte $%
-E^{\pm}P^{\pm}=E_{\lambda}^{\pm}P_{\lambda}^{\pm} u_{\lambda}^2(\vec{r})$,
-kar moramo prostorsko povprečiti. Funkcije $u_{\lambda}(\vec{r})$ so
-normirane, tako da je $\int u_{\lambda}^2(\vec{r}) \,dV=V$. Tako imamo $%
-\overline{u_{\lambda}^2(\vec{r})}=1$ in 
-\begin{equation}  \label{5.65}
-\dot{\bar{Z}}= A(\bar{Z}_0-\bar{Z})- \frac{2}{i\hbar}(E_{\lambda}^++
-E_{\lambda}^-)(P_{\lambda}^- - P_{\lambda}^+)\;,
+Enačbo za $\overline{Z}$ dobimo iz (\ref{5.56}). V zadnjem členu nastopajo produkti 
+$E^{\pm}P^{\pm}=E_{\lambda}^{\pm}P_{\lambda}^{\pm} u_{\lambda}^2\left(\mathbf{r}\right)$,
+ki jih moramo prostorsko povprečiti. Funkcije $u_{\lambda}\left(\mathbf{r}\right)$ so
+normirane, tako da je $\int u_{\lambda}^2\left(\mathbf{r}\right) \,dV=V$ in $\overline{u_{\lambda}^2\left(\mathbf{r}\right)}=1$.
+Sledi
+\begin{equation}  
+\label{5.65}
+\frac{d\overline{Z}}{dt}= A\left(\overline{Z}_0-\overline{Z}\right)- \frac{2i}{\hbar}\left(E_{\lambda}^+
++E_{\lambda}^-\right)\left(P_{\lambda}^- - P_{\lambda}^+\right),
 \end{equation}
-kjer je $\bar{Z}_0$ povprečje nenasičene zasedenosti $Z_0$. V zadnjem
+kjer je $\overline{Z}_0$ povprečje nenasičene zasedenosti $Z_0$. V zadnjem
 členu nastopajo produkti, ki nihajo s frekvencami $\omega_{\lambda}-
-\omega_0$ in $\omega_{\lambda}+ \omega_0$. Obe frekvenci sta si zelo blizu,
-zato je njuna vsota mnogo večja od razlike. "Cleni $E_{\lambda}^+
-P_{\lambda}^+$ in $E_{\lambda}^- P_{\lambda}^-$ se torej zelo hitro
-spreminjajo in skoraj nič ne vplivajo na valovanje blizu $\omega_{\lambda}$%
-, zato jih izpustimo. S tem je časovna odvisnost $\bar{Z}$ podana z 
-\begin{equation}  \label{5.66}
-\dot{\bar{Z}}= A(\bar{Z}_0-\bar{Z})- \frac{2}{i\hbar}(E_{\lambda}^+
-P_{\lambda}^- - E_{\lambda}^- P_{\lambda}^+)\;.
+\omega_0$ in $\omega_{\lambda}+ \omega_0$. Frekvenci sta si zelo blizu,
+zato je njuna vsota znatno večja od razlike. Hitro spreminjajoče se člene 
+$E_{\lambda}^+P_{\lambda}^+$ in $E_{\lambda}^- P_{\lambda}^-$ izpustimo, 
+saj skoraj nič ne vplivajo na valovanje blizu $\omega_{\lambda}$. Časovno odvisnost 
+$\overline{Z}$ tako zapišemo 
+\begin{equation}  
+\label{5.66}
+\frac{d\overline{Z}}{dt}= A\left(\overline{Z}_0-\overline{Z}\right)- \frac{2}{i\hbar}\left(E_{\lambda}^+
+P_{\lambda}^- - E_{\lambda}^- P_{\lambda}^+\right).
 \end{equation}
-Enačbe \ref{5.63}, \ref{5.64} in \ref{5.66}, skupaj s konjugirano
+Enačbe (\ref{5.63}), (\ref{5.64}) in (\ref{5.66}), skupaj s konjugirano
 kompleksnimi enačbami za $E_{\lambda}^-$ in $P_{\lambda}^-$, so zaključen
 sistem, ki opisuje delovanje enofrekvenčnega laserja. Uporabimo jih za
 izračun frekvence izhodne svetlobe.
 
 Naj bo stanje stacionarno. Tedaj lahko polje zapišemo v obliki $E_{\lambda
-}^{+}=E_{0}e^{-i\Omega t}$, kjer je $E_{0}$ realna konstanta, frekvenca
-svetlobe $\omega $ pa je blizu $\omega _{0}$ in $\omega _{\lambda }$. V
-stacionarnem stanju mora imeti polarizacija enako časovno odvisnost: $%
-P_{\lambda }^{+}=P_{0}e^{-i\Omega t}$. Tedaj je v enačbi \ref{5.66} drugi
-oklepaj konstanten in mora biti tudi $\bar{Z}$ v stacionarnem stanju od
-časa neodvisna. Sistem enačb \ref{5.63}, \ref{5.64} in \ref{5.66} 
+}^{+}=E_{0}e^{-i\Omega t}$, kjer je $E_{0}$ realna konstanta, krožna frekvenca
+svetlobe $\Omega$ pa je blizu $\omega _{0}$ in $\omega _{\lambda }$. V
+stacionarnem stanju ima polarizacija enako časovno odvisnost in 
+$P_{\lambda }^{+}=P_{0}e^{-i\Omega t}$. Tedaj je v enačbi~(\ref{5.66}) drugi
+oklepaj konstanten in povprečna gostota obrnjene zasedenosti $\overline{Z}$ je 
+v stacionarnem stanju od časa neodvisna. Sistem enačb (\ref{5.63}), (\ref{5.64}) in (\ref{5.66}) 
 tako da 
 \begin{eqnarray}
--[i(\omega _{\lambda }-\Omega )+\frac{1}{\tau }]E_{0}-\frac{i\omega _{0}}{%
-2\epsilon _{0}}\,P_{0} &=&0  \nonumber  \label{5.67} \\
--[i(\omega _{0}-\Omega )+\gamma ]P_{0}+\frac{v_{12}^{2}}{i\hbar }\,E_{0}\bar{%
-Z} &=&0  \nonumber \\
-A(\bar{Z}_{0}-\bar{Z})-\frac{2}{i\hbar }\,E_{0}(P_{0}^{*}-P_{0}) &=&0\;.
+\left(i\left(\Omega - \omega_{\lambda}\right)-\frac{1}{\tau}\right) E_{0}+\frac{i\omega _{0}}
+{2\epsilon _{0}}\,P_{0} &=&0  \label{5.67} \\
+\left(i\left(\Omega-\omega_{0}\right)-\gamma\right)P_{0}+\frac{iv_{12}^{2}}{\hbar}\,E_{0}\overline{Z} &=&0 \\
+A\left(\overline{Z}_{0}-\overline{Z}\right)-\frac{2}{i\hbar }\,E_{0}\left(P_{0}^{*}-P_{0}\right) &=&0.
 \end{eqnarray}
 
-Najprej izračunamo $P_0$ iz druge enačbe, ga postavimo v tretjo in
-izračunamo $\bar{Z}$: 
-\begin{equation}  \label{5.68}
-\bar{Z}=\bar{Z}_0\left[1+\frac{v_{12}^2}{\hbar^2 A}\,E_0^2\, \frac{2\gamma}{%
-(\omega_0-\Omega)^2+\gamma^2}\right]^{-1}
+Najprej iz druge enačbe izrazimo $P_0$, ga vstavimo v tretjo in izračunamo $\overline{Z}$. Dobimo
+\begin{equation}  
+\label{5.68}
+\overline{Z}=\overline{Z}_0\left[1+\frac{v_{12}^2}{\hbar^2 A}\,E_0^2\, \frac{2\gamma}{%
+\left(\omega_0-\Omega\right)^2+\gamma^2}\right]^{-1}
 \end{equation}
-Ta izraz že poznamo. $\pi v_{12}^2/(\epsilon_0\hbar^2)$ je Einsteinov
+Ta izraz že poznamo. $\pi v_{12}^2/\left(\epsilon_0\hbar^2\right)$ je Einsteinov
 koeficient $B$. $E_0^2$ je sorazmern gostoti energije polja v resonatorju,
 zadnji ulomek v oklepaju pa podaja obliko homogeno razširjene atomske
 črte: 
 \begin{equation}  \label{5.69}
-\bar{Z}=\bar{Z}_0\left[1+\frac{2B}{A}\,g(\omega_0- \Omega)w\right]^{-1}
+\overline{Z}=\overline{Z}_0\left[1+\frac{2B}{A}\,g\left(\omega_0- \Omega\right)w\right]^{-1}
 \end{equation}
 To je natanko enako izrazu za nasičenje zasedenosti stanj, ki smo ga
 izpeljali iz zasedbenih enačb v četrtem poglavju.
 
 Postavimo $P_0$ iz prve enačbe sistema \ref{5.67} v drugo: 
 \begin{equation}  \label{5.70}
-E_0[i(\Omega-\omega_{\lambda})+\frac{1}{\tau}] [i(\Omega- \omega_0)
-+\gamma]=-\frac{v_{12}^2 \omega_0}{2\hbar\epsilon_0}\,E_0\,\bar{Z}\;.
+E_0[i\left(\Omega-\omega_{\lambda}\right)+\frac{1}{\tau}] [i\left(\Omega- \omega_0\right)
++\gamma]=-\frac{v_{12}^2 \omega_0}{2\hbar\epsilon_0}\,E_0\,\overline{Z}\;.
 \end{equation}
-V delujočem laserju je $E_0\ne 0$, zato lahko krajšamo. $\bar{Z}$ je
+V delujočem laserju je $E_0\ne 0$, zato lahko krajšamo. $\overline{Z}$ je
 realen, tako da mora biti imaginarni del leve strani enak nič: 
 \begin{equation}  \label{5.71}
-(\Omega- \omega_{\lambda})\gamma+(\Omega- \omega_0)\frac{1}{\tau} = 0 \;.
+\left(\Omega- \omega_{\lambda}\right)\gamma+\left(\Omega- \omega_0\right)\frac{1}{\tau} = 0 \;.
 \end{equation}
 Od tod lahko izračunamo frekvenco laserja 
 \begin{equation}  \label{5.72}
