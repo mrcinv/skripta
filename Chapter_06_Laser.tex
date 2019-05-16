@@ -1285,13 +1285,13 @@ pri čemer je $v_{12} = -e\langle1|\hat{x}|2\rangle$ in $\omega_0=(W_2-W_1)/\hba
 Električni dipolni moment atoma v stanju ${\psi}$ je 
 \begin{equation}  
 \label{5.47}
-p=-e\langle\psi|\hat{x}|\psi\rangle=
+p=e\langle\psi|\hat{x}|\psi\rangle=-
 (c_1^{\ast}c_2e^{-i \omega_0t}+c_1c_2^{\ast}e^{i \omega_0 t}) v_{12}.
 \end{equation}
 Razdelimo $p$ na dva dela in zapišemo
 \begin{equation}  
 \label{5.48}
-p=p^+ + p^-=v_{12}[\eta(t)+\eta^{\ast}(t)],
+p=p^+ + p^-=-v_{12}[\eta(t)+\eta^{\ast}(t)],
 \end{equation}
 kjer smo vpeljali $\eta(t)=c_1^{\ast}c_2e^{-i \omega_0 t}$.
 
@@ -1373,14 +1373,14 @@ Valovna enačba v skalarni obliki je tedaj
 pri čemer je v primeru, da so vsi atomi enakovredni, polarizacija enaka
 \begin{equation}  
 \label{5.53}
-P=\frac{N}{V}p = \frac{N}{V}\,v_{12}\left(\eta+\eta^{\ast}\right)=P^+ + P^-.
+P=\frac{N}{V}p = -\frac{N}{V}\,v_{12}\left(\eta+\eta^{\ast}\right)=P^+ + P^-.
 \end{equation}
 Namesto mikroskopske količine $\zeta$ lahko uvedemo še gostoto obrnjene
 zasedenosti $Z=(N/V)\zeta$ in enačbe (\ref{5.51}), (\ref{5.52}) in (\ref{5.52c})
 prepišemo v obliko 
 \boxeq{5.56}{
-\frac{dZ}{dt} &= A\left(Z_0-Z\right)-\frac{2i}{\hbar}E\left(P^- - P^+\right), \\
-\frac{dP^+}{dt}&=\left(-i \omega_0-\gamma\right)P^{+}+\frac{i}{\hbar} Ev_{12}^2 Z, \label{5.56b}\\
+\frac{dZ}{dt} &= A\left(Z_0-Z\right)+\frac{2i}{\hbar}E\left(P^- - P^+\right), \\
+\frac{dP^+}{dt}&=\left(-i \omega_0-\gamma\right)P^{+}-\frac{i}{\hbar} Ev_{12}^2 Z, \label{5.56b}\\
 \frac{dP^-}{dt}&=\left(i \omega_0-\gamma\right)P^{-}+\frac{i}{\hbar} Ev_{12}^2 Z.\label{5.56c}
 }
 Opozorimo še, da je prehod z enačb (\ref{5.51}--\ref{5.52c}) na (\ref{5.56}--\ref{5.56c}) 
@@ -1448,7 +1448,7 @@ približka in enačbe~(\ref{5.61}) preide valovna enačba (enačba~\ref{5.54}) z
 \begin{equation}  
 \label{5.62}
 \frac{dE_{\lambda}^+}{dt}=-i \omega_{\lambda} E_{\lambda}^++
-\frac{i \omega_0}{2\epsilon_0}P_{\lambda}^.
+\frac{i \omega_0}{2\epsilon_0}P_{\lambda}^+.
 \end{equation}
 
 Doslej še nismo upoštevali, da je polje v praznem resonatorju dušeno, zato
@@ -1470,7 +1470,7 @@ predvsem zato, ker sklapljajo različna lastna stanja resonatorja, vendar to
 presega našo trenutno obravnavo. Tako iz enačbe~(\ref{5.56b}) dobimo
 \begin{equation}  
 \label{5.64}
-\frac{d P_\lambda^+}{dt}=\left(-i \omega_0-\gamma\right)P^{+}+\frac{iv_{12}^2}{\hbar} E_\lambda^+ \overline{Z}.
+\frac{d P_\lambda^+}{dt}=\left(-i \omega_0-\gamma\right)P_\lambda^{+}-\frac{iv_{12}^2}{\hbar} E_\lambda^+ \overline{Z}.
 \end{equation}
 
 Enačbo za $\overline{Z}$ dobimo iz (\ref{5.56}). V zadnjem členu nastopajo produkti 
@@ -1480,7 +1480,7 @@ normirane, tako da je $\int u_{\lambda}^2\left(\mathbf{r}\right) \,dV=V$ in $\ov
 Sledi
 \begin{equation}  
 \label{5.65}
-\frac{d\overline{Z}}{dt}= A\left(\overline{Z}_0-\overline{Z}\right)- \frac{2i}{\hbar}\left(E_{\lambda}^+
+\frac{d\overline{Z}}{dt}= A\left(\overline{Z}_0-\overline{Z}\right)+ \frac{2i}{\hbar}\left(E_{\lambda}^+
 +E_{\lambda}^-\right)\left(P_{\lambda}^- - P_{\lambda}^+\right),
 \end{equation}
 kjer je $\overline{Z}_0$ povprečje nenasičene zasedenosti $Z_0$. V zadnjem
@@ -1492,7 +1492,7 @@ saj skoraj nič ne vplivajo na valovanje blizu $\omega_{\lambda}$. Časovno odvi
 $\overline{Z}$ tako zapišemo 
 \begin{equation}  
 \label{5.66}
-\frac{d\overline{Z}}{dt}= A\left(\overline{Z}_0-\overline{Z}\right)- \frac{2}{i\hbar}\left(E_{\lambda}^+
+\frac{d\overline{Z}}{dt}= A\left(\overline{Z}_0-\overline{Z}\right)+\frac{2i}{\hbar}\left(E_{\lambda}^+
 P_{\lambda}^- - E_{\lambda}^- P_{\lambda}^+\right).
 \end{equation}
 Enačbe (\ref{5.63}), (\ref{5.64}) in (\ref{5.66}), skupaj s konjugirano
@@ -1511,8 +1511,8 @@ tako da
 \begin{eqnarray}
 \left(i\left(\Omega - \omega_{\lambda}\right)-\frac{1}{\tau}\right) E_{0}+\frac{i\omega _{0}}
 {2\epsilon _{0}}\,P_{0} &=&0  \label{5.67} \\
-\left(i\left(\Omega-\omega_{0}\right)-\gamma\right)P_{0}+\frac{iv_{12}^{2}}{\hbar}\,E_{0}\overline{Z} &=&0 \\
-A\left(\overline{Z}_{0}-\overline{Z}\right)-\frac{2}{i\hbar }\,E_{0}\left(P_{0}^{*}-P_{0}\right) &=&0.
+\left(i\left(\Omega-\omega_{0}\right)-\gamma\right)P_{0}-\frac{iv_{12}^{2}}{\hbar}\,E_{0}\overline{Z} &=&0 \\
+A\left(\overline{Z}_{0}-\overline{Z}\right)+\frac{2i}{\hbar }\,E_{0}\left(P_{0}^{*}-P_{0}\right) &=&0.
 \end{eqnarray}
 
 Najprej iz druge enačbe izrazimo $P_0$, ga vstavimo v tretjo in izračunamo $\overline{Z}$. Dobimo
@@ -1524,7 +1524,7 @@ Najprej iz druge enačbe izrazimo $P_0$, ga vstavimo v tretjo in izračunamo $\o
 Ta izraz že poznamo. $\pi v_{12}^2/\left(\epsilon_0\hbar^2\right)$ je Einsteinov
 koeficient $B$. $E_0^2$ je sorazmern gostoti energije polja v resonatorju,
 zadnji ulomek v oklepaju pa podaja obliko homogeno razširjene atomske
-črte: 
+črte (\ref{eq:homogenasirina})
 \begin{equation}  \label{5.69}
 \overline{Z}=\overline{Z}_0\left[1+\frac{2B}{A}\,g\left(\omega_0- \Omega\right)w\right]^{-1}
 \end{equation}
