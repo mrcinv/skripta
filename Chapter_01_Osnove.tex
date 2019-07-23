@@ -260,7 +260,7 @@ s kvadratom amplitude jakosti električnega polja. Poglejmo nekaj primerov.
 Gostoti toka $j=1~\si{kW/m^{2}}$
 (približna gostota svetlobnega toka s Sonca na Zemljinem površju) v praznem prostoru ustreza 
 jakost električnega polja $E_{0}=868~\si{\volt/\meter}$, gostoti $j=1~\si{W/\micro m^{2}}$ 
-(intenziteta močno zbranega laserskega žarka) pa $E_{0}=27~\si{MV/m}$. 
+(močno zbran laserski žarek) pa $E_{0}=27~\si{MV/m}$. 
 
 Zapišimo še povprečno gostoto energije valovanja\index{Gostota energije}. 
 K energiji prispevata tako magnetno kot električno polje. Oba prispevka sta enaka, zato velja
@@ -460,9 +460,8 @@ pri odboju.
 
 Amplitudna odbojnost $r$ in amplitudna prepustnost $t$ povesta, kako se spremeni 
 kompleksna amplituda jakosti električnega polja pri odboju oziroma lomu.
-Razmerje med intenziteto odbite in vpadne svetlobe $\mathcal{R}$ oziroma intenziteto
-prepuščene in vpadne svetlobe
-$\mathcal{T}$ izračunamo kot 
+Razmerje med gostoto energijskega toka odbite in vpadne svetlobe $\mathcal{R}$ oziroma 
+prepuščene in vpadne svetlobe $\mathcal{T}$ izračunamo kot 
 \begin{equation}
 \mathcal{R}=\left|r\right|^{2} \qquad \mathrm{in} \qquad \mathcal{T}=1-\mathcal{R}.
 \end{equation}
@@ -479,7 +478,7 @@ r_{\mathrm{TE}} = r_{\mathrm{TM}} = \frac{n_1-n_2}{n_1+n_2}
 \quad \mathrm{in} \quad 
 t_{\mathrm{TE}} = t_{\mathrm{TM}} = \frac{4n_1n_2}{n_1+n_2}. 
 \end{equation}
-Ob pravokotnem vpadu iz zraka na steklo ($n_2 \approx 1,5$) je tako odbojnost 
+Ob pravokotnem vpadu iz zraka na steklo ($n_1 = 1$ in $n_2 \approx 1,5$) je tako odbojnost 
 \begin{equation}
 \mathcal{R} = \left(\frac{1-n_2}{1+n_2}\right) \approx 0,04.
 \end{equation}
@@ -496,8 +495,8 @@ pri Brewstrovem kotu velja $\mathcal{T}_\mathrm{TM}=1$ in $\mathcal{T}_\mathrm{T
   \def\svgwidth{140truemm} 
   \input{slike/01_BrewsterNew.pdf_tex}
 \caption{Amplitudna odbojnost $r$ za obe vpadni polarizaciji (a, b) in razmerje med 
-intenziteto odbite in vpadne svetlobe $\mathcal{R}$ za obe polarizaciji v odvisnosti 
-od vpadnega kota (c, d). Za primer na slikah (a) in (c) velja $n_1<n_2$, za primer na 
+gostoto energijskega toka odbite in vpadne svetlobe $\mathcal{R}$ za obe polarizaciji (c, d)
+v odvisnosti od vpadnega kota. Za primer na slikah (a) in (c) velja $n_1<n_2$, za primer na 
 slikah (b) in (d) pa $n_1>n_2$. Z zeleno je označen Brewstrov kot $\vartheta_B$, 
 z vijolično pa mejni kot totalnega odboja $\vartheta_T$.}
 \label{fig:Brewster}
@@ -527,7 +526,8 @@ eksponentno z oddaljenostjo od nje. Vdorna globina je odvisna od valovne
 dolžine valovanja, lomnega količnika snovi in tudi od vpadnega kota. 
 Čeprav se v optično redkejši snovi pojavi električno polje, je Poyntingov
 vektor v smeri pravokotno na mejno ploskev v povprečju enak nič in zato ne pride do prenosa energije
-v drugo snov. 
+v drugo snov.
+\vglue-5truemm
 \begin{remark}
 Prozorne ploščice, ki so postavljene pod Brewstrovim kotom glede na smer vpadne svetlobe, 
 imenujemo Brewstrova okna\index{Brewstrovo okno}. Njihova značilnost je,
@@ -536,7 +536,7 @@ del pa prepusti. Brewstrova okna so zelo uporabna pri izdelavi resonatorjev
 plinskih laserjev, saj so izgube za izbrano polarizacijo zelo majhne, 
 za drugo pa razmeroma velike.  
 \end{remark}
-\vglue-1truecm
+\vglue-5truemm
 \begin{remark}
 Pri prehodu skozi optične elemente se --
 razen TM polariziranega valovanja pri Brewstrovem
@@ -544,11 +544,12 @@ kotu -- vedno nekaj
 svetlobe odbije. Da zmanjšamo te izgube, optične elemente navadno
 prekrijemo z antirefleksno plastjo, to je nanosom ene ali več primerno
 debelih plasti dielektrikov z ustreznimi lomnimi količniki.
-Zaradi destruktivne interference se količina odbite svetlobe z izbrano
+Zaradi destruktivne interference valovanj, odbitih na posameznih plasteh,
+se količina odbite svetlobe z izbrano
 valovno dolžino občutno zmanjša. Ker so laserji
 koherentni izvori svetlobe s točno določeno valovno dolžino, za zmanjšanje
 izgub, na primer v resonatorju laserja, uporabljamo optične
-elemente (leče, kristale, akusto-optične modulatorje ... ) z ustrezno
+elemente (leče, kristale, modulatorje ... ) z ustrezno
 antirefleksno plastjo.
 \end{remark}
 
@@ -558,10 +559,10 @@ ima zaradi uklona zabrisane robove. Obravnave
 uklona svetlobe na odprtinah ali zaslonkah se lotimo z uporabo
 skalarnega približka teorije elektromagnetnega polja. To pomeni, da vpliva 
 polarizacije ne upoštevamo. Ta je pomemben zgolj pri zelo majhnih odprtinah, 
-kjer je velikost odprtine po velikosti podobna valovni dolžini svetlobe $a \sim \lambda$. 
+kjer je velikost odprtine $a$ po velikosti podobna valovni dolžini svetlobe $a \sim \lambda$. 
 Vendar so tudi v tem primeru uklonske slike za različne polarizacije podobne, 
-razlikujejo pa se po intenziteti uklonjene svetlobe.
-
+razlikujejo pa se po jakosti uklonjene svetlobe.
+\vglue-5truemm
 \begin{remark}
 Primer, kjer skalarni približek ne da pravih rezultatov, je uklon na mrežici, narejeni 
 iz zelo tankih prevodnih žic. Takšna mrežica deluje kot polarizator za vpadno elektromagnetno valovanje.
@@ -610,7 +611,7 @@ jakost polja $E$ in njen gradient doprineseta k integralu le na odprtini, na pre
 pa sta njuna prispevka zanemarljivo majhna; vrednost $E$ in njen gradient sta na 
 odprtini takšna, kot da zaslona ne bi bilo.
 Približka sta precej groba, vendar se izkaže, da se kljub temu
-dobro ujemata z eksperimentalno določeno uklonsko sliko, s čimer 
+dobro ujemata z eksperimentalno uklonsko sliko, s čimer 
 upravičimo njuno uporabo.
 \begin{figure}[h]
 \centering \def\svgwidth{60truemm} 
@@ -673,7 +674,7 @@ pri čemer smo upoštevali tudi splošno obliko vpadnega vala $E_S(r')$.
 
 \subsection*{Fraunhoferjev in Fresnelov približek}
 \label{FFuklon}
-Izračun Fresnel-Kirchhoffovega integrala (enačba~\ref{eq:Kirchhoffov-integral}) 
+Izračun Fresnel-Kirchhoffovega uklonskega integrala (enačba~\ref{eq:Fresnel-Kirchoffov-integral}) 
 je na splošno zelo zapleten, zato se 
 pogosto poslužujemo dveh približkov: Fraunhoferjevega\footnote{Nemški fizik 
 Joseph von Fraunhofer, 1787--1826.} in Fresnelovega\index{Fresnelov uklon}. 
@@ -689,7 +690,7 @@ Izhajamo iz Fresnel-Kirchhoffovega integrala za točkast izvor
 lego točke $P$ s koordinatami $x,y$ in $z$, razdaljo $r$ pa 
 s koordinatami točke $P$ in koordinatama na zaslonu $x'$ in $y'$ 
  (slika \ref{fig:Uklon-koordinate}). Privzamemo,
-da je oddaljenost do zaslona $z$ bistveno večja od prečnih dimenzij $x$ in $y$. 
+da je oddaljenost zaslona $z$ bistveno večja od prečnih dimenzij $x$ in $y$. 
 Zapišemo razdaljo $r$ in jo razvijemo
 \begin{equation}
 r = \sqrt{(x-x')^2+(y-y')^2 + z^2} \approx z + \frac{(x-x')^2}{2z} +\frac{(y-y')^2}{2z}.
@@ -700,7 +701,7 @@ Vstavimo razvoj v uklonski integral (enačba~\ref{eq:Fresnelov-uklon}), pri
 \label{eq:FresnelApprox}
 E_P(x,y,z) =  \frac{1}{i \lambda z } e^{i k z}\int \int E_S\, e^{ik ((x-x')^2+(y-y')^2)/2z} dx' dy'.
 \end{equation}
-Kadar je oddaljenost do zaslona dovolj velika oziroma prečne dimenzije dovolj majhne, da zadošča 
+Kadar je oddaljenost zaslona dovolj velika oziroma so prečne dimenzije dovolj majhne, da zadošča 
 razvoj do linearnih členov, govorimo o Fraunhoferjevem uklonu in uklonski integral je
 \begin{equation}
 \label{eq:FraunhoferApprox}
@@ -712,7 +713,7 @@ Fraunhoferjeva uklonska slika\index{Fraunhoferjev uklon} velja za razmeroma veli
 zaslona od uklonske odprtine, ko lahko uklonjeni val dovolj dobro opišemo z ravnim valom. 
 Bolj zapleteno Fresnelovo uklonsko sliko moramo uporabiti, kadar obravnavamo 
 primer bližnjega polja. 
-Mejo med Fraunhoferjevim in Fresnelovim približkom kvalitativno določa Fresnelovo 
+Mejo med Fraunhoferjevim in Fresnelovim režimom kvalitativno določa Fresnelovo 
 število\index{Fresnelovo število}
 \begin{equation}
 F= \frac{a^2}{L\lambda}.
@@ -743,7 +744,7 @@ kjer je $a$ polmer odprtine, $J_1(x)$ je Besslova funkcija in $\rho = \sqrt{x^2+
 \section{EM valovanje v anizotropnih snoveh}\label{chap:anizotropni}
 Do zdaj smo obravnavali elektromagnetno valovanje
 v izotropnih snoveh, v katerih je dielektričnost skalar in hitrost 
-valovanja neodvisna od njegove smeri. Na splošno so snovi anizotropne,
+valovanja neodvisna od smeri. Na splošno so snovi anizotropne,
 dielektričnost\index{Dielektričnost} je tenzor, hitrost potovanja svetlobe \index{Hitrost valovanja}
 skozi snov pa je odvisna od smeri širjenja in od polarizacije valovanja. 
 
@@ -814,8 +815,9 @@ določajo smeri optičnih osi. \index{Optična os}
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/01_kploskev.pdf_tex}
-\caption{Dvolistna ploskev valovnega vektorja, pri čemer zaradi nazornosti rišemo le prvi 
-oktant. V dvoosnem kristalu (levo) sta dve optični osi. Druga os ni narisana, leži pa 
+\caption{Dvolistna ploskev valovnega vektorja, pri čemer zaradi nazornosti rišemo le presečišča
+ploskve z geometrijskimi ravninami v prvem oktantu. 
+V dvoosnem kristalu (levo) sta dve optični osi. Druga os ni narisana, leži pa 
 simetrično glede na os $z$. Privzeli smo, da velja $n_1<n_2<n_3$.
 V optično enoosnem kristalu (desno) je le ena optična os, 
 po dogovoru je to os $z$. Rdeče puščice označujejo ustrezno polarizacijo.}
@@ -836,8 +838,8 @@ Ker je optična os samo ena, imenujemo kristal optično enoosen.
 
 Za lažjo predstavo si oglejmo ploskev valovnega vektorja (slika~\ref{kploskev}, desno). 
 V tem primeru ni treba obravnavati celotne ploskve, ampak zaradi rotacijske simetrije
-zadošča, da narišemo presek ploskve valovnega vektorja z ravnino, ki jo določata 
-optična os in valovni vektor $\mathbf{k}$ (vpadno ravnino). 
+zadošča, da narišemo presek ploskve valovnega vektorja z vpadno ravnino, ki jo določata 
+optična os in valovni vektor $\mathbf{k}$. 
 Pomemben je le kot $\vartheta$ med valovnim vektorjem $\mathbf{k}$ 
 in optično osjo $z$, zato si lahko drugo koordinatno os poljubno izberemo. Tukaj izberemo
 os $y$ (slika~\ref{fig:Elipsa}). 
@@ -861,7 +863,7 @@ valovne fronte pa so pravokotne nanj. To velja tudi za redni žarek v anizotropn
 snoveh. Izredni žarek pa ima, kot že ime nakazuje, ``izredne'' lastnosti. Vektorja
 $\mathbf{E}$ in $\mathbf{D}$ nista vzporedna, zato tudi valovni vektor $\mathbf{k}$ ni vzporeden
 energijskemu toku oziroma Poyntingovemu vektorju $\mathbf{S}$ (slika \ref{fig:Elipsa}\,c). 
-Smer energijskega toka, ki ni enaka smeri valovnega vektorja, določimo kot normalo 
+Smer energijskega toka, ki ni enaka smeri valovnega vektorja, določimo z normalo 
 na elipso pri kotu $\vartheta$. 
 
 \begin{figure}[h]
@@ -880,10 +882,11 @@ anizotropno snov.}
 \end{figure}
 \subsection*{Dvojni lom}
 Ko vpade žarek na snov, se lomi. Hitrost valovanja -- in s tem tudi 
-kot, pod katerim se lomi -- je v anizotropnih snoveh odvisna od polarizacije. Na splošno
+kot, pod katerim se lomi -- je v anizotropnih snoveh odvisna od polarizacije.
+Pri zapisu \index{Lomni zakon}lomnega zakona (enačba \ref{eq:lomni_zakon}) 
+v anizotropnih snoveh moramo biti zato pazljivi. Na splošno
 se pojavita dva lomljena žarka z različnima polarizacijama, kar
-da ime pojavu: \index{Dvolomnost}dvolomnost (slika~\ref{fig:dvolomnost}). Pri zapisu \index{Lomni 
-zakon}lomnega zakona (enačba \ref{eq:lomni_zakon}) v anizotropnih snoveh moramo biti pazljivi. 
+da ime pojavu: \index{Dvolomnost}dvolomnost (slika~\ref{fig:dvolomnost}). 
 
 Za redni val s TE polarizacijo (pravokotno na vpadno ravnino) velja navadni lomni zakon, pri čemer
 je lomni količnik snovi enak rednemu lomnemu količniku $n_o$
