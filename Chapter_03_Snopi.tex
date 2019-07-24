@@ -38,11 +38,12 @@ Območje bližnjega polja seže do $b$, ki ga lahko ocenimo s slike (\ref{fig:Uk
 
 Včasih taki približni oceni zadoščata. Bolj kvantitativen opis omejenih
 snopov bi lahko dobili s Fraunhoferjevo in Fresnelovo uklonsko teorijo,
-kar pa ni najudobnejša pot. Lotimo se naloge raje z uporabo približka
-obosne valovne enačbe.
+kar pa ni najudobnejša pot (glej nalogo~\ref{ffuklon}). Lotimo se problema raje z 
+uporabo približka obosne valovne enačbe.
 
 \begin{definition}
-Pokaži, da je Fraunhoferjeva uklonska slika reže, katere prepustnost se v radialni smeri
+\label{ffuklon}
+Pokaži, da je Fraunhoferjeva uklonska slika na odprtini, katere prepustnost se v radialni smeri
 spreminja kot Gaussova funkcija $T(\xi, \eta)=e^{-(\xi^2+\eta^2)/w_0^2}$, podana z Gaussovo funkcijo
 oblike $E(x,y,z) \propto e^{-(x^2+y^2)/w^2(z)}$ in določi odvisnost $w(z)$. Izračunaj še 
 uklonsko sliko v bližnjem polju po Fresnelovi uklonski teoriji.
@@ -67,10 +68,10 @@ kjer je $\mathbf{r}$ krajevni vektor v ravnini $xy$, prečni na smer širjenja s
 Glavni del odvisnosti od koordinate $z$ smo zapisali v faktorju $e^{ikz}$, tako da lahko
 privzamemo, da se $\psi$ v smeri $z$ le počasi spreminja. Vstavimo
 gornji nastavek v Helmholtzevo enačbo (enačba~\ref{eq:valovna-enacba-hh})
-in pri tem zanemarimo druge odvode po $z$, saj je zaradi počasnega spreminjanja
+in pri tem zanemarimo druge odvode $\psi$ po $z$, saj je zaradi počasnega spreminjanja
 $\partial^{2}\psi/\partial z^{2}$ majhen v primerjavi s $k\partial\psi/\partial z$ in $k^{2}\psi$.
 Dobimo obosno
-ali paraksialno valovno enačbo\index{Obosna valovna enačba}
+ali paraksialno valovno enačbo\index{Obosna valovna enačba} za $\psi$
 \index{Paraksialna enačba|see{Obosna valovna enačba}}
 \boxeq{eq:obosna-valovna-enacba}{
 \nabla_{\perp}^{2}\psi=-2ik{\frac{{\partial\psi}}{{\partial z}}}.
@@ -100,7 +101,7 @@ k_{3}=k-\beta=k-\frac{k_{1}^{2}+k_{2}^{2}}{2k}.
 Pri tem $k_{3}$ označuje vzdolžno in $k_{1}$ ter $k_{2}$ prečni komponenti valovnega 
 vektorja, $k$ pa je valovno število. 
 Za ravni val, ki je rešitev Helmholtzeve enačbe (enačba~\ref{eq:valovna-enacba-hh})
-in ne obosnega približka, velja 
+in ne obosnega približka (enačba~\ref{eq:obosna-valovna-enacba}), velja 
 \begin{equation}
 k_{3}=\sqrt{k^{2}-(k_{1}^{2}+k_{2}^{2})}.\label{eq:k3-tocno}
 \end{equation}
