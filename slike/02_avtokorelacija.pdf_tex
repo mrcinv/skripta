@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{293.7168045bp}%
+    \setlength{\unitlength}{293.71678162bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,12 +50,14 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.70587445)%
+  \begin{picture}(1,0.7058745)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
+    \put(-0.04486224,0.58252388){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$1$}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{02_avtokorelacija.pdf}}%
-    \put(0.95097317,0.03197608){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$\tau$}\end{tabular}}}}%
-    \put(0.03491824,0.6163016){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$|g(\tau)|$\end{tabular}}}}%
-    \put(0.23228217,0.01054622){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$t_c$\end{tabular}}}}%
+    \put(0.95097321,0.03197609){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$\tau$}\end{tabular}}}}%
+    \put(0.05023912,0.64694342){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$|g(\tau)|$\end{tabular}}}}%
+    \put(0.23228218,0.01054623){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$t_c$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{02_avtokorelacija.pdf}}%
   \end{picture}%
 \endgroup%

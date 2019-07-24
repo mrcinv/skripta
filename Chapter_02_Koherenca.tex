@@ -267,29 +267,26 @@ presega $100~\si{\kilo\metre}$.
 
 Spoznali smo, da je monokromatski ravni val povsem koherenten in njegov
 korelacijski čas neskončen. Obravnavajmo zdaj koherenco poljubnega valovanja, ki
-je v povprečju stacionarno. To pomeni, da se v času meritve povprečna intenziteta
-ne spreminja. Vzamemo vzorec valovanja, ki traja čas $T$, in ga razvijemo 
+je v povprečju stacionarno. To pomeni, da se povprečna gostota svetlobnega
+toka v času zajemanja, ki traja čas $T$, ne spreminja. Vzorec valovanja razvijemo
 v Fourierevo vrsto
 \begin{equation}
-E(t)=\sum_{n}A_{n}(\omega)e^{-in\Delta\omega t},\mbox{\hskip1cm}\Delta\omega=\frac{2\pi}{T}.
+E(t)=\sum_{n}A_{n}(\omega)e^{-i n \Delta\omega t},\mbox{\hskip1cm}\Delta\omega=\frac{2\pi}{T}.
 \end{equation}
 Amplitude $A_{n}(\omega)$ so slučajne spremenljivke, ki predstavljajo delež polja pri 
-krožni frekvenci $\omega=n\Delta\omega$, 
-čas $T$ pa označuje čas opazovanja in mora biti bistveno daljši od $t_{c}$. 
+krožni frekvenci $\omega=n\Delta\omega$, čas opazovanja $T$ pa naj bo bistveno daljši od $t_{c}$. 
 Zapišimo amplitude $A_n$
 \begin{equation}
 A_{n}(\omega)=\frac{1}{T}\int_{-T/2}^{T/2}E(t)\, e^{i\omega t}\, dt.\label{eq:amplituda-An}
 \end{equation}
- Vemo, da je kvadrat $|A_{n}(\omega)|^{2}$ sorazmeren gostoti 
-svetlobnega toka pri krožni frekvenci $\omega$. Potem lahko vpeljemo 
+Kvadrat $|A_{n}(\omega)|^{2}$, ki je sorazmeren z gostoto svetlobnega toka pri krožni
+frekvenci $\omega$, imenujmo intenziteta\index{Intenziteta}
+valovanja\footnote{Intenziteto valovanja na splošno vpeljemo kot $|E|^2$, gostota svetlobnega
+toka pa je $j = \varepsilon \varepsilon_0 c |E|^2/2$ z enotami W/m$^2$ (enačba~\ref{eq:jcw}). 
+Kadar predfaktorji niso pomembni, pogosto uporabljamo krajši izraz.}. 
+Potem vpeljemo 
 \index{Spekter}spekter $S(\omega)$, ki podaja intenziteto svetlobe pri $\omega$,
-deljeno z intervalom $\Delta\omega$\footnote{Gostota 
-svetlobnega toka\index{Gostota energijskega toka} oziroma intenziteta
-je $j = \varepsilon \varepsilon_0 c |E|^2/2$
-z enotami W/m$^2$. Občasno zapis poenostavimo in namesto celotne 
-oblike $j$ uporabljamo $I = |E|^2$. Oboje imenujemo intenziteta, iz zapisa
-v enačbi pa je jasno, katero obliko uporabljamo. 
-} 
+deljeno z intervalom $\Delta\omega$
 \begin{equation}
 S(\omega)=\frac{|A_{n}(\omega)|^{2}}{\Delta\omega}=\frac{T}{2\pi}|A_{n}(\omega)|^{2}.
 \end{equation}
@@ -303,9 +300,10 @@ Uvedemo novo spremenljivko $\tau=t^{\prime}-t$ in zapišemo
 S(\omega)=\frac{1}{2\pi T}\int_{-\infty}^{\infty}e^{-i\omega\tau}d\tau\int_{-T/2}^{T/2}E(t)E^{*}(t+\tau)\, dt.
 \label{eq:spekter}
 \end{equation}
-Opazimo, da je integral po $t$ ravno enak korelacijski funkciji $G(\tau)$. Ker je $T\gg t_{c}$,
-je korelacijska funkcija na mejah integracije po enaka $\tau$ nič, zato
-smo meje integracije po $\tau$ lahko raztegnili do neskončnosti. Zveza, ki smo jo dobili, je 
+Integral po $t$ je ravno enak korelacijski funkciji $G(\tau)$ 
+(enačba~\ref{eq:avtokorelacija}). Privzeli smo, da velja $T\gg t_{c}$, zato 
+je korelacijska funkcija na mejah integracije po $\tau$ praktično enaka nič in 
+meje integracije smo lahko raztegnili do neskončnosti. Zveza, ki smo jo dobili, je 
 \index{Wiener-Hinčinov izrek} 
 Wiener-Hinčinov izrek\footnote{Ameriški matematik Norbert Wiener, 1894--1964, in 
 ruski matematik Aleksander Jakovljevič Hinčin, 1894--1959.}
@@ -315,24 +313,31 @@ d\omega.
 }
 Spekter svetlobe je torej Fouriereva transformiranka avtokorelacijske
 funkcije svetlobnega polja. Pri tem ne pozabimo, da je spekter, ki smo ga zapisali z enačbo~(\ref{eq:spekter}), zapisan za izbran vzorec valovanja, 
-ki traja čas $T$, in je tudi slučajna spremenljivka. Povprečen spekter dobimo tako, da naredimo
+ki traja čas $T$, in je tudi slučajna spremenljivka. Povprečni spekter dobimo tako, da naredimo
 limito $T \rightarrow \infty$. 
 \begin{equation}
 \langle S (\omega) \rangle = \lim_{T\to \infty}S(\omega).
 \end{equation}
-\vglue-1truecm
+\vglue-7truemm
 \begin{remark}
 Zaradi priročnosti smo zapisali spekter in Wiener-Hinčinov izrek s krožno frekvenco. Podobno lahko vpeljemo tudi spekter na frekvenčni interval in Wiener-Hinčinov izrek se prepiše v
 \beq
 S(\nu)=\int_{-\infty}^{\infty}G(\tau)e^{-i\,2 \pi \nu\tau}\, d\tau\;\Longleftrightarrow\; G(\tau)=\int_{-\infty}^{\infty}S(\nu)e^{i\,2\pi\nu \tau}\, d\nu.
 \eeq
 \end{remark}
+\vglue-5truemm
 Iz Wiener-Hinčinovega izreka (enačba~\ref{eq:spekter-zveza}) neposredno sledi, da je 
-koherenca povezana s spektrom. Koherenčni čas $t_{c}$ je tako povezan s spektralno 
+koherenca nekega valovanja tesno povezana z njegovim spektrom. 
+Koherenčni čas $t_{c}$ je tako povezan s spektralno 
 širino svetlobe $\gamma$, za katero velja (glej nalogo~\ref{naloga:gammatc})\index{Koherenčni čas}
 \boxeq{eq:spektralna-sirina-zveza}{
 \gamma=\frac{1}{t_{c}}.
 }
+Valovanje z dolgim $t_c$ ima tako zelo majhno spektralno širino (ozek spekter), 
+valovanje s kratkim $t_c$ pa ima širok spekter. To je v skladu s primeri, navedenimi na koncu
+prejšnjega razdelka: svetloba s Sonca ima širok spekter in zelo kratek koherenčni čas, svetloba iz laserjev
+pa ima praviloma ozko spektralno črto in dolg koherenčni čas. Ugotovimo tudi, da lahko 
+valovanju podaljšamo koherenčni čas z ustreznim spektralnim filtriranjem.
 \begin{definition}
 \label{naloga:gammatc}
 Formalno lahko vpeljemo spektralno širino kot 
@@ -346,7 +351,8 @@ normirani spekter.
 Z uporabo enačbe za koherenčni čas $t_{c}$ (enačba \ref{eq:koherencni-cas})
 pokaži, da je spektralna širina obratno sorazmerna s koherenčnim
 časom (enačba \ref{eq:spektralna-sirina-zveza}) ne glede na
-obliko spektra. Namig: Uporabi Parsevalov izrek, ki pravi:
+obliko spektra. \\
+Namig: Uporabi Parsevalov izrek, ki pravi:
 \begin{equation}
 \int_{-\infty}^{\infty}\left|f(t)\right|^{2}\, dt={2\pi}
 \int_{-\infty}^{\infty}\left|F(\omega)\right|^{2}\, d\omega,
@@ -365,7 +371,8 @@ Ker so trki med atomi naključni, je avtokorelacijska funkcija eksponentno pojem
 g(\tau)=e^{i\omega_{0}\tau} e^{-\tau/t_{c}},
 \label{eq:g-primer}
 \eeq
-spekter take svetlobe pa je Lorentzove oblike\index{Spekter!Lorentzov} (glej nalogo~\ref{naloga-spekter})
+spekter take svetlobe pa je Lorentzove 
+oblike\index{Spekter!Lorentzov} (glej nalogo~\ref{naloga-spekter})
 \begin{equation}
 s(\omega)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}},
 \label{eq:spekter-primer}
@@ -376,10 +383,10 @@ sta prikazana na sliki~(\ref{fig:SpekterAc}).
 Točke na grafih 
 predstavljajo spekter in izračunano avtokorelacijsko funkcijo 
 za integracijski čas $T=100\,t_{c}$. Za primerjavo sta z rdečo 
-krivuljo prikazana tudi pričakovan spekter (enačba~\ref{eq:spekter-primer}) in avtokorelacijska
+krivuljo prikazana tudi pričakovani spekter (enačba~\ref{eq:spekter-primer}) in avtokorelacijska
 funkcija (enačba~\ref{eq:g-primer}). Zaradi končnega
 časa $T$ pri izračunu povprečja se spekter iz simulacije nekoliko razlikuje
-od pričakovane vrednosti. 
+od pričakovanega. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{65truemm} 
@@ -431,16 +438,16 @@ V prejšnjem razdelku smo videli, da časovno avtokorelacijsko funkcijo
 merimo z Michelsonovim interferometrom. Dobljena povezava med merjeno
 avtokorelacijo in izračunanim spektrom je osnova za Fourierevo 
 spektroskopijo\footnote{Francoski matematik in fizik Jean Baptiste Joseph Fourier, 1768--1830.},
-ki ima nekatere pomembne prednosti pred drugimi metodami in se danes
-precej uporablja, posebej v infrardečem delu EM valovanja.\index{Infrardeče valovanje}
+pri kateri določimo absorpcijski ali emisijski spekter
+snovi iz izmerjene avtokorelacijske funkcije. Tak pristop
+ima nekatere pomembne prednosti pred drugimi metodami in se danes
+precej uporablja, posebej v infrardečem delu EM valovanja (tako imenovana
+metoda FTIR - {\it Fourier-transform infrared spectroscopy}).\index{Infrardeče valovanje}\index{FTIR}
 \end{remark}
 
 \section{Prostorska koherenca}
 \label{Prostorska-koherenca}
 \index{Koherenca!prostorska}
-Pri tem moramo paziti, da koherenčne dolžine, ki jo izpeljemo iz časovne 
-koherence, ne zamenjamo s prečno koherenčno
-razdaljo, o kateri bomo govorili v nadaljevanju.
 Vrnimo se k Youngovemu poskusu\index{Youngov poskus} in obravnavi interference
 \index{Interferenca} na dveh ozkih režah. 
 Osvetljujmo zdaj reži s svetilom končnih razsežnosti. Svetilo naj sveti skoraj enobarvno
@@ -474,6 +481,9 @@ Zanjo velja približno
 d_{c}\sim\frac{z\lambda}{R}.
 \label{eq:prost_koh}
 \end{equation}
+Pri tem moramo paziti, da koherenčne dolžine, ki jo izpeljemo iz časovne 
+koherence, ne zamenjamo s prečno koherenčno
+razdaljo, o kateri bomo govorili v nadaljevanju.
 Pogosto je v uporabi
 tudi pojem \index{Koherenčna ploskev}koherenčna ploskev, to je območje, 
 v katerem je fazna razlika v povprečju konstantna. Velikost te ploskve je približno $d_{c}^{2}$.
