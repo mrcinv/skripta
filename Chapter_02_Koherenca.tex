@@ -193,6 +193,7 @@ Navadno opazujemo v času $T$, ki je dolg v primerjavi s koherenčnim
 \begin{eqnarray}
 \langle|E_{d}(t)|^{2}\rangle & = & \frac{1}{T}\int_{-T/2}^{T/2}|E{}_{d}(t)|^{2}\, dt\nonumber \\
  & = & 2\langle|E(t)|^{2}\rangle+2\Re\langle E(t)E^{*}(t+\tau)\rangle = 2\langle|E(t)|^{2}\rangle+2\Re G(\tau).
+ \label{eq:caskohav}
 \end{eqnarray}
 Prvi člen je vsota povprečnih prispevkov obeh delnih snopov. Privzeli
 smo, da je polje v povprečju stacionarno in je zato povprečje neodvisno
@@ -281,7 +282,7 @@ A_{n}(\omega)=\frac{1}{T}\int_{-T/2}^{T/2}E(t)\, e^{i\omega t}\, dt.\label{eq:am
 \end{equation}
 Kvadrat $|A_{n}(\omega)|^{2}$, ki je sorazmeren z gostoto svetlobnega toka pri krožni
 frekvenci $\omega$, imenujmo intenziteta\index{Intenziteta}
-valovanja\footnote{Intenziteto valovanja na splošno vpeljemo kot $|E|^2$, gostota svetlobnega
+valovanja\footnote{Intenziteto valovanja na splošno vpeljemo kot $I = |E|^2$, gostota svetlobnega
 toka pa je $j = \varepsilon \varepsilon_0 c |E|^2/2$ z enotami W/m$^2$ (enačba~\ref{eq:jcw}). 
 Kadar predfaktorji niso pomembni, pogosto uporabljamo krajši izraz.}. 
 Potem vpeljemo 
@@ -449,14 +450,14 @@ metoda FTIR - {\it Fourier-transform infrared spectroscopy}).\index{Infrardeče 
 \label{Prostorska-koherenca}
 \index{Koherenca!prostorska}
 Vrnimo se k Youngovemu poskusu\index{Youngov poskus} in obravnavi interference
-\index{Interferenca} na dveh ozkih režah. 
-Osvetljujmo zdaj reži s svetilom končnih razsežnosti. Svetilo naj sveti skoraj enobarvno
-svetlobo in naj bo na simetrali med režama, kot kaže slika~(\ref{fig:shema-interferenca}).
+\index{Interferenca} na dveh ozkih režah. Osvetljujmo zdaj zaslon z dvema
+odprtinama s svetilom končnih razsežnosti. Svetilo naj sveti skoraj enobarvno
+svetlobo in naj bo na simetrali med odprtinama, kot kaže slika~(\ref{fig:shema-interferenca}).
 
-Žarka, ki izhajata iz sredine svetila (polna črta), 
-opravita do rež v ravnini A enako dolgo pot in povzročita na zaslonu B 
-interferenčne proge. Žarka, ki izhajata iz roba izvora (prekinjena črta), 
-imata do rež različno dolgo pot, zato nastane med njima fazna razlika že do ravnine A, 
+Žarka, ki izhajata iz sredine svetila (polna rdeča črta), 
+opravita do odprtin v ravnini A enako dolgo pot in povzročita na zaslonu B 
+interferenčne proge. Žarka, ki izhajata iz roba izvora (prekinjena rdeča črta), 
+imata do odprtin različno dolgo pot, zato nastane med njima fazna razlika že do ravnine A, 
 ki se prišteje fazni razliki do ravnine B. Interferenčne proge, ki jih tvorita 
 robna žarka, so premaknjene glede na proge centralnih žarkov. Ker so žarki z roba
 statistično neodvisni od žarkov iz sredine, z njimi
@@ -473,7 +474,7 @@ interferenčna slika na zaslonu B izpovpreči.
 \label{fig:shema-interferenca}
 \end{figure}
 
-Razdaljo med režama $d_c$, pri kateri interferenčne proge
+Razdaljo med odprtinama $d_c$, pri kateri interferenčne proge
 izginejo, imenujemo\index{Koherenčna razdalja} prečna koherenčna razdalja. 
 Zanjo velja približno 
 \begin{equation}
@@ -481,29 +482,29 @@ Zanjo velja približno
 d_{c}\sim\frac{z\lambda}{R}.
 \label{eq:prost_koh}
 \end{equation}
-Pri tem moramo paziti, da koherenčne dolžine, ki jo izpeljemo iz časovne 
-koherence, ne zamenjamo s prečno koherenčno
-razdaljo, o kateri bomo govorili v nadaljevanju.
+\begin{remark}
 Pogosto je v uporabi
-tudi pojem \index{Koherenčna ploskev}koherenčna ploskev, to je območje, 
+pojem \index{Koherenčna ploskev}koherenčna ploskev, to je območje, 
 v katerem je fazna razlika v povprečju konstantna. Velikost te ploskve je približno $d_{c}^{2}$.
 V območju koherenčne ploskve so tudi valovne fronte približno gladke.
+Vsekakor pa moramo paziti, da koherenčne razdalje $d_c$ ne zamenjamo
+s koherenčno dolžino $l_c$, ki smo jo vpeljali pri časovni koherenci valovanja. 
+\end{remark}
 
 Zapišimo gornje ugotovitve nekoliko bolj natančno. Na zaslonu $B$
-izmerimo gostoto svetlobnega toka, ki je sorazmerna povprečju kvadrata
+izmerimo povprečno gostoto svetlobnega toka, ki je sorazmerna povprečju kvadrata
 električne poljske jakosti valovanj, ki izhajata iz obeh odprtin
 \begin{align}
 \langle|E{}_{d}|^{2}\rangle & =\langle|K_{1}E_{1}+K_{2}E_{2}|^{2}\rangle\nonumber \\
 &=  |K_{1}|^{2}\langle|E_{1}|^{2}\rangle+|K_{2}|^{2}\langle|E_{2}|^{2}\rangle+
-2\Re K_{1}K_{2}^{*}\langle E_{1}(0)E_{2}^{*}(\tau)\rangle.
+2\Re \left( K_{1}K_{2}^{*}\langle E_{1}(t)E_{2}^{*}(t+\tau)\rangle\right).
 \end{align}
 Pri tem je je $\tau=d\sin\vartheta/c$ zakasnitev valovanja iz druge odprtine
 glede na valovanje iz prve, faktorja $K_{1}$ in $K_{2}$ pa sta določena
-z uklonom na posameznih odprtinah.
-Interferenčna slika je vsebovana v podobnem členu kot pri Michelsonovem
-interferometru, le da nastopa v tem primeru namesto avtokorelacijske funkcije
-navzkrižna korelacijska funkcija polj $E_{1}$ in $E_{2}$ iz obeh
-odprtin.\index{Navzkrižna korelacijska funkcija} 
+z uklonom na posameznih odprtinah. Interferenčna slika je vsebovana v podobnem 
+členu kot pri Michelsonovem interferometru (enačba~\ref{eq:caskohav}), 
+le da nastopa v tem primeru namesto avtokorelacijske funkcije
+navzkrižna korelacijska funkcija polj $E_{1}$ in $E_{2}$ iz obeh.\index{Navzkrižna korelacijska funkcija} 
 
 Kako je interferenčni člen povezan z lastnostmi svetila, brez težav
 doženemo v izbranem primeru skoraj enobarvne svetlobe z osrednjo krožno frekvenco
@@ -514,12 +515,13 @@ E_{2}(\tau)=E_{2}(0)\, e^{-i\omega\tau}
 \end{equation}
  in 
 \begin{equation}
-\langle E_{1}(0)E_{2}^{*}(\tau)\rangle=\langle E_{1}(0)E_{2}^{*}(0)\rangle 
+\langle E_{1}(t)E_{2}^{*}(t+\tau)\rangle=
+\langle E_{1}(t)E_{2}^{*}(t)\rangle 
 e^{i\omega\tau}=J(P_{1},P_{2})\, e^{i\omega\tau}.
 \end{equation}
 Faktor $\Re e^{i\omega\tau}= \cos(\omega \tau) = \cos(kd\sin\vartheta)$ da interferenčne
 proge za koherentno osvetlitev zaslona, povprečje produkta polj
-v odprtinah ob istem času $J(P_{1},P_{2})=\langle E(P_{1},0)E^{*}(P_{2},0)\rangle$
+v odprtinah ob istem času $J(P_{1},P_{2})=\langle E(P_{1},t)E^{*}(P_{2},t)\rangle$
 pa meri stopnjo prečne koherence med obema odprtinama. Od velikosti
 tega člena je odvisen kontrast interferenčnih prog. Izračunajmo ga.
 
@@ -527,8 +529,8 @@ Polje v posamezni odprtini je vsota prispevkov iz celega izvora.
 \begin{equation}
 E(P_{j})=-\frac{i}{\lambda}\int E(\xi,\eta)\frac{e^{iks_{j}}}{s_{j}}\, d\xi\, d\eta.
 \end{equation}
-Pri tem je $s_{j}$ razdalja med točko $(\xi,\eta)$ na izvoru in točko
-$P_{j}(x_{j},y_{j})$ na reži v ravnini A (glej sliko \ref{fig:shema-interferenca}).
+Pri tem je $s_{j}$ razdalja med točko na izvoru s koordinato $(\xi,\eta)$  in točko
+$P_{j}(x_{j},y_{j})$ v odprtini na ravnini A (glej sliko \ref{fig:shema-interferenca}).
 Faktor pred integralom $-i/\lambda$ izhaja iz uklonske teorije (enačba~\ref{eq:Fresnel-Kirchoffov-integral}).
 Tako je 
 \begin{equation}
@@ -550,13 +552,13 @@ pred integral. Sledi
 J(P_{1},P_{2})=\frac{1}{\pi z^{2}}\int\langle|E(\xi,\eta)|^{2}\rangle e^{ik(s_{1}-s_{2})}\, d\xi\, d\eta.\label{eq:Zernike1}
 \end{equation}
 Izraz lahko še nekoliko poenostavimo, če razvijemo $s_{1}$
-in $s_{2}$ do drugega reda
+in $s_{2}$ 
 \begin{equation}
 s_{j}=\sqrt{z^{2}+(x_{j}-\xi)^{2}+(y_{j}-\eta)^{2}}\approx z+\frac{(x_{j}-\xi)^{2}+(y_{j}-\eta)^{2}}{2z}.
 \end{equation}
 Pri tem sta $(x_{j},y_{j})$ koordinati točke $P_{j}$. Pišimo 
 še $\langle|E(\xi,\eta)|^{2}\rangle=I(\xi,\eta)$ ter $x_{2}-x_{1}=\Delta x$
-in $y_{2}-y_{1}=\Delta y$. S tem dobimo znani rezultat, tako imenovani \index{van Cittert-Zernikov izrek}
+in $y_{2}-y_{1}=\Delta y$. S tem dobimo tako imenovani \index{van Cittert-Zernikov izrek}
 van Cittert-Zernikov izrek\footnote{Nizozemski fizik Pieter Hendrik van Cittert, 1889--1959, in 
 nizozemski fizik in nobelovec Frits Zernike, 1888--1966.}
 \boxeq{eq:Zernike2}{
@@ -588,9 +590,8 @@ je rezultat za $J(P_{1},P_{2})$ (enačba~\ref{eq:Zernike2}) veljaven v obeh obmo
 \index{Fresnelov uklon}
 \end{remark}
 
-Ker je velikost svetila končna, $J(P_{1},P_{2})$ pri dovolj veliki
-razdalji med točkama $P_{1}$ in $P_{2}$ gotovo pade na nič. Največja
-razdalja, do katere je $J(P_{1},P_{2})$ še različna od nič, je ravno
+Pri velikih razdaljah med točkama $P_{1}$ in $P_{2}$ vrednost $J(P_{1},P_{2})$ 
+gotovo pade na nič. Največja razdalja, do katere je $J(P_{1},P_{2})$ še različna od nič, je ravno
 prečna koherenčna razdalja $d_{c}$, ustrezna ploskev pa je koherenčna
 ploskev $S_{c}$\index{Koherenčna ploskev}. Iz izraza za koherenčno razdaljo 
 (enačba \ref{eq:prost_koh}) jo lahko ocenimo
@@ -603,14 +604,14 @@ pod katerim je videti svetilo v ravnini $A$.
 
 Oglejmo si primer. Naj bo svetilo v obliki kroga 
 s polmerom $R$, obe odprtini v zaslonu naj imata koordinati $y$  enaki nič, razmik
-med režama v smeri $x$ pa naj bo $d$. 
+med njima v smeri $x$ pa naj bo $d$. 
 Prečno korelacijsko funkcijo izračunamo iz enačbe~(\ref{eq:Zernike2}) in dobimo 
 (glej nalogo~\ref{naloga:J})
 \begin{equation}
 J(0,\Delta y)=2\frac{R^{2}I_{0}}{z^{2}}\,\frac{J_{1}(kRd/z)}{kRd/z},
 \label{eq:jkrozna}
 \end{equation}
-kjer je $J_{1}(x)$ Besslova funkcija. V ničlah Besslove funkcije
+kjer je $J_{1}(x)$ Besslova funkcija. V ničlah prve Besslove funkcije
 pade prečna korelacijska funkcija $J$ na nič in interferenčnega vzorca ne vidimo. 
 Za prečno koherenčno razdaljo je zato smiselno vzeti ravno prvo ničlo Besslove funkcije
 $J_1$, to je pri
@@ -631,8 +632,8 @@ vpliv končnega koherenčnega časa, zaradi česar se kontrast interferenčnih
 prog še dodatno zmanjšuje. Interferenčna slika je 
 tako produkt časovnega in prostorskega dela. 
 
-V primeru dveh zelo tankih rež z razmikom $d$ nastanejo na zaslonu
-$B$ uklonski vrhovi. Za nekaj različnih razmikov med odprtinama $d$ je intenziteta
+Poglejmo še primer dveh zelo tankih vzporednih rež. 
+Za nekaj različnih razmikov med režama $d$ je intenziteta
 svetlobe na zaslonu prikazana na sliki~(\ref{fig:Interferencna-slika}).
 Če je $d\ll\lambda z/R$ (slika a), je modulacija interferenčnih prog v sredini
 popolna in se zaradi končnega koherenčnega časa zmanjšuje le pri večjih
@@ -656,21 +657,21 @@ vendar so slabše izražene in z nasprotno fazo, kar da v sredini temno progo.
 \def\svgwidth{0.37\textwidth} 
 \input{slike/02_interferenca04.pdf_tex}
 \caption{Interferenčna slika na zaslonu
-$B$ za različne vrednosti razmikov med odprtinama: a) $d = z/kR$, b) $d=2z/kR$, 
+za različne vrednosti razmikov med režama: a) $d = z/kR$, b) $d=2z/kR$, 
 c) $d = 3,832\,z/kR$ in d) $d = 5,136\,z/kR$. 
 Z večanjem razdalje med režama se proge zgostijo in kontrast se zmanjša. Koherenčni
 čas svetlobe je $t_{c}=10/\omega$, kar še dodatno zmanjšuje modulacijo
-interferenčnih prog. Pri $d=3,832\,z/kR$ dosežemo prvo ničlo Besslove
-funkcije in interferenčni vzorec popolnoma izgine. Nato se interferenčne
+interferenčnih prog. Pri $d=3,832\,z/kR$ je prva ničla Besslove
+funkcije in interferenčni vzorec popolnoma izgine. Pri večjih $d$ se interferenčne
 proge zopet pojavijo, vendar z manjšim kontrastom in nasprotno fazo.}
 \label{fig:Interferencna-slika}
 \end{center}
 \end{figure}
 
 \begin{remark}
-Merjenje prečne koherenčne razdalje svetlobe
+Merjenje prečne koherenčne razdalje svetlobe iz
 zvezd je osnova za Michelsonovo metodo določanja zvezdnih premerov.
-Svetlobo izbrane zvezde zberejo v teleskop preko dveh manjših parov
+Svetlobo iz izbrane zvezde zberejo v teleskop preko dveh manjših parov
 zrcal, kjer sta zunanji zrcali na pomičnih rokah, tako da ju je mogoče
 razmikati. Glavno zrcalo teleskopa zbere svetlobna snopa v goriščni
 ravnini, kjer nastanejo interferenčne proge, če le pomični zrcali
