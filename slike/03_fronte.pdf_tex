@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{417.02906799bp}%
+    \setlength{\unitlength}{415.17320251bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,15 +50,12 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.85914265)%
+  \begin{picture}(1,0.83903491)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
+    \put(0.90073445,0.4538317){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
+    \put(0.90596474,0.73956832){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
+    \put(0.9059646,0.16833355){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{03_fronte.pdf}}%
-    \put(0.93037951,0.75270642){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{03_fronte.pdf}}%
-    \put(0.93354498,0.4682336){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{03_fronte.pdf}}%
-    \put(0.93037945,0.18401376){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{03_fronte.pdf}}%
   \end{picture}%
 \endgroup%

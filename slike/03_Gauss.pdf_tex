@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{581.30154347bp}%
+    \setlength{\unitlength}{580.17652617bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,17 +50,16 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.4134808)%
+  \begin{picture}(1,0.38699815)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{03_Gauss.pdf}}%
-    \put(0.89141415,0.14406095){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
-    \put(0.45442912,0.33638962){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$r$\end{tabular}}}}%
-    \put(0.43866103,0.20320209){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$w_0$\end{tabular}}}}%
-    \put(0.83332992,0.38826019){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$w(z)$\end{tabular}}}}%
-    \put(0.49335036,0.27844659){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z_0$\end{tabular}}}}%
-    \put(0.77866776,0.24796559){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$R(z)$\end{tabular}}}}%
-    \put(0.87549578,0.07339383){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\vartheta$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{03_Gauss.pdf}}%
+    \put(0.89314267,0.14434031){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
+    \put(0.45531029,0.33704192){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$r$\end{tabular}}}}%
+    \put(0.43951163,0.20876696){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$w_0$\end{tabular}}}}%
+    \put(0.87631253,0.36172864){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$w(z)$\end{tabular}}}}%
+    \put(0.494307,0.27898653){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z_0$\end{tabular}}}}%
+    \put(0.78017766,0.24844643){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$R(z)$\end{tabular}}}}%
+    \put(0.87719344,0.07353616){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\vartheta$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

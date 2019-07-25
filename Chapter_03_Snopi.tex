@@ -148,8 +148,8 @@ Tako iz obosnega približka (enačba~\ref{eq:obosna-valovna-enacba}) sledi
 \begin{equation}
 \frac{2ik}{q}-\frac{k^2r^2}{q^2}=ik\left(\frac{ikr^{2}}{q^2}q(z)^{\prime}+2i\phi^{\prime}\right).
 \end{equation}
-Gornja zveza mora veljati pri vsakem $r$, zato so koeficienti
-pri $r^{2}$ na obeh straneh enačbe enaki in členi brez odvisnosti od $r$ prav tako. Sledi
+Gornja zveza mora veljati pri vsakem $r$, zato sta koeficienta
+pri $r^{2}$ na obeh straneh enačbe enaka in člena brez odvisnosti od $r$ prav tako. Sledi
 \begin{equation}
 q(z)^{\prime}=1\mbox{\hskip1cm in \hskip1cm}\phi^{\prime}=-\frac{i}{q}.
 \end{equation}
@@ -189,20 +189,19 @@ oziroma
 \boxeq{eq:z0}{
 z_{0}=\frac{\pi w_{0}^{2}}{\lambda}.
 }
-Dolžina\index{Gaussov snop!dolžina grla} 
-$z_{0}$ je razdalja, pri kateri preide snop v asimptotično enakomerno širjenje. 
-Čeprav smo vpeljali grlo kot najožji del snopa (pri $z=0$), uporabljamo izraz grlo tudi 
-za celotno območje, znotraj katerega se snop ne razširi znatno. Njegovo dolžino
-določa ravno parameter $z_0$, tako da je dolžina celotnega grla $2z_0$. Območju grla 
-pravimo območje bližnjega polja
-\index{Območje bližnjega polja} ali Rayleighovo območje\index{Rayleighovo 
-območje|see{Območje bližnjega polja}} in dolžini $z_0$ \index{Rayleighova dolžina}Rayleighova 
-dolžina\footnote{Angleški fizik in nobelovec John William Strutt, 3. baron Rayleighški; lord
-Rayleigh, 1842--1919.}.
-Dolžina $z_{0}$ označuje tudi oddaljenost od grla, pri kateri začne veljati Fraunhoferjev uklonski približek. 
+Parameter $z_{0}$\index{Gaussov snop!bližnje polje} označuje oddaljenost od grla, 
+pri kateri preide snop v asimptotično enakomerno širjenje, in tako omejuje območje,
+znotraj katerega se snop ne razširi znatno. Imenujemo ga 
+\index{Rayleighova dolžina}Rayleighova dolžina\footnote{Angleški fizik in 
+nobelovec John William Strutt, 3. baron Rayleighški; lord Rayleigh, 1842--1919.},
+območje približno konstantne širine snopa pa območje bližnjega polja ali Rayleighovo
+območje\index{Rayleighovo območje|see{Območje bližnjega polja}}. Celotna dolžina 
+območja bližnjega polja je zaradi simetričnosti Gaussovega snopa enaka $2z_0$. 
+Vrednost $z_{0}$ označuje tudi oddaljenost od grla, pri kateri začne veljati 
+Fraunhoferjev uklonski približek. 
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{120truemm} 
 \input{slike/03_Gauss.pdf_tex}
 \caption{Gaussov snop s karakterističnimi parametri}
 \label{fig:Gauss}
@@ -220,10 +219,11 @@ Celotna divergenca snopa\index{Gaussov snop!divergenca} pa
 
 Izraza za območje bližnjega polja (enačba~\ref{eq:z0}) in divergenco 
 (enačba~\ref{eq:divergenca-snopa}) sta v skladu z ocenama, ki smo ju 
-napravili v začetku poglavja (enačbi~\ref{eq:kot_ocena} in \ref{eq:z_ocena}). Faktor 
-$1/\pi$ je značilen za Gaussov snop, ki ima od vseh možnih oblik 
+napravili v začetku poglavja (enačbi~\ref{eq:kot_ocena} in \ref{eq:z_ocena}). Faktor
+$\pi$ oziroma $1/\pi$ je značilen za Gaussov snop, ki ima od vseh možnih oblik 
 najmanjšo divergenco. 
 
+\begin{remark}
 Za določanje kakovosti dejanskega laserskega snopa 
 in njegovega odstopanja od idealnega Gaussovega snopa se pogosto vpelje faktor \index{Faktor $M^2$}$M^2$
 \begin{equation}
@@ -234,6 +234,7 @@ Dobri laserji dosegajo vrednost $M^2 \sim 1$,
 pri močnejših trdninskih ali polprevodniških laserjih pa je lahko $M^2 \sim 30$ ali več. 
 V grobem velja, da $M^2$ narašča z močjo laserja in oblika snopa močnih laserjev navadno znatno
 odstopa od oblike idealnega Gaussovega snopa.  
+\end{remark}
 
 Vrnimo se k imaginarnemu delu eksponenta v enačbi~(\ref{eq:gaussov-snop-vmesni}).
 Vpeljemo količino 
@@ -249,7 +250,6 @@ $z$
 \frac{1}{R}e^{ikR}=\frac{1}{R}e^{ik\sqrt{z^{2}+r^{2}}}\approx \frac{1}{R}e^{ikz+ikr^{2}/2R}.
 \label{eq:krogelni-val}
 \end{equation}
-Upoštevali smo, da je na osi $z=R$.
 
 \begin{definition}
 \label{naloga-ukrivljenost-snopa}
@@ -260,7 +260,7 @@ Izračunaj še ukrivljenost front v grlu in v veliki oddaljenosti od grla.
 Na sliki (\ref{fig:ravni-Gaussov-krogelni-val}) 
 so prikazane valovne fronte ravnega vala, 
 Gaussovega snopa (enačba~\ref{eq:gaussov-snop}) 
-in krogelnega vala (enačba~\ref{eq:krogelni-val}). Vidimo, da je v grlu
+in krogelnega vala (enačba~\ref{eq:krogelni-val}). Vidimo, da je v bližini grla
 Gaussov snop podoben ravnemu valu 
 (ukrivljenost front je zelo majhna in $R \to \infty$). Za velike oddaljenosti
 krivinski radij valovnih front postaja kar enak oddaljenosti $z$.
@@ -269,7 +269,7 @@ zamaknjena za $\pi/2$ glede na krogelni val.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{70truemm} 
+\def\svgwidth{90truemm} 
 \input{slike/03_fronte.pdf_tex}
 \caption{Ravni val, Gaussov snop ter
 krogelni val. V grlu je Gaussov snop podoben ravnemu valu, 
