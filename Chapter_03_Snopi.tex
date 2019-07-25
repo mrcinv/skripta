@@ -272,7 +272,7 @@ zamaknjena za $\pi/2$ glede na krogelni val.
 \def\svgwidth{90truemm} 
 \input{slike/03_fronte.pdf_tex}
 \caption{Ravni val, Gaussov snop ter
-krogelni val. V grlu je Gaussov snop podoben ravnemu valu, 
+krogelni val. V bližini grla je Gaussov snop podoben ravnemu valu, 
 pri velikih oddaljenostih od grla pa krogelnemu valu.}
 \label{fig:ravni-Gaussov-krogelni-val}
 \end{figure}
@@ -373,7 +373,7 @@ Indeksa $n$ in $m$ določata število vozlov v prečnih smereh $x$ in $y$,
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{110truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/03_Hermite_Gauss.pdf_tex}
 \caption{Prečni profil intenzitete Hermite-Gaussovih snopov v grlu 
 za različne vrednosti $(n,m)$}
@@ -428,30 +428,29 @@ $ ...) in
 \label{eq:etaGL}
 \end{equation}
 
-Podobno kot je v kartezičnem primeru red polinoma določal število prečnih ničel,
+Podobno kot v kartezičnem primeru red polinoma določa število prečnih ničel,
 določa $p$ v cilindričnem primeru število vozelnih črt, kjer je gostota 
 svetlobnega toka enaka nič. Na sliki~(\ref{fig:Laguerrovi_presek})
-je prikazanih nekaj oblik amplitud $|\Re\psi_{p,l}(r,\varphi,0)|$. Pri zapisu intenzitete, 
-ki je sorazmerna s $\psi \psi^*$, člen s kotno odvisnostjo $\exp(il\varphi)$ odpade in slike
-intenzitete Laguerre-Gaussovih snopov so radialno simetrične.
-
+je prikazanih nekaj intenzitetnih profilov Laguerre-Gaussovih snopov
+višjih redov $|\psi_{p,l}(r, \varphi, 0)|^2$. Ker nastopa  odvisnost od kota
+le v fazi, so intenzitetni profili snopa radialno simetrični. Opazimo, da je pri  
+vseh snopih z $l \ne 0$ v središču snopa minimum. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{110truemm} 
 \input{slike/03_Laguerre_Gauss.pdf_tex}
-\caption{Prečni profil realnega dela električne poljske jakosti 
-Laguerre-Gaussovih snopov v grlu za
-različne vrednosti $(p,l)$}
+\caption{Prečni profil intenzitete Laguerre-Gaussovih snopov v grlu 
+za različne vrednosti $(p,l)$}
 \label{fig:Laguerrovi_presek}
 \end{figure}
 
 Navadno želimo, da iz laserja izhaja čim čistejši osnovni snop, vendar
-lahko pogosto opazimo tudi snope višjega reda. Da dobimo le osnovni
+pogosto opazimo tudi snope višjega reda. Da dobimo le osnovni
 snop, je treba posebej paziti pri konstrukciji laserja.
 
 \begin{remark}
-Valovne fronte Laguerre-Gaussovih snopov imajo pri $l\ne0$  obliko vijačnic. Poyntingov 
-vektor\index{Poyntingov vektor} 
+Valovne fronte Laguerre-Gaussovih snopov imajo pri $l\ne0$  obliko vijačnic. 
+Poyntingov vektor\index{Poyntingov vektor} 
 pri njih ni vzporeden z osjo žarka, ampak ima komponento tudi v prečni smeri. Ta spreminja smer, 
 zato pride do pojava vrtilne količine v smeri osi snopa in snop na snov deluje z navorom. 
 Pravimo, da Laguerre-Gaussovi snopi nosijo t.i. tirno vrtilno količino\index{Tirna vrtilna količina}. 
@@ -535,7 +534,7 @@ snopa pred objektom.
 
 \section{Transformacije snopov z lečami}
 
-Vrnimo se h Gaussovim snopom in poglejmo, kaj se zgodi z njimi pri prehodu
+Vrnimo se k osnovnim Gaussovim snopom in poglejmo, kaj se zgodi z njimi pri prehodu
 skozi optične elemente\index{Preslikava z lečo}. Začnemo
 z enostavno tanko lečo z goriščno razdaljo $f$. V geometrijski optiki
 je krivinski radij krogelnega vala, ki izhaja iz točke na osi, kar
@@ -557,10 +556,11 @@ skozi tanko lečo ne spremeni, zato velja po enačbah (\ref{eq:q-inv}) in
 \label{eq:preslikava-zveza-leca}
 \end{equation}
 Kompleksni krivinski radij $q$ je po enačbi~(\ref{eq:q}) linearna 
-funkcija koordinate $z$ in za opis Gaussovega snopa zadošča, če
-v neki točki $z$ poznamo $q$. Iz realnega dela določimo ukrivljenost front, iz 
+funkcija koordinate $z$ in za opis Gaussovega snopa zadošča, da
+v neki točki $z$ poznamo $q$. Iz realnega dela parametra $q$ določimo ukrivljenost front, iz 
 imaginarnega pa polmer snopa. Enačba~(\ref{eq:preslikava-zveza-leca}) torej
-zadošča za račun prehoda snopa skozi poljuben sistem leč brez aberacij.
+zadošča za račun prehoda snopa skozi poljuben sistem leč brez aberacij, če le poznamo
+njegovo goriščno razdaljo.
 
 Kot primer poglejmo, kako z zbiralno lečo zberemo Gaussov snop.
 \begin{figure}[h]
@@ -611,16 +611,16 @@ določa lego grla preslikanega snopa na desni strani leče, druga pa povečavo
 }
 Enačba (\ref{eq:preslikava-grlo}) se ujema z izrazom za preslikavo točke v geometrijski
 optiki le, kadar je $z_{01}\ll x_{1}$. Kadar je $z_{01}\gg f$, je
-val na leči pri vsakem $x_{1}$ skoraj raven in $x_2 \to 0$, kar pomeni, da leži
+val na leči skoraj raven in $x_2 \to 0$, kar pomeni, da leži
 grlo na desni strani v gorišču. V praksi za Gaussove snope, ki izhajajo iz laserjev, pogosto ne
 velja ne prva ne druga limita, zato je treba uporabiti zapisani izraz 
 (enačba~\ref{eq:preslikava-grlo}).
 Tudi velikost polmera grla na desni, podana z enačbo (\ref{eq:preslikava-povecava}),
 je precej drugačna kot v geometrijski optiki.
 
-Za primer vzemimo snop iz He-Ne laserja\index{Laser!He-Ne} 
-(valovna dolžina $632,8~\si{\nano\metre}$), ki ima grlo s 
-polmerom $w_{01}=0,5~\si{\milli\metre}$ na izhodnem ogledalu in je $50~\si{\centi\metre}$ 
+Za primer vzemimo snop iz He-Ne laserja\index{Laser!He-Ne} z valovno dolžino 
+$632,8~\si{\nano\metre}$. Grlo s polmerom $w_{01}=0,5~\si{\milli\metre}$ naj bo 
+na izhodu iz laserja in  $50~\si{\centi\metre}$ 
 oddaljeno od leče z goriščno razdaljo $f=25~\si{\centi\metre}$.
 Za tak snop je $z_{01}=124~\si{\centi\metre}$. Po enačbi (\ref{eq:preslikava-grlo})
 leži grlo za lečo v oddaljenosti $1~\si{\centi\metre}$ od gorišča in torej $26~\si{\centi\metre}$ 
@@ -687,8 +687,8 @@ Preden se lotimo splošnejšega zapisa preslikav Gaussovega snopa,
 se spomnimo, kako obravnavamo preslikave v geometrijski optiki. 
 Slika nastane kot presečišče žarkov,
 ki izhajajo iz točke predmeta pred optičnim sistemom. Žarek 
-je pravokoten na valovne ploskve, pri čemer moramo vzeti še limito,
-ko gre valovna dolžina proti nič. Ukrivljenost valovne fronte je neposredno
+je pravokoten na valovne ploskve, pri čemer moramo vzeti še limito zelo majhne
+valovne dolžine. Ukrivljenost valovne fronte je neposredno
 povezana s spreminjanjem naklona žarkov, pri čemer bomo privzeli, da so 
 nakloni žarkov glede na os majhni.
 
@@ -732,8 +732,9 @@ M = \left[\begin{array}{cc}
 A & B\\
 C & D
 \end{array}\right],
+\label{eq:ABCDdef}
 \end{equation}
-zato jih imenujemo tudi matrike ABCD\index{Matrike ABCD}. Poglejmo nekaj primerov. 
+zato jih imenujemo matrike ABCD\index{Matrike ABCD}. Poglejmo nekaj primerov. 
 
 Pri premiku za $d$ vzdolž osi se zaradi končnega naklona spremeni odmik od osi, naklon pa ostane enak
 \begin{equation}
@@ -837,7 +838,7 @@ C_{2}A_{1}+D_{2}C_{1} & C_{2}B_{1}+D_{2}D_{1}
 \end{array}\right].
 \end{eqnarray}
 V sistemu z več elementi zapišemo produkt matrik za vse elemente, 
-pri čemer ne smemo pozabiti na premike med elementi.
+pri čemer ne smemo pozabiti na premike med posameznimi elementi.
 
 Poglejmo primer. Žarek naj najprej prepotuje razdaljo $d$, nato pa ga usmerimo
 na tanko lečo z goriščno razdaljo $f$. Matrika za celoten prehod je
@@ -860,9 +861,9 @@ C & D
 \begin{remark}
 Opisani matrični formalizem je zelo prikladen predvsem za računanje prehoda
 svetlobe skozi zapletene optične sisteme, saj ga je prav lahko izvesti z računalnikom. Poleg
-tega je enolično povezan z matričnim formalizmom izračuna
+tega je enolično povezan z matričnim formalizmom za izračun
 kompleksne ukrivljenosti Gaussovih snopov, zato omogoča preprost prenos 
-rezultatov geometrijske optike v optiko snopov.
+rezultatov geometrijske optike v optiko Gaussovih snopov.
 \end{remark}
 
 \section{Linearne racionalne transformacije kompleksnega krivinskega radija}
@@ -888,8 +889,8 @@ q_2=\frac{q_1+d}{-\frac{q_1+d}{f}+1}=\frac{q_1+d}{-\frac{q_1}{f}-\frac{d}{f}+1}.
 \label{eq:premikleca}
 \end{equation}
 V vseh treh primerih lahko transformacijo kompleksnega krivinskega radija 
-$q$ zapišemo v obliki ulomljene
-linearne preslikave 
+$q$ zapišemo v obliki ulomljene linearne oziroma M\"obiusove 
+preslikave\footnote{Nemški matematik in astronom August Ferdinand M\"obius, 1790--1868.}
 \boxeq{eq:ulomljena-preslikava}{
 q_2=\frac{Aq_1+B}{Cq_1+D}.
 }
@@ -902,13 +903,13 @@ C & D
 \end{equation}
 in iz gornjih enačb razberemo koeficiente matrik \index{Matrike ABCD} za opisane 
 preslikave, vidimo, da so povsem enaki koeficientom matrik ABCD, ki jih poznamo iz
-geometrijske optike. Hitro lahko tudi preverimo, 
+geometrijske optike (\ref{eq:ABCDdef}). Hitro lahko tudi preverimo, 
 da je matrika za premik in lečo, ki jo dobimo iz preslikave (enačba~\ref{eq:premikleca}),
 enaka produktu matrike za premik in matrike za lečo
 (enačba~\ref{eq:Mdf}). 
 
 Omenimo še eno lastnost matrik ABCD. Kadar po prehodu skozi optične elemente snop svetlobe 
-preide v snov z enakim lomnim količnikom kot je bil na začetku, je determinanta matrike 
+preide v snov z enakim lomnim količnikom, kot je bil na začetku, je determinanta matrike 
 ABCD enaka 1. V nasprotnem
 primeru je determinanta matrike enaka razmerju lomnih količnikov začetne in končne snovi. 
 \begin{equation}

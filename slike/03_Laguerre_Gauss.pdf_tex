@@ -1,6 +1,6 @@
-%% Creator: Inkscape inkscape 0.48.3.1, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'laguerre.pdf' (pdf, eps, ps)
+%% Accompanies image file '03_Laguerre_Gauss.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{400bp}%
+    \setlength{\unitlength}{1818.99994617bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,22 +50,21 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.6)%
-    \put(0,0){\includegraphics[width=\unitlength]{03_Laguerre_Gauss.pdf}}%
-    \put(0.01,0.41){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(0,0)$}}}%
-    \put(0.21,0.41){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(0,1)$}}}%
-    \put(0.41,0.41){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(0,2)$}}}%
-    \put(0.61,0.41){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(0,3)$}}}%
-    \put(0.81,0.41){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(0,4)$}}}%
-    \put(0.01,0.21){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(1,0)$}}}%
-    \put(0.21,0.21){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(1,1)$}}}%
-    \put(0.41,0.21){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(1,2)$}}}%
-    \put(0.61,0.21){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(1,3)$}}}%
-    \put(0.81,0.21){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(1,4)$}}}%
-    \put(0.01,0.01){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(2,0)$}}}%
-    \put(0.21,0.01){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(2,1)$}}}%
-    \put(0.41,0.01){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(2,2)$}}}%
-    \put(0.61,0.01){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(2,3)$}}}%
-    \put(0.81,0.01){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{$(2,4)$}}}%
+  \begin{picture}(1,0.70533267)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{03_Laguerre_Gauss.pdf}}%
+    \put(0.01183319,0.50255161){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(0,0)$\end{tabular}}}}%
+    \put(0.01183319,0.25321497){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(1,0)$\end{tabular}}}}%
+    \put(0.01183319,0.00387835){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(2,0)$\end{tabular}}}}%
+    \put(0.26116982,0.50255161){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(0,1)$\end{tabular}}}}%
+    \put(0.26116982,0.25321497){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(1,1)$\end{tabular}}}}%
+    \put(0.26116982,0.00387833){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(2,1)$\end{tabular}}}}%
+    \put(0.51050643,0.50255163){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(0,2)$\end{tabular}}}}%
+    \put(0.51050643,0.25321502){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(1,2)$\end{tabular}}}}%
+    \put(0.51050644,0.00387838){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(2,2)$\end{tabular}}}}%
+    \put(0.75984305,0.50255163){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(0,3)$\end{tabular}}}}%
+    \put(0.75984305,0.25321502){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(1,3)$\end{tabular}}}}%
+    \put(0.75984307,0.00387838){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$(2,3)$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
