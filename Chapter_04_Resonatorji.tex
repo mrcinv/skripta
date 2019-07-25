@@ -1,8 +1,9 @@
 \chapterimage{Resonator.jpg} % Chapter heading image
 
 \chapter{Optični resonatorji}
-Osnovni gradnik vsakega laserja je resonator. V njem je vzbujeno lastno nihanje,
-ki skozi delno prepustno steno resonatorja kot valovanje izhaja iz sistema. V tem poglavju bomo 
+Osnovni gradnik vsakega laserja je resonator. V njem je vzbujeno lastno elektromagnetno
+nihanje, ki skozi delno prepustno steno resonatorja kot valovanje
+izhaja iz sistema. V tem poglavju bomo 
 najprej spoznali optične resonatorje in kriterije za njihovo stabilno delovanje,
 nato pa izračunali lastne frekvence resonatorjev ter povezali spektralno širino črt
 izsevane svetlobe z izgubami v laserskem resonatorju. 
@@ -75,8 +76,8 @@ steni. Takemu resonatorju pravimo odprti resonator\index{Resonator!odprti}
 \def\svgwidth{120truemm} 
 \input{slike/04_Odprt_resonator.pdf_tex}
 \caption{Levo: lastni nihajni načini odprtega resonatorja imajo 
-diskretne vrednosti valovnih vektorjev $k_{n}$. Desno: žarki, ki niso pravokotni na zrcali, 
-uidejo iz odprtega resonatorja.}
+diskretne vrednosti velikosti valovnih vektorjev $k_{n}$. Desno: žarki, ki niso pravokotni na zrcali, 
+iz odprtega resonatorja uidejo.}
 \label{fig:Odprt_resonator}
 \end{figure}
 
@@ -91,9 +92,9 @@ dimenzija resonatorja. Lastne krožne frekvence so
 \begin{equation}
 \omega_{l,m,n}=c|\mathbf{k}_{l,m,n}|.\label{eq:omega-votlina}
 \end{equation}
-Dolžina resonatorja $L$ je velika v primerjavi z $\lambda$ in zato je $n$
-zelo veliko število. Če prečnih sten ni, mora biti $\mathbf{k}$ približno
-vzporeden z osjo $z$, zato morata biti $l$ in $m$ majhna. Tedaj
+Dolžina resonatorja $L$ je velika v primerjavi z $\lambda$, zato je $n$
+zelo veliko število. Če prečnih sten ni, je  $\mathbf{k}$ približno
+vzporeden z osjo $z$ in števili $l$ in $m$ sta majhni. Tedaj
 lahko velikost valovnega vektorja razvijemo in krožno frekvenco zapišemo kot
 \begin{equation}
 \omega_{l,m,n}=c\left(\frac{n\pi}{L}+\frac{l^{2}+m^{2}}{2n}\frac{L \pi}{a^{2}}\right).
@@ -110,11 +111,11 @@ jih označili z enim samim indeksom $n$.
 Razlika med frekvencama dveh zaporednih lastnih nihanj\index{Lastne frekvence resonatorja} 
 $n$ in $n+1$ je
 \boxeq{eq:delta-omega-resonator}{
-\Delta\omega_n=\frac{\pi c}{L} \quad \mathrm{in} \quad \Delta \nu_n = \frac{c}{2L}.
+\Delta\omega_n=\frac{\pi c}{L} \quad \mathrm{oziroma} \quad \Delta \nu_n = \frac{c}{2L}.
 }
 Pri dolžini resonatorja $L=30~\si{\centi\metre}$ je v frekvenčnem
-intervalu $\Delta \nu = 3\cdot10^{9}~\si{\hertz}$ le še $\Delta \nu /\Delta \nu_n = 6$ nihanj, ki jih
-je brez težav mogoče razločiti.
+intervalu $\Delta \nu = 3\cdot10^{9}~\si{\hertz}$ le še $\Delta \nu /\Delta \nu_n = 6$ lastnih 
+nihanj, ki jih je brez težav mogoče razločiti.
 
 V zaprtih votlinah z zrcalnimi stenami obstajajo dobro določena lastna
 stanja pri poljubni obliki votline. To ne drži za odprte resonatorje.
