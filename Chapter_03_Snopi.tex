@@ -288,7 +288,7 @@ toka ob širjenju žarka, poleg tega pa še dodatno spremeni fazo. Zapišemo ga 
 \boxeq{eq:eta}{
 \eta(z)=\arctan\left(\frac{z}{z_{0}}\right).
 }
-Dodatna faza $\eta$, imenujemo jo tudi \index{Gouyeva faza}Gouyeva 
+Dodatna faza $\eta$, imenujemo jo \index{Gouyeva faza}Gouyeva 
 faza\footnote{Francoski fizik Louis Georges Gouy, 1854--1926.},
 je posledica povečane fazne hitrosti valovanja,
 kadar je valovanje omejeno v prečni smeri. Podoben pojav bomo srečali tudi pri valovanju, ki je 
@@ -301,11 +301,11 @@ E(r,z,t)=E_{0}\,\frac{w_{0}}{w(z)}\,e^{ikz-i\omega t}\,e^{-r^{2}/w^{2}(z)}\,e^{i
 e^{-i\eta(z)}.
 }
 
-Intenziteta svetlobe\index{Gaussov snop!intenziteta} je sorazmerna z $E(r,z)E^*(r,z)$ in zanjo velja
+Intenziteta svetlobe\index{Gaussov snop!intenziteta}, ki je enaka $E(r,z,t)E^*(r,z,t)$, je potem 
 \boxeq{eq:gaussov-snop-intenziteta}{
 I(r,z)= I_{0}\,\frac{w_0^2}{w^2(z)}\,e^{-2r^{2}/w^{2}(z)}.
 }
-
+\vglue-5truemm
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
@@ -316,7 +316,11 @@ I(r,z)= I_{0}\,\frac{w_0^2}{w^2(z)}\,e^{-2r^{2}/w^{2}(z)}.
 
 \begin{definition}
 \label{naloga-širina-snopa}
-Pokaži, da je celotna svetlobna moč v snopu enaka $P = \frac{1}{2}\pi w_0^2\, I_0$.
+Pokaži, da je celotna svetlobna moč v Gaussovem snopu 
+enaka 
+\begin{equation}
+P = \frac{1}{2} c_0 \varepsilon_0 I_0 \left(\frac{1}{2}\pi w_0^2\right).
+\end{equation}
 \end{definition}
 
 Povejmo še nekaj o parametru $q(z)$, ki smo ga uporabili pri izračunu Gaussovega snopa v nastavku
@@ -334,11 +338,9 @@ njegov inverz pa kompleksna ukrivljenost\index{Kompleksna ukrivljenost}
 \begin{definition}
 Uporabi enačbi (\ref{eq:z0} in \ref{eq:R}) in izpelji gornji izraz za kompleksno ukrivljenost.
 \end{definition}
-Izkazalo se bo, da je kompleksni krivinski radij zelo uporaben pri 
-obravnavi preslikav Gaussovih snopov z lečami.
+Kompleksni krivinski radij je zelo uporaben pri obravnavi preslikav Gaussovih snopov z lečami.
 
 \section{Snopi višjega reda}
-
 Osnovna rešitev obosne valovne enačbe (enačba~\ref{eq:obosna-valovna-enacba}) 
 je Gaussov snop (enačba~\ref{eq:gaussov-snop}). Poleg te rešitve obstaja še veliko 
 drugih rešitev, prav tako omejenih v prečni smeri. 
@@ -364,8 +366,8 @@ in (\ref{eq:q}). Razlika je v fazi, ki je odvisna tudi od $n$ in $m$\index{Gouye
 \eta_{n,m}\left(z\right)=(n+m+1)\arctan\left(\frac{z}{z_{0}}\right).
 \end{equation}
 
-Nekaj višjih redov Hermite-Gaussovih snopov je na sliki (\ref{fig:Gauss-Hermitevi-snopi}),
-kjer rišemo $|\psi_{n,m}(x, y, 0)|$.
+Na sliki (\ref{fig:Gauss-Hermitevi-snopi}) so intenzitetni profili 
+Hermite-Gaussovih snopov višjih redov $|\psi_{n,m}(x, y, 0)|^2$.
 Indeksa $n$ in $m$ določata število vozlov v prečnih smereh $x$ in $y$,
 širina snopa pa narašča z $n$ in $m$. 
 
@@ -373,8 +375,8 @@ Indeksa $n$ in $m$ določata število vozlov v prečnih smereh $x$ in $y$,
 \centering
 \def\svgwidth{110truemm} 
 \input{slike/03_Hermite_Gauss.pdf_tex}
-\caption{Prečni profil absolutne vrednosti električne poljske jakosti
-Hermite-Gaussovih snopov v grlu za različne vrednosti $(n,m)$}
+\caption{Prečni profil intenzitete Hermite-Gaussovih snopov v grlu 
+za različne vrednosti $(n,m)$}
 \label{fig:Gauss-Hermitevi-snopi}
 \end{figure}
 
