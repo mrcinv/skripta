@@ -135,12 +135,12 @@ Drugi pogoj lahko zapišemo tudi z enačbami, izhajajoč iz enačbe za oceno div
 \frac{a_{1}a_{2}}{\lambda L}>1,
 \label{eq:Fresnelovo_stevilo}
 \end{equation}
-kjer sta $a_{1}$ in $a_{2}$ polmera zrcal resonatorja. Izrazu 
+kjer sta $a_{1}$ in $a_{2}$ polmera zrcal. Izrazu 
 $
 F = a_{1}a_{2}/\lambda L
 $
-pravimo tudi Fresnelovo število\index{Fresnelovo število} (glej enačbo~\ref{eq:Fst})
-in za stabilen resonator mora veljati $F>1$. Laserji imajo pogosto $F\gg 1$, lahko tudi $F \sim 100$.
+pravimo Fresnelovo število\index{Fresnelovo število} (enačba~\ref{eq:Fst})
+in resonator je stabilen pri $F>1$. Laserji imajo pogosto $F\gg 1$, lahko tudi $F \sim 100$.
 
 \subsection*{Fabry-Perotov interferometer}
 Poglejmo resonator, omejen z dvema vzporednima ravnima zrcaloma
@@ -154,12 +154,12 @@ med zrcaloma večkratnik polovične valovne dolžine (enačba~\ref{eq:k-votlina}
 L = \frac{n \lambda}{2}.
 \end{equation}
 Prepustnost interferometra za ravni val, ki vpada pravokotno na zrcali z
-odbojnostjo ${\cal R}$, je 
+odbojnostjo ${\cal R}$, lahko izračunamo (glej nalogo~\ref{naloga:FP}). Prepustnost je enaka 
 \begin{equation}
 T=\frac{1}{1+\frac{4{\cal R}}{(1-{\cal R})^{2}}\sin^{2}kL}
 \label{eq:Fabry-Perot-prepustnost}
 \end{equation}
-in je prikazana na sliki (\ref{fig:Fabry-Perot}).
+in je prikazana na sliki (\ref{fig:Fabry-Perot}) za tri različne vrednosti ${\cal R}$.
 \begin{figure}[h!]
 \centering
 \def\svgwidth{95truemm} 
@@ -176,6 +176,7 @@ resonatorja, je sistem v resonanci in  $T=1$. Širina resonance se z naraščajo
 odbojnostjo zrcal ${\cal R}$ zmanjšuje. Spoznali bomo, da odbojnost
 zrcal določa tudi čas dušenja vzbujenega lastnega nihanja. 
 \begin{definition}
+\label{naloga:FP}
 Pokaži, da je prepustnost Fabry-Perotovega interferometra, katerega zrcali imata odbojnost $\cal{R}$, enaka 
 \begin{equation}
 T = \frac{1}{1+\frac{4\cal{R}}{(1-{\cal R})^2}\sin^2 \delta},
@@ -204,9 +205,9 @@ V stabilnih resonatorjih s konkavnima zrcaloma pričakujemo, da so
 lastna nihanja omejena na bližino osrednje osi in zrcali znatno 
 večji od polmera lastnega nihanja. Tedaj lahko za obravnavo
 električnega polja uporabimo obosno valovno\index{Obosna valovna enačba} 
-enačbo (enačba~\ref{eq:obosna-valovna-enacba}). Upoštevamo še zahtevo,
-da svetloba po odboju od zrcala konstruktivno interferira sama s sabo.
-Od tod izhaja robni pogoj, ki pravi, da se valovna fronta stoječega valovanja na 
+enačbo (enačba~\ref{eq:obosna-valovna-enacba}). Stoječe valovanje se pojavi, kadar
+svetloba po odboju od zrcala konstruktivno interferira sama s sabo.
+Od tod izhaja robni pogoj, ki pravi, da se oblika valovne fronte stoječega valovanja na 
 zrcalu ujema z obliko zrcala, električno polje na površini zrcala
 pa je približno enako nič.
 
@@ -215,8 +216,8 @@ pa je približno enako nič.
 \def\svgwidth{100truemm} 
 \input{slike/04_Resonator_Gauss.pdf_tex}
 \caption{Gaussov snop v odprtem resonatorju s konkavno ukrivljenima zrcaloma
-s krivinskima radijema $R_1$ in $R_2$. 
-Krivinski radij čela snopa se ujema s krivinskim radijem zrcal. Kadar $R_1 \neq R_2$, 
+s krivinskima radijema $R_1$ in $R_2$. V stabilnem resonatorju se krivinski 
+radij čela snopa ujema s krivinskim radijem zrcal. Kadar $R_1 \neq R_2$, 
 grlo snopa ne leži na sredini resonatorja.}
 \label{fig:Gaussov-snop-v-resonatorju}
 \end{figure}
@@ -296,7 +297,7 @@ in (e) plankonkavni resonator.}
 \subsection*{Simetrični resonatorji}
 Za simetrični resonator\index{Resonator!simetrični} velja $R_{1}=R_{2}=R$. Na diagramu 
 (slika~\ref{fig:Podrocje-stabilnih-resonatorjev}) 
-se taki resonatorji nahajajo na simetrali lihih kvadrantov pri $x=y$. Pri simetričnih resonatorjih 
+se taki resonatorji nahajajo na simetrali lihih kvadrantov pri $x=y$. V simetričnih resonatorjih 
 je grlo v sredini resonatorja in enačba~(\ref{eq:z0_stab}) se poenostavi v 
 \begin{equation}
 z_{0}=\frac{1}{2}\sqrt{(2R-L)L}.
@@ -316,7 +317,8 @@ w_{1}=w_{0}\sqrt{\left(1+\left(\frac{L}{2z_{0}}\right)^{2}\right)}=
 Pri izbrani dolžini simetričnega resonatorja je polmer snopa na zrcalu najmanjši,
 kadar je $R=L$. Tedaj sovpadata geometrijski gorišči obeh zrcal,
 zato imenujemo tak resonator konfokalni\index{Resonator!konfokalni}. 
-Hiter račun pokaže, da velja $z_{0}=L/2$, snop od grla do zrcala pa se razširi
+Hiter račun pokaže, da velja $z_{0}=L/2$, in je celoten obseg resonatorja območje 
+bližnjega polja, snop pa se na razdalji od grla do zrcala razširi
 za $w_1/w_0=\sqrt{2}$. 
 \begin{definition}
 \label{naloga:uklon_konf}
