@@ -342,10 +342,12 @@ Kompleksni krivinski radij je zelo uporaben pri obravnavi preslikav Gaussovih sn
 
 \section{Snopi višjega reda}
 Osnovna rešitev obosne valovne enačbe (enačba~\ref{eq:obosna-valovna-enacba}) 
-je Gaussov snop (enačba~\ref{eq:gaussov-snop}). Poleg te rešitve obstaja še veliko 
-drugih rešitev, prav tako omejenih v prečni smeri. 
+je Gaussov snop (enačba~\ref{eq:gaussov-snop}), ki ga imenujemo tudi TEM$_{00}$ 
+snop\footnote{TEM -- {\it Transverse Electromagnetic Mode}, 
+transverzalno elektromagnetno valovanje.}.\index{TEM$_{00}$} 
+Poleg te rešitve obstaja še veliko drugih rešitev, prav tako omejenih v prečni smeri. 
 V kartezičnih koordinatah tako rešijo obosno valovno enačbo
-\index{Hermite-Gaussovi snopi}Hermite-Gaussovi snopi\footnote{Francoski matematik Charles Hermite, 1822--1901.}
+\index{Hermite-Gaussovi snopi}Hermite-Gaussovi snopi\footnote{Francoski matematik Charles Hermite, 1822--1901.}, imenovani tudi TEM$_{n,m}$\index{TEM$_{n,m}$}
 \begin{equation}
 \psi_{n,m}(x,y)=\frac{w_{0}}{w}H_{n}\left(\frac{\sqrt{2}x}{w}\right)H_{m}\left(\frac{\sqrt{2}y}{w}\right)
 \exp\left(\frac{ik(x^{2}+y^{2})}{2q}-i\eta_{n,m}\right),
@@ -373,7 +375,7 @@ Indeksa $n$ in $m$ določata število vozlov v prečnih smereh $x$ in $y$,
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{90truemm} 
 \input{slike/03_Hermite_Gauss.pdf_tex}
 \caption{Prečni profil intenzitete Hermite-Gaussovih snopov v grlu 
 za različne vrednosti $(n,m)$}
