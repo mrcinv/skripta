@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '05_Absorpcija.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{268.66048978bp}%
+    \setlength{\unitlength}{246.04746901bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,11 +50,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.60729533)%
+  \begin{picture}(1,0.66327215)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{05_Absorpcija.pdf}}%
-    \put(0.07959425,0.34341615){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$j$}}}%
-    \put(0.72924381,0.34341615){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$j-dj$}}}%
-    \put(0.60963121,0.48554352){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$S$}}}%
-    \put(0.30369169,0.03045613){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$dz$}}}%
+    \put(0.08497726,0.37514111){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$j$\end{tabular}}}}%
+    \put(0.79433294,0.37514111){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$j-dj$\end{tabular}}}}%
+    \put(0.62360073,0.35979259){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$S$\end{tabular}}}}%
+    \put(0.3296704,0.03341845){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$dz$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
