@@ -41,7 +41,7 @@ vektorjem\index{Valovni vektor}
 \begin{equation}
 \mathbf{k}=\left(\frac{\pi l}{L},\frac{\pi m}{L},\frac{\pi n}{L}\right),
 \end{equation} 
-katerega velikost je povezana s frekvenco $k = \omega/c$.
+katerega velikost je povezana s frekvenco $|\mathbf{k}|= k = \omega/c$.
 Iz Maxwellove enačbe za prazen prostor $\nabla\cdot\mathbf{E}=0$ (enačba~\ref{eq:Maxwell3})
 sledi $\mathbf{k}\cdot\mathbf{E}=0$. 
 Za vsako trojico števil $l$, $m$ in $n$ obstajata tako dve
@@ -53,7 +53,8 @@ neodvisni polarizaciji.
  kocki s stranico $L$ in zadosti robnim pogojem idealno prevodnih sten votline.
 \end{definition}
 
-Preštejmo, koliko je lastnih valovanj v intervalu velikosti valovnega
+Preštejmo, koliko je stoječih valovanj oziroma lastnih nihanj 
+v intervalu velikosti valovnega
 vektorja med $k$ in $k+dk$ -- to smo na hitro naredili že pri obravnavni
 resonatorjev (enačba~\ref{eq:N-stevilo-stanj}). Možni valovni vektorji tvorijo tridimenzionalno
 mrežo v prvem oktantu prostora vseh valovnih vektorjev. Razmik med
@@ -66,7 +67,7 @@ Upoštevati moramo še, da sta pri vsakem $\mathbf{k}$ dovoljeni dve polarizacij
 dN=\left(\frac{L}{\pi}\right)^{3}\pi k^{2}\, dk.
 \label{4.2}
 \end{equation}
-Zapišemo število stanj na enoto volumna
+Zapišemo število lastnih nihanj na enoto volumna
 \begin{equation}
 \frac{dN}{V}=\frac{ k^{2}}{\pi^{2}} dk
 \label{4.3}
@@ -75,7 +76,7 @@ in ga prevedemo na frekvenčno odvisnost
 \begin{equation}
 \frac{dN}{V}=\frac{8 \pi \nu^{2} }{c^{3}}d\nu = \frac{\omega^2}{\pi^2c^3}d\omega.
 \end{equation}
-Vpeljemo gostoto stanj  $\varrho (\omega)$, to je število valovanj na 
+Vpeljemo gostoto stanj  $\varrho (\omega)$, to je število lastnih nihanj na 
 frekvenčni interval\footnote{V tem poglavju bomo ohlapno uporabljali besedo
 frekvenca tudi za krožno frekvenco. Iz zapisa bo vedno jasno, za katero frekvenco gre.}
 na enoto volumna votline\index{Gostota stanj}
@@ -83,7 +84,7 @@ na enoto volumna votline\index{Gostota stanj}
 \rho(\omega)=\frac{dN}{V d\omega}=\frac{\omega^{2}}{\pi^{2}c^{3}}.
 }
 
-Vsote po lastnih valovanjih, to je po dovoljenih vrednostih valovnega vektorja $k$,
+Vsote po lastnih nihanjih, to je po dovoljenih vrednostih valovnega števila $k$,
 lahko z uporabo gostote stanj spremenimo v integrale po $k$ ali po $\omega$
 \begin{equation}
 \sum_{k}\ldots \quad \Rightarrow \quad V\int\rho(k)\ldots dk=V\int\rho(\omega)\ldots d\omega.
@@ -129,7 +130,7 @@ Ta enačba da seveda pričakovano časovno odvisnost oblike $e^{-i \omega_\alpha
 
 Z upoštevanjem razvoja (enačbi~\ref{eq:pqrazvoj1} in \ref{eq:pqrazvoj}) in ob ustrezni
 normalizaciji zapišemo energijo 
-polja -- \index{Hamiltonova funkcija}Hamiltonovo 
+polja ali \index{Hamiltonova funkcija}Hamiltonovo 
 funkcijo\footnote{Irski matematik Sir William Rowan Hamilton, 1805--1865.}
 \begin{equation}
 {\cal H}=\frac{1}{2}\int(\epsilon_{0}E^{2}+\frac{B^{2}}{\mu_0})\, 
@@ -150,61 +151,56 @@ ki morajo zadoščati komutacijskim pravilom
 \label{4.10}
 \end{equation}
 
-Iz kvantne mehanike vemo, da so lastne vrednosti energije harmonskega oscilatorja, 
+Iz kvantne mehanike vemo, da so lastne vrednosti energije posameznega harmonskega oscilatorja, 
 opisanega s Hamiltonovo funkcijo (enačba~\ref{4.9}), diskretne. Njihove vrednosti so enake
 \boxeq{4.11}{
-W_{n,\alpha}=\hbar\omega_{\alpha}(n_{\alpha}+\frac{1}{2}), \quad n_{\alpha}= 0, 1, 2 \ldots
+W_{n}=\hbar\omega(n+\frac{1}{2}), \quad n= 0, 1, 2 \ldots
 }
-{\bf Razliki energije harmonskega oscilatorja, če se $n_{\alpha}$
+{\bf Razliki energije harmonskega oscilatorja, če se $n$
 spremeni za 1, pravimo foton.}\index{Foton} Energija
-fotona je tako enaka $\hbar \omega$, $n$ pa predstavlja število fotonov z dano energijo.
-
-Celotno energijo kvantiziranega elektromagnetnega polja \index{Energija polja}v votlini
-izračunamo tako, da seštejemo prispevke vseh možnih stanj
-\begin{equation}
-W=\sum_{\alpha}\hbar\omega_{\alpha}n_{\alpha},
-\end{equation}
-pri čemer smo izpustili ničelno energijo\index{Ničelna energija}. 
-Izpuščali jo bomo tudi v nadaljevanju, saj
-je to energija osnovnega stanja, ki se ne more sprostiti. 
+fotona je tako enaka $\hbar \omega$, $n$ pa predstavlja število fotonov. Celotna
+energija kvantiziranega elektromagnetnega polja v votlini je vsota prispevkov
+posameznih oscilatorjev, pri čemer ničelno energijo pogosto zanemarimo. 
+Tudi v nadaljevanju bomo ničelno energijo\index{Ničelna energija} izpuščali, 
+saj je to energija osnovnega stanja, ki se ne more sprostiti. 
 
 \begin{remark}
 Vidna svetloba z valovno dolžino $500~\si{\nano\metre}$ ima frekvenco
 $\nu = 6 \cdot 10^{14}~\si{\hertz}$. Ustrezna energija fotona je
 $W = 4 \cdot 10^{-19}~\si{\joule}$ oziroma $W = 2,5~\mathrm{e}\si{\volt}$.
+To vrednost si velja zapomniti.
 \end{remark}
 
 \section{Sevanje črnega telesa}
 Obravnavajmo sevanje v votlini, ki je v toplotnem ravnovesju s stenami s temperaturo
-$T$. Iz statistične fizike vemo, da verjetnost $P$, da je v izbranem stanju 
-votline $\alpha$ število fotonov enako $n_{\alpha}$, zapišemo z Boltzmannovo porazdelitvijo
-\index{Boltzmannova porazdelitev}
+$T$. Iz statistične fizike vemo, da verjetnost $P$, da je v izbranem stanju votline
+število fotonov enako $n$, 
+zapišemo z Boltzmannovo porazdelitvijo\index{Boltzmannova porazdelitev}
 \begin{equation}
-P(n_{\alpha})=\frac{e^{-W_{n\alpha}/k_BT}}{\sum_{\alpha}e^{-W_{n\alpha}/k_BT}} = 
-\frac{e^{-\beta\hbar\omega_{\alpha}n_{\alpha}}}
-{\sum_{\alpha}e^{-\beta\hbar\omega_{\alpha}n_{\alpha}}}=
-e^{-\beta\hbar\omega_{\alpha}n_{\alpha}}(1-e^{-\beta\hbar\omega_{\alpha}}),
+P(n)=\frac{e^{-W_{n}/k_BT}}{\sum_{n}e^{-W_{n}/k_BT}} = 
+\frac{e^{-\beta\hbar\omega n}}
+{\sum_{n}e^{-\beta\hbar\omega n}}=
+e^{-\beta\hbar\omega n}(1-e^{-\beta\hbar\omega}),
 \label{4.12}
 \end{equation}
 pri čemer $\beta = 1/k_BT$ in $k_B$ Boltzmannova konstanta. 
 
-Povprečno število fotonov 
-v stanju $\alpha$ je potem \index{Sevanje črnega telesa}
+Povprečno število fotonov v tem stanju je potem \index{Sevanje črnega telesa}
 \begin{equation}
-\langle n_{\alpha}\rangle =\sum_{\alpha}n_{\alpha}P(n_{\alpha})=\frac{1}{e^{\beta\hbar\omega_{\alpha}}-1}.
+\langle n\rangle =\sum_{n}n P(n)=\frac{1}{e^{\beta\hbar\omega}-1}.
 \label{4.13}
 \end{equation}
 
-Povprečno energijo posameznega stanja zapišemo kot produkt energije tega stanja in 
-povprečnega števila fotonov v tem stanju
+Povprečno energijo izbranega stanja zapišemo kot produkt energije in 
+povprečnega števila fotonov
 \begin{equation}
-\langle W_{\alpha}\rangle = \hbar \omega_\alpha \langle n_\alpha \rangle
-= \frac{\hbar \omega_\alpha}{e^{\beta\hbar\omega_{\alpha}}-1}.
+\langle W\rangle = \hbar \omega \langle n \rangle
+= \frac{\hbar \omega}{e^{\beta\hbar\omega}-1}.
 \end{equation}
 Ravnovesno gostoto energije elektromagnetnega polja\index{Gostota energije} v votlini na
 frekvenčni interval izračunamo tako, da povprečno energijo posameznega
 stanja pomnožimo z gostoto stanj $\varrho (\omega)$ 
-(enačba~\ref{4.4}). Dobimo znano formulo za energijo na enoto volumna na enoto frekvence, 
+(enačba~\ref{4.4}). Dobimo znan izraz za energijo na enoto volumna na enoto frekvence, 
 to je \index{Planckov zakon}Planckov 
 zakon\footnote{Nemški fizik in nobelovec Max Karl Ernst Ludwig Planck, 1858--1947.}.
 Planckov zakon opiše spektralno gostoto energije svetlobe $u$ 
@@ -218,7 +214,7 @@ u(\omega)=\hbar\omega\langle n\rangle \rho(\omega)
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{110truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/05_PlanckOmega.pdf_tex}
 \caption{Planckov spekter za sevanje črnega telesa pri različnih temperaturah}
 \label{fig:Planck}
@@ -229,14 +225,14 @@ u(\omega)=\hbar\omega\langle n\rangle \rho(\omega)
 Oglejmo si osnovne procese interakcije svetlobe s snovjo. Naj
 bo v votlini poleg elektro\-magnet\-nega polja še $N$ atomov, ki se med
 seboj ne motijo. Za začetek naj bodo atomi prav enostavni\index{Dvonivojski sistem}:
-imajo naj le dve energijski stanji z energijama $E_{1}$ in $E_{2}$ (slika~\ref{sl4.1}\,a). 
-Stanje $E_2$ naj ima višjo energijo od $E_1$, razlika med njima pa naj bo
+imajo naj le dva energijska nivoja z energijama $E_{1}$ in $E_{2}$ (slika~\ref{sl4.1}\,a). 
+Pri tem naj bo $E_2$ višja energija od $E_1$, razlika med njima pa naj bo
 \begin{equation}
  E_2 - E_1 = \hbar \omega_0.
 \end{equation}
 
 Zaradi interakcije s poljem pri frekvenci prehoda $\omega_{0}$
-atomi prehajajo iz nižjega stanja v višje in obratno. Prehajanje 
+atomi prehajajo iz nižjega nivoja v višje in obratno. Prehajanje 
 med obema stanjema opisujejo trije procesi: 
 absorpcija, spontano sevanje in stimulirano sevanje.
 
@@ -251,7 +247,8 @@ absorpcija (b), spontano sevanje (c) in stimulirano sevanje (d).}
 
 \subsection*{Absorpcija fotona}
 Absorpcija fotona\index{Absorpcija fotona} je prehod, pri katerem se foton 
-z ustrezno energijo absorbira, atom pa preide iz nižjega energijskega stanja v višje (slika~\ref{sl4.1}\,b). 
+z ustrezno energijo absorbira, atom pa preide iz nižjega energijskega nivoja 
+v višje (slika~\ref{sl4.1}\,b). 
 Verjetnost za prehod na časovno enoto\index{Verjetnost za prehod}, ki jo označimo z $r_{12}$, 
 je sorazmerna spektralni gostoti energije polja \index{Spektralna gostota energije}$u(\omega)$, 
 to je energiji na enoto volumna in frekvenčni interval, pri frekvenci prehoda $\omega_{0}$.
@@ -263,26 +260,27 @@ r_{12}=B_{12}u(\omega_{0}).
 \end{equation}
 To je enostavno razumeti. Več kot je fotonov v votlini pri frekvenci, ki je
 v bližini frekvence prehoda, več fotonov se lahko absorbira in večja je 
-verjetnost za prehod atoma v višje stanje. Pri absorpciji se
+verjetnost za prehod. Pri absorpciji se
 seveda število fotonov v enem od stanj polja pri frekvenci
 $\omega_{0}$ zmanjša za ena.
 
 \subsection*{Spontano sevanje}
-Atom v vzbujenem stanju ni stabilen, temveč prej ali slej spontano preide v nižje stanje. Temu pojavu
-pravimo spontano sevanje\index{Spontano sevanje} ali spontana emisija (slika~\ref{sl4.1}\,c).
+Atom v vzbujenem stanju ni stabilen, temveč prej ali slej spontano preide 
+v osnovni nivo. Temu pojavu pravimo spontano sevanje\index{Spontano sevanje} 
+ali spontana emisija (slika~\ref{sl4.1}\,c).
 
 Pri spontanem sevanju je foton izsevan v katerokoli stanje polja v bližini 
 frekvence prehoda. Smer izsevane svetlobe je poljubna, v odsotnosti zunanjega polja
 pa je poljubna tudi polarizacija izsevane svetlobe.
 Verjetnost za prehod na časovno enoto\index{Verjetnost za prehod} označimo z $A_{21}$.
 Za dovoljene prehode je vrednost $A_{21} \sim 10^6$--$10^8/\si{\second}$, 
-za prepovedane pa okoli $\sim 10^4/\si{\second}$. 
-Karakteristični (naravni) razpadni čas\index{Razpadni čas} gornjega stanja vpeljemo kot
+za prepovedane pa okoli $\sim 10^4/\si{\second}$. Karakteristični (naravni) 
+razpadni čas\index{Razpadni čas} vzbujenega stanja vpeljemo kot
 $\tau = 1/A_{21}$. 
 
 Zaradi končnega življenjskega časa ima vzbujeno stanje končno spektralno 
 širino. Če ni Dop\-pler\-je\-ve razširitve, je atomska spektralna 
-črta\index{Spektralna črta} najpogosteje kar 
+črta $g$ \index{Spektralna črta} najpogosteje kar 
 Lorentzove oblike\index{Spekter!Lorentzov} z vrhom pri $\omega_0$
 (enačba~\ref{eq:spekter-primer})
 \boxeq{4.21}{
@@ -298,7 +296,7 @@ $2\gamma$ in višine $1/2\gamma$.
 
 
 \subsection*{Stimulirano sevanje}
-Tretji pojav je prehod atoma iz višjega stanja v nižje zaradi interakcije
+Tretji pojav je prehod atoma iz višjega nivoja v nižjega zaradi interakcije
 s poljem. Temu procesu pravimo stimulirano sevanje\index{Stimulirano sevanje} ali 
 stimulirana emisija. Tudi verjetnost za stimuliran prehod na časovno enoto $r_{21}$ 
 je sorazmerna s spektralno gostoto energije polja pri frekvenci prehoda $\omega_{0}$
@@ -326,7 +324,7 @@ obravnavamo sevanje v votlini, ki je v termičnem ravnovesju z okolico (črno te
 \def\svgwidth{140truemm} 
 \input{slike/05_Spektri.pdf_tex}
 \caption{Pri izračunu verjetnosti za absorpcijo in stimulirano emisijo je 
-pomembna oblika spektralne gostote elektromagnetnega polja $u(\omega)$. V prvem primeru je 
+pomembna oblika spektralne gostote vpadnega elektromagnetnega polja $u(\omega)$. V prvem primeru je 
 bistveno širša (a), v drugem pa bistveno ožja (b) od širine atomske spektralne črte $g(\omega-\omega_0)$.}
 \label{fig:spektri}
 \end{figure}
@@ -341,7 +339,7 @@ Gornji zapis preverimo na primeru spektra črnega telesa, ki se ne spreminja
 dosti v območju prehoda. Takrat $u(\omega_0)$ postavimo pred integral in po pričakovanju
 dobimo znano zvezo~(enačba~\ref{4.16}). 
 
-Če pa na atome svetimo s svetlobo s spektrom, ki je ozek v primerjavi s spektralno 
+Če na atome svetimo s svetlobo s spektrom, ki je ozek v primerjavi s spektralno 
 širino prehoda (na primer iz laserskega resonatorja), je verjetnost za prehod 
 odvisna tudi od tega, kako blizu osrednje frekvence prehoda je frekvenca vpadne 
 svetlobe (slika~\ref{fig:spektri}\,b). Naj bo  $w_{R}$ gostota energije skoraj
