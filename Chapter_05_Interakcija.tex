@@ -1249,7 +1249,7 @@ Planckove formule (enačba~\ref{4.27}). Prehojena pot jasno kaže zvezo med spon
 stimuliranim sevanjem ter gostoto stanj elektromagnetnega polja. 
 
 \section{*Rabijeve oscilacije}
-Ko močna svetloba vpada na dvonivojski sistem, lahko v primeru, da je frekvenca 
+Če je svetloba, ki vpada na dvonivojski sistem, zelo močna, lahko v primeru, da je frekvenca 
 vpadne svetlobe $\omega$ blizu frekvence prehoda $\omega_0$, pride do periodične 
 izmenjave energije med 
 svetlobnim poljem in dvonivojskim sistemom.\index{Dvonivojski sistem} 
@@ -1313,11 +1313,14 @@ i \frac{\Delta}{\Omega} \sin\left(\frac{\Omega t}{2}\right) \right)\qquad \mathr
 c_2(t)&=&\frac{V}{i\hbar \Omega} e^{i\Delta t/2}\, \sin\left(\frac{\Omega t}{2}\right).
 \label{eq:rabi4}
 \end{eqnarray}
-Pri tem smo vpeljali Rabijevo krožno frekvenco\index{Rabijeva frekvenca}
+Pri tem smo vpeljali krožno frekvenco
 \begin{equation}
 \Omega = \sqrt{\Delta^2 + \left(\frac{V}{\hbar}\right)^2} = \sqrt{(\omega_0-\omega)^2 
-+ \left(\frac{\langle1|\hat{x}|2\rangle\, eE_0}{\hbar}\right)^2}.
++ \left(\frac{\langle1|\hat{x}|2\rangle\, eE_0}{\hbar}\right)^2} = 
+\sqrt{(\omega_0-\omega)^2 + \Omega_R^2}.
 \end{equation}
+Krožno frekvenco $\Omega_R = V/\hbar$ imenujemo Rabijeva krožna frekvenca.\index{Rabijeva frekvenca}
+
 \begin{definition}
 Pokaži, da enačbi~(\ref{eq:rabi3}) in (\ref{eq:rabi4}) rešita
 sistem enačb (\ref{eq:rabi2}) ob izbranih začetnih pogojih.
@@ -1327,13 +1330,13 @@ Poglejmo rezultat podrobneje. Verjetnost, da najdemo atom v stanju $|2\rangle$, 
 P_2(t) = |c_2(t)|^2 = \frac{V^2}{\hbar^2 \Omega^2}\sin^2(\Omega t/2).
 \end{equation}
 Če je frekvenca vpadne svetlobe točno enaka frekvenci prehoda, je $\Delta = 0$ in 
-$\Omega = V/\hbar$. Takrat je amplituda nihanja zasedenosti vzbujenega stanja kar enaka 1
+$\Omega = \Omega_R = V/\hbar$. Takrat je amplituda nihanja zasedenosti vzbujenega stanja kar enaka 1
 in sistem v celoti periodično prehaja iz osnovnega stanja v vzbujeno in nazaj. To pomeni,
 da prihaja izmenično do popolne absorpcije svetlobe in do popolne stimulirane emisije.
-Pri odstopajoči vpadni frekvenci se amplituda nihanja zmanjša, hkrati pa se poveča
-frekvenca oscilacij. Frekvenca oscilacij pa ni odvisna zgolj od frekvence vpadnega valovanja, 
-ampak tudi od amplitude električne poljske jakosti. Zelo groba ocena
-Rabijeve frekvence je zato $\Omega \sim~\si{MHz}$.
+Pri odstopajoči vpadni frekvenci se amplituda nihanja zmanjša, hkrati se poveča
+frekvenca oscilacij. Frekvenca oscilacij ni odvisna zgolj od frekvence vpadnega valovanja, 
+ampak tudi od amplitude električne poljske jakosti. Groba ocena
+Rabijeve frekvence je $\Omega \sim~\si{MHz}$.
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
@@ -1344,8 +1347,14 @@ Z naraščajočim odstopanjem se amplituda oscilacij
 zmanjšuje, njihova frekvenca pa povečuje.}
 \label{fig:Rabi}
 \end{figure}
+
+Omenjeno velja, kadar je vpadna svetloba zelo močna, povsem koherentna in v sistemu ni 
+motenj. V realnih sistemih so prisotni relaksacijski pojavi, kot na primer trki med atomi
+ali spontana emisija, zato so Rabijeve oscilacije dušene. Zaznamo jih tako lahko le v času, ki 
+je krajši od obratne vrednosti širine spektralne črte ($\sim 10^{-10}~\si{s}$).
+
 \begin{remark}
 Rabijeve oscilacije niso omejene samo na optične prehode, ampak se pojavijo pri 
-vrsti dvonivojskih sistemov, ki interagirajo z spreminjajočim se zunanjim poljem. Poznamo jih 
-na primer pri jedrski magnetni resonanci (NMR) ali kvantnih logičnih vezjih.
+vrsti dvonivojskih sistemov, ki interagirajo z močnim spreminjajočim se zunanjim poljem. 
+Poznamo jih na primer pri jedrski magnetni resonanci (NMR) ali kvantnih logičnih vezjih.
 \end{remark}
