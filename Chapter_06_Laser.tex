@@ -10,16 +10,16 @@ sunkovnih laserjev in na koncu predstavili še semiklasični model laserja.
 
 \section{Laser}
 \index{Laser}
-Svetloba se pri prehodu skozi sredstvo, v katerem
-med dvema nivojema dosežemo obrnjeno zasedenost, ojačuje. Postavimo tako sredstvo v optični resonator. 
-\index{Resonator} Na začetku nastaja predvsem spontano izsevana svetloba, ki 
-\index{Spontano sevanje} se med zrcaloma
-resonatorja odbija in ob vsakem preletu skozi snov postopoma ojačuje.
+Spoznali smo, da se v sredstvu, v katerem med dvema nivojema dosežemo obrnjeno 
+zasedenost, svetloba z ustrezno valovno dolžino ojačuje. 
+Postavimo tako sredstvo v optični resonator. \index{Resonator} 
+Na začetku nastaja predvsem spontano izsevana svetloba, ki 
+\index{Spontano sevanje} se med zrcaloma resonatorja odbija.
 \index{Optično ojačevanje}
-Vzbujajo se nihanja resonatorja z nihajnimi frekvencami blizu frekvence
-atomskega prehoda, pri katerih snov ojačuje. Energija nihanj z dovolj
-majhnimi izgubami narašča, dokler se ojačenje ne izenači z izgubami.
-\index{Izgube v resonatorju}
+V resonatorju se vzbujajo nihanja z nihajnimi frekvencami blizu frekvence
+atomskega prehoda, pri kateri snov ojačuje. V začetku je ojačenje za
+izbrana nihanja veliko, z naraščajočo intenziteto pa se ojačenje zmanjšuje, 
+dokler se ne izenači z izgubami. \index{Izgube v resonatorju}
 Sistem preide v stacionarno stanje in seva močno koherentno svetlobo. Tak
 izvor svetlobe imenujemo laser. Beseda laser je nastala iz kratice za {\it Light
 Amplification by Stimulated Emission of Radiation} --  ojačenje svetlobe s
@@ -29,8 +29,7 @@ stimuliranim sevanjem.
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/06_shema.pdf_tex}
-\caption{Shema laserja s ključnimi deli: ojačevalno sredstvo, 
-črpalni mehanizem in resonator}
+\caption{Shema laserja s ključnimi deli: ojačevalno sredstvo, črpalni mehanizem in resonator}
 \label{fig:shemalaserja}
 \end{figure}
 \begin{remark}
@@ -52,14 +51,15 @@ vzdržuje stoječe valovanje s konstantno amplitudo.
 \end{remark}
 
 V grobem ima laser tri ključne sestavne dele: ojačevalno sredstvo, 
-črpalni mehanizem in ukrivljeni zrcali, ki tvorita resonator 
-(slika~\ref{fig:shemalaserja}). Črpalni \index{Črpanje}
+črpalni mehanizem in resonator, ki je v najpreprostejšem primeru sestavljen iz dveh 
+ukrivljenih zrcal (slika~\ref{fig:shemalaserja}). Črpalni \index{Črpanje}
 mehanizem vzdržuje obrnjeno zasedenost v ojačevalnem sredstvu, resonator pa omogoča,
-da se svetloba dovolj ojači in tako stimulirano sevanje prevlada nad spontanim. 
-Odbojnost vsaj enega od zrcal mora biti manjša od 1, da skozenj lahko izhaja svetloba.
+da se svetloba med številnimi prehodi skozi ojačevalno sredstvo dovolj ojači.
+Odbojnost vsaj enega od zrcal 
+mora biti manjša od 1, da skozenj lahko izhaja svetloba.
 
-Pri osnovnem opisu delovanja laserja se omejimo na najpreprostejši model in 
-privzemimo, da frekvenca le enega resonatorskega nihanja sovpada s 
+Zaenkrat se omejimo na najpreprostejši model laserja in 
+privzemimo, da frekvenca le enega resonatorskega lastnega nihanja sovpada s 
 frekvenco prehoda aktivne snovi. Ta privzetek v večini laserjev ni
 avtomatično izpolnjen, vendar ga je pogosto mogoče doseči z dodatnimi elementi 
 v resonatorju. Aktivno snov oziroma ojačevalno sredstvo v laserju stalno 
@@ -84,10 +84,10 @@ se tako na en obhod po enačbi (\ref{eq:djG}) poveča za
 \Delta W_{\rm oja\check{c}enje}=\frac{G}{1+W/W_s}\,W\, 2L'.
 \label{5.2}
 \end{equation}
-Namesto saturacijske gostote svetlobnega toka $j_s$ smo vpeljali
-saturacijsko energijo $W_s=Vj_s/c$, $L'$ pa označuje dolžino ojačevalnega
-sredstva.\index{Saturacijska energija}
-Račun pogosto poenostavimo, tako da vzamemo $L'=L$, tukaj pa zaradi
+Vpeljali smo saturacijsko energijo $W_s=Vj_s/c$. Dolžino ojačevalnega sredstva,
+ki se v splošnem razlikuje od dolžine resonatorja $L$, smo označili z $L'$.
+\index{Saturacijska energija}
+Zapis sicer pogosto poenostavimo in vzamemo $L'=L$, vendar tukaj zaradi
 jasnosti obdržimo ločen zapis. Privzeli smo tudi, da je ojačenje na en
 obhod dovolj majhno, da enačbe (\ref{eq:djG}) ni treba integrirati.
 
@@ -101,8 +101,18 @@ od koder sledi
 \Lambda\, W=\frac{G\,2L'}{1+W/W_s}\,W.
 \label{5.3}
 \end{equation}
-Ta enačba ima dve rešitvi za energijo svetlobnega nihanja. 
-Prva je $W=0$, druga pa  
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/06_stacio.pdf_tex}
+\caption{Za majhne vrednosti ojačenja $G$ ima enačba~(\ref{5.3}) eno samo 
+rešitev pri $W=0$, pri večjih ojačenjih pa ima tudi neničelno rešitev.}
+\label{fig:stacio}
+\end{figure}
+
+Enačba~(\ref{5.3}) ima pri majhnem ojačenju $G$ eno samo rešitev, to je 
+$W=0$, pri večjih vrednostih ojačenja $G$ pa obstaja še druga rešitev
+za energijo svetlobnega nihanja
 \boxeq{5.4}{ 
 W=W_s \left(\frac{G}{G_\mathrm{pr}}-1\right),
 }
@@ -132,8 +142,14 @@ Ker so vsi predfaktorji v gornji enačbi konstantni, je izhodna moč kar sorazme
 z energijo svetlobe v resonatorju. Odvisnost izhodne moči laserja od črpanja je 
 tako do konstante enaka, kot je prikazana na sliki (\ref{fig:energija}). 
 
+Gostoto svetlobnega toka, ki izhaja iz laserja, potem zapišemo 
+\begin{equation}
+ j = \frac{P}{S} = \frac{1}{2} (1-{\cal {R}}_{1}) j_s \left(\frac{G}{G_\mathrm{pr}}-1\right).
+\end{equation}
+Gornja enačba seveda velja za ojačenja $G>G_\mathrm{pr}$.
+
 \begin{definition}
-Izračunaj izhodno moč iz laserja pri dani dolžini resonatorja $L=L'$, 
+Izračunaj izhodno moč iz laserja pri dani dolžini resonatorja ($L=L'$), 
 odbojnosti enega zrcala ${\cal {R}}_{2}=1$, 
 notranjih izgubah na enoto dolžine $\alpha$ in ojačenju $G$. Pokaži, da
 je izhodna moč največja pri odbojnosti izhodnega zrcala 
@@ -144,15 +160,15 @@ je izhodna moč največja pri odbojnosti izhodnega zrcala
 
 \section{Zasedbene enačbe}
 \index{Zasedbene enačbe}
-Za podrobnejši opis delovanja laserja zapišimo zasedbene enačbe. 
+Za podrobnejši opis delovanja laserja zapišemo zasedbene enačbe. 
 Enačbam za zasedenost atomskih nivojev \index{Trinivojski sistem}
 v trinivojskem sistemu (enačbe~\ref{4.39.1}--\ref{4.39}) dodamo še enačbo za 
-energijo lastnega valovanja v resonatorju. Še naprej obravnavajmo primer, ko je 
-vzbujeno le eno resonatorsko stanje, opazujemo pa prehode med prvim 
-in drugim vzbujenim stanjem (slika~\ref{fig:3nivojski}\,b). 
+energijo lastnega nihanja v resonatorju. Še naprej obravnavajmo primer, ko je 
+vzbujeno le eno lastno resonatorsko stanje, opazujemo pa prehode  med prvim 
+in drugim vzbujenim atomskim stanjem (slika~\ref{fig:3nivojski}\,b). 
 
 Preden zapišemo enačbe, napravimo še nekaj poenostavitev. Najprej privzamemo, 
-da je razpadni čas spodnjega laserskega stanja $|1\rangle$, 
+da je razpadni čas spodnjega atomskega stanja $|1\rangle$, 
 ki ga določa koeficient $A_{10}$, dosti krajši od razpadnega
 časa zgornjega stanja $|2\rangle$. Tedaj vsi atomi iz spodnjega stanja zelo 
 hitro preidejo v osnovno stanje in $N_1 \approx 0$, če le ni preveč
@@ -161,8 +177,9 @@ nivoja $A_{20} \approx 0$. Celoten sistem potem opišemo z dvema
 \index{Obrnjena zasedenost}
 spremenljivkama: prva je $N_2$, ki označuje zasedenost drugega vzbujenega
 stanja in hkrati približno obrnjeno zasedenost; druga je število fotonov
-$n$, ki opisuje energijo v izbranem stanju resonatorja. Gostota energije
-polja je $w = n\hbar\omega/V$, pri čemer je $V$ volumen resonatorja. 
+$n$, ki opisuje energijo v izbranem lastnem stanju resonatorja. Energija
+polja v resonatorju je $W = \hbar\omega n$ (enačba~\ref{4.11}), ustrezna
+gostota energije pa $w = \hbar\omega n/V$, pri čemer je $V$ volumen resonatorja.
 
 Zasedbeni enačbi sta
 \begin{equation}
@@ -170,12 +187,11 @@ Zasedbeni enačbi sta
 =rN-A_{21}N_2-\frac{\sigma c}{V}\, N_2\,n
 \label{5.7}
 \end{equation}
-in 
+in \index{Izgube v resonatorju}\index{Življenjski čas nihanj}
 \begin{equation}
 \frac{dn}{dt}=\frac{\sigma c}{V}\, N_2\,(n+1)-\frac{2}{\tau}\,n.
 \label{5.8}
 \end{equation}
-
 Prva enačba sledi neposredno iz enačbe~(\ref{4.39}) ob upoštevanju zgoraj navedenih
 poenostavitev. Drugo pa dobimo s sledečim razmislekom. Energija svetlobe 
 oziroma število fotonov v resonatorju se povečuje predvsem 
@@ -192,8 +208,8 @@ izgub, kar opišemo z razpadnim časom $\tau/2$ (enačba~\ref{eq:dW}).
 
 Gornji enačbi predstavljata sistem dveh sklopljenih diferencialnih enačb za 
 časovni razvoj števila fotonov v resonatorskem stanju in za zasedenost 
-gornjega atomskega stanja. Enačbi sta nelinearni in ju ne znamo 
-analitično rešiti. Vseeno pa lahko nekaj povemo o takem sistemu.
+zgornjega atomskega stanja. Enačbi sta nelinearni in nimata  
+analitične rešitve. Vseeno pa lahko nekaj povemo o takem sistemu.
 
 Poglejmo najprej stacionarne rešitve, za katere velja $\dot{N}_{2}=0$ in 
 $\dot{n}=0$. Iz enačbe~(\ref{5.7}) izrazimo $N_{2}$ in ga vstavimo v enačbo~(\ref{5.8}).
@@ -214,24 +230,27 @@ med Einsteinovimi koeficienti (enačba~\ref{4.27})
 \begin{equation}
 p=\frac{VA_{21}}{\sigma c} = 
 \frac{VA_{21}}{B_{21}\hbar \omega g}=\frac{V\omega ^{2}}{\pi
-^{2}c^{3}g}\simeq 
+^{2}c^{3}g}\approx
 \frac{V\omega ^{2}}{\pi ^{2}c^{3}}\Delta \omega.  
 \label{5.10}
 \end{equation}
-V zadnjem izrazu smo privzeli, da je $g\simeq 1/\Delta \omega $. 
-Parameter $p$ je torej približno enak produktu 
-gostote stanj elektromagnetnega polja v resonatorju (enačba~\ref{4.4}) 
-in širine atomskega prehoda (ter volumna), torej kar številu vseh stanj 
+V zadnjem izrazu smo privzeli, da je $g\approx 1/\Delta \omega $. 
+Parameter $p$ je približno enak produktu 
+gostote stanj elektromagnetnega polja v resonatorju (enačba~\ref{4.4}),
+širine atomskega prehoda in volumna, torej kar številu vseh stanj 
 v frekvenčnem intervalu atomskega prehoda. To število je navadno precej 
 veliko $p \sim 10^{8}$--$10^{10}$. 
 
-\begin{remark}
-S primerjavo izraza za $p$ 
-(enačba~\ref{5.10}) z izrazom za saturacijsko gostoto toka (enačba~\ref{eq:jsatg})
-vidimo, da $p$ predstavlja število fotonov v resonatorju, pri katerem pride 
+\begin{definition}
+Primerjaj izraz za $p$ (enačba~\ref{5.10}) z izrazom za saturacijsko 
+gostoto toka $j_s$ (enačba~\ref{eq:jsatg}). Pokaži, da velja
+\begin{equation}
+p = \frac{W_s}{\hbar \omega}
+\end{equation}
+in je torej $p$ enako številu fotonov v resonatorju, pri katerem pride 
 do nasičenja ojačenja, če je frekvenca nihanja resonatorja blizu 
 centra atomske črte. 
-\end{remark}
+\end{definition}
 
 Enačbo~(\ref{5.9.a}) prepišemo
 \begin{equation}
@@ -245,10 +264,8 @@ n=\frac{p}{2}\left( \left(\frac{G}{G_\mathrm{pr}}-1\right)+\sqrt{\left(\frac{G}{
 \label{5.12}
 \end{equation}
 Ker je $p$ zelo veliko število, lahko koren razvijemo, če le ni ojačenje
-preveč blizu praga, ko je $G/G_\mathrm{pr}\simeq 1$. 
-\index{Prag delovanja laserja}
-
-Pod pragom je $G<G_\mathrm{pr}$ in 
+preveč blizu praga, ko je $G/G_\mathrm{pr}\sim 1$. 
+\index{Prag delovanja laserja} Pod pragom je $G<G_\mathrm{pr}$ in 
 \begin{equation}
 n\approx \frac{p}{2}\left( \left(\frac{G}{G_\mathrm{pr}}-1\right)+\left(1
 -\frac{G}{G_\mathrm{pr}}\right)+\frac{2G}{p(G_\mathrm{pr}-G)}\right) =\frac{G}{G_\mathrm{pr}-G}.
@@ -267,11 +284,12 @@ ena do neposredne bližine praga, kjer hitro naraste (slika~\ref{fig:p}), nad pr
 je reda velikosti $p$. 
 Nad pragom povsem prevlada stimulirano sevanje v eno samo izbrano nihanje resonatorja. 
 Prehod preko praga je zaradi velikega $p$ tako hiter, da ga ni mogoče izmeriti.
-Izjema so polprevodniški laserji, katerih volumen -- in posledično tudi $p$ -- 
+Izjema so polprevodniški laserji, \index{Laser!polprevodniški}katerih 
+volumen -- in posledično tudi $p$ -- 
 je tako majhen, da je mogoče opaziti zvezen prehod preko praga.
 \begin{figure}[h]
 \centering
-\def\svgwidth{80truemm} 
+\def\svgwidth{50truemm} 
 \input{slike/06_p.pdf_tex}
 \caption{Odvisnost števila fotonov v resonatorju od ojačenja za $p=10^5$.}
 \label{fig:p}
@@ -289,7 +307,7 @@ N_{\rm 2pr}=\frac{2V}{\tau \sigma c}\frac{\sqrt{p}}{\sqrt{p}+1}.
 \label{5.16}
 \end{equation}
 Ker je $p$ zelo veliko število, iz gornjih enačb sledi, da zasedenost višjega
-nivoja oziroma obrnjena zasedenost narašča do bližine praga, nad pragom pa je praktično
+nivoja (oziroma obrnjena zasedenost) narašča do bližine praga, nad pragom pa je praktično
 konstantna in skoraj natanko enaka kot na pragu. To ni težko razumeti. Nad
 pragom je število fotonov v resonatorju veliko in linearno narašča 
 z močjo črpanja. S tem se povečuje hitrost praznjenja gornjega atomskega 
@@ -318,7 +336,7 @@ resonatorja, je v stacionarnem stanju energija in s tem amplituda
 izbranega lastnega nihanja resonatorja različna od nič. Frekvenca svetlobe je
 določena z izbranim lastnim stanjem resonatorja, ki določa tudi prostorsko
 odvisnost valovanja v resonatorju in obliko izhodnega snopa. V navadnem stabilnem 
-resonatorju je polje po obliki zelo blizu Gaussovem snopu, zato je tak tudi izhodni snop.
+resonatorju je polje po obliki zelo blizu Gaussovemu snopu, zato je tak tudi izhodni snop.
 Gaussova prostorska odvisnost izhodnega snopa je morda najpomembnejša lastnost
 laserjev. Gaussov snop se, kot vemo, najmanj širi zaradi uklona in ga je mogoče
 zbrati v piko približne velikosti valovne dolžine. Laser se tako najbolj 
@@ -340,8 +358,9 @@ Predstavimo amplitudo nihanja $E(t)$ na izbranem mestu v resonatorju kot komplek
 število, ki ga v kompleksni ravnini določata dolžina $|E(t)|$ in faza
 $\varphi$ (slika~\ref{fig:fazor}). 
 Pri tem fazo določimo glede na neko začetno izbrano fazo. 
+
 Ker je energija svetlobe sorazmerna s številom fotonov, je dolžina 
-sorazmerna s korenom iz števila fotonov v izbranem nihanju. 
+sorazmerna s korenom iz števila fotonov v izbranem lastnem nihanju. 
 Stimulirano sevanje, ki ravno pokriva izgube resonatorja, vzdržuje
 dolžino $|E(t)|$ praktično konstantno, nespremenjena ostaja 
 tudi faza. Spontano sevanje velikosti amplitude nihanja ne spreminja dosti, 
