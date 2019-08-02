@@ -762,34 +762,40 @@ spreminjamo izgube v resonatorju. V slednjo skupino uvrščamo laserje na
 preklop dobrote in laserje, ki uklepajo faze valovanj.   
 
 Obravnavajmo najprej najpreprostejši način, pri katerem periodično moduliramo črpanje.
-To dosežemo na primer z bliskavko ali drugim sunkovnim laserjem. V intervalu 
+To dosežemo na primer z bliskavko ali drugim sunkovnim laserjem. V 
+intervalu \index{Sunkovni laser!{preklop črpanja}}
 črpanja je ojačenje večje od izgub in svetloba izhaja iz laserja, ko pa črpanja 
-ni, so izgube prevelike in laser ne sveti. Tipična frekvenca modulacije črpanja je 
-$\nu \sim 20~\si{Hz}$. Najbolj pogosto se modulacija črpanja uporablja
-v polprevodniških laserjih, saj je zelo preprosto modulirati črpalni električni tok. 
+ni, so izgube prevelike in laser ne sveti (slika~\ref{fig:Gswitch} levo). Za dosego velike
+obrnjene zasedenosti v ojačevalnem sredstvu mora biti sprememba črpanja zelo hitra, 
+da v času preklopa še ne pride do znatnega povečanja števila fotonov. 
+Najbolj pogosto se modulacija črpanja uporablja
+v polprevodniških laserjih, saj v njih črpanje poteka z električnim tokom, ki 
+ga je zelo preprosto modulirati z razmeroma velikimi frekvencami. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/06_pulseG.pdf_tex}
+\caption{Delovanje sunkovnega laserja z periodično moduliranim črpanjem (levo), 
+pri katerem lahko pride do neželenih oscilacij (desno)}
+\label{fig:Gswitch}
+\end{figure}
 
-Vendar se pri modulaciji črpanja lahko pojavi težava. Ko ob močnem črpanju 
+Pri modulaciji črpanja se lahko pojavi težava. Ko ob močnem črpanju 
 obrnjena zasedenost znatno preseže zasedenost praga (v nestacionarnem stanju 
 je to mogoče), laser posveti in v kratkem času zasedenost pade nazaj pod prag. 
 Če tedaj črpanje še traja, zasedenost naraste in laser ponovno posveti. 
-To se lahko večkrat ponovi. Razmiki med zaporednimi sunki
+To se lahko večkrat ponovi. Razmiki med zaporednimi sunki\index{Relaksacijske oscilacije}
 so reda velikosti periode relaksacijskih oscilacij, so pa lahko precej
-nepravilni  (slika~\ref{fig:pulseG}). Pri takem režimu delovanja v posameznem 
+nepravilni  (slika~\ref{fig:Gswitch} desno). Pri takem režimu delovanja v posameznem 
 sunku ne dobimo razpoložljive energije črpanja v enem samem lepo oblikovanem sunku, 
 kar močno omejuje uporabnost tega pristopa.
-\begin{figure}[h]
-\centering
-\def\svgwidth{90truemm} 
-\input{slike/06_pulseG.pdf_tex}
-\caption{Delovanje sunkovnega laserja z periodično moduliranim črpanjem, pri katerem
-se pojavijo neželene oscilacije}
-\label{fig:pulseG}
-\end{figure}
+
 
 \section{Delovanje v sunkih s preklopom dobrote}
 Namesto modulacije črpanja lahko v sunkovnih laserjih periodično spreminjamo 
-izgube. Čim večje so namreč izgube, višji je prag za delovanje laserja in 
-večja je lahko stopnja inverzije. Tako v sistemu atomov shranimo več 
+izgube.\index{Sunkovni laser!preklop dobrote} Čim večje so namreč izgube, višji 
+je prag za delovanje laserja in 
+večja je lahko stopnja obrnjene zasedenosti. Tako v sistemu atomov shranimo več 
 energije, ki se lahko izseva iz sistema preko stimuliranega sevanja. 
 Ko je enkrat ustvarjena velika obrnjena zasedenost, izgube zelo hitro zmanjšamo. 
 Optično ojačenje je veliko in energija svetlobe v kratkem času močno naraste. 
