@@ -1007,9 +1007,9 @@ ki si sledijo s periodo $T=2\pi /\Delta \omega =2L/c$, kar je enako času obhoda
 svetlobe v resonatorju (glej nalogo~\ref{naloga:mlock}). 
 \begin{figure}[h]
 \centering
-\def\svgwidth{90truemm} 
+\def\svgwidth{140truemm} 
 \input{slike/06_pulseML.pdf_tex}
-\caption{Časovna odvisnost moči večfrekvenčnega laserja z uklenjenimi fazami}
+\caption{Valovanja z enako fazo se seštejejo v posamezne vrhove (levo). Časovna odvisnost moči večfrekvenčnega laserja z uklenjenimi fazami je zato v obliki izrazitih sunkov (desno).}
 \label{s5.10}
 \end{figure}
 \begin{definition}
@@ -1032,45 +1032,59 @@ ojačevanja aktivnega sredstva. Za dosego zelo kratkih sunkov z metodo uklepanja
 faz je torej treba uporabiti laser s kar se da veliko širino ojačevanja. 
 
 Premislimo še, kakšna je prostorska odvisnost električnega polja v
-resonatorju. Polje na danem mestu opisuje enačba \ref{5.352}. "Se
-krajevno odvisnost dobimo, če v \ref{5.352} zamenjamo $t$ s $(t-z/c)$. To
-pa predstavlja svetlobni paket, ki potuje sem in tja med ogledali
-resonatorja. Na izhodnem ogledalu se ga vsakič nekaj odbije, nekaj pa gre
-ven iz resonatorja (slika \ref{fig.5.11}). Razmik med sunki, ki izhajajo iz
-resonatorja, je $2L$, prostorska dolžina posameznega sunka pa $\tau
-_{ML}c=2L/N$.
-
-\begin{figure}[tbp]
-\label{fig.5.11} \vskip 5cm
-\caption{Prostorska odvisnost fazno uklenjenih sunkov.}
+resonatorju. Polje na danem mestu opisuje enačba~(\ref{5.352}). Krajevno 
+odvisnost dobimo, če v enačbi~(\ref{5.352}) parameter $t$ zamenjamo s $(t-z/c)$. To
+predstavlja svetlobni paket, ki potuje sem in tja med zrcaloma
+resonatorja. Na izhodnem zrcalu se vsakič del sunka odbije, del pa zapusti
+resonator (slika~\ref{fig.5.11}). Razmik med sunki, ki izhajajo iz
+resonatorja, je $2L$, prostorska dolžina posameznega sunka pa $\tau c=2L/N$.
+\begin{figure}[h]
+\centering
+\def\svgwidth{90truemm} 
+\input{slike/06_MLvsota.pdf_tex}
+\caption{Prostorska odvisnost fazno uklenjenih sunkov. Pri vsakem odboju del
+sunka zapusti resonator.}
+\label{fig.5.11}
 \end{figure}
-
+\vglue-5truemm
 \begin{remark}
-V našem računu predpostavka, da so vse amplitude $A_{m}$ enake, ni prav
-nič bistvena za osnovne ugotovitve. "Ce vzamemo realističen primer, da
-so amplitude oblike $A_{m}=A_{0}\exp [(m\Delta \omega /\Delta \omega
-_{G})^{2}]$, vsote \ref{5.342} ne znamo točno sešteti, lahko pa jo
+V našem računu predpostavka, da so vse amplitude $A_{m}$ enake, ni ključnega 
+pomena. Če vzamemo, da so amplitude oblike 
+$A_{m}=A_{0}\exp (-(m\Delta \omega /\Delta \omega_{G})^{2})$, 
+kar je bolj realistično (slika~\ref{fig:FPmodes}), vsote (enačba~\ref{5.342}) 
+ne znamo točno sešteti. Lahko pa jo
 približno pretvorimo v integral, ki je Fouriereva transformiranka Gaussove
-funkcije (Pri prehodu z diskretne vsote na integral seveda izgubimo
-periodičnost zaporedja sunkov.). Ta je zopet Gaussova funkcija, katere
+funkcije (pri prehodu z diskretne vsote na integral seveda izgubimo
+periodičnost zaporedja sunkov). Ta je zopet Gaussova funkcija, katere
 širina je obratna vrednost širine prvotne funkcije, prav podobno, kot
-smo dobili zgoraj. Odvisnost amplitud nihanj od $m$ vpliva torej le na
-točno obliko sunkov, osnovne ugotovitve pa se ne spremene. (Naloga).
+smo dobili zgoraj. Odvisnost amplitud vzbujenih lastnih nihanj od $m$ 
+vpliva torej le na točno obliko sunkov.
 \end{remark}
 
-Pač pa je predpostavka, da so vse faze $\varphi_m$ enake, bistvena. V naši
-dosedanji sliki mnogofrekvenčnih laserjev so resonatorska stanja med seboj
-neodvisna, zato so faze poljubne in se zaradi motenj lahko še spreminjajo.
-Da dobijo za vsa nihanja isto vrednost, moramo poskrbeti posebej. Tako {\it %
-uklepanje faz} je mogoče doseči na več načinov. Ena možnost je, da
-moduliramo izgube resonatorja s frekvenco, ki je ravno enaka razliki
-frekvenc med resonatorskimi stanji. To ni težko razložiti. Naj bo
-modulator tak, da je večino časa zaprt, le v razmikih $T=2L/c$ naj bo
-kratek čas odprt. Postavimo ga tik ob eno ogledalo. Tedaj se v resonatorju
-očitno lahko uspešno ojačuje le kratek sunek, kakršen je na sliki \ref
-{***}. Izgube za vsa nihanja bodo majhne le tedaj, kadar bodo vse faze
-enake. V praksi ni potrebno, da je modulacija tako izrazita. Običajno
-zadošča sinusna modulacija izgub, kjer je relativna prepustnost v minimumu
+Pri uklepanju faz je bistvena predpostavka, da so vse faze $\varphi_m$ enake. 
+V dosedanjem opisu mnogofrekvenčnih laserjev so resonatorska stanja med seboj
+neodvisna, zato so v splošnem faze poljubne in se zaradi motenj lahko še spreminjajo.
+Za dosego istih faz posameznih nihanj moramo poskrbeti posebej. Tako ujemanje
+oziroma uklepanje faz lahko dosežemo na več načinov. V grobem ločimo dva načina:
+aktivno in pasivno uklepanje faz.
+
+Pri aktivnem uklepanju v resonatorju tik pred eno od zrcal
+resonatorja 
+
+faz moduliramo izgube resonatorja 
+s frekvenco,\index{Uklepanje faz!aktivno} ki je ravno enaka razliki 
+frekvenc med lastnimi resonatorskimi stanji. 
+
+
+
+Naj bo modulator tak, da je večino časa zaprt, 
+le v razmikih $T=2L/c$ naj bo za kratek čas odprt. 
+Postavimo ga tik ob eno ogledalo. 
+
+Izgube za vsa nihanja so, razen 
+kadar so faze enake. Takrat se v resonatorju uspešno ojačuje 
+le kratek sunek. V praksi ni potrebno, da je modulacija tako izrazita. 
+Običajno zadošča sinusna modulacija izgub, kjer je relativna prepustnost v minimumu
 za nekaj destink manjša od maksimalne.
 
 Kako pri modulaciji pride do uklepanja faz, lahko uvidimo še drugače.
