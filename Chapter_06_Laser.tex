@@ -790,7 +790,6 @@ nepravilni  (slika~\ref{fig:Gswitch} desno). Pri takem režimu delovanja v posam
 sunku ne dobimo razpoložljive energije črpanja v enem samem lepo oblikovanem sunku, 
 kar močno omejuje uporabnost tega pristopa.
 
-
 \section{Delovanje v sunkih s preklopom dobrote}
 Namesto modulacije črpanja lahko v sunkovnih laserjih periodično spreminjamo 
 izgube.\index{Sunkovni laser!preklop dobrote} Čim večje so namreč izgube, višji 
@@ -1009,7 +1008,9 @@ svetlobe v resonatorju (glej nalogo~\ref{naloga:mlock}).
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/06_pulseML.pdf_tex}
-\caption{Valovanja z enako fazo se seštejejo v posamezne vrhove (levo). Časovna odvisnost moči večfrekvenčnega laserja z uklenjenimi fazami je zato v obliki izrazitih sunkov (desno).}
+\caption{Valovanja z enako fazo se seštejejo v posamezne vrhove (levo). 
+Časovna odvisnost moči večfrekvenčnega laserja z uklenjenimi fazami je 
+zato v obliki izrazitih sunkov (desno).}
 \label{s5.10}
 \end{figure}
 \begin{definition}
@@ -1068,49 +1069,60 @@ Za dosego istih faz posameznih nihanj moramo poskrbeti posebej. Tako ujemanje
 oziroma uklepanje faz lahko dosežemo na več načinov. V grobem ločimo dva načina:
 aktivno in pasivno uklepanje faz.
 
-Pri aktivnem uklepanju v resonatorju tik pred eno od zrcal
-resonatorja 
-
-faz moduliramo izgube resonatorja 
+Pri aktivnem uklepanju faz moduliramo izgube v resonatorju
 s frekvenco,\index{Uklepanje faz!aktivno} ki je ravno enaka razliki 
-frekvenc med lastnimi resonatorskimi stanji. 
-
-
-
-Naj bo modulator tak, da je večino časa zaprt, 
-le v razmikih $T=2L/c$ naj bo za kratek čas odprt. 
-Postavimo ga tik ob eno ogledalo. 
-
-Izgube za vsa nihanja so, razen 
-kadar so faze enake. Takrat se v resonatorju uspešno ojačuje 
-le kratek sunek. V praksi ni potrebno, da je modulacija tako izrazita. 
-Običajno zadošča sinusna modulacija izgub, kjer je relativna prepustnost v minimumu
-za nekaj destink manjša od maksimalne.
+frekvenc med lastnimi resonatorskimi stanji. Za ta namen dodamo v resonator
+modulator, na primer akusto-optični modulator (glej poglavje~\ref{chap:modulacija}).
+Ko v akusto-optičnemu modulatorju vzbudimo stoječe zvočno valovanje, se 
+svetloba na njem uklanja in izgube so velike. V časovnih razmikih $T=2L/c$
+je amplituda stoječega vala enaka nič in uklonske izgube se zmanjšajo.
+V resonatorju se tako uspešno ojačuje le kratek sunek svetlobe. 
+Navadno zadošča razmeroma majhna sinusna modulacija izgub, kjer je relativna 
+prepustnost v minimumu za nekaj destink manjša od maksimalne. 
 
 Kako pri modulaciji pride do uklepanja faz, lahko uvidimo še drugače.
-Modulacija amplitude posameznega nihanja povzroči, da se v spektru nihanja
+Modulacija amplitude posameznega lastnega nihanja povzroči, da se v spektru nihanja
 pojavita še stranska pasova pri frekvencah $\omega_m \pm \Delta\omega$. Ta
-se ravno pokrivata z obema sosednjima nihanjema in se konstruktivno
-prištejeta, če imata enako fazo. S tem pa so tudi izgube manjše in ima
-delovanje laserja z uklenjenimi fazami najnižji prag. Zadnji razmislek
-tudi pove, da ni dobra le amplitudna modulacija, temveč tudi fazna (ali
-frekvenčna), saj se tudi tedaj pojavijo stranski pasovi.
+se ravno ujemata z obema sosednjima nihanjema in se konstruktivno
+prištejeta, če imata enako fazo. S tem se zmanjšajo izgube in 
+delovanje laserja z uklenjenimi fazami ima najnižji prag. 
 
-Za modulacijo se najpogosteje uporabljajo akustooptični modulatorji, pri
-katerih izkoriščamo uklon svetlobe na stoječih zvočnih valovih v
-primernem kristalu (Glej 7. poglavje). Frekvenca zvočnega vala mora biti
-enaka polovici zahtevane modulacijske frekvence, za 1,5~m dolg laser torej
-50~MHz.
+Pri pasivnem uklepanju faz dodanega elementa ne krmilimo od zunaj, ampak
+se sam ustrezno odziva. Ena od možnosti je plast barvila, ki močno
+absorbira svetlobo pri majhni gostoti svetlobnega toka, pri veliki 
+gostoti pa svetlobo prepušča, saj pride do nasičenja absorpcije (glej
+poglavje~\ref{chap:NasAbs}). V laserju je po vklopu prisotno predvsem 
+spontano sevanje, ki se pri enem prehodu skozi aktivno snov deloma ojači. 
+Barvilo najmanj absorbira fluktuacijo z največjo intenziteto. Pri dovolj 
+velikem ojačenju se bo ta izbrana fluktuacija ojačevala, ostale pa ne, zato
+se spet pojavi fazno uklenjeni sunek. Ker mora po prehodu sunka absorpcija 
+v barvilu hitro narasti, mora biti relaksacijski čas barvila zelo kratek
+$\sim \si{ps}$.
+In this scheme,
+it is essential to use a saturable absorber with a recovery time much shorter than the
+period T .
 
-Poleg opisanega aktivnega postopka je mogoče faze ukleniti tudi tako, da v
-resonator postavimo plast barvila, ki močno absorbira svetlobo laserja pri
-majnhi gostoti toka, pri veliki gostoti toka pa pride do nasičenja
-absorpcije (glej razdelek 4.5), zato postane barvilo prozorno. Na začetku
-imamo v laserju predvsem spontano sevanje, ki se pri enem prehodu skozi
-aktivno snov deloma ojači. Barvilo najmanj absorbira največjo fluktuacijo.
-Pri dovolj velikem ojačenju bo ta rastla in spet dobimo fazno uklenjeni
-sunek. Ker mora po prehodu sunka absorpcija v barvilu zopet hitro narasti,
-mora biti relaksacijski čas barvila zelo kratek, v območju pikosekund.
+
+Drug način pasivnega uklepanja faz je z uporabo nelinearne optike (glej 
+poglavje~\ref{}).
+This lensing effect has a practical application: it is used to induce self-mode-
+locking in solid-state lasers, such as titanium sapphire lasers. The mechanism is the
+following. The multimode laser can operate either in a free-running regime, in which
+the modes have random phases, or in a mode-locking regime. If the number of modes
+is large, the peak intensity of the mode-locked pulses is much larger than the CW
+intensity of the free-running laser. It is assumed that the third-order nonlinearity of
+the active crystal gives rise to a Kerr lens in the mode-locking regime, but no Kerr lens
+in free running. The effect of the Kerr lens is that of focusing the laser beam at some
+point inside the cavity. If a pinhole is placed at that point, the free-running regime
+will experience large losses, whereas the mode-locking regime will be unaffected.
+As a consequence, the laser is forced to operate as a mode-locked oscillator. More
+generally, Kerr-lens mode-locking can be explained by keeping in mind the definition
+of cavity stability given in Sect. 3.8. If the cavity is designed to be stable in presence
+of the Kerr lens and unstable in absence of the Kerr lens, the laser will choose to
+operate in the mode-locking regime in presence of self-focusing. The technique is
+known as “Kerr-lens mode-locking”.
+
+
 
 Z uklepanjem faz je danes mogoče dobiti sunke z dolžino pod 100~fs ($%
 10^{-13}$~s). Tak sunek traja le še nekaj deset optičnih period. S
@@ -1120,6 +1132,9 @@ Zelo kratke svetlobne sunke danes na široko uporabljajo za študij hitre
 molekularne dinamike in kratkoživih vzbujenih elektronskih stanj v
 polvodnikih in mnogih drugih snoveh. Z njimi se je časovna ločljivost
 povečala za nekaj redov velikosti \cite{pikosekunde}.
+
+
+
 
 \section{Frekvenčni glavnik}
 
