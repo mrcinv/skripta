@@ -538,6 +538,118 @@ velikostnih redov. Verjetno v zgodovini težko najdemo še kak drug izum,
 ki je prinesel tolikšno izboljšavo v neki bistveni količini in tako ni 
 nenavadno, da je prihod laserjev v začetku 60-ih let povzročil preporod optike.
 
+\section{*Stabilizacija frekvence laserja na nasičeno absorpcijo}
+\label{chap:stabilizacija}
+\index{Nasičena absorpcija!{stabilizacija frekvence}}\index{Spektralna črta}
+Laserska svetloba ima končno spektralno širino, ki 
+je v realnih sistemih pogosto pogojena s fluktuacijami dolžine resonatorja ali 
+temperature ojačevalnega sredstva. Eden od načinov 
+zožanja spektralne črte je zato aktivna stabilizacija
+dolžine resonatorja. Ideja je sledeča: svetlobo, ki izhaja iz laserja, primerjamo
+z nekim standardom in iz razlike določimo spremembo dolžine. S
+piezoelektričnim nosilcem nato premaknemo eno od zrcal in popravimo 
+dolžino resonatorja. 
+
+Poglavitna težava je najti dovolj stabilen primerjalni standard za frekvenco. 
+Ena možnost je, da izhodno svetlobo usmerimo skozi pomožni 
+interferometer, \index{Fabry-Perotov interferometer}
+ki je skoraj v resonanci z laserjem in ima dovolj ozek vrh prepustnosti. Že majhen 
+premik frekvence laserja povzroči spremembo prepuščenega svetlobnega toka. 
+Na prvi pogled je videti, da z uporabo interferometra nismo pridobili, 
+saj je tudi resonančna frekvenca interferometra stabilna le toliko, kot je 
+stabilna njegova dolžina. Vendar je z izolacijo in temperaturno stabilizacijo 
+mogoče ohranjati dolžino praznega resonatorja -- interferometra -- znatno
+natančneje kot dolžino resonatorja, v katerem imamo aktivno sredstvo, ki mu 
+moramo dovajati energijo.
+
+Druga možnost je stabilizacija laserja na primerno molekularno absorpcijsko
+črto. Te so v razredčenem plinu lahko zelo ozke, zato je tudi spekter 
+laserja lahko izredno ozek, pod $1~\si{kHz}$. 
+Pri tem moti Dopplerjeva razširitev absorpcijske črte,
+ki pa se ji je mogoče izogniti s pojavom nasičenja 
+absorpcije. \index{Nasičena absorpcija}V poglavju
+(\ref{NasabsNehom}) smo spoznali, da se pri dvakratnem prehodu
+monokromatskega snopa svetlobe skozi plin v nasprotnih smereh pojavi v
+sredini Dopplerjevo razširjene črte Lambova vdolbina,\index{Lambova vdolbina} ki 
+ima obliko homogeno razširjene črte (slika~\ref{fig:Lamb}). 
+Homogena širina je navadno mnogo manjša od Dopplerjeve in
+je zato vdolbina uporabna kot frekvenčni standard. 
+
+S spreminjanjem dolžine resonatorja spreminjamo frekvenco laserja in 
+ko se ta znotraj homogene širine približa sredini absorpcijske črte (pri $\omega_0$), 
+se absorpcija zmanjša in moč laserja poveča. To naredimo tako, da je 
+eno od zrcal pritrjeno na piezoelektrični nosilec, na katerega vodimo
+izmenično napetost s krožno frekvenco $\Omega$. Periodično spreminjanje dolžine
+laserja vodi do spreminjajoče se izhodne moči. Kadar je krožna frekvenca laserja 
+enaka $\omega_0$, se moč spreminja z dvojno krožno frekvenco modulacije $2\Omega$. 
+Kadar pa srednja krožna frekvenca laserja odstopa od $\omega_0$, se izhodna moč 
+pri odmiku v zrcala v eno stran spremeni drugače kot v drugo, kar pomeni, 
+da je v izhodnem signalu tudi komponenta s krožno frekvenco $\Omega$. Da držimo 
+srednjo krožno frekvenco laserja enako $\omega_0$, moramo torej meriti komponento 
+izhodne moči pri modulacijski frekvenci in jo s povratno zanko ohranjati na nič.
+
+Napravimo še kvantitativno oceno opisane stabilizacijske sheme. Odvisnost
+izhodne moči od krožne frekvence laserja $\omega$ lahko približno zapišemo v
+obliki 
+\begin{equation}  
+\label{5.40}
+P(\omega)=P_0 + \frac{P_1\gamma^2}{(\omega- \omega_0)^2+\gamma^2},
+\end{equation}
+pri čemer je $P_0$ moč laserja brez saturacijskega vrha pri $\omega_0$, $P_1$ 
+povečanje moči pri $\omega_0$ in $\gamma$ homogena širina črte. Predpostavili 
+smo, da se ojačenje laserja in nehomogeno razširjeni del absorpcije ne 
+spreminjata znatno prek homogene širine absorberja in je zato moč $P_0$ 
+približno konstantna. Krožno frekvenco laserja moduliramo, tako da je 
+\begin{equation}  
+\label{5.41}
+\omega=\omega_0+\Delta\omega+a \sin \Omega t.
+\end{equation}
+Z $\Delta\omega$ smo označili odstopanje srednje krožne frekvence laserja od
+sredine absorpcijske črte $\omega_0$. Če sta $a$ in $\Delta\omega$ majhna v
+primerjavi s homogeno širino $\gamma$, lahko imenovalec v enačbi~(\ref{5.40})
+razvijemo
+\begin{equation}  
+\label{5.42}
+P(\omega)=P_0+P_1 \left(1-\frac{\Delta\omega^2}{\gamma^2} +\frac{2}{\gamma^2} a
+\Delta\omega \sin\Omega t - \frac{a^2}{\gamma^2}\sin^2\Omega t\right).
+\end{equation}
+Amplituda signala pri krožni frekvenci modulacije $\Omega$ je 
+\begin{equation}
+P(\Omega) = \frac{2P_1 a \Delta\omega}{\gamma^2}. 
+\end{equation}
+Najmanjša moč, ki jo ločeno zaznamo na detektorju, je določena s šumom 
+meritve. Kot bomo videli v poglavju (\ref{chap:sum}), je najmanjša 
+sprememba svetlobne moči, ki jo lahko izmerimo, enaka 
+\begin{equation}  
+\label{5.43}
+P_N\approx \sqrt{\hbar\omega P \frac{1}{\tau}},
+\end{equation}
+pri čemer je $P$ celotna vpadna svetlobna moč, $\tau$ pa čas
+meritve. Vzemimo na primer He-Ne laser,\index{Laser|He-Ne} stabiliziran na 
+iodove pare. Povprečna moč laserja naj bo $P_0 = 10~\si{mW}$ in $P_1= 0,1~\si{mW}$. 
+Širina absorpcijske črte je $\gamma= 10^6~\si{s}^{-1}$. Izberimo amplitudo 
+modulacije $a=10^5~\si{s}^{-1}$ in $\tau=10^{-4}~\si{s}$. Časovna konstanta 
+$\tau$ ne sme biti prevelika, določa namreč, kako hitro prilagajamo dolžino 
+laserja. Za najmanjšo zaznavno moč pri $\Omega$ dobimo 
+$P(\Omega) = 5\times10^{-9}~\si{W}$.
+Najmanjše merljivo odstopanje krožne frekvence laserja je tedaj 
+\begin{equation}  
+\label{5.44}
+\Delta\omega_N=\frac{P_N \gamma^2}{2P_1 a}=250~\si{s}^{-1}.
+\end{equation}
+Takšno in še boljšo stabilnost frekvence se danes lahko doseže. 
+
+\begin{remark}
+Na absorpcijsko črto stabiliziranega laserja navadno ne uporabljamo
+direktno, temveč z njim kontroliramo drug laser. Del izhodne svetlobe iz
+obeh laserjev zmešamo na detekcijski fotodiodi. V signalu dobimo utripanje,
+ki je enako razliki frekvenc obeh laserjev. S spreminjanjem dolžine drugega
+laserja skrbimo, da je frekvenca utripanja konstantna. Na ta način lahko v
+ozkem frekvenčnem intervalu še spreminjamo frekvenco drugega laserja.
+Z opazovanjem utripanja med dvema stabiliziranima laserjema določamo tudi
+njihovo stabilnost.
+\end{remark}
+
 \section{Večfrekvenčni laser}
 Do zdaj smo obravnavali laserje, v katerih je bilo vzbujeno eno samo stoječe
 valovanje. Vendar je ojačevalna širina večine aktivnih (ojačevalnih) sredstev 
@@ -586,7 +698,7 @@ pod 0,5.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{110truemm} 
+\def\svgwidth{100truemm} 
 \input{slike/06_FPmodes.pdf_tex}
 \caption{Lastne frekvence resonatorja (a) in frekvenčna odvisnost ojačenja z označenim 
 pragom delovanja (b). Z zeleno so označene tiste lastne frekvence, ki se v laserju ojačujejo. 
@@ -595,7 +707,9 @@ izgube za vse načine, ki bi sicer bili ojačeni, razen za enega.
 Tako dosežemo delovanje laserja pri eni sami frekvenci (d).}
 \label{fig:FPmodes}
 \end{figure}
-
+Opisali smo, kako v laserju dosežemo delovanje pri enem samem longitudinalnem nihanju.
+Poleg tega je treba omejiti tudi ojačenje višjih prečnih nihanj. To navadno 
+dosežemo z zaslonkami, saj so snopi višjih redov bolj razširjeni od osnovnega. 
 \begin{remark}
 Nagib etalona omogoča natančno spreminjanje izbrane frekvence, poleg tega
 pa je nujen, da se neprepuščena svetloba odbije ven iz smeri osi resonatorja. Če bi 
@@ -603,10 +717,6 @@ bila os etalona vzporedna z osjo resonatorja, bi se pojavile dodatne resonance,
 kar bi močno motilo delovanje laserja. Namesto Fabry-Perotovega etalona se uporabljajo
 tudi prizme in uklonske mrežice.
 \end{remark}
-
-Opisali smo, kako v laserju dosežemo delovanje pri enem samem longitudinalnem nihanju.
-Poleg tega je treba omejiti tudi ojačenje višjih prečnih nihanj. To navadno 
-dosežemo z zaslonkami, saj so snopi višjih redov bolj razširjeni od osnovnega. 
 
 \section{Relaksacijske oscilacije}
 \index{Relaksacijske oscilacije}
@@ -642,20 +752,16 @@ nekoliko izmakne iz stacionarnega stanja. To se lahko zgodi, na primer, če v ne
 trenutku spremenimo moč črpanja. Trenutno zasedenost $N_2$ in število fotonov $n$
 lahko zapišemo v obliki 
 \begin{equation}  
-N_2= N_{2s}+x \qquad {\mathrm in} \qquad n=n_s+y,
+N_2= N_{2s}+x \quad \mathrm{in} \quad n=n_s+y,
 \label{5.24}
 \end{equation}
 kjer sta $N_{2s}$ in $n_s$ vrednosti v stacionarnem stanju. Zanju velja 
 \begin{equation}  
-N_{2s}=\frac{2p}{\tau^{\prime}}
-\label{5.25}
-\end{equation}
-in 
-\begin{equation} 
+N_{2s}=\frac{2p}{\tau^{\prime}}\quad \mathrm{in}\quad  
 n_s=p\frac{N_{20}-N_{2s}}{N_{2s}}=p(a-1).
 \label{5.26}
 \end{equation}
-Enačba (\ref{5.25}) je v skladu s tem, da je stacionarna zasedenost 
+Prva enačba je v skladu s tem, da je stacionarna zasedenost 
 enaka zasedenosti na pragu, ta pa je odvisna od izgub resonatorja. 
 Razmerje $a=N_{20}/N_{2s}$ je mera za moč črpanja in
 mora biti v delujočem laserju večje od 1. V večini praktičnih primerov
@@ -674,17 +780,17 @@ Dobimo sistem enačb
 Ker sta $x$ in $y$ majhna v primerjavi s stacionarnimi vrednostmi, lahko
 mešan produkt $xy$ zanemarimo. Vsi členi, ki vsebujejo le stacionarne vrednosti,
 dajo ravno 0, saj smo jih tako določili. Če upoštevamo še izraza 
-za stacionarni vrednosti (enačbi~\ref {5.25} in \ref{5.26}), 
+za stacionarni vrednosti (enačbi~\ref{5.26}), 
 sta linearizirani diferencialni enačbi za odmika od stacionarnih vrednosti 
 \begin{equation}
 \frac{dx}{dt^{\prime }} =-a\,x-\frac{2}{\tau ^{\prime }}\,y   \quad \mathrm{in} \quad
 \frac{dy}{dt^{\prime }} =(a-1)\,x.
 \label{5.28}
 \end{equation}
-Linearni sistemi diferencialnih enačb s konstantnimi
-koeficienti rešimo tako, da poiščemo rešitev v obliki eksponentne funkcije 
+Rešitev linearnega sistema diferencialnih enačb s konstantnimi
+koeficienti rešimo z nastavkom  
 \begin{equation}
-x=x_{0}e^{\lambda t^{\prime }} \qquad {\mathrm in } \qquad 
+x=x_{0}e^{\lambda t^{\prime }} \quad \mathrm{in} \quad 
 y=y_{0}e^{\lambda t^{\prime }}.
 \label{5.29}
 \end{equation}
@@ -865,9 +971,8 @@ n(t)=n_0e^{t\,N_{20}\,\sigma c/V}= n_0e^{t/\tau_r}.
 \label{5.33}
 \end{equation}
 Začetnega števila fotonov ne poznamo, vemo pa, da je velikostnega reda 1,
-saj predstavlja spontano emisijo. Da $n$ naraste na znatno
-vrednost, recimo več od $10^{10}$ fotonov, je potreben čas blizu $25~\tau_r$.
-
+saj predstavlja spontano emisijo. Da $n$ znatno naraste, recimo nad 
+$10^{10}$ fotonov, je potreben čas blizu $25~\tau_r$.
 Proti koncu sunka $N_2$ pojema zaradi sevanja svetlobe in člen z $N_2$ lahko 
 zanemarimo. Ostane samo še en člen, ki da preprosto rešitev
 \begin{equation}  
@@ -878,7 +983,7 @@ Eksponentno pojemanje števila fotonov na koncu sunka je torej določeno z izgub
 v resonatorju (enačba~\ref{taulambda}). 
 
 Dogajanja v vmesnih časih ne moremo enostavno popisati, lahko pa najdemo
-medsebojno zvezo med $n$ in $N_2$, če iz enačb eliminiramo čas. 
+medsebojno zvezo med $n$ in $N_2$. 
 Izrazimo $dt$ iz enačbe (\ref{5.32a}) in ga vstavimo v enačbo~(\ref{5.32}).
 Sledi
 \begin{equation}
@@ -890,7 +995,6 @@ Enačbo brez težav integriramo
 n=N_{20}-N_{2}+\tilde{N}_{2}\ln \frac{N_{2}}{N_{20}}.
 }
 Pri tem smo privzeli, da je na začetku sunka $n=0$ in $N_{2}=N_{20}$. 
-
 Iz dobljene zveze najprej izračunamo, kolikšna je zasedenost na koncu sunka 
 $N_{2k}$. Izhajamo iz pogoja, da je število fotonov na koncu sunka $n=0$, 
 kar da transcendentno enačbo za $N_{2k}$
@@ -899,9 +1003,10 @@ kar da transcendentno enačbo za $N_{2k}$
 \label{xaenacba}
 \eeq
 ki jo lahko preprosto numerično rešimo (slika~\ref{fig:Qeq}).
+
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{90truemm} 
 \input{slike/06_Qeq.pdf_tex}
 \caption{Rešitev enačbe~(\ref{xaenacba})}
 \label{fig:Qeq}
@@ -996,23 +1101,16 @@ E(t)=A_{0}\,e^{i\omega _{0}t}\frac{\sin (N\Delta \omega t/2)}{\sin(\Delta
 \omega t/2)}.
 \label{5.352}
 \end{equation}
-Moč izhodne svetlobe ima časovno odvisnost 
+Moč izhodne svetlobe ima časovno odvisnost (slika~\ref{s5.10})
 \begin{equation}
-P(t)=P_{0}\,\frac{\sin ^{2}(N\Delta \omega t/2)}{\sin ^{2}(\Delta \omega t/2)},
+P(t)=P_{0}\,\frac{\sin ^{2}(N\Delta \omega t/2)}{\sin ^{2}(\Delta \omega t/2)}.
 \label{5.36}
 \end{equation}
-ki jo kaže slika~(\ref{s5.10}). Predstavlja periodično zaporedje sunkov, 
+
+Izhodna svetloba predstavlja periodično zaporedje sunkov, 
 ki si sledijo s periodo $T=2\pi /\Delta \omega =2L/c$, kar je enako času obhoda
 svetlobe v resonatorju (glej nalogo~\ref{naloga:mlock}). 
-\begin{figure}[h]
-\centering
-\def\svgwidth{140truemm} 
-\input{slike/06_pulseML.pdf_tex}
-\caption{Valovanja z enako fazo se seštejejo v posamezne vrhove (levo). 
-Časovna odvisnost moči večfrekvenčnega laserja z uklenjenimi fazami je 
-zato v obliki izrazitih sunkov (desno).}
-\label{s5.10}
-\end{figure}
+
 \begin{definition}
 \label{naloga:mlock}
 Pokaži, da izhodno moč iz laserja v primeru enakih faz vzbujenih lastnih nihanj
@@ -1026,11 +1124,26 @@ Izračunamo lahko tudi dolžino sunkov (glej nalogo~\ref{naloga:mlock})
 \tau=\frac{T}{N}=\frac{2\pi }{N\Delta \omega }=\frac{2\pi }{\Delta\omega_{G}}.
 \label{5.37}
 \end{equation}
+\begin{figure}[h]
+\centering
+\def\svgwidth{140truemm} 
+\input{slike/06_pulseML.pdf_tex}
+\caption{Valovanja z enako fazo se seštejejo v posamezne vrhove (levo). 
+Časovna odvisnost moči večfrekvenčnega laserja z uklenjenimi fazami je 
+zato v obliki izrazitih sunkov (desno).}
+\label{s5.10}
+\end{figure}
 Ker je $N$ število vzbujenih lastnih nihanj, ki se med seboj po krožni 
 frekvenci razlikujejo za $\Delta \omega$, je produkt $N\Delta \omega$ ravno enak
 širini ojačevanja $\Delta \omega_{G}$. Dolžina sunka je torej obratno sorazmerna s širino
 ojačevanja aktivnega sredstva. Za dosego zelo kratkih sunkov z metodo uklepanja
 faz je torej treba uporabiti laser s kar se da veliko širino ojačevanja. 
+
+Poglejmo primer. V Ti:safir laserju je širina ojačevalne črte $\Delta \nu = 100~\si{THz}$, 
+dolžina resonatorja pa naj bo $L=1,5~\si{m}$. Iz takega laserja izhajajo
+sunki, dolgi $\tau = 1/\Delta \nu = 10~\si{fs}$, med posameznima sunkoma 
+pa poteče $T = 2L/c = 10~\si{ns}$. Izračunamo še število fazno uklenjenih lastnih načinov, ki je 
+$N = T/\tau = 10^6$.
 
 Premislimo še, kakšna je prostorska odvisnost električnega polja v
 resonatorju. Polje na danem mestu opisuje enačba~(\ref{5.352}). Krajevno 
@@ -1041,7 +1154,7 @@ resonator (slika~\ref{fig.5.11}). Razmik med sunki, ki izhajajo iz
 resonatorja, je $2L$, prostorska dolžina posameznega sunka pa $\tau c=2L/N$.
 \begin{figure}[h]
 \centering
-\def\svgwidth{90truemm} 
+\def\svgwidth{120truemm} 
 \input{slike/06_MLvsota.pdf_tex}
 \caption{Prostorska odvisnost fazno uklenjenih sunkov. Pri vsakem odboju del
 sunka zapusti resonator.}
@@ -1061,7 +1174,7 @@ periodičnost zaporedja sunkov). Ta je zopet Gaussova funkcija, katere
 smo dobili zgoraj. Odvisnost amplitud vzbujenih lastnih nihanj od $m$ 
 vpliva torej le na točno obliko sunkov.
 \end{remark}
-
+\newpage
 Pri uklepanju faz je bistvena predpostavka, da so vse faze $\varphi_m$ enake. 
 V dosedanjem opisu mnogofrekvenčnih laserjev so resonatorska stanja med seboj
 neodvisna, zato so v splošnem faze poljubne in se zaradi motenj lahko še spreminjajo.
@@ -1071,227 +1184,109 @@ aktivno in pasivno uklepanje faz.
 
 Pri aktivnem uklepanju faz moduliramo izgube v resonatorju
 s frekvenco,\index{Uklepanje faz!aktivno} ki je ravno enaka razliki 
-frekvenc med lastnimi resonatorskimi stanji. Za ta namen dodamo v resonator
+frekvenc med lastnimi resonatorskimi stanji (slika~\ref{fig:aktpas}\,a). 
+Za ta namen dodamo v resonator
 modulator, na primer akusto-optični modulator (glej poglavje~\ref{chap:modulacija}).
 Ko v akusto-optičnemu modulatorju vzbudimo stoječe zvočno valovanje, se 
-svetloba na njem uklanja in izgube so velike. Amplituda stoječega valovanja periodično
-pada na nič in takrat se uklonske izgube zmanjšajo. Če se to dogaja v časovnih
+svetloba na njem uklanja in izgube so velike. Stoječe valovanj periodično izginja
+in takrat se uklonske izgube zmanjšajo. Če se to dogaja v časovnih\index{Akusto-optični pojav}
 razmikih, ki so enaki $T=2L/c$, se v resonatorju ojačuje le kratek sunek svetlobe. 
 Navadno zadošča razmeroma majhna sinusna modulacija izgub, kjer je relativna 
-prepustnost v minimumu za nekaj desetink manjša od največje. 
+prepustnost v minimumu za nekaj desetink manjša od največje. Ta način se uporablja
+pri šibkejših sunkovnih laserjih, na primer pri Nd:YAG laserjih.\index{Laser!Nd:YAG}
+\begin{figure}[h]
+\centering
+\def\svgwidth{80truemm} 
+\input{slike/06_aktpas.pdf_tex}
+\caption{Izgube in izhodna moč pri aktivnem in pasivnem uklepanju faz}
+\label{fig:aktpas}
+\end{figure}
 
 Kako pri modulaciji pride do uklepanja faz, lahko uvidimo še drugače.
-Modulacija amplitude posameznega lastnega nihanja povzroči, da se v spektru nihanja
-pojavita še stranska pasova pri frekvencah $\omega_m \pm \Delta\omega$. Ta
+Modulacija amplitude $m$-tega lastnega nihanja povzroči, da se v spektru nihanja
+pojavita še stranska pasova pri frekvencah $(\omega_0 + m\Delta \omega) \pm \Delta\omega$. Ta
 se ravno ujemata z obema sosednjima nihanjema in se konstruktivno
 prištejeta, če imata enako fazo. Podobno tudi naprej za ostala nihanja. 
 S tem se zmanjšajo izgube in delovanje laserja z uklenjenimi fazami ima najnižji prag. 
 
-Pri pasivnem uklepanju faz dodanega elementa ne krmilimo od zunaj, ampak
-se sam ustrezno odziva. Ena od možnosti je plast barvila, ki močno
-absorbira svetlobo pri majhni gostoti svetlobnega toka, pri veliki 
-gostoti pa svetlobo prepušča, saj pride do nasičenja absorpcije (glej
+Pri pasivnem uklepanju faz dodanega elementa ne krmilimo od zunaj, 
+ampak\index{Uklepanje faz!pasivno} je njegova prepustnost odvisna od intenzitete
+izbranega nihajnega načina (slika~\ref{fig:aktpas}\,b). 
+Ena vrsta pasivnih elementov je plast raztopljenega
+barvila, ki močno absorbira svetlobo pri majhni gostoti svetlobnega toka, pri veliki 
+gostoti pa svetlobo prepušča, saj pride do nasičenja absorpcije (glej\index{Nasičena absorpcija}
 poglavje~\ref{chap:NasAbs}). V laserju je po vklopu prisotno predvsem 
 spontano sevanje, ki se pri enem prehodu skozi aktivno snov deloma ojači. 
 Barvilo najmanj absorbira fluktuacijo z največjo intenziteto. Pri dovolj 
-velikem ojačenju se bo ta izbrana fluktuacija ojačevala, ostale pa ne, zato
-se spet pojavi fazno uklenjeni sunek. Ker mora po prehodu sunka absorpcija 
-v barvilu hitro narasti, mora biti relaksacijski čas barvila zelo kratek
-$\sim \si{ps}$.
-In this scheme,
-it is essential to use a saturable absorber with a recovery time much shorter than the
-period T .
+velikem ojačenju se ta izbrana fluktuacija ojačuje, ostale pa ne, zato
+se spet pojavi fazno uklenjeni sunek. Vzbujeni atomi se morajo čim hitreje
+vrniti v osnovno stanje, da se svetloba lahko spet absorbira. To pomeni, da
+ mora biti relaksacijski čas barvila  krajši od časa
+obhoda $T$, tipično je $\sim \si{ps}$. 
 
+Drugi način pasivnega uklepanja faz je z uporabo nelinearne optike 
+(glej \index{Kerrov pojav!optični}
+poglavje~\ref{OKP}). Z optičnim Kerrovim pojavom se snop vpadne svetlobe zoži 
+in njegova širina je odvisna od njegove intenzitete. Z dodatkom zaslonke poskrbimo, 
+daje prepuščen le zelo močen svetlobni sunek, šibkejši pa so zadušeni. Ta način pogosto
+uporabimo v Ti:safirnih laserjih,\index{Laser!Ti:safir} izhodni sunki pa so 
+zelo kratki.
 
-Drug način pasivnega uklepanja faz je z uporabo nelinearne optike (glej 
-poglavje~\ref{}).
-This lensing effect has a practical application: it is used to induce self-mode-
-locking in solid-state lasers, such as titanium sapphire lasers. The mechanism is the
-following. The multimode laser can operate either in a free-running regime, in which
-the modes have random phases, or in a mode-locking regime. If the number of modes
-is large, the peak intensity of the mode-locked pulses is much larger than the CW
-intensity of the free-running laser. It is assumed that the third-order nonlinearity of
-the active crystal gives rise to a Kerr lens in the mode-locking regime, but no Kerr lens
-in free running. The effect of the Kerr lens is that of focusing the laser beam at some
-point inside the cavity. If a pinhole is placed at that point, the free-running regime
-will experience large losses, whereas the mode-locking regime will be unaffected.
-As a consequence, the laser is forced to operate as a mode-locked oscillator. More
-generally, Kerr-lens mode-locking can be explained by keeping in mind the definition
-of cavity stability given in Sect. 3.8. If the cavity is designed to be stable in presence
-of the Kerr lens and unstable in absence of the Kerr lens, the laser will choose to
-operate in the mode-locking regime in presence of self-focusing. The technique is
-known as “Kerr-lens mode-locking”.
-
-
-
-Z uklepanjem faz je danes mogoče dobiti sunke z dolžino pod 100~fs ($%
-10^{-13}$~s). Tak sunek traja le še nekaj deset optičnih period. S
-posebnimi prijemi jih lahko še skrajšajo na okoli 10~fs. "Ce je potrebna
-večja energija sunkov, jih ojačijo, kar ne pokvari mnogo osnovnega sunka.
-Zelo kratke svetlobne sunke danes na široko uporabljajo za študij hitre
-molekularne dinamike in kratkoživih vzbujenih elektronskih stanj v
-polvodnikih in mnogih drugih snoveh. Z njimi se je časovna ločljivost
-povečala za nekaj redov velikosti \cite{pikosekunde}.
-
-
-
+Z uklepanjem faz je mogoče dobiti sunke, krajše od $100~\si{fs}$. 
+Tak sunek traja le še nekaj deset optičnih period. S posebnimi prijemi 
+jih lahko še skrajšamo na okoli $10~\si{fs}$ (glej podpoglavje~\ref{kompdisp}). 
+Zelo kratki svetlobni sunki so uporabni za študij hitre molekularne dinamike 
+in kratkoživih vzbujenih elektronskih stanj v trdnih snoveh. Z uporabo fazno
+uklenjenih sunkov svetlobe se je časovna ločljivost merilnih metod povečala za 
+več redov velikosti.
 
 \section{Frekvenčni glavnik}
-
-\section{*Stabilizacija frekvence laserja na na\-sičeno absorpcijo}
-\label{chap:stabilizacija}
-
-"Se ožjo lasersko črto lahko dobimo z aktivno stabilizacijo dolžine
-resonatorja. Ideja je taka: frekvenco svetlobe, ki izhaja iz laserja,
-primerjamo z nekim standardom in iz razlike ugotovimo spremembo dolžine
-resonatorja. Eno od obeh zrcal je nameščeno na piezoelektričnem nosilcu,
-ki mu z električno napetostjo lahko spreminjamo dolžino in tako popravimo
-dolžino resonatorja.
-
-Pogalvitna težava je seveda, kako najti dovolj stabilen primerjalni
-standard za frekvenco. Ena možnost je, da izhodno svetlobo spustimo skozi
-konfokalni interferometer, ki je skoraj v resonanci z laserjem in ima dovolj
-ozek vrh prepustnosti. Majhen premik frekvence laserja bo povzročil, da se
-bo spremenil skozi interferometer prepuščeni svetlobni tok. Na prvi pogled
-je videti, da s tem nismo nič pridobili, saj bo resonančna frekvenca
-interferometra stabilna tudi le toliko, kot je stabilna njegova dolžina.
-Vendar je z izolacijo in temperaturno stabilizacijo možno držati dolžino
-praznega resonatorja - interferometra - mnogo natančneje kot dolžino
-laserja, v katerem imamo aktivno sredstvo, ki mu moramo dovajati energijo.
-
-Druga možnost je stabilizirati laser na primerno molekularno absorpcijsko
-črto. Te so lahko zelo ozke, zato je tudi spekter laserja lahko izredno
-ozek, pod 1 kHz. Pri tem moti Dopplerjeva raziširitev absorpcijske črte,
-ki pa se ji je mogoče izogniti. Kako to napravimo in kako je bila s tem
-omogočena nova definicija metra, si bomo pogledali v razdelku ????.
-
-
-V drugem razdelku smo videli, da je efektivna spektralna širina
-eno\-frekvenčnega laserja odvisna od fluktuacij dolžine optične poti
-svetlobe pri preletu resonatorja. Na to lahko poleg spreminjanja
-geometrijske dolžine vpliva še spreminjanje lomnega količnika. "Ce se
-posebej ne potrudimo, laser sveti nekje blizu vrha ojačevalnega pasu, pri
-čemer frekvenca pleše za znaten del razmika med resonatorskimi stanji. V
-šolskem He-Ne laserju je to na primer nekaj deset MHz.
-
-Bistveno manjšo širino lahko dosežemo z aktivno stabilizacijo dolžine
-resonatorja. Pri tem je pogalvitni problem, kako dobiti primerjalni
-standard. S stabilizacijo na pomožni interferometer, ki smo jo na kratko
-opisali v drugem razdelku, lahko dobimo zelo ozko črto, ki pa ima le toliko
-natančno določeno frekvenco, kot poznamo dolžino interferometra. Včasih,
-na primer za natančna interferometrična merjenja dolžin, s tem nismo
-zadovoljni in potrebujemo drug, absoluten standard.
-
-Tak standard za frekvenco so ozki prehodi v primernem razredčenem plinu.
-Vendar naletimo na težavo. Zaradi Dopplerjevega pojava so absorpcijske
-črte močno razširjene. Pomagamo si s pojavom nasičenja absorpcije, o katerem
-smo govorili v razdelku 4.9. Tam smo videli, da se pri dvakratnem prehodu
-monokromatskega snopa svetlobe skozi plin v nasprotnih smereh pojavi v
-sredini Dopplerjevo razširjene črte vdolbina, ki ima obliko homogeno
-razširjene črte. Homogena širina je lahko mnogo manjša od Dopplerjeve in
-je zato vdolbina uporabna kot frekvenčni standard.
-
-V laserski resonator postavimo poleg aktivnega sredstva še celico s
-primernim plinom, ki ima absorpcijsko črto v bližini vrha ojačenja
-aktivnega sredstva. Za He-Ne laser pri 633 nm so to na primer pare ioda.
-Zaradi absorpcije se povečajo izgube v laserju in izhodna moč se zmanjša.
-Spreminjajmo sedaj dolžino resonatorja in s tem frekvenco laserja. Ko se ta
-približa na homogeno širino centru absorpcijske črte pri $\omega_0$, se
-absorpcija zmanjša in s tem se moč laserja poveča. Odvisnost moči
-laserja z absorberjem od dolžine kaže slika \ref{s5.12}. Povečanje moči
-v vrhu običajno ni prav veliko, manj od procenta.
-
-\begin{figure}[tbp]
-\label{s5.12} \vskip 5cm
-\caption{Odvisnost moči laserja z nasičenim absorberjem od frekvence}
+Iz fazno uklenjenega laserja izhajajajo zelo kratki sunki svetlobe, ki 
+so sestavljeni iz velikega števila vzbujenih lastnih nihanj. Spekter 
+izhodne svetlobe je tako sestavljen iz velikega števila spektralnih črt, ki
+so med seboj enakomerno razmaknjene (slika~\ref{fig:comb}). Zaradi podobnosti spektra
+z glavnikom imenujemo tak izvor svetlobe frekvenčni glavnik. 
+Spekter frekvenčnega glavnika je zelo natačno določen in uporabljamo ga za 
+izredno natančno merjenje frekvence svetlobe. Ko svetloba z neznano frekvenco
+interferira s svetlobo iz frekvenčnega glavnika, pride do interferenčnih pojavov.
+Zaradi majhnih razlik v frekvecah pride do pojava utripanja s frekvenco v 
+radijskem območju, ki jo znamo zelo natančno izmeriti in tako določiti neznano 
+vpadno frekvenco.\footnote{Za odkritje sta John L. Hall in Theodor W. H\"ansch 
+leta 2005 prejela Nobelovo nagrado.} 
+\begin{figure}[h]
+\centering
+\def\svgwidth{120truemm} 
+%\input{slike/06_comb.pdf_tex}
+\caption{Spekter svetlobe iz frekvenčnega glavnika}
+\label{fig:comb}
 \end{figure}
 
-Shema stabilizacije na nasičeno absorpcijo je prikazana na sliki \ref{****}%
-. Eno od zrcal resonatorja je na piezoelektričnem nosilcu. Nanj vodimo
-izmenično napetost s frekvenco $\Omega$ in s tem moduliramo frekvenco
-laserja, da se vozi preko absorpcijske vdolbine pri $\omega_0$. Zaradi tega
-se spreminja tudi izhodna moč laserja, ki jo opazujemo s fotodiodo. Kadar
-je srednja frekvenca laserja enaka $\omega_0$, se moč zmanjša simetrično
-pri odmikih navzgor in navzdol od $\omega_0$ in se zato spreminja z dvojno
-frekvenco modulacije $2\Omega$. Kadar pa je srednja frekvenca laserja
-nekoliko odmaknjena od $\omega_0$, se izhodna moč pri odmiku v zrcala v eno
-stran spremeni drugače kot v drugo, kar pomeni, da je v signalu s fotodiode
-tudi komponenta s frekvenco $\Omega$. Da držimo srednjo frekvenco laserja
-enako $\omega_0$, moramo torej meriti komponento izhodne moči pri
-modulacijski frekvenci in s povratno zanko skrbeti, da je ta enaka nič.
 
-\begin{figure}[tbp]
-\label{s5.13} \vskip 7cm
-\caption{Shema stabilizacije laserja na nasičeno absoprcijo}
-\end{figure}
-
-Komponento signala s frekvenco $\Omega$ zaznamo s faznim detektorjem, ki
-deluje tako, da signal množi z refenčno modulacijsko napetostjo. V
-produktu dobimo istosmerno komponento, ki je sorazmerna signalu pri
-frekvenci $\Omega$ in ki jo izločimo z nizkopasovnim filtrom. Izhod iz
-faznega detektorja je tako sorazmeren odmiku srednje frekvence laserja od $%
-\omega_0$. Preko primernega ojačevalnika ga vodimo na piezoelektrični
-nosilec zrcala in tako popravljamo dolžino laserja.
-
-Napravimo kvantitativno oceno opisane stabilizacijske sheme. Odvisnost
-izhodne moči od frekvence laserja $\omega$ lahko približno zapišemo v
-obliki 
-\begin{equation}  \label{5.40}
-P(\omega)=P_0 + \frac{P_1\gamma^2}{(\omega- \omega_0)^2+\gamma^2}\;\;.
+Na splošno se krožne frekvence izhodne svetlobe zapišejo kot
+\begin{equation}
+\omega = \omega_0 + m\Delta \omega,
 \end{equation}
-$P_0$ je moč laserja brez saturacijskega vrha pri $\omega_0$, $P_1$ pa
-povečanje moči pri $\omega_0$. Predpostavili smo, da se ojačenje laserja
-in nehomogeno razširjeni del absorpcije ne spreminjata mnogo preko homogene
-širine absorberja in je zato $P_0$ približno konstantna. Frekvenco laserja
-moduliramo: 
-\begin{equation}  \label{5.41}
-\omega=\omega_0+\Delta\omega+a \sin \Omega t\;\;.
-\end{equation}
-Z $\Delta\omega$ smo označili odstopanje srednje frekvence laserja od
-centra absorpcijske črte $\omega_0$. "Ce sta $a$ in $\Delta\omega$ majhna v
-primeri s homogeno širino $\gamma$, lahko imenovalec v enačbi \ref{5.40}
-razvijemo: 
-\begin{equation}  \label{5.42}
-P(\omega)=P_0+P_1 [1-\frac{1}{\gamma^2}\Delta\omega^2 +\frac{2}{\gamma^2} a
-\Delta\omega \sin\Omega t - \frac{a^2}{\gamma^2}\sin^2\Omega t ]\;\;.
-\end{equation}
-Amplituda signala pri $\Omega$ je $2P_1 a \Delta\omega/\gamma^2$. Najmanjša
-razlika, ki jo lahko zaznamo, je določena s šumom meritve. Kot bomo videli
-v poglavju o detekciji svetlobe, je osnovni izvor šuma fotodiode Poissonov
-šum števila parov elektron-vrzel, ki nastanejo zaradi fotoefekta v p-n
-spoju. Najmanjša sprememba svetlobne moči, ki jo lahko izmerimo, je (glej
-10??. poglavje) 
-\begin{equation}  \label{5.43}
-P_N\simeq \sqrt{\hbar\omega P \frac{1}{\tau}}\;,
-\end{equation}
-kjer je $P$ celotna svetlobna moč, ki vpada na diodo, $\tau$ pa čas
-meritve, ki je v našem primeru določen s časovno konstanto nizkopasovnega
-filtra na izhodu faznega detektorja.
+pri čemer je $m$ naravno število. Glavna težava pri izvedbi frekvenčnega glavnika
+je stabilizacija $\omega_0$ in $\Delta\omega$.
 
-Vzemimo na primer He-Ne laser, stabiliziran na iodove pare. Povprečna moč
-laserja $P_0$ naj je 10 mW in $P_1=0.1 $ mW. "Sirina absorpcijske črte $%
-\gamma= 10^6$ s$^{-1}$. Izberimo amplitudo modulacije $a=10^5$ s$^{-1}$ in $%
-\tau=10^{-4}$ s. "Casovna konstanta $\tau$ ne sme biti prevelika, določa
-namreč, kako hitro popravljamo dolžino laserja. Gornje vrednosti dajo
-za najmanjšo zaznavno moč pri $\Omega$ $P_N=0.5\times10^{-8}$ W.
-Najmanjše merljivo odstopanje frekvence laserja je tedaj 
-\begin{equation}  \label{5.44}
-\Delta\omega_N=\frac{P_N \gamma^2}{2P_1 a}=2.5\times 10^3\;s^{-1}\;.
-\end{equation}
-Takšno in še boljšo stabilnost frekvence tudi zares dosežejo. Pozoren
-bralec bo opazil, da je $\Delta\omega_N<0.01 \gamma$, to je, položaj
-absorpcijskega vrha je na opisan način mogoče določiti z natančnostjo
-nekaj tisočink celotne širine.
+stabilizacija envelope-faze z nelinearnim interferometrom. razmik se preprosto
+stabilizira, saj je v ombočju MHz in GHz. Z f2f interferometrom je pa tudi absolutna
+lega glavnika določena- S primerjavo z atomsko uro... se obe količini točno določita.
 
-Na absorpcijsko črto stabiliziranega laserja navadno ne uporabljamo
-direktno, temveč z njim kontroliramo drug laser. Del izhodne svetlobe iz
-obeh laserjev zmešamo na detekcijski fotodiodi. V signalu dobimo utripanje,
-ki je enako razliki frekvenc obeh laserjev. S spreminjanjem dolžine drugega
-laserja skrbimo, da je frekvenca utripanja konstantna. Na ta način lahko v
-ozkem frekvenčnem intervalu še spreminjamo frekvenco drugega laserja.
+Če je obseg več kot oktava (se pravi faktor dva), potem lahko direktno merimo f0.
+carrier-envelope phase se popravlja s feedbackom. 
 
-Z merjenjem utripanja med dvema stabiliziranima laserjema ugotavljajo tudi
-njihovo stabilnost.
+Najpomembnejše odkritje je stabilizacija carrier envelope offset frewquency. 
+
+
+V prejšnjem razdelku smo privzeli, da se frekvence vzbujenih lastnih 
+nihanj med seboj razlikujejo za večkratnik razlike $\Delta \omega = \pi c/L$. 
+
+To je v teoriji. Lahko imamo disperzijo grupne hitrosti, potem se delta omega
+malo spreminja z omego. 
+
+
+
 
 \section{*Absolutna meritev frekvence laserja in definicija metra}
 
@@ -1316,11 +1311,6 @@ sestavljajo oksidirana površina niklja, ki se je dotika ostra volframska
 konica. Taka dioda deluje kot uporaben mešalni element do frekvenc okoli
 200 THz, to je skoraj do vidnega področja.
 
-\begin{figure}[tbp]
-\label{s5.14} \vskip 15cm
-\caption{Primerjalna veriga za meritev frekvence He-Ne laserja}
-\end{figure}
-
 Za primerjavo He-Ne laserja, stabiliziranega na metan pri 3.39 $\mu$m, z
 osnovno cezijevo uro je bilo potrebno zgraditi celo verigo vmesnih
 primerjav, ki jo kaže slika \ref{*****}. Frekvenco CO$_2$ laserja dobimo na
@@ -1342,7 +1332,7 @@ primerjavo stabiliziranega laserja in kriptonove črte: $c=299 792
 458\;m/s\;. $ Na metan ali jod stabilizirani laser je postal sekundarni
 standard za dolžino. Laser je pravzaprav pri tem le pomožna naprava;
 standard je ustrezni molekularni prehod.
-\newpage
+
 \section{*Semiklasični model laserja}
 \label{chap:semiklasicni}
 Doslej smo laserje obravnavali le z modelom zasedbenih enačb. Ta je zelo
