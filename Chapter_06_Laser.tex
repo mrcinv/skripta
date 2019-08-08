@@ -1139,9 +1139,9 @@ frekvenci razlikujejo za $\Delta \omega$, je produkt $N\Delta \omega$ ravno enak
 ojačevanja aktivnega sredstva. Za dosego zelo kratkih sunkov z metodo uklepanja
 faz je torej treba uporabiti laser s kar se da veliko širino ojačevanja. 
 
-Poglejmo primer. V Ti:safir laserju je širina ojačevalne črte $\Delta \nu = 100~\si{THz}$, 
+Poglejmo primer. V Ti:safir laserju je širina ojačevalne črte $\Delta \nu_G = 100~\si{THz}$, 
 dolžina resonatorja pa naj bo $L=1,5~\si{m}$. Iz takega laserja izhajajo
-sunki, dolgi $\tau = 1/\Delta \nu = 10~\si{fs}$, med posameznima sunkoma 
+sunki, dolgi $\tau = 1/\Delta \nu_G = 10~\si{fs}$, med posameznima sunkoma 
 pa poteče $T = 2L/c = 10~\si{ns}$. Izračunamo še število fazno uklenjenih lastnih načinov, ki je 
 $N = T/\tau = 10^6$.
 
@@ -1240,56 +1240,74 @@ in kratkoživih vzbujenih elektronskih stanj v trdnih snoveh. Z uporabo fazno
 uklenjenih sunkov svetlobe se je časovna ločljivost merilnih metod povečala za 
 več redov velikosti.
 
-\section{Frekvenčni glavnik}
+\section{Frekvenčni glavnik in absolutna meritev frekvence laserja}
+\index{Frekvenčni glavnik}\index{Uklepanje faz}\index{Sunkovni laser}
 Iz fazno uklenjenega laserja izhajajajo zelo kratki sunki svetlobe, ki 
 so sestavljeni iz velikega števila vzbujenih lastnih nihanj. Spekter 
-izhodne svetlobe je tako sestavljen iz velikega števila spektralnih črt, ki
+izhodne svetlobe tako vsebuje veliko število spektralnih črt, ki\index{Spekter}
 so med seboj enakomerno razmaknjene (slika~\ref{fig:comb}). Zaradi podobnosti spektra
-z glavnikom imenujemo tak izvor svetlobe frekvenčni glavnik. 
-Spekter frekvenčnega glavnika je zelo natačno določen in uporabljamo ga za 
-izredno natančno merjenje frekvence svetlobe. Ko svetloba z neznano frekvenco
-interferira s svetlobo iz frekvenčnega glavnika, pride do interferenčnih pojavov.
-Zaradi majhnih razlik v frekvecah pride do pojava utripanja s frekvenco v 
-radijskem območju, ki jo znamo zelo natančno izmeriti in tako določiti neznano 
-vpadno frekvenco.\footnote{Za odkritje sta John L. Hall in Theodor W. H\"ansch 
-leta 2005 prejela Nobelovo nagrado.} 
+z glavnikom imenujemo tak izvor svetlobe frekvenčni glavnik. Značilna širina ojačenega
+območja je $300~\si{THz}$, razmik med posameznimi črtami pa $100~\si{MHz}$, tako 
+da tipični glavnik vsebuje okoli več milijonov spektralnih črt.
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
-%\input{slike/06_comb.pdf_tex}
+\input{slike/06_comb.pdf_tex}
 \caption{Spekter svetlobe iz frekvenčnega glavnika}
 \label{fig:comb}
 \end{figure}
 
-
-Na splošno se krožne frekvence izhodne svetlobe zapišejo kot
+Frekvence izhodne svetlobe na splošno zapišemo kot 
 \begin{equation}
-\omega = \omega_0 + m\Delta \omega,
+\nu = \nu_0 + m\Delta \nu,
+\label{eq:comb}
 \end{equation}
-pri čemer je $m$ naravno število. Glavna težava pri izvedbi frekvenčnega glavnika
-je stabilizacija $\omega_0$ in $\Delta\omega$.
+pri čemer je $m$ naravno število, $\Delta \nu = c/2L$ razlika med zaporednima 
+frekvencama in $\nu_0$ frekvenčni zamik. S stabilizacijo $\Delta \nu$ in 
+frekvenčnega zamika $\nu_0$ so frekvence izhodne svetlobe zelo 
+natančno določene, zato frekvenčni glavnik uporabljamo kot referenco 
+za izredno natančno določanje frekvenc. Ko svetloba z neznano frekvenco
+interferira s svetlobo iz frekvenčnega glavnika, pride do utripanja -- pojavi
+se signal pri razliki obeh frekvenc. Zaradi velikega števila lastnih nihanj 
+in posledično majhnih razlik v frekvencah je frekvenca utripanja navadno v 
+radijskem območju. To pa znamo zelo natančno izmeriti in tako določiti neznano 
+vpadno frekvenco. Na ta način lahko merimo frekvence z natančnostjo do 
+$10^{-15}~\si{Hz}$.\footnote{Za odkritje 
+sta John L. Hall in Theodor W. H\"ansch leta 2005 prejela 
+Nobelovo nagrado.} 
 
-stabilizacija envelope-faze z nelinearnim interferometrom. razmik se preprosto
-stabilizira, saj je v ombočju MHz in GHz. Z f2f interferometrom je pa tudi absolutna
-lega glavnika določena- S primerjavo z atomsko uro... se obe količini točno določita.
+V primeru, da so sunki svetlobe iz laserja povsem periodični in se ujemajo tako
+v amplitudi kot tudi v fazi, so frekvence izhodne svetlobe kar 
+večkratniki $\Delta \nu$. V praksi se zaradi Gouyeve faze,\index{Gouyeva faza}
+disperzije \index{Disperzija}in nelinearnosti pojavi zamik
+v fazi, zaradi katerega vrh ovojnice sunka na splošno ne sovpada z vrhom amplitude
+nihanja (slika~\ref{fig:comb2}). 
+Če uspemo ohranjati ta zamik konstanten znotraj preleta, se pri izrazu za
+frekvenco izhodne svetlobe pojavi dodatni zamik $\nu_0 \neq 0$ (enačba~\ref{eq:comb}). 
+Za absolutno
+določitev frekvence moramo ta zamik seveda natačno poznati. 
+\begin{figure}[h]
+\centering
+\def\svgwidth{110truemm} 
+\input{slike/06_comb2.pdf_tex}
+\caption{Časovna odvisnost amplitude izhodne svetlobe iz frekvenčnega glavnika}
+\label{fig:comb2}
+\end{figure}
 
-Če je obseg več kot oktava (se pravi faktor dva), potem lahko direktno merimo f0.
-carrier-envelope phase se popravlja s feedbackom. 
+Zamik $\nu_0$ lahko izmerimo
+z interferometrom, v katerem med seboj primerjamo valovanje pri 
+osnovni in pri podvojeni frekvenci\footnote{Interferometer se imenuje $f$--$2f$
+interferometer, kar nakazuje na osnovno ($f$)  in podvojeno ($2f$) frekvenco.}.
+To dosežemo z nelinearnimi optičnimi pojavi, ki omogočajo generacijo valovanja 
+pri podvojeni frekvenci vpadnega (poglavje~\ref{chap:SHG}). Podvojeno frekvenco, ki je
+pri $2(\nu_0 + m\Delta \nu)= 2\nu_0 + 2m\Delta \nu$ primerjamo s frekvenco pri 
+točno dvakrat večjem $m$, ki znaša $\nu_0 + 2m\Delta \nu$. Razlika med tema 
+dvema frekvencama je ravno $\nu_0$, ki smo jo iskali. S povratno zanko jo 
+lahko vzdržujemo konstantno. Ko določimo oba parametra $\nu_0$ in $\Delta \nu$, 
+poznamo absolutne vrednosti frekvenc posameznih spektralnih črt v frekvenčnem 
+glavniku.
 
-Najpomembnejše odkritje je stabilizacija carrier envelope offset frewquency. 
-
-
-V prejšnjem razdelku smo privzeli, da se frekvence vzbujenih lastnih 
-nihanj med seboj razlikujejo za večkratnik razlike $\Delta \omega = \pi c/L$. 
-
-To je v teoriji. Lahko imamo disperzijo grupne hitrosti, potem se delta omega
-malo spreminja z omego. 
-
-
-
-
-\section{*Absolutna meritev frekvence laserja in definicija metra}
-
+\begin{remark}
 Najnatančneje merljiva količina je čas odnosno frekvenca. Frekvence
 laserja, ki sveti v vidnem področju seveda ni mogoče direktno prešteti.
 Pač pa je v začetku sedemdesetih let uspelo s heterodinsko tehniko, ki se
@@ -1332,6 +1350,7 @@ primerjavo stabiliziranega laserja in kriptonove črte: $c=299 792
 458\;m/s\;. $ Na metan ali jod stabilizirani laser je postal sekundarni
 standard za dolžino. Laser je pravzaprav pri tem le pomožna naprava;
 standard je ustrezni molekularni prehod.
+\end{remark}
 
 \section{*Semiklasični model laserja}
 \label{chap:semiklasicni}
