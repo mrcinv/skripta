@@ -1577,7 +1577,8 @@ predvsem zato, ker sklapljajo različna lastna stanja resonatorja, vendar to
 presega našo trenutno obravnavo. Tako iz enačbe~(\ref{5.56b}) dobimo
 \begin{equation}  
 \label{5.64}
-\frac{d P_\lambda^+}{dt}=\left(-i \omega_0-\gamma\right)P_\lambda^{+}-\frac{iv_{12}^2}{\hbar} E_\lambda^+ \overline{Z}.
+\frac{d P_\lambda^+}{dt}=\left(-i \omega_0-\gamma\right)P_\lambda^{+}-\frac{i}{\hbar}
+V^2 E_\lambda^+ \overline{Z}.
 \end{equation}
 
 Enačbo za $\overline{Z}$ dobimo iz (\ref{5.56}). V zadnjem členu nastopajo produkti 
@@ -1613,20 +1614,23 @@ svetlobe $\Omega$ pa je blizu $\omega _{0}$ in $\omega _{\lambda }$. V
 stacionarnem stanju ima polarizacija enako časovno odvisnost in 
 $P_{\lambda }^{+}=P_{0}e^{-i\Omega t}$. Tedaj je v enačbi~(\ref{5.66}) drugi
 oklepaj konstanten in povprečna gostota obrnjene zasedenosti $\overline{Z}$ je 
-v stacionarnem stanju od časa neodvisna. Sistem enačb (\ref{5.63}), (\ref{5.64}) in (\ref{5.66}) 
+v stacionarnem stanju od časa neodvisna. 
+
+Sistem enačb (\ref{5.63}), (\ref{5.64}) in (\ref{5.66}) 
 tako da 
 \begin{eqnarray}
 \left(i\left(\Omega - \omega_{\lambda}\right)-\frac{1}{\tau}\right) E_{0}+\frac{i\omega _{0}}
 {2\epsilon _{0}}\,P_{0} &=&0  \label{5.67} \\
-\left(i\left(\Omega-\omega_{0}\right)-\gamma\right)P_{0}-\frac{iv_{12}^{2}}{\hbar}\,E_{0}\overline{Z} &=&0 \\
+\left(i\left(\Omega-\omega_{0}\right)-\gamma\right)P_{0}-\frac{i}{\hbar}V^{2}
+E_{0}\overline{Z} &=&0 \\
 A\left(\overline{Z}_{0}-\overline{Z}\right)+\frac{2i}{\hbar }\,E_{0}\left(P_{0}^{*}-P_{0}\right) &=&0.
 \end{eqnarray}
 
 Najprej iz druge enačbe izrazimo $P_0$, ga vstavimo v tretjo in izračunamo $\overline{Z}$. Dobimo
 \begin{equation}  
 \label{5.68}
-\overline{Z}=\overline{Z}_0\left[1+\frac{V^2}{\hbar^2 A}\,E_0^2\, \frac{2\gamma}{%
-\left(\omega_0-\Omega\right)^2+\gamma^2}\right]^{-1}
+\overline{Z}=\overline{Z}_0\left(1+\frac{V^2}{\hbar^2 A}\,E_0^2\, \frac{2\gamma}
+{\left(\omega_0-\Omega\right)^2+\gamma^2}\right)^{-1}.
 \end{equation}
 Ta izraz že poznamo. $\pi V^2/\left(\epsilon_0\hbar^2\right)$ je Einsteinov
 koeficient $B$. $E_0^2$ je sorazmern gostoti energije polja v resonatorju,
