@@ -1055,7 +1055,7 @@ P_{\rm max}=\frac {2\hbar \omega}{\tau} \left(N_{20}-\tilde{N}_{2}-\tilde{N}_{2}
 Ker je navadno $N_{20}\gg \tilde{N}_2$, je $n_{\rm max} \approx N_{20}$
 in 
 \boxeq{QP}{
-P_{\rm max} \approx \frac{2 \hbar \omega N_{20}}{\tau}.
+P_{\rm max} \approx \frac{2}{\tau} \hbar \omega N_{20}.
 }
 
 Poglejmo primer. Naj bo presek za stimulirano sevanje $\sigma=B\hbar \omega g/c$ 
@@ -1251,7 +1251,7 @@ območja je $300~\si{THz}$, razmik med posameznimi črtami pa $100~\si{MHz}$, ta
 da tipični glavnik vsebuje okoli več milijonov spektralnih črt.
 \begin{figure}[h]
 \centering
-\def\svgwidth{120truemm} 
+\def\svgwidth{110truemm} 
 \input{slike/06_comb.pdf_tex}
 \caption{Spekter svetlobe iz frekvenčnega glavnika}
 \label{fig:comb}
@@ -1264,7 +1264,7 @@ Frekvence izhodne svetlobe na splošno zapišemo kot
 \end{equation}
 pri čemer je $m$ naravno število, $\Delta \nu = c/2L$ razlika med zaporednima 
 frekvencama in $\nu_0$ frekvenčni zamik. S stabilizacijo $\Delta \nu$ in 
-frekvenčnega zamika $\nu_0$ so frekvence izhodne svetlobe zelo 
+frekvenčnega zamika $\nu_0$ so frekvence izhodne svetlobe  
 natančno določene, zato frekvenčni glavnik uporabljamo kot referenco 
 za izredno natančno določanje frekvenc. Ko svetloba z neznano frekvenco
 interferira s svetlobo iz frekvenčnega glavnika, pride do utripanja -- pojavi
@@ -1272,7 +1272,7 @@ se signal pri razliki obeh frekvenc. Zaradi velikega števila lastnih nihanj
 in posledično majhnih razlik v frekvencah je frekvenca utripanja navadno v 
 radijskem območju. To pa znamo zelo natančno izmeriti in tako določiti neznano 
 vpadno frekvenco. Na ta način lahko merimo frekvence z natančnostjo do 
-$10^{-15}~\si{Hz}$.\footnote{Za odkritje 
+$10^{-18}~\si{Hz}$.\footnote{Za odkritje 
 sta John L. Hall in Theodor W. H\"ansch leta 2005 prejela 
 Nobelovo nagrado.} 
 
@@ -1280,10 +1280,9 @@ V primeru, da so sunki svetlobe iz laserja povsem periodični in se ujemajo tako
 v amplitudi kot tudi v fazi, so frekvence izhodne svetlobe kar 
 večkratniki $\Delta \nu$. V praksi se zaradi Gouyeve faze,\index{Gouyeva faza}
 disperzije \index{Disperzija}in nelinearnosti pojavi zamik
-v fazi, zaradi katerega vrh ovojnice sunka na splošno ne sovpada z vrhom amplitude
-nihanja (slika~\ref{fig:comb2}). 
-Če uspemo ohranjati ta zamik konstanten znotraj preleta, se pri izrazu za
-frekvenco izhodne svetlobe pojavi dodatni zamik $\nu_0 \neq 0$ (enačba~\ref{eq:comb}). 
+v fazi $\Delta \varphi$ in vrh ovojnice sunka na splošno ne sovpada z vrhom amplitude
+nihanja (slika~\ref{fig:comb2}). V izrazu za
+frekvenco izhodne svetlobe se zato pojavi dodatni zamik $\nu_0 \neq 0$ (enačba~\ref{eq:comb}). 
 Za absolutno
 določitev frekvence moramo ta zamik seveda natačno poznati. 
 \begin{figure}[h]
@@ -1296,64 +1295,60 @@ določitev frekvence moramo ta zamik seveda natačno poznati.
 
 Zamik $\nu_0$ lahko izmerimo
 z interferometrom, v katerem med seboj primerjamo valovanje pri 
-osnovni in pri podvojeni frekvenci\footnote{Interferometer se imenuje $f$--$2f$
+osnovni in pri podvojeni frekvenci\footnote{Tak interferometer imenujemo $f$--$2f$
 interferometer, kar nakazuje na osnovno ($f$)  in podvojeno ($2f$) frekvenco.}.
-To dosežemo z nelinearnimi optičnimi pojavi, ki omogočajo generacijo valovanja 
-pri podvojeni frekvenci vpadnega (poglavje~\ref{chap:SHG}). Podvojeno frekvenco, ki je
-pri $2(\nu_0 + m\Delta \nu)= 2\nu_0 + 2m\Delta \nu$ primerjamo s frekvenco pri 
-točno dvakrat večjem $m$, ki znaša $\nu_0 + 2m\Delta \nu$. Razlika med tema 
-dvema frekvencama je ravno $\nu_0$, ki smo jo iskali. S povratno zanko jo 
-lahko vzdržujemo konstantno. Ko določimo oba parametra $\nu_0$ in $\Delta \nu$, 
+Valovanje pri osnovni frekvenci najprej frekvenčno podvojimo. To dosežemo 
+z nelinearnimi optičnimi pojavi, ki omogočajo generacijo valovanja pri frekvenci, 
+ji je enaka dvakratni frekvenci vpadnega valovanja 
+(glej poglavje~\ref{chap:SHG}). Podvojeno frekvenco $2(\nu_0 + 
+m\Delta \nu)= 2\nu_0 + 2m\Delta \nu$ nato primerjamo s frekvenco pri 
+točno dvakrat večjem $m$, to je pri $\nu_0 + 2m\Delta \nu$. Pri razliki med tema
+dvema frekvencama, ki je ravno $\nu_0$, se na detektorju pojavi utripanje.
+Zamik $\nu_0$ na ta način izmerimo, hkrati pa ga s povratno zanko
+vzdržujemo konstantnega. Ko določimo oba parametra $\nu_0$ in $\Delta \nu$, 
 poznamo absolutne vrednosti frekvenc posameznih spektralnih črt v frekvenčnem 
-glavniku.
+glavniku z relativno natančnostjo okoli $10^{-18}$.
 
-\begin{remark}
-Najnatančneje merljiva količina je čas odnosno frekvenca. Frekvence
-laserja, ki sveti v vidnem področju seveda ni mogoče direktno prešteti.
-Pač pa je v začetku sedemdesetih let uspelo s heterodinsko tehniko, ki se
-v mikrovalovni tehniki pogosto uporablja, napraviti primerjavo
-stabiliziranega He-Ne laserja z osnovno cezijevo uro in tako določiti
-frekvenco absorpcijske črte metana pri 3.39 $\mu$m z isto natan"nostjo, kot
-jo ima cezijeva ura.
+\subsection*{Definicija metra}
+Danes je meter je definiran kot pot, ki jo svetloba v vakuumu prepotuje v \index{Meter}
+$1/299\,792\, 458~\si{s}$.  Vendar ni bilo vedno tako. Do šestdesetih let dvajsetega
+stoletja je bil meter definiran z dolžino prametra, to je palice iz platine in iridija, 
+pri atmosferskem tlaku in temperaturi taljenja ledu. 
 
-S heterodinsko tehniko primerjamo frekvenci dveh ali več valovanj tako, da
-jih zmešamo na primernem nelinearnem elementu, običajno neki diodi. Zaradi
-nelinearnosti dobimo v odzivu diode različne mnogokratnike vpadnih
-frekvenc, njihove vsote in razlike. Od teh je kaktera lahko dovolj nizka, da
-jo lahko direktno preštejemo.
+Leta 1960 so definicijo 
+izboljšali in jo vpeljali glede na svetlobo kriptonove svetilke. Meter je bil 
+definiran kot $1\,650\, 763,73$ valovnih dožin svetlobe, ki jo izseva kriptonov
+izotop $^{86}$Kr med nivojema $2p_{10}$ in $5p_5$. Vendar je širina črte
+kriptonove svetilke razmeroma velika, zato je bil meter 
+definiran le z relativno negotovostjo $4 \times 10^{-9}$ oziroma absolutno 
+negotovostjo $4~\si{nm}$. 
 
-Za primerjanje frekvenc nad mikrovalvnim področjem je potreben ustrezen
-mešalni element. Polvodniške diode nehajo biti uporabne pri približno 20
-GHz. Za višje frekvence uporabijo diode kovina-izolator-kovina, ki jih
-sestavljajo oksidirana površina niklja, ki se je dotika ostra volframska
-konica. Taka dioda deluje kot uporaben mešalni element do frekvenc okoli
-200 THz, to je skoraj do vidnega področja.
+Z odkritjem laserjev so hitro spoznali, da definicija s kriptonovo svetlobo ni 
+najprimernejša, saj se je izkazalo, da je njen spekter razmeroma širok in asimetričen. 
+S heterodinsko tehniko \index{Heterodinska detekcija}so primerjali valovno dolžino 
+svetlobe \index{Laser!He-Ne}
+iz He-Ne laserja, stabiliziranega z metanom ($3,39~\si{\micro\meter}$), z osnovno
+cezijevo uro in določili absorpcijsko črto z natančnostjo cezijeve ure.
+Frekvenca izhodne svetlobe je bila določena na $88,376181627(50)~\si{THz}$.
+Po drugi strani so lahko izmerili valovno dolžino izsevane svetlobe s primerjavo 
+z valovno dolžino kriptonove svetlobe in tako določili hitrost svetlobe na
+$299\, 792\, 458~\si{m/s}$.
 
-Za primerjavo He-Ne laserja, stabiliziranega na metan pri 3.39 $\mu$m, z
-osnovno cezijevo uro je bilo potrebno zgraditi celo verigo vmesnih
-primerjav, ki jo kaže slika \ref{*****}. Frekvenco CO$_2$ laserja dobimo na
-primer iz utripanja med frekvencama CO$_2$ laserja pri 10.2 $\mu$m in pri
-9.3 $\mu$m, trikratnikom frekvence HCN laserja in še klistrona s frekvenco
-20 GHz. Na ta način so izmerili, da je frekvenca CH$_4$ črte na katero je
-stabiliziran He-Ne laser, 88.376181627 THz.
+Leta 1983 so definicijo metra vnovič spremenili in jo prek hitrosti svetlobe v
+vakuumu vezali na enoto sekunde. Ta definicija velja še danes. Sekunda je določena
+z nihaji cezijevih atomov in to omogoča določitev metra z relativno 
+negotovostjo $10^{-13}$. 
 
-Valovno dolžino laserja dobimo z interferometrično primerjavo z
-dolžinskim standardom, ki je bil do leta 1984 določen z neko kriptonovo
-črto. Iz znane frekvence in valovna dolžine določimo hitrost svetlobe.
-Zaradi relativno velike širine črte kriptonove svetilke je bil po starem
-meter definiran le z relativno natančnostjo 10$^{- 8}$, kar je pomenilo, da
-tudi hitrost svetlobe ne more biti določena bolj natančno. Meritev
-frekvence laserja pa je dosti natančnejša. Zato je bilo smiselno opustiti
-meter kot osnovno enoto in raje definirati hitrost svetlobe kot pretvornik
-med sekundo in metrom. Z njeno vrednost so vzeli, kar so dobili z naboljšo
-primerjavo stabiliziranega laserja in kriptonove črte: $c=299 792
-458\;m/s\;. $ Na metan ali jod stabilizirani laser je postal sekundarni
-standard za dolžino. Laser je pravzaprav pri tem le pomožna naprava;
-standard je ustrezni molekularni prehod.
-\end{remark}
+Z novo definicijo izbira snovi, v kateri pride do sevanja svetlobe, ni več ključnega
+pomena. Priporočena realizacija definicije metra je tako s He-Ne laserjem, 
+stabiliziranim z jodovo celico, ki z absorpcijo še zmanjša spektralno širino črte.
+V tem primeru je meter $1\,579\,800,762042(33)$ valovnih dolžin izsevane svetlobe. 
+Laser je tako postal sekundarni standard za dolžino -- vendar je laser pri tem le pomožna 
+naprava, standard je ustrezni molekularni prehod. 
 
 \section{*Semiklasični model laserja}
 \label{chap:semiklasicni}
+\index{Semiklasični model}
 Doslej smo laserje obravnavali le z modelom zasedbenih enačb. Ta je zelo
 grob, saj smo pri tem zanemarili nekaj pomembnih pojavov. Svetlobo v 
 resonatorju smo opisali le s celotno energijo oziroma številom fotonov in se za
@@ -1362,45 +1357,45 @@ delujočega laserja in oblika polja v njem enaki kot za lastno stanje
 praznega resonatorja. Aktivno snov smo opisali le z zasedenostjo zgornjega
 in spodnjega laserskega stanja in s tem izpustili možnost, da se zaradi
 interakcij z elektromagnetnim poljem atomi nahajajo v nestacionarnem,
-mešanem stanju.
+mešanem stanju.\index{Zasedbene enačbe}
 
 Gornje pomanjkljivosti delno odpravimo s tem, da elektromagnetno polje v
 resonatorju obravnavamo klasično z valovno enačbo, atome aktivne snovi pa
 kvantno in upoštevamo, da se pokoravajo Schr\"odingerjevi enačbi. S tem dobimo 
 semiklasični model laserja. Za še natančnejši opis bi morali obravnavati
-kvantno tudi svetlobo, kar pa presega okvir te knjige.
+kvantno tudi svetlobo.
 
 Aktivna snov naj bo množica enakih dvonivojskih 
-atomov s stanjema $|1\rangle$ in $|2\rangle$, ki imata energiji $W_1$ in $W_2$.
+atomov s stanjema $|1\rangle$ in $|2\rangle$, ki imata energiji $E_1$ in $E_2$.
 Atomi s svetlobo sodelujejo preko dipolne interakcije oblike $H = -eE(t)\hat{x}$, 
 kjer je $E(t)$ polje v resonatorju, ki naj bo zaradi preprostosti 
 polarizirano v smeri osi $x$. Časovno odvisno stanje atomov
 zapišimo v obliki 
 \begin{equation}  \label{5.45}
-|\psi\rangle=c_1(t)|1\rangle\exp(-iW_1t/\hbar)+
-c_2(t)|2\rangle\exp(-iW_2t/\hbar).
+|\psi\rangle=c_1(t)|1\rangle\exp(-iE_1t/\hbar)+
+c_2(t)|2\rangle\exp(-iE_2t/\hbar).
 \end{equation}
 Iz Schr\"odingerjeve enačbe (enačba~\ref{eq:sk-S}) dobimo za časovna odvoda
 koeficientov $c_1(t)$ in $c_2(t)$ zvezi
 (glej enačbi~\ref{eq:c1c2})
 \begin{equation}
-\frac{d c_1}{dt}=-\frac{i}{\hbar} E(t)v_{12} e^{-i\omega_0 t}\, c_2 
+\frac{d c_1}{dt}=-\frac{i}{\hbar} E(t)V e^{-i\omega_0 t}\, c_2 
 \qquad \mathrm{in} \qquad
-\frac{d c_2}{dt}=-\frac{i}{\hbar} E(t)v_{12} e^{i\omega_0 t}\, c_1,
+\frac{d c_2}{dt}=-\frac{i}{\hbar} E(t)V e^{i\omega_0 t}\, c_1,
 \label{5.46}
 \end{equation}
-pri čemer je $v_{12} = -e\langle1|\hat{x}|2\rangle$ in $\omega_0=(W_2-W_1)/\hbar$.
+pri čemer naj bo $V = -e\langle1|\hat{x}|2\rangle$ realen in $\omega_0=(E_2-E_1)/\hbar$.
 
 Električni dipolni moment atoma v stanju ${\psi}$ je 
 \begin{equation}  
 \label{5.47}
 p=e\langle\psi|\hat{x}|\psi\rangle=-
-(c_1^{\ast}c_2e^{-i \omega_0t}+c_1c_2^{\ast}e^{i \omega_0 t}) v_{12}.
+(c_1^{\ast}c_2e^{-i \omega_0t}+c_1c_2^{\ast}e^{i \omega_0 t}) V.
 \end{equation}
 Razdelimo $p$ na dva dela in zapišemo
 \begin{equation}  
 \label{5.48}
-p=p^+ + p^-=-v_{12}[\eta(t)+\eta^{\ast}(t)],
+p=p^+ + p^-=-V\left(\eta(t)+\eta^{\ast}(t)\right),
 \end{equation}
 kjer smo vpeljali $\eta(t)=c_1^{\ast}c_2e^{-i \omega_0 t}$.
 
@@ -1409,14 +1404,14 @@ s časom spreminja parameter $\eta(t)$. Njegov časovni odvod izrazimo
 iz enačb (\ref{5.46}) in dobimo
 \begin{equation}  
 \label{5.49}
-\dot{\eta}=- i \omega_0\eta+\frac{i}{\hbar}\,E(t)v_{12} \left(|c_2|^2-|c_1|^2\right).
+\dot{\eta}=- i \omega_0\eta+\frac{i}{\hbar}\,E(t)V\left(|c_2|^2-|c_1|^2\right).
 \end{equation}
 Spomnimo, da je $|c_i|^2$ verjetnost za zasedenost stanja $|i\rangle$. Izraz v oklepaju
 na desni strani gornje enačbe torej meri razliko zasednosti obeh stanj, ki jo označimo
 s $\zeta$. Podobno kot zgoraj izrazimo spreminjanje razlike zasedenosti s časovni odvodom 
 \begin{equation}  
 \label{5.50}
-\dot{\zeta}=-\frac{2i}{\hbar}\, E(t)v_{12}\left(\eta^{\ast}- \eta\right).
+\dot{\zeta}=\frac{2i}{\hbar}\, E(t)V\left(\eta- \eta^{\ast}\right).
 \end{equation}
 S tem smo iz Schr\"odingerjeve enačbe dobili enačbi za časovni razvoj
 dipolnega momenta in obrnjene zasedenosti, ki pa ju moramo še dopolniti.
@@ -1441,12 +1436,12 @@ Zaradi črpanja zavzame obrnjena zasedenost neko vrednost $-1<\zeta_0<1$,
 odvisno od moči črpanja. Enačbi (\ref{5.50}) dodamo ustrezen člen
 \begin{equation}  
 \label{5.51}
-\dot{\zeta}=A\left(\zeta_0-\zeta\right)- \frac{2i}{\hbar}\,E(t)v_{12}\left(\eta^{\ast}-\eta\right),
+\dot{\zeta}=A\left(\zeta_0-\zeta\right)- \frac{2i}{\hbar}\,E(t)V\left(\eta^{\ast}-\eta\right),
 \end{equation}
 ki popisuje vpliv črpanja in spontane prehode v nižje stanje. 
 
-Podobno dopolnimo še enačbo za časovno spreminjanje električnega dipola 
-(enačba~\ref{5.49}). Pri $E(t)=0$ da zapisana oblika enačbe časovno odvisnost 
+Dopolnimo še enačbo za časovno spreminjanje električnega dipola 
+(enačba~\ref{5.49}). Pri $E(t)=0$ da zapisana enačba časovno odvisnost 
 $\eta \propto e^{-i \omega_0 t}$, to je brez dušenja. Vendar vemo, da
 polarizacija v mešanem stanju razpada vsaj zaradi spontanega sevanja, lahko
 pa še zaradi drugih vplivov, na primer trkov z drugimi atomi. Označimo
@@ -1455,25 +1450,26 @@ ki jo sevajo atomi pri prehodu $2\rightarrow 1$, z $\gamma$. Zapišemo
 dopolnjeno enačbo
 \begin{equation}  
 \label{5.52}
-\dot{\eta}=- \left(i \omega_0+\gamma\right)\eta+\frac{i}{\hbar}\,E(t)v_{12} \zeta
+\dot{\eta}=- \left(i \omega_0+\gamma\right)\eta+\frac{i}{\hbar}\,E(t)V \zeta
 \end{equation}
 in kompleksno konjugirano enačbo
 \begin{equation}  
 \label{5.52c}
-\dot{\eta}^*=-\left(-i \omega_0+\gamma\right)\eta^*-\frac{i}{\hbar}\,E(t)v_{12} \zeta.
+\dot{\eta}^*=-\left(-i \omega_0+\gamma\right)\eta^*-\frac{i}{\hbar}\,E(t)V \zeta.
 \end{equation}
-Tako smo dobili sklopljene diferencialne enačbe, ki popisujejo časovno
+Sklopljene diferencialne enačbe popisujejo časovno
 spreminjanje obrnjene zasedenosti in dipolnega momenta atoma. 
 \begin{remark}
- Enačbe~(\ref{5.51}), (\ref{5.52}) in (\ref{5.52c}) pogosto imenujemo 
- Maxwell-Blochove ali optične Blochove enačbe\footnote{Švicarsko-ameriški fizik in nobelovec Felix Bloch, 1905--1983.}. Osnovne Blochove enačbe opisujejo gibanje jerdskega magnetnega
- momenta v elektromagnetnem polju, zato so jih najprej uporabili za opis 
+ Enačbe~(\ref{5.51}), (\ref{5.52}) in (\ref{5.52c}) pogosto imenujemo \index{Maxwell-Blochove enačbe}
+ Maxwell-Blochove ali optične Blochove enačbe\footnote{Švicarsko-ameriški fizik 
+ in nobelovec Felix Bloch, 1905--1983.}. Osnovne Blochove enačbe opisujejo gibanje 
+ jedrskega magnetnega  momenta v elektromagnetnem polju, zato so jih najprej uporabili za opis 
  jedrske magnetne in elektronske spinske resonance. 
 \end{remark}
 
 Za opis potrebujemo še enačbo za polje $E(t)$. To naredimo klasično, tako da
 električna poljska jakost zadošča valovni enačbi. Upoštevati moramo, 
-da imamo tudi od nič različno tudi polarizacijo snovi. 
+da imamo tudi od nič različno polarizacijo snovi. 
 Valovna enačba v skalarni obliki je tedaj
 \begin{equation}  
 \label{5.54}
@@ -1482,16 +1478,18 @@ Valovna enačba v skalarni obliki je tedaj
 pri čemer je v primeru, da so vsi atomi enakovredni, polarizacija enaka
 \begin{equation}  
 \label{5.53}
-P=\frac{N}{V}p = -\frac{N}{V}\,v_{12}\left(\eta+\eta^{\ast}\right)=P^+ + P^-.
+P=\frac{N}{V'}p = -\frac{N}{V'}\,V\left(\eta+\eta^{\ast}\right)=P^+ + P^-,
 \end{equation}
+kjer smo z $V'$ označili volumen, $N$ pa število atomov.
+
 Namesto mikroskopske količine $\zeta$ lahko uvedemo še gostoto obrnjene
-zasedenosti $Z=(N/V)\zeta$ in enačbe (\ref{5.51}), (\ref{5.52}) in (\ref{5.52c})
+zasedenosti $Z=(N/V')\zeta$ in enačbe (\ref{5.51}), (\ref{5.52}) in (\ref{5.52c})
 prepišemo v obliko 
-\boxeq{5.56}{
-\frac{dZ}{dt} &= A\left(Z_0-Z\right)+\frac{2i}{\hbar}E\left(P^- - P^+\right), \\
-\frac{dP^+}{dt}&=\left(-i \omega_0-\gamma\right)P^{+}-\frac{i}{\hbar} Ev_{12}^2 Z, \label{5.56b}\\
-\frac{dP^-}{dt}&=\left(i \omega_0-\gamma\right)P^{-}+\frac{i}{\hbar} Ev_{12}^2 Z.\label{5.56c}
-}
+\begin{eqnarray}
+\frac{dZ}{dt} &= &A\left(Z_0-Z\right)+\frac{2i}{\hbar}E\left(P^- - P^+\right), \label{5.56} \\
+\frac{dP^+}{dt}&=&\left(-i \omega_0-\gamma\right)P^{+}-\frac{i}{\hbar} EV^2 Z, \label{5.56b}\\
+\frac{dP^-}{dt}&=&\left(i \omega_0-\gamma\right)P^{-}+\frac{i}{\hbar} EV^2 Z.\label{5.56c} 
+\end{eqnarray}
 Opozorimo še, da je prehod z enačb (\ref{5.51}--\ref{5.52c}) na (\ref{5.56}--\ref{5.56c}) 
 mogoč le, kadar so vsi atomi enakovredni, to je, kadar ni nehomogene razširitve 
 spektra.\footnote{Kako je v primeru nehomogene razširitve, lahko bralec poišče npr. v 
@@ -1502,8 +1500,8 @@ semiklasični opis interakcij svetlobe s snovjo. Iz izpeljave je vidno, da
 je v semiklasičnem opisu spontano sevanje obravnavano pomanjkljivo, le s fenomenološkim
 nastavkom. To je moč popraviti tako, da tudi elektromagnetno polje kvantiziramo. 
 Kljub tej pomanjkljivosti je s semiklasičnim modelom mogoče zelo podrobno opisati 
-večino pojavov v laserjih in tudi druge probleme širjenja svetlobe po snovi. 
-Reševanje zapisanega sistema nelinearnih parcialnih diferencialnih enačb je pa 
+večino pojavov v laserjih in tudi druge probleme širjenja svetlobe po snovi. Je pa 
+reševanje zapisanega sistema nelinearnih parcialnih diferencialnih enačb  
 na splošno zelo težavno.
 
 \subsection*{Primer enofrekvenčnega laserja}
@@ -1627,10 +1625,10 @@ A\left(\overline{Z}_{0}-\overline{Z}\right)+\frac{2i}{\hbar }\,E_{0}\left(P_{0}^
 Najprej iz druge enačbe izrazimo $P_0$, ga vstavimo v tretjo in izračunamo $\overline{Z}$. Dobimo
 \begin{equation}  
 \label{5.68}
-\overline{Z}=\overline{Z}_0\left[1+\frac{v_{12}^2}{\hbar^2 A}\,E_0^2\, \frac{2\gamma}{%
+\overline{Z}=\overline{Z}_0\left[1+\frac{V^2}{\hbar^2 A}\,E_0^2\, \frac{2\gamma}{%
 \left(\omega_0-\Omega\right)^2+\gamma^2}\right]^{-1}
 \end{equation}
-Ta izraz že poznamo. $\pi v_{12}^2/\left(\epsilon_0\hbar^2\right)$ je Einsteinov
+Ta izraz že poznamo. $\pi V^2/\left(\epsilon_0\hbar^2\right)$ je Einsteinov
 koeficient $B$. $E_0^2$ je sorazmern gostoti energije polja v resonatorju,
 zadnji ulomek v oklepaju pa podaja obliko homogeno razširjene atomske
 črte (\ref{eq:homogenasirina})
@@ -1643,7 +1641,7 @@ izpeljali iz zasedbenih enačb v četrtem poglavju.
 Postavimo $P_0$ iz prve enačbe sistema \ref{5.67} v drugo: 
 \begin{equation}  \label{5.70}
 E_0[i\left(\Omega-\omega_{\lambda}\right)+\frac{1}{\tau}] [i\left(\Omega- \omega_0\right)
-+\gamma]=-\frac{v_{12}^2 \omega_0}{2\hbar\epsilon_0}\,E_0\,\overline{Z}\;.
++\gamma]=-\frac{V^2 \omega_0}{2\hbar\epsilon_0}\,E_0\,\overline{Z}\;.
 \end{equation}
 V delujočem laserju je $E_0\ne 0$, zato lahko krajšamo. $\overline{Z}$ je
 realen, tako da mora biti imaginarni del leve strani enak nič: 

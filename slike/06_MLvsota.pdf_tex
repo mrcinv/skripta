@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{528.15872793bp}%
+    \setlength{\unitlength}{715.61161071bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,9 +50,11 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.25528588)%
+  \begin{picture}(1,0.15816107)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{06_MLvsota.pdf}}%
+    \put(0.12721658,0.00975508){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$L$\end{tabular}}}}%
+    \put(0.62786048,0.01079372){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$2L$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
