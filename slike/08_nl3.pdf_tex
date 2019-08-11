@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '08_nl3.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{2295.28300781bp}%
+    \setlength{\unitlength}{2295.28308105bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -49,24 +51,26 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.23920174)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{08_nl3.pdf}}%
-    \put(-0.00386743,0.03699132){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1$}}}%
-    \put(0.04280868,-0.01571008){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_2 < \omega_1$}}}%
-    \put(0.27545544,0.24700337){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1$}}}%
-    \put(0.32502819,0.23868881){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_2$}}}%
-    \put(0.37225948,0.2217324){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1 + \omega_2$}}}%
-    \put(0.40960303,0.19345584){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega_1 - \omega_2$}}}%
-    \put(0.41000572,0.16427228){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$2\omega_1$}}}%
-    \put(0.410287,0.1373072){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$2\omega_2$}}}%
-    \put(0.41387861,0.11118797){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
-    \put(0.77352286,0.20248629){\color[rgb]{0,0,0}\rotatebox{60.00000012}{\makebox(0,0)[lb]{\smash{$\omega_1$}}}}%
-    \put(0.73661545,0.20247687){\color[rgb]{0,0,0}\rotatebox{60.00000012}{\makebox(0,0)[lb]{\smash{$\omega_2$}}}}%
-    \put(0.93327798,0.20247687){\color[rgb]{0,0,0}\rotatebox{60.00000012}{\makebox(0,0)[lb]{\smash{$\omega_1 + \omega_2$}}}}%
-    \put(0.61920667,0.20247686){\color[rgb]{0,0,0}\rotatebox{60.00000012}{\makebox(0,0)[lb]{\smash{$\omega_1 - \omega_2$}}}}%
-    \put(0.96742689,0.20248629){\color[rgb]{0,0,0}\rotatebox{60.00000012}{\makebox(0,0)[lb]{\smash{$2\omega_1$}}}}%
-    \put(0.89944512,0.20248632){\color[rgb]{0,0,0}\rotatebox{60.00000012}{\makebox(0,0)[lb]{\smash{$2\omega_2$}}}}%
-    \put(0.57181456,0.03830443){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$0$}}}%
-    \put(0.15250799,0.13008603){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\chi^{(2)}$}}}%
-    \put(0.96807009,0.03823278){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\omega$}}}%
+    \put(-0.00386743,0.03699132){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_1$\end{tabular}}}}%
+    \put(0.04280868,-0.01571008){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_2 < \omega_1$\end{tabular}}}}%
+    \put(0.2576963,0.23748954){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_1$\end{tabular}}}}%
+    \put(0.32502819,0.23868881){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_2$\end{tabular}}}}%
+    \put(0.37225947,0.2217324){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_1 + \omega_2$\end{tabular}}}}%
+    \put(0.40960302,0.19345584){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_1 - \omega_2$\end{tabular}}}}%
+    \put(0.41000572,0.16427228){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$2\omega_1$\end{tabular}}}}%
+    \put(0.410287,0.13730719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$2\omega_2$\end{tabular}}}}%
+    \put(0.4138786,0.11118797){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
+    \put(0.79401371,0.1628683){\color[rgb]{0,0,0}\rotatebox{91.02319197}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_1$\end{tabular}}}}}%
+    \put(0.75922184,0.16261607){\color[rgb]{0,0,0}\rotatebox{88.97785848}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_2$\end{tabular}}}}}%
+    \put(0.95284062,0.07927144){\color[rgb]{0,0,0}\rotatebox{89.58465701}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_1 + \omega_2$\end{tabular}}}}}%
+    \put(0.6318313,0.07926446){\color[rgb]{0,0,0}\rotatebox{89.77861486}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega_1 - \omega_2$\end{tabular}}}}}%
+    \put(0.98911247,0.16262909){\color[rgb]{0,0,0}\rotatebox{90.23846023}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$2\omega_1$\end{tabular}}}}}%
+    \put(0.92335893,0.16272794){\color[rgb]{0,0,0}\rotatebox{90.5627738}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$2\omega_2$\end{tabular}}}}}%
+    \put(0.57181455,0.03830443){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$0$\end{tabular}}}}%
+    \put(0.15250798,0.13008603){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\chi^{(2)}$\end{tabular}}}}%
+    \put(0.96807007,0.03823278){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\omega$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
