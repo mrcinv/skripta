@@ -1176,7 +1176,7 @@ vpliva torej le na točno obliko sunkov.
 \end{remark}
 \newpage
 Pri uklepanju faz je bistvena predpostavka, da so vse faze $\varphi_m$ enake. 
-V dosedanjem opisu mnogofrekvenčnih laserjev so resonatorska stanja med seboj
+V dosedanjem opisu večfrekvenčnih laserjev so resonatorska stanja med seboj
 neodvisna, zato so v splošnem faze poljubne in se zaradi motenj lahko še spreminjajo.
 Za dosego istih faz posameznih nihanj moramo poskrbeti posebej. Tako ujemanje
 oziroma uklepanje faz lahko dosežemo na več načinov. V grobem ločimo dva načina:
@@ -1527,7 +1527,8 @@ Ker so lastne funkcije med seboj ortogonalne, preide valovna enačba (\ref{5.54}
 ob upoštevanju enačbe~(\ref{5.58}) v 
 \begin{equation}  
 \label{5.59}
-\omega_{\lambda}^2 E_{\lambda}+\frac{d^2 E_\lambda}{dt^2}= - \frac{1}{\epsilon_0}\frac{d^2P_\lambda}{dt^2}.
+\omega_{\lambda}^2 E_{\lambda}+\frac{d^2 E_\lambda}{dt^2}= 
+-\frac{1}{\epsilon_0}\frac{d^2P_\lambda}{dt^2}.
 \end{equation}
 
 Razstavimo $E_{\lambda}(t)$ na dva dela: 
@@ -1622,50 +1623,49 @@ tako da
 \left(i\left(\Omega - \omega_{\lambda}\right)-\frac{1}{\tau}\right) E_{0}+\frac{i\omega _{0}}
 {2\epsilon _{0}}\,P_{0} &=&0  \label{5.67} \\
 \left(i\left(\Omega-\omega_{0}\right)-\gamma\right)P_{0}-\frac{i}{\hbar}V^{2}
-E_{0}\overline{Z} &=&0 \\
+E_{0}\overline{Z} &=&0 \label{5.67b})\\
 A\left(\overline{Z}_{0}-\overline{Z}\right)+\frac{2i}{\hbar }\,E_{0}\left(P_{0}^{*}-P_{0}\right) &=&0.
 \end{eqnarray}
 
 Najprej iz druge enačbe izrazimo $P_0$, ga vstavimo v tretjo in izračunamo $\overline{Z}$. Dobimo
 \begin{equation}  
 \label{5.68}
-\overline{Z}=\overline{Z}_0\left(1+\frac{V^2}{\hbar^2 A}\,E_0^2\, \frac{2\gamma}
+\overline{Z}=\overline{Z}_0\left(1+\frac{4V^2}{\hbar^2 A}\,E_0^2\, \frac{\gamma}
 {\left(\omega_0-\Omega\right)^2+\gamma^2}\right)^{-1}.
 \end{equation}
-Ta izraz že poznamo. $\pi V^2/\left(\epsilon_0\hbar^2\right)$ je Einsteinov
-koeficient $B$. $E_0^2$ je sorazmern gostoti energije polja v resonatorju,
+Ta izraz že poznamo. Vrednost $\pi V^2/\left(\epsilon_0\hbar^2\right)$ je Einsteinov
+koeficient $B$,\\
+\colorbox{red}{ZA FAKTOR 2 RAZLIČNO OD ENAČBE 5.102! Mislim, da je tukaj ok in tam narobe.}\\
+$E_0^2$ je sorazmeren gostoti energije polja v resonatorju,
 zadnji ulomek v oklepaju pa podaja obliko homogeno razširjene atomske
 črte (\ref{eq:homogenasirina})
-\begin{equation}  \label{5.69}
-\overline{Z}=\overline{Z}_0\left[1+\frac{2B}{A}\,g\left(\omega_0- \Omega\right)w\right]^{-1}
+\begin{equation}  
+\label{5.69}
+\overline{Z}=\overline{Z}_0\left(1+\frac{2B}{Ac}\,g\left(\omega_0- \Omega\right)j\right)^{-1}
 \end{equation}
 To je natanko enako izrazu za nasičenje zasedenosti stanj, ki smo ga
-izpeljali iz zasedbenih enačb v četrtem poglavju.
+izpeljali iz zasedbenih enačb v četrtem poglavju (enačba~\ref{4.33}).
 
-Postavimo $P_0$ iz prve enačbe sistema \ref{5.67} v drugo: 
-\begin{equation}  \label{5.70}
-E_0[i\left(\Omega-\omega_{\lambda}\right)+\frac{1}{\tau}] [i\left(\Omega- \omega_0\right)
-+\gamma]=-\frac{V^2 \omega_0}{2\hbar\epsilon_0}\,E_0\,\overline{Z}\;.
+Vstavimo $P_0$ iz prve enačbe sistema (\ref{5.67}) v drugo (\ref{5.67b})
+\begin{equation}  
+\label{5.70}
+E_0\left(-i\Omega+i\omega_{\lambda}+\frac{1}{\tau}\right) \left(i\Omega- i\omega_0
+-\gamma\right)=-\frac{V^2 \omega_0}{2\hbar\epsilon_0}\,E_0\,\overline{Z}.
 \end{equation}
-V delujočem laserju je $E_0\ne 0$, zato lahko krajšamo. $\overline{Z}$ je
-realen, tako da mora biti imaginarni del leve strani enak nič: 
-\begin{equation}  \label{5.71}
-\left(\Omega- \omega_{\lambda}\right)\gamma+\left(\Omega- \omega_0\right)\frac{1}{\tau} = 0 \;.
+V delujočem laserju je $E_0\ne 0$, zato ga lahko krajšamo. Vrednost $\overline{Z}$ je
+realna, tako da mora biti imaginarni del leve strani enak nič. Dobimo
+\begin{equation}  
+\label{5.71}
+\left(\Omega- \omega_{\lambda}\right)\gamma+\left(\Omega- \omega_0\right)\frac{1}{\tau} = 0.
 \end{equation}
 Od tod lahko izračunamo frekvenco laserja 
 \begin{equation}  \label{5.72}
-\Omega=\frac{\omega_{\lambda}\gamma+ \omega_0\frac{1}{\tau}}{\gamma + \frac{1%
-}{\tau}}\;.
+\Omega=\frac{\omega_{\lambda}\gamma+ \omega_0\frac{1}{\tau}}{\gamma + \frac{1}{\tau}}.
 \end{equation}
 Frekvenca torej ni enaka frekvenci praznega resonatorja $\omega_{\lambda}$,
 temveč je premaknjena proti centru atomske črte $\omega_0$. Premik je
 odvisen od razmerja širine atomske črte in izgub resonatorja.
 
-Bralec lahko sam iz enačbe \ref{5.70} izračuna še energijo svetlobe v
-resonatorju in rezultat primerja s tistim, ki smo ga dobili z uporabo
-zasedbenih enačb.
-
 Gornji primer uporabe polklasičnih enačb je zelo preprost. Prava moč
-modela se pokaže pri obravnavi mnogofrekvenčnega laserja, na primer pri
-računu uklepanja faz laserskih nihanj, kar pa presega okvir te knjige. Več
-bo bralec našel v \cite{haken2}.
+modela se pokaže pri obravnavi večfrekvenčnega laserja, na primer pri
+računu uklepanja faz laserskih nihanj, kar pa presega okvir te knjige. 
