@@ -1234,7 +1234,7 @@ velikostnih redov, $n_2$ pa je lahko tudi negativen.
 \label{table:chi3}
 \end{table}
 
-Zanimivi posledici lomnega količnika, odvisnega od intenzitete vpadne svetlobe, 
+Zanimivi posledici lomnega količnika, odvisnega od gostote svetlobnega toka vpadne svetlobe, 
 sta samozbiranje svetlobnega snopa in širjenje solitonov po optičnih vodnikih, 
 kar si bomo pogledali v naslednjih razdelkih.
 
@@ -1470,7 +1470,7 @@ E_{s}(x,z)=\sqrt{\frac{2}{\kappa}}\,\frac{\eta}{\cosh(\eta x)}\,\exp\left(ik_{0}
 \frac{\eta^{2}}{2k_{0}^{2}}\right)\right).
 \label{8.89}
 \end{equation}
-Intenziteta svetlobe je neodvisna od koordinate $z$ in je sorazmerna kvadratu amplitude polja 
+Gostota svetlobnega toka je neodvisna od koordinate $z$ in je sorazmerna kvadratu amplitude polja 
 \boxeq{8.89a}{
 j_{s}(x,z)= j_0 \frac{1}{\cosh^2(\eta x)}.
 }\index{Gostota energijskega toka}
@@ -1537,7 +1537,7 @@ Faza takega sunka je
 \phi (t) = k_o n z - \omega_0 t = k_0 (\tilde{n} + n_2 j)z - \omega_0 t = 
 \phi_0 + k_0 n_2 z j - \omega_0 t,
 \end{equation}
-frekvenca pa 
+krožna frekvenca pa 
 \begin{equation}
 \omega = -\frac{d\phi}{dt} = \omega_0 - k_0 n_2 z \frac{dj}{dt}.
 \end{equation}
@@ -1547,10 +1547,10 @@ frekvenca takega sunka spreminja s časom
 \omega = \omega_0 + \frac{4k_0 n_2 z j_0}{\tau^2} \, t \, e^{-2t^2/\tau^2}.
 \label{eq:chirpi}
 \end{equation}
-Začetnemu delu sunka (pri $t<0$) se frekvenca zmanjša, zadnjemu delu sunka
+Začetnemu delu sunka (pri $t<0$) se krožna frekvenca zmanjša, zadnjemu delu sunka
 (pri $t>0$) pa se poveča (slika~\ref{fig:optsoliton}). 
-Ta pojav spreminjanja frekvence znotraj kratkega sunka imenujemo čričkanje 
-({\it chirping}), \index{Čričkanje} po podobnosti z oglašanjem čričkov.
+Ta pojav spreminjanja frekvence znotraj kratkega sunka imenujemo čirikanje
+({\it chirping}), \index{Čirikanje} po podobnosti z oglašanjem čričkov.
 
 \begin{figure}[h]
 \centering
@@ -1559,7 +1559,7 @@ Ta pojav spreminjanja frekvence znotraj kratkega sunka imenujemo čričkanje
 \caption{Zaradi nelinearnega lomnega količnika pride do frekvenčnega premika v sunku svetlobe.}
 \label{fig:optsoliton}
 \end{figure}
-Pri prehodu optičnega sunka z osnovno frekvenco $\omega_0$ se različnim delom sunka
+Pri prehodu optičnega sunka z osnovno krožno frekvenco $\omega_0$ se različnim delom sunka
 frekvenca različno spremeni (slika~\ref{fig:chirp}\,a), začetnemu delu se zmanjša, 
 končnemu pa poveča. Po drugi strani pa v snoveh poznamo barvno disperzijo, 
 kar pomeni, da se valovanja z različnimi frekvencami širijo z različnimi hitrostmi.
@@ -1579,8 +1579,8 @@ Nastane signal, ki ohranja svojo obliko~\textendash~soliton.
 \centering
 \def\svgwidth{145truemm} 
 \input{slike/08_Chirp.pdf_tex}
-\caption{Čričkanje sunkov svetlobe zaradi nelinearnega pojava (a). Z ustrezno disperzijo lahko
-čričkanje izničimo (b) in nastane sunek svetlobe, ki oblike ne spreminja~\textendash~soliton.}
+\caption{Čirikanje sunkov svetlobe zaradi nelinearnega pojava (a). Z ustrezno disperzijo lahko
+čirikanje izničimo (b) in nastane sunek svetlobe, ki oblike ne spreminja~\textendash~soliton.}
 \label{fig:chirp}
 \end{figure}
 
@@ -1610,7 +1610,7 @@ in
 \begin{equation}
  \tilde{P} = \tilde{B} (z,\omega - \omega_0) e^{ik_0z},
 \end{equation}
-pri čemer je $\omega_0$ osrednja frekvenca svetlobnega sunka in $k_0 = \omega_0 n/c_0$. Vpeljemo še
+pri čemer je $\omega_0$ osrednja krožna frekvenca svetlobnega sunka in $k_0 = \omega_0 n/c_0$. Vpeljemo še
 $\Omega =\omega - \omega_0$
 \begin{equation}
 \left(\frac{\partial^2}{\partial z^2}+k^2\right)\tilde{A}(z,\Omega) e^{ik_0z} =
@@ -1623,11 +1623,11 @@ glede na valovno dolžino le počasi spreminja, zato drugi odvod zanemarimo in
 2 i k_0 \frac{\partial \tilde{A}}{\partial z} + (k^2-k_0^2) \tilde{A} = - \mu_{0}\omega_0^2 \tilde{B}.
 \end{equation}
 Če je disperzija šibka, lahko zapišemo $k^2 - k_0^2$ kot razliko kvadratov, $k(\omega_0 + \Omega)$ pa 
-razvijemo v Taylorjevo vrsto okoli osrednje frekvence $\omega_0$ do tretjega člena. Sledi
+razvijemo v Taylorjevo vrsto okoli osrednje krožne frekvence $\omega_0$ do tretjega člena. Sledi
 \begin{equation}
 k^2 - k_0^2 \approx 2k_0 (k-k_0) \approx 2k_0 (k'\Omega + \frac{1}{2}k''\Omega^2),
 \end{equation}
-pri čemer $'$ označuje odvod po frekvenci, in prepišemo enačbo v 
+pri čemer $'$ označuje odvod po krožni frekvenci, in prepišemo enačbo v 
 \begin{equation}
 2 i k_0 \frac{\partial \tilde{A}}{\partial z} + 2k_0(k'\Omega + \frac{1}{2}k''\Omega^2) \tilde{A} 
 = - \mu_{0}\omega_0^2 \tilde{B}.
@@ -1645,7 +1645,7 @@ i (\frac{\partial}{\partial z}+\frac{1}{v_{g}}\frac{\partial}{\partial t})A-
 \label{8.93}
 \end{equation}
 pri čemer smo z $v_g = d\omega/dk = 1/k'$ označili grupno hitrost.\index{Hitrost valovanja!grupna}
-Vpeljimo novo spremenljivko 
+Vpeljemo novo spremenljivko 
 \begin{equation}
 \tau=t-\frac{z}{v_{g}},
 \label{nelinver}
@@ -1720,7 +1720,7 @@ kot bi začetnemu valovanju obrnili predznak časa in ga ``zavrteli nazaj''.
 Vzemimo optično nelinearno snov, na katero posvetimo z dvema močnima ravnima
 snopoma v nasprotnih smereh. To sta črpalna snopa in njuna valovna vektorja 
 naj bosta ${\bf k}_{1}$ in ${\bf k}_2 = -{\bf k}_{1}$. Poleg njiju naj na snov vpada
-še tretji, signalni snop, ki ni nujno raven val (slika~\ref{08_OPC1}). 
+še tretji, signalni snop, ki ni nujno ravni val (slika~\ref{08_OPC1}). 
 Signalni snop interferira s prvim črpalnim valom in s tem zaradi nelinearnosti 
 tretjega reda povzroči modulacijo lomnega količnika. Ta je skoraj periodična, če
 je signalni val podoben ravnemu valu. Na modulaciji lomnega količnika se
@@ -1731,7 +1731,7 @@ mogoče ločiti med valovanjem, s katerim signalno valovanje interferira, in val
 ki se uklanja.
 \begin{figure}[h]
 \centering
-\def\svgwidth{60truemm} 
+\def\svgwidth{50truemm} 
 \input{slike/08_opc1.pdf_tex}
 \caption{Optična fazna konjugacija. Dva močna črpalna žarka (modra) vpadata 
 na optično nelinearno snov v nasprotnih smereh, vpadni signal (rdeč) pa se odbije v 
@@ -1762,9 +1762,9 @@ da krajevni del kompleksno konjugiramo, nastalemu valovanju pravimo fazno
 konjugirano valovanje.
 \begin{figure}[h!]
 \centering
-\def\svgwidth{80truemm} 
+\def\svgwidth{120truemm} 
 \input{slike/08_opc2.pdf_tex}
-\caption{Primerjava odbojev na navadnem zrcalu (levo) in faznem konjugatorju (desno): odboj ravnega
+\caption{Primerjava odbojev na navadnem zrcalu (zgoraj) in faznem konjugatorju (spodaj): odboj ravnega
 vala (a), odboj krogelnega valovanja (b) in odboj popačenega vala (c). Valovne fronte 
 vpadnega vala so označene s polno črto, odbitega pa s črtkano.}
 \label{08_OPC2}
@@ -1772,11 +1772,11 @@ vpadnega vala so označene s polno črto, odbitega pa s črtkano.}
 
 Uporabna posledica fazne konjugacije je prikazana na sliki~(\ref{08_OPC2}).
 Najpreprostejši primer je vpad ravnega vala (a), ki se ne odbije po 
-odbojnem zakonu (slika levo), ampak se odbije v smer, iz katere 
-je vpadel na snov (slika desno). Drugi primer je krogelni val 
-ali v približku tudi Gaussov snop (b). Ko vpade na navadno zrcalo (levo), se njegova divergenca
-ohranja in se žarek še naprej razširja. Na fazno konjugiranem zrcalu se krogelni val spet
-zbere v izvoru (desno). 
+odbojnem zakonu (slika zgoraj), ampak se odbije v smer, iz katere 
+je vpadel na snov (slika spodaj). Drugi primer je krogelni val 
+ali v približku tudi Gaussov snop (b). Ko vpade na navadno zrcalo (zgoraj), se njegova divergenca
+ohranja in žarek se še naprej razširja. Na fazno konjugiranem zrcalu se krogelni val spet
+zbere v izvoru (spodaj). 
 
 Tretji primer je sredstvo, ki valovanju doda naključno
 fazo, zato po prehodu valovne fronte niso več gladke (c). Od navadnega zrcala
@@ -1888,7 +1888,7 @@ A_{1}A_{2}\tilde{A}_{4}^{*} \quad \textrm{in} \quad
 A_{1}A_{2}\tilde{A}_{3}^*.
 \label{8.105}
 \end{equation}
-Vpeljemo sklopitveno konstanto
+Vpeljemo še sklopitveno konstanto
 \begin{equation}
 \kappa=\frac{ 3 \chi \omega}{4 c_0 n}A_1 A_2.
 \label{8.106}
@@ -1991,27 +1991,15 @@ ločimo dva primera: Stokesovo sipanje\footnote{Irski fizik in matematik Sir Geo
 Stokes, 1819--1903.}, pri katerem foton odda energijo molekuli, in anti-Stokesovo sipanje,
 \index{Ramanovo sipanje!Stokesovo}\index{Ramanovo sipanje!anti-Stokesovo}
 pri katerem foton prejme energijo od vzbujene molekule. V prvem primeru je frekvenca
-sipane svetlobe $\omega_s=\omega_0-\omega_v$, kjer $\omega_0$ označuje frekvenco vpadne
-svetlobe, $\omega_v$ pa vibracijsko frekvenco, v drugem primeru pa $\omega_s=\omega_0+\omega_v$.
+sipane svetlobe $\nu_s=\nu_0-\nu_v$, kjer $\nu_0$ označuje frekvenco vpadne
+svetlobe, $\nu_v$ pa vibracijsko frekvenco, v drugem primeru pa $\nu_{as}=\nu_0+\nu_v$.
 Slednji procesi so razmeroma redki, zato je intenziteta anti-Stokesovega sipanja 
-še znatno šibkejša od že tako šibkega Ramanovega sipanja. Tipični Ramanov premik 
-$\omega_0-\omega_s$ znaša okoli $10^{12}$--$10^{13}~\si{\hertz}$.
+še znatno šibkejša od že tako šibkega Stokesovega sipanja. Tipični Ramanov premik 
+$\nu_0-\nu_s$ znaša okoli $10^{12}$--$10^{13}~\si{\hertz}$.
 Drug zanimiv primer je, kadar pride do spremembe energije 
 fotonov zaradi vzbujanja akustičnih valov (fononov). Takrat govorimo o Brillouinovem 
 sipanju\footnote{Francoski fizik L\'eon Nicolas Brillouin, 1889--1969.}. Tipičen
 Brillouinov premik je $\sim 10^{10}\si{\hertz}$. \index{Brillouinovo sipanje}
-
-\subsection*{Stimulirano Ramanovo sipanje}
-Pri spontanem Ramanovem sipanju se svetloba siplje na termično vzbujenih fluktuacijah
-v snovi. Če pa se svetloba siplje na fluktuacijah, ki jih je povzročilo vpadno
-svetlobno polje, govorimo o stimuliranem Ramanovem sipanju. Dosežemo ga tako,
-da na snov poleg osnovnega žarka s frekvenco $\omega_0$ usmerimo dodaten Stokesov 
-žarek s frekvenco $\omega_s$, ki stimulira določen prehod. Fotoni 
-osnovnega žarka se absorbirajo in izhajajo fotoni pri $\omega_s$. Več absorbiranih fotonov
-pomeni večje Stokesovega sipanja in proces se ojačuje. Tako pride do 
-resonančnega ojačenja svetlobe pri $\omega_s$ oziroma do stimuliranega 
-Ramanovega sipanja. Moč svetlobe pri $\omega_s$, ki je po fazi in smeri enaka vpadni, 
-se eksponentno povečuje na račun črpalnega žarka, do določene meje, seveda.
 
 \begin{figure}[h]
 \centering
@@ -2023,7 +2011,19 @@ Pri Brillouinovem sipanju svetloba vzbuja akustične valove (c) in se na njih od
 \label{08_Raman}
 \end{figure}
 
-Obravnavajmo Ramanovo sipanje v klasičnem približku in snov opišemo 
+\subsection*{Stimulirano Ramanovo sipanje}
+Pri spontanem Ramanovem sipanju se svetloba siplje na termično vzbujenih fluktuacijah
+v snovi. Če pa se svetloba siplje na fluktuacijah, ki jih je povzročilo vpadno
+svetlobno polje, govorimo o stimuliranem Ramanovem sipanju. Dosežemo ga tako,
+da na snov poleg osnovnega žarka s frekvenco $\nu_0$ usmerimo dodaten Stokesov 
+žarek s frekvenco $\nu_s$, ki stimulira določen prehod. Fotoni 
+osnovnega žarka se absorbirajo in izhajajo fotoni pri $\nu_s$. Več absorbiranih fotonov
+pomeni več Stokesovega sipanja in proces se ojačuje. Tako pride do 
+resonančnega ojačenja svetlobe pri $\nu_s$ oziroma do stimuliranega 
+Ramanovega sipanja. Moč svetlobe pri $\nu_s$, ki je po fazi in smeri enaka vpadni, 
+se eksponentno povečuje na račun črpalnega žarka, do določene meje, seveda.
+
+Obravnavajmo stimulirano Ramanovo sipanje v klasičnem približku in snov opišemo 
 z $N$ neodvisnimi enodimenzionalnimi harmonskimi oscilatorji. Nihanje
 posameznega oscilatorja zadošča enačbi\index{Harmonski oscilator}
 \begin{equation}
@@ -2031,8 +2031,8 @@ posameznega oscilatorja zadošča enačbi\index{Harmonski oscilator}
 \label{srs:X}
 \end{equation}
 kjer je $X$ koordinata, $\gamma$ koeficient dušenja, $m$ masa in $F$ zunanja sila.
-Glavna predpostavka modela je, da polarizabilnost molekul ni konstantna, ampak odvisna od 
-``raztega'' nihajoče molekule oziroma oscilatorja. Polarizabilnost $\alpha$ 
+Glavna predpostavka modela je, da polarizirnost molekul ni konstantna, ampak odvisna od 
+``raztega'' nihajoče molekule oziroma oscilatorja. Polarizirnost $\alpha$ 
 razvijemo v Taylorjevo vrsto do prvega člena 
 \begin{equation}
 \varepsilon = \varepsilon_0(1+N\alpha) = \varepsilon_0+\varepsilon_0N\left(\alpha_0 + 
@@ -2069,23 +2069,23 @@ in $\omega = \omega_0-\omega_s$. Oscilatorji torej nihajo s kompleksno amplitudo
 \tilde{X} = \frac{\varepsilon_0\frac{d\alpha}{dX}E_0 E_s^*}{4m\left(
 \omega_v^2-(\omega_0-\omega_s)^2-i(\omega_0-\omega_s)\gamma\right)}.
 \end{equation}
-Zdaj lahko zapišemo polarizacijo $P = \varepsilon_0N\alpha E$ in nelinearen del
+Zdaj lahko zapišemo polarizacijo $P = \varepsilon_0N\alpha E$ in nelinearni del
 polarizacije je\index{Električna polarizacija}
 \begin{equation}
 P_{\mathrm{NL}} = \frac{1}{4}\varepsilon_0 N \frac{d\alpha}{dX} \, \left(\tilde{X}
 e^{-i(\omega_0-\omega_s)t}
 + k.k.\right) \cdot \left( E_0(z)e^{-i\omega_0t}+ E_s(z)e^{-i\omega_st} + k.k.\right).
 \end{equation}
-Omejimo se le na polarizacijo pri frekvenci $\omega_s$ in zapišemo
+Omejimo se le na polarizacijo pri krožni frekvenci $\omega_s$ in zapišemo
 \begin{equation}
 P_{\mathrm{NL},\omega_s} = \varepsilon_0 \chi_{ef}E_s = 
 \frac{\varepsilon_0^2 N }{8m}\left(\frac{d\alpha}{dX}\right)^2 \, 
 \frac{|E_0|^2}{\omega_v^2-(\omega_0-\omega_s)^2+i(\omega_0-\omega_s)\gamma}\,E_s.
 \label{srs:chi}
 \end{equation}
-Efektivna susceptibilnost za svetlobo pri frekvenci $\omega_s$ 
+Efektivna susceptibilnost za svetlobo pri krožni frekvenci $\omega_s$ 
 je \index{Susceptibilnost!efektivna} torej kompleksna in sorazmerna intenziteti 
-vpadne laserske svetlobe pri osnovni frekvenci $\omega_0$. 
+vpadne laserske svetlobe pri osnovni krožni frekvenci $\omega_0$. 
 V resonanci, ko je $\omega_0-\omega_s = \omega_v$, je efektivna susceptibilnost
 imaginarna in negativnega predznaka, kar ima, kot bomo videli, zelo pomembne 
 fizikalne posledice. Iz gornjega izraza je tudi razvidno, zakaj gre pri 
@@ -2110,24 +2110,23 @@ in razlika frekvenc vpadne svetlobe ravno enaka vibracijski frekvenci.
 \begin{equation}
 |E_s(L)|^2 = |E_s(0)|^2 e^{G_RjL}.
 \end{equation}
-Vrednosti $G_R$ so $0,024~\si{\cm/\mega\watt}$ za CS$_2$, \index{CS$_2$}
+Vrednosti $G_R$ za najmočnejša nihanja so $0,024~\si{\cm/\mega\watt}$ za CS$_2$, \index{CS$_2$}
 $0,029~\si{\cm/\mega\watt}$ za LiNbO$_3$ \index{LiNbO$_3$}
 in $0,0008~\si{\cm/\mega\watt}$ za SiO$_2$.\index{SiO$_2$} 
-V meter dolgem odseku vlakna pride tako pri intenziteti svetlobe $10^{10}~\si{\watt/\meter^2}$ 
+V meter dolgem odseku vlakna pride tako pri gostoti svetlobnega toka $10^{10}~\si{\watt/\meter^2}$ 
 do faktorja ojačenja $1,08$, na vlaknu dolžine $20~\si{\metre}$ pa do faktorja $5$.
 
 \begin{remark}
 Pojav stimuliranega Ramanovega sevanja je posebej pomemben v ojačenje signala v 
-optičnih vlaknih, predvsem zaradi velike intenzitete in velike dolžine, na kateri 
-pride do medsebojne interakcije. \index{Optično ojačevanje!v vlaknih}
+optičnih vlaknih, predvsem zaradi velike intenzitete in velike dolžine, *** \index{Optično ojačevanje!v vlaknih}
 \end{remark}
 
 \subsection*{Stimulirano Brillouinovo sipanje}
 Stimulirano Brillouinovo sipanje je pojav, pri katerem vpadlo svetlobno valovanje
-vzbudi akustični val (fonon), nato pa se na njem siplje. Poleg vpadne svetlobe pri $\omega_0$
-se tako pojavi še Stokesova svetloba pri frekvenci $\omega_s = \omega_0-\omega_f$, pri čemer 
-$\omega_f$ označuje frekvenco akustičnega vala  (slika~\ref{08_Raman}\,c). Interferenca
-vpadnega in Stokesovega valovanja, ki ima komponento ravno pri $\omega_f$, povratno
+vzbudi akustični val (fonon), nato pa se na njem siplje. Poleg vpadne svetlobe pri $\nu_0$
+se tako pojavi še Stokesova svetloba pri frekvenci $nu_s = \nu_0-\nu_f$, pri čemer 
+$\nu_f$ označuje frekvenco akustičnega vala  (slika~\ref{08_Raman}\,c). Interferenca
+vpadnega in Stokesovega valovanja, ki ima komponento ravno pri $\nu_f$, povratno
 povečuje intenziteto vzbujenega zvočnega valovanja, njegovo povečanje pa vodi do
 večje intenzitete Stokesovega valovanja. Pride do pozitivne povratne zanke 
 in eksponentnega ojačenja svetlobe. Najmočnejši pojav je 

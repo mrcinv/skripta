@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '08_opc2.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{1067.96875bp}%
+    \setlength{\unitlength}{1751.33605957bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,10 +50,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.15831538)%
-    \put(0,0){\includegraphics[width=\unitlength]{08_opc2.pdf}}%
-    \put(0.00385929,1.12657263){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{a)}$}}}%
-    \put(0.00385929,0.75312545){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{b)}$}}}%
-    \put(0.00385929,0.38311351){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{c)}$}}}%
+  \begin{picture}(1,0.56077381)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0.05310234,-0.00000001){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{08_opc2.pdf}}%
+    \put(-0.00083279,0.5267577){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathrm{a)}$\end{tabular}}}}%
+    \put(0.34176282,0.5267577){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathrm{b)}$\end{tabular}}}}%
+    \put(0.68435841,0.5267577){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathrm{c)}$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
