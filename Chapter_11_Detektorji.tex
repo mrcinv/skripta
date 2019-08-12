@@ -246,7 +246,7 @@ Njihova občutljivost je $R \sim 1~\si{\micro\ampere/\watt}$, odzivni čas pa od
 upornika v vezju, ampak lahko doseže vrednosti $\tau \sim 10~\si{\micro\second}$.
 
 Poglejmo temperaturni odziv na tipalu. Izhajamo iz enačb~(\ref{TermTF}), (\ref{TermOdziv}) in
-(\ref{piro}) in izračunajmo tok $I$ v odvisnosti od frekvence modulacije.
+(\ref{piro}) in izračunajmo tok $I$ v odvisnosti od krožne frekvence modulacije.
 \begin{equation}
 I = Sa \frac{dT}{dt} = Sa \frac{d}{dt} \int_{-\infty}^{\infty} T_\omega e^{i\omega t}d\omega 
 =Sa\int_{-\infty}^{\infty}\frac{1}{\Lambda}\left(\frac{P_\omega}{1+i \omega \tau}\right) \,i \omega\,
@@ -595,11 +595,11 @@ so polprevodniške fotodiode.\index{Polprevodniška fotodioda|see {Fotodioda, po
 Te so danes najpogostejša in najbolj razširjena vrsta detektorjev svetlobe, uporabljamo jih med
 drugim tudi v fotoaparatih in sončnih celicah. Fotodiode so sestavljene iz $p$- in $n$-dopiranega 
 polprevodnika ($p$-$n$ fotodiode) ali pa je med njima še plast nedopiranega (intrinzičnega) 
-polprevodnika ($p$-$i$-$n$ fotodioda). Ko svetloba vpade na stik različno dopiranih polprevodnikov,
+polprevodnika ($p$-$i$-$n$ fotodioda). Ko svetloba vpade na spoj različno dopiranih polprevodnikov,
 se fotoni absorbirajo in nastajajo \index{Fotodioda!$p$-$n$}\index{Fotodioda!$p$-$i$-$n$}
 pari elektron--vrzel. Nosilci naboja potujejo v različnih smereh, elektroni stečejo v eno smer,
 vrzeli pa v nasprotno. Odvisno od načina delovanja merimo tok, ki steče skozi 
-stik, ali napetost, ki se pojavi na stiku. 
+spoj, ali napetost, ki se pojavi na spoju. 
 
 Spektralni odziv\index{Detektor!spektralni odziv} 
 fotodiod je odvisen od energijske reže polprevodnika, 
@@ -628,9 +628,9 @@ v fotovoltaičnem načinu (d)}
 \label{11_PD}
 \end{figure}
 
-\subsection*{Stik $\textbf{\textit{p}}$-$\textbf{\textit{n}}$}
-\index{Stik $p$-$n$}
-Ponovimo najprej, kaj se zgodi ob stiku $p$- in $n$- tipa polprevodnika. Pri tem tip $p$ označuje
+\subsection*{Spoj $\textbf{\textit{p}}$-$\textbf{\textit{n}}$}
+\index{Spoj $p$-$n$}
+Ponovimo najprej, kaj se zgodi ob spoju $p$- in $n$- tipa polprevodnika. Pri tem tip $p$ označuje
 polprevodnik, dopiran s trivalentnimi akceptorskimi primesmi, ki v snovi ustvarijo vrzeli.
 Energijski nivo primesi je malo nad vrhom valenčnega pasu, zato je Fermijeva energija
 polprevodnika premaknjena navzdol proti valenčnem pasu (slika~\ref{11_PN1}\,a). 
@@ -643,21 +643,21 @@ pod prevodnim pasom, zaradi česar je Fermijeva energija pomaknjena navzgor prot
 Ko staknemo polprevodnik tipa $p$ s polprevodnikom tipa $n$, elektroni 
 z območja z višjo koncentracijo (tip $n$) difundirajo v območje z nižjo koncentracijo
 (tip $p$), kjer se rekombinirajo z vrzelmi. \index{Polprevodnik!izpraznjeni sloj}
-Ob stiku tako nastane ozek pas, imenujemo ga izpraznjeni sloj, kjer ni več 
+Ob spoju tako nastane ozek pas, imenujemo ga izpraznjeni sloj, kjer ni več 
 prostih nosilcev naboja. Tipično je širok $10~\si{nm}$--$1~\si{\micro\metre}$.
 Po rekombinaciji ostanejo na strani $n$ pozitivno nabiti donorski atomi, 
 na strani $p$ pa negativno nabiti akceptorski atomi, ki povzročijo nastanek  
 električnega polja. Nastalo polje, ki kaže od $n$ proti $p$, zaustavi rekombinacijo, saj odbija
-elektrone in vrzeli od stika in v ravnovesju se Fermijeva energija izenači. Potencialni
+elektrone in vrzeli od spoja in v ravnovesju se Fermijeva energija izenači. Potencialni
 skok je približno enak $\Delta E \approx E_d-E_a$, kar je le malo manj od 
-širine reže $E_g$ (slika~\ref{11_PN1}\,c). Tipična jakost električnega polja na stiku
+širine reže $E_g$ (slika~\ref{11_PN1}\,c). Tipična jakost električnega polja na spoju
 je $10^5$--$10^7~\si{V/m}$.
 
 \begin{figure}[h]
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/11_PN1.pdf_tex}
-\caption{Shema energijskih nivojev v $p$- (a) in $n$-tipu (b) polprevodnika ter na $p$-$n$ stiku (c), 
+\caption{Shema energijskih nivojev v $p$- (a) in $n$-tipu (b) polprevodnika ter na spoju $p$-$n$ (c), 
 v katerem se Fermijevi energiji izenačita. Med obema polprevodnikoma nastane izpraznjeni sloj, kar 
 povzroči pojav električnega polja.}
 \label{11_PN1}
@@ -667,7 +667,7 @@ povzroči pojav električnega polja.}
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/11_PNU.pdf_tex}
-\caption{Shema energijskih nivojev v stiku $p$-$n$, ko na stik priključimo napetost
+\caption{Shema energijskih nivojev na spoju $p$-$n$, ko na spoj priključimo napetost
 v prevodni smeri (a) in v zaporni smeri (b). Če v izpraznjenem sloju pride do absorpcije
 fotona in nastanka para elektron--vrzel, elektron ``zdrsi'' proti strani $n$, vrzel pa proti
 strani $p$.}
@@ -690,7 +690,7 @@ napetost v zaporni smeri. V tem primeru potencialna razlika naraste in tok
 večinskih elektronov se zmanjša za faktor $\exp(-e_0 |U|/kT)$, tok 
 manjšinskih elektronov pa ostane nespremenjen (slika~\ref{11_PNU}\,b).
 
-Celotni tok skozi stik $p$-$n$ je sestavljen iz prispevkov elektronov in vrzeli. Opiše ga
+Celotni tok skozi spoj $p$-$n$ je sestavljen iz prispevkov elektronov in vrzeli. Opiše ga
 karakteristična enačba diode (slika~\ref{11_IU})\index{Karakteristika diode}
 \boxeq{11:dioda}{
 I = I_0 (e^{e_0 U/kT}-1).
@@ -723,7 +723,7 @@ je zaporni tok \index{Temni tok}
 \beq
 I_0 = e_0 S \left(\frac{D_p}{L_p}p_{0n}+ \frac{D_n}{L_n}n_{0p}\right),
 \eeq
-kjer je $S$ presek stika, $D$ sta difuzijska koeficienta, $L$ je difuzijska
+kjer je $S$ presek spoja, $D$ sta difuzijska koeficienta, $L$ je difuzijska
 dolžina posameznih nosilcev naboja, $p$ in $n$ pa sta koncentraciji manjšinskih
 nosilcev naboja v ravnovesju. Ugotovi, zakaj je zaporni tok močno odvisen od
 temperature. 
@@ -733,7 +733,7 @@ temperature.
 \subsection*{Delovanje fotodiode}
 Ko na polprevodnik vpade foton, ki ima energijo večjo od širine reže, 
 lahko vzbudi elektron iz valenčnega v prevodni pas in nastane par elektron--vrzel. 
-Če se to zgodi v izpraznjenem sloju stika $p$-$n$, steče elektron pod vplivom 
+Če se to zgodi v izpraznjenem sloju spoja $p$-$n$, steče elektron pod vplivom 
 električnega polja na stran $n$, vrzel pa na stran $p$ (slika~\ref{11_PNU}\,c). 
 Premik nosilcev naboja, do katerega pride zaradi absorpcije fotona, torej vedno
 povzroči pojav električnega toka v zaporni smeri. \index{Karakteristika fotodiode}
@@ -758,7 +758,7 @@ Prvi način delovanja fotodiode, ki ga bomo obravnavali, je fotovoltaični nači
 To je način, pri katerem električni tokokrog ni sklenjen (slika~\ref{11_PD}\,d), 
 zato ob absorpciji fotona in nastanku para elektron--vrzel tok ne more steči. 
 Še vedno pa se izbiti elektron pod vplivom električnega polja
-na stiku premakne proti območju $n$, vrzel pa proti območju $p$.
+na spoju premakne proti območju $n$, vrzel pa proti območju $p$.
 Na diodi se tako pojavi napetost, 
 katere vrednost lahko izračunamo iz karakteristične enačbe diode, če upoštevamo, da je $I=0$. Sledi
 \begin{equation}
@@ -793,7 +793,8 @@ ampak pod kotom proti desni.
 Prednosti tega načina merjenja je več. Zaradi priključene napetosti se zmanjša čas preleta
 nosilcev naboja in posledično se zmanjša odzivni čas detektorja.\index{Detektor!odzivni čas}
 Dodatno se poveča
-širina izpraznjenega pasu (naloga~\ref{naloga:depl}), kar zmanjša kapaciteto stika (stik $p$-$n$ namreč deluje kot neke vrste 
+širina izpraznjenega pasu (naloga~\ref{naloga:depl}), kar zmanjša kapaciteto spoja 
+(spoj $p$-$n$ namreč deluje kot neke vrste 
 kondenzator in časovni odziv je odvisen od njegove kapacitete) in s tem odzivni čas. Povečana
 izpraznjena plast vodi tudi do večjega območja, v katerem lahko pride do absorpcije fotonov. 
 
@@ -807,9 +808,10 @@ Pri tem $N_a$ in $N_d$ označujeta gostoti akceptorskih in donorskih atomov, $\D
 skok med stranjo $n$ in $p$, $U$ pa priključena napetost.
 \end{definition}
 
-Povejmo še nekaj o zgradbi fotodiode. Shema preproste fotodiode je prikazana na sliki~(\ref{11_shema}\,a).
+Povejmo še nekaj o zgradbi fotodiode. Shema preproste fotodiode je prikazana na 
+sliki~(\ref{11_shema}\,a).
 Na dnu je elektroda, sledi plast $n$, nad njo je tanka plast $p$, na katero vpada svetloba.
-Bistveno je, da je osvetljena plast tanka, da svetloba lahko prodre v bližino stika. Zato so 
+Bistveno je, da je osvetljena plast tanka, da svetloba lahko prodre v bližino spoja. Zato so 
 debeline zgornje plasti tipično submikronske. Na fotodiode pogosto nanesemo
 še dodatno antirefleksijsko plast (SiO$_2$)\index{SiO$_2$}. 
 Fotoobčutljiv del komercialnih fotodiod
@@ -825,7 +827,7 @@ nadomestimo z zelo tanko plastjo kovine (slika~\ref{11_shema}\,c). Te so uporabn
 visokih energijah (v UV območju), \index{Fotodioda!Schottkyjeva}\index{Ultravijolično valovanje}
 saj je v navadnih fotodiodah absorpcija za te valovne dolžine prevelika, na površini pride do 
 rekombinacije in zmanjšanja kvantnega izkoristka. Odziv Schottkyjevih fotodiod je zelo hiter, 
-saj nizka upornost kovine občutno zmanjša $RC$ konstanto stika. Odzivni časi dosegajo pikosekundne vrednosti. 
+saj nizka upornost kovine občutno zmanjša $RC$ konstanto spoja. Odzivni časi dosegajo pikosekundne vrednosti. 
 \end{remark}
 
 \begin{figure}[h]
@@ -848,7 +850,7 @@ vključimo še plast nedopiranega polprevodnika (slika~\ref{11_shema}\,b).
 S tem se bistveno poveča debelina\index{Fotodioda!$p$-$i$-$n$}
 izpraznjene plasti, ki postane praktično neodvisna od priključene napetosti.
 Povečanje izpraznjene plasti omogoča zaznavanje bistveno večjega deleža vpadne svetlobe, 
-poleg tega pa zmanjša kapaciteto stika in s tem njegovo $RC$ konstanto. Slabost dodatnega
+poleg tega pa zmanjša kapaciteto spoja in s tem njegovo $RC$ konstanto. Slabost dodatnega
 sloja je povečanje časa preleta čez izpraznjeno plast, vendar lahko
 z ustrezno optimizacijo konstrukcije dosežemo odzivne čase nekaj deset $\si{ps}$.
 
@@ -1406,7 +1408,7 @@ zaradi šuma štetja referenčne svetlobe, saj je ta praviloma bistveno močnej�
 \end{equation}
 pri čemer smo z $I_r$ označili tok, ki steče zaradi referenčne svetlobe. Signal v tem 
 primeru ni več vpadni signal, ampak kombinirani izhod iz detektorja, ki ga zaznavamo
-le pri razliki frekvenc $\omega_s-\omega_r$. Sledi
+le pri razliki krožnih frekvenc $\omega_s-\omega_r$. Sledi
 \begin{equation}
 SNR = \frac{\left(\frac{e_0 \eta}{h \nu} E_{s0}E_{r0}\right)^2}{e_0^2\Delta\nu_B\frac{\eta 
 E_{r0}^2}{h\nu}} = \frac{\eta}{h \nu \Delta\nu_B}E_{s0}^2.

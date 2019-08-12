@@ -150,7 +150,8 @@ domneva ni povsem točna, je pa razmeroma dober približek.
 \section{Nelinearni optični pojavi drugega reda}
 \index{Nelinearna optika!drugega reda}
 Vzemimo optično nelinearen kristal s $\chi^{(2)} \neq 0$. V smeri pravokotno 
-glede na njegovo mejno ploskev naj vpadata dve valovanji s frekvencama
+glede na njegovo mejno ploskev naj vpadata dve valovanji s frekvencama\footnote{Tudi 
+v tem poglavju bomo $\omega$ namesto krožna frekvenca pogosto imenovali zgolj frekvenca.}
 $\omega_{1}$ in $\omega_{2}$. Zaradi nelinearne sklopitve nastajajo v snovi nova 
 valovanja z različnimi kombinacijami frekvenc (slika~\ref{fig:nl2}).
 Tako poleg valovanj z osnovnima frekvencama izhajajo iz kristala tudi 
@@ -674,11 +675,12 @@ V enačbi~(\ref{8.10}) upoštevamo ujemanje faz in $S$ pri podvojeni frekvenci. 
 }
 Ob optimalnem fokusiranju je izkoristek pretvorbe torej sorazmeren z dolžino kristala.
 \begin{definition}
-Imamo $1~\si{\centi\metre}$ dolg kristal KH$_{2}$PO$_{4}$.\index{KDP} Valovna dolžina vpadne svetlobe 
-je $1,06~\si{\micro\metre}$, vhodna moč $P_\omega = 5~\si{\kilo\watt}$, efektivna nelinearna susceptibilnost
-$\chi_{ef}=7\cdot10^{-13}~\si{\metre/\volt}$, $\Delta k=0$ in $n=1,5$. Pokaži, da je
+Naj na $1~\si{\centi\metre}$ dolg kristal KH$_{2}$PO$_{4}$.\index{KDP} vpada svetloba
+z valovno dolžino $1,06~\si{\micro\metre}$ in vhodno močjo $P_\omega = 5~\si{\kilo\watt}$.
+Efektivna nelinearna susceptibilnost je $\chi_{ef}=7\cdot10^{-13}~\si{\metre/\volt}$, 
+$\Delta k=0$ in $n=1,5$. Pokaži, da je
 faktor pretvorbe v frekvenčno podvojeno svetlobo okoli $27~\%$.
-Da je dolžina grla $2z_{0}=1~\si{\centi\metre}$, mora biti polmer
+Da je Rayleighova dolžina $2z_{0}=1~\si{\centi\metre}$, mora biti polmer
 grla okoli $40~\si{\micro\metre}$. Gostota svetlobnega toka v kristalu je pri
 tem $2\cdot10^{8}~\si{\watt/\centi\metre^{2}}$, kar je že blizu praga za poškodbe,
 predvsem na vstopni ali izstopni ploskvi. 
@@ -1041,7 +1043,7 @@ Pokaži, da je napetost, ki se pojavi pri optičnem usmerjanju, približno enaka
 U = \frac{\chi P_0}{n^3 \varepsilon_0 c_0 a},
 \end{equation}
 pri čemer je $P_0$ moč vpadne svetlobe, $n$ lomni količnik snovi in $a$ širina kristala.\\
-Namig: nelinearen kristal obravnavaj kot ploščati kondenzator. 
+Namig: nelinearni kristal obravnavaj kot ploščati kondenzator in zapiši polarizacijo.
 
 Oceni še napetost, če je
 $\chi = 3~\si{\pico\meter/\volt}, P_0 = 1~\si{\mega\watt}, n = 2,2$ in $a = 5~\si{\milli\metre}$. 
@@ -1071,11 +1073,11 @@ Ocenimo te vrednosti še numerično.
 \end{figure}
 
 Vzemimo kratek sunek svetlobe dolžine $\tau$ s spektralno širino
-$\Delta \omega = 2/\tau$.
+$\Delta \nu = \Delta \omega/2 \pi = 1/\pi \tau$.
 Če je sunek svetlobe dolg $1~\si{\pico\second}$, je razlika v frekvencah 
 spektra 
 \begin{equation}
-\Delta \omega = \frac{2}{10^{-12}~\si{\hertz}} = 2~\si{\tera\hertz}.
+\Delta \nu = \frac{1}{3 \times 10^{-12}~\si{s}} = 0,3~\si{\tera\hertz}.
 \end{equation}
 Valovanje, ki nastane pri takem optičnem kvazi-usmerjanju, ima torej frekvence v teraherčnem
 področju in naredili smo izvor teraherčnega valovanja. 
@@ -1286,22 +1288,21 @@ valovne fronte pa so ravne -- nastane t.\,i. krajevni soliton.
 
 Ocenimo, pri kateri moči vpadne svetlobe pride do pojava krajevnih solitonov. 
 Vzemimo, da je na izbranem mestu valovna fronta ravna. Lahko si mislimo,
-da je tam grlo Gaussovega snopa. Brez samozbiranja bi bil na razdalji
-dolžine grla $z_{0}$ krivinski radij valovne fronte (enačba~\ref{eq:R})
+da je tam ravno grlo Gaussovega snopa. Brez samozbiranja bi bil na razdalji
+dolžine bližnjega polja $z_{0}$ krivinski radij valovne fronte (enačba~\ref{eq:R})
 \begin{equation}
 R(z_{0})=z_{0}\left( 1+\left(\frac{z_{0}}{z_{0}}\right)^{2}\right)=2z_{0}.
 \label{8.75}
 \end{equation}
-V bližini osi lahko Gaussovo funkcijo, ki opisuje prečno odvisnost
-amplitude polja v snopu, razvijemo po prečni koordinati $r$ do drugega
-reda. Po enačbi~(\ref{eq:nnl}) je odvisnost lomnega količnika približno
+Po enačbi~(\ref{eq:nnl}) je odvisnost lomnega količnika približno
 \begin{equation}
-n(r)=\tilde{n}+n_2 j_0 e^{-2r^2/w_0^2} \approx \tilde{n}+n_2 j_0 \left(1 - 2\frac{r^2}{w_0^2}\right).
+n(r)=\tilde{n}+n_2 j_0 e^{-2r^2/w_0^2}.
 \label{8.76}
 \end{equation}
-Razlika med lomnim količnikom na osi in pri $w_{0}$ od osi je $\Delta n= 2j_{0} n_{2}$.
+Razlika med lomnim količnikom na osi (pri $r=0$) in pri $r = w_{0}$ 
+od osi je kar približno $\Delta n= j_{0} n_{2}$.
 Zaradi tega je na poti od grla do $z_0$ razlika optičnih poti med žarkoma na osi $(r=0)$ in 
-pri $r= w_{0}$ enaka $\Delta nz_{0} = 2 n_2 j_0 z_0$ in valovna fronta se 
+pri $r= w_{0}$ enaka $\Delta nz_{0} = n_2 j_0 z_0$ in valovna fronta se 
 ukrivi na nek krivinski radij $-R$. Iz preproste geometrije velja zveza 
 \begin{equation}
 \Delta nz_{0}=R-R\sqrt{1-\frac{w_{0}^{2}}{R^{2}}}\approx \frac{w_{0}^{2}}{2R}
@@ -1316,8 +1317,8 @@ Od tod sledi
 \end{equation}
 Moč snopa, pri katerem se polmer ne spreminja, je potem 
 \begin{equation}
-P_{s}= \frac{1}{2}\pi w_0^2 \,j_0 = \frac{1}{2}\pi w_0^2 \, \frac{\Delta n}{2 n_2} = 
-\frac{1}{2}\pi w_0^2 \,\frac{w_{0}^{2}}{4z_{0}^{2}}\,\frac{1}{2 n_2} = \frac{\lambda^2}{16 \pi n_2},
+P_{s}= \frac{1}{2}\pi w_0^2 \,j_0 = \frac{1}{2}\pi w_0^2 \, \frac{\Delta n}{n_2} = 
+\frac{1}{2}\pi w_0^2 \,\frac{w_{0}^{2}}{4z_{0}^{2}}\,\frac{1}{n_2} = \frac{\lambda^2}{8\pi n_2},
 \label{8.79}
 \end{equation}
 pri čemer smo upoštevali zvezo med $z_0$ in $w_0$ (enačba~\ref{eq:z0}).
@@ -1702,7 +1703,7 @@ so solitoni izredno zanimivi za prenos velike gostote informacij na velike razda
 omejitvam zaradi disperzije. 
 
 \begin{remark}
-Ena izmed snovi, ki izpolnjuje pogoj, da je $k''$ nasprotnega predznaka kot $n_2$, so kvarčna 
+Ena izmed snovi, ki izpolnjuje pogoj, da je $k''$ nasprotnega predznaka kot $n_2$, so kremenova 
 optična vlakna. Pri valovnih dolžinah vidne svetlobe to sicer ne velja, velja pa za 
 $\lambda \gtrsim 1,3~\si{\micro\metre}$.\index{SiO$_2$}
 Pogoj je torej izpolnjen pri valovnih dolžinah okoli $1,5~\si{\micro\metre}$, ki se navadno uporabljajo 
