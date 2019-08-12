@@ -2005,7 +2005,7 @@ Brillouinov premik je $\sim 10^{10}\si{\hertz}$. \index{Brillouinovo sipanje}
 \centering
 \def\svgwidth{140truemm} 
 \input{slike/08_Raman.pdf_tex}
-\caption{Prehodi med energijskimi nivoji za Ramanov sipanje in shema Brillouinovega sipanja. 
+\caption{Prehodi med energijskimi nivoji za Ramanovo sipanje in shema Brillouinovega sipanja. 
 Pri Stokesovem sipanju snov prevzame energijo (a), pri anti-Stokesovem sipanju energijo odda (b).
 Pri Brillouinovem sipanju svetloba vzbuja akustične valove (c) in se na njih odbije.}
 \label{08_Raman}
@@ -2027,10 +2027,10 @@ Obravnavajmo stimulirano Ramanovo sipanje v klasičnem približku in snov opiše
 z $N$ neodvisnimi enodimenzionalnimi harmonskimi oscilatorji. Nihanje
 posameznega oscilatorja zadošča enačbi\index{Harmonski oscilator}
 \begin{equation}
-\frac{d^2X(z,t)}{dt^2}+ \gamma \frac{dX}{dt}+\omega_v^2X = \frac{F(z,t)}{m},
+\frac{d^2X(z,t)}{dt^2}+ \gamma \frac{dX}{dt}+\omega_v^2X = \frac{F(z,t)}{m}.
 \label{srs:X}
 \end{equation}
-kjer je $X$ koordinata, $\gamma$ koeficient dušenja, $m$ masa in $F$ zunanja sila.
+Pri tem je $X$ koordinata, $\gamma$ koeficient dušenja, $m$ masa in $F$ zunanja sila.
 Glavna predpostavka modela je, da polarizirnost molekul ni konstantna, ampak odvisna od 
 ``raztega'' nihajoče molekule oziroma oscilatorja. Polarizirnost $\alpha$ 
 razvijemo v Taylorjevo vrsto do prvega člena 
@@ -2052,13 +2052,13 @@ E(z,t)= \frac{1}{2}\left( E_0(z)e^{-i\omega_0t}+ E_s(z)e^{-i\omega_st} + k.k.\ri
 \end{equation}
 in povprečje kvadrata
 \begin{equation}
-\overline{E^2} = \frac{1}{4}\left(E_0^2E_s^* e^{-i(\omega_0-\omega_s)t}+k.k.\right).
+\overline{E^2} = \frac{1}{4}\left(2E_0E_s^* e^{-i(\omega_0-\omega_s)t}+k.k.\right).
 \end{equation}
 Vstavimo zapisano električno poljsko jakost najprej v izraz za silo (enačba~\ref{srs:F}),
 nato pa v enačbo oscilatorja (enačba~\ref{srs:X}). Sledi
 \begin{equation}
 \frac{1}{2}\left(\omega_v^2-\omega^2-i\omega\gamma\right)\tilde{X} = 
-\frac{\varepsilon_0}{8m}\frac{d\alpha}{dX}E_0 E_s^*,
+\frac{\varepsilon_0}{4m}\frac{d\alpha}{dX}E_0 E_s^*,
 \end{equation}
 pri čemer je 
 \begin{equation}
@@ -2066,7 +2066,7 @@ X(z,t) = \frac{1}{2}\left(\tilde{X}e^{-i\omega t}+ k.k.\right)
 \end{equation}
 in $\omega = \omega_0-\omega_s$. Oscilatorji torej nihajo s kompleksno amplitudo
 \begin{equation}
-\tilde{X} = \frac{\varepsilon_0\frac{d\alpha}{dX}E_0 E_s^*}{4m\left(
+\tilde{X} = \frac{\varepsilon_0\frac{d\alpha}{dX}E_0 E_s^*}{2m\left(
 \omega_v^2-(\omega_0-\omega_s)^2-i(\omega_0-\omega_s)\gamma\right)}.
 \end{equation}
 Zdaj lahko zapišemo polarizacijo $P = \varepsilon_0N\alpha E$ in nelinearni del
@@ -2118,13 +2118,14 @@ do faktorja ojačenja $1,08$, na vlaknu dolžine $20~\si{\metre}$ pa do faktorja
 
 \begin{remark}
 Pojav stimuliranega Ramanovega sevanja je posebej pomemben v ojačenje signala v 
-optičnih vlaknih, predvsem zaradi velike intenzitete in velike dolžine, *** \index{Optično ojačevanje!v vlaknih}
+optičnih vlaknih, predvsem zaradi velike intenzitete na velikih dolžinah.
+\index{Optično ojačevanje!v vlaknih}
 \end{remark}
 
 \subsection*{Stimulirano Brillouinovo sipanje}
 Stimulirano Brillouinovo sipanje je pojav, pri katerem vpadlo svetlobno valovanje
 vzbudi akustični val (fonon), nato pa se na njem siplje. Poleg vpadne svetlobe pri $\nu_0$
-se tako pojavi še Stokesova svetloba pri frekvenci $nu_s = \nu_0-\nu_f$, pri čemer 
+se tako pojavi še Stokesova svetloba pri frekvenci $\nu_s = \nu_0-\nu_f$, pri čemer 
 $\nu_f$ označuje frekvenco akustičnega vala  (slika~\ref{08_Raman}\,c). Interferenca
 vpadnega in Stokesovega valovanja, ki ima komponento ravno pri $\nu_f$, povratno
 povečuje intenziteto vzbujenega zvočnega valovanja, njegovo povečanje pa vodi do
