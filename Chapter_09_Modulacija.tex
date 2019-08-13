@@ -188,6 +188,7 @@ v smeri optične osi, to je po dogovoru smer $z$, v isti smeri pa na kristal pri
 polje $E_z$. Ker je smer električnega polja vzporedna s smerjo širjenja svetlobe, taki 
 postavitvi pravimo longitudinalna in pojavu longitudinalna 
 modulacija.\index{Elektro-optična modulacija!longitudinalna} 
+\vglue-5truemm
 \begin{figure}[h]
 \centering
 \def\svgwidth{80truemm} 
@@ -210,8 +211,9 @@ Inverzni dielektrični tenzor brez zunanjega polja za optično enoosni KDP zapi�
 \label{7.8}
 \end{equation}
 kjer sta $n_o$ in $n_e$ redni in izredni lomni količnik. Ko priključimo 
-polje $E_z$, se tenzor dielektričnosti zaradi Pockelsovega pojava spremeni. Sprememba
-inverznega tenzorja je po enačbi~(\ref{eq:Pockels})
+polje $E_z$, se tenzor dielektričnosti zaradi Pockelsovega pojava spremeni. Upoštevamo,
+da sta $E_x=E_y=0$ in da so od nič različni le $r_{41}$, $r_{52}$ in $r_{63}$. 
+Sprememba inverznega tenzorja je potem po enačbi~(\ref{eq:Pockels})
 \begin{align}
 \delta b_{xx} & =r_{xxx}E_x + r_{xxy}E_y + r_{xxz}E_z = 0,\nonumber \\
 \delta b_{xy} & = \delta b_{yx} = r_{xyx}E_x + r_{xyy}E_y + r_{xyz}E_z = r_{63}E_z,\nonumber\\
@@ -360,7 +362,8 @@ n_{x'} &\approx n_o+\frac{1}{2}n_o^3r_{22}E_y,\\
 n_{y'} &\approx n_o-\frac{1}{2}n_o^3r_{22}E_y \quad \mathrm{in}\\
 n_z' &\approx n_e.
 \end{align}
-Kako pa je z novimi lastnimi osmi?\index{Dvolomnost!dvoosne snovi} Hitro ugotovimo (enačba~\ref{7.8b}), da se ob
+Kako pa je z novimi lastnimi osmi?\index{Dvolomnost!dvoosne snovi} 
+Hitro ugotovimo (enačba~\ref{7.8b}), da se ob
 priključenem polju os $x$ ohranja. Pojavi se torej zasuk okoli osi $x$,
 ki ga označimo s kotom $\vartheta$. Račun pokaže, da je za smiselne
 vrednosti električnega polja ta kot zelo majhen ($\vartheta~
@@ -420,8 +423,9 @@ valovanje zato razstavimo na komponenti $x'$ in $y'$
 \begin{equation}
 \mathbf{E}_0 = E_0\, \mathbf{e}_y = \frac{E_0}{\sqrt{2}}\left(\mathbf{e}_{x'} + \mathbf{e}_{y'}\right).
 \end{equation}
-Po prehodu skozi kristal pride med njima do fazne razlike $\Delta \phi$ 
-(enačba~\ref{phiAM}), zato je polje $\mathbf{E}_1$ ob izstopu iz kristala
+Po kristalu se komponenti širita z različnima hitrostma, zato pride med njima do 
+fazne razlike $\Delta \phi$ 
+(enačba~\ref{phiAM}). Ob izstopu iz kristala je tako
 \begin{equation}
 \mathbf{E}_1 = \frac{E_0}{\sqrt{2}}\left(e^{ik_0 n_{x'}L}\mathbf{e}_{x'} + 
 e^{ik_0 n_{y'}L}\mathbf{e}_{y'}\right)
@@ -459,8 +463,8 @@ je približno linearna (modra črta).}
 \label{fig:amt}
 \end{figure}
 
-Ko je napetost na kristalu enaka nič, je $\Delta \phi=0$ in tudi intenziteta 
-prepuščene svetlobe $j=0$. To je pričakovano, saj sta analizator in polarizator prekrižana, 
+Ko je napetost na kristalu enaka nič, je gostota prepuščenega svetlobnega toka 
+$j=0$. To je pričakovano, saj sta analizator in polarizator prekrižana, 
 vpadni žarek pa se širi vzdolž lastne osi kristala.
 Prepustnost doseže največjo vrednost, ko je $\Delta \phi=\pi$, kar je ravno pri 
 $\pi$-napetosti\index{$\pi$-napetost}. Ko torej napetost povečamo z 0 na $U_\pi$, se
@@ -525,7 +529,7 @@ Krožno frekvenco valovanja v danem trenutku izračunamo kot negativni odvod faz
 \end{equation}
 Linearno spreminjajoča se modulacijska napetost da torej konstanten frekvenčni premik. 
 Dosegljive spremembe frekvence so seveda dokaj majhne,
-do nekaj sto~$\si{MHz}$, saj so omejene s hitrostjo spreminjanja napetosti.
+do nekaj $100~\si{MHz}$, saj so omejene s hitrostjo spreminjanja napetosti.
 Napetost seveda tudi ne more neomejeno naraščati. Kadar se napetost
 vrača na nič, pride do frekvenčnega premika v nasprotni smeri, ki pa ga
 lahko zanemarimo, če je čas vračanja bistveno krajši od časa naraščanja.
@@ -603,11 +607,11 @@ bomo spoznali v nadaljevanju.
 \end{remark}
 \begin{remark}
 Elektro-optični pojav ima dva prispevka: neposrednega, kjer zunanje polje 
-vpliva neposredno na elektronsko polarizabilnost, in posredno spremembo
+vpliva neposredno na elektronsko polarizirnost, in posredno spremembo
 lomnega količnika zaradi piezoelektrične deformacije. Pri nizkih frekvencah sta prispevka 
 primerljiva, pri velikih frekvencah pa deformacija kristala ne more slediti
 modulacijski napetosti in ostane le neposredni prispevek. Pri akustičnih resonancah, ko 
-modulacija v kristalu vzbudi stoječe zvočno valovanje, pa se piezoelektrični 
+modulacija v kristalu vzbudi stoječe zvočno valovanje, se piezoelektrični 
 prispevek resonančno poveča. Pogoj za akustično resonanco je, da je dimenzija 
 kristala mnogokratnik polovice valovne dolžine akustičnega vala v kristalu. 
 Pri kristalih velikosti $\sim \si{cm}$ in hitrosti zvočnih valov okoli
@@ -758,10 +762,9 @@ kotu $\vartheta$.
 \centering
 \def\svgwidth{120truemm} 
 \input{slike/09_AO_1.pdf_tex}
-\caption{Ob vpadu svetlobe na tanko plast, v kateri je vzbujeno zvočno valovanje 
-(a), se pojavi veliko uklonskih vrhov, 
-na debeli plasti (b) pa je opazen zgolj en uklonjen vrh, 
-pa še ta le ob izpolnjenem Braggovem pogoju.}
+\caption{Ob vpadu svetlobe na tanko plast, v kateri je vzbujeno zvočno valovanje, se 
+pojavi veliko uklonskih vrhov (a), na debeli plasti pa je opazen zgolj en uklonjen vrh, 
+pa še ta le ob izpolnjenem Braggovem pogoju (b).}
 \label{fig:ao_bragg}
 \end{figure}
 
@@ -809,7 +812,7 @@ Izhajajmo iz pogoja, da je laserski snop na poti skozi plast zvočnega
 valovanja tako ozek, da ostane v celoti znotraj
 ene razredčine ali zgoščine. Širino razredčin in zgoščin ocenimo na $\Lambda/2$, to pa je potem tudi 
 približno premer laserskega snopa $2w$. Dolžina, znotraj katere se snop še ne razširi znatno,
-je dolžina grla $2z_0 = 2 \pi w^2/\lambda$ (enačba~\ref{eq:z0}). Največja dolžina poti, pri 
+je območje bližnjega polja $2z_0 = 2 \pi w^2/\lambda$ (enačba~\ref{eq:z0}). Največja dolžina poti, pri 
 kateri je pogoj izpolnjen in snop ostane znotraj ene razredčine ali zgoščine, je tako
 \begin{equation}
 d_c \sim 2z_0 \sim \frac{2 \pi w^2}{\lambda} \sim \frac{\pi \Lambda^2}{8 \lambda}.
@@ -857,10 +860,10 @@ optičnih litografskih zapisovalnikih.\index{Optična pinceta}
 Z vklapljanjem in izklapljanjem zvočnega valovanja, ki ga vzbujamo s piezoelektričnim elementom,
 na katerega pritisnemo izmenično napetost, lahko moduliramo intenziteto
 direktnega svetlobnega snopa. To potrebujemo na primer pri preklapljanju
-dobrote laserskega resonatorja.\index{Sunkovni laser!{preklop dobrote}}
-
+dobrote laserskega resonatorja (poglavje~\ref{qswitch}).\index{Sunkovni laser!{preklop dobrote}}
 Akusto-optične modulatorje uporabljamo tudi za uklepanje faz\index{Uklepanje faz}
-v laserskem resonatorju. Če je v Braggovem elementu prisotno stoječe zvočno
+v laserskem resonatorju (poglavje~\ref{chap:Uklepanje}). Če je v Braggovem 
+elementu prisotno stoječe zvočno
 valovanje, je amplituda direktnega snopa modulirana s frekvenco zvoka.
 Kadar je frekvenca zvoka ravno enaka razmiku frekvenc laserskih nihanj,
 lahko nastanejo uklenjene faze vzbujenih nihanj in s tem kratki
@@ -891,7 +894,7 @@ Fourierevo transformiranko svetlobnega snopa pred lečo.
 
 \section{*Račun akusto-optičnega pojava}
 \index{Akusto-optični pojav}
-Izračunajmo intenziteto svetlobe, ki se uklanja na zvočnem valovanju. Izhajamo 
+Izračunajmo gostoto energijskega toka svetlobe, ki se uklanja na zvočnem valovanju. Izhajamo 
 iz valovne enačbe v nehomogenem sredstvu, kar je dokaj težaven problem
 in se moramo zateči k približkom. Uporabili bomo metodo sklopljenih valov. 
 \index{Metoda sklopljenih valov}
@@ -967,7 +970,7 @@ A_{n}(z)e^{in(qx-\Omega t)}e^{i(k_{x}x+k_{z}z-\omega t)}.
 \label{7.35b}
 \end{equation}
 Vstavimo izraze (\ref{7.35}), (\ref{7.35a}) in (\ref{7.35b}) v valovno enačbo (\ref{7.33a})
-in izenačimo člene z isto časovno in prostorsko frekvenco, na primer
+in izenačimo člene z isto časovno in prostorsko odvisnostjo, na primer
 s $k_z z+(k_x+mq)x-(\omega+m\Omega)t$. Sledi
 \begin{eqnarray}
 -\left(k_{z}^{2}+(k_{x}+mq)^{2}\right)A_{m}+2ik_{z}A_{m}' + \frac{\tilde{\varepsilon}}{c^2}(m\Omega+\omega)^2A_m
@@ -1075,7 +1078,7 @@ odvisnosti od debeline plasti zvočnega valovanja.}
 \end{figure}
 
 V gornja izraza vstavimo še parameter $\xi$, ki je podan z enačbo~(\ref{7.38}).
-Razmerje med močjo uklonjenega in vpadnega snopa je tako
+Razmerje med intenziteto uklonjenega in vpadnega snopa je tako
 \boxeq{7.48}{
 \frac{I_{1}}{I_{0}}=\sin^{2}\left(\frac{\pi n_{0}^{3}pS_{0}d}{2\lambda\cos\vartheta}\right),
 }
@@ -1086,7 +1089,7 @@ $u = u_0 \cos(qx - \Omega t)$ je deformacija
 S_{xx} = \frac{1}{2}\bigl( \frac{\partial u}{\partial x}+ 
 \frac{\partial u}{\partial x}\bigr) = \frac{\partial u}{\partial x} = - u_0 q\, \sin(qx - \Omega t).
 \end{equation}
-Povprečna gostota energijskega toka je \index{Gostota energijskega toka}
+Povprečna gostota energijskega toka zvočnega valovanja je \index{Gostota energijskega toka}
 \begin{equation}
 j_{z}= \frac{1}{T}\int_0^T 
 v_z \left(\frac{1}{2} \varrho \left(\frac{\partial u}{\partial t}\right)^2
@@ -1196,11 +1199,11 @@ ali 5CB (levo) in shematski prikaz nematične faze z označenim direktorjem (des
 \end{figure}
 
 Molekule so v nematični fazi v povprečju orientacijsko urejene, zato se nematik
-obnaša kot enoosen dvolomni kristal\index{Dvolomnost!enoosne snovi}. Njegova optična os je vzporedna 
+obnaša kot enoosni dvolomni kristal\index{Dvolomnost!enoosne snovi}. Njegova optična os je vzporedna 
 z $\mathbf{n}$, lastni vrednosti dielektričnega tenzorja pa sta $\varepsilon_\bot$ in
 $\varepsilon_{\parallel}$, ki ustrezata rednemu ($n_o$) in izrednemu ($n_e$) 
 lomnemu količniku.\index{Dielektričnost}\index{Lomni količnik}
-Ker je optična polarizabilnost benzenovih obročev vzdolž osi molekul precej večja kot
+Ker je optična polarizirnost benzenovih obročev vzdolž osi molekul precej večja kot
 v prečni smeri, je razlika med rednim in izrednim lomnim količnikom v nematiku razmeroma 
 velika, navadno med $0,1$ in $0,2$, seveda spet odvisno od temperature.
 
@@ -1559,7 +1562,7 @@ zasuk in upogib.}
 \end{figure}
 
 V zunanjem električnem polju se energija tekočega kristala dodatno spremeni. 
-Navadno je neodvisna električna količina električna poljska jakost, saj je polje posledica
+Navadno je neodvisna količina električna poljska jakost, saj je polje posledica
 zunanje napetosti na elektrodah. Ustrezni člen v prosti energiji je tedaj 
 (enačbi~\ref{lcwe} in~\ref{7.56a})
 \begin{equation}
