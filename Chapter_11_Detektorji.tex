@@ -3,11 +3,11 @@
 \chapter{Detektorji svetlobe}
 
 V tem poglavju bomo spoznali detektorje svetlobe, ki so nujni za kvantitativno obravnavo
-optičnih pojavov in sprejemanje optičnih signalov. Detektorji\index{Detektor}
-se med seboj razlikujejo po načinu delovanja in po svojih specifikacijah, 
-ki jih bomo podrobneje spoznali v nadaljevanju. Največ
-pozornosti bomo posvetili polprevodniškim detektorjem, ki so danes najbolj razširjeni.
-Na koncu bomo spoznali še šum pri detekciji, ki omejuje uporabnost naprav.
+optičnih pojavov in sprejemanje optičnih signalov. Podrobneje bomo spoznali
+načine delovanja in specifikacije posameznih vrst detektorjev.\index{Detektor}
+Največ pozornosti bomo posvetili danes najbolj razširjenim polprevodniškim 
+detektorjem. Na koncu bomo spoznali še šum pri detekciji, saj šum omejuje najmanjši 
+signal, ki ga z detektorjem še lahko izmerimo.
 
 \section{Osnovne karakteristike detektorjev}
 Osnovna naloga optičnih detektorjev je spremeniti vpadni svetlobni signal 
@@ -16,26 +16,24 @@ ali električna napetost, ki pa sta sorazmerna z močjo vpadne svetlobe
 in ne z amplitudo električne poljske jakosti. Pri navadni detekciji se tako
 podatek o fazi valovanja izgubi. V grobem delimo detektorje v dve skupini, 
 na termične\index{Detektor!termični} in kvantne\index{Detektor!kvantni}. 
-Prvi pretvorijo energijo vpadne svetlobe v toploto, drugi pa temeljijo na 
-fotoefektu\index{Fotoefekt}, pri katerem vpadni foton iz snovi izbije 
-elektron ali v snovi ustvari par elektron--vrzel.
 
 Termični detektorji zaznavajo svetlobo preko povišanja temperature 
 senzorja zaradi absorbirane svetlobe. Taki detektorji zaznavajo energijo 
 vpadle svetlobe. Njihov odziv je razmeroma počasen, zato jih uporabljamo
-predvsem za merjenje optične moči, lahko tudi zelo velike. Po drugi strani pa je odziv
-termičnih detektorjev neodvisen
+predvsem za merjenje optične moči, lahko tudi zelo velike. 
+Po drugi strani pa je odziv termičnih detektorjev neodvisen
 od valovne dolžine vpadne svetlobe, zaradi česar so termični detektorji uporabni na 
-širokem območju od globokega ultravijoličnega do daljnega infrardečega dela svetlobe. 
+širokem območju od globokega ultravijoličnega do daljnjega infrardečega dela svetlobe. 
 \index{Ultravijolično valovanje}\index{Infrardeče valovanje}Uporaba
-prevlada predvsem v infrardečem, teraherčnem ali celo mikrovalovnem delu, kjer so 
+prevlada predvsem v infrardečem, teraherčnem ali celo mikrovalovnem delu spektra, kjer so 
 drugi detektorji bistveno manj občutljivi. \index{Teraherčno valovanje}
 Primeri termičnih detektorjev so bolometer, termočlen in piroelektrični detektor.
 \index{Bolometer}\index{Termočlen}\index{Piroelektrični detektor}
 
-Druga skupina so kvantni detektorji, v katerih se
-fotoni absorbirajo in povzročijo pojav prostih nosilcev naboja. Taki detektorji
-zaznavajo število vpadnih fotonov. Odlikuje jih zelo hiter odziv 
+Druga skupina so kvantni detektorji, ki temeljijo na fotoefektu\index{Fotoefekt}.
+V njih se vpadni fotoni absorbirajo in povzročijo pojav prostih nosilcev naboja, 
+tako da iz snovi izbijejo elektron ali v snovi ustvarijo par elektron--vrzel. Kvantni 
+detektorji zaznavajo število vpadnih fotonov. Odlikuje jih zelo hiter odziv 
 (tipično pod $\si{\micro\second}$)
 in velika občutljivost. Njihova poglavitna slabost je omejen obseg valovnih dolžin,
 pri katerih zaznavajo svetlobo, poleg tega jih je za optimalno delovanje treba 
@@ -50,11 +48,11 @@ hladiti. Primeri so vakuumske, polprevodniške in plazovne fotodiode.
 \end{figure}
 
 Osnovne karakteristike, ki omogočajo primerjavo detektorjev in določajo njihovo uporabnost,
-so občutljivost, spektralni odziv, odzivni čas in prag detekcije:
+so občutljivost, spektralni odziv, odzivni čas in najmanjši merljivi signal:
 \index{Detektor!občutljivost}
 \index{Detektor!spektralni odziv}
 \index{Detektor!odzivni čas}
-\index{Detektor!prag detekcije}
+\index{Detektor!najmanjši merljivi signal}
 
 \begin{enumerate}
 \item Občutljivost $R$ pove, koliko je izhodnega signala 
