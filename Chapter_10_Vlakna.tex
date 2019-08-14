@@ -1112,8 +1112,8 @@ frekvence glede na centralno krožno frekvenco sunka $\omega_{0}$
 \end{equation}
 Za pozitivne vrednosti $\mu$ je krožna frekvenca na začetku sunka,
 to je pri $\tau<0$, manjša od $\omega_0$, z naraščajočim časom pa se 
-linearno povečuje proti koncu sunka. Obnašanje je torej podobno črikanju, 
-ki ga poznamo iz nelinearne optike (slika~\ref{fig:chirp}\,a). 
+linearno povečuje proti koncu sunka. Obnašanje je torej podobno čirikanju, 
+ki ga poznamo iz nelinearne optike (slika~\ref{fig:chirp}\,a). \index{Čirikanje}
 
 \begin{remark}
 Pri $\zeta=0$ je sunek najkrajši možen pri dani spektralni
@@ -1163,9 +1163,8 @@ valovodni disperziji (enačba~\ref{dispVal}).
 Razširitev sunka zaradi pozitivne disperzije je pri $\mu > 0$ mogoče kompenzirati
 s parom vzporednih uklonskih mrežic, kot kaže slika~(\ref{fig:comp}).\index{Uklonska mrežica}
 Prva mrežica različne frekvenčne komponente razkloni, druga pa ponovno
-zbere, vendar so pri tem dolžine optičnih poti za različne komponente različno dolge.
-Pokazali bomo, da je celoten učinek enak kot pri razširjanju sunka po sredstvu z negativno
-disperzijo. Vzporednost uklonskih mrežic zagotavlja vzporednost izhodnih žarkov,
+zbere, vendar so pri tem optične poti za različne komponente različno dolge.
+Vzporednost uklonskih mrežic zagotavlja vzporednost izhodnih žarkov,
 vendar so različne komponente vpadne svetlobe med seboj razmaknjene (slika~\ref{fig:comp}\,a).
 V praksi zato uporabimo ali dva para uklonskih mrežic ali pa 
 zrcalo, ki svetlobo usmeri po isti poti nazaj. 
@@ -1174,7 +1173,7 @@ zrcalo, ki svetlobo usmeri po isti poti nazaj.
 \def\svgwidth{120truemm} 
 \input{slike/10_comp.pdf_tex}
 \caption{Kompenzacija disperzije z uklonskima mrežicama (a) in shema z
-oznakami (b).}
+oznakami (b)}
 \label{fig:comp}
 \end{figure}
 
@@ -1195,7 +1194,7 @@ Celotna sprememba faze je tako $\Phi = \omega P/c + \Phi_m$.
 
 \begin{definition}
 \label{nal:dispk}
-Pokaži, da je drugi odvod faze po kotni frekvenci enak
+Pokaži, da je drugi odvod faze po krožni frekvenci enak
 \begin{equation}
 \frac{d^2 \Phi}{d \omega^2} = - \frac{L\, c\, q^2}
 {\sqrt{\omega^2 - (\omega\, \sin\alpha - cq)^2}^{3/2}}.
@@ -1203,7 +1202,7 @@ Pokaži, da je drugi odvod faze po kotni frekvenci enak
 \end{equation}
 \end{definition}
 Račun v nalogi (\ref{nal:dispk})
-pokaže, da je disperzija, ki je določena z drugim odvodom faze po kotni hitrosti 
+pokaže, da je disperzija, ki je določena z drugim odvodom faze po krožni frekvenci
 (enačba~\ref{eq:10faza}), vedno negativna. Par vzporednih uklonskih mrežic
 torej deluje kot sredstvo
 z negativno disperzijo in sunek, ki se je razširil zaradi potovanja
@@ -1230,8 +1229,8 @@ Pri prenosu informacij z optičnimi vlakni je poleg disperzije, ki signal popač
 treba upoštevati tudi izgube, ki signal oslabijo. 
 Do izgub pride predvsem zaradi absorpcije svetlobe v vlaknu,\index{Absorpcija}
 Rayleighovega\index{Rayleighovo sipanje} sipanja na fluktuacijah gostote, 
-sipanja na nečistočah, upognjenosti vlakna in, kot bomo videli v
-nadaljevanju, prihaja do izgub tudi na stiku med vlakni. Za prenos na dolge
+sipanja na nečistočah in upognjenosti vlakna. Do izgub pa prihaja tudi stikih 
+med vlakni. Za prenos na dolge
 razdalje je tako potreben razmeroma močen signal, ki pa ne sme biti premočen,
 saj lahko v vlaknu pride do nelinearnih optičnih pojavov. V praksi zato 
 optični signal, ki potuje po čezoceanskih vlaknih, ojačujemo in s tem nadomestimo
@@ -1242,8 +1241,8 @@ koeficient\index{Atenuacijski koeficient}, merjen v decibelih ali dB/km
 \boxeq{dB}{
 A [dB] = -10 \log_{10}\frac{j(z)}{j(0)},
 }
-pri čemer je $j(z)$ intenziteta svetlobe po prepotovani razdalji $z$, $j(0)$ pa
-začetna intenziteta. Če se po prepotovanem
+pri čemer je $j(z)$ gostota svetlobnega toka po prepotovani razdalji $z$, $j(0)$ pa
+vpadna gostota svetlobnega toka. Če se po prepotovanem
 kilometru signal zmanjša na primer na polovico, so izgube $3~\si{\decibel/\kilo\meter}$.
 Pri izdelavi optičnih vlaken se najpogosteje uporablja kremenovo steklo, ki 
 ima pri valovni dolžini $1,55~\si{\micro\meter}$ izgube okoli 
@@ -1358,7 +1357,7 @@ geometriji
 +\frac{1}{r^{2}}\,\frac{\partial^{2}E}{\partial\varphi^{2}}+k_{0}^{2}n^{2}\left(r\right)\, E=0,
 \label{9.31}
 \end{equation}
-pri čemer ima $n\left(r\right)$ vrednost $n_{1}$ v sredici in $n_{2}$ v plašču. 
+kjer ima $n\left(r\right)$ vrednost $n_{1}$ v sredici in $n_{2}$ v plašču. 
 Pri tem ne pozabimo, da $r$ ni več radialna koordinata vlakna, ampak
 označuje oddaljenost od središča krivine. Zanimajo nas rešitve oblike 
 \begin{equation}
@@ -1425,7 +1424,7 @@ ter od valovne dolžine potujoče svetlobe.
 \def\svgwidth{120truemm} 
 \input{slike/10_Tunel.pdf_tex} 
 \caption{Lastni načini širjenja svetlobe po ravnem vodniku so analogni stanjem 
-delca v končni potencialni jami (levo), načini širjenja po ukrivljenem vodniku 
+delca v končni potencialni jami (levo). Načini širjenja po ukrivljenem vodniku pa
 so podobni stanjem delca v konstantnem zunanjem električnem polju (desno). Zaradi
 spremenjenega potenciala delci tunelirajo, svetloba pa uhaja iz ukrivljenega vlakna.}
 \label{fig:tunel}
@@ -1770,7 +1769,7 @@ P_2 &= P_0 \sin^2 (\gamma z).
 }
 Na ta način lahko v drugo vlakno sklopimo poljuben delež vpadne svetlobe. 
 Do celotnega prenosa svetlobnega toka v drugo vlakno pride pri dolžini sklopitve $L = \pi/2 \gamma$. 
-Pri dolžini $L = \pi/4 \gamma$ sklopimo eno polovico intenzitete vpadne svetlobe in govorimo o 3-dB sklopitvi. \index{Sklopitev med valovodi!3-dB sklopitev}
+Pri dolžini $L = \pi/4 \gamma$ sklopimo eno polovico gostote vpadnega svetlobnega toka in govorimo o 3-dB sklopitvi. \index{Sklopitev med valovodi!3-dB sklopitev}
 
 \begin{remark}
  Pri izbrani dolžini sklopitve med vlaknoma je intenziteta svetlobe, ki preide v drugo vlakno,
@@ -1778,7 +1777,7 @@ Pri dolžini $L = \pi/4 \gamma$ sklopimo eno polovico intenzitete vpadne svetlob
  Z rahlim spreminjanjem parametrov, na primer lomnega 
  količnika enega od vlaken, lahko spreminjamo delež svetlobe v drugem vlaknu. V ta 
  namen pogosto uporabimo elektro-optični pojav in s spreminjanjem priključene napetosti na
- enem od vlaken natančno določimo delež svetlobe, ki preide v drugo vlakno.  
+ enem od vlaken natančno določimo delež svetlobe, ki preide v drugo vlakno. \index{Elektro-optični pojav}
 \end{remark}
 
 \section{*Vpliv spremembe lomnega količnika vlakna na širjenje svetlobe}
@@ -1837,10 +1836,10 @@ proti nič tudi integral po krivulji $d\mathbf{s}$ in velja
 dS=\int\delta\psi\nabla_{\bot}^{2}\psi_{lm}^{*}\, dS.
 \eeq
 Funkcija $\psi_{lm}^{*}$ zadošča enačbi (\ref{9.22}), zato se v enačbi (\ref{9.24})
-prvi in drugi člen odštejeta. Iskan popravek k valovnem številu je tako 
+prvi in drugi člen odštejeta. Iskan popravek k valovnemu številu je tako 
 \begin{equation}
 \delta\beta=\frac{k_{0}^{2}\int\delta\epsilon\,\left|\psi_{lm}\right|^{2}dS}{2\,
-\beta\int\left|\psi_{lm}\right|^{2}dS}.
+\beta_{lm}\int\left|\psi_{lm}\right|^{2}dS}.
 \label{9.25}
 \end{equation}
 \begin{remark}
@@ -1870,8 +1869,8 @@ količnik sredice vlakna.
 Mislimo si, da je sprememba $\beta$ na delu vlakna sestavljena iz
 majhnih stopničastih sprememb $\Delta\beta_{i}$ na intervalih $\Delta z$.
 Za ravno valovanje je sprememba fazne hitrosti sorazmerna s spremembo
-lomnega količnika, zato iz enačbe~(\ref{9.26}) sledi, da je delež odbitega
-valovanja na stopničasti spremembi $\Delta\beta_{i}$ enak
+lomnega količnika, zato iz enačbe~(\ref{9.26}) sledi, da je prispevek k odbitem
+valovanju na stopničasti spremembi $\Delta\beta_{i}$ enak
 \begin{equation}
 \Delta E_{i}=\frac{\Delta\beta_{i}}{2\,\beta}\, E_{0}.
 \label{9.27}
@@ -1939,7 +1938,7 @@ dolžine poti (enačba~\ref{eq:shgl2}), zelo učinkovita. Seveda
 mora biti izpolnjen tudi pogoj za ujemanje faz.\index{Ujemanje faz} To 
 omogoča rodovna disperzija, zaradi \index{Disperzija!rodovna}
 katere lahko rodova pri osnovni in podvojeni frekvenci potujeta po vodniku
-z enako propagacijsko konstanto.
+z enako komponento valovnega vektorja $\beta$.
 
 \subsection*{Pojavi tretjega reda}
 V navadnih optičnih vlaknih  
@@ -1971,15 +1970,15 @@ moči (pod $\sim 100~\si{mW}$ na kanal)
 ali povečanjem spektralne širine vpadne svetlobe.
 
 Druga skupina nelinearnih pojavov temelji na spreminjanju 
-lomnega količnika z intenziteto vpadne svetlobe (Kerrov pojav, poglavje~\ref{OKP}).
+lomnega količnika z intenziteto vpadne svetlobe (optični Kerrov pojav, poglavje~\ref{OKP}).
 Opišimo tri pojave:
 \begin{enumerate}
 \item 
 Samo-fazna modulacija ali lastna fazna modulacija ({\it SPM -- Self-phase modulation}). Različni deli
 sunka zaradi različne intenzitete občutijo različen lomni količnik in pride
-do tako imenovanega črikanja~(enačba~\ref{eq:chirpi} 
+do tako imenovanega čirikanja~(enačba~\ref{eq:chirpi} 
 in slika~\ref{fig:optsoliton}). \index{Samo-fazna modulacija}
-Pojav vodi do spektralne razširitve in zaradi\index{Črikanje}
+Pojav vodi do spektralne razširitve in zaradi\index{Čirikanje}
 disperzije tudi do časovnega podaljšanja sunka. Z ustrezno disperzijo dosežemo 
 krajšanje sunkov ali pojav optičnih solitonov (poglavje~\ref{chap:soliton}).
 \index{Soliton!optični}
