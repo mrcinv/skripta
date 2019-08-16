@@ -6,7 +6,7 @@ V tem poglavju bomo spoznali detektorje svetlobe, ki so nujni za kvantitativno o
 optičnih pojavov in sprejemanje optičnih signalov. Podrobneje bomo spoznali
 načine delovanja in specifikacije posameznih vrst detektorjev.\index{Detektor}
 Največ pozornosti bomo posvetili danes najbolj razširjenim polprevodniškim 
-detektorjem. Na koncu bomo spoznali še šum pri detekciji, saj šum omejuje najmanjši 
+detektorjem. Na koncu bomo spoznali še šum pri detekciji, ki omejuje najmanjši 
 signal, ki ga z detektorjem še lahko izmerimo.
 
 \section{Osnovne karakteristike detektorjev}
@@ -23,7 +23,7 @@ vpadle svetlobe. Njihov odziv je razmeroma počasen, zato jih uporabljamo
 predvsem za merjenje optične moči, lahko tudi zelo velike. 
 Po drugi strani pa je odziv termičnih detektorjev neodvisen
 od valovne dolžine vpadne svetlobe, zaradi česar so termični detektorji uporabni na 
-širokem območju od globokega ultravijoličnega do daljnjega infrardečega dela svetlobe. 
+širokem območju od globokega ultravijoličnega do daljnega infrardečega dela svetlobe. 
 \index{Ultravijolično valovanje}\index{Infrardeče valovanje}Uporaba
 prevlada predvsem v infrardečem, teraherčnem ali celo mikrovalovnem delu spektra, kjer so 
 drugi detektorji bistveno manj občutljivi. \index{Teraherčno valovanje}
@@ -41,7 +41,7 @@ hladiti. Primeri so vakuumske, polprevodniške in plazovne fotodiode.
 \index{Fotodioda!vakuumska}\index{Fotodioda!polprevodniška}\index{Fotodioda!plazovna}
 \begin{figure}[h]
 \centering
-\def\svgwidth{65truemm} 
+\def\svgwidth{60truemm} 
 \input{slike/11_ShemaTermKv.pdf_tex}
 \caption{Primerjava spektralnega odziva termičnega in kvantnega detektorja}
 \label{fig:shemaTermKv}
@@ -55,28 +55,30 @@ so občutljivost, spektralni odziv, odzivni čas in najmanjši merljivi signal:
 \index{Detektor!najmanjši merljivi signal}
 
 \begin{enumerate}
-\item Občutljivost $R$ pove, koliko je izhodnega signala 
-na enoto vpadnega svetlobnega toka. Enota za občutljivost je A/W, če merimo tok, ali V/W, 
-če na izhodu zaznavamo napetost. 
-\item Spektralni odziv pove, kako se občutljivost spreminja z valovno dolžino $R(\lambda)$.
-Pri termičnih detektorjih je $R(\lambda)$ konstanta, medtem ko kvantni detektorji 
+\item Občutljivost $\mathcal{R}$ pove, koliko je izhodnega signala 
+na enoto vpadnega svetlobnega toka. Enota za občutljivost je $\si{A/W}$, če merimo tok, ali 
+$\si{V/W}$, če na izhodu zaznavamo napetost. 
+\item Spektralni odziv pove, kako se občutljivost spreminja z valovno dolžino $\mathcal{R}(\lambda)$.
+Pri termičnih detektorjih je $\mathcal{R}(\lambda)$ konstanta\footnote{Občutljivost je konstantna
+le v območju konstantnega albeda, ki pa je lahko zelo široko.}, medtem ko kvantni detektorji 
 delujejo le v določenem območju valovnih dolžin, ki je odvisen od snovi, 
 iz katere je detektor narejen. 
 \item Odzivni čas pove, kako hitro se detektor odzove na spremembo optičnega signala. Predvsem 
 optične telekomunikacije zahtevajo izredno hiter odziv.
-\item Prag detekcije pove, pri kolikšni vpadni svetlobni moči postane razmerje med signalom ($S$ --
-{\it signal}) in šumom ($N$ -- {\it noise}) enako $S/N = 1$. \index{Razmerje signal proti šumu}
+\item Najmanjši merljivi signal je določen s svetlobno močjo, pri kateri postane razmerje med 
+signalom ($S$ --{\it signal}) in šumom ($N$ -- {\it noise}) enako $S/N = 1$. 
+\index{Razmerje signal proti šumu}
 \end{enumerate}
 
 \section{Termični detektorji}
 \index{Detektor!termični}
 Termične detektorje se zaradi njihovega razmeroma počasnega odziva uporablja predvsem 
 za merjenje vpadne moči in za detekcijo svetlobe tistih valovnih dolžin, za katere 
-ni drugih preprostih ali učinkovitih detektorjev. Pogosto se uporabljajo za termografske 
-kamere in v astronomiji.
+ni drugih preprostih ali učinkovitih detektorjev. Zelo so uporabni v daljnem
+infrardečem območju ali za detekcijo velikih vpadnih moči.
 
-Delovanje termičnih detektorjev temelji na spremembi temperature zaradi absorpcije svetlobe 
-(energije). Detektorji se med seboj razlikujejo predvsem v načinu pretvorbe spremembe 
+Delovanje termičnih detektorjev temelji na spremembi temperature zaradi absorpcije svetlobe. 
+Detektorji se med seboj razlikujejo predvsem v načinu pretvorbe spremembe 
 temperature v električni signal.\index{Absorpcija}
 Tipalo termičnih detektorjev mora biti pri vseh vrstah dobro počrnjeno, da absorbira
 svetlobo v čim širšem spektralnem območju. Čeprav je njihova občutljivost načeloma 
@@ -104,16 +106,14 @@ T - T_0 = \frac{P}{\Lambda}.
 \label{temp_sens}
 \end{equation}
 Občutljivost detektorja, ki je sorazmerna z razliko temperatur, 
-je torej obratno sorazmerna s toplotnimi izgubami. Za večjo občutljivost moramo
-toplotne izgube detektorja kar se da zmanjšati. 
-
+je obratno sorazmerna s toplotnimi izgubami. Za večjo občutljivost moramo
+toplotne izgube detektorja kar se da zmanjšati. \\
 Po enačbi~(\ref{TD1}) se temperatura približuje stacionarni vrednosti s časovno konstanto 
 \begin{equation}
-\tau = \frac{C}{\Lambda},
+\tau = \frac{C}{\Lambda}.
 \label{TermD_t}
 \end{equation}
-ki je ključni parameter za določanje odzivnega časa detektorja. Odzivni
-čas je sorazmeren s kapaciteto senzorja, zato so tipala praviloma 
+Odzivni čas je torej sorazmeren s kapaciteto senzorja, zato so tipala praviloma 
 zelo majhna.\index{Detektor!odzivni čas}
 
 Iz enačbe~(\ref{TermD_t}) sledi, da moramo za dosego čim krajšega odzivnega časa toplotne izgube 
@@ -140,15 +140,18 @@ Enačbi zadostimo, če izenačimo člene pred vsako spektralno komponento posebe
 \begin{equation}
 i \omega T_\omega = \frac{1}{C}\left(P_\omega - \Lambda T_\omega\right).
 \end{equation}
-Če vpeljemo odzivni čas $\tau$ (enačba~\ref{TermD_t}), \index{Detektor!odzivni čas}sledi
+Če vpeljemo odzivni čas $\tau$ (enačba~\ref{TermD_t}), \index{Detektor!odzivni čas}dobimo
 \begin{equation}
-T_\omega = \frac{1}{\Lambda}\left(\frac{1}{1+i \omega \tau}\right)P_\omega.
+T_\omega = \frac{1}{\Lambda}\left(\frac{1}{1+i \omega \tau}\right)P_\omega = 
+\frac{P_\omega}{\Lambda}\left(\frac{1-i \omega \tau}{1+(\omega \tau)^2}\right).
 \label{TermOdziv}
 \end{equation}
-Tako smo tudi z računom pokazali, da detektor sledi le počasnim spremembam signala. 
+Imaginarni del predstavlja fazni zamik, amplituda odziva, ki nas zanima, pa je 
+podana kot realni del. Iz računa je razvidno, zakaj detektor sledi le 
+počasnim spremembam signala. 
 \begin{definition}
-Pokaži, da je odziv termičnega detektorja na zelo kratek svetlobni sunek oblike 
-$P(t) = P_0 \delta(t-t_0)$ enak 
+Pokaži, da je odziv termičnega detektorja na sunek oblike 
+$P(t) = P_0 \delta(t-t_0)$
 \begin{equation}
 T(t)=\frac{iP_0}{\Lambda}e^{-(t-t_0)/\tau}.
 \end{equation}
@@ -175,18 +178,18 @@ tako da postane sistem neobčutljiv na morebitne spremembe temperature okolice.
 \label{fig:Bolometer-shema}
 \end{figure}
 
-Prednost bolometrov s termistorjem je približno linearna zveza med upornostjo in 
-temperaturo. Uporabljamo jih predvsem za merjenje večjih vpadnih moči, saj taki 
-detektorji niso zelo občutljivi ($R\sim 100~\si{\volt/\watt}$). 
-So pa robustni, stabilni in delujejo pri sobni 
-temperaturi. Odzivni časi so okoli $\tau \sim 1$--$20~\si{\milli\second}$. 
+Termistorji imajo približno eksponentno odvisnost upornosti od temperature, zato imajo bolometri
+s termistorjem razmeroma veliko občutljivost. Občutljivost pri neki tipični
+velikosti upora $R$ znaša $\mathcal{R}\sim 100~\si{\volt/\watt}$. Poleg tega so 
+robustni, stabilni in delujejo pri sobni temperaturi. Odzivni časi so okoli 
+$\tau \sim 1$--$20~\si{\milli\second}$. 
 Pri polprevodniških bolometrih upornost pojema eksponentno s temperaturo. 
 Primerni so za detekcijo teraherčnih valovanj,\index{Teraherčno valovanje} 
-vendar mora biti za ta namen 
-bolometer (npr. germanijev) hlajen s tekočim helijem. Tako lahko dosežemo
-občutljivosti večje od $R \sim 10^8~\si{\volt/\watt}$. Zelo občutljivi so tudi 
-detektorji s superprevodnimi tipali, saj je odvisnost upornosti od temperature v bližini
-prehoda v superprevodno stanje zelo velika ($R \sim 10^3~\si{\volt/\watt}$).
+vendar mora biti za ta namen bolometer (npr. germanijev) hlajen s tekočim helijem. 
+Tako lahko dosežemo občutljivosti večje od $\mathcal{R} \sim 10^8~\si{\volt/\watt}$. Zelo 
+občutljivi so tudi detektorji s superprevodnimi tipali, saj je odvisnost upornosti 
+od temperature v bližini prehoda v superprevodno stanje zelo velika 
+($\mathcal{R} \sim 10^3~\si{\volt/\watt}$).
 
 \begin{figure}[h]
 \centering
