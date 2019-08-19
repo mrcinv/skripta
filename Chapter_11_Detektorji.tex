@@ -150,10 +150,9 @@ Imaginarni del predstavlja fazni zamik, amplituda odziva, ki nas zanima, pa je
 podana kot realni del. Iz računa je razvidno, zakaj detektor sledi le 
 počasnim spremembam signala. 
 \begin{definition}
-Pokaži, da je odziv termičnega detektorja na sunek oblike 
-$P(t) = P_0 \delta(t-t_0)$
+Pokaži, da je odziv termičnega detektorja na sunek oblike $P(t) = P_0\delta(t-t_0)$
 \begin{equation}
-T(t)=\frac{iP_0}{\Lambda}e^{-(t-t_0)/\tau}.
+T(t)=\frac{P_0}{\tau\Lambda}e^{-(t-t_0)/\tau}.
 \end{equation}
 \end{definition}
 
@@ -206,10 +205,10 @@ referenčnega, pa zaščitimo pred svetlobo. Zaradi vpadne svetlobe se počrnjen
 segreje, med obema spojema nastane temperaturna razlika in zaradi termoelektričnega 
 pojava tudi električna napetost, ki jo lahko merimo. Pri tem pazimo, da je električna prevodnost
 vodnikov čim večja, njihova toplotna prevodnost pa čim manjša. Odzivni čas termočlenov je 
-$\tau \sim 10$--$20~\si{\milli\second}$, občutljivost pa $R \sim 10~\si{\volt/\watt}$.
+$\tau \sim 10$--$20~\si{\milli\second}$, občutljivost pa $\mathcal{R} \sim 10~\si{\volt/\watt}$.
 Ker so napetosti, ki se pojavijo med stikoma, razmeroma majhne 
-($\sim 10~\si{\micro\volt/K}$) pogosto vežemo več (nekaj deset) termočlenov zaporedno v
-termobaterijo. Občutljivost s tem naraste na $R \sim 200~\si{\volt/\watt}$, podaljša 
+($\sim 100~\si{\micro\volt/K}$) pogosto vežemo več (nekaj deset) termočlenov zaporedno v
+termobaterijo. Občutljivost s tem naraste na $\mathcal{R} \sim 200~\si{\volt/\watt}$, podaljša 
 pa se časovna konstanta na $\tau \sim 10$--$2000~\si{\milli\second}$. Prednost termočlenov je,
 da za svoje delovanje ne potrebujejo zunanjega napajanja. 
 
@@ -222,15 +221,15 @@ ploščice piroelektrične snovi med dvema elektrodama oziroma ploščama konden
 Ko se ploščica zaradi absorbirane svetlobe segreje, se ji spremeni polarizacija. Med 
 elektrodama se pojavi premikalni tok, ki ga merimo na merilnem uporniku.
 
-Zveza med spremembo temperature in spremembo polarizacije je
+Zveza med spremembo temperature in spremembo električne polarizacije $P_\mathrm{el}$ je
 \begin{equation}
-dP = a\, dT,
+dP_\mathrm{el} = a\, dT,
 \end{equation}
 kjer je $a$ piroelektrični koeficient. 
 
 Med elektrodama s površino $S$ preteče naboj
 \begin{equation}
-de = I\, dt = S\, dP = S a\, dT.
+de = I\, dt = S\, dP_\mathrm{el} = S a\, dT.
 \end{equation}
 Tok skozi tipalo je
 \begin{equation}
@@ -240,10 +239,10 @@ I = S a \frac{dT}{dt}.
 Piroelektrični detektor je torej občutljiv na časovni odvod temperature detektorja, 
 s tem pa tudi na spreminjanje vpadne svetlobne moči. V stacionarnem stanju 
 detektor ne proizvaja električnega toka, zato moramo za merjenje 
-konstantnega svetlobnega toka vpadno svetlobo najprej modulirati.
+konstantnega svetlobnega toka vpadno svetlobo modulirati.
 Navadno to naredimo kar z mehanskim zaklopom. Piroelektrični detektorji
 se večinoma uporabljajo kot preprosti infrardeči detektorji.\index{Infrardeče valovanje}
-Njihova občutljivost je $R \sim 1~\si{\micro\ampere/\watt}$, odzivni čas pa odvisen od 
+Njihova občutljivost je $\mathcal{R} \sim 1~\si{\micro\ampere/\watt}$, odzivni čas pa je odvisen od 
 upornika v vezju, ampak lahko doseže vrednosti $\tau \sim 10~\si{\micro\second}$.
 
 Poglejmo temperaturni odziv na tipalu. Izhajamo iz enačb~(\ref{TermTF}), (\ref{TermOdziv}) in
@@ -255,14 +254,15 @@ e^{i\omega t}d\omega.
 \end{equation}
 Sledi 
 \begin{equation}
-I_\omega = \frac{i \omega\, SaP_\omega/\Lambda}{1 + i \omega \tau}.
+I_\omega = \frac{i \omega\, SaP_\omega/\Lambda}{1 + i \omega \tau} = 
+\frac{SaP_\omega}{\Lambda}\frac{(\omega^2\tau + i \omega)}{1+(\omega\tau)^2}.
 \end{equation}
 Pri majhnih frekvencah tok narašča, pri velikih frekvencah pa postane neodvisen od
 frekvence modulacije vpadne svetlobe. Vendar to še ne pomeni, da lahko moduliramo s poljubno 
 veliko frekvenco. Poleg relaksacijskega časa detektorja ima namreč karakteristični čas tudi
 elektronsko vezje, ki določa zgornjo mejo za frekvenco modulacije. 
-Ta je enak $\tau_e = R_eC_e$, pri čemer
-sta $R_e$ upornost sistema in $C_e$ električna kapaciteta detektorja. 
+Ta je enak $\tau_e = RC_e$, pri čemer
+sta $R$ upornost sistema in $C_e$ električna kapaciteta detektorja. 
 \begin{figure}[h]
 \centering
 \def\svgwidth{90truemm} 
@@ -315,8 +315,8 @@ $E_a$ pa elektronsko afiniteto. }
 \end{figure}
 
 Zunanji fotoefekt poteka tudi v polprevodnikih (slika~\ref{fig:Nivoji}\,b),
-v katerih foton izbije elektron iz valenčnega pasu. Njegova energija mora biti 
-večja od vsote energije reže in elektronske afinitete, da lahko elektron zapusti snov. 
+v katerih foton izbije elektron iz valenčnega pasu. Da lahko elektron zapusti snov,
+mora biti njegova energija večja od vsote energije reže in elektronske afinitete, 
 Z uporabo ustreznih materialov lahko dosežemo negativno elektronsko afiniteto
 in je zato potrebna energija fotona kar enaka širini energijske reže.
 
@@ -346,15 +346,15 @@ fotoprevodniki, polprevodniške in plazovne fotodiode.\index{Fotodioda!vakuumska
 \index{Fotodioda!plazovna}
 
 Za zdaj smo napisali, da fotoefekt poteče, ko foton izbije elektron. Vendar pri tem ni 
-uspešen prav vsak foton, zato vpeljemo še en parameter, ki ga imenujemo 
+uspešen prav vsak foton, zato vpeljemo še parameter, ki ga imenujemo 
 \index{Kvantni izkoristek}kvantni izkoristek $\eta$.
 Ta parameter pove verjetnost, da vpadni foton z valovno dolžino $\lambda$ 
 oziroma frekvenco $\nu$ iz snovi izbije elektron. 
 Električni tok, ki steče pri vpadni svetlobni moči $P$, je tako
 \boxeq{11:eta}{
-I = \eta e_0 n_F = \eta \frac{e_0 P}{h \nu},
+I = \eta e_0 \frac{n_F}{t} = \eta \frac{e_0 P}{h \nu},
 }
-kje $n_F$ označuje število vpadnih fotonov na časovno enoto.
+kje $n_F$ označuje število vpadnih fotonov v času $t$. 
 Kvantni izkoristek je močno odvisen od valovne dolžine vpadne svetlobe in seveda
 od snovi, na katero svetloba vpada. Za fotone z energijo, ki je manjša od izstopnega 
 dela oziroma od širine energijske reže, je kvantni izkoristek praktično enak nič, 
@@ -363,7 +363,7 @@ obravnavali pri posameznih primerih detektorjev.
 
 \begin{remark}
 V praksi ločimo dve vrsti kvantnega izkoristka: zunanji in notranji. Zunanji je vpeljan kot 
-razmerje med številom izbitih elektronov in fotonov, ki vpadejo na detektor. Ker pa se 
+razmerje med številom izbitih elektronov in fotonov, ki vpadejo na detektor. Ker se 
 ob vpadu na detektor vedno nekaj fotonov odbije ali siplje, vpeljemo še notranji kvantni 
 izkoristek kot razmerje števila elektronov in fotonov, ki se dejansko absorbirajo v detektorju.
 Zunanji izkoristek je vedno manjši od notranjega in je neke vrste efektivni 
@@ -372,7 +372,7 @@ izkoristek.\index{Kvantni izkoristek!notranji}\index{Kvantni izkoristek!zunanji}
 
 Iz enačbe~(\ref{11:eta}) hitro izračunamo še občutljivost detektorja \index{Detektor!občutljivost}
 \boxeq{11:R}{
-R = \frac{I}{P} = \frac{\eta e_0 }{h \nu}.
+\mathcal{R} = \frac{I}{P} = \frac{\eta e_0 }{h \nu}.
 }
 
 \section{Vakuumska fotodioda (fotocelica) in fotopomnoževalka}
@@ -400,9 +400,7 @@ Območje detekcije fotocelice je določeno z izstopnim delom kovine, iz
 katere fotoni izbijajo elektrone. Potrebno energijo fotona lahko precej zmanjšamo, 
 če namesto čistih kovin uporabimo bi- ali večalkalne katode 
 (npr. Na$_2$KSbCs), ali pa polprevodnike, na katere nanesemo tanko plast 
-Cs ali Cs$_2$O. S tem ustvarimo negativno elektronsko afiniteto in 
-izstopno delo je enako širini energijske
-reže, kar omogoča zaznavanje svetlobe do valovnih dolžin okoli $1600~\si{\nano\metre}$. 
+Cs ali Cs$_2$O. To omogoča zaznavanje svetlobe do valovnih dolžin okoli $1600~\si{\nano\metre}$. 
 Na ultravijoličnem območju je delovanje
 omejeno na okoli $160~\si{\nano\metre}$ zaradi neprepustnosti stekla, 
 iz katerega je narejena bučka.\index{Infrardeče valovanje}\index{Ultravijolično valovanje}
@@ -421,13 +419,13 @@ Enostavnost in hitrost sta torej prednosti fotocelice,
 njena glavna pomanjkljivost pa je razmeroma nizek kvantni izkoristek. 
 Izkoristek je seveda močno odvisen od valovne dolžine vpadnega valovanja in snovi, iz 
 katere je narejena katoda. Največje vrednosti, ki jih dosega, so okoli $40~\%$, 
-pogosto pa več velikostnih redov manj. 
+pogosto pa bistveno manj (slika~\ref{fig:Fotodioda}). 
 Vrednosti so razmeroma nizke, saj se izbiti elektroni gibljejo v vse
-smeri in se pogosto sipljejo, preden sploh dosežejo površino. 
+smeri in se pogosto sipljejo, preden sploh dosežejo površino katode. 
 
-Dodaten problem fotocelic je, da pri končnih temperaturah prihaja do spontane oddaje elektrona.
+Dodaten problem fotocelic je, da pri končnih temperaturah prihaja do spontane oddaje elektronov.
 Nekaj električnega toka zato teče tudi v popolni temi. To je tako imenovani temni 
-tok fotodiode\index{Temni tok} 
+tok\index{Temni tok} 
 in tipično dosega vrednosti okoli $10^{-15}~\si{\ampere}$, lahko pa tudi do več $\si{nA}$. 
 Za občutljive meritve je treba zato vakuumsko fotodiodo hladiti. 
 
@@ -435,13 +433,13 @@ Za občutljive meritve je treba zato vakuumsko fotodiodo hladiti.
 \begin{definition}
 Izračunaj občutljivost fotocelice na osnovi GaAs\index{GaAs} 
 za valovanje z valovno dolžino $\lambda=620$~nm.
-Pri tem kvantni izkoristek odčitaj s slike~(\ref{fig:Fotodioda}).
+Kvantni izkoristek odčitaj s slike~(\ref{fig:Fotodioda}).
 \end{definition}
 
 \subsection*{Fotopomnoževalka}
 \index{Fotopomnoževalka}
 Fotopomnoževalke so fotocelice z vgrajenim ojačenjem. Ojačenje dosežemo tako, da 
-izbit fotoelektron najprej pospešimo z napetostjo $100$--$150~\si{\volt}$ na vmesno elektrodo, 
+izbit elektron najprej pospešimo z napetostjo $100$--$150~\si{\volt}$ na vmesno elektrodo, 
 tako imenovano dinodo, iz katere izbije več ($\sim 5$--$10$, redkeje tudi do 40) 
 sekundarnih elektronov. Izbiti elektroni
 potujejo do naslednje dinode, ki je pod višjo pozitivno napetostjo (tipično okoli $100~\si{\volt}$
@@ -450,7 +448,7 @@ ki je pod še višjo napetostjo ...
 Pomnoževanje se večkrat ponovi (navadno okoli desetkrat),
 število elektronov eksponentno narašča in na en vpadni foton lahko na anodo vpade $10^9$ elektronov. 
 Občutljivost fotopomnoževalk je  precej večja od občutljivosti vakuumske fotodiode in
-dosega odzivnost na anodi do $R\sim 10^6~\si{\ampere/\watt}$.
+dosega odzivnost na anodi do $\mathcal{R}\sim 10^6~\si{\ampere/\watt}$.
 Fotopomnoževalka tako omogoča štetje posameznih fotonov, po drugi strani pa moramo pri 
 navadnih osvetlitvah paziti, da fotopomnoževalke ne osvetlimo preveč. 
 \begin{figure}[h]
@@ -479,15 +477,15 @@ ampak ga iz valenčnega pasu dvigne v prevodnega. Pri tem nastane par elektron--
 Ob priključeni napetosti se nosilci naboja začnejo premikati in steče tok, 
 ki ga merimo. Z naraščajočim številom fotonov se prevodnost fotoprevodnika veča, 
 zato lahko z merjenjem upornosti določimo 
-intenziteto vpadle svetlobe. Tipično so fotoprevodniki iz polprevodnikov, 
+intenziteto vpadne svetlobe. Tipično so fotoprevodniki iz polprevodnikov, 
 lahko pa so tudi iz izolatorjev. 
 
 Da foton lahko vzbudi elektron iz valenčnega v prevodni pas, mora biti njegova energija dovolj velika. 
 V čistih (nedopiranih) polprevodnikih to pomeni, da mora biti energija fotona večja od 
-širine reže. Za silicij\index{Silicij}, na primer, je širina reže 1,1~eV, 
-s čimer lahko zaznavamo svetlobo z valovno dolžino do okoli 
-$1,1~\si{\micro\meter}$, za germanij\index{Germanij} 0,67~eV ($1,8~\si{\micro\meter}$) in za PbS 0,37~eV
-\index{PbS}($3,4~\si{\micro\meter}$). 
+širine reže. Za silicij\index{Silicij}, na primer, je širina reže $1,1$~eV in največja
+valovna dolžina, ki jo še lahko zaznavamo, je okoli 
+$1,1~\si{\micro\meter}$. V germaniju\index{Germanij} je reža $0,67$~eV (do $1,8~\si{\micro\meter}$) in v 
+PbS $0,37$~eV \index{PbS}(do $3,4~\si{\micro\meter}$). 
 Za detekcijo daljših valovnih dolžin ne uporabljamo polprevodnikov
 z manjšo energijsko režo, ampak dopirane polprevodnike (slika~\ref{fig:FPrevodnik}). 
 Z dodatnim energijskim nivojem med valenčnim in prevodnim pasom občutno zmanjšamo 
@@ -503,18 +501,18 @@ valovanje}
 \input{slike/11_FPrevodnik.pdf_tex}
 \caption{Shema prehoda elektrona v fotoprevodniku: prehod v čistem polprevodniku (a), 
 $n$-dopiranem polprevodniku (b) in $p$-dopiranem polprevodniku (c). 
-Z dopiranjem povečamo območje delovanja detektorja v infrardečem delu. }
+Z dopiranjem povečamo območje delovanja detektorja v infrardečem delu spektra. }
 \label{fig:FPrevodnik}
 \end{figure}
 
 Izračunajmo električni tok, ki steče skozi fotoprevodnik, ko nanj posvetimo. 
-Spomnimo se, da je gostota električnega toka $j$ enaka vsoti prispevkov elektronov 
+Gostota električnega toka $j$ je enaka vsoti prispevkov elektronov 
 \index{Gostota električnega toka} in vrzeli
 \begin{equation}
 j = e_0 n_v v_v + e_0 n_e v_e,
 \end{equation}
 pri čemer $n_v$ in $n_e$ pomenita gostoto vrzeli in elektronov v snovi, $v_v$ in $v_e$ pa 
-hitrost vrzeli in elektronov. Hitrost premikanja 
+njihove hitrosti. Hitrost premikanja 
 je sorazmerna z električno poljsko jakostjo $E$, ki je priključena
  na vzorec, sorazmernostni faktor pa je \index{Gibljivost} gibljivost $\beta$. Ko posvetimo na vzorec, 
  se $n_v$ in $n_e$ povečata za $\Delta n_v$ in $\Delta n_e$,
@@ -523,7 +521,7 @@ gostota električnega toka pa naraste za
 \Delta j = e_0 \Delta n_v v_v + e_0 \Delta n_e v_e.
 \label{FP_j}
 \end{equation}
-V stacionarnem stanju se število nosilcev naboja ne spreminja in velja
+V stacionarnem stanju se število nosilcev naboja ne spreminja in velja (enačba~\ref{11:eta})
 \begin{equation}
 0 = \frac{dn_v}{dt} = \frac{\eta_v P}{h \nu (Sl)} - \frac{\Delta n_v}{\tau_v}
 \end{equation}
@@ -538,7 +536,7 @@ e_0 \frac{\eta_e P \tau_e}{h \nu (Sl)} \beta_e  E.
 Če vpeljemo še napetost $U = E/l$, zapišemo celotni tok skozi fotoprevodnik zaradi 
 vpadle svetlobe kot
 \begin{equation}
-\Delta I = \Delta j S = \frac{e_0 U P }{h \nu l^2} \left(\eta_v \tau_v \beta_v + 
+\Delta I = S\Delta j = \frac{e_0 U P }{h \nu l^2} \left(\eta_v \tau_v \beta_v + 
 \eta_e \tau_e \beta_e \right).
 \end{equation}
 Pogosto je gibljivost elektronov znatno večja od gibljivosti vrzeli (npr.
@@ -551,24 +549,24 @@ pri čemer je koeficient ojačenja
 \begin{equation}
 G = \frac{\beta_e \tau_e U}{l^2} = \frac{\tau_e}{\tau}.
 \end{equation}
-Vpeljali smo še čas preleta $\tau = v_e/l = \beta_e E/l = \beta_e U/l^2$.
-
+Vpeljali smo še čas preleta $\tau = l/v_e = l/\beta_e E = l^2/\beta_e U$.
+\newpage
 Koeficient $G$ opiše ojačenje signala.\index{Ojačenje signala} Njegova vrednost je odvisna od 
 vrste snovi in gibljivosti nosilcev naboja v njej, velikosti
 detektorja in tudi priključene napetosti, zato lahko $G$ zavzame vrednosti od manj kot ena pa
 vse do $10^6$. 
 
-\begin{definition}
-Izračunali smo spremembo toka, če fotoprevodnik osvetlimo s konstantno vpadno močjo. Pokaži, da
- je v primeru periodično spremenljive moči odziv enak
- \begin{equation}
-\Delta I_\omega = G \left( \frac{e_0 \eta_e}{h\nu}\right) \frac{P_\omega}{1+i \omega \tau_e}.
- \end{equation}
- 
-\end{definition}
+% \begin{definition}
+% Izračunali smo spremembo toka, če fotoprevodnik osvetlimo s konstantno vpadno močjo. Pokaži, da
+%  je v primeru periodično spremenljive moči odziv enak
+%  \begin{equation}
+% \Delta I_\omega = G \left( \frac{e_0 \eta_e}{h\nu}\right) \frac{P_\omega}{1+i \omega \tau_e}.
+% %  \end{equation}
+%  
+% \end{definition}
 
 Fotoprevodniki so uporabni na širokem spektralnem območju, od ultra\-vijoličnega
-do daljne infra\-rdečega valovanja.\index{Ultravijolično valovanje}\index{Infrardeče valovanje} 
+do daljnega infra\-rdečega valovanja.\index{Ultravijolično valovanje}\index{Infrardeče valovanje} 
 V vidnem in bližnjem infrardečem delu svetlobe se 
 uporablja pretežno silicijeve fotoprevodnike, germanijeve\index{Silicij}\index{Germanij}
 pa za valovne dolžine do $1,8~\si{\micro\meter}$. Za zaznavanje valovnih dolžin med okoli 
@@ -577,17 +575,18 @@ pri še daljših valovnih dolžinah pa se uporablja germanij, dopiran z zlatom, 
 Kvantni izkoristek takih detektorjev je razmeroma velik ($\eta = 0,5$ za Ge:Cu), vendar
 je lahko faktor ojačenja $G \ll 1$ (npr. $G = 0,03$ za Ge:Hg). 
 
-Hitrost odziva fotoprevodnika je odvisna od časa preleta nosilcev naboja,
-ki je določen z geometrijo detektorja, in od karakterističnega časa elektronskega vezja. 
+Hitrost odziva fotoprevodnika je odvisna od časa preleta nosilcev naboja $\tau$,
+ki je določen z geometrijo detektorja in priključene napetosti, 
+in od karakterističnega časa elektronskega vezja. 
 Tipični odzivni časi so okoli mikrosekunde, vendar lahko sežejo
-tudi do desetin milisekund, ali pa v izjemnih primerih do nanosekund za zelo majhne detektorje.
+tudi do desetin milisekund, ali v izjemnih primerih do nanosekund za zelo majhne detektorje.
 S skrajšanjem rekombinacijskega časa lahko sicer skrajšamo odzivni čas detektorja, 
 vendar hkrati zmanjšamo tudi njegovo občutljivost.
 
 \begin{remark}
-Fotoprevodni detektorji so narejeni iz zelo tankih plasti fotoprevodnika, saj močno absorbira
-svetlobo. Tako za absorpcijo $70$--$90\%$ svetlobe zadošča le $1$--$2~\si{\micro\meter}$ debela plast.
-Elektrode se pogosto prepletajo, da se zmanjša dolžina preleta $l$ in poveča ojačenje $G$. 
+Fotoprevodni detektorji so narejeni iz zelo tankih plasti fotoprevodnika, saj fotoprevodnik močno absorbira
+svetlobo. Tako za absorpcijo $70$--$90\%$ vpadne svetlobe zadošča le $1$--$2~\si{\micro\meter}$ debela plast.
+Elektrode se pogosto prepletajo, da se zmanjša dolžina preleta $l$ in s tem poveča ojačenje signala $G$. 
 \end{remark}
 
 \section{Polprevodniške fotodiode}
@@ -596,7 +595,7 @@ so polprevodniške fotodiode.\index{Polprevodniška fotodioda|see {Fotodioda, po
 Te so danes najpogostejša in najbolj razširjena vrsta detektorjev svetlobe, uporabljamo jih med
 drugim tudi v fotoaparatih in sončnih celicah. Fotodiode so sestavljene iz $p$- in $n$-dopiranega 
 polprevodnika ($p$-$n$ fotodiode) ali pa je med njima še plast nedopiranega (intrinzičnega) 
-polprevodnika ($p$-$i$-$n$ fotodioda). Ko svetloba vpade na spoj različno dopiranih polprevodnikov,
+polprevodnika ($p$-$i$-$n$ fotodioda). Ko svetloba vpada na spoj različno dopiranih polprevodnikov,
 se fotoni absorbirajo in nastajajo \index{Fotodioda!$p$-$n$}\index{Fotodioda!$p$-$i$-$n$}
 pari elektron--vrzel. Nosilci naboja potujejo v različnih smereh, elektroni stečejo v eno smer,
 vrzeli pa v nasprotno. Odvisno od načina delovanja merimo tok, ki steče skozi 
@@ -605,7 +604,7 @@ spoj, ali napetost, ki se pojavi na spoju.
 Spektralni odziv\index{Detektor!spektralni odziv} 
 fotodiod je odvisen od energijske reže polprevodnika, 
 iz katerega je fotodioda narejena.
-Silicijeve \index{Silicij} fotodiode so tako uporabne za zaznavanje valovnih dolžin do okoli
+Silicijeve \index{Silicij} fotodiode so tako uporabne za zaznavanje valovnih dolžin do največ okoli
 $1,1~\si{\micro\meter}$, za večje valovne dolžine (do $1,6~\si{\micro\meter}$) 
 uporabljamo InGaAs.\index{InGaAs} Izkoristek fotodiod
 je navadno zelo velik in presega $50~\%$, pri energiji fotonov blizu energijske reže 
@@ -631,10 +630,10 @@ v fotovoltaičnem načinu (d)}
 
 \subsection*{Spoj $\textbf{\textit{p}}$-$\textbf{\textit{n}}$}
 \index{Spoj $p$-$n$}
-Ponovimo najprej, kaj se zgodi ob spoju $p$- in $n$- tipa polprevodnika. Pri tem tip $p$ označuje
+Obnovimo, kaj se zgodi ob spoju $p$- in $n$- tipa polprevodnika. Pri tem tip $p$ označuje
 polprevodnik, dopiran s trivalentnimi akceptorskimi primesmi, ki v snovi ustvarijo vrzeli.
 Energijski nivo primesi je malo nad vrhom valenčnega pasu, zato je Fermijeva energija
-polprevodnika premaknjena navzdol proti valenčnem pasu (slika~\ref{11_PN1}\,a). 
+polprevodnika premaknjena navzdol proti valenčnemu pasu (slika~\ref{11_PN1}\,a). 
 Po drugi strani tip $n$ označuje polprevodnike s petvalentnimi \index{Polprevodnik!tip $p$}
 \index{Polprevodnik!tip $n$}
 donorskimi primesmi, ki v snov prinesejo dodatne elektrone. Njihov energijski nivo je malo 
@@ -675,7 +674,7 @@ strani $p$.}
 \label{11_PNU}
 \end{figure}
 
-Priključimo zdaj na diodo napetost $U$, tako da je pozitivna na $p$ strani diode. Takrat 
+Priključimo na tako diodo napetost $U$, tako da je pozitivna na $p$ strani diode. Takrat 
 pravimo, da smo na diodo priključili napetost v prevodni smeri.\index{Fotodioda!prevodna smer}
 Ker lahko energijske pasove razumemo kot potencialno energijo elektronov, 
 s priključeno pozitivno napetostjo zmanjšamo razliko potencialnih energij 
@@ -709,7 +708,7 @@ vrednosti dosegamo le ob močnem hlajenju.
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/11_IU.pdf_tex}
-\caption{$I(U)$ karakteristika neosvetljene fotodiode (modra črta)
+\caption{Karakteristika $I(U)$  neosvetljene fotodiode (modra črta)
 in osvetljene fotodiode (rdeče črte). Naraščajoča intenziteta vpadne svetlobe
 krivuljo premika navzdol. S simboli so označene točke delovanja za različne načine.}
 \index{Fotodioda!zaporna smer}
@@ -718,17 +717,17 @@ krivuljo premika navzdol. S simboli so označene točke delovanja za različne n
 \label{11_IU}
 \end{figure}
  
-\begin{definition}
-Izpelji karakteristično enačbo diode (enačba~\ref{11:dioda}) in pokaži, da
-je zaporni tok \index{Temni tok}
-\beq
-I_0 = e_0 S \left(\frac{D_p}{L_p}p_{0n}+ \frac{D_n}{L_n}n_{0p}\right),
-\eeq
-kjer je $S$ presek spoja, $D$ sta difuzijska koeficienta, $L$ je difuzijska
-dolžina posameznih nosilcev naboja, $p$ in $n$ pa sta koncentraciji manjšinskih
-nosilcev naboja v ravnovesju. Ugotovi, zakaj je zaporni tok močno odvisen od
-temperature. 
-\end{definition}
+% \begin{definition}
+% Izpelji karakteristično enačbo diode (enačba~\ref{11:dioda}) in pokaži, da
+% je zaporni tok \index{Temni tok}
+% \beq
+% I_0 = e_0 S \left(\frac{D_p}{L_p}p_{0n}+ \frac{D_n}{L_n}n_{0p}\right),
+% \eeq
+% kjer je $S$ presek spoja, $D$ sta difuzijska koeficienta, $L$ je difuzijska
+% dolžina posameznih nosilcev naboja, $p$ in $n$ pa sta koncentraciji manjšinskih
+% nosilcev naboja v ravnovesju. Ugotovi, zakaj je zaporni tok močno odvisen od
+% temperature. 
+% \end{definition}
 
  
 \subsection*{Delovanje fotodiode}
@@ -738,19 +737,19 @@ lahko vzbudi elektron iz valenčnega v prevodni pas in nastane par elektron--vrz
 električnega polja na stran $n$, vrzel pa na stran $p$ (slika~\ref{11_PNU}\,c). 
 Premik nosilcev naboja, do katerega pride zaradi absorpcije fotona, torej vedno
 povzroči pojav električnega toka v zaporni smeri. \index{Karakteristika fotodiode}
-Njegova velikost je odvisna od moči vpadne svetlobe in jo lahko zapišemo kot  
+Njegova velikost je odvisna od moči vpadne svetlobe in jo zapišemo kot 
+(enačba~\ref{11:eta})
 \boxeq{11:if}{
-I_f = e_0 \eta n_F = e_0 \frac{\eta P}{h \nu},
+I_f = e_0 \frac{\eta P}{h \nu},
 }
-pri čemer smo z $n_F$ označili število vpadnih fotonov na časovno enoto, 
-$\eta$ je kvantni izkoristek, $P$ označuje moč vpadne svetlobe, $\nu$ pa njeno
-frekvenco. Celoten tok skozi fotodiodo je vsota diodnega 
-in svetlobnega toka, zato karakteristiko fotodiode zapišemo kot 
+pri čemer je $\eta$ kvantni izkoristek, $P$ označuje moč vpadne svetlobe, $\nu$ pa njeno
+frekvenco. Celoten tok skozi fotodiodo je vsota diodnega toka
+in toka zaradi vpadne svetlobe, zato karakteristiko fotodiode zapišemo kot 
 \boxeq{11:fotodioda}{
 I = I_0 (e^{e_0 U/kT}-1) - I_f.
 }
 Vpadna svetloba povzroči zmanjšanje električnega toka skozi diodo, 
-kar na sliki~(\ref{11_IU}) predstavlja premik karakteristike diode v vertikalni 
+kar na sliki~(\ref{11_IU}) predstavlja premik karakteristične krivulje diode v vertikalni 
 smeri navzdol (rdeče črte). Naraščajoča intenziteta svetlobe premika krivuljo proti 
 bolj negativnim vrednostim tokov. 
 
@@ -765,23 +764,22 @@ katere vrednost lahko izračunamo iz karakteristične enačbe diode, če upošte
 \begin{equation}
 U_p = \frac{kT}{e_0}\ln \left(1+ \frac{I_f}{I_0}\right).
 \end{equation}
-Pri večji intenziteti vpadne svetlobe, ko se karakteristična krivulja (slika~\ref{11_IU}) 
-pomika navzdol, se rešitev gornje enačbe po abscisi premika proti desni.
+Pri večji intenziteti vpadne svetlobe, ko se karakteristična krivulja 
+pomika navzdol (slika~\ref{11_IU}), se rešitev gornje enačbe po abscisi premika proti desni.
 Večja intenziteta vpadne svetlobe tako pomeni večjo 
 pozitivno napetost na diodi, zato tudi odzivnost v tem primeru merimo v $\si{\volt}/\si{\watt}$.
 Pri dovolj velikih vpadnih močeh je zveza med vpadno močjo in fotonapetostjo
 logaritemska. Fotovoltaična oziroma odprta vezava fotodiode omogoča 
-zaznavanje vpadne moči v zelo širokem intervalu, najpogosteje pa se ta 
-način delovanja uporablja v sončnih celicah. 
+zaznavanje vpadne moči v zelo širokem intervalu. 
 
 Drugi način delovanja je kratko sklenjena fotodioda (slika~\ref{11_PD}\,c).
-\index{Fotodioda!kratko sklenjena} Napetost na diodi je
+V tem primeru je \index{Fotodioda!kratko sklenjena} napetost na diodi 
 vedno enaka nič, prav tako je enak nič tok skozi diodo v odsotnosti svetlobe. 
 Ko posvetimo na diodo, nastanejo pari elektron--vrzel in steče električni tok.
 Tok skozi tokokrog je v primeru kratko sklenjene diode kar enak toku 
 zaradi vpadne svetlobe $I_f$ (slika~\ref{11_IU}).
 
-Najbolj splošno uporabljen način za detekcijo svetlobe je način, v katerem 
+Najbolj splošno uporaben način za detekcijo svetlobe je način, v katerem 
 napetost na diodo priključimo v zaporni smeri (slika~\ref{11_PD}\,b).\index{Fotodioda!zaporna smer}
 Takrat se tok skozi diodo spreminja linearno z močjo vpadne svetlobe
 (enačba~\ref{11:fotodioda}), odziv pa je hitrejši
@@ -789,9 +787,19 @@ kot pri kratko sklenjeni diodi. Če dodamo v tokokrog zaporedno vezan še nek up
 spremeni. Zvezo med napetostjo in tokom zapišemo kar z Ohmovim zakonom $U = -|U_0|-RI$. 
 Na sliki to predstavlja premico, ki seka karakteristične krivulje. Ker upornost
 upornika ni enaka nič, se po grafu (slika~\ref{11_IU}) ne premikamo več navpično navzdol, 
-ampak pod kotom proti desni. 
+ampak pod kotom proti desni. Način, ko v tokokrog s fotodiodo vežemo še Ohmski upor,
+se uporablja tudi v sončnih celicah. 
 
-Prednosti tega načina merjenja je več. Zaradi priključene napetosti se zmanjša čas preleta
+\begin{definition}
+\label{naloga:optR}
+V sončnih celicah želimo iz vpadne svetlobne moči pridobiti kar največ električne moči.
+Pokaži, da električna moč na uporniku, preko katerega sklenemo fotodiodo, pri nekem $R$
+zavzame največjo vrednost. Poišči $R$ za primer $I_0 = 10^{-9}~\si{A}$, $I_f = 10^{-3}~\si{A}$ 
+in $T=300~\si{K}$.
+\end{definition}
+
+Prednosti merjenja ob napetosti v zaporni smeri je več. 
+Zaradi priključene napetosti se zmanjša čas preleta
 nosilcev naboja in posledično se zmanjša odzivni čas detektorja.\index{Detektor!odzivni čas}
 Dodatno se poveča
 širina izpraznjenega pasu (naloga~\ref{naloga:depl}), kar zmanjša kapaciteto spoja 
@@ -801,12 +809,12 @@ izpraznjena plast vodi tudi do večjega območja, v katerem lahko pride do absor
 
 \begin{definition}
 \label{naloga:depl}
-Pokaži, da je debelina izpraznjene plasti enaka $d = d_p+d_n$, kjer sta
+Pokaži, da je debelina izpraznjene plasti je enaka $d = d_p+d_n$, kjer sta 
 \beq
 d_{p,n}= \sqrt{\frac{2\epsilon \varepsilon_0(\Delta E_0-e_0U)}{e_0}\frac{(N_d/N_a)^{\pm 1}}{N_a+N_d}}.
 \eeq
-Pri tem $N_a$ in $N_d$ označujeta gostoti akceptorskih in donorskih atomov, $\Delta E_0$ je ravnovesni potencialni
-skok med stranjo $n$ in $p$, $U$ pa priključena napetost.
+Pri tem $N_a$ in $N_d$ označujeta gostoti akceptorskih in donorskih atomov, $\Delta E_0$ je ravnovesni potencialni skok med stranjo $n$ in $p$, $U$ pa priključena napetost. \\ Namig: upoštevaj zvezo
+$d_n N_d = d_p N_a$ in zapiši Gaussov zakon.
 \end{definition}
 
 Povejmo še nekaj o zgradbi fotodiode. Shema preproste fotodiode je prikazana na 
@@ -828,7 +836,8 @@ nadomestimo z zelo tanko plastjo kovine (slika~\ref{11_shema}\,c). Te so uporabn
 visokih energijah (v UV območju), \index{Fotodioda!Schottkyjeva}\index{Ultravijolično valovanje}
 saj je v navadnih fotodiodah absorpcija za te valovne dolžine prevelika, na površini pride do 
 rekombinacije in zmanjšanja kvantnega izkoristka. Odziv Schottkyjevih fotodiod je zelo hiter, 
-saj nizka upornost kovine občutno zmanjša $RC$ konstanto spoja. Odzivni časi dosegajo pikosekundne vrednosti. 
+saj nizka upornost kovine občutno zmanjša $RC$ konstanto spoja. Odzivni časi 
+dosegajo pikosekundne vrednosti. 
 \end{remark}
 
 \begin{figure}[h]
@@ -837,11 +846,11 @@ saj nizka upornost kovine občutno zmanjša $RC$ konstanto spoja. Odzivni časi 
 \input{slike/11_shema.pdf_tex}
 \caption{Sheme fotodiod: $p$-$n$ fotodioda (a), $p$-$i$-$n$ fotodioda (b),  ki se od 
 navadne $p$-$n$ razlikuje po vmesni plasti intrinzičnega
-polprevodnika in Schottkyjeva fotodioda (c). 
+polprevodnika, in Schottkyjeva fotodioda (c). 
 \index{Fotodioda!$p$-$n$}
 \index{Fotodioda!$p$-$i$-$n$}
 Temno siva barva označuje elektrode, svetlo modra območje $n$, 
-temnejše modra območje $p$, svetlo siva pa območje intrinzičnega polprevodnika. }
+temnejša modra območje $p$, svetlo siva pa območje intrinzičnega polprevodnika. }
 \label{11_shema}
 \end{figure}
 
@@ -908,12 +917,12 @@ nepogrešljivi v fotoaparatih, videokamerah, mikroskopiji in astronomiji.
 Podrobneje bomo obravnavali dve vrsti matričnih detektorjev, to sta CCD 
 ({\it Charge-Coupled-Device})\footnote{Za izum CCD detektorjev sta Willard 
 S. Boyle in George E. Smith  leta 2009 prejela Nobelovo nagrado.} 
-in CMOS ({\it Complementary Metal-Oxide-Semicoductor})
-\footnote{Teh dveh oznak za detektorje praviloma ne prevajamo. Opisujeta 
+in CMOS ({\it Complementary Metal-Oxide-Semicoductor})\footnote{Teh 
+dveh oznak za detektorje praviloma ne prevajamo. Opisujeta 
 strukturo in delovanje naprave in nista vezani zgolj na detekcijo svetlobe.}. Obe vrsti
 detektorjev sta si po načinu zaznavanja svetlobe zelo podobni, razlika
 je predvsem v postopku, kako iz posameznega detektorja pridobimo podatek o številu 
-vpadlih fotonov oziroma številu vzbujenih elektronov.
+vpadnih fotonov oziroma številu vzbujenih elektronov.
 
 \begin{remark}
 Slikovni detektorji so seveda lahko sestavljeni tudi iz drugih vrst svetlobnih detektorjev, 
