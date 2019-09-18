@@ -316,7 +316,7 @@ $E_a$ pa elektronsko afiniteto. }
 
 Zunanji fotoefekt poteka tudi v polprevodnikih (slika~\ref{fig:Nivoji}\,b),
 v katerih foton izbije elektron iz valenčnega pasu. Da lahko elektron zapusti snov,
-mora biti njegova energija večja od vsote energije reže in elektronske afinitete, 
+mora biti njegova energija večja od vsote energije reže in elektronske afinitete.
 Z uporabo ustreznih materialov lahko dosežemo negativno elektronsko afiniteto
 in je zato potrebna energija fotona kar enaka širini energijske reže.
 
@@ -324,10 +324,11 @@ Izstopno delo za kovine $\Phi$ je od okoli $2~\si{eV}$ za cezij pa do okoli
 $6~\si{eV}$ za platino. 
 Ustrezna valovna dolžina svetlobe, ki še povzroči fotoefekt, je 
 \boxeq{eq:fefekt}{
-\lambda \leq \frac{hc}{\Phi},
+\lambda \leq \frac{hc}{\Phi}.
 }
-kar je $580~\si{nm}$ za primer cezija in samo okoli $200~\si{nm}$ 
-za platino. Da lahko fotoefekt izkoristimo za detektorje vidne svetlobe, 
+V ceziju tako povzroči fotoefekt svetloba z valovno dolžino, krajšo od $580~\si{nm}$,
+v platini pa svetloba z $\lambda < 200~\si{nm}$. 
+Da lahko fotoefekt izkoristimo za detektorje vidne svetlobe, 
 uporabimo druge snovi, na primer Cs-Te, Cs-Sb, Na-K-Sb-Cs ali GaAs:Cs. 
 Tako lahko zaznavamo fotone z valovnimi dolžinami od ultravijoličnega
 pa vse do bližnjega infrardečega valovanja.\index{Ultravijolično valovanje}
@@ -696,13 +697,13 @@ karakteristična enačba diode (slika~\ref{11_IU})\index{Karakteristika diode}
 I = I_0 (e^{e_0 U/kT}-1).
 }
 Pri tem $I_0$ označuje tok manjšinskih nosilcev naboja\footnote{Pravimo
-mu tudi zaporni tok, tok nasičenja ali temni tok. Slednje ime sledi iz tega, da
+mu tudi zaporni tok, tok nasičenja ali temni tok. Slednje ime izhaja iz tega, da
 ta tok teče skozi fotodiodo tudi v odsotnosti vpadne svetlobe.}\index{Temni tok}
 \index{Zaporni tok|see {Temni tok}}
 in je navadno zelo majhen. Njegova vrednost je odvisna od snovi, površine
 detektorja, poleg tega pa je eksponentno odvisna od temperature. Znaša 
-tipično okoli $10^{-5}$--$10^{-15}~\si{\ampere}$, pri čemer najmanjše
-vrednosti dosegamo le ob močnem hlajenju. 
+tipično okoli $10^{-15}$--$10^{-5}~\si{\ampere}$, pri čemer najmanjše
+vrednosti dosežemo le ob močnem hlajenju. 
 
 \begin{figure}[h]
 \centering
@@ -801,9 +802,8 @@ in $T=300~\si{K}$.
 Prednosti merjenja ob napetosti v zaporni smeri je več. 
 Zaradi priključene napetosti se zmanjša čas preleta
 nosilcev naboja in posledično se zmanjša odzivni čas detektorja.\index{Detektor!odzivni čas}
-Dodatno se poveča
-širina izpraznjenega pasu (naloga~\ref{naloga:depl}), kar zmanjša kapaciteto spoja 
-(spoj $p$-$n$ namreč deluje kot neke vrste 
+Dodatno se poveča širina izpraznjenega pasu (naloga~\ref{naloga:depl}), kar zmanjša kapaciteto spoja 
+(spoj $p$-$n$ namreč deluje kot  
 kondenzator in časovni odziv je odvisen od njegove kapacitete) in s tem odzivni čas. Povečana
 izpraznjena plast vodi tudi do večjega območja, v katerem lahko pride do absorpcije fotonov. 
 
@@ -813,8 +813,9 @@ Pokaži, da je debelina izpraznjene plasti je enaka $d = d_p+d_n$, kjer sta
 \beq
 d_{p,n}= \sqrt{\frac{2\epsilon \varepsilon_0(\Delta E_0-e_0U)}{e_0}\frac{(N_d/N_a)^{\pm 1}}{N_a+N_d}}.
 \eeq
-Pri tem $N_a$ in $N_d$ označujeta gostoti akceptorskih in donorskih atomov, $\Delta E_0$ je ravnovesni potencialni skok med stranjo $n$ in $p$, $U$ pa priključena napetost. \\ Namig: upoštevaj zvezo
-$d_n N_d = d_p N_a$ in zapiši Gaussov zakon.
+Pri tem $N_a$ in $N_d$ označujeta gostoti akceptorskih in donorskih atomov, $\Delta E_0$ je ravnovesni 
+potencialni skok med stranjo $n$ in $p$, $U$ pa priključena napetost. \\ Namig: zapiši Gaussov zakon in 
+upoštevaj zvezo $d_n N_d = d_p N_a$.
 \end{definition}
 
 Povejmo še nekaj o zgradbi fotodiode. Shema preproste fotodiode je prikazana na 
@@ -823,10 +824,9 @@ Na dnu je elektroda, sledi plast $n$, nad njo je tanka plast $p$, na katero vpad
 Bistveno je, da je osvetljena plast tanka, da svetloba lahko prodre v bližino spoja. Zato so 
 debeline zgornje plasti tipično submikronske. Na fotodiode pogosto nanesemo
 še dodatno antirefleksijsko plast (SiO$_2$)\index{SiO$_2$}. 
-Fotoobčutljiv del komercialnih fotodiod
+Fotoobčutljivi del komercialnih fotodiod
 meri tipično od nekaj $100~\si{\micro\meter}^2$ pa do več $100~\si{\milli\metre}^2$. Pri 
 tem imajo večje diode seveda počasnejši odziv. 
-
 \begin{remark}
 Poleg do zdaj obravnavanih fotodiod poznamo tudi heterostrukturne 
 \index{Fotodioda!heterostrukturna}fotodiode, kjer sta $p$ in $n$ del
