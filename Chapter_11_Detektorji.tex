@@ -827,18 +827,6 @@ debeline zgornje plasti tipično submikronske. Na fotodiode pogosto nanesemo
 Fotoobčutljivi del komercialnih fotodiod
 meri tipično od nekaj $100~\si{\micro\meter}^2$ pa do več $100~\si{\milli\metre}^2$. Pri 
 tem imajo večje diode seveda počasnejši odziv. 
-\begin{remark}
-Poleg do zdaj obravnavanih fotodiod poznamo tudi heterostrukturne 
-\index{Fotodioda!heterostrukturna}fotodiode, kjer sta $p$ in $n$ del
-narejena iz druge snovi. Poseben primer so Schottkyjeve fotodiode\footnote{Nemški fizik
-Walter Hans Schottky, 1886--1976.}, kjer eno plast polprevodnika
-nadomestimo z zelo tanko plastjo kovine (slika~\ref{11_shema}\,c). Te so uporabne predvsem pri 
-visokih energijah (v UV območju), \index{Fotodioda!Schottkyjeva}\index{Ultravijolično valovanje}
-saj je v navadnih fotodiodah absorpcija za te valovne dolžine prevelika, na površini pride do 
-rekombinacije in zmanjšanja kvantnega izkoristka. Odziv Schottkyjevih fotodiod je zelo hiter, 
-saj nizka upornost kovine občutno zmanjša $RC$ konstanto spoja. Odzivni časi 
-dosegajo pikosekundne vrednosti. 
-\end{remark}
 
 \begin{figure}[h]
 \centering
@@ -853,6 +841,18 @@ Temno siva barva označuje elektrode, svetlo modra območje $n$,
 temnejša modra območje $p$, svetlo siva pa območje intrinzičnega polprevodnika. }
 \label{11_shema}
 \end{figure}
+\begin{remark}
+Poleg do zdaj obravnavanih fotodiod poznamo tudi heterostrukturne 
+\index{Fotodioda!heterostrukturna}fotodiode, kjer sta $p$ in $n$ del
+narejena iz druge snovi. Poseben primer so Schottkyjeve fotodiode\footnote{Nemški fizik
+Walter Hans Schottky, 1886--1976.}, kjer eno plast polprevodnika
+nadomestimo z zelo tanko plastjo kovine (slika~\ref{11_shema}\,c). Te so uporabne predvsem pri 
+visokih energijah (v UV območju), \index{Fotodioda!Schottkyjeva}\index{Ultravijolično valovanje}
+saj je v navadnih fotodiodah absorpcija za te valovne dolžine prevelika, na površini pride do 
+rekombinacije in zmanjšanja kvantnega izkoristka. Odziv Schottkyjevih fotodiod je zelo hiter, 
+saj nizka upornost kovine občutno zmanjša $RC$ konstanto spoja. Odzivni časi 
+dosegajo pikosekundne vrednosti. 
+\end{remark}
 
 \subsection*{Fotodioda $\textbf{\textit{p}}$-$\textbf{\textit{i}}$-$\textbf{\textit{n}}$}
 Fotodiode $p$-$i$-$n$ se od navadnih $p$-$n$ razlikujejo po tem, da med $p$- in $n$-plast 
@@ -866,18 +866,19 @@ z ustrezno optimizacijo konstrukcije dosežemo odzivne čase nekaj deset $\si{ps
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{120truemm} 
 \input{slike/11_SpekterFD.pdf_tex}
-\caption{Kvantni izkoristek nekaterih $p$-$i$-$n$ (Si in Ge) in Schottkyjevih (Au-Si in Ag-ZnS 
+\caption{Kvantni izkoristek nekaterih $p$-$i$-$n$ (Si in Ge) in Schottkyjevih (Au-Si in Ag-ZnS)
 fotodiod}
 \label{11_odziv}
 \end{figure}
 
 \section{Plazovne fotodiode}
-Ko smo risali karakteristiko fotodiode (slika~\ref{11_IU}), nismo narisali popolne slike.\index{Fotodioda!plazovna}
+Ko smo risali karakteristiko fotodiode (slika~\ref{11_IU}), 
+nismo narisali popolne slike.\index{Fotodioda!plazovna}
 Pri velikih negativnih napetostih se namreč karakteristika znatno spremeni (slika~\ref{11_plaz}), 
 česar ne moremo popisati s preprosto enačbo. Pri zapornih napetostih, ki za nekajkrat presegajo 
-širino energijske reže (tipično okoli $10^7~\si{\volt}/\si{\meter}$), \index{Karakteristika fotodiode}
+širino energijske reže (tipično $100$--$500~\si{\volt}$), \index{Karakteristika fotodiode}
 pride do naglega povečanja električnega toka. Ob absorpciji fotona nastanejo mobilni nosilci naboja, ki 
 se v električnem polju tako pospešijo, da s trki ustvarjajo nove pare 
 elektron--vrzel. Novonastali pari  ustvarjajo nove pare in pride do ``plazu'', podobno kot v 
@@ -904,22 +905,22 @@ povečanje pogosto manjše kot bi bil prispevek k šumu na zunanjih elektronskih
 \section{CCD in CMOS detektorji}
 Do zdaj smo obravnavali detektorje, \index{Detektor!CCD}
 \index{Detektor!CMOS}ki zaznavajo pretok vpadnih fotonov in spreminjanje
-pretoka s časom. Dodatno informacijo dobimo, če več fotodetektorjev sestavimo v 
+pretoka v času. Dodatno informacijo dobimo, če več fotodetektorjev sestavimo v 
 dvodimenzionalno matriko, saj lahko detektorji hkrati zaznavajo količino vpadne svetlobe 
 iz različnih delov prostora. Podatke iz posameznih detektorjev sestavimo v sliko, pri čemer 
 en detektor podaja informacijo o številu vpadlih fotonov 
 v dani časovni enoti za en slikovni element -- piksel \index{Piksel}. Času zajemanja, ki
 predstavlja integracijski čas, pravimo tudi čas osvetlitve.  
 Slikovni detektorji z veliko ločljivostjo so sestavljeni iz 
-več milijonov ali celo milijarde posameznih polprevodniških detektorjev in so 
+več milijonov ali celo milijard posameznih polprevodniških detektorjev in so 
 nepogrešljivi v fotoaparatih, videokamerah, mikroskopiji in astronomiji.
 
 Podrobneje bomo obravnavali dve vrsti matričnih detektorjev, to sta CCD 
 ({\it Charge-Coupled-Device})\footnote{Za izum CCD detektorjev sta Willard 
 S. Boyle in George E. Smith  leta 2009 prejela Nobelovo nagrado.} 
-in CMOS ({\it Complementary Metal-Oxide-Semicoductor})\footnote{Teh 
+in CMOS ({\it Complementary Metal-Oxide-Semiconductor})\footnote{Teh 
 dveh oznak za detektorje praviloma ne prevajamo. Opisujeta 
-strukturo in delovanje naprave in nista vezani zgolj na detekcijo svetlobe.}. Obe vrsti
+strukturo in delovanje naprave in nista vezani zgolj na detekcijo svetlobe.}. Omenjeni vrsti
 detektorjev sta si po načinu zaznavanja svetlobe zelo podobni, razlika
 je predvsem v postopku, kako iz posameznega detektorja pridobimo podatek o številu 
 vpadnih fotonov oziroma številu vzbujenih elektronov.
@@ -960,8 +961,8 @@ pomnoženih s kvantnim izkoristkom pri dani valovni dolžini.
 
 S spreminjanjem napetosti na posameznih elektrodah lahko naboj, ki se lokalno nabere 
 v plasti pod izolatorjem v danem času, postopoma prenesemo od posameznega 
-piksla do izhodne stopnje. Najprej poteka prenos iz enega elementa na drugega v eni vrstici, 
-nato pa še po celotnem stolpcu (slika~\ref{11_CCD}\,a). Na koncu signal sproti ojačujemo, 
+piksla do izhodne stopnje. Najprej poteka prenos iz enega elementa na drugega znotraj vrstic, 
+nato pa še po celotnem zadnjem stolpcu (slika~\ref{11_CCD}\,a). Na koncu signal sproti ojačujemo, 
 pretvorimo v napetost, to pa v digitalni zapis. Številu elektronov iz posameznega
 slikovnega elementa določimo digitalno vrednost glede na barvno globino: 8-bitni zapis slike, 
 na primer, vsakemu elementu priredi vrednost od 0 do 255, 16-bitni pa od 0 do 65535.
@@ -988,7 +989,7 @@ fotoelektronov.}
 \begin{remark}
 Pri zajemanju slike ne potrebujemo vedno največje ločljivosti, ki jo omogoča detektor. 
 Zato se pogosto poslužujemo združevanja sosednjih elementov, t.\ i.\ bininga ({\it binning}), 
-na primer $2\times2$ ali $4\times4$. S združevanjem pikslov sicer zmanjšamo ločljivost slike, 
+na primer $2\times2$ ali $4\times4$. Z združevanjem pikslov sicer zmanjšamo ločljivost slike, 
 vendar hkrati skrajšamo čas njenega zajemanja in zmanjšamo razmerje signal proti šumu. 
 \index{Bining|see {Združevanje pikslov}}\index{Združevanje pikslov}
 \end{remark}
@@ -1004,10 +1005,11 @@ je večji šum in manjša občutljivost, saj del zaslona, kjer so ojačevalniki,
 zajemati. 
 
 \subsection*{Barvno zajemanje slik}
-Detektorji zaznavajo število vpadlih fotonov oziroma število fotoelektronov.
+Detektorji zaznavajo število vpadnih fotonov oziroma število fotoelektronov.
 Za nastanek barvne slike moramo vpadne fotone ločiti še po valovni dolžini, kar naredimo
 z barvnimi filtri. Namesto enega elementa, ki bi podal informacijo o intenziteti vpadne 
-svetlobe, uporabimo štiri senzorje v kvadratni mreži, rdečega, modrega in dva zelena. 
+svetlobe, uporabimo štiri senzorje v kvadratni mreži: enega za zaznavanje rdeče svetlobe,
+enega za modro in dva za zeleno svetlobo.
 Večji delež zelenih elementov je zaradi večje občutljivosti človeškega očesa na zeleno barvo. 
 Intenziteto svetlobe na posameznem slikovnem elementu dane barve nato odčitamo, kot je
 opisano zgoraj.
@@ -1040,14 +1042,15 @@ emisijo elektronov in
 \end{enumerate}
 
 \subsection*{Šum štetja} 
-Ko govorimo o svetlobi, ne smemo pozabiti, da je svetloba sestavljena iz diskretnih fotonov. 
-Fotoni vpadajo na detektor posamezno in enkrat jih vpade malo več, \index{Šum!štetja}
+Naj na detektor vpada svetloba s konstantno gostoto svetlobnega toka oziroma konstantno vpadno 
+močjo $P$. Ker je svetloba sestavljena iz diskretnih fotonov, fotoni na detektor vpadajo posamezno 
+in enkrat jih vpade malo več, \index{Šum!štetja}
 drugič malo manj. Vpadna moč je zato dejansko povprečna moč $\overline{P}$ in število 
 vpadnih fotonov na časovno enoto je povprečna vrednost števila vpadnih fotonov na časovno enoto
 \begin{equation}
 \overline{n} = \frac{\overline{P}}{h\nu}.
 \end{equation}
-Pri vpadu fotonov gre za diskretne in neodvisne procese, zato za njihov vpad velja
+Pri vpadu fotonov gre za diskretne in neodvisne procese, zato za njihov vpad skoraj vedno velja
 Poissonova porazdelitev (slika~\ref{11_Poiss}). Verjetnost, da v času $\tau$, ki predstavlja 
 čas merjenja, na detektor vpade $N$ fotonov, je tako \index{Poissonova porazdelitev}
 \begin{equation}
