@@ -355,7 +355,7 @@ Električni tok, ki steče pri vpadni svetlobni moči $P$, je tako
 \boxeq{11:eta}{
 I = \eta e_0 \frac{n_F}{t} = \eta \frac{e_0 P}{h \nu},
 }
-kje $n_F$ označuje število vpadnih fotonov v času $t$. 
+kjer $n_F$ označuje število vpadnih fotonov v času $t$. 
 Kvantni izkoristek je močno odvisen od valovne dolžine vpadne svetlobe in seveda
 od snovi, na katero svetloba vpada. Za fotone z energijo, ki je manjša od izstopnega 
 dela oziroma od širine energijske reže, je kvantni izkoristek praktično enak nič, 
@@ -384,7 +384,7 @@ Najpreprostejši kvantni detektor na zunanji fotoefekt je fotocelica ali vakuums
 zaprto v vakuumirani stekleni bučki, in tam povzroči fotoefekt. Izbiti elektroni 
 se pod zunanjo napetostjo $V$ pospešijo do anode in z ampermetrom ($A$) 
 merimo električni tok, ki steče med katodo in anodo. 
-Ker je tok sorazmeren s številom vpadlih fotonov, lahko na ta 
+Ker je tok sorazmeren s številom vpadnih fotonov, lahko na ta 
 način izmerimo moč vpadne svetlobe.
 
 \begin{figure}[h]
@@ -908,12 +908,12 @@ Do zdaj smo obravnavali detektorje, \index{Detektor!CCD}
 pretoka v času. Dodatno informacijo dobimo, če več fotodetektorjev sestavimo v 
 dvodimenzionalno matriko, saj lahko detektorji hkrati zaznavajo količino vpadne svetlobe 
 iz različnih delov prostora. Podatke iz posameznih detektorjev sestavimo v sliko, pri čemer 
-en detektor podaja informacijo o številu vpadlih fotonov 
+en detektor podaja informacijo o številu vpadnih fotonov 
 v dani časovni enoti za en slikovni element -- piksel \index{Piksel}. Času zajemanja, ki
 predstavlja integracijski čas, pravimo tudi čas osvetlitve.  
 Slikovni detektorji z veliko ločljivostjo so sestavljeni iz 
 več milijonov ali celo milijard posameznih polprevodniških detektorjev in so 
-nepogrešljivi v fotoaparatih, videokamerah, mikroskopiji in astronomiji.
+nepogrešljivi v fotoaparatih, kamerah, mikroskopiji in astronomiji.
 
 Podrobneje bomo obravnavali dve vrsti matričnih detektorjev, to sta CCD 
 ({\it Charge-Coupled-Device})\footnote{Za izum CCD detektorjev sta Willard 
@@ -1115,7 +1115,7 @@ Razmerje signal proti šumu $SNR$ lahko vpeljemo na več načinov. Prvi je ta, k
 uporabili mi, pri katerem velja $SNR = \overline{n}/\sigma = \overline{n}$. V tem primeru
 gre za $SNR$ optične moči oziroma števila fotonov in nastalega električnega toka. Lahko
 pa vpeljemo tudi $SNR_e$ električne moči na detektorju.
-Zaradi kvadratne zveze med električim tokom in električno močjo velja 
+Zaradi kvadratne zveze med električnim tokom in električno močjo velja 
 $SNR_e=SNR^2={\overline{n}}$.
 \end{remark}
 
@@ -1173,7 +1173,7 @@ nič različna.
 Termični šum nastaja samo v uporniških elementih sistema, saj le ti lahko
 sprejemajo in oddajajo energijo, v kapacitivnih in induktivnih elementih pa ne.
 
-Načinov izpeljave termičnega šuma na uporniku je več. Mi ga razložimo na preprostem vezju, 
+Načinov izpeljave termičnega šuma na uporniku je več. Mi ga obravnavajmo na preprostem vezju, 
 v katerem sta povezana upornik z upornostjo $R$ in kondenzator s kapaciteto $C$. Izvorov 
 napetosti ni, zaradi naključnega gibanja elektronov pa se pojavljajo fluktuacije v 
 napetosti $\Delta U$, ki predstavljajo prostostno stopnjo v sistemu.  
@@ -1291,10 +1291,12 @@ in \ref{11:ozadje}), sledi
 \overline{(\Delta I)^2} = \left( 2 \overline{I}\,e_0 + \frac{4 kT}{R} + 2 I_0\,e_0
 + 2 I_o\,e_0 \right) \Delta\nu_B.
 }
-Izraz za razmerje signal proti šumu zapišemo kot
+Posamezne prispevke lahko pogosto zanemarimo, odvisno seveda od intenzitete signala,
+načina detekcije, sevanja ozadja ... Izraz za razmerje signal proti šumu na splošno 
+zapišemo kot
 \begin{equation}
-SNR = \frac{\overline{I}^2}{\left( 2 \overline{I}\,e_0 + 2 I_0\,e_0
-+ 2 I_o\,e_0 + \frac{4 kT}{R} \right) \Delta\nu_B}.
+SNR = \frac{\overline{I}}{\sqrt{\left( 2 \overline{I}\,e_0 + 2 I_0\,e_0
++ 2 I_o\,e_0 + \frac{4 kT}{R} \right) \Delta\nu_B}}.
 \end{equation}
 Iz zapisanega razberemo, da so razen šuma štetja vsi prispevki v 
 imenovalcu neodvisni od intenzitete vpadne svetlobe. Le-ta je pri 
@@ -1352,7 +1354,8 @@ detekcije svetlobe, ki omogoča zaznavanje zelo šibkih signalov. Za razliko od 
 ki smo jo obravnavali do zdaj in pri kateri pride do neposredne zaznave vpadnega fotona, 
 gre pri heterodinski detekciji za zaznavanje valovanja z amplitudo in fazo. Pri takem 
 pristopu detektor svetlobe osvetlimo hkrati s signalom in z močno referenčno svetlobo, 
-katere frekvenca se le malo razlikuje od frekvence signala.
+katere frekvenca se le malo razlikuje od frekvence signala. Privzamemo, da sta oba snopa 
+koherentna v času trajanja signala.
 \begin{figure}[h]
 \centering
 \def\svgwidth{80truemm} 
@@ -1374,8 +1377,8 @@ poravnane\footnote{Dodaten pogoj je, da imata vpadna snopa isto polarizacijo in 
 podoben polmer.}, je intenziteta svetlobe, 
 ki vpada na detektor, enaka
 \begin{equation}
-I = |E|^2 = |E_s+E_r|^2 = |E_{s0}|^2 \, \cos^2(\omega_st+\phi)+
-|E_{r0}|^2 \, \cos^2(\omega_rt) + 2E_{s0}E_{r0}\, \cos(\omega_st+\phi)\, \cos(\omega_rt).
+I = |E|^2 = |E_s+E_r|^2 = E_{s0}^2 \, \cos^2(\omega_st+\phi)+
+E_{r0}^2 \, \cos^2(\omega_rt) + 2E_{s0}E_{r0}\, \cos(\omega_st+\phi)\, \cos(\omega_rt).
 \end{equation}
 Prva dva člena v izrazu se zelo hitro spreminjata in zato predstavljata zgolj 
 izpovprečen konstanten prispevek. 
@@ -1393,7 +1396,7 @@ detekcije. \index{Homodinska detekcija}
 Ker je referenčni žarek navadno bistveno močnejši od signalnega, je celotna intenziteta
 na detektorju enaka
 \begin{equation}
-I = |E|^2 \approx \frac{1}{2}|E_{r0}|^2 + E_{s0}E_{r0}\,\cos(\omega_st-\omega_rt+\phi).
+I = |E|^2 \approx \frac{1}{2}E_{r0}^2 + E_{s0}E_{r0}\,\cos(\omega_st-\omega_rt+\phi).
 \end{equation}
 S tem znatno pridobimo na občutljivosti, saj na detektorju ne zaznavamo  
 kvadrata majhnega signala $|E_{s0}|^2$, ampak majhen signal, pomnožen z velikim referenčnim. 
@@ -1401,17 +1404,21 @@ kvadrata majhnega signala $|E_{s0}|^2$, ampak majhen signal, pomnožen z velikim
 Poglejmo še razmerje $SNR$ za primer heterodinske detekcije. Največji prispevek k šumu je 
 zaradi šuma štetja referenčne svetlobe, saj je ta praviloma bistveno močnejša od signala
 \begin{equation}
-\overline{(\Delta I)^2} = 2I_re_0 \Delta\nu_B=e_0^2\Delta\nu_B\frac{\eta |E_{r0}|^2}{h\nu},
+\overline{(\Delta I)^2} = 2I_re_0 \Delta\nu_B= \frac{\varepsilon_0}{2} 
+e_0^2\Delta\nu_B\frac{\eta S E_{r0}^2}{h\nu},
 \end{equation}
-pri čemer smo z $I_r$ označili tok, ki steče zaradi referenčne svetlobe. Signal v tem 
-primeru ni več vpadni signal, ampak kombinirani izhod iz detektorja, ki ga zaznavamo
-le pri razliki krožnih frekvenc $\omega_s-\omega_r$. Sledi
+pri čemer smo z $I_r$ označili tok, ki steče zaradi referenčne svetlobe, $S$ pa je 
+površina detektorja. 
+
+Signal v tem primeru ni več celotni vpadni signal, ampak kombinirani izhod iz 
+detektorja, ki ga zaznavamo le pri razliki krožnih frekvenc $\omega_s-\omega_r$. Sledi
 \begin{equation}
-SNR = \frac{\left(\frac{e_0 \eta}{h \nu} E_{s0}E_{r0}\right)^2}{e_0^2\Delta\nu_B\frac{\eta 
-E_{r0}^2}{h\nu}} = \frac{\eta}{h \nu \Delta\nu_B}|E_{s0}|^2.
+SNR = \frac{\frac{\varepsilon_0 e_0 \eta S}{2h \nu} E_{s0}E_{r0}}{\sqrt{\frac{\varepsilon_0}{2}
+e_0^2\Delta\nu_B\frac{\eta S E_{r0}^2}{h\nu}}} = 
+\sqrt{\frac{\varepsilon_0\eta S}{2 h \nu \Delta\nu_B}}E_{s0}.
 \end{equation}
 Če to primerjamo z vrednostjo $SNR$ pri navadni detekciji (enačba~\ref{SNRs}), vidimo, 
-da se razmerje signal proti šumu pri isti pasovni širini izboljša za faktor $2$
+da se razmerje signal proti šumu pri isti pasovni širini izboljša za faktor $\sqrt{2}$
 (oziroma še več, če je prisoten še kakšen drug šum).
 Ker je pri navadni detekciji težko meriti pri tako majhni pasovni širini, je razmerje
 signal proti šumu v primeru heterodinske detekcije posledično praviloma znatno večje
