@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '01_lom.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{813.46616211bp}%
+    \setlength{\unitlength}{762.62452698bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -49,48 +51,50 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.45364881)%
-    \put(-0.14928911,-0.17461247){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26645625\unitlength}\raggedright \end{minipage}}}%
-    \put(0.03596894,-0.3037717){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
-    \put(0.13565307,-0.53054973){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10611477\unitlength}\raggedright \end{minipage}}}%
-    \put(0.25388163,-0.06504933){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.70198932\unitlength}\raggedright \end{minipage}}}%
-    \put(0.27789268,0.12062222){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(-0.14928911,-0.28616146){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.26645625\unitlength}\raggedright  \end{minipage}}}%
+    \put(0.03596894,-0.3037717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.13565307,-0.62723209){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.10611477\unitlength}\raggedright  \end{minipage}}}%
+    \put(0.25388163,-0.26847616){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.70198932\unitlength}\raggedright  \end{minipage}}}%
+    \put(0.27789268,0.12062222){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{ }\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{01_lom.pdf}}%
-    \put(0.00781583,0.42731689){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{Dielektrik}~1$}}}%
-    \put(0.00781583,0.00996789){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{Dielektrik}~2$}}}%
+    \put(0.00781583,0.42731689){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathrm{Dielektrik}~1$\end{tabular}}}}%
+    \put(0.00781583,0.00996789){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathrm{Dielektrik}~2$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{01_lom.pdf}}%
-    \put(0.1145654,0.3677241){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{E}_{1}$}}}%
-    \put(0.03662897,0.34767967){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{H}_{1}$}}}%
-    \put(0.13662879,0.33109428){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{k}_{1}$}}}%
+    \put(0.1145654,0.3677241){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{E}_{1}$\end{tabular}}}}%
+    \put(0.03662897,0.34767967){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{H}_{1}$\end{tabular}}}}%
+    \put(0.13662879,0.33109428){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{k}_{1}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{01_lom.pdf}}%
-    \put(0.28681538,0.07399212){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{E}_{2}$}}}%
-    \put(0.23570819,0.06419157){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{H}_{2}$}}}%
-    \put(0.30448855,0.02614284){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{k}_{2}$}}}%
+    \put(0.28681538,0.07399212){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{E}_{2}$\end{tabular}}}}%
+    \put(0.22784064,0.0602578){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{H}_{2}$\end{tabular}}}}%
+    \put(0.30448855,0.02614284){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{k}_{2}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{01_lom.pdf}}%
-    \put(0.28837825,0.36198754){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{E}_{3}$}}}%
-    \put(0.3659389,0.32552517){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{H}_{3}$}}}%
-    \put(0.36214891,0.3785284){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{k}_{3}$}}}%
-    \put(0.54945553,0.42731689){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{Dielektrik}~1$}}}%
+    \put(0.28837825,0.36198754){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{E}_{3}$\end{tabular}}}}%
+    \put(0.3659389,0.32552517){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{H}_{3}$\end{tabular}}}}%
+    \put(0.36608271,0.3785284){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{k}_{3}$\end{tabular}}}}%
+    \put(0.54945553,0.42731689){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathrm{Dielektrik}~1$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{01_lom.pdf}}%
-    \put(0.85694493,0.06827571){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{E}_{2}$}}}%
-    \put(0.77137096,0.05057469){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{H}_{2}$}}}%
-    \put(0.8394268,0.02229397){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{k}_{2}$}}}%
+    \put(0.81716541,0.08101743){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{E}_{2}$\end{tabular}}}}%
+    \put(0.7795991,0.03348664){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{H}_{2}$\end{tabular}}}}%
+    \put(0.84532742,0.02622775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{k}_{2}$\end{tabular}}}}%
+    \put(0.54945553,0.01004078){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathrm{Dielektrik}~2$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{01_lom.pdf}}%
-    \put(0.54945553,0.01004078){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{Dielektrik}~2$}}}%
+    \put(0.6776668,0.36824387){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{E}_{1}$\end{tabular}}}}%
+    \put(0.60322869,0.32794837){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{H}_{1}$\end{tabular}}}}%
+    \put(0.67671972,0.33299379){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{k}_{1}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{01_lom.pdf}}%
-    \put(0.6776668,0.36824387){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{E}_{1}$}}}%
-    \put(0.60322869,0.32794837){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{H}_{1}$}}}%
-    \put(0.67671972,0.33299379){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{k}_{1}$}}}%
+    \put(0.91882699,0.3285029){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{E}_{3}$\end{tabular}}}}%
+    \put(0.84186617,0.37772666){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{H}_{3}$\end{tabular}}}}%
+    \put(0.91552455,0.38211686){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{k}_{3}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{01_lom.pdf}}%
-    \put(0.91882699,0.3285029){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{E}_{3}$}}}%
-    \put(0.84186617,0.37772666){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{H}_{3}$}}}%
-    \put(0.91552455,0.38211686){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{k}_{3}$}}}%
+    \put(0.1806048,0.27129448){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\vartheta_1$\end{tabular}}}}%
+    \put(0.22609401,0.27088841){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\vartheta_1$\end{tabular}}}}%
+    \put(0.21964302,0.11139139){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\vartheta_2$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{01_lom.pdf}}%
-    \put(0.1806048,0.27129448){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta_1$}}}%
-    \put(0.22609401,0.27088841){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta_1$}}}%
-    \put(0.21964302,0.11532516){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta_2$}}}%
+    \put(0.71962762,0.27129407){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\vartheta_1$\end{tabular}}}}%
+    \put(0.76511678,0.27088799){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\vartheta_1$\end{tabular}}}}%
+    \put(0.75866583,0.11139098){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\vartheta_2$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{01_lom.pdf}}%
-    \put(0.71962762,0.27129407){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta_1$}}}%
-    \put(0.76511678,0.27088799){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta_1$}}}%
-    \put(0.75866582,0.11532475){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta_2$}}}%
   \end{picture}%
 \endgroup%
