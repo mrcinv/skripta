@@ -220,10 +220,10 @@ za opis ravnega vala zadošča le eno polje, navadno se odločimo za električno
 Iz Maxwellovih enačb (enačbe~\ref{eq:Maxwell1}--\ref{eq:Maxwell4}) sledijo zveze o ortogonalnosti
 količin električnega in magnetnega polja. Vedno sta med seboj pravokotna vektorja
 jakosti električnega $\mathbf{E}$ in magnetnega polja $\mathbf{H}$, ki sta v izotropni snovi
-hkrati pravokotna tudi na valovni vektor $\mathbf{k}$ (naloga~\ref{naloga-TEM-ortogonalnost}).
+hkrati pravokotna na valovni vektor $\mathbf{k}$ (naloga~\ref{naloga-TEM-ortogonalnost}).
 Po definiciji sta $\mathbf{E}$ in $\mathbf{H}$ vedno pravokotna tudi na Poyntingov vektor $\mathbf{S}$ 
-(enačba~\ref{eq:Poyntingov-vektor}), iz česar sledi, da je v izotropni snovi
-Poyntingov vektor oziroma energijski tok vzporeden valovnemu vektorju.\footnote{Na splošno 
+(enačba~\ref{eq:Poyntingov-vektor}), iz česar sledi, da sta v izotropni snovi
+Poyntingov vektor in smer energijskega toka vzporedna valovnemu vektorju.\footnote{Na splošno 
 velja $\mathbf{E}\perp\mathbf{S}$ (enačba~\ref{eq:Poyntingov-vektor}) in 
 $\mathbf{D}\perp\mathbf{k}$ (naloga~\ref{naloga-TEM-ortogonalnost}). 
 To velja vedno, tudi v anizotropnih sredstvih, vendar je tam $\mathbf{E} \nparallel 
@@ -305,8 +305,7 @@ E_{x}\\
 E_{y}
 \end{array}\right].
 \end{equation}
-Dodali smo normalizacijski faktor $|E_{0}|=\sqrt{|E_{x}|^{2}+|E_{y}|^{2}}$,
-da je Jonesov vektor normiran.
+Dodali smo normalizacijski faktor $|E_{0}|=\sqrt{|E_{x}|^{2}+|E_{y}|^{2}}$.
 Ravni val, linearno polariziran v smeri $x$, tako zapišemo kot $\mathbf{J}=\left(1,0\right)$,
 val, ki je linearno polariziran pod kotom $\ang{45}$ glede na osi
 $x$ in $y$, pa je $\mathbf{J}=\left(1,1\right)/\sqrt{2}$.
@@ -481,7 +480,7 @@ Zaradi destruktivne interference valovanj, odbitih na posameznih plasteh,
 se količina odbite svetlobe z izbrano valovno dolžino občutno zmanjša. Ker so laserji
 izvori svetlobe s točno določeno valovno dolžino, za zmanjšanje
 izgub, na primer v resonatorju laserja, uporabljamo optične
-elemente z ustrezno antirefleksno plastjo.
+elemente (leče, kristale, modulatorje) z ustrezno antirefleksno plastjo.
 \end{remark}
 
 Poglejmo še odvisnost odbojnosti in prepustnosti od vpadnega kota (slika~\ref{fig:Brewster}). 
@@ -502,23 +501,21 @@ polarizirano.
 \caption{Amplitudna odbojnost $r$ za obe vpadni polarizaciji (a, b) in razmerje med 
 gostoto energijskega toka odbite in vpadne svetlobe $\mathcal{R}$ za obe polarizaciji (c, d)
 v odvisnosti od vpadnega kota $\vartheta_1$. Za primer na slikah (a) in (c) velja $n_1<n_2$, za primer na 
-slikah (b) in (d) pa $n_1>n_2$. Z zeleno je označen Brewstrov kot $\vartheta_B$, 
-z vijolično pa mejni kot totalnega odboja $\vartheta_T$.}
+slikah (b) in (d) pa $n_1>n_2$. Z zeleno je označen Brewstrov kot $\vartheta_B$ in
+z vijolično mejni kot totalnega odboja $\vartheta_T$.}
 \label{fig:Brewster}
 \end{figure}
-
+\vglue5truemm
 \begin{definition}
-Pokaži, da Brewstrov kot izračunamo kot 
-%\begin{equation}
-$\vartheta_{B}=\arctan\left(\frac{n_2}{n_1}\right).$
+Pokaži, da za Brewstrov kot velja 
+$\vartheta_{B}=\arctan\left(n_2/n_1\right).$
 \label{eq:Brew}
-%\end{equation}
 \end{definition}
 \begin{remark}
 Prozorne ploščice, ki so postavljene pod Brewstrovim kotom glede na smer vpadne svetlobe, 
 imenujemo Brewstrova okna\index{Brewstrovo okno}. Njihova značilnost je,
-da TM polarizacijo prepustijo v celoti, TE polarizacije pa se del odbije, 
-del pa prepusti. Brewstrova okna so zelo uporabna pri izdelavi resonatorjev 
+da TM polarizacijo v celoti prepustijo, TE polarizacije pa se del odbije in  
+del prepusti. Brewstrova okna so zelo uporabna pri izdelavi resonatorjev 
 plinskih laserjev, saj so izgube za TM polarizacijo zelo majhne, 
 za TE pa razmeroma velike.  
 \end{remark}
@@ -558,7 +555,7 @@ in val se delno odbije in delno absorbira. Za valovanje, ki je polarizirano prav
 na žice, je  inducirani tok bistveno manjši, saj je tok omejen na smer
 vzdolž žice. Posledično je val, polariziran pravokotno na žice, prepuščen, 
 val, polariziran vzporedno z žicami, pa ne. 
-Takšni polarizatorji se večinoma uporabljajo v mikrovalovni tehniki, 
+Takšni polarizatorji se uporabljajo večinoma v mikrovalovni tehniki, 
 vendar se v zadnjih letih z razvojem in izboljšavo litografskih postopkov
 vse pogosteje uporabljajo tudi v bližnjem infrardečem delu svetlobe.\index{Infrardeče valovanje}
 \end{remark}
@@ -665,7 +662,7 @@ Joseph von Fraunhofer, 1787--1826.} in Fresnelovega\index{Fresnelov uklon}.
 \begin{figure}[!h]
 \centering \def\svgwidth{80truemm} 
   \input{slike/01_uklon_koordinate.pdf_tex}
-\caption{K izračunu Fraunhoferjevega in Fresnelovega uklona}
+\caption{K izračunu Fraunhoferjevega in Fresnelovega uklonskega približka}
 \label{fig:Uklon-koordinate}
 \end{figure}
 
@@ -788,7 +785,7 @@ prehodu skozi kristal iz vpadnega linearno polariziranega valovanja na splošno 
 hitro, zato pride med njima do faznega zamika. 
 
 Za poljubno smer širjenja valovanja in poljubno polarizacijo je račun razmeroma zapleten. 
-Formalen pristop izhaja iz valovne enačbe (enačba~\ref{eq:valovna-skalarna}), v kateri
+Formalni pristop izhaja iz valovne enačbe (enačba~\ref{eq:valovna-skalarna}), v kateri
 moramo upoštevati tudi električno polarizacijo 
 $\mathbf{P} = \epsilon_{0}(\underline{\epsilon}-I)\mathbf{E}$. Iz nje sledi 
 sistem enačb za komponente valovnega vektorja in jakosti električnega polja. 
@@ -822,7 +819,7 @@ lomni količnik\index{Lomni količnik!redni}, in $n_{3}=n_{e}=n_\parallel$, ki j
 V eni smeri sta lomna količnika za obe polarizaciji enaka in tisti smeri pravimo 
 optična os. Po dogovoru je to os $z$.\index{Optična os} Hitrost valovanja, ki
 se širi vzdolž optične osi, je tako neodvisna od njegove polarizacije.
-Ker je optična os samo ena, imenujemo kristal optično enoosen. 
+Ker je optična os samo ena, imenujemo kristal optično enoosni. 
 
 Za lažjo predstavo si oglejmo ploskev valovnega vektorja (slika~\ref{kploskev}, desno). 
 V tem primeru ni treba obravnavati celotne ploskve, ampak zaradi rotacijske simetrije
@@ -851,7 +848,7 @@ valovne fronte pa so pravokotne nanj. To velja tudi za redni žarek v anizotropn
 snoveh. Izredni žarek pa ima, kot že ime nakazuje, ``izredne'' lastnosti. Vektorja
 $\mathbf{E}$ in $\mathbf{D}$ nista vzporedna, zato tudi valovni vektor $\mathbf{k}$ ni vzporeden
 energijskemu toku oziroma Poyntingovemu vektorju $\mathbf{S}$ (slika \ref{fig:Elipsa}\,c). 
-Smer energijskega toka določimo z normalo 
+Smer energijskega toka v tem primeru določimo z normalo 
 na elipso pri kotu $\vartheta$. 
 
 \begin{figure}[h]
@@ -889,8 +886,8 @@ prav tako zapišemo lomni zakon
 \end{equation}
 le da je lomni količnik $n(\vartheta_e')$ odvisen od smeri širjenja valovanja glede na smer optične osi
 in je določen z enačbo elipse (enačba~\ref{eq:izreden}), kot $\vartheta_e$ pa je določen glede na
-normalo na mejno ploskev. Na splošno je zapis precej zapleten, poenostavi se le v primeru, 
-če je optična os vzporedna ali pravokotna na mejno ploskev. 
+normalo na mejno ploskev. Na splošno je zapis precej zapleten, poenostavi se le, 
+ko je optična os vzporedna ali pravokotna na mejno ploskev. 
 
 Kadar vpada valovanje pravokotno na izotropno snov, se žarek ne lomi. V 
 dvolomnih snoveh pa lahko tudi pri pravokotnem vpadu pride do razklona svetlobe (slika
@@ -908,7 +905,7 @@ z medsebojno pravokotnima polarizacijama (slika~\ref{foto:dvolom}) .
 \caption{Dvojni lom. Pri poševnem vpadu na anizotropno snov se
 valovanje loči na dva različno polarizirana žarka (a). Če je optična os 
 usmerjena pod poljubnim kotom glede na normalo mejne ravnine, pride do razklona svetlobe
-tudi pri pravokotnem vpadu. Valovna vektorja sta tudi v tem primeru vzporedna, 
+pri pravokotnem vpadu. Valovna vektorja sta v tem primeru vzporedna, 
 Poyntingova vektorja pa imata različne smeri (b).}
 \label{fig:dvolomnost}
 \end{figure}
