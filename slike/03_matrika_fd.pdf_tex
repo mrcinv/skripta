@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '03_matrika_fd.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{164.64058838bp}%
+    \setlength{\unitlength}{154.35055161bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -49,10 +51,12 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.77745106)%
-    \put(0,0){\includegraphics[width=\unitlength]{03_matrika_fd.pdf}}%
-    \put(0.47010012,0.55228531){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n$}}}%
-    \put(0.47028686,0.13651334){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d$}}}%
-    \put(0.25186831,0.27878224){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R_1$}}}%
-    \put(0.70331103,0.27878224){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R_2$}}}%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{03_matrika_fd.pdf}}%
+    \put(0.47010012,0.55228531){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$n$}\end{tabular}}}}%
+    \put(0.47028686,0.13651334){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$d$}\end{tabular}}}}%
+    \put(0.25186831,0.27878224){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$R_1$}\end{tabular}}}}%
+    \put(0.61584898,0.27878224){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$R_2$}\end{tabular}}}}%
   \end{picture}%
 \endgroup%
