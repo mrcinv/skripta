@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '03_Bessel_profil.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{482.76040039bp}%
+    \setlength{\unitlength}{482.76040649bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,8 +50,11 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.78270658)%
-    \put(0,0){\includegraphics[width=\unitlength]{03_Bessel_profil.pdf}}%
-    \put(0.95331434,0.75073495){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$r$}}}%
+  \begin{picture}(1,0.78270657)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{03_Bessel_profil.pdf}}%
+    \put(0.95331433,0.75073494){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$r$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{03_Bessel_profil.pdf}}%
   \end{picture}%
 \endgroup%

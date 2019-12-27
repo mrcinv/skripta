@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '03_uklon_na_rezi.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{658.27988281bp}%
+    \setlength{\unitlength}{658.27988993bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -49,9 +51,11 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.18328541)%
-    \put(0,0){\includegraphics[width=\unitlength]{03_uklon_na_rezi.pdf}}%
-    \put(0.26967763,0.08507375){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$2a$}}}%
-    \put(0.78497351,0.11896393){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\vartheta = \lambda/a$ }}}%
-    \put(0.35624005,0.14037813){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$b$}}}%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{03_uklon_na_rezi.pdf}}%
+    \put(0.26967765,0.08279508){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$2a$\end{tabular}}}}%
+    \put(0.78497354,0.11896393){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$\vartheta = \lambda/a$ }\end{tabular}}}}%
+    \put(0.35624007,0.14037813){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{$b$}\end{tabular}}}}%
   \end{picture}%
 \endgroup%
