@@ -4,9 +4,9 @@
 Osnovni gradnik vsakega laserja je resonator. V njem je vzbujeno lastno elektromagnetno
 nihanje, ki skozi delno prepustno steno resonatorja kot valovanje
 izhaja iz sistema. V tem poglavju bomo 
-najprej spoznali optične resonatorje in kriterije za njihovo stabilno delovanje,
-nato pa izračunali lastne frekvence resonatorjev ter povezali spektralno širino črt
-izsevane svetlobe z izgubami v laserskem resonatorju. 
+spoznali optične resonatorje in kriterije za njihovo stabilno delovanje,
+izračunali lastne frekvence resonatorjev in povezali izgube v laserskem resonatorju s
+spektralno širino črt izsevane svetlobe. 
 
 \section{Odprti resonatorji}
 Optični resonatorji\index{Resonator} so votline, v katerih je mogoče 
@@ -18,24 +18,24 @@ resonatorja. Zaradi dušenja imajo lastne frekvence končno frekvenčno oziroma 
 
 Optične resonatorje uporabljamo predvsem v dva namena:
 \begin{enumerate}
-\item V resonatorjih lahko ob razmeroma šibkem zunanjem vzbujanju nastane velika
-električna poljska jakost pri resonančni frekvenci. Za vzdrževanje
-konstantne amplitude lastnega nihanja mora zunanji vir zgolj pokrivati izgube
-v resonatorju. Če so te majhne, je zunanji vir lahko šibek, polje
+\item V resonatorjih se ob razmeroma šibkem zunanjem vzbujanju pojavi velika jakost
+električnega polja pri resonančni frekvenci. Za vzdrževanje
+konstantne amplitude lastnega nihanja mora zunanji vir zgolj pokrivati izgube. 
+Če so te majhne, je zunanji vir lahko šibek, polje
 v resonatorju pa vseeno veliko.\\
 \item Resonatorji delujejo kot filtri, ki prepuščajo le polje s točno  
 določeno frekvenco in izbrano prostorsko odvisnostjo. Primer take uporabe je 
-Fabry-Perotov interferometer\index{Fabry-Perotov interferometer}, opisan 
-v nadaljevanju. 
+Fabry-Perotov interferometer\index{Fabry-Perotov interferometer}. 
 \end{enumerate}
 
 \begin{remark}
-Resonatorje poznamo z različnih področij, na primer akustične pri glasbilih ali 
-mikrovalovne in radijske. V mikrovalovnem področju, kjer so valovne dolžine valovanja
+Poleg optičnih resonatorjev poznamo resonatorje tudi na drugih področjih, 
+na primer akustične resonatorje pri glasbilih ali mikrovalovne in radijske resonatorje. 
+V mikrovalovnem področju, kjer so valovne dolžine valovanja
 okoli $1~\si{\centi\metre}$, 
 so resonatorji zaprte kovinske votline z dimenzijami, ki so primerljive z 
 valovno dolžino vzbujenega valovanja. Resonančne frekvence so v takem resonatorju 
-med seboj dobro ločene in ni težko doseči enega samega lastnega nihanja v izbranem 
+med seboj dobro ločene in ni težko vzbuditi enega samega lastnega nihanja na izbranem 
 frekvenčnem intervalu.
 \end{remark}
 
@@ -64,13 +64,14 @@ $N=2,5\cdot10^{8}$. Če bi bile vse stene votline idealna zrcala,
 bi bil čas dušenja vseh lastnih nihanj približno enako dolg in vedno bi vzbujali
 zelo veliko število resonanc hkrati. Tak resonator bi bil neuporaben.
 
-Hkratnemu vzbujanju velikega števila nihanj se izognemo z zmanjšanjem odbojnosti
-stranskih sten votline, saj tako povečamo dušenje stoječih valov v prečni smeri.
+Hkratnemu vzbujanju velikega števila lastnih nihanj se izognemo z zmanjšanjem odbojnosti
+stranskih sten votline, saj tako povečamo dušenje valov v prečni smeri.
 Dušenje valov, ki so pravokotni na idealno odbojni končni steni, ostane nespremenjeno.
-Nazadnje lahko stranske stene povsem odstranimo, tako da stoječih valov v prečni smeri
+Nazadnje lahko stranske stene odstranimo, tako da stoječih valov v prečni smeri
 sploh ni več. Ostane le še nekaj valov, ki so pravokotni na končni
-steni. Takemu resonatorju pravimo odprti resonator\index{Resonator!odprti} 
+steni. Resonatorju brez stranskih sten  pravimo odprti resonator\index{Resonator!odprti} 
 (slika~\ref{fig:Odprt_resonator}).
+\vglue-5truemm
 \begin{figure}[h]
 \centering
 \def\svgwidth{120truemm} 
@@ -82,17 +83,17 @@ iz odprtega resonatorja uidejo.}
 \end{figure}
 
 Obravnavajmo odprte resonatorje podrobneje. V zaprti pravokotni votlini velikosti
-$a\times a\times L$ z idealno odbojnimi stenami so dovoljene vrednosti
+$a\times a\times L$ z idealno odbojnimi stenami so vrednosti
 valovnega vektorja za lastna nihanja 
 \begin{equation}
 \mathbf{k}_{l,m,n}=\left(\frac{l\pi}{a}\,,\frac{m\pi}{a}\,,\frac{n\pi}{L}\right),\label{eq:k-votlina}
 \end{equation}
- kjer so $l$, $m$ in $n$ cela števila, $L$ dolžina, $a$ pa prečna
+kjer so $l$, $m$ in $n$ cela števila, $L$ dolžina in $a$ prečna
 dimenzija resonatorja. Lastne krožne frekvence so 
 \begin{equation}
 \omega_{l,m,n}=c|\mathbf{k}_{l,m,n}|.\label{eq:omega-votlina}
 \end{equation}
-Dolžina resonatorja $L$ je velika v primerjavi z $\lambda$, zato je $n$
+Ker je dolžina resonatorja $L$ velika v primerjavi z $\lambda$, je $n$
 zelo veliko število. Če prečnih sten ni, je  $\mathbf{k}$ približno
 vzporeden z osjo $z$ in števili $l$ in $m$ sta majhni. Tedaj
 lahko velikost valovnega vektorja razvijemo in krožno frekvenco zapišemo kot
@@ -100,38 +101,38 @@ lahko velikost valovnega vektorja razvijemo in krožno frekvenco zapišemo kot
 \omega_{l,m,n}=c\left(\frac{n\pi}{L}+\frac{l^{2}+m^{2}}{2n}\frac{L \pi}{a^{2}}\right).
 \label{eq:delta-omega-resonator-razvoj}
 \end{equation}
-Drugi člen v oklepaju je navadno le majhen popravek, tako da so
+Drugi člen v oklepaju je le majhen popravek, tako da so
 lastne frekvence odprtih optičnih resonatorjev odvisne predvsem od
 števila vozlov v vzdolžni smeri. To število je navadno veliko, med $10^{5}$
 in $10^{7}$. Možna so tudi lastna nihanja z nekaj vozli v prečni
-smeri, ki pa le malo vplivajo na lastne frekvence. Zato bomo v nadaljevanju
-obravnavali predvsem lastna nihanja brez vozlov v prečni smeri in
+smeri, ki pa navadno le malo vplivajo na lastne frekvence. V nadaljevanju
+bomo obravnavali predvsem lastna nihanja brez vozlov v prečni smeri in
 jih označili z enim samim indeksom $n$.
 
 Razlika med frekvencama dveh zaporednih lastnih nihanj\index{Lastne frekvence resonatorja} 
 $n$ in $n+1$ je
 \boxeq{eq:delta-omega-resonator}{
-\Delta\omega_n=\frac{\pi c}{L} \quad \mathrm{oziroma} \quad \Delta \nu_n = \frac{c}{2L}.
+\Delta\omega_n=\frac{\pi c}{L} \qquad \mathrm{oziroma} \qquad \Delta \nu_n = \frac{c}{2L}.
 }
 Pri dolžini resonatorja $L=30~\si{\centi\metre}$ je v frekvenčnem
 intervalu $\Delta \nu = 3\cdot10^{9}~\si{\hertz}$ le še $\Delta \nu /\Delta \nu_n = 6$ lastnih 
 nihanj, ki jih je brez težav mogoče razločiti.
 
 V zaprtih votlinah z zrcalnimi stenami obstajajo dobro določena lastna
-stanja pri poljubni obliki votline. To ne drži za odprte resonatorje.
+nihanja pri poljubni obliki votline. To ne drži za odprte resonatorje.
 Da se pojavijo lastna nihanja z majhnimi izgubami, morata
 biti izpolnjena dva pogoja:
 
 \begin{enumerate} 
-\item Snop žarkov mora po mnogih odbojih ostati ujet med zrcaloma resonatorja.\\
+\item Snop žarkov mora po mnogih odbojih ostati ujet med zrcaloma resonatorja.
 \item Polmer zrcala mora biti večji od polmera uklonsko razširjenega snopa, ki se širi od nasprotnega zrcala. 
 \end{enumerate}
 
 Resonatorje, ki zadoščajo gornjima pogojema, imenujemo stabilni 
 resonatorji\index{Stabilnost resonatorja}.
-Drugi pogoj lahko zapišemo tudi z enačbami, izhajajoč iz enačbe za oceno divergence (enačba~\ref{eq:kot_ocena}):
+Drugi pogoj lahko zapišemo tudi z enačbo, izhajajoč iz enačbe za oceno divergence (enačba~\ref{eq:kot_ocena}):
 \begin{equation}
-\vartheta = \frac{\lambda}{a_1} < \frac{a_2}{L} \qquad \Rightarrow \qquad
+a_1 > L \vartheta = L\frac{\lambda}{a_1}\qquad \mathrm{oziroma} \qquad
 \frac{a_{1}a_{2}}{\lambda L}>1,
 \label{eq:Fresnelovo_stevilo}
 \end{equation}
@@ -140,7 +141,8 @@ $
 F = a_{1}a_{2}/\lambda L
 $
 pravimo Fresnelovo število\index{Fresnelovo število} (enačba~\ref{eq:Fst})
-in resonator je stabilen pri $F>1$. Laserji imajo pogosto $F\gg 1$, lahko tudi $F \sim 100$.
+in resonator je stabilen pri $F>1$. Laserji imajo pogosto $F\gg 1$, lahko tudi $F \sim 100$, zato je 
+prvi kriterij navadno odločujoč pri ugotavljanju stabilnosti resonatorja.
 
 \subsection*{Fabry-Perotov interferometer}
 Poglejmo resonator, omejen z dvema vzporednima ravnima zrcaloma
@@ -154,9 +156,11 @@ med zrcaloma večkratnik polovične valovne dolžine (enačba~\ref{eq:k-votlina}
 L = \frac{n \lambda}{2}.
 \end{equation}
 Prepustnost interferometra za ravni val, ki vpada pravokotno na zrcali z
-odbojnostjo ${\cal R}$, lahko izračunamo (glej nalogo~\ref{naloga:FP}). Prepustnost je enaka 
+odbojnostjo ${\cal R}$, lahko izračunamo (glej nalogo~\ref{naloga:FP}). Prepustnost, to je 
+razmerje med intenzitetama prepuščenega in vpadnega valovanja, je odvisna
+od frekvence vpadnega valovanja
 \begin{equation}
-T=\frac{1}{1+\frac{4{\cal R}}{(1-{\cal R})^{2}}\sin^{2}kL}
+T=\frac{I}{I_0} = \frac{1}{1+\frac{4{\cal R}}{(1-{\cal R})^{2}}\sin^{2}\omega L/c}
 \label{eq:Fabry-Perot-prepustnost}
 \end{equation}
 in je prikazana na sliki (\ref{fig:Fabry-Perot}) za tri različne vrednosti ${\cal R}$.
@@ -166,15 +170,15 @@ in je prikazana na sliki (\ref{fig:Fabry-Perot}) za tri različne vrednosti ${\c
 \input{slike/04_fabry_perot.pdf_tex}
 \caption{
 Prepustnost Fabry-Perotovega interferometra
-v odvisnosti od valovnega števila $k$ pri različnih odbojnostih zrcal
+v odvisnosti od frekvence vpadnega valovanja $\nu$ pri različnih odbojnostih zrcal
 $\mathcal{R}.$}
 \label{fig:Fabry-Perot}
 \end{figure}
 
-Ko je frekvenca vpadnega valovanja ravno enaka lastni frekvenci
-resonatorja, je sistem v resonanci in  $T=1$. Širina resonance se z naraščajočo
-odbojnostjo zrcal ${\cal R}$ zmanjšuje. Spoznali bomo, da odbojnost
-zrcal določa tudi čas dušenja vzbujenega lastnega nihanja. 
+Ko je frekvenca vpadnega valovanja enaka lastni frekvenci
+resonatorja, je sistem v resonanci in $T=1$. Pri drugih frekvencah je prepustnost znatno manjša, predvsem
+pri velikih $\cal{R}$, kjer pade praktično na nič. Z naraščajočo odbojnostjo zrcal ${\cal R}$ 
+se zmanjšuje tudi širina resonančnega vrha.
 \begin{definition}
 \label{naloga:FP}
 Pokaži, da je prepustnost Fabry-Perotovega interferometra, katerega zrcali imata odbojnost $\cal{R}$, enaka 
@@ -195,17 +199,15 @@ pogoja ni težav, saj morata biti pri na primer $30~\si{\centi\metre}$ dolgem re
 valovni dolžini $0,5~\si{\micro\metre}$ zrcali večji od $0,4~\si{\milli\metre}$, da zadostita pogoju, 
 zapisanem v enačbi~(\ref{eq:Fresnelovo_stevilo}).
 
-Bolj stabilni resonatorji so sestavljeni iz dveh konkavno ukrivljenih
-zrcal. Tedaj so žarki, ki potujejo pod majhnim kotom glede na osrednjo os, ujeti
-med zrcaloma in energija lastnih nihanj ostaja lokalizirana blizu
-osi.
-
 \section{Gaussovi snopi v resonatorjih}
-V stabilnih resonatorjih s konkavnima zrcaloma pričakujemo, da so
-lastna nihanja omejena na bližino osrednje osi in zrcali znatno 
-večji od polmera lastnega nihanja. Tedaj lahko za obravnavo
-električnega polja uporabimo obosno valovno\index{Obosna valovna enačba} 
-enačbo (enačba~\ref{eq:obosna-valovna-enacba}). Stoječe valovanje se pojavi, kadar
+Spoznali smo planparalelni resonator, ki deluje na meji stabilnosti. 
+Bolj stabilni resonatorji so sestavljeni iz dveh konkavno ukrivljenih
+zrcal. V njih ostajajo žarki, ki potujejo pod majhnim kotom glede na osrednjo os, ujeti
+med zrcaloma. Energija lastnih nihanj ostaja lokalizirana blizu osi in za obravnavo
+električnega polja lahko uporabimo obosno valovno\index{Obosna valovna enačba} 
+enačbo (enačba~\ref{eq:obosna-valovna-enacba}). 
+
+Poleg tega vemo, da se stoječe valovanje pojavi, kadar
 svetloba po odboju od zrcala konstruktivno interferira sama s sabo.
 Od tod izhaja robni pogoj, ki pravi, da se oblika valovne fronte stoječega valovanja na 
 zrcalu ujema z obliko zrcala, električno polje na površini zrcala
@@ -213,24 +215,24 @@ pa je približno enako nič.
 
 \begin{figure}[h]
 \centering
-\def\svgwidth{100truemm} 
+\def\svgwidth{110truemm} 
 \input{slike/04_Resonator_Gauss.pdf_tex}
 \caption{Gaussov snop v odprtem resonatorju s konkavno ukrivljenima zrcaloma
 s krivinskima radijema $R_1$ in $R_2$. V stabilnem resonatorju se krivinski 
-radij čela snopa ujema s krivinskim radijem zrcal. Kadar $R_1 \neq R_2$, 
+radij snopa na zrcalu ujema s krivinskim radijem zrcal. Kadar $R_1 \neq R_2$, 
 grlo snopa ne leži na sredini resonatorja.}
 \label{fig:Gaussov-snop-v-resonatorju}
 \end{figure}
 
 V prečni smeri omejene rešitve obosne enačbe smo našli v obliki potujočih
 Gaussovih snopov\index{Gaussov snop} (enačba~\ref{eq:gaussov-snop}). 
-Podobno kot lahko zapišemo stoječe valovanje z vsoto valovanj, ki se širita v nasprotnih smereh,
-lahko stoječe snope zapišemo s superpozicijo snopov, ki se širita v različnih smereh ob osi. 
+Podobno kot zapišemo stoječe valovanje z vsoto valovanj, ki se širita v nasprotnih smereh,
+lahko stoječe snope zapišemo s superpozicijo dveh snopov, ki se ob osi širita v različnih smereh. 
 Da zadostimo robnim pogojem na zrcalih, se mora krivinski radij valovnih front 
 snopa na zrcalih ujemati s krivinskima radijema zrcal $R_{1}$ in $R_{2}$ 
 (slika \ref{fig:Gaussov-snop-v-resonatorju}).
-Pri tem sta neznanki polmer grla snopa $w_0$, ki je povezan s parametrom $z_{0}$,
-in lega grla. 
+Pri tem sta prosta parametra polmer grla snopa $w_0$, 
+ki je povezan s parametrom $z_{0}$, in lega grla. 
 
 Postavimo izhodišče osi $z$ v grlo, kot smo
 navajeni, tako da sta zrcali pri $z_{1}<0$ in $z_{2}>0$. Uporabimo enačbo
@@ -249,15 +251,15 @@ z_{2}-z_{1}=L.
 \label{eq:razlikaz}
 \end{equation}
 Iz gornjih enačb najprej izračunamo razdaljo $z_{1}$, ki določa
-lego grla v resonatorju, nato pa parameter $z_{0}$, ki določa
-območje bližnjega polja in preko enačbe~(\ref{eq:z0}) enolično tudi polmer grla
+lego grla v resonatorju. Rezultat uporabimo za izračun parametra $z_{0}$, ki določa
+območje bližnjega polja in preko enačbe~(\ref{eq:z0}) enolično tudi polmer snopa v grlu
 \begin{equation}
 z_{0}^{2}=\frac{L(R_{1}-L)(R_{2}-L)(R_{1}+R_{2}-L)}{(R_{1}+R_{2}-2L)^{2}}.
 \label{eq:z0_stab}
 \end{equation}
 Da je snop realen in omejen, mora biti $z_{0}^{2}>0$ in zato števec
-gornjega izraza pozitiven. Ta pogoj lahko po kratkem računu zapišemo
-v obliki stabilnostnega kriterija\index{Stabilnost resonatorja}
+gornjega izraza pozitiven. Ta pogoj s kratkim računom preoblikujemo
+v stabilnostni kriterij\index{Stabilnost resonatorja}
 \boxeq{eq:stabilnost}{
 0<\left(1-\frac{L}{R_{1}}\right)\left(1-\frac{L}{R_{2}}\right)<1.
 }
@@ -274,31 +276,41 @@ Stabilnostni kriterij za resonatorje je najbolj nazorno predstaviti na diagramu,
 kjer na os $x$ nanašamo $L/R_{1}$, na os $y$ pa $L/R_{2}$. Na 
 sliki~(\ref{fig:Podrocje-stabilnih-resonatorjev}) je stabilno območje delovanja 
 resonatorjev, kot ga razberemo iz enačbe~(\ref{eq:stabilnost}), označeno senčeno.
-Opazimo, da je možnih veliko različnih vrst stabilnih resonatorjev, ob tem da 
-resonatorji, ki so sestavljeni iz dveh konveksnih zrcal, niso nikoli stabilni.
-Če je eno zrcalo ravno (plankonkavni resonatorji), je grlo Gaussovega snopa vedno 
-na ravnem zrcalu. V primeru konveksno-konkavnega resonatorja leži grlo snopa
-izven resonatorja. Podrobneje si oglejmo nekaj posebnih primerov stabilnih resonatorjev. 
+Za simetrične resonatorje\index{Resonator!simetrični} 
+velja $R_{1}=R_{2}=R$ in na diagramu se taki resonatorji nahajajo na simetrali 
+lihih kvadrantov pri $x=y$. 
+
+Med njimi omenimo tri posebne vrste resonatorjev.
+Prvi je konfokalni \index{Resonator!konfokalni}resonator (a), 
+pri katerem sovpadata gorišči obeh zrcal in zanj velja $L=R$. Drugi je 
+koncentrični \index{Resonator!koncentrični}resonator (b), pri katerem sovpadata krivinski središči zrcal in $L=2R$.
+Tretji je\index{Resonator!planparalelni} planparalelni ali Fabry-Perotov (c), ki ga že poznamo. 
+Zadnja dva sta skrajna primera stabilnega simetričnega resonatorja. 
+Resonatorji, ki so sestavljeni iz dveh konveksnih zrcal, niso nikoli stabilni, lahko
+pa so stabilni resonatorji iz enega konveksnega in enega konkavnega zrcala (d)
+ali resonatorji iz enega ravnega in enega konkavnega zrcala (e). 
+
+V simetričnih resonatorjih leži grlo Gaussovega snopa vedno na sredini resonatorja.
+Če je eno zrcalo ravno (plankonkavni resonatorji), leži grlo Gaussovega snopa vedno 
+na ravnem zrcalu, saj so le tam valovne fronte ravne. V primeru konveksno-konkavnega 
+resonatorja leži grlo snopa izven resonatorja. 
 
 \begin{figure}[h]
 \centering
 \def\svgwidth{100truemm} 
 \input{slike/04_stabilnost.pdf_tex}
 \caption{Laserski resonator je stabilen, 
-če sta parametra $L/R_{1}$ in $L/R_{2}$ znotraj obarvanega območja: 
+če sta parametra $L/R_{1}$ in $L/R_{2}$ znotraj obarvanega območja. 
 (a) konfokalni \index{Resonator!konfokalni}resonator,
 (b) koncentrični resonator\index{Resonator!koncentrični}, 
-(c) planparalelni resonator (Fabry-Perot)\index{Resonator!planparalelni}, 
+(c) planparalelni (Fabry-Perot) resonator, \index{Resonator!planparalelni}
 (d) konveksno-konkavni resonator 
 in (e) plankonkavni resonator.}
 \label{fig:Podrocje-stabilnih-resonatorjev}
 \end{figure}
 
-\subsection*{Simetrični resonatorji}
-Za simetrični resonator\index{Resonator!simetrični} velja $R_{1}=R_{2}=R$. Na diagramu 
-(slika~\ref{fig:Podrocje-stabilnih-resonatorjev}) 
-se taki resonatorji nahajajo na simetrali lihih kvadrantov pri $x=y$. V simetričnih resonatorjih 
-je grlo v sredini resonatorja in enačba~(\ref{eq:z0_stab}) se poenostavi v 
+V simetričnih resonatorjih je grlo v sredini resonatorja in enačba~(\ref{eq:z0_stab}) 
+se poenostavi v 
 \begin{equation}
 z_{0}=\frac{1}{2}\sqrt{(2R-L)L}.
 \label{eq:zosim}
@@ -308,23 +320,26 @@ Polmer grla v simetričnem resonatorju je enak
 w_{0}=\sqrt{\frac{\lambda z_{0}}{\pi}}=\sqrt{\frac{\lambda}{2\pi}}\sqrt[4]{(2R-L)L}.
 \label{eq:grlo_v_res}
 \end{equation}
-Po enačbi~(\ref{eq:w}) lahko izračunamo še polmer snopa na ogledalu
-\begin{equation}
-w_{1}=w_{0}\sqrt{\left(1+\left(\frac{L}{2z_{0}}\right)^{2}\right)}=
-\sqrt{\frac{\lambda}{\pi}\frac{R\sqrt{L}}{\sqrt{2R-L}}}.
-\end{equation}
 
-Pri izbrani dolžini simetričnega resonatorja je polmer snopa na zrcalu najmanjši,
-kadar je $R=L$. Tedaj sovpadata geometrijski gorišči obeh zrcal,
-zato imenujemo tak resonator konfokalni\index{Resonator!konfokalni}. 
-Hiter račun pokaže, da velja $z_{0}=L/2$. Dolžina območja bližnjega polja je 
-torej enaka dolžini resonatorja, snop pa se na razdalji od grla do zrcala razširi
-za $w_1/w_0=\sqrt{2}$. 
 \begin{definition}
 \label{naloga:uklon_konf}
- Pokaži, da je polmer snopa na izhodnem zrcalu v simetričnem resonatorju z
- danima parametroma $R$ in $L$ najmanjši, kadar je resonator konfokalni.
-\end{definition}
+ Izračunaj polmer
+ snopa na izhodnem zrcalu. Pokaži, da je polmer snopa na izhodnem zrcalu v 
+ simetričnem resonatorju najmanjši, kadar je resonator konfokalni.
+\end{definition} 
+
+Iz naloge~(\ref{naloga:uklon_konf}) sledi, da je pri dani dolžini 
+resonatorja polmer snopa na zrcalu najmanjši v konfokalnih 
+resonatorjih. \index{Resonator!konfokalni} Hitro uvidimo, da takrat 
+velja $z_{0}=L/2$. Dolžina območja bližnjega polja je 
+enaka dolžini resonatorja in snop se na razdalji od grla do zrcala razširi
+za $w_1/w_0=\sqrt{2}$. 
+\begin{remark}
+Izkaže se, da so konfokalni resonatorji najmanj občutljivi na majhne zasuke zrcal. 
+Pri zasuku zrcala se v navadnih stabilnih resonatorjih namreč premakne os, ki gre skozi 
+krivinski središči obeh zrcal. Če želimo, da je največji odmik nove osi kar se da
+majhen, uporabimo konfokalne resonatorje. 
+\end{remark}
 
 Pri dejanskem načrtovanju laserjev velja dodatna omejitev, saj želimo 
 ojačevalno sredstvo, ki je v resonatorju, čim bolj izkoristiti. Pogosto je zato 
@@ -337,25 +352,13 @@ dolžina $\lambda = 633~\si{\nano\metre}$. Tedaj je v konfokalni geometriji po e
 polmer grla $w_{0}=0,32~\si{\milli\metre}$. Premer razelektritvene cevi, v kateri pride
 do ojačenja svetlobe, je navadno
 nekaj milimetrov in približno tako debel mora biti tudi svetlobni
-snop, da dobro izkoristi ojačenje zaradi stimuliranega sevanja.
-Da bi pri isti dolžini laserja dobili grlo s premerom $2~\si{\milli\metre}$, bi morali
+snop, da dobro izkoristi ojačenje v plinu.
+Da bi imelo pri isti dolžini laserja grlo premer $2~\si{\milli\metre}$, bi morali
 uporabiti zrcali s krivinskim radijem okoli $50~\si{\metre}$. 
-Primer kaže, da že majhna ukrivljenost zrcal zagotovi dokaj ozke snope.
 
-\begin{remark}
-Izkaže se, da so konfokalni resonatorji najmanj občutljivi na majhne zasuke zrcal. 
-Pri zasuku zrcala se v navadnih stabilnih resonatorjih namreč premakne os, ki gre skozi 
-krivinski središči obeh zrcal. Če želimo, da je največji odmik nove osi kar se da
-majhen, uporabimo konfokalne resonatorje. 
-\end{remark}
-
-Skrajna primera stabilnega simetričnega resonatorja sta 
-koncentrični resonator\index{Resonator!koncentrični},
-pri katerem sovpadata krivinski središči zrcal in $L=2R$, in planparalelni 
-resonator\index{Resonator!planparalelni}, pri katerem sta zrcali ravni.
-V prvem primeru gre po enačbi~(\ref{eq:grlo_v_res}) polmer grla proti nič, v drugem pa raste sorazmerno
-z $R^{1/4}$. Pri ravnih zrcalih postanejo uklonske
-izgube na robovih znatne. Račun z Gaussovimi snopi tedaj ni več veljaven
+V koncentričnem resonatorju gre polmer grla (enačba~\ref{eq:grlo_v_res}) proti nič, 
+v planparalelnem pa raste sorazmerno z $R^{1/4}$. Pri resonatorjih z ravnimi zrcali 
+postanejo uklonske izgube na robovih znatne. Račun z Gaussovimi snopi tedaj ni več veljaven
 in treba je uporabiti pristope, ki jih bomo opisali
 v razdelku~(\ref{Resonator_uklon}).
 
@@ -382,7 +385,7 @@ volumen resonatorja enakomerno pokrit s svetlobo.
 Do zdaj smo obravnavali dva primera laserskih resonatorjev: Fabry-Perotov
 resonator z dvema vzporednima ravnima zrcaloma (slika~\ref{fig:resonatorji}\,a) 
 in resonator z dvema sferičnima zrcaloma (b).
-Poleg teh dveh primerov je v uporabi še cela vrsta različnih resonatorjev. Ciklični
+Poleg teh dveh primerov je v uporabi še cela vrsta drugih resonatorjev. Ciklični
 resonator\index{Resonator!ciklični} (c) je
 sestavljen iz več zrcal in žarek ciklično potuje med njimi. V vlakenskih laserjih je resonator
 optično vlakno med dvema zrcaloma ali pa sklenjeno vlakno\index{Laser!vlakenski}. 
@@ -411,7 +414,7 @@ Izhajamo iz zahteve, da se v stabilnem resonatorju snop po celotnem obhodu
 preslika sam vase. Gaussov snop na neki točki v resonatorju 
 zapišemo s kompleksno ukrivljenostjo $q$ (enačba~\ref{eq:q-inv}).
 V najpreprostejšem primeru resonatorja snop prepotuje razdaljo do zrcala, se na njem 
-odbije, prepotuje resonator v nasprotni smeri, se odbije od drugega zrcala in se vrne 
+odbije, prepotuje resonator v nasprotni smeri, se odbije od drugega zrcala in vrne 
 v izhodišče. V bolj zapletenih primerih je treba upoštevati še 
 prehode skozi druge optične elemente. Matriko 
 za celoten prehod zapišemo kot produkt matrik ABCD za posamezne prehode $M = M_N M_{N-1} ...M_2 M_1$.
@@ -422,7 +425,7 @@ A & B\\
 C & D
 \end{array}\right],
 \end{equation}
-kompleksni krivinski radij po obhodu pa je enak začetnemu
+kompleksni krivinski radij po obhodu $q_2$ pa je enak začetnemu
 \begin{equation}
 q_2 = \frac{Aq+B}{Cq+D} = q.
 \end{equation}
@@ -455,9 +458,8 @@ enak pogoju~(\ref{eq:stabilnost_ABCD}).
 \end{remark}
 
 \section{Resonančne frekvence}
-Doslej smo obravnavali le prostorsko obliko polja v resonatorju, ničesar pa še nismo
-povedali o časovni odvisnosti lastnih nihanj. Frekvence
-lastnih nihanj\index{Lastne frekvence resonatorja} izpeljemo iz pogoja, 
+Frekvence
+lastnih nihanj\index{Lastne frekvence resonatorja} v resonatorju izpeljemo iz pogoja, 
 da se krajevni del faze lastnega nihanja po enem 
 obhodu\footnote{Prelet resonatorja je prehod svetlobe od enega zrcala
 do drugega, obhod pa imenujemo prelet v obe smeri.}
@@ -476,21 +478,21 @@ Razlika faze po obhodu je
 \end{equation}
 Člen v oklepaju je enak za vsa nihanja in le za delček valovne dolžine 
 spremeni efektivno dolžino resonatorja. Ker dolžine resonatorja niti ne poznamo
-tako natančno, lahko ta prispevek zanemarimo. Iz istega razloga lahko izpustimo
-tudi spremembo faze na zrcalu. Od tod sledi znana enačba za resonančne frekvence 
+tako natančno, lahko ta prispevek zanemarimo. Dobimo znano enačbo za resonančne frekvence 
 \boxeq{eq:omega}{
-\omega_{n}=\frac{n\pi c}{L} \quad \mathrm{in}\quad \nu_{n}=\frac{n c}{2L}.
+\omega_{n}=\frac{n\pi c}{L} \qquad \mathrm{in}\qquad \nu_{n}=\frac{n c}{2L}.
 }
-Konstantni členi, ki jih pri zapisu frekvence nismo upoštevali, ne vplivajo
-na razmik med dvema zaporednima lastnima frekvencama. Razlika med zaporednima
+
+Konstantni členi, ki jih pri zapisu frekvence nismo upoštevali, na razmik med
+zaporednimi frekvencami ne vplivajo. Razmik med zaporednima
 lastnima frekvencama je tako v skladu z enačbo~(\ref{eq:delta-omega-resonator})
 \begin{equation}
-\Delta\omega_n=\frac{\pi c}{L} \quad \mathrm{in}\quad \Delta \nu_n=\frac{c}{2L}.
+\Delta\omega_n=\frac{\pi c}{L} \qquad \mathrm{in}\qquad \Delta \nu_n=\frac{c}{2L}.
 \label{eq:deltaomega}
 \end{equation}
 
-Za snope višjega reda, ki imajo vozle v prečni smeri, je fazni premik
-odvisen tudi od števila vozlov. Tako je na primer v cilindričnih koordinatah
+Za snope višjega reda, ki imajo vozle v prečni smeri, je faza
+odvisna tudi od števila vozlov. Tako je na primer v cilindričnih koordinatah
 (enačba~\ref{eq:etaGL})
 \begin{equation}
 \eta_{p,l}(z)=(2p+l+1)\arctan\left(\frac{z}{z_{0}}\right).
@@ -500,22 +502,31 @@ Resonančni pogoj zapišemo kot
 \frac{\omega_{n,p,l}}{c}2L-2(2p+l+1)\left(\arctan\left(\frac{z_{2}}{z_{0}}\right)-
 \arctan\left(\frac{z_{1}}{z_{0}}\right)\right)=2n\pi.
 \end{equation}
-Resonančne frekvence so torej odvisne od števila prečnih vozlov (slika~\ref{fig:crte}),
-kar je dodaten razlog, zakaj v laserjih vzbujamo le osnovno lastno nihanje.
+Resonančne frekvence snopov višjega reda se razlikujejo od frekvence osnovnega 
+Gaussovega snopa in so odvisne od števila prečnih vozlov (slika~\ref{fig:crte}).
+Razlika v lastnih frekvencah je dodaten razlog, da v laserjih, če se le da, 
+vzbujamo le osnovno lastno nihanje.
 
-Zanimiv in praktično pomemben je primer konfokalnega resonatorja\index{Resonator!konfokalni},
-pri katerem je $z_{0}=L/2$ in $\arctan(L/2z_{0})= \arctan(1)=\pi/4$. Resonančne frekvence
-so 
+\begin{figure}[h]
+\centering
+\def\svgwidth{110truemm} 
+\input{slike/04_crte.pdf_tex}
+\caption{Resonančne frekvence za osnovni Gaussov snop in snope višjih redov}
+\label{fig:crte}
+\end{figure}
+\pagebreak
+Prvi primer naj bo zanimiv in praktično pomemben konfokalni 
+resonator\index{Resonator!konfokalni}, pri katerem je $z_{0}=L/2$ in 
+$\arctan(L/2z_{0})= \arctan(1)=\pi/4$. Resonančne frekvence so 
 \begin{equation}
-\omega_{n,p,l}=\frac{\pi c}{L}\left(n+\frac{1}{2}(2p+l+1)\right) \quad \mathrm{in}
-\quad \nu_{n,p,l}=\frac{c}{2L}\left(n+\frac{1}{2}(2p+l+1)\right).
+\omega_{n,p,l}=\frac{\pi c}{L}\left(n+\frac{1}{2}(2p+l+1)\right) \qquad \mathrm{in}
+\qquad \nu_{n,p,l}=\frac{c}{2L}\left(n+\frac{1}{2}(2p+l+1)\right).
 \label{eq:omega_konf}
 \end{equation}
-
-Snopi, pri katerih je $2p+l$ liho število, imajo iste resonančne frekvence kot
+Snopi, pri katerih je $2p+l$ liho število, imajo enake resonančne frekvence kot
 osnovni snopi, pri sodih $2p+l$ pa se pojavijo še resonance na sredini
-med osnovnimi. Razmik med so\-sed\-nji\-mi frekvencami je tako $\Delta\nu=c/4L$
-in konfokalni interferometer se obnaša kot dvakrat daljši planparalelni.
+med frekvencami osnovnega snopa. Razmik med so\-sed\-nji\-mi frekvencami je tako $\Delta\nu=c/4L$
+in konfokalni resonator se obnaša kot dvakrat daljši planparalelni.
 To lahko razumemo tudi iz geometrijske slike: žarek, ki vstopi v konfokalni
 resonator ali interferometer vzporedno z osjo, se šele po dveh obhodih vrne sam
 vase.
@@ -529,27 +540,22 @@ vrne sam vase.}
 \label{fig:Konfokalni_zarek}
 \end{figure}
 
-Pri skoraj planparalelnem\index{Resonator!planparalelni} 
-simetričnem resonatorju je $z_{0}\gg L$. Takrat lahko $\arctan(L/2z_{0})$ razvijemo, 
+Drugi primer naj bo skoraj planparalelni\index{Resonator!planparalelni} 
+simetrični resonator, za katerega velja $z_{0}\gg L$. Takrat lahko $\arctan(L/2z_{0})$ razvijemo, 
 upoštevamo enačbo~(\ref{eq:zosim}) in zapišemo
 \begin{equation}
 \omega_{n,p,l}=\frac{\pi c}{L}\left(n+(2p+l+1)\frac{1}{\pi}\sqrt{\frac{2L}{R}}\right).
 \end{equation}
 Ker je $L$ majhen v primerjavi z $R$, so resonance snopov nizkega prečnega reda 
-zelo blizu resonancam osnovnih snopov. Poglejmo primer. Vzemimo 
+zelo blizu resonancam osnovnih snopov. 
+
+Poglejmo primer. Vzemimo 
 simetrični resonator z dolžino $L=1~\si{\metre}$ in $R=50~\si{\metre}$, 
 valovna dolžina naj bo $\lambda= 500~\si{\nano\metre}$. Z uporabo enačbe~(\ref{eq:zosim})
 hitro lahko izračunamo $z_0 = 4,97~\si{\metre}$. Ker je pogoj $z_0\gg L$ izpolnjen, lahko uporabimo
 gornji približek. Razlika med frekvencama dveh osnovnih snopov je $\Delta \nu_{n,p,l} = 
 150~\si{\mega\hertz}$, medtem ko je razlika med frekvencama dveh prečnih snopov
 $\Delta \nu_{n,p,l} = 9,5~\si{\mega\hertz}$.
-\begin{figure}[h]
-\centering
-\def\svgwidth{100truemm} 
-\input{slike/04_crte.pdf_tex}
-\caption{Resonančne frekvence za skoraj planparalelni ($R\gg L$) resonator}
-\label{fig:crte}
-\end{figure}
 
 \section{Izgube v resonatorjih}
 Energija lastnega nihanja odprtega resonatorja ni konstantna, ampak se počasi
@@ -560,14 +566,14 @@ tak resonator ne bi bil uporaben, saj nihanja ne bi mogli sklopiti z zunanjim po
 naj torej laser oddaja svetlobo, mora biti odbojnost vsaj enega od zrcal manjša od 1.\\
 \item Na sredstvu in na optičnih elementih v resonatorju pride do absorpcije in
 sipanja svetlobe. Te izgube želimo navadno kar se da zmanjšati.\\
-\item Uklonske izgube so odvisne od velikosti zrcal in velikosti snopa na njih.
+\item Uklonske izgube so odvisne od velikosti zrcal in velikosti snopa na zrcalih.
 Pri dani geometriji imajo najmanjši polmer osnovni snopi. Snopi višjega
 reda so širši, zato imajo večje uklonske izgube. Merilo za uklonske
 izgube je Fresnelovo število\index{Fresnelovo število} (enačba~\ref{eq:Fresnelovo_stevilo}) 
 $F=a^{2}/(L\lambda)$, kjer je $a$ polmer ogledal. Pri enakem $F$ je
 polmer snopa na izhodnem zrcalu najmanjši, če je resonator konfokalni\index{Resonator!konfokalni}, 
 zato ima tak resonator tudi najmanjše uklonske izgube (glej nalogo~\ref{naloga:uklon_konf}).
-Navadno je $F$ znatno večji od 1 in so uklonske izgube zanemarljive. 
+Navadno so uklonske izgube zanemarljive. 
 \end{enumerate}
 
 Celotne izgube popišemo z razpadnim časom za energijo 
