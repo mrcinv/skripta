@@ -90,8 +90,8 @@ med dvema trkoma, to je v intervalu dolžine $t_{c}$. Valovni paket dolžine
 $t_{c}$ tako vsebuje frekvence v pasu $\Delta \nu$,
 za katerega velja $t_{c}\Delta\nu\sim1$. Koherenčni čas je torej
 kar reda velikosti obratne vrednosti spektralne širine svetlobe. Povsem
-monokromatsko valovanje bil imelo neskončen koherenčni čas in bi bilo
-popolno koherentno.
+monokromatsko valovanje bi imelo neskončen koherenčni čas in bi bilo
+popolnoma koherentno.
 
 Zapišimo še izsevano polje takega svetila. 
 Jakost električnega polja v izbrani točki prostora je vsota delnih
@@ -166,7 +166,7 @@ na detektorju izmenično zaznavamo oslabitve in ojačitve -- opazujemo interfere
 Valovanje iz točke $P$ na polprepustnem zrcalu razdelimo na dva delna snopa, 
 nato enega s premikanjem zrcala zakasnimo za $\tau=2x/c$. Dokler je zakasnitev
 $\tau$ manjša od koherenčnega časa $t_{c}$, snopa med seboj interferirata.
-S spreminjanjem lege zrcala se tako na detektorju izmenično pojavijo ojačitve in 
+Ob premikanju zrcala se na detektorju izmenično pojavljajo ojačitve in 
 oslabitve. Pri zakasnitvah, ki so večje od koherenčnega časa, ni stalne fazne 
 povezave in na detektorju zaznavamo svetlobo, katere intenziteta ni odvisna od lege
 zrcala $x$.
@@ -205,10 +205,10 @@ jakosti električnega polja
 \boxeq{eq:avtokorelacija}{
 G(\tau)=\frac{1}{T}\int_{-T/2}^{T/2}E(t)E^{*}(t+\tau)\, dt.
 }
-Za zakasnitve $\tau$, ki so manjše od koherenčnega časa $t_c$, je avtokorelacijska
+Za zakasnitve $\tau$, ki so krajše od koherenčnega časa $t_c$, je avtokorelacijska
 funkcija različna od nič in na
 detektorju zaznamo interferenco. Pri zakasnitvah, ki so precej
-večje od koherenčnega časa $t_{c}$, sta polji $E(t)$ in $E(t+\tau)$
+daljše od koherenčnega časa $t_{c}$, sta polji $E(t)$ in $E(t+\tau)$
 statistično neodvisni in povprečje produkta je enako produktu povprečij.
 Ker je $\langle E(t)\rangle=0$, pri velikih zakasnitvah $\tau$ interferenčni
 člen izgine.
@@ -309,7 +309,8 @@ meje integracije smo lahko raztegnili do neskončnosti. Zveza, ki smo jo dobili,
 Wiener-Hinčinov izrek\footnote{Ameriški matematik Norbert Wiener, 1894--1964, in 
 ruski matematik Aleksander Jakovljevič Hinčin, 1894--1959.}
 \boxeq{eq:spekter-zveza}{
-S(\omega)=\frac{1}{2\pi}\int_{-\infty}^{\infty}G(\tau)e^{-i\omega\tau}\, d\tau\;\Longleftrightarrow\; G(\tau)=\int_{-\infty}^{\infty}S(\omega)e^{i\omega\tau}\, 
+S(\omega)=\frac{1}{2\pi}\int_{-\infty}^{\infty}G(\tau)e^{-i\omega\tau}\, 
+d\tau\;\Longleftrightarrow\; G(\tau)=\int_{-\infty}^{\infty}S(\omega)e^{i\omega\tau}\, 
 d\omega.
 }
 Spekter v povprečju stacionarne svetlobe je torej Fouriereva transformiranka 
@@ -368,10 +369,10 @@ Za zgled Wiener-Hinčinovega izreka vzemimo primer, ki je predstavljen na
 sliki~(\ref{fig:amplituda-intenziteta}). 
 Ker so trki med atomi naključni, je avtokorelacijska funkcija eksponentno pojemajoča
 \beq
-g(\tau)=e^{i\omega_{0}\tau} e^{-\tau/t_{c}},
+g(\tau)=e^{i\omega_{0}\tau} e^{-\tau/t_{c}}.
 \label{eq:g-primer}
 \eeq
-spekter take svetlobe pa je Lorentzove 
+Vemo, da je spekter take svetlobe Lorentzove 
 oblike\index{Spekter!Lorentzov} (glej nalogo~\ref{naloga-spekter})
 \begin{equation}
 s(\omega)=\frac{1}{\pi}\frac{\gamma}{(\omega-\omega_{0})^{2}+\gamma^{2}},
@@ -447,14 +448,14 @@ metoda FTIR - {\it Fourier-transform infrared spectroscopy}).\index{Infrardeče 
 \section{Prostorska koherenca}
 \label{Prostorska-koherenca}
 \index{Koherenca!prostorska}
-Vrnimo se k Youngovemu poskusu\index{Youngov poskus} in obravnavi interference
-\index{Interferenca} na dveh ozkih režah. Osvetljujmo zdaj zaslon z dvema
-odprtinama s svetilom končnih razsežnosti. Svetilo naj sveti skoraj enobarvno
+Vrnimo se k Youngovemu poskusu\index{Youngov poskus} in interferenci
+\index{Interferenca} na dveh ozkih režah. Osvetljujmo zdaj zaslon, v katerem sta dve odprtini,
+s svetilom končnih razsežnosti. Svetilo naj sveti skoraj enobarvno
 svetlobo in naj bo na simetrali med odprtinama, kot kaže slika~(\ref{fig:shema-interferenca}).
 
 Žarka, ki izhajata iz sredine svetila (polna rdeča črta), 
 opravita do odprtin v ravnini A enako dolgo pot in povzročita na zaslonu B 
-interferenčne proge. Žarka, ki izhajata iz roba izvora (prekinjena rdeča črta), 
+interferenčne proge. Žarka, ki izhajata z roba izvora (prekinjena rdeča črta), 
 imata do odprtin različno dolgo pot, zato nastane med njima fazna razlika že do ravnine A, 
 ki se prišteje fazni razliki do ravnine B. Interferenčne proge, ki jih tvorita 
 robna žarka, so premaknjene glede na proge sredinskih žarkov. Ker so žarki z roba
@@ -472,8 +473,8 @@ interferenčna slika na zaslonu B izpovpreči.
 \label{fig:shema-interferenca}
 \end{figure}
 
-Razdaljo med odprtinama $d_c$, pri kateri interferenčne proge
-izginejo, imenujemo\index{Koherenčna razdalja} prečna koherenčna razdalja. 
+Razdaljo med odprtinama, pri kateri interferenčne proge
+izginejo, imenujemo\index{Koherenčna razdalja} prečna koherenčna razdalja $d_c$. 
 Zanjo velja približno 
 \begin{equation}
 \delta s = d_c\sin\varphi\approx d_c\frac{R}{z}\sim\lambda\;\Rightarrow\;
@@ -611,7 +612,7 @@ J(0,d)=2\frac{R^{2}I_{0}}{z^{2}}\,\frac{J_{1}(kRd/z)}{kRd/z},
 \end{equation}
 kjer je $J_{1}(x)$ Besslova funkcija. V ničlah prve Besslove funkcije
 pade prečna korelacijska funkcija $J$ na nič in interferenčnega vzorca ne vidimo. 
-Za prečno koherenčno razdaljo je zato smiselno vzeti ravno prvo ničlo Besslove funkcije
+Za določitev prečne koherenčne razdalje je zato smiselno vzeti ravno prvo ničlo Besslove funkcije
 $J_1$, to je pri
 \beq
 \label{eq:okroglo_svetilo}
@@ -660,8 +661,8 @@ za različne vrednosti razmikov med režama: (a) $d = z/kR$, (b) $d=2z/kR$,
 Z večanjem razdalje med režama se proge zgostijo in kontrast se zmanjša. Koherenčni
 čas svetlobe je $t_{c}=10/\omega$, kar še dodatno zmanjšuje modulacijo
 interferenčnih prog. Pri $d=3,832\,z/kR$ je prva ničla Besslove
-funkcije in interferenčni vzorec popolnoma izgine. Pri večjih $d$ se interferenčne
-proge zopet pojavijo, vendar z manjšim kontrastom in nasprotno fazo.}
+funkcije in interferenčni vzorec popolnoma izgine. Pri večjih $d$ so interferenčne
+proge spet vidne, vendar z manjšim kontrastom in nasprotno fazo.}
 \label{fig:Interferencna-slika}
 \end{center}
 \end{figure}
