@@ -6,7 +6,7 @@ nihanje, ki skozi delno prepustno steno resonatorja kot valovanje
 izhaja iz sistema. V tem poglavju bomo 
 spoznali optične resonatorje in kriterije za njihovo stabilno delovanje,
 izračunali lastne frekvence resonatorjev in povezali izgube v laserskem resonatorju s
-spektralno širino črt izsevane svetlobe. 
+spektralno širino izsevane svetlobe. 
 
 \section{Odprti resonatorji}
 Optični resonatorji\index{Resonator} so votline, v katerih je mogoče 
@@ -132,7 +132,7 @@ Resonatorje, ki zadoščajo gornjima pogojema, imenujemo stabilni
 resonatorji\index{Stabilnost resonatorja}.
 Drugi pogoj lahko zapišemo tudi z enačbo, izhajajoč iz enačbe za oceno divergence (enačba~\ref{eq:kot_ocena}):
 \begin{equation}
-a_1 > L \vartheta = L\frac{\lambda}{a_1}\qquad \mathrm{oziroma} \qquad
+a_2 > L \vartheta = L\frac{\lambda}{a_1}\qquad \mathrm{oziroma} \qquad
 \frac{a_{1}a_{2}}{\lambda L}>1,
 \label{eq:Fresnelovo_stevilo}
 \end{equation}
@@ -141,7 +141,7 @@ $
 F = a_{1}a_{2}/\lambda L
 $
 pravimo Fresnelovo število\index{Fresnelovo število} (enačba~\ref{eq:Fst})
-in resonator je stabilen pri $F>1$. Laserji imajo pogosto $F\gg 1$, lahko tudi $F \sim 100$, zato je 
+in resonator je stabilen za $F>1$. Laserji imajo pogosto $F\gg 1$, lahko tudi $F \sim 100$, zato je 
 prvi kriterij navadno odločujoč pri ugotavljanju stabilnosti resonatorja.
 
 \subsection*{Fabry-Perotov interferometer}
@@ -158,7 +158,7 @@ L = \frac{n \lambda}{2}.
 Prepustnost interferometra za ravni val, ki vpada pravokotno na zrcali z
 odbojnostjo ${\cal R}$, lahko izračunamo (glej nalogo~\ref{naloga:FP}). Prepustnost, to je 
 razmerje med intenzitetama prepuščenega in vpadnega valovanja, je odvisna
-od frekvence vpadnega valovanja
+od krožne frekvence vpadnega valovanja
 \begin{equation}
 T=\frac{I}{I_0} = \frac{1}{1+\frac{4{\cal R}}{(1-{\cal R})^{2}}\sin^{2}\omega L/c}
 \label{eq:Fabry-Perot-prepustnost}
@@ -266,7 +266,7 @@ v stabilnostni kriterij\index{Stabilnost resonatorja}
 Resonatorji, ki zadoščajo gornjemu pogoju, so stabilni. 
 
 \begin{definition}
-Izhajajoč iz pogoja, da se na zrcalih krivinski radij valovnih front snopa ujema s krivinskim
+Izhajajoč iz pogoja, da se na zrcalih resonatorja krivinski radij valovnih front snopa ujema s krivinskim
 radijem zrcal (enačbi~\ref{eq:krivinski1} in \ref{eq:krivinski}), izpelji 
 kriterij za stabilno delovanje resonatorja 
 (enačba~\ref{eq:stabilnost}).
@@ -285,7 +285,7 @@ Prvi je konfokalni \index{Resonator!konfokalni}resonator (a),
 pri katerem sovpadata gorišči obeh zrcal in zanj velja $L=R$. Drugi je 
 koncentrični \index{Resonator!koncentrični}resonator (b), pri katerem sovpadata krivinski središči zrcal in $L=2R$.
 Tretji je\index{Resonator!planparalelni} planparalelni ali Fabry-Perotov (c), ki ga že poznamo. 
-Zadnja dva sta skrajna primera stabilnega simetričnega resonatorja. 
+Slednja sta skrajna primera stabilnega simetričnega resonatorja. 
 Resonatorji, ki so sestavljeni iz dveh konveksnih zrcal, niso nikoli stabilni, lahko
 pa so stabilni resonatorji iz enega konveksnega in enega konkavnega zrcala (d)
 ali resonatorji iz enega ravnega in enega konkavnega zrcala (e). 
@@ -309,7 +309,7 @@ in (e) plankonkavni resonator.}
 \label{fig:Podrocje-stabilnih-resonatorjev}
 \end{figure}
 
-V simetričnih resonatorjih je grlo v sredini resonatorja in enačba~(\ref{eq:z0_stab}) 
+V simetričnih resonatorjih je grlo na sredini resonatorja in enačba~(\ref{eq:z0_stab}) 
 se poenostavi v 
 \begin{equation}
 z_{0}=\frac{1}{2}\sqrt{(2R-L)L}.
@@ -324,8 +324,8 @@ w_{0}=\sqrt{\frac{\lambda z_{0}}{\pi}}=\sqrt{\frac{\lambda}{2\pi}}\sqrt[4]{(2R-L
 \begin{definition}
 \label{naloga:uklon_konf}
  Izračunaj polmer
- snopa na izhodnem zrcalu. Pokaži, da je polmer snopa na izhodnem zrcalu v 
- simetričnem resonatorju najmanjši, kadar je resonator konfokalni.
+ snopa na zrcalu simetričnega resonatorja. Pokaži, da je polmer snopa na 
+ izhodnem zrcalu najmanjši ravno v konfokalnem resonatorju. 
 \end{definition} 
 
 Iz naloge~(\ref{naloga:uklon_konf}) sledi, da je pri dani dolžini 
@@ -347,8 +347,8 @@ polmer grla snopa razmeroma velik. Iz enačbe~(\ref{eq:grlo_v_res})
 sledi, da mora biti v tem primeru velik tudi krivinski radij zrcal. S tem
 pridobimo na ojačenju, vendar nekoliko poslabšamo stabilnost resonatorja.
 
-Poglejmo primer. Naj bo dolžina resonatorja laserja $L=1~\si{\metre}$ in valovna
-dolžina $\lambda = 633~\si{\nano\metre}$. Tedaj je v konfokalni geometriji po enačbi~(\ref{eq:grlo_v_res})
+Poglejmo primer. Naj bo dolžina resonatorja $L=1~\si{\metre}$ in valovna
+dolžina svetlobe $\lambda = 633~\si{\nano\metre}$. Tedaj je v konfokalni geometriji po enačbi~(\ref{eq:grlo_v_res})
 polmer grla $w_{0}=0,32~\si{\milli\metre}$. Premer razelektritvene cevi, v kateri pride
 do ojačenja svetlobe, je navadno
 nekaj milimetrov in približno tako debel mora biti tudi svetlobni
@@ -752,10 +752,10 @@ S tem nastavkom mora funkcija $f(x')$ zadoščati enačbi
 \end{equation}
 kjer je $\alpha$ še neznana konstanta. Meje integrala so od enega do 
 drugega roba zrcala. Če je zrcalo dovolj veliko,
-pričakujemo, da je polje na robu dovolj majhno, da lahko meje vzamemo
-kar od $-\infty$ do $\infty$. Vpeljemo še brezdimenzijski koordinati
+pričakujemo, da je polje na robu dovolj majhno, da lahko meje razširimo
+na $-\infty$ do $\infty$. Vpeljemo še brezdimenzijski koordinati
 \begin{equation}
-X=x\sqrt{k/L} \quad \mathrm{in} \quad X'=x'\sqrt{k/L}
+X=x\sqrt{k/L} \qquad \mathrm{in} \qquad X'=x'\sqrt{k/L}
 \label{3.76}
 \end{equation}
 in dobimo
@@ -912,8 +912,7 @@ Sledi
 |s_{-}|=\sqrt{\frac{2}{\tau}}|a|,
 \label{3.40}
 \end{equation}
-pri čemer smo fazo $s_{-}$ priredili z izbiro referenčne ravnine, v kateri
-opazujemo $s_{-}$.
+pri čemer smo fazo $s_{-}$ priredili z izbiro referenčne ravnine.
 
 Ob prisotnosti vpadnega vala $s_{+}$ lahko izhajajoči val zapišemo kot
 vsoto direktnega odboja vpadnega vala $s_{+}$ in prispevka iz resonatorja
@@ -961,7 +960,7 @@ a=\frac{\sqrt{\frac{2}{\tau}}s_{+}}{i(\omega_{n}-\omega)+(\frac{1}{\tau_{0}}+
 \frac{1}{\tau})}.
 \label{3.47}
 \end{equation}
-Sledi
+Dobimo
 \begin{equation}
 \frac{s_{-}}{s_{+}}=\frac{\frac{1}{\tau}-\frac{1}{\tau_0}-i(\omega_{n}-\omega)}
 {\frac{1}{\tau}
@@ -1041,10 +1040,10 @@ ko je resonator napolnjen z nelinearnim sredstvom.
 Podobno kot sklopitev z zunanjim valovanjem lahko obravnavamo tudi
 sklopitev med dvema resonatorjema. Naj bosta dva resonatorja brez izgub
 sklopljena z delno prepustnim zrcalom. Sklopitev naj bo šibka, tako da lahko zapišemo 
-\begin{eqnarray}
-\dot{a}_{1} & = & -i\omega_{1}a_{1}+\kappa_{12}a_{2} \\
-\dot{a}_{2} & = & -i\omega_{2}a_{2}+\kappa_{21}a_{1}.
-\end{eqnarray}
+\begin{equation}
+\dot{a}_{1} =  -i\omega_{1}a_{1}+\kappa_{12}a_{2} \qquad \mathrm{in} \qquad 
+\dot{a}_{2} = -i\omega_{2}a_{2}+\kappa_{21}a_{1}.
+\end{equation}
 
 Zaradi ohranitve energije sklopitvena koeficienta $\kappa_{12}$ in
 $\kappa_{21}$ nista neodvisna. Vsota energij obeh resonatorjev mora
@@ -1076,17 +1075,17 @@ Sledi
 \end{equation}
  tako da je 
 \begin{equation}
-\kappa_{12}=\frac{c}{2L}\sqrt{1-{\cal R}}\quad \mathrm{in} \quad \kappa_{21}=-\kappa_{12}.
+\kappa_{12}=\frac{c}{2L}\sqrt{1-{\cal R}}\qquad \mathrm{in} \qquad \kappa_{21}=-\kappa_{12}.
 \label{3.59}
 \end{equation}
 
 Zaradi sklopitve se spremenijo lastne frekvence resonatorjev. 
 Poglejmo dva enaka sklopljena resonatorja
-\begin{eqnarray}
-\dot{a}_{1} & = & -i\omega_{0}a_{1}+\kappa_{12}a_{2}\\
-\dot{a}_{2} & = & -i\omega_{0}a_{2}-\kappa_{12}a_{1}.
-\end{eqnarray}
- Iščemo rešitve oblike $A_{i}e^{-i\omega t}$. Če uporabimo ta nastavek v gornjih
+\begin{equation}
+ \dot{a}_{1}  =  -i\omega_{0}a_{1}+\kappa_{12}a_{2} \qquad \mathrm{in} \qquad 
+\dot{a}_{2}  =  -i\omega_{0}a_{2}-\kappa_{12}a_{1}.
+\end{equation}
+Iščemo rešitve oblike $A_{i}e^{-i\omega t}$. Če uporabimo ta nastavek v gornjih
 diferencialnih enačbah, dobimo homogen linearen sistem za $A_{1}$ in
 $A_{2}$, ki je netrivialno rešljiv, če je determinanta sistema enaka nič.
 Ta pogoj da enačbo za krožno frekvenco 
