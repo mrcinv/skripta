@@ -900,7 +900,7 @@ To se lahko večkrat ponovi. Razmiki med zaporednimi sunki\index{Relaksacijske o
 so reda velikosti periode relaksacijskih oscilacij, so pa lahko precej
 nepravilni  (slika~\ref{fig:Gswitch} desno). Pri takem delovanju
 razpoložljiva energija črpanja ne izstopa iz laserja v obliki enega samega lepo oblikovanega sunka, 
-ampak v zaporedju nepravilnih sunkov. Omenjene oscilacije močno omejujejo uporabnost tega pristopa.
+ampak v zaporedju sunkov. Omenjene oscilacije močno omejujejo uporabnost tega pristopa.
 
 \section{Delovanje v sunkih s preklopom dobrote}
 \index{Preklop dobrote|see{Sunkovni laser}}
@@ -908,7 +908,7 @@ ampak v zaporedju nepravilnih sunkov. Omenjene oscilacije močno omejujejo upora
 Namesto modulacije črpanja lahko v sunkovnih laserjih periodično spreminjamo 
 izgube.\index{Sunkovni laser!{preklop dobrote}} Čim večje so namreč izgube, višji 
 je prag za delovanje laserja. \index{Obrnjena zasedenost}\index{Izgube v resonatorju}
-Posledično je večja stopnja obrnjene zasedenosti in v sistemu atomov lahko shranimo več 
+Posledično lahko dosežemo večjo stopnjo obrnjene zasedenosti in v sistemu atomov shranimo več 
 energije kot pri majhnih izgubah.\index{Sunkovni laser}
 Ko je enkrat ustvarjena velika obrnjena zasedenost, izgube zelo hitro zmanjšamo. 
 Optično ojačenje je veliko in energija svetlobe v kratkem času močno naraste. 
@@ -1035,7 +1035,7 @@ je $x=0,41$, medtem ko je že pri $a=4$ vrednost $x$ le še 0,08.
 
 Ko poznamo začetno in končno zasedenost, lahko izračunamo 
 celotno energijo v sunku $W=\hbar \omega (N_{20}-N_{2k})$. Kadar je začetna vrednost
-dovolj nad pragom ($N_{20}\gg\tilde{N}_{2}$), končno zasedenost zanemarimo ($N_{k}\ll\tilde{N}_{2}$)in 
+dovolj nad pragom ($N_{20}\gg\tilde{N}_{2}$), končno zasedenost zanemarimo ($N_{k}\ll\tilde{N}_{2}$) in 
 celotna energija svetlobe, izsevane v sunku, je 
 \boxeq{QW}{
 W\approx\hbar \omega\,N_{20}.
@@ -1187,33 +1187,33 @@ vpliva torej le na točno obliko sunkov.
 \end{remark}
 \newpage
 Pri uklepanju faz je bistvena predpostavka, da so vse faze $\varphi_m$ enake. 
-V dosedanjem opisu večfrekvenčnih laserjev so resonatorska stanja med seboj
-neodvisna, zato so v splošnem faze poljubne in se zaradi motenj lahko še spreminjajo.
+V večfrekvenčnih laserjih so resonatorska stanja na splošno med seboj
+neodvisna, zato so njihove faze poljubne in se zaradi motenj lahko še spreminjajo.
 Za dosego istih faz posameznih nihanj moramo poskrbeti posebej. Tako ujemanje
 oziroma uklepanje faz lahko dosežemo na več načinov. V grobem ločimo dva načina:
 aktivno in pasivno uklepanje faz.
 
 Pri aktivnem uklepanju faz moduliramo izgube v resonatorju
 s frekvenco,\index{Uklepanje faz!aktivno} ki je ravno enaka razliki 
-frekvenc med lastnimi resonatorskimi stanji (slika~\ref{fig:aktpas}\,a). 
-Za ta namen dodamo v resonator
+frekvenc med lastnimi resonatorskimi nihanji (slika~\ref{fig:aktpas}\,a). 
+To dosežemo tako, da v resonator dodamo
 modulator, na primer akusto-optični modulator (glej poglavje~\ref{chap:modulacija}).
 Ko v akusto-optičnem modulatorju vzbudimo stoječe zvočno valovanje, se 
-svetloba na njem uklanja in izgube so velike. Stoječe valovanj periodično izginja
+svetloba na njem uklanja in izgube so velike. Stoječe valovanje periodično izginja
 in takrat se uklonske izgube zmanjšajo. Če se to dogaja v časovnih\index{Akusto-optični pojav}
 razmikih, ki so enaki $T=2L/c$, se v resonatorju ojačuje le kratek sunek svetlobe. 
-Navadno zadošča razmeroma majhna sinusna modulacija izgub, kjer je relativna 
+Navadno zadošča razmeroma majhna sinusna modulacija izgub, pri kateri je relativna 
 prepustnost v minimumu za nekaj desetink manjša od največje. Ta način se uporablja
-pri šibkejših sunkovnih laserjih, na primer pri Nd:YAG laserjih.\index{Laser!Nd:YAG}
+v šibkejših sunkovnih laserjih, na primer v Nd:YAG laserjih.\index{Laser!Nd:YAG}
 \begin{figure}[h]
 \centering
 \def\svgwidth{80truemm} 
 \input{slike/06_aktpas.pdf_tex}
-\caption{Izgube in izhodna moč pri aktivnem in pasivnem uklepanju faz}
+\caption{Izgube v resonatorju in izhodna moč pri aktivnem (a) in pasivnem (b) uklepanju faz}
 \label{fig:aktpas}
 \end{figure}
 
-Kako pri modulaciji pride do uklepanja faz, lahko uvidimo še drugače.
+Kako pri modulaciji izgub pride do uklepanja faz, lahko uvidimo še drugače.
 Modulacija amplitude $m$-tega lastnega nihanja povzroči, da se v spektru nihanja
 pojavita še stranska pasova pri krožnih frekvencah $(\omega_0 + m\Delta \omega) \pm \Delta\omega$. Ta
 se ravno ujemata z obema sosednjima nihanjema in se konstruktivno
@@ -1225,8 +1225,9 @@ ampak\index{Uklepanje faz!pasivno} je njegova prepustnost odvisna od intenzitete
 izbranega nihajnega načina (slika~\ref{fig:aktpas}\,b). 
 Ena vrsta pasivnih elementov je plast raztopljenega
 barvila, ki močno absorbira svetlobo pri majhni gostoti svetlobnega toka, pri veliki 
-gostoti pa svetlobo prepušča, saj pride do nasičenja absorpcije (glej\index{Nasičena absorpcija}
-poglavje~\ref{chap:NasAbs}). V laserju je po vklopu prisotno predvsem 
+gostoti pa pride do nasičenja absorpcije (glej\index{Nasičena absorpcija}
+poglavje~\ref{chap:NasAbs}) in praktično vsa vpadna svetloba je prepuščena. 
+V laserju je po vklopu prisotno predvsem 
 spontano sevanje, ki se pri enem prehodu skozi aktivno snov deloma ojači. 
 Barvilo najmanj absorbira fluktuacijo z največjo intenziteto. Pri dovolj 
 velikem ojačenju se ta izbrana fluktuacija ojačuje, ostale pa ne, zato
@@ -1237,15 +1238,17 @@ obhoda $T$, tipično je $\sim \si{ps}$.
 
 Drugi način pasivnega uklepanja faz je z uporabo nelinearne optike 
 (glej \index{Kerrov pojav!optični}
-poglavje~\ref{OKP}). Z optičnim Kerrovim pojavom se snop vpadne svetlobe zoži 
-in njegova širina je odvisna od njegove intenzitete. Z dodatkom zaslonke poskrbimo, 
-daje prepuščen le zelo močen svetlobni sunek, šibkejši pa so zadušeni. Ta način pogosto
+poglavje~\ref{OKP}). Z optičnim Kerrovim pojavom se snop svetlobe, ki vpade na 
+optično nelinearno sredstvo, zoži, pri čemer je njegova širina odvisna od 
+intenzitete svetlobe. Z dodatkom zaslonke poskrbimo, 
+da je prepuščen le zelo močen svetlobni sunek, šibkejši, ki imajo večji polmer,
+pa so zadušeni. Ta način pogosto
 uporabimo v Ti:safirnih laserjih,\index{Laser!Ti:safir} izhodni sunki pa so 
 zelo kratki.
 
 Z uklepanjem faz je mogoče dobiti sunke, krajše od $100~\si{fs}$. 
 Tak sunek traja le še nekaj deset optičnih period. S posebnimi prijemi 
-jih lahko še skrajšamo na okoli $10~\si{fs}$ (glej podpoglavje~\ref{kompdisp}). 
+jih lahko še skrajšamo na okoli $10~\si{fs}$ (glej razdelek~\ref{kompdisp}). 
 Zelo kratki svetlobni sunki so uporabni za študij hitre molekularne dinamike 
 in kratkoživih vzbujenih elektronskih stanj v trdnih snoveh. Z uporabo fazno
 uklenjenih sunkov svetlobe se je časovna ločljivost merilnih metod povečala za 
@@ -1362,11 +1365,11 @@ naprava, standard je ustrezni molekularni prehod.
 \index{Semiklasični model}
 Doslej smo laserje obravnavali le z modelom zasedbenih enačb. Ta je zelo
 grob, saj smo pri tem zanemarili nekaj pomembnih pojavov. Svetlobo v 
-resonatorju smo opisali le s celotno energijo oziroma številom fotonov in se za
-njeno valovno naravo nismo menili. Kar privzeli smo, da sta frekvenca
-delujočega laserja in oblika polja v njem enaki kot za lastno stanje
-praznega resonatorja. Aktivno snov smo opisali le z zasedenostjo zgornjega
-in spodnjega laserskega stanja in s tem izpustili možnost, da se zaradi
+resonatorju smo tako opisali s celotno energijo oziroma številom fotonov in se za
+njeno valovno naravo nismo menili. Privzeli smo, da sta frekvenca
+delujočega laserja in oblika polja lastnega nihanja v njem enaki kot v
+praznem resonatorju. Aktivno snov smo opisali z zasedenostjo zgornjega
+in spodnjega atomskega nivoja in s tem izpustili možnost, da se zaradi
 interakcij z elektromagnetnim poljem atomi nahajajo v nestacionarnem,
 mešanem stanju.\index{Zasedbene enačbe}
 
@@ -1378,7 +1381,7 @@ kvantno tudi svetlobo.
 
 Aktivna snov naj bo množica enakih dvonivojskih 
 atomov s stanjema $|1\rangle$ in $|2\rangle$, ki imata energiji $E_1$ in $E_2$.
-Atomi s svetlobo sodelujejo preko dipolne interakcije oblike $H = -eE(t)\hat{x}$, 
+Atomi s svetlobo interagirajo z dipolno interakcijo oblike $H = -eE(t)\hat{x}$, 
 kjer je $E(t)$ polje v resonatorju, ki naj bo zaradi preprostosti 
 polarizirano v smeri osi $x$. Časovno odvisno stanje atomov
 zapišimo v obliki 
@@ -1390,39 +1393,39 @@ Iz Schr\"odingerjeve enačbe (enačba~\ref{eq:sk-S}) dobimo za časovna odvoda
 koeficientov $c_1(t)$ in $c_2(t)$ zvezi
 (glej enačbi~\ref{eq:c1c2})
 \begin{equation}
-\frac{d c_1}{dt}=-\frac{i}{\hbar} E(t)V e^{-i\omega_0 t}\, c_2 
+\frac{d c_1}{dt}=-\frac{i}{\hbar} \mathcal{V} E(t) e^{-i\omega_0 t}\, c_2 
 \qquad \mathrm{in} \qquad
-\frac{d c_2}{dt}=-\frac{i}{\hbar} E(t)V e^{i\omega_0 t}\, c_1,
+\frac{d c_2}{dt}=-\frac{i}{\hbar} \mathcal{V} E(t) e^{i\omega_0 t}\, c_1,
 \label{5.46}
 \end{equation}
-pri čemer naj bo $V = -e\langle1|\hat{x}|2\rangle$ realen in $\omega_0=(E_2-E_1)/\hbar$.
+pri čemer je $\mathcal{V} = -e\langle1|\hat{x}|2\rangle$ realen in $\omega_0=(E_2-E_1)/\hbar$.
 
 Električni dipolni moment atoma v stanju ${\psi}$ je 
 \begin{equation}  
 \label{5.47}
 p=e\langle\psi|\hat{x}|\psi\rangle=-
-(c_1^{\ast}c_2e^{-i \omega_0t}+c_1c_2^{\ast}e^{i \omega_0 t}) V.
+(c_1^{\ast}c_2e^{-i \omega_0t}+c_1c_2^{\ast}e^{i \omega_0 t}) \mathcal{V}.
 \end{equation}
 Razdelimo $p$ na dva dela in zapišemo
 \begin{equation}  
 \label{5.48}
-p=p^+ + p^-=-V\left(\eta(t)+\eta^{\ast}(t)\right),
+p=p^+ + p^-=-\mathcal{V}\left(\eta(t)+\eta^{\ast}(t)\right),
 \end{equation}
 kjer smo vpeljali $\eta(t)=c_1^{\ast}c_2e^{-i \omega_0 t}$.
 
-Zanima nas, kako se dipolni moment spreminja s časom. Zadošča, če poznamo, kako se 
+Zanima nas, kako se dipolni moment spreminja s časom. Zadošča, da vemo, kako se 
 s časom spreminja parameter $\eta(t)$. Njegov časovni odvod izrazimo
 iz enačb (\ref{5.46}) in dobimo
 \begin{equation}  
 \label{5.49}
-\dot{\eta}=- i \omega_0\eta+\frac{i}{\hbar}\,E(t)V\left(|c_2|^2-|c_1|^2\right).
+\dot{\eta}=- i \omega_0\eta+\frac{i}{\hbar}\,\mathcal{V}E(t) \left(|c_2|^2-|c_1|^2\right).
 \end{equation}
 Spomnimo, da je $|c_i|^2$ verjetnost za zasedenost stanja $|i\rangle$. Izraz v oklepaju
 na desni strani gornje enačbe torej meri razliko zasedenosti obeh stanj, ki jo označimo
 s $\zeta$. Podobno kot zgoraj izrazimo spreminjanje razlike zasedenosti s časovni odvodom 
 \begin{equation}  
 \label{5.50}
-\dot{\zeta}=\frac{2i}{\hbar}\, E(t)V\left(\eta- \eta^{\ast}\right).
+\dot{\zeta}=\frac{2i}{\hbar}\, \mathcal{V} E(t)\left(\eta- \eta^{\ast}\right).
 \end{equation}
 S tem smo iz Schr\"odingerjeve enačbe dobili enačbi za časovni razvoj
 dipolnega momenta in obrnjene zasedenosti, ki pa ju moramo še dopolniti.
@@ -1437,8 +1440,8 @@ poglavje~\ref{chap:ASSS}).
 Poleg tega moramo upoštevati še črpanje, s katerim
 vzdržujemo obrnjeno zasedenost in s tem lasersko delovanje. Za podroben
 opis črpanja bi morali v Hamiltonov operator dodati ustrezne člene in
-morda upoštevati še druga stanja atomov, vendar nas take podrobnosti na
-tem mestu ne zanimajo. Če bi ne bilo črpanja, bi bila stacionarna vrednost
+morda upoštevati še druga stanja atomov, vendar nas take podrobnosti 
+ne zanimajo. Če bi ne bilo črpanja, bi bila stacionarna vrednost
 v odsotnosti laserskega polja
 \begin{equation}
  \zeta_{\mathrm{stac}}= |c_2|^2-|c_1|^2 = -1.
@@ -1447,9 +1450,9 @@ Zaradi črpanja zavzame obrnjena zasedenost neko vrednost $-1<\zeta_0<1$,
 odvisno od moči črpanja. Enačbi (\ref{5.50}) dodamo ustrezen člen
 \begin{equation}  
 \label{5.51}
-\dot{\zeta}=A\left(\zeta_0-\zeta\right)- \frac{2i}{\hbar}\,E(t)V\left(\eta^{\ast}-\eta\right),
+\dot{\zeta}=A\left(\zeta_0-\zeta\right)+\frac{2i}{\hbar}\,\mathcal{V}E(t)\left(\eta-\eta^{\ast}\right),
 \end{equation}
-ki popisuje vpliv črpanja in spontane prehode v nižje stanje. 
+ki opisuje vpliv črpanja in spontane prehode v nižje stanje. 
 
 Dopolnimo še enačbo za časovno spreminjanje električnega dipola 
 (enačba~\ref{5.49}). Pri $E(t)=0$ da zapisana enačba časovno odvisnost 
@@ -1457,18 +1460,18 @@ $\eta \propto e^{-i \omega_0 t}$, to je brez dušenja. Vendar vemo, da
 polarizacija v mešanem stanju razpada vsaj zaradi spontanega sevanja, lahko
 pa še zaradi drugih vplivov, na primer trkov z drugimi atomi. Označimo
 koeficient dušenja polarizacije, ki meri tudi spektralno širino svetlobe, 
-ki jo sevajo atomi pri prehodu $2\rightarrow 1$, z $\gamma$. Zapišemo
+izsevane pri prehodu $2\rightarrow 1$, z $\gamma$. Zapišemo
 dopolnjeno enačbo
 \begin{equation}  
 \label{5.52}
-\dot{\eta}=- \left(i \omega_0+\gamma\right)\eta+\frac{i}{\hbar}\,E(t)V \zeta
+\dot{\eta}=- \left(i \omega_0+\gamma\right)\eta+\frac{i}{\hbar}\,\mathcal{V} E(t) \zeta
 \end{equation}
 in kompleksno konjugirano enačbo
 \begin{equation}  
 \label{5.52c}
-\dot{\eta}^*=-\left(-i \omega_0+\gamma\right)\eta^*-\frac{i}{\hbar}\,E(t)V \zeta.
+\dot{\eta}^*=-\left(-i \omega_0+\gamma\right)\eta^*-\frac{i}{\hbar}\,\mathcal{V}E(t) \zeta.
 \end{equation}
-Sklopljene diferencialne enačbe popisujejo časovno
+Dobili smo sistem sklopljenih diferencialnih enačb, ki opisuje časovno
 spreminjanje obrnjene zasedenosti in dipolnega momenta atoma. 
 \begin{remark}
  Enačbe~(\ref{5.51}), (\ref{5.52}) in (\ref{5.52c}) pogosto imenujemo \index{Maxwell-Blochove enačbe}
@@ -1479,7 +1482,7 @@ spreminjanje obrnjene zasedenosti in dipolnega momenta atoma.
 \end{remark}
 
 Za opis potrebujemo še enačbo za polje $E(t)$. To naredimo klasično, tako da
-električna poljska jakost zadošča valovni enačbi. Upoštevati moramo, 
+jakost električnega polja zadošča valovni enačbi. Upoštevati moramo, 
 da je v snovi tudi polarizacija različna od nič. 
 Valovna enačba v skalarni obliki je tedaj
 \begin{equation}  
@@ -1489,17 +1492,17 @@ Valovna enačba v skalarni obliki je tedaj
 pri čemer je v primeru, da so vsi atomi enakovredni, polarizacija enaka
 \begin{equation}  
 \label{5.53}
-P=\frac{N}{V'}p = -\frac{N}{V'}\,V\left(\eta+\eta^{\ast}\right)=P^+ + P^-,
+P=\frac{N}{V}p = -\frac{N}{V}\,\mathcal{V}\left(\eta+\eta^{\ast}\right)=P^+ + P^-,
 \end{equation}
-kjer smo z $V'$ označili volumen, $N$ pa število atomov.
+kjer smo z $V$ označili volumen, z $N$ pa število atomov.
 
-Namesto mikroskopske količine $\zeta$ lahko uvedemo še gostoto obrnjene
-zasedenosti $Z=(N/V')\zeta$ in enačbe (\ref{5.51}), (\ref{5.52}) in (\ref{5.52c})
+Namesto mikroskopske količine $\zeta$ uvedemo gostoto obrnjene
+zasedenosti $Z=(N/V)\zeta$ in enačbe (\ref{5.51}), (\ref{5.52}) in (\ref{5.52c})
 prepišemo v obliko 
 \begin{eqnarray}
 \frac{dZ}{dt} &= &A\left(Z_0-Z\right)+\frac{2i}{\hbar}E\left(P^- - P^+\right), \label{5.56} \\
-\frac{dP^+}{dt}&=&\left(-i \omega_0-\gamma\right)P^{+}-\frac{i}{\hbar} EV^2 Z, \label{5.56b}\\
-\frac{dP^-}{dt}&=&\left(i \omega_0-\gamma\right)P^{-}+\frac{i}{\hbar} EV^2 Z.\label{5.56c} 
+\frac{dP^+}{dt}&=&\left(-i \omega_0-\gamma\right)P^{+}-\frac{i}{\hbar} \mathcal{V}^2 E  Z, \label{5.56b}\\
+\frac{dP^-}{dt}&=&\left(i \omega_0-\gamma\right)P^{-}+\frac{i}{\hbar} \mathcal{V}^2 E  Z.\label{5.56c} 
 \end{eqnarray}
 Opozorimo še, da je prehod z enačb (\ref{5.51}--\ref{5.52c}) na (\ref{5.56}--\ref{5.56c}) 
 mogoč le, kadar so vsi atomi enakovredni, to je, kadar ni nehomogene razširitve 
@@ -1507,133 +1510,132 @@ spektra.\footnote{Kako je v primeru nehomogene razširitve, lahko bralec poišč
 H. Haken, {\it Laser Theory}, Springer Verlag.}
 
 Enačbe (\ref{5.56}--\ref{5.56c}), skupaj z valovno enačbo (enačba~\ref{5.54}) podajajo
-semiklasični opis interakcij svetlobe s snovjo. Iz izpeljave je vidno, da
+semiklasični opis interakcij svetlobe s snovjo. Iz izpeljave je razvidno, da
 je v semiklasičnem opisu spontano sevanje obravnavano pomanjkljivo, le s fenomenološkim
 nastavkom. To je moč popraviti tako, da tudi elektromagnetno polje kvantiziramo. 
 Kljub tej pomanjkljivosti je s semiklasičnim modelom mogoče zelo podrobno opisati 
-večino pojavov v laserjih in tudi druge probleme širjenja svetlobe po snovi. Je pa 
+večino pojavov v laserjih in tudi druge pojave širjenja svetlobe po snovi. Je pa 
 reševanje zapisanega sistema nelinearnih parcialnih diferencialnih enačb  
 na splošno zelo težavno.
 
 \subsection*{Primer enofrekvenčnega laserja}
 Semiklasične enačbe pobliže spoznajmo na najenostavnejšem primeru. To naj bo laser, 
-v katerem je vzbujeno le eno resonatorsko stanje. Polje ima tedaj obliko
+v katerem je vzbujeno le eno resonatorsko nihanje, označimo ga z $n$.
+Polje ima tedaj obliko
 \begin{equation}  
 \label{5.57}
-E(\mathbf{r},t)= E_{\lambda}(t)u_{\lambda}(\mathbf{r}),
+E(\mathbf{r},t)= E_n(t)u_n(\mathbf{r}),
 \end{equation}
-kjer je $u_{\lambda}(\mathbf{r})$ krajevni del lastnega stanja resonatorja, ki
+kjer je $u_n(\mathbf{r})$ krajevni del lastnega nihanja resonatorja, ki
 zadošča enačbi 
 \begin{equation}  
 \label{5.58}
-\nabla^2 u_{\lambda}+\frac{\omega_{\lambda}^2}{c^2}u_{\lambda}=0.
+\nabla^2 u_n+\frac{\omega_n^2}{c^2}u_n=0.
 \end{equation}
-Funkcija $E_{\lambda}(t)$ opisuje časovno odvisnost. Za laser v stacionarnem
+Funkcija $E_n(t)$ opisuje časovno odvisnost. Za laser v stacionarnem
 delovanju je periodična, vendar njena krožna frekvenca $\Omega$ ni nujno enaka lastni
-krožni frekvenci praznega resonatorja $\omega_{\lambda}$. Krožno frekvenco 
+krožni frekvenci praznega resonatorja $\omega_n$. Krožno frekvenco 
 $\Omega$ moramo še izračunati.
 
-Najprej razvijmo po lastnih funkcijah $u_{\lambda}(\mathbf{r})$ še polarizacijo. 
+Razvijmo še polarizacijo po lastnih funkcijah $u_n(\mathbf{r})$. 
 Ker so lastne funkcije med seboj ortogonalne, preide valovna enačba (\ref{5.54}) 
 ob upoštevanju enačbe~(\ref{5.58}) v 
 \begin{equation}  
 \label{5.59}
-\omega_{\lambda}^2 E_{\lambda}+\frac{d^2 E_\lambda}{dt^2}= 
--\frac{1}{\epsilon_0}\frac{d^2P_\lambda}{dt^2}.
+\omega_n^2 E_n+\frac{d^2 E_n}{dt^2}= 
+-\frac{1}{\epsilon_0}\frac{d^2P_n}{dt^2}.
 \end{equation}
 
-Razstavimo $E_{\lambda}(t)$ na dva dela: 
+Razstavimo $E_n(t)$ na dva dela: 
 \begin{equation}  \label{5.60}
-E_{\lambda}(t)=E_{\lambda}^+(t)+E_{\lambda}^-(t)=A^+(t)e^{-i
-\omega_{\lambda}t}+A^-(t)e^{i \omega_{\lambda}t}.
+E_n(t)=E_n^+(t)+E_n^-(t)=A^+(t)e^{-i
+\omega_nt}+A^-(t)e^{i \omega_nt}.
 \end{equation}
-Dejanska krožna frekvenca laserja je blizu $\omega_{\lambda}$, zato pričakujemo,
-da se bosta amplitudi $A^{\pm}(t)$ v primerjavi z $e^{-i \omega_{\lambda}t}$ le
-počasi spreminjali s časom. Izračunajmo 
+Dejanska krožna frekvenca laserja je blizu $\omega_n$, zato pričakujemo,
+da se bosta amplitudi $A^{\pm}(t)$ v primerjavi z $e^{-i \omega_nt}$ le
+počasi spreminjali. Izračunajmo 
 \begin{equation}  
 \label{5.61}
-\frac{d^2 E_\lambda^+}{dt^2}=-\omega_{\lambda}^2 E_{\lambda}^+ - 2i \omega_{\lambda} 
-\frac{dA^+}{dt} e^{-i \omega_{\lambda}t} \approx 
--\omega_{\lambda}^2 E_{\lambda}^+-2i \omega_{\lambda}\left(\frac{dE_{\lambda}^+}{dt}+
-i \omega_{\lambda}E_{\lambda}^+\right).
+\frac{d^2 E_n^+}{dt^2}=-\omega_n^2 E_n^+ - 2i \omega_n 
+\frac{dA^+}{dt} e^{-i \omega_nt} \approx 
+-\omega_n^2 E_n^+-2i \omega_n\left(\frac{dE_n^+}{dt}+
+i \omega_nE_n^+\right).
 \end{equation}
-Izpustili smo drugi odvod $A$ po času in s tem napravili približek počasno spreminjajoče se amplitude.
+Izpustili smo drugi odvod $A$ po času in s tem napravili približek počasi spreminjajoče se amplitude.
 
-Polarizacija snovi je približno periodična s krožno frekvenco $\omega_0$, 
-ki je približno enaka $\omega_\lambda$.
+Polarizacija snovi je približno periodična s krožno frekvenco $\omega_0 \approx \omega_n$.
 Tudi amplituda polarizacije se le počasi spreminja, zato lahko privzamemo, da je 
-$\ddot{P}_{\lambda}^+ \approx - \omega_\lambda^2 P_{\lambda}^+$. Z uporabo tega
-približka in enačbe~(\ref{5.61}) preide valovna enačba (enačba~\ref{5.54}) za eno nihanje v 
+$\ddot{P}_n^+ \approx - \omega_0^2 P_n^+$. Z uporabo tega
+približka in enačbe~(\ref{5.61}) preide valovna enačba (enačba~\ref{5.54}) za izbrano nihanje v 
 \begin{equation}  
 \label{5.62}
-\frac{dE_{\lambda}^+}{dt}=-i \omega_{\lambda} E_{\lambda}^++
-\frac{i \omega_0}{2\epsilon_0}P_{\lambda}^+.
+\frac{dE_n^+}{dt}=-i \omega_n E_n^++
+\frac{i \omega_0}{2\epsilon_0}P_n^+.
 \end{equation}
 
 Doslej še nismo upoštevali, da je polje v praznem resonatorju dušeno, zato
 moramo gornjo enačbo še popraviti
 \begin{equation}  
 \label{5.63}
-\frac{dE_{\lambda}^+}{dt}=\left(-i \omega_{\lambda}-\frac{1}{\tau}\right) E_{\lambda}^+ 
-+\frac{i \omega_0}{2\epsilon_0}P_{\lambda}^+.
+\frac{dE_n^+}{dt}=\left(-i \omega_n-\frac{1}{\tau}\right) E_n^+ 
++\frac{i \omega_0}{2\epsilon_0}P_n^+.
 \end{equation}
 Kadar v resonatorju ni snovi, je dobljena enačba enaka enačbi (\ref{3.36}).
 
 Enačbe (\ref{5.56}--\ref{5.56c}) so nelinearne, zato jih ni moč kar tako
-prepisati za primer razvoja po lastnih stanjih resonatorja. Pri enačbah za
+prepisati za razvoj po lastnih nihanjih resonatorja. Pri enačbah za
 razvoj polarizacije (enačbi~\ref{5.56b} in \ref{5.56c}) v zadnjem členu na desni 
-nastopa produkt komponente polja $E_{\lambda}$ in obrnjene zasedenosti $Z$. Bistveno
-prispeva le krajevno povprečje $\overline{Z}$, ki se s časom le počasi spreminja.
-Seveda vsebuje $Z$ tudi krajevno odvisne komponente, ki pa so pomembne 
-predvsem zato, ker sklapljajo različna lastna stanja resonatorja, vendar to
-presega našo trenutno obravnavo. Tako iz enačbe~(\ref{5.56b}) dobimo
+nastopa produkt komponente polja $E_n$ in obrnjene zasedenosti $Z$. Bistveni
+prispevek je od krajevnega povprečja $\overline{Z}$, ki pa se s časom le počasi spreminja.
+Seveda vsebuje $Z$ tudi krajevno odvisne komponente, ki so pomembne 
+predvsem zato, ker sklapljajo različna lastna nihanja resonatorja, vendar to
+presega našo obravnavo. Iz enačbe~(\ref{5.56b}) dobimo
 \begin{equation}  
 \label{5.64}
-\frac{d P_\lambda^+}{dt}=\left(-i \omega_0-\gamma\right)P_\lambda^{+}-\frac{i}{\hbar}
-V^2 E_\lambda^+ \overline{Z}.
+\frac{d P_n^+}{dt}=\left(-i \omega_0-\gamma\right)P_n^{+}-\frac{i}{\hbar}
+\mathcal{V}^2 E_n^+ \overline{Z}.
 \end{equation}
-
-Enačbo za $\overline{Z}$ dobimo iz (\ref{5.56}). V zadnjem členu nastopajo produkti 
-$E^{\pm}P^{\pm}=E_{\lambda}^{\pm}P_{\lambda}^{\pm} u_{\lambda}^2\left(\mathbf{r}\right)$,
-ki jih moramo prostorsko povprečiti. Funkcije $u_{\lambda}\left(\mathbf{r}\right)$ so
-normirane, tako da je $\int u_{\lambda}^2\left(\mathbf{r}\right) \,dV=V$ in $\overline{u_{\lambda}^2\left(\mathbf{r}\right)}=1$.
+Povprečje $\overline{Z}$ izrazimo iz enačbe (\ref{5.56}). V zadnjem členu nastopajo produkti 
+$E^{\pm}P^{\pm}=E_n^{\pm}P_n^{\pm} u_n^2\left(\mathbf{r}\right)$,
+ki jih moramo prostorsko povprečiti. Funkcije $u_n\left(\mathbf{r}\right)$ so
+normirane, tako da je $\int u_n^2\left(\mathbf{r}\right) \,dV=V$ in $\overline{u_n^2\left(\mathbf{r}\right)}=1$.
 Sledi
 \begin{equation}  
 \label{5.65}
-\frac{d\overline{Z}}{dt}= A\left(\overline{Z}_0-\overline{Z}\right)+ \frac{2i}{\hbar}\left(E_{\lambda}^+
-+E_{\lambda}^-\right)\left(P_{\lambda}^- - P_{\lambda}^+\right),
+\frac{d\overline{Z}}{dt}= A\left(\overline{Z}_0-\overline{Z}\right)+ \frac{2i}{\hbar}\left(E_n^+
++E_n^-\right)\left(P_n^- - P_n^+\right),
 \end{equation}
 kjer je $\overline{Z}_0$ povprečje nenasičene zasedenosti $Z_0$. V zadnjem
-členu nastopajo produkti, ki nihajo s krožnimi frekvencami $\omega_{\lambda}-
-\omega_0$ in $\omega_{\lambda}+ \omega_0$. Frekvenci sta si zelo blizu,
+členu nastopajo produkti, ki nihajo s krožnimi frekvencami $\omega_n-
+\omega_0$ in $\omega_n+ \omega_0$. Frekvenci sta si zelo blizu,
 zato je njuna vsota znatno večja od razlike. Hitro spreminjajoče se člene 
-$E_{\lambda}^+P_{\lambda}^+$ in $E_{\lambda}^- P_{\lambda}^-$ izpustimo, 
-saj skoraj nič ne vplivajo na valovanje blizu $\omega_{\lambda}$. Časovno odvisnost 
+$E_n^+P_n^+$ in $E_n^- P_n^-$ izpustimo, 
+saj skoraj nič ne vplivajo na valovanje blizu $\omega_n$. Časovno odvisnost 
 $\overline{Z}$ tako zapišemo 
 \begin{equation}  
 \label{5.66}
-\frac{d\overline{Z}}{dt}= A\left(\overline{Z}_0-\overline{Z}\right)+\frac{2i}{\hbar}\left(E_{\lambda}^+
-P_{\lambda}^- - E_{\lambda}^- P_{\lambda}^+\right).
+\frac{d\overline{Z}}{dt}= A\left(\overline{Z}_0-\overline{Z}\right)+\frac{2i}{\hbar}\left(E_n^+
+P_n^- - E_n^- P_n^+\right).
 \end{equation}
-Enačbe (\ref{5.63}), (\ref{5.64}) in (\ref{5.66}), skupaj s konjugirano
-kompleksnimi enačbami za $E_{\lambda}^-$ in $P_{\lambda}^-$, so zaključen
+Enačbe (\ref{5.63}), (\ref{5.64}) in (\ref{5.66}) predstavljajo skupaj s konjugirano
+kompleksnimi enačbami za $E_n^-$ in $P_n^-$ zaključen
 sistem, ki opisuje delovanje enofrekvenčnega laserja. Uporabimo jih za
-izračun krožne frekvence izhodne svetlobe.
+izračun frekvence izhodne svetlobe.
 
-Naj bo stanje stacionarno. Tedaj lahko polje zapišemo v obliki $E_{\lambda
+Naj bo stanje stacionarno. Tedaj polje zapišemo v obliki $E_{n
 }^{+}=E_{0}e^{-i\Omega t}$, kjer je $E_{0}$ realna konstanta, krožna frekvenca
-svetlobe $\Omega$ pa je blizu $\omega _{0}$ in $\omega _{\lambda }$. V
+svetlobe $\Omega$ pa je blizu $\omega _{0}$ in $\omega _{n }$. V
 stacionarnem stanju ima polarizacija enako časovno odvisnost in 
-$P_{\lambda }^{+}=P_{0}e^{-i\Omega t}$. Tedaj je v enačbi~(\ref{5.66}) drugi
+$P_{n }^{+}=P_{0}e^{-i\Omega t}$. Tedaj je v enačbi~(\ref{5.66}) drugi
 oklepaj konstanten in povprečna gostota obrnjene zasedenosti $\overline{Z}$ je 
 v stacionarnem stanju od časa neodvisna. 
 
 Sistem enačb (\ref{5.63}), (\ref{5.64}) in (\ref{5.66}) 
 tako da 
 \begin{eqnarray}
-\left(i\left(\Omega - \omega_{\lambda}\right)-\frac{1}{\tau}\right) E_{0}+\frac{i\omega _{0}}
+\left(i\left(\Omega - \omega_n\right)-\frac{1}{\tau}\right) E_{0}+\frac{i\omega _{0}}
 {2\epsilon _{0}}\,P_{0} &=&0  \label{5.67} \\
-\left(i\left(\Omega-\omega_{0}\right)-\gamma\right)P_{0}-\frac{i}{\hbar}V^{2}
+\left(i\left(\Omega-\omega_{0}\right)-\gamma\right)P_{0}-\frac{i}{\hbar}\mathcal{V}^{2}
 E_{0}\overline{Z} &=&0 \label{5.67b}\\
 A\left(\overline{Z}_{0}-\overline{Z}\right)+\frac{2i}{\hbar }\,E_{0}\left(P_{0}^{*}-P_{0}\right) &=&0.
 \end{eqnarray}
@@ -1641,41 +1643,40 @@ A\left(\overline{Z}_{0}-\overline{Z}\right)+\frac{2i}{\hbar }\,E_{0}\left(P_{0}^
 Najprej iz druge enačbe izrazimo $P_0$, ga vstavimo v tretjo in izračunamo $\overline{Z}$. Dobimo
 \begin{equation}  
 \label{5.68}
-\overline{Z}=\overline{Z}_0\left(1+\frac{4V^2}{\hbar^2 A}\,E_0^2\, \frac{\gamma}
+\overline{Z}=\overline{Z}_0\left(1+\frac{4\mathcal{V}^2}{\hbar^2 A}\,E_0^2\, \frac{\gamma}
 {\left(\omega_0-\Omega\right)^2+\gamma^2}\right)^{-1}.
 \end{equation}
-Ta izraz že poznamo. Vrednost $\pi V^2/\left(\epsilon_0\hbar^2\right)$ je Einsteinov
-koeficient $B$,\\
-\colorbox{red}{ZA FAKTOR 2 RAZLIČNO OD ENAČBE 5.102! Mislim, da je tukaj ok in tam narobe.}\\
+Ta izraz že poznamo. V njem prepoznamo Einsteinov
+koeficient $B$ (enačba~\ref{4.60}),
 $E_0^2$ je sorazmeren gostoti energije polja v resonatorju,
 zadnji ulomek v oklepaju pa podaja obliko homogeno razširjene atomske
-črte (\ref{eq:homogenasirina})
+črte (\ref{eq:homogenasirina}). Zapišemo
 \begin{equation}  
 \label{5.69}
 \overline{Z}=\overline{Z}_0\left(1+\frac{2B}{Ac}\,g\left(\omega_0- \Omega\right)j\right)^{-1}.
 \end{equation}
-To je natanko enako izrazu za nasičenje zasedenosti stanj, ki smo ga
+To je enako izrazu za nasičenje zasedenosti stanj, ki smo ga
 izpeljali iz zasedbenih enačb v četrtem poglavju (enačba~\ref{4.33}).
 
 Vstavimo $P_0$ iz prve enačbe sistema (\ref{5.67}) v drugo (\ref{5.67b})
 \begin{equation}  
 \label{5.70}
-E_0\left(-i\Omega+i\omega_{\lambda}+\frac{1}{\tau}\right) \left(i\Omega- i\omega_0
+E_0\left(-i\Omega+i\omega_n+\frac{1}{\tau}\right) \left(i\Omega- i\omega_0
 -\gamma\right)=-\frac{V^2 \omega_0}{2\hbar\epsilon_0}\,E_0\,\overline{Z}.
 \end{equation}
 V delujočem laserju je $E_0\ne 0$, zato ga lahko krajšamo. Vrednost $\overline{Z}$ je
 realna, tako da mora biti imaginarni del leve strani enak nič. Dobimo
 \begin{equation}  
 \label{5.71}
-\left(\Omega- \omega_{\lambda}\right)\gamma+\left(\Omega- \omega_0\right)\frac{1}{\tau} = 0.
+\left(\Omega- \omega_n\right)\gamma+\left(\Omega- \omega_0\right)\frac{1}{\tau} = 0.
 \end{equation}
-Od tod lahko izračunamo krožno frekvenco laserja 
+Od tod lahko izračunamo krožno frekvenco delujočega laserja 
 \begin{equation}  \label{5.72}
-\Omega=\frac{\omega_{\lambda}\gamma+ \omega_0\frac{1}{\tau}}{\gamma + \frac{1}{\tau}}.
+\Omega=\frac{\omega_n\gamma+ \omega_0\frac{1}{\tau}}{\gamma + \frac{1}{\tau}}.
 \end{equation}
-Krožna frekvenca torej ni enaka krožni frekvenci praznega resonatorja $\omega_{\lambda}$,
+Krožna frekvenca torej ni enaka krožni frekvenci praznega resonatorja $\omega_n$,
 temveč je premaknjena proti centru atomske črte $\omega_0$. Premik je
-odvisen od razmerja širine atomske črte in izgub resonatorja.
+odvisen od razmerja širine atomske črte in izgub v resonatorju.
 
 Gornji primer uporabe semiklasičnih enačb je zelo preprost. Prava moč
 modela se pokaže pri obravnavi večfrekvenčnega laserja, na primer pri
