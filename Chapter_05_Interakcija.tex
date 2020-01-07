@@ -1168,14 +1168,12 @@ E_{\beta}(\mathbf{r})\nonumber \\
 Od vseh operatorjev v razvoju polja je namreč od nič različen matrični
 element le za kreacijski operator za stanje $\alpha$.
 
-Vpeljemo še simbol za matrični element koordinate med 
-atomskima stanjema
-$\langle1|\hat{x}|2\rangle=x_{12}$.
+Vpeljemo še $\mathcal{V} = -e \langle1|\hat{x}|2\rangle$.
  Iskana verjetnost za prehod iz 
 začetnega stanja, v katerem je v votlini vzbujen atom in $n_{\alpha}$ fotonov, v končno
 stanje, v katerem je atom v osnovnem stanju in $n_{\alpha}+1$ fotonov v stanju $\alpha$, je tako
 \begin{equation}
-w_{21}=\frac{\pi e^{2}\omega_{\alpha}x_{12}^{2}}{V\epsilon_{0}}
+w_{21}=\frac{\pi \omega_{\alpha}\mathcal{V}^{2}}{V\epsilon_{0}}
 (n_{\alpha}+1)\,E_{\alpha}^{2}(\mathbf{r})\,\delta(E_{2}-E_{1}-\hbar\omega_{\alpha}).
 \label{4.56}
 \end{equation}
@@ -1196,16 +1194,16 @@ v osnovno izračunamo tako, da seštejemo verjetnosti za prehod z izsevanim foto
 v določenem stanju. Spomnimo se, da je ta verjetnost ravno enaka 
 Einsteinovem koeficientu $A_{21}$\index{Einsteinovi koeficienti} (enačba~\ref{4.27})
 \begin{equation}
-A_{21}=\sum_{\alpha}w_{21}=\sum_{\alpha}\frac{\pi 
-e^{2}\omega_{\alpha}x_{12}^{2}}{2V\epsilon_{0}}\,\delta(E_{2}-E_{1}-\hbar\omega_{\alpha}).
+A_{21}=\sum_{\alpha}w_{21}=\sum_{\alpha}\frac{\pi \omega_{\alpha}\mathcal{V}^{2}}
+{2V\epsilon_{0}}\,\delta(E_{2}-E_{1}-\hbar\omega_{\alpha}).
 \label{4.57}
 \end{equation}
 Za prostorsko odvisnost polja $E^{2}(\mathbf{r})$ smo vzeli povprečje
 1/2. Vsoto po nihanjih lahko z uporabo enačbe~(\ref{4.5}) spremenimo v integral
 in upoštevamo enačbo~(\ref{4.4}). Dobimo
 \begin{equation}
-A_{21}=\frac{\pi e^{2}x_{12}^{2}}{2\hbar\epsilon_{0}}\int\rho(\omega_{\alpha})\omega_\alpha\, 
-\delta(\omega_{0}-\omega_{\alpha})\, d\omega_{\alpha}=\frac{e^{2}\omega_{0}^{3}x_{12}^{2}}{\epsilon_{0} h c^{3}},
+A_{21}=\frac{\pi \mathcal{V}^{2}}{2\hbar\epsilon_{0}}\int\rho(\omega_{\alpha})\omega_\alpha\, 
+\delta(\omega_{0}-\omega_{\alpha})\, d\omega_{\alpha}=\frac{\omega_{0}^{3}\mathcal{V}^{2}}{\epsilon_{0} h c^{3}},
 \label{4.58}
 \end{equation}
  pri čemer smo z $\omega_{0}=(E_{2}-E_{1})/\hbar$ označili frekvenco prehoda. Tako smo 
@@ -1224,7 +1222,7 @@ popraviti. Delta funkcijo energije nadomestimo s končno široko
 funkcijo $g(\omega-\omega_0)$, ki ima vrh pri $\omega_{0}$. Zaradi 
 spremembe integracijske spremenljivke nastopi še dodaten faktor $1/\hbar$ in zapišemo
 \begin{equation}
-w_{21}=\frac{\pi e^{2}\omega_{\alpha}x_{12}^{2}}{2V\epsilon_{0}\hbar}
+w_{21}=\frac{\pi \omega_{\alpha}\mathcal{V}^{2}}{2V\epsilon_{0}\hbar}
 (n_{\alpha}+1)g(\omega_{\alpha}-\omega_0).
 \label{4.59}
 \end{equation}
@@ -1234,7 +1232,7 @@ izrazimo iz enačbe~(\ref{4.18}), če upoštevamo, da je gostota energije
 polja $n_{\alpha}\hbar\omega_{\alpha}/V$
 \begin{equation}
 B_{21}=\frac{V\,w_{21}}{n_{\alpha}\,\hbar\omega_{\alpha}\, g(\omega_{\alpha}-\omega_0)}
-=\frac{\pi e^{2}x_{12}^{2}}{2\epsilon_{0}\hbar^{2}}.
+=\frac{\pi \mathcal{V}^{2}}{2\epsilon_{0}\hbar^{2}}.
 \label{4.60}
 \end{equation}
 Razmerje Einsteinovih koeficientov izračunamo z uporabo enačb~(\ref{4.58}) in 
@@ -1287,18 +1285,18 @@ kombinacija obeh stanj. Nastavek (enačba~\ref{eq:sk-n}) in Hamiltonian
 (enačba~\ref{eq:sk-H}) vstavimo v enačbo (\ref{eq:sk-S}), ki jo enkrat pomnožimo 
 z $\langle1|$, drugič pa z $\langle2|$ in izpeljemo sistem dveh sklopljenih enačb
 \begin{equation}
-\frac{d c_1}{dt}=-\frac{i}{\hbar} \mathcal{V} \cos (\omega t) e^{-i\omega_0 t}\, c_2 
+\frac{d c_1}{dt}=-\frac{i}{\hbar} \mathcal{V} E_0\cos (\omega t) e^{-i\omega_0 t}\, c_2 
 \qquad \mathrm{in} \qquad
-\frac{d c_2}{dt}=-\frac{i}{\hbar} \mathcal{V} \cos (\omega t) e^{i\omega_0 t}\, c_1,
+\frac{d c_2}{dt}=-\frac{i}{\hbar} \mathcal{V} E_0\cos (\omega t) e^{i\omega_0 t}\, c_1,
 \label{eq:c1c2}
 \end{equation}
-pri čemer je $\mathcal{V} = -\langle1|e\hat{x}E_0|2\rangle$. Zapišemo $\cos(\omega t)$ kot
+pri čemer je $\mathcal{V} = -e\langle1|\hat{x}|2\rangle$. Zapišemo $\cos(\omega t)$ kot
 kompleksno število in zanemarimo hitro spreminjajočo se komponento pri $\omega_0 + \omega$,
 tako da enačbi prepišemo v 
 \begin{equation}
-\frac{d c_1}{dt}=-\frac{i}{2\hbar} \mathcal{V} e^{-i\Delta t}\, c_2 
+\frac{d c_1}{dt}=-\frac{i}{2\hbar} \mathcal{V} E_0 e^{-i\Delta t}\, c_2 
 \qquad \mathrm{in} \qquad
-\frac{d c_2}{dt}=-\frac{i}{2\hbar} \mathcal{V} e^{i\Delta t}\, c_1,
+\frac{d c_2}{dt}=-\frac{i}{2\hbar} \mathcal{V} E_0 e^{i\Delta t}\, c_1,
 \label{eq:rabi2}
 \end{equation}
 kjer je $\Delta = \omega_0-\omega$. Dodamo začetni pogoj, ki pravi, da je na začetku
@@ -1308,16 +1306,16 @@ sistem v osnovnem stanju in torej $c_1(0)=1$ in $c_2(0)=0$. Rešitvi enačb
 c_1(t)&=&e^{-i\Delta t/2}\, \left(\cos\left(\frac{\Omega t}{2}\right) + 
 i \frac{\Delta}{\Omega} \sin\left(\frac{\Omega t}{2}\right) \right)\qquad \mathrm{in} 
 \label{eq:rabi3} \\
-c_2(t)&=&\frac{\mathcal{V}}{i\hbar \Omega} e^{i\Delta t/2}\, \sin\left(\frac{\Omega t}{2}\right).
+c_2(t)&=&\frac{\mathcal{V}E_0}{i\hbar \Omega} e^{i\Delta t/2}\, \sin\left(\frac{\Omega t}{2}\right).
 \label{eq:rabi4}
 \end{eqnarray}
 Pri tem smo vpeljali krožno frekvenco
 \begin{equation}
-\Omega = \sqrt{\Delta^2 + \left(\frac{\mathcal{V}}{\hbar}\right)^2} = \sqrt{(\omega_0-\omega)^2 
+\Omega = \sqrt{\Delta^2 + \left(\frac{\mathcal{V}E_0}{\hbar}\right)^2} = \sqrt{(\omega_0-\omega)^2 
 + \left(\frac{\langle1|\hat{x}|2\rangle\, eE_0}{\hbar}\right)^2} = 
 \sqrt{(\omega_0-\omega)^2 + \Omega_R^2}.
 \end{equation}
-Krožno frekvenco $\Omega_R = \mathcal{V}/\hbar$ imenujemo Rabijeva krožna frekvenca.\index{Rabijeva frekvenca}
+Krožno frekvenco $\Omega_R = \mathcal{V} E_0/\hbar$ imenujemo Rabijeva krožna frekvenca.\index{Rabijeva frekvenca}
 
 \begin{definition}
 Pokaži, da enačbi~(\ref{eq:rabi3}) in (\ref{eq:rabi4}) rešita
@@ -1325,10 +1323,10 @@ sistem enačb (\ref{eq:rabi2}) ob izbranih začetnih pogojih.
 \end{definition}
 Poglejmo rezultat podrobneje. Verjetnost, da najdemo atom v stanju $|2\rangle$, je enaka
 \begin{equation}
-P_2(t) = |c_2(t)|^2 = \frac{\mathcal{V}^2}{\hbar^2 \Omega^2}\sin^2(\Omega t/2).
+P_2(t) = |c_2(t)|^2 = \frac{\mathcal{V}^2E_0^2}{\hbar^2 \Omega^2}\sin^2(\Omega t/2).
 \end{equation}
 Če je frekvenca vpadne svetlobe točno enaka frekvenci prehoda, je $\Delta = 0$ in 
-$\Omega = \Omega_R = \mathcal{V}/\hbar$. Takrat je amplituda nihanja zasedenosti vzbujenega stanja kar enaka 1
+$\Omega = \Omega_R = \mathcal{V}E_0/\hbar$. Takrat je amplituda nihanja zasedenosti vzbujenega stanja kar enaka 1
 in sistem v celoti periodično prehaja iz osnovnega stanja v vzbujeno in nazaj. To pomeni,
 da prihaja izmenično do popolne absorpcije svetlobe in do popolne stimulirane emisije.
 Pri odstopajoči vpadni frekvenci se amplituda nihanja zmanjša, hkrati se poveča
