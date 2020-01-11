@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '10_VodnikRacun.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{945.26298828bp}%
+    \setlength{\unitlength}{945.26303101bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,19 +50,20 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.24396505)%
+  \begin{picture}(1,0.24396504)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{10_VodnikRacun.pdf}}%
-    \put(0.43382049,0.11317457){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_1$}}}%
-    \put(0.43382049,0.21815135){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_2$}}}%
-    \put(0.43382049,0.00327698){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_2$}}}%
-    \put(0.33344417,0.12783485){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z$}}}%
-    \put(0.07138956,0.21710251){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
-    \put(0.00506869,0.18993562){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$a/2$}}}%
-    \put(-0.01754094,0.03599672){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$-a/2$}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{10_VodnikRacun.pdf}}%
-    \put(0.57699704,0.11666727){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$a$}}}%
-    \put(0.75158979,0.22003769){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\textrm{I}$}}}%
-    \put(0.74662734,0.11382822){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\textrm{II}$}}}%
-    \put(0.74071412,0.00479121){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\textrm{III}$}}}%
+    \put(0.57699703,0.11666726){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$a$\end{tabular}}}}%
+    \put(0.43382048,0.11317456){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n_1$\end{tabular}}}}%
+    \put(0.43382048,0.21815134){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n_2$\end{tabular}}}}%
+    \put(0.43382048,0.00327697){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n_2$\end{tabular}}}}%
+    \put(0.33344417,0.12783483){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
+    \put(0.07138956,0.2171025){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$x$\end{tabular}}}}%
+    \put(0.00506869,0.18993561){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$a/2$\end{tabular}}}}%
+    \put(-0.01754094,0.03599671){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$-a/2$\end{tabular}}}}%
+    \put(0.75158977,0.22003767){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\textrm{I}$\end{tabular}}}}%
+    \put(0.74662732,0.11382821){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\textrm{II}$\end{tabular}}}}%
+    \put(0.7407141,0.0047912){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\textrm{III}$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
