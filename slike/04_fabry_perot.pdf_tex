@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '04_fabry_perot.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{361.55577652bp}%
+    \setlength{\unitlength}{422.11483933bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,16 +50,18 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.5455822)%
-    \put(0.04665278,0.47777805){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1$}}}%
-    \put(-0.00108049,0.52002598){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$I/I_0$}}}%
-    \put(0.8062175,0.21231034){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathcal R = 0,3$}}}%
-    \put(0.44676488,0.01066344){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k_{n+1}$}}}%
-    \put(0.2008325,0.00876213){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k_n$}}}%
-    \put(0.8062175,0.12009226){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathcal R = 0,5$}}}%
-    \put(0.8062175,0.06477576){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathcal R = 0,9$}}}%
-    \put(0.93867837,0.01683637){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k$}}}%
-    \put(0.69550718,0.01242766){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k_{n+2}$}}}%
+  \begin{picture}(1,0.46730979)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0.03995967,0.40923322){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$1$\end{tabular}}}}%
+    \put(0.0203957,0.44542001){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$T$\end{tabular}}}}%
+    \put(0.7616235,0.18185106){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathcal R = 0,3$\end{tabular}}}}%
+    \put(0.45374006,0.0091336){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\nu_{n+1}$\end{tabular}}}}%
+    \put(0.24309057,0.00750507){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\nu_n$\end{tabular}}}}%
+    \put(0.7616235,0.10286312){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathcal R = 0,5$\end{tabular}}}}%
+    \put(0.7616235,0.05548265){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathcal R = 0,9$\end{tabular}}}}%
+    \put(0.87508076,0.01442093){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\nu$\end{tabular}}}}%
+    \put(0.66679633,0.01064472){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\nu_{n+2}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{04_fabry_perot.pdf}}%
   \end{picture}%
 \endgroup%

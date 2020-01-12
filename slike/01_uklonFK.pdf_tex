@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '01_uklonFK.pdf' (pdf, eps, ps)
 %%
@@ -35,6 +35,8 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
     \setlength{\unitlength}{405.70234644bp}%
     \ifx\svgscale\undefined%
@@ -49,16 +51,19 @@
   \global\let\svgscale\undefined%
   \makeatother%
   \begin{picture}(1,0.665619)%
-    \put(-0.48075056,-0.46161989){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.53426643\unitlength}\raggedright  \end{minipage}}}%
-    \put(-0.10929312,-0.72059463){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{ }}}%
-    \put(0.09058164,-1.17530301){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21276874\unitlength}\raggedright  \end{minipage}}}%
-    \put(0.32763951,-0.24193689){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{1.40754561\unitlength}\raggedright  \end{minipage}}}%
-    \put(0.37578362,0.13034966){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{ }}}}%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(-0.48075056,-0.68528467){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.53426643\unitlength}\raggedright  \end{minipage}}}%
+    \put(-0.10929312,-0.72059463){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0.09058164,-1.36915899){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.21276874\unitlength}\raggedright  \end{minipage}}}%
+    \put(0.32763951,-0.6498242){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{1.40754561\unitlength}\raggedright  \end{minipage}}}%
+    \put(0.37578362,0.13034966){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{ }\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{01_uklonFK.pdf}}%
-    \put(0.00933709,0.19832834){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$S$}}}%
-    \put(0.68048567,0.11016419){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$P$}}}%
-    \put(0.22165849,0.36137604){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{n}$}}}%
-    \put(0.50951548,0.25718247){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{r}$}}}%
-    \put(0.069783,0.29956623){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbf{r'}$}}}%
+    \put(0.00933709,0.19832834){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$T$\end{tabular}}}}%
+    \put(0.68048567,0.11016419){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$P$\end{tabular}}}}%
+    \put(0.22165849,0.36137604){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{n}$\end{tabular}}}}%
+    \put(0.50951548,0.25718247){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{r}$\end{tabular}}}}%
+    \put(0.069783,0.29956623){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$\mathbf{r'}$\end{tabular}}}}%
+    \put(0.79898488,0.55881265){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$S$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '01_dvolom.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{599.92597656bp}%
+    \setlength{\unitlength}{588.04420772bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,26 +50,20 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.40819249)%
-    \put(0.69922113,0.29424018){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+  \begin{picture}(1,0.39041275)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0.71232223,0.28142388){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{ }\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{01_dvolom.pdf}}%
-    \put(0.57488784,0.11657346){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{$z$}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{01_dvolom.pdf}}%
-    \put(0.09337705,0.06623465){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{$z$}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{01_dvolom.pdf}}%
-    \put(0.14999547,0.24355322){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[lb]{\smash{\textbf{$\bf{k}_1$}}}}%
-    \put(0.18774022,0.26061072){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{$\vartheta_1$}}}}%
-    \put(0.19989436,0.25257641){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[lb]{\smash{}}}%
-    \put(0.22263176,0.16943466){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{$\vartheta_e$}}}}%
-    \put(0.26026886,0.16287321){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{$\vartheta_o$}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=4]{01_dvolom.pdf}}%
-    \put(0.76500643,0.29940154){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[lb]{\smash{\textbf{$\bf{S}_1$}}}}%
-    \put(0.27702328,0.18699511){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[lb]{\smash{\textbf{$\bf{k}_o$}}}}%
-    \put(0.26489995,0.10280533){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[lb]{\smash{\textbf{$\bf{k}_e$}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=5]{01_dvolom.pdf}}%
-    \put(0.7158069,0.05075844){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[lb]{\smash{\textbf{$\bf{S}_o$}}}}%
-    \put(0.63094565,0.05669054){\color[rgb]{0.10196078,0.10196078,0.10196078}\makebox(0,0)[lb]{\smash{\textbf{$\bf{S}_e$}}}}%
-    \put(0.00764681,0.37857203){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{a)}$}}}%
-    \put(0.54143978,0.37857203){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{b)}$}}}%
+    \put(-0.00067474,0.36592857){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathrm{a)}$\end{tabular}}}}%
+    \put(0.54538383,0.36592857){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathrm{b)}$\end{tabular}}}}%
+    \put(0.09021157,0.05910736){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
+    \put(0.24632433,0.09761892){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_e$\end{tabular}}}}%
+    \put(0.26366922,0.18040859){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_o$\end{tabular}}}}%
+    \put(0.16674613,0.25312002){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{k}_1$\end{tabular}}}}%
+    \put(0.77224366,0.28827102){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{S}_1$\end{tabular}}}}%
+    \put(0.7700866,0.04613166){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{S}_o$\end{tabular}}}}%
+    \put(0.68475581,0.04728521){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\mathbf{S}_e$\end{tabular}}}}%
+    \put(0.5773628,0.0952394){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$z$\end{tabular}}}}%
   \end{picture}%
 \endgroup%

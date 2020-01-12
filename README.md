@@ -2,13 +2,14 @@
 Fotonika
 ========
 
-Tu se nahaja delovna verzija skripte za predmeta Fotonika in Fizika laserjev na II. stopnji univerzitetnega programa fizike na Fakulteti za Matematiko in Fiziko, Univerze v Ljubljani. 
+Tu se nahaja skripta za predmeta Fotonika 1 in Fotonika 2 na II. stopnji univerzitetnega programa fizike na Fakulteti za Matematiko in Fiziko, Univerze v Ljubljani. 
  
-Skripta nastaja na osnovi skripte za Elektrooptiko (kasneje preimenovano v Fotoniko) prof. Martina Čopiča, ki se nahaja na  <http://fiz.fmf.uni-lj.si/%7Etine/fotonika.pdf>.
+Skripta je nastala na osnovi skripte za Elektrooptiko (kasneje preimenovano v Fotoniko, kasneje razdeljeno na Fotoniko 1 in Fotoniko 2) prof. Martina Čopiča, ki se nahaja na  <http://fiz.fmf.uni-lj.si/%7Etine/fotonika.pdf>.
 
 Avtorji
 -------
 
+* Martin Čopič
 * Mojca Vilfan
 * Andrej Petelin
 

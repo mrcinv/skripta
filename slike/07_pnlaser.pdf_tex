@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file '07_pnlaser.pdf' (pdf, eps, ps)
 %%
@@ -35,8 +35,10 @@
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{732.59249469bp}%
+    \setlength{\unitlength}{754.43781335bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,22 +50,26 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.24586504)%
+  \begin{picture}(1,0.2390952)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{07_pnlaser.pdf}}%
-    \put(0.46444394,0.03458982){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textit{ }}}}%
+    \put(0.47995132,0.03358824){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\textit{ }\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{07_pnlaser.pdf}}%
-    \put(0.41956579,0.13158817){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$E_F$}}}%
-    \put(0.0006031,0.03808408){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{valenčni pas}}}%
-    \put(-0.00069593,0.22720699){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{prevodni pas}}}%
-    \put(0.05726071,0.00386845){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p$}}}%
-    \put(0.31462342,0.00384459){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n$}}}%
-    \put(0.93886371,0.1368773){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$F_p$}}}%
-    \put(0.51990108,0.03808408){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{valenčni pas}}}%
-    \put(0.51860198,0.16387028){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{prevodni pas}}}%
-    \put(0.57655868,0.00386845){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$p$}}}%
-    \put(0.83392136,0.00384459){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n$}}}%
-    \put(0.46111417,0.05744184){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$F_v$}}}%
-    \put(0.76321383,0.08342892){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$F_v$}}}%
-    \put(0.65152332,0.1076887){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$F_p$}}}%
+    \put(0.43637265,0.12777793){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$E_F$\end{tabular}}}}%
+    \put(0.03152957,0.03698132){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}valenčni pas\end{tabular}}}}%
+    \put(0.03026815,0.22062804){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}prevodni pas\end{tabular}}}}%
+    \put(0.08455838,0.00375643){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
+    \put(0.33446896,0.00373326){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n$\end{tabular}}}}%
+    \put(0.94063393,0.13291391){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_p$\end{tabular}}}}%
+    \put(0.5357909,0.03698132){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}valenčni pas\end{tabular}}}}%
+    \put(0.53452942,0.15912529){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}prevodni pas\end{tabular}}}}%
+    \put(0.5888197,0.00375643){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
+    \put(0.83873026,0.00373326){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$n$\end{tabular}}}}%
+    \put(0.49660033,0.05577856){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_v$\end{tabular}}}}%
+    \put(0.77205835,0.08101316){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_v$\end{tabular}}}}%
+    \put(0.66360192,0.10457049){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}$F_p$\end{tabular}}}}%
+    \put(-0.00149263,0.22004539){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}a)\end{tabular}}}}%
+    \put(0.49626964,0.22021279){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}b)\end{tabular}}}}%
   \end{picture}%
 \endgroup%
